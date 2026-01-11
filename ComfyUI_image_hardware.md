@@ -1,0 +1,14 @@
+# 💻 Hardware Requirements
+
+| Model           | Tested GPU          | Min VRAM | Min RAM |
+|-----------------|---------------------|----------|---------|
+| Z-Image Turbo   | RTX A5000, A4500    | 22 GB    | 50 GB   |
+| Flux.2 Dev      | RTX A6000           | 44 GB    | 50 GB   |
+| Qwen            | RTX A6000           | 44 GB    | 65 GB   |
+
+| Component       | Model | Minimum                    |
+|-----------------|-------|----------------------------|
+| Volume Storage  | ZIT   | 50 GB (`/workspace`)       |
+| Volume Storage  | Flux  | 90 GB (`/workspace`)       |
+| Volume Storage  | Qwen  | 70 GB (`/workspace`)       |
+| Pod Storage     | —     | 15 GB                      |
