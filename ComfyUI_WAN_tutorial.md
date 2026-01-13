@@ -1,13 +1,13 @@
-# 📘 Tutorial run-comfyui-wan
+# 📘 Tutorial run-comfyui-wan2
 
-- This tutorial reflects my own workflow and experience on RunPod.
+- This tutorial reflects my own experience on RunPod.
 - Always consult the excellent official [runpod documentation](https://docs.runpod.io/pods/overview).
 
 ## 🚀 Starting a Pod
 
 ### 🧩 Choose a Template
 
-![t2v template](images/template.jpg)
+![t2v/i2v template example](images/template_WAN.jpg){ width="300" }
 
 Example:
 👉 [WAN 2.2 T2V (lightx2v)](https://console.runpod.io/deploy?template=qvozvvb1xd&ref=se4tkc5o)
@@ -30,8 +30,8 @@ Steps:
 Ends with (example):
 
 ```txt
-Digest: sha256:2b56bdd14df7af0dae7f9bd7978be9e61d791359f5ea65eedd65dcd2e16752fc
-Status: Image is up to date for ls250824/run-comfyui-wan:19112025
+Digest: sha256:2b56bdd14df7af0d8e7f9bd7978bg9d62d792359f5ea65redd65dcd5816752fc
+Status: Image is up to date for ls250824/run-comfyui-wan2:11012026
 ```
 
 ### 🐳 Viewing Container Logs

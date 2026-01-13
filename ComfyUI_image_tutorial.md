@@ -1,13 +1,13 @@
 # 📘 Tutorial run-comfyui-image
 
-- This tutorial reflects my own workflow and experience on RunPod.
+- This tutorial reflects my own experience on RunPod.
 - Always consult the excellent official [runpod documentation](https://docs.runpod.io/pods/overview).
 
 ## 🚀 Starting a Pod
 
 ### 🧩 Choose a Template
 
-![t2v template](images/template-ZIT.jpg)
+![t2v template](images/template_ZIT.jpg){ width="300" }
 
 Example:
 
