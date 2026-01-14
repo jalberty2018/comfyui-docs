@@ -43,11 +43,12 @@
 | `CIVITAI_MODEL_LORA_URL[1-50]`   | Direct download link for LoRAs |
 | `CIVITAI_MODEL_UNET_URL[1-50]`   | Direct download link for URL's |
 
-## Workflows
+## Workflows/Media
 
 | Variable         | Description                      |
 |------------------|----------------------------------|
-| `WORKFLOW[1-50]` |  download link (compressed or plain)  |
+| `WORKFLOW[1-50]` |  download link (compressed or plain) |
+| `MEDIA[1-50]` |  download link |
 
 ## 🌐 Network Services
 
