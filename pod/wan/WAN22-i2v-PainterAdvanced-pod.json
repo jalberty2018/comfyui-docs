@@ -45,103 +45,18 @@
       "bgcolor": "#335"
     },
     {
-      "id": 39,
-      "type": "VAELoader",
-      "pos": [
-        -161.31526806777492,
-        -480.18055305505527
-      ],
-      "size": [
-        360,
-        58
-      ],
-      "flags": {},
-      "order": 1,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "slot_index": 0,
-          "links": [
-            76,
-            349
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VAELoader",
-        "cnr_id": "comfy-core",
-        "ver": "0.3.46",
-        "widget_ue_connectable": {}
-      },
-      "widgets_values": [
-        "Wan2_1_VAE_fp32.safetensors"
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
-      "id": 109,
-      "type": "TorchCompileModelWanVideoV2",
-      "pos": [
-        672.2025773679203,
-        -846.4562467457527
-      ],
-      "size": [
-        342.74609375,
-        202
-      ],
-      "flags": {},
-      "order": 11,
-      "mode": 4,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 342
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            334
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "TorchCompileModelWanVideoV2",
-        "cnr_id": "comfyui-kjnodes",
-        "ver": "6c996e1877db08c7de020ee14421dd28d7574ec2"
-      },
-      "widgets_values": [
-        "inductor",
-        false,
-        "default",
-        false,
-        true,
-        64,
-        true
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
-    },
-    {
       "id": 113,
       "type": "CLIPVisionLoader",
       "pos": [
         -691.201714680246,
-        23.758793604776923
+        -97.26744459634196
       ],
       "size": [
         270,
         58
       ],
       "flags": {},
-      "order": 2,
+      "order": 1,
       "mode": 4,
       "inputs": [],
       "outputs": [
@@ -169,7 +84,7 @@
       "type": "Image Inset Crop (rgthree)",
       "pos": [
         -681.9730049985303,
-        131.3286770939031
+        10.302438892784236
       ],
       "size": [
         248.8115061722757,
@@ -214,7 +129,7 @@
       "type": "CLIPVisionEncode",
       "pos": [
         -389.1402863739188,
-        28.097708684581658
+        -92.92852951653722
       ],
       "size": [
         246.39755750027666,
@@ -260,7 +175,7 @@
       "type": "ImageBatchMulti",
       "pos": [
         -384.1247910010727,
-        159.65842836740566
+        38.63219016628679
       ],
       "size": [
         216.84171010450063,
@@ -301,271 +216,6 @@
       ],
       "color": "#2a363b",
       "bgcolor": "#3f5159"
-    },
-    {
-      "id": 135,
-      "type": "PainterI2VAdvanced",
-      "pos": [
-        693.0487148193032,
-        -108.64265637378674
-      ],
-      "size": [
-        270,
-        282
-      ],
-      "flags": {},
-      "order": 24,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 347
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 348
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 349
-        },
-        {
-          "name": "clip_vision",
-          "shape": 7,
-          "type": "CLIP_VISION_OUTPUT",
-          "link": 343
-        },
-        {
-          "name": "start_image",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 344
-        },
-        {
-          "name": "width",
-          "type": "INT",
-          "widget": {
-            "name": "width"
-          },
-          "link": 345
-        },
-        {
-          "name": "height",
-          "type": "INT",
-          "widget": {
-            "name": "height"
-          },
-          "link": 346
-        }
-      ],
-      "outputs": [
-        {
-          "name": "high_positive",
-          "type": "CONDITIONING",
-          "links": [
-            386
-          ]
-        },
-        {
-          "name": "high_negative",
-          "type": "CONDITIONING",
-          "links": [
-            387
-          ]
-        },
-        {
-          "name": "low_positive",
-          "type": "CONDITIONING",
-          "links": [
-            388
-          ]
-        },
-        {
-          "name": "low_negative",
-          "type": "CONDITIONING",
-          "links": [
-            389
-          ]
-        },
-        {
-          "name": "latent",
-          "type": "LATENT",
-          "links": [
-            395
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "PainterI2VAdvanced"
-      },
-      "widgets_values": [
-        832,
-        480,
-        81,
-        1,
-        1.3,
-        true,
-        0.05
-      ],
-      "color": "#233",
-      "bgcolor": "#355"
-    },
-    {
-      "id": 141,
-      "type": "FloatConstant",
-      "pos": [
-        1358.9917354311883,
-        -101.6150671857148
-      ],
-      "size": [
-        210,
-        58
-      ],
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "value",
-          "type": "FLOAT",
-          "links": [
-            393,
-            394
-          ]
-        }
-      ],
-      "title": "CFG",
-      "properties": {
-        "Node name for S&R": "FloatConstant"
-      },
-      "widgets_values": [
-        1
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
-      "id": 110,
-      "type": "TorchCompileModelWanVideoV2",
-      "pos": [
-        677.6123419413376,
-        -468.34399902904437
-      ],
-      "size": [
-        342.74609375,
-        202
-      ],
-      "flags": {},
-      "order": 10,
-      "mode": 4,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 333
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            336
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "TorchCompileModelWanVideoV2",
-        "cnr_id": "comfyui-kjnodes",
-        "ver": "6c996e1877db08c7de020ee14421dd28d7574ec2"
-      },
-      "widgets_values": [
-        "inductor",
-        false,
-        "default",
-        false,
-        true,
-        64,
-        true
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 95,
-      "type": "Power Lora Loader (rgthree)",
-      "pos": [
-        1396.7908704822883,
-        -843.6096830703143
-      ],
-      "size": [
-        424.40592998294517,
-        214
-      ],
-      "flags": {},
-      "order": 18,
-      "mode": 0,
-      "inputs": [
-        {
-          "dir": 3,
-          "name": "model",
-          "type": "MODEL",
-          "link": 335
-        },
-        {
-          "dir": 3,
-          "name": "clip",
-          "type": "CLIP",
-          "link": 235
-        }
-      ],
-      "outputs": [
-        {
-          "dir": 4,
-          "name": "MODEL",
-          "shape": 3,
-          "type": "MODEL",
-          "links": [
-            372,
-            400
-          ]
-        },
-        {
-          "dir": 4,
-          "name": "CLIP",
-          "shape": 3,
-          "type": "CLIP",
-          "links": [
-            298
-          ]
-        }
-      ],
-      "properties": {
-        "Show Strengths": "Single Strength",
-        "cnr_id": "rgthree-comfy",
-        "aux_id": "rgthree/rgthree-comfy",
-        "ver": "2b9eb36d3e1741e88dbfccade0e08137f7fa2bfb"
-      },
-      "widgets_values": [
-        {},
-        {
-          "type": "PowerLoraLoaderHeaderWidget"
-        },
-        {
-          "on": true,
-          "lora": "wan2.2_i2v_A14b_high_noise_lora_rank64_lightx2v_4step_1022.safetensors",
-          "strength": 1,
-          "strengthTwo": null
-        },
-        {},
-        ""
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
     },
     {
       "id": 8,
@@ -683,14 +333,14 @@
       "type": "LoadImage",
       "pos": [
         -505.4227304904425,
-        396.04327319048986
+        275.01703498937087
       ],
       "size": [
         340.63354098312675,
         473.8252236954965
       ],
       "flags": {},
-      "order": 4,
+      "order": 2,
       "mode": 4,
       "inputs": [],
       "outputs": [
@@ -721,51 +371,6 @@
       "bgcolor": "#000"
     },
     {
-      "id": 129,
-      "type": "DiffusionModelLoaderKJ",
-      "pos": [
-        332.5947072477203,
-        -470.52520821070436
-      ],
-      "size": [
-        311,
-        178
-      ],
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "extra_state_dict",
-          "shape": 7,
-          "type": "STRING",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            333
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "DiffusionModelLoaderKJ"
-      },
-      "widgets_values": [
-        "wan2.2_i2v_A14b_low_noise_lightx2v.safetensors",
-        "default",
-        "default",
-        false,
-        "disabled",
-        false
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
       "id": 128,
       "type": "DiffusionModelLoaderKJ",
       "pos": [
@@ -777,7 +382,7 @@
         178
       ],
       "flags": {},
-      "order": 6,
+      "order": 3,
       "mode": 0,
       "inputs": [
         {
@@ -811,86 +416,6 @@
       "bgcolor": "#535"
     },
     {
-      "id": 130,
-      "type": "LoraLoaderModelOnly",
-      "pos": [
-        1053.181491581708,
-        -844.0198761599949
-      ],
-      "size": [
-        305.6162213536991,
-        84.2412720277108
-      ],
-      "flags": {},
-      "order": 14,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 334
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            335
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoraLoaderModelOnly"
-      },
-      "widgets_values": [
-        "wan2.2_i2v_A14b_high_noise_lora_rank64_lightx2v_4step_1022.safetensors",
-        1
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
-    },
-    {
-      "id": 131,
-      "type": "LoraLoaderModelOnly",
-      "pos": [
-        1073.1204383232036,
-        -464.7185212844985
-      ],
-      "size": [
-        270,
-        82
-      ],
-      "flags": {},
-      "order": 13,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 336
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            337
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoraLoaderModelOnly"
-      },
-      "widgets_values": [
-        "wan2.2_i2v_A14b_low_noise_lora_rank64_lightx2v_4step_1022.safetensors",
-        1
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
       "id": 77,
       "type": "VHS_SelectEveryNthImage",
       "pos": [
@@ -898,7 +423,7 @@
         -847.1070154448051
       ],
       "size": [
-        274,
+        274.197265625,
         104.95491790771484
       ],
       "flags": {},
@@ -1021,157 +546,6 @@
       ],
       "color": "#2a363b",
       "bgcolor": "#3f5159"
-    },
-    {
-      "id": 150,
-      "type": "SamplerCustom",
-      "pos": [
-        1059.5518550361835,
-        260.84529195657433
-      ],
-      "size": [
-        375.82374675583105,
-        716.3866982792929
-      ],
-      "flags": {},
-      "order": 25,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 400
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 386
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 387
-        },
-        {
-          "name": "sampler",
-          "type": "SAMPLER",
-          "link": 396
-        },
-        {
-          "name": "sigmas",
-          "type": "SIGMAS",
-          "link": 390
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 395
-        },
-        {
-          "name": "cfg",
-          "type": "FLOAT",
-          "widget": {
-            "name": "cfg"
-          },
-          "link": 394
-        }
-      ],
-      "outputs": [
-        {
-          "name": "output",
-          "type": "LATENT",
-          "links": [
-            398
-          ]
-        },
-        {
-          "name": "denoised_output",
-          "type": "LATENT",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "SamplerCustom"
-      },
-      "widgets_values": [
-        true,
-        1099495891523028,
-        "randomize",
-        8
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
-    },
-    {
-      "id": 96,
-      "type": "Power Lora Loader (rgthree)",
-      "pos": [
-        1378.7659696425535,
-        -463.8429497260953
-      ],
-      "size": [
-        424.8080650608973,
-        214
-      ],
-      "flags": {},
-      "order": 17,
-      "mode": 0,
-      "inputs": [
-        {
-          "dir": 3,
-          "name": "model",
-          "type": "MODEL",
-          "link": 337
-        },
-        {
-          "dir": 3,
-          "name": "clip",
-          "type": "CLIP",
-          "link": 234
-        }
-      ],
-      "outputs": [
-        {
-          "dir": 4,
-          "name": "MODEL",
-          "shape": 3,
-          "type": "MODEL",
-          "links": [
-            399
-          ]
-        },
-        {
-          "dir": 4,
-          "name": "CLIP",
-          "shape": 3,
-          "type": "CLIP",
-          "links": [
-            297
-          ]
-        }
-      ],
-      "properties": {
-        "Show Strengths": "Single Strength",
-        "cnr_id": "rgthree-comfy",
-        "aux_id": "rgthree/rgthree-comfy",
-        "ver": "2b9eb36d3e1741e88dbfccade0e08137f7fa2bfb"
-      },
-      "widgets_values": [
-        {},
-        {
-          "type": "PowerLoraLoaderHeaderWidget"
-        },
-        {
-          "on": true,
-          "lora": "wan2.2_i2v_A14b_low_noise_lora_rank64_lightx2v_4step_1022.safetensors",
-          "strength": 1,
-          "strengthTwo": null
-        },
-        {},
-        ""
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
     },
     {
       "id": 111,
@@ -1426,48 +800,6 @@
       "bgcolor": "#335"
     },
     {
-      "id": 102,
-      "type": "LoadImage",
-      "pos": [
-        -55.13917531716148,
-        239.69397440018486
-      ],
-      "size": [
-        340.63354098312675,
-        473.82522369549656
-      ],
-      "flags": {},
-      "order": 7,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            279
-          ]
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": null
-        }
-      ],
-      "title": "Start frame",
-      "properties": {
-        "Node name for S&R": "LoadImage",
-        "cnr_id": "comfy-core",
-        "ver": "0.3.67"
-      },
-      "widgets_values": [
-        "SamplerAdv-dpmpp-flowmatch_00002_.png",
-        "image"
-      ],
-      "color": "#222",
-      "bgcolor": "#000"
-    },
-    {
       "id": 154,
       "type": "FloatConstant",
       "pos": [
@@ -1475,7 +807,7 @@
         -100.7685282111191
       ],
       "size": [
-        200,
+        210,
         58
       ],
       "flags": {},
@@ -1520,7 +852,7 @@
         58
       ],
       "flags": {},
-      "order": 8,
+      "order": 4,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1543,63 +875,330 @@
       "bgcolor": "#335"
     },
     {
-      "id": 104,
-      "type": "ImageScaleToTotalPixelsX",
+      "id": 141,
+      "type": "FloatConstant",
       "pos": [
-        317.72026984264437,
-        -62.59504993259743
+        1358.9917354311883,
+        -101.61506718571479
       ],
       "size": [
-        246.9,
-        199
+        210,
+        58
       ],
       "flags": {},
-      "order": 15,
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "value",
+          "type": "FLOAT",
+          "links": [
+            393,
+            394
+          ]
+        }
+      ],
+      "title": "CFG",
+      "properties": {
+        "Node name for S&R": "FloatConstant"
+      },
+      "widgets_values": [
+        1
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 130,
+      "type": "LoraLoaderModelOnly",
+      "pos": [
+        1053.181491581708,
+        -844.0198761599949
+      ],
+      "size": [
+        305.6162213536991,
+        84.2412720277108
+      ],
+      "flags": {},
+      "order": 13,
       "mode": 0,
       "inputs": [
         {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 278
+          "name": "model",
+          "type": "MODEL",
+          "link": 334
         }
       ],
       "outputs": [
         {
-          "name": "image",
-          "type": "IMAGE",
+          "name": "MODEL",
+          "type": "MODEL",
           "links": [
-            344
-          ]
-        },
-        {
-          "name": "width",
-          "type": "INT",
-          "links": [
-            345
-          ]
-        },
-        {
-          "name": "height",
-          "type": "INT",
-          "links": [
-            346
+            335
           ]
         }
       ],
       "properties": {
-        "Node name for S&R": "ImageScaleToTotalPixelsX",
-        "aux_id": "BigStationW/ComfyUi-Scale-Image-to-Total-Pixels-Advanced",
-        "ver": "694ae1f8352f770e4511f99ed35e2460d5591c83"
+        "Node name for S&R": "LoraLoaderModelOnly"
       },
       "widgets_values": [
-        1.1,
-        16,
-        "crop",
-        "lanczos",
-        "928x1232"
+        "wan2.2_i2v_A14b_high_noise_lora_rank64_lightx2v_4step_1022.safetensors",
+        1
       ],
-      "color": "#332922",
-      "bgcolor": "#593930"
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 95,
+      "type": "Power Lora Loader (rgthree)",
+      "pos": [
+        1396.7908704822883,
+        -843.6096830703143
+      ],
+      "size": [
+        424.40592998294517,
+        214
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "model",
+          "type": "MODEL",
+          "link": 335
+        },
+        {
+          "dir": 3,
+          "name": "clip",
+          "type": "CLIP",
+          "link": 235
+        }
+      ],
+      "outputs": [
+        {
+          "dir": 4,
+          "name": "MODEL",
+          "shape": 3,
+          "type": "MODEL",
+          "links": [
+            372,
+            400
+          ]
+        },
+        {
+          "dir": 4,
+          "name": "CLIP",
+          "shape": 3,
+          "type": "CLIP",
+          "links": [
+            298
+          ]
+        }
+      ],
+      "properties": {
+        "Show Strengths": "Single Strength",
+        "cnr_id": "rgthree-comfy",
+        "aux_id": "rgthree/rgthree-comfy",
+        "ver": "2b9eb36d3e1741e88dbfccade0e08137f7fa2bfb"
+      },
+      "widgets_values": [
+        {},
+        {
+          "type": "PowerLoraLoaderHeaderWidget"
+        },
+        {
+          "on": true,
+          "lora": "None",
+          "strength": 1,
+          "strengthTwo": null
+        },
+        {},
+        ""
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 131,
+      "type": "LoraLoaderModelOnly",
+      "pos": [
+        1076.5214153453774,
+        -469.2531284839167
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 336
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            337
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoaderModelOnly"
+      },
+      "widgets_values": [
+        "wan2.2_i2v_A14b_low_noise_lora_rank64_lightx2v_4step_1022.safetensors",
+        1
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 129,
+      "type": "DiffusionModelLoaderKJ",
+      "pos": [
+        335.99568426989356,
+        -475.0598154101226
+      ],
+      "size": [
+        311,
+        178
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "extra_state_dict",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            333
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DiffusionModelLoaderKJ"
+      },
+      "widgets_values": [
+        "wan2.2_i2v_A14b_low_noise_lightx2v.safetensors",
+        "default",
+        "default",
+        false,
+        "auto",
+        true
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 109,
+      "type": "TorchCompileModelWanVideoV2",
+      "pos": [
+        672.2025773679203,
+        -846.4562467457527
+      ],
+      "size": [
+        342.74609375,
+        202
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 342
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            334
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "TorchCompileModelWanVideoV2",
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "6c996e1877db08c7de020ee14421dd28d7574ec2"
+      },
+      "widgets_values": [
+        "inductor",
+        false,
+        "default",
+        true,
+        true,
+        128,
+        false
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 110,
+      "type": "TorchCompileModelWanVideoV2",
+      "pos": [
+        681.0133189635109,
+        -472.87860622846256
+      ],
+      "size": [
+        342.74609375,
+        202
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 333
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            336
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "TorchCompileModelWanVideoV2",
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "6c996e1877db08c7de020ee14421dd28d7574ec2"
+      },
+      "widgets_values": [
+        "inductor",
+        false,
+        "default",
+        true,
+        true,
+        128,
+        false
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
     },
     {
       "id": 70,
@@ -1655,7 +1254,7 @@
         "widget_ue_connectable": {}
       },
       "widgets_values": {
-        "frame_rate": 16,
+        "frame_rate": 18,
         "loop_count": 0,
         "filename_prefix": "i2v-MoeKSheduler-Painter",
         "format": "video/h264-mp4",
@@ -1669,13 +1268,13 @@
           "hidden": false,
           "paused": false,
           "params": {
-            "filename": "i2v-MoeKShedumer-Painter_00001.mp4",
+            "filename": "i2v-MoeKSheduler-Painter_00002.mp4",
             "subfolder": "",
             "type": "output",
             "format": "video/h264-mp4",
-            "frame_rate": 16,
-            "workflow": "i2v-MoeKSheduler-Painter_00001.png",
-            "fullpath": "/workspace/ComfyUI/output/i2v-MoeKSheduler-Painter_00001.mp4"
+            "frame_rate": 18,
+            "workflow": "i2v-MoeKSheduler-Painter_00002.png",
+            "fullpath": "/workspace/ComfyUI/output/i2v-MoeKSheduler-Painter_00002.mp4"
           }
         }
       },
@@ -1683,11 +1282,370 @@
       "bgcolor": "#000"
     },
     {
+      "id": 150,
+      "type": "SamplerCustom",
+      "pos": [
+        1057.3843598718358,
+        258.67763142294586
+      ],
+      "size": [
+        375.82374675583105,
+        716.3866982792929
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 400
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 386
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 387
+        },
+        {
+          "name": "sampler",
+          "type": "SAMPLER",
+          "link": 396
+        },
+        {
+          "name": "sigmas",
+          "type": "SIGMAS",
+          "link": 390
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 395
+        },
+        {
+          "name": "cfg",
+          "type": "FLOAT",
+          "widget": {
+            "name": "cfg"
+          },
+          "link": 394
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "LATENT",
+          "links": [
+            398
+          ]
+        },
+        {
+          "name": "denoised_output",
+          "type": "LATENT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SamplerCustom"
+      },
+      "widgets_values": [
+        true,
+        1052369096821205,
+        "randomize",
+        8
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 135,
+      "type": "PainterI2VAdvanced",
+      "pos": [
+        693.0487148193032,
+        -108.64265637378674
+      ],
+      "size": [
+        270,
+        282
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 347
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 348
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 349
+        },
+        {
+          "name": "clip_vision",
+          "shape": 7,
+          "type": "CLIP_VISION_OUTPUT",
+          "link": 343
+        },
+        {
+          "name": "start_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 344
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 345
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 346
+        }
+      ],
+      "outputs": [
+        {
+          "name": "high_positive",
+          "type": "CONDITIONING",
+          "links": [
+            386
+          ]
+        },
+        {
+          "name": "high_negative",
+          "type": "CONDITIONING",
+          "links": [
+            387
+          ]
+        },
+        {
+          "name": "low_positive",
+          "type": "CONDITIONING",
+          "links": [
+            388
+          ]
+        },
+        {
+          "name": "low_negative",
+          "type": "CONDITIONING",
+          "links": [
+            389
+          ]
+        },
+        {
+          "name": "latent",
+          "type": "LATENT",
+          "links": [
+            395
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PainterI2VAdvanced"
+      },
+      "widgets_values": [
+        832,
+        480,
+        81,
+        1,
+        1.5,
+        true,
+        0.05
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 104,
+      "type": "ImageScaleToTotalPixelsX",
+      "pos": [
+        325.02479222345215,
+        -83.04770702595111
+      ],
+      "size": [
+        246.9,
+        199
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 278
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            344
+          ]
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": [
+            345
+          ]
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": [
+            346
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageScaleToTotalPixelsX",
+        "aux_id": "BigStationW/ComfyUi-Scale-Image-to-Total-Pixels-Advanced",
+        "ver": "694ae1f8352f770e4511f99ed35e2460d5591c83"
+      },
+      "widgets_values": [
+        1.1,
+        16,
+        "crop",
+        "lanczos",
+        "928x1232"
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 96,
+      "type": "Power Lora Loader (rgthree)",
+      "pos": [
+        1396.152075527962,
+        -471.12821763527506
+      ],
+      "size": [
+        424.8080650608973,
+        214
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "model",
+          "type": "MODEL",
+          "link": 337
+        },
+        {
+          "dir": 3,
+          "name": "clip",
+          "type": "CLIP",
+          "link": 234
+        }
+      ],
+      "outputs": [
+        {
+          "dir": 4,
+          "name": "MODEL",
+          "shape": 3,
+          "type": "MODEL",
+          "links": [
+            399
+          ]
+        },
+        {
+          "dir": 4,
+          "name": "CLIP",
+          "shape": 3,
+          "type": "CLIP",
+          "links": [
+            297
+          ]
+        }
+      ],
+      "properties": {
+        "Show Strengths": "Single Strength",
+        "cnr_id": "rgthree-comfy",
+        "aux_id": "rgthree/rgthree-comfy",
+        "ver": "2b9eb36d3e1741e88dbfccade0e08137f7fa2bfb"
+      },
+      "widgets_values": [
+        {},
+        {
+          "type": "PowerLoraLoaderHeaderWidget"
+        },
+        {
+          "on": true,
+          "lora": "None",
+          "strength": 1,
+          "strengthTwo": null
+        },
+        {},
+        ""
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 39,
+      "type": "VAELoader",
+      "pos": [
+        -156.92982803797733,
+        -480.8308169039784
+      ],
+      "size": [
+        360,
+        58
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "slot_index": 0,
+          "links": [
+            76,
+            349
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.46",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "Wan2_1_VAE_fp32.safetensors"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
       "id": 93,
       "type": "PgLazyPromptMini",
       "pos": [
-        313.7178811588377,
-        233.71514598216916
+        321.65337888999113,
+        224.6458883381133
       ],
       "size": [
         645.84375,
@@ -1729,6 +1687,48 @@
       "widgets_values": [
         "Girl on beach",
         "Cartoonish, animated, unrealistic, unrealistic colors, unrealistic movements, beauty filter, plastic skin, soft focus, low resolution, blurry textures, smoothed skin, washed out details, poor lighting, artificial appearance cartoon, plastic skin, static, blurred details, subtitles, still image, censored, grayscale, low quality, worst quality, jpeg, ugly, weird, deformed, bad anatomy, wrong body proportions, disfigured, incomplete, unsharp, obese, undetailed , extra hands, fused fingers, deformed hands, extra arms, disembodied arms,"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 102,
+      "type": "LoadImage",
+      "pos": [
+        -55.13917531716148,
+        239.69397440018486
+      ],
+      "size": [
+        340.63354098312675,
+        473.82522369549656
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            279
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "Start frame",
+      "properties": {
+        "Node name for S&R": "LoadImage",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.67"
+      },
+      "widgets_values": [
+        "girl_on_beach_image_pod.png",
+        "image"
       ],
       "color": "#222",
       "bgcolor": "#000"
@@ -2138,8 +2138,8 @@
       "id": 2,
       "title": "Model Low noise",
       "bounding": [
-        302.58962872027655,
-        -559.4779388639213,
+        305.9906057424499,
+        -564.0125460633396,
         1559.5626250649543,
         344.3176503623041
       ],
@@ -2175,7 +2175,7 @@
     },
     {
       "id": 6,
-      "title": "Latent",
+      "title": "Latent/prompt",
       "bounding": [
         -76.54021815982885,
         -191.20883055746734,
@@ -2204,7 +2204,7 @@
       "title": "CLIP VISION",
       "bounding": [
         -709.8516580252184,
-        -63.26884573440606,
+        -184.29508393552493,
         597.8602584428011,
         970.6695512301219
       ],
@@ -2216,13 +2216,13 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.44617520213349937,
+      "scale": 0.7637370042265564,
       "offset": [
-        464.83409113210485,
-        792.9589565192571
+        297.17252224461964,
+        127.36570138394258
       ]
     },
-    "frontendVersion": "1.35.9",
+    "frontendVersion": "1.36.14",
     "reroutes": [
       {
         "id": 2,
@@ -2238,8 +2238,8 @@
       {
         "id": 6,
         "pos": [
-          230.8996588373269,
-          -465.0597963621423
+          540.3854541993156,
+          -457.1242986309891
         ],
         "linkIds": [
           76,
