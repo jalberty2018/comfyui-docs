@@ -110,7 +110,7 @@ Log in via the Code-Server service on tab **Connect**.
 
 ### Information in pod available
 
-![Code-Server](images/code-server-2.jpg)
+![Code-Server](images/code-server-wan.jpg)
 
 ### ⚠️ Code-Server's screen remains blank
 

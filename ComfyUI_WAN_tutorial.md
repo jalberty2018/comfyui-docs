@@ -71,7 +71,7 @@ You can find the url’s at the end of the log file.
 
 ![Select Workflow template (use wrapper if deployed on A40)](images/comfyui-template.jpg){ width="500" }
 
-![Select number frames, size , prompt and offload](images/ai-generated.jpg)
+![Select number frames, size , prompt and offload](images/ai-generated-WAN.jpg)
 
 ### ⚠️ ComfyUI's screen remains blank
 
@@ -103,7 +103,7 @@ Copy the password → log in via the Code-Server service on tab **Connect**.
 
 ### Information in pod available
 
-![Code-Server](images/code-server-2.jpg)
+![Code-Server](images/code-server-wan.jpg)
 
 ### ⚠️ Code-Server's screen remains blank
 
