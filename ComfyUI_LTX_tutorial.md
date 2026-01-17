@@ -10,7 +10,7 @@
 ![t2v/i2v template example](images/template_LTX.jpg){ width="300" }
 
 Example:
-👉 [WAN 2.2 T2V (lightx2v)](https://console.runpod.io/deploy?template=qvozvvb1xd&ref=se4tkc5o)
+👉 [LTX-2 T2V](test)
 
 Steps:
 
@@ -58,7 +58,8 @@ When you see:
 Try to Connect with the pod-id and the port number to the proxy.
 You can find the url’s at the end of the log file.
 
-- ComfyUI: `https:<pod-id>-8188.proxy.runpod.net/` 
+- ComfyUI: `https:<pod-id>-8188.proxy.runpod.net/`
+- Lora Manager: `https:<pod-id>-8188.proxy.runpod.net/loras`
 - Code-Server: `https:<pod-id>-9000.proxy.runpod.net/` 
 
 ### 🎨 ComfyUI
@@ -69,9 +70,9 @@ You can find the url’s at the end of the log file.
 4. Press **Run**  
 5. Monitor GPU/RAM via **Telemetry**
 
-![Select Workflow template (use wrapper if deployed on A40)](images/comfyui-template.jpg){ width="500" }
+![Select Workflow template](test){ width="500" }
 
-![Select number frames, size , prompt and offload](images/ai-generated-WAN.jpg)
+![Select number frames, size , prompt and offload](images/ai-generated-LTX.jpg)
 
 ### ⚠️ ComfyUI's screen remains blank
 
@@ -103,7 +104,7 @@ Copy the password → log in via the Code-Server service on tab **Connect**.
 
 ### Information in pod available
 
-![Code-Server](images/code-server-wan.jpg)
+![Code-Server](images/coder-server-LTX.jpg)
 
 ### ⚠️ Code-Server's screen remains blank
 
@@ -131,14 +132,11 @@ From web terminal or Code-Server.
 
 ### 🧩 CivitAI
 
-If no "CIVITAI_TOKEN" was set, create and use a free token from the civitai website.
-
-![Batch download](images/civitai_batch.jpg)
+If no "CIVITAI_TOKEN" was set, create or use a free token from the civitai website.
 
 ```bash
-export CIVITAI_TOKEN="xxxxx"
-civitai “<download-link-on-civitai>” /workspace/ComfyUI/models/<directory>
-civitai --file batch.txt
+export CIVITAI_TOKEN=“xxxxx”
+civitai “<download-link-on-civitai>” /workspace/ComfyUI/models/<loras, etc>
 ```
 
 Download for example [CivitAI](https://civitai.com/models/2071400?modelVersionId=2344329)
@@ -150,7 +148,44 @@ civitai "https://civitai.com/api/download/models/2377566?type=Model&format=SafeT
 
 ![Refresh](images/refresh_nodes.jpg){ width="300" }
 
-Refresh ComfyUI using pressing key **r**.
+Refresh ComfyUI pressing key **r**.
+
+### 🧩 ComfyUI-Lora-Manager
+
+- [Github](https://github.com/willmiao/ComfyUI-Lora-Manager)
+
+#### Launch web interface
+
+![top_bar_comfyui](images/top_bar_comfyui.jpg){ width="300" }
+
+- Topbar ComfyUI.
+- Url displayed at end of container log file.
+
+```txt
+https:<pod-id>-8188.proxy.runpod.net/loras
+```
+	
+#### Civitai token (needed for download)
+
+- Go to preferences and add your token if not set before starting the pod (CIVITAI_TOKEN).
+
+#### Topbar
+
+![top_bar](images/top_bar.jpg)
+
+- Press **Refresh** and **Fetch** to download images for lora's available in the pod.
+- Press **Download** and add the civitai's URL (not download link).
+
+#### Integration basic
+
+- Add node **Lora-Loader (LoraManager)** to your ComfyUI workflow.
+- Press the **Paper Airplane** in the Lora-Manager web interface.
+- Your lora is available in your workflow.
+- Add your model for LTX to both lora loaders and adjust strength.
+
+![send_lora](images/lora_manager_LTX.jpg){ width="300" }
+
+![lora_loader](images/lora_loader.jpg){ width="300" }
 
 ### ☁️ HuggingFace
 
