@@ -12,7 +12,7 @@
 
 **One-Click Deployment links:**
 
-- 👉 [RunPod LTX](test)
+- 👉 [RunPod LTX-2 bf16](https://console.runpod.io/deploy?template=p4f6rm9tb4&ref=se4tkc5o)
 
 
 ## 📘 Tutorial

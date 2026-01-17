@@ -10,7 +10,7 @@
 ![t2v/i2v template example](images/template_LTX.jpg){ width="300" }
 
 Example:
-👉 [LTX-2 T2V](test)
+👉 [LTX-2 bf16](https://console.runpod.io/deploy?template=p4f6rm9tb4&ref=se4tkc5o)
 
 Steps:
 
