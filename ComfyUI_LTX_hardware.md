@@ -2,11 +2,9 @@
 
 ## LTX-2 bf16 + distill lora
 
-### **Recommended GPU**
-
 - precision bf16
+- video settings 1920x1088 250 frames
 
 | GPU          | VRAM  | RAM |
 |--------------------------|-------|-------------------------|
-| L40S, RTX 6000 Ada        | 45Gb | 90Gb           |
-
+| L40S    | 45Gb | 90Gb           |
