@@ -56,6 +56,7 @@
 - [RBG-SmartSeedVariance ZIT](https://github.com/RamonGuthrie/ComfyUI-RBG-SmartSeedVariance)
 - [LatentUtils](https://github.com/lrzjason/Comfyui-LatentUtils)
 - [LG_SamplingUtils](https://github.com/LAOGOU-666/ComfyUI-LG_SamplingUtils)
+- [Capitan-ConditioningEnhancer](https://github.com/capitan01R/Capitan-ConditioningEnhancer)
 
 ### Samplers
 
