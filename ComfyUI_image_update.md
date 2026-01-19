@@ -1,5 +1,10 @@
 # run-comfyui-image
 
+## 19012026
+
+- Added [ZIT sheduler](https://github.com/capitan01R/ComfyUI-CapitanFlowMatch)
+- Diagnostics for invalid/misconfigured model/workflow provisioning.
+
 ## 14012026
 
 - ComfyUI 0.9.1

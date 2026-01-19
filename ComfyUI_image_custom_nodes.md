@@ -61,6 +61,7 @@
 
 - [RES4LYF](https://github.com/ClownsharkBatwing/RES4LYF)
 - [EulerDiscreteScheduler](https://github.com/erosDiffusion/ComfyUI-EulerDiscreteScheduler)
+- [CapitanZIT-Scheduler](https://github.com/capitan01R/ComfyUI-CapitanZiT-Scheduler)
 
 ### Controlnet
 
@@ -91,6 +92,7 @@
 - [TextEncodeQwenImageEditAdvanced](https://github.com/BigStationW/ComfyUi-TextEncodeQwenImageEditAdvanced)
 - [LanPaint](https://github.com/scraed/LanPaint)
 - [ComfyUI-PainterQwenImageEdit](https://github.com/princepainter/ComfyUI-PainterQwenImageEdit)
+- [Flux2Klein-Enhancer](https://github.com/capitan01R/ComfyUI-Flux2Klein-Enhancer)
 
 ## 🧩 All possible Custom Nodes
 
