@@ -31,6 +31,10 @@
 - [Tutorial](https://docs.comfy.org/tutorials/flux/flux-1-kontext-dev)
 - [Examples](https://comfyanonymous.github.io/ComfyUI_examples/flux/#flux-kontext-image-editing-model)
 
+## Flux Klein
+
+- [ComfyUI](https://docs.comfy.org/tutorials/flux/flux-2-klein)
+
 ## Bytedance USO 
 
 - [Website](https://bytedance.github.io/USO/)
@@ -38,6 +42,10 @@
 - [Tutorial](https://docs.comfy.org/tutorials/flux/flux-1-uso)
 - [HF](https://huggingface.co/bytedance-research/USO)
 
-## Qwen-Image-Edit-2511
+## Qwen-Image-Edit
 
 - [HF](https://huggingface.co/Qwen/Qwen-Image-Edit-2511)
+
+## Qwen-Image
+
+- [ComfyUI](https://docs.comfy.org/tutorials/image/qwen/qwen-image-2512)
