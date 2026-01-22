@@ -56,13 +56,11 @@
 - [RBG-SmartSeedVariance ZIT](https://github.com/RamonGuthrie/ComfyUI-RBG-SmartSeedVariance)
 - [LatentUtils](https://github.com/lrzjason/Comfyui-LatentUtils)
 - [LG_SamplingUtils](https://github.com/LAOGOU-666/ComfyUI-LG_SamplingUtils)
-- [Capitan-ConditioningEnhancer](https://github.com/capitan01R/Capitan-ConditioningEnhancer)
 
 ### Samplers
 
 - [RES4LYF](https://github.com/ClownsharkBatwing/RES4LYF)
 - [EulerDiscreteScheduler](https://github.com/erosDiffusion/ComfyUI-EulerDiscreteScheduler)
-- [CapitanZIT-Scheduler](https://github.com/capitan01R/ComfyUI-CapitanZiT-Scheduler)
 
 ### Controlnet
 
@@ -94,6 +92,8 @@
 - [LanPaint](https://github.com/scraed/LanPaint)
 - [ComfyUI-PainterQwenImageEdit](https://github.com/princepainter/ComfyUI-PainterQwenImageEdit)
 - [Flux2Klein-Enhancer](https://github.com/capitan01R/ComfyUI-Flux2Klein-Enhancer)
+- [ZImagePowerNodes](https://github.com/martin-rizzo/ComfyUI-ZImagePowerNodes.git)
+- [LeMiCa](https://github.com/UnicomAI/LeMiCa)
 
 ## 🧩 All possible Custom Nodes
 

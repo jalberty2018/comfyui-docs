@@ -1,7 +1,13 @@
 # run-comfyui-image
 
-## 20012026
+## 22012026
 
+- ComfyUI 0.10.0
+- [ZImagePowerNodes](https://github.com/martin-rizzo/ComfyUI-ZImagePowerNodes.git)
+- [LeMiCa](https://github.com/UnicomAI/LeMiCa)
+
+## 20012026
+ 
 - ComfyUI 0.9.2
 
 ## 14012026
