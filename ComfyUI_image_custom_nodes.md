@@ -93,6 +93,7 @@
 - [ComfyUI-PainterQwenImageEdit](https://github.com/princepainter/ComfyUI-PainterQwenImageEdit)
 - [Flux2Klein-Enhancer](https://github.com/capitan01R/ComfyUI-Flux2Klein-Enhancer)
 - [ZImagePowerNodes](https://github.com/martin-rizzo/ComfyUI-ZImagePowerNodes.git)
+- [Fux2ImageReference](https://github.com/naku-yh/ComfyUI_Flux2ImageReference)
 
 ## 🧩 All possible Custom Nodes
 
