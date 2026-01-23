@@ -70,7 +70,7 @@ You can find the url’s at the end of the log file.
 4. Press **Run**  
 5. Monitor GPU/RAM via **Telemetry**
 
-![Select Workflow template](test){ width="500" }
+![Select Workflow template](images/workflow_LTX.jpg){ width="500" }
 
 ![Select number frames, size , prompt and offload](images/ai-generated-LTX.jpg)
 
@@ -183,7 +183,7 @@ https:<pod-id>-8188.proxy.runpod.net/loras
 - Your lora is available in your workflow.
 - Add your model for LTX to both lora loaders and adjust strength.
 
-![send_lora](images/lora_manager_LTX.jpg){ width="300" }
+![send_lora](images/lora_manager_LTX.jpg){ width="450" }
 
 ![lora_loader](images/lora_loader.jpg){ width="300" }
 
