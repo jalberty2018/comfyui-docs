@@ -43,6 +43,7 @@
 ### Model Specific
 
 - [LTX](https://github.com/Lightricks/ComfyUI-LTXVideo)
+- [PainterLTXV2](https://github.com/princepainter/ComfyUI-PainterLTXV2)
 
 ### Sampling
 
