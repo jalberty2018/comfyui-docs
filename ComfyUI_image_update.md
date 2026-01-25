@@ -1,10 +1,16 @@
 # run-comfyui-image
 
+## 25012026
+
+- Added configuration for loading workflows and models depending on the availabe VRAM.
+- [Arthemy_Live-Tuner-ZIT-ComfyUI](https://github.com/aledelpho/Arthemy_Live-Tuner-ZIT-ComfyUI)
+- [Flux2ImageReference](https://github.com/naku-yh/ComfyUI_Flux2ImageReference)
+
 ## 22012026
 
 - ComfyUI 0.10.0
 - [ZImagePowerNodes](https://github.com/martin-rizzo/ComfyUI-ZImagePowerNodes.git)
-- [LeMiCa](https://github.com/UnicomAI/LeMiCa)
+- [Flux2Klein-Enhancer](https://github.com/capitan01R/ComfyUI-Flux2Klein-Enhancer)
 
 ## 20012026
  
