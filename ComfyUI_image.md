@@ -10,9 +10,11 @@ Ecample is running Z-image Turbo on a RTX A4500 on Runpod
 
 ## 🔧 Features
 
-- Automatic model and LoRA downloads via environment variables or Lora manager.
-- Supports advanced workflows for **image generation** and **enhancement** using pre-installed custom nodes
-- Compatible with high-performance NVIDIA GPUs (CUDA 12.8)
+- Automatic model and LoRA provisioning via environment variables.
+- Supports advanced workflows for **image generation** and **enhancement** using pre-installed custom nodes.
+- Compatible with high-performance NVIDIA GPUs (CUDA 12.8).
+- Compiled attentions and GPU accelerations.
+- Automatic selecting bf16 or fp8 models/workflows if supported, view [hardware requirements](ComfyUI_image_hardware.md) for possible GPU's
 
 ## 🔧 Built-in **authentication**
   
