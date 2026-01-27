@@ -17,6 +17,8 @@
 
 ## Huggingface ComfyUI Model Configuration
 
+- Changing HF_MODEL_ to HF_MODEL_LVRAM_ and HF_MODEL_HVRAM_ makes the loading VRAM dependent (cut off 40Gb) 
+
 | Model Type        | Model                         | Safetensors/GGUF                               |
 |-------------------|-------------------------------|-------------------------------------------| 
 | Diffusion Model   | `HF_MODEL_DIFFUSION_MODELS[1-20]`          | `HF_MODEL_DIFFUSION_MODELS_FILENAME[1-20]`   |
@@ -45,6 +47,8 @@
 | `CIVITAI_MODEL_UNET_URL[1-50]`   | Direct download link for URL's |
 
 ## Workflows
+
+- Changing WORKFLOW to WORKFLOW_LVRAM and WORKFLOW_HVRAM makes the loading VRAM dependent (cut off 40Gb) 
 
 | Variable         | Description                      |
 |------------------|----------------------------------|
