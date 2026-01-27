@@ -2,7 +2,7 @@
 
 ## 📦 Template Deployment
 
-- run-comfyui-ltx is tested on RunPod using an **L40S** GPU.
+- run-comfyui-ltx is tested on RunPod using an **L40S** an **RTX A5000** GPU.
 
 ### ⚠️ Important Notice
 
@@ -10,9 +10,7 @@
 
 ### 🚀 RunPod Templates
 
-**One-Click Deployment links:**
-
-- 👉 [RunPod LTX-2 bf16](https://console.runpod.io/deploy?template=p4f6rm9tb4&ref=se4tkc5o)
+- 👉 [RunPod LTX-2 dev bf16/fp8](https://console.runpod.io/deploy?template=p4f6rm9tb4&ref=se4tkc5o)
 
 ## 📘 Tutorial
 
