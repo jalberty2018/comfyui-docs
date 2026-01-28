@@ -3,7 +3,7 @@
 ## 28012026
 
 - ComfyUI 0.11.0
-- Z-Image checkpoint.
+- Z-Image Base.
 
 ## 25012026
 
