@@ -1,8 +1,8 @@
 {
   "id": "92112d97-bb64-4b44-86f2-ea5691ef8f6e",
   "revision": 0,
-  "last_node_id": 101,
-  "last_link_id": 190,
+  "last_node_id": 103,
+  "last_link_id": 196,
   "nodes": [
     {
       "id": 17,
@@ -103,7 +103,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 9,
+      "order": 8,
       "mode": 0,
       "inputs": [
         {
@@ -152,7 +152,7 @@
         512,
         512,
         1,
-        1033742590765595,
+        276950072865518,
         "randomize",
         1,
         false,
@@ -175,7 +175,7 @@
         126
       ],
       "flags": {},
-      "order": 13,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
@@ -268,19 +268,19 @@
         522.6572450644162
       ],
       "flags": {},
-      "order": 10,
+      "order": 11,
       "mode": 0,
       "inputs": [
         {
           "name": "model",
           "type": "MODEL",
-          "link": 180
+          "link": 194
         },
         {
           "name": "clip",
           "shape": 7,
           "type": "CLIP",
-          "link": 190
+          "link": 196
         },
         {
           "name": "lora_stack",
@@ -379,91 +379,6 @@
       "bgcolor": "#335"
     },
     {
-      "id": 83,
-      "type": "ModelSamplingZImage",
-      "pos": [
-        -1041.1359854573484,
-        104.99305168554754
-      ],
-      "size": [
-        270,
-        82
-      ],
-      "flags": {},
-      "order": 11,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 179
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            149
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ModelSamplingZImage"
-      },
-      "widgets_values": [
-        3,
-        1
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
-    },
-    {
-      "id": 97,
-      "type": "DiffusionModelLoaderKJ",
-      "pos": [
-        -1414.4561365541433,
-        106.47117820772057
-      ],
-      "size": [
-        311,
-        178
-      ],
-      "flags": {},
-      "order": 2,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "extra_state_dict",
-          "shape": 7,
-          "type": "STRING",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            180
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "DiffusionModelLoaderKJ"
-      },
-      "widgets_values": [
-        "split_files/diffusion_models/z_image_turbo_bf16.safetensors",
-        "default",
-        "default",
-        true,
-        "auto",
-        true
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
-    },
-    {
       "id": 96,
       "type": "SamplerEulerAncestral",
       "pos": [
@@ -475,7 +390,7 @@
         82
       ],
       "flags": {},
-      "order": 3,
+      "order": 2,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -515,7 +430,7 @@
         {
           "name": "model",
           "type": "MODEL",
-          "link": 188
+          "link": 192
         },
         {
           "name": "positive",
@@ -610,7 +525,7 @@
         218
       ],
       "flags": {},
-      "order": 15,
+      "order": 16,
       "mode": 0,
       "inputs": [
         {
@@ -635,7 +550,7 @@
           "name": "MODEL",
           "type": "MODEL",
           "links": [
-            187
+            192
           ]
         }
       ],
@@ -645,131 +560,13 @@
       "widgets_values": [
         "flow",
         0.05,
-        931860674825290,
+        931860674825291,
         "increment",
         0,
         0.5
       ],
       "color": "#323",
       "bgcolor": "#535"
-    },
-    {
-      "id": 18,
-      "type": "CLIPLoader",
-      "pos": [
-        -1043.3218633009426,
-        227.61432221309096
-      ],
-      "size": [
-        270,
-        106
-      ],
-      "flags": {},
-      "order": 4,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            189
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPLoader",
-        "cnr_id": "comfy-core",
-        "ver": "0.3.75"
-      },
-      "widgets_values": [
-        "split_files/text_encoders/qwen_3_4b.safetensors",
-        "lumina2",
-        "default"
-      ],
-      "color": "#332922",
-      "bgcolor": "#593930"
-    },
-    {
-      "id": 101,
-      "type": "ArthemyQwenLiveTunerZImageLab",
-      "pos": [
-        -547.4279610397738,
-        -624.7171688129425
-      ],
-      "size": [
-        360.964453125,
-        966
-      ],
-      "flags": {},
-      "order": 8,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 189
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            190
-          ]
-        },
-        {
-          "name": "info",
-          "type": "STRING",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ArthemyQwenLiveTunerZImageLab"
-      },
-      "widgets_values": [
-        "Soft Value",
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
     },
     {
       "id": 90,
@@ -822,7 +619,7 @@
         82
       ],
       "flags": {},
-      "order": 5,
+      "order": 3,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -840,7 +637,7 @@
         "ver": "0.3.75"
       },
       "widgets_values": [
-        289957526130440,
+        641460027073935,
         "randomize"
       ],
       "color": "#223",
@@ -954,7 +751,7 @@
         469
       ],
       "flags": {},
-      "order": 14,
+      "order": 15,
       "mode": 0,
       "inputs": [
         {
@@ -988,7 +785,7 @@
         8,
         20,
         0,
-        1030259231622499,
+        148353028936001,
         "randomize"
       ],
       "color": "#223",
@@ -1006,7 +803,7 @@
         475
       ],
       "flags": {},
-      "order": 6,
+      "order": 4,
       "mode": 0,
       "inputs": [
         {
@@ -1128,7 +925,7 @@
         825.4243538077039
       ],
       "flags": {},
-      "order": 12,
+      "order": 13,
       "mode": 0,
       "inputs": [
         {
@@ -1168,24 +965,25 @@
       "bgcolor": "#653"
     },
     {
-      "id": 100,
-      "type": "ArthemyLiveModelTunerZImageLab",
+      "id": 97,
+      "type": "DiffusionModelLoaderKJ",
       "pos": [
-        -142.7014889419199,
-        -501.3722382374667
+        -1414.4561365541433,
+        106.47117820772057
       ],
       "size": [
-        363.7876953125,
-        822
+        311,
+        178
       ],
       "flags": {},
-      "order": 16,
+      "order": 5,
       "mode": 0,
       "inputs": [
         {
-          "name": "model",
-          "type": "MODEL",
-          "link": 187
+          "name": "extra_state_dict",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
         }
       ],
       "outputs": [
@@ -1193,54 +991,207 @@
           "name": "MODEL",
           "type": "MODEL",
           "links": [
-            188
+            193
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DiffusionModelLoaderKJ"
+      },
+      "widgets_values": [
+        "split_files/diffusion_models/z_image_turbo_bf16.safetensors",
+        "default",
+        "default",
+        true,
+        "auto",
+        true
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 83,
+      "type": "ModelSamplingZImage",
+      "pos": [
+        -1044.0436312058216,
+        106.44693001957222
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 179
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            149
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ModelSamplingZImage"
+      },
+      "widgets_values": [
+        3,
+        1
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 18,
+      "type": "CLIPLoader",
+      "pos": [
+        -1043.3218633009426,
+        227.61432221309096
+      ],
+      "size": [
+        270,
+        106
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            195
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPLoader",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.75"
+      },
+      "widgets_values": [
+        "split_files/text_encoders/qwen_3_4b.safetensors",
+        "lumina2",
+        "default"
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 102,
+      "type": "ArthemyQwenTunerSimple",
+      "pos": [
+        -290.48027647646364,
+        -51.180176501171964
+      ],
+      "size": [
+        313.830078125,
+        266
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 195
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            196
           ]
         },
         {
           "name": "info",
           "type": "STRING",
           "links": null
+        },
+        {
+          "name": "debug_data",
+          "type": "DICT",
+          "links": null
         }
       ],
       "properties": {
-        "Node name for S&R": "ArthemyLiveModelTunerZImageLab"
+        "Node name for S&R": "ArthemyQwenTunerSimple"
       },
       "widgets_values": [
-        "Real Value",
+        "Soft Value",
         1,
         1,
         1,
         1,
         1,
         1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1.05,
-        1.05,
-        1.05,
-        1.05,
-        1.05,
-        1.05
+        1
       ],
-      "color": "#232",
-      "bgcolor": "#353"
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 103,
+      "type": "ArthemyZImage_Tuner_Simple",
+      "pos": [
+        -637.9492675587002,
+        -52.63408256509034
+      ],
+      "size": [
+        316.093359375,
+        346
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 193
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            194
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ArthemyZImage_Tuner_Simple"
+      },
+      "widgets_values": [
+        "Soft Value",
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        false
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
     }
   ],
   "links": [
@@ -1381,14 +1332,6 @@
       "MODEL"
     ],
     [
-      180,
-      97,
-      0,
-      81,
-      0,
-      "MODEL"
-    ],
-    [
       182,
       82,
       0,
@@ -1429,32 +1372,40 @@
       "SAMPLER"
     ],
     [
-      187,
+      192,
       84,
-      0,
-      100,
-      0,
-      "MODEL"
-    ],
-    [
-      188,
-      100,
       0,
       98,
       0,
       "MODEL"
     ],
     [
-      189,
+      193,
+      97,
+      0,
+      103,
+      0,
+      "MODEL"
+    ],
+    [
+      194,
+      103,
+      0,
+      81,
+      0,
+      "MODEL"
+    ],
+    [
+      195,
       18,
       0,
-      101,
+      102,
       0,
       "CLIP"
     ],
     [
-      190,
-      101,
+      196,
+      102,
       0,
       81,
       1,
@@ -1557,10 +1508,10 @@
       "id": 9,
       "title": "Tuner",
       "bounding": [
-        -570.9683868171011,
-        -707.1086472178373,
-        826.3900553717597,
-        1058.787350776277
+        -671.2837180135024,
+        -153.19368838090398,
+        758.0591601672963,
+        485.97232022069704
       ],
       "color": "#3f789e",
       "font_size": 24,
@@ -1570,13 +1521,13 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.5502649649728869,
+      "scale": 0.5502649649728871,
       "offset": [
-        1785.0329297049464,
-        854.4295572651897
+        1453.5562120784662,
+        348.4916129047821
       ]
     },
-    "frontendVersion": "1.36.14",
+    "frontendVersion": "1.37.11",
     "workflowRendererVersion": "LG",
     "VHS_latentpreview": true,
     "VHS_latentpreviewrate": 0,
