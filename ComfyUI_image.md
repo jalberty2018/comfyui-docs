@@ -6,7 +6,7 @@
 
 A streamlined and automated environment for running **ComfyUI** with **image/edit models**, optimized for use on RunPod.io
 
-Ecample is running Z-image Turbo on a RTX A4500 on Runpod
+Example is running Z-image Turbo on a RTX A4500 on Runpod
 
 ## 🔧 Features
 

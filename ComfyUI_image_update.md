@@ -1,5 +1,10 @@
 # run-comfyui-image
 
+## 28012026
+
+- ComfyUI 0.11.0
+- Z-Image checkpoint.
+
 ## 25012026
 
 - Added configuration for loading workflows and models depending on the availabe VRAM.

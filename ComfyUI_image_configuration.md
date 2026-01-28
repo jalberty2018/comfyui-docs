@@ -2,9 +2,10 @@
 
 ## ComfyUI Configuration
 
-| Variable                   | Description                    |
-|----------------------------|--------------------------------|
-| `COMFYUI_EXTRA_ARGUMENTS`  | Additional arguments for ComfyUI CLI |
+| Variable                   | Description                    | default |
+|-------------------|-------------------------------|-------------------------------------------|
+| `COMFYUI_EXTRA_ARGUMENTS`  | Additional arguments for ComfyUI CLI |   |
+| `VRAM_THRESHOLD`  | VRAM threshold in GB for selecting model/worflow | 38 Gb |
 
 
 ## Authentication Tokens
@@ -17,7 +18,7 @@
 
 ## Huggingface ComfyUI Model Configuration
 
-- Changing HF_MODEL_ to HF_MODEL_LVRAM_ and HF_MODEL_HVRAM_ makes the loading VRAM dependent (cut off 40Gb) 
+- Changing HF_MODEL_ to HF_MODEL_LVRAM_ and HF_MODEL_HVRAM_ makes the loading VRAM dependent (VRAM_THRESHOLD) 
 
 | Model Type        | Model                         | Safetensors/GGUF                               |
 |-------------------|-------------------------------|-------------------------------------------| 

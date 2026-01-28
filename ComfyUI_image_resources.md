@@ -9,6 +9,10 @@
 - [Examples](https://comfyanonymous.github.io/ComfyUI_examples/z_image/)
 - [Fun controlnet](https://vantagewithai.com/z-image-turbo-fun-controlnet-complete-guide-to-pose-guided-ai-image-generation-using-comfyui/)
 
+## Z-Image
+
+- [Blog ComfyUI](https://blog.comfy.org/p/z-image-day-0-support-in-comfyui)
+
 ## Flux.2 dev
 
 - [Website](https://bfl.ai)
