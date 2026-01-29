@@ -1,5 +1,12 @@
 # run-comfyui-wan2
 
+## 29012026
+
+- ComfyUI 0.11.0
+- Auto selection models dependent on available VRAM see configurations.
+- Added [PainterMultiF2V](https://github.com/princepainter/ComfyUI-PainterMultiF2V)
+- Added [PainterVideoUpscale](https://github.com/princepainter/ComfyUI-PainterVideoUpscale)
+
 ## 14012026
 
 - ComfyUI 0.9.1

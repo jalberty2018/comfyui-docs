@@ -5,7 +5,7 @@
 | Variable                   | Description                    |
 |----------------------------|--------------------------------|
 | `COMFYUI_EXTRA_ARGUMENTS`  | Additional arguments for ComfyUI CLI |
-
+| `VRAM_THRESHOLD`  | VRAM threshold in GB for selecting model/worflow | 38 Gb |
 
 ## Authentication Tokens
 
@@ -16,6 +16,8 @@
 | CivitAI        | `CIVITAI_TOKEN`  | 
 
 ## Huggingface ComfyUI Model Configuration
+
+- Changing HF_MODEL_ to HF_MODEL_LVRAM_ and HF_MODEL_HVRAM_ makes the loading VRAM dependent (VRAM_THRESHOLD) 
 
 | Model Type        | Model                         | Safetensors/GGUF                               |
 |-------------------|-------------------------------|-------------------------------------------| 
@@ -44,12 +46,15 @@
 | `CIVITAI_MODEL_LORA_URL[1-50]`   | Direct download link for LoRAs |
 | `CIVITAI_MODEL_UNET_URL[1-50]`   | Direct download link for URL's |
 
-## Workflows
+## Workflows/Media
+
+- Changing WORKFLOW to WORKFLOW_LVRAM and WORKFLOW_HVRAM makes the loading VRAM dependent (cut off 40Gb) 
 
 | Variable         | Description                      |
 |------------------|----------------------------------|
-| `WORKFLOW[1-50]` |  download link (compressed or plain)  |
+| `WORKFLOW[1-50]` |  download link (compressed or plain) |
 | `MEDIA[1-50]` |  download link |
+
 
 ## 🌐 Network Services
 

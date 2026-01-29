@@ -6,7 +6,7 @@
 
 ### ⚠️ Important Notice
 
-- Avoid regions **US-TX-4** — they often fail to download or run the image (PyTorch CUDA errors).
+- Region **US-TX-4** — sometimes fails to run the image (PyTorch CUDA errors).
 - Don't use pods with **no region id** ther are unreliable. 
 
 ### 🚀 RunPod Templates

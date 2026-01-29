@@ -8,8 +8,8 @@
 - [Login](https://github.com/liusida/ComfyUI-Login)  
 - [KJNodes](https://github.com/kijai/ComfyUI-KJNodes)  
 - [GGUF](https://github.com/city96/ComfyUI-GGUF)
-- [ComfyMath](https://github.com/evanspearman/ComfyMath.git)
-- [Resolution master](https://github.com/Azornes/Comfyui-Resolution-Master.git)
+- [ComfyMath](https://github.com/evanspearman/ComfyMath)
+- [Resolution master](https://github.com/Azornes/Comfyui-Resolution-Master)
 - [PG Nodes](https://github.com/GizmoR13/PG-Nodes)
 - [ComfyUi-Scale-Image-to-Total-Pixels-Advanced](https://github.com/BigStationW/ComfyUi-Scale-Image-to-Total-Pixels-Advanced)
 
@@ -20,6 +20,7 @@
 - [VideoUpscale with Model](https://github.com/ShmuelRonen/ComfyUI-VideoUpscale_WithModel)
 - [SD Upscale](https://github.com/ssitu/ComfyUI_UltimateSDUpscale)
 - [VRgamedevgirl](https://github.com/vrgamegirl19/comfyui-vrgamedevgirl)
+- [PainterVideoUpscale](https://github.com/princepainter/ComfyUI-PainterVideoUpscale)
 
 ### Pose estimations/Controlnet
 
@@ -51,16 +52,17 @@
 - [PainterI2VforKJ](https://github.com/princepainter/ComfyUI-PainterI2VforKJ)
 - [PainterI2Vadvanced](https://github.com/princepainter/ComfyUI-PainterI2Vadvanced)
 
-#### i2v long video
+#### i2lv (long video)
 
 - [PainterLongVideo](https://github.com/princepainter/ComfyUI-PainterLongVideo)
 - [Longlook](https://github.com/shootthesound/comfyUI-LongLook)
 - [PainterFLF2V](https://github.com/princepainter/Comfyui-PainterFLF2V)
-- [Iamccs-nodes Fork](https://github.com/jalberty2018/IAMCCS-nodes.git) 
+- [Iamccs-nodes Fork](https://github.com/jalberty2018/IAMCCS-nodes)
+- [PainterMultiF2V](https://github.com/princepainter/ComfyUI-PainterMultiF2V)
 
 #### Animate
 
-- [WanAnimate Enhancer](https://github.com/wallen0322/ComfyUI-WanAnimate-Enhancer.git)
+- [WanAnimate Enhancer](https://github.com/wallen0322/ComfyUI-WanAnimate-Enhancer)
 - [WanAnimatePreprocess](https://github.com/kijai/ComfyUI-WanAnimatePreprocess)
 
 #### Lucy edit
@@ -83,7 +85,7 @@
 
 ### Tagging/Caption
 
-- [JoyCaption](https://github.com/1038lab/ComfyUI-JoyCaption.git)
+- [JoyCaption](https://github.com/1038lab/ComfyUI-JoyCaption)
 
 ### VRAM/RAM management
 
