@@ -1,8 +1,8 @@
 {
   "id": "92112d97-bb64-4b44-86f2-ea5691ef8f6e",
   "revision": 0,
-  "last_node_id": 105,
-  "last_link_id": 199,
+  "last_node_id": 106,
+  "last_link_id": 201,
   "nodes": [
     {
       "id": 17,
@@ -137,51 +137,6 @@
       "bgcolor": "#353"
     },
     {
-      "id": 97,
-      "type": "DiffusionModelLoaderKJ",
-      "pos": [
-        -1562.6082631057734,
-        128.99791783467373
-      ],
-      "size": [
-        311,
-        178
-      ],
-      "flags": {},
-      "order": 1,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "extra_state_dict",
-          "shape": 7,
-          "type": "STRING",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            180
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "DiffusionModelLoaderKJ"
-      },
-      "widgets_values": [
-        "split_files/diffusion_models/z_image_turbo_bf16.safetensors",
-        "default",
-        "default",
-        true,
-        "auto",
-        true
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
-    },
-    {
       "id": 100,
       "type": "ZSamplerTurbo //ZImagePowerNodes",
       "pos": [
@@ -234,46 +189,6 @@
       "bgcolor": "#000"
     },
     {
-      "id": 83,
-      "type": "ModelSamplingZImage",
-      "pos": [
-        -1189.2881120089792,
-        127.5197913125007
-      ],
-      "size": [
-        270,
-        82
-      ],
-      "flags": {},
-      "order": 5,
-      "mode": 4,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 179
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            193
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ModelSamplingZImage"
-      },
-      "widgets_values": [
-        3,
-        1
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
-    },
-    {
       "id": 82,
       "type": "RBG_Smart_Seed_Variance",
       "pos": [
@@ -291,7 +206,7 @@
         {
           "name": "conditioning",
           "type": "CONDITIONING",
-          "link": 198
+          "link": 201
         }
       ],
       "outputs": [
@@ -337,7 +252,7 @@
         130
       ],
       "flags": {},
-      "order": 2,
+      "order": 1,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -360,126 +275,6 @@
       ],
       "color": "#323",
       "bgcolor": "#535"
-    },
-    {
-      "id": 81,
-      "type": "Lora Loader (LoraManager)",
-      "pos": [
-        -1171.3336802088033,
-        474.0661969068906
-      ],
-      "size": [
-        449.3698131959434,
-        522.6572450644162
-      ],
-      "flags": {},
-      "order": 4,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 180
-        },
-        {
-          "name": "clip",
-          "shape": 7,
-          "type": "CLIP",
-          "link": 139
-        },
-        {
-          "name": "lora_stack",
-          "shape": 7,
-          "type": "LORA_STACK",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            179
-          ]
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            197
-          ]
-        },
-        {
-          "name": "trigger_words",
-          "type": "STRING",
-          "links": null
-        },
-        {
-          "name": "loaded_loras",
-          "type": "STRING",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "Lora Loader (LoraManager)"
-      },
-      "widgets_values": [
-        "",
-        []
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 104,
-      "type": "PhotoStylePromptEncoder //ZImagePowerNodes",
-      "pos": [
-        -663.3815495079456,
-        485.4220926498918
-      ],
-      "size": [
-        582.4666436121186,
-        462.43667616663856
-      ],
-      "flags": {},
-      "order": 6,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 197
-        },
-        {
-          "name": "customization",
-          "shape": 7,
-          "type": "STRING",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            198
-          ]
-        },
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "PhotoStylePromptEncoder //ZImagePowerNodes"
-      },
-      "widgets_values": [
-        "Casual Photo",
-        "Spanish Girl on beach in bikini"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
     },
     {
       "id": 90,
@@ -553,11 +348,177 @@
       "bgcolor": "#000"
     },
     {
+      "id": 81,
+      "type": "Lora Loader (LoraManager)",
+      "pos": [
+        -1171.3336802088033,
+        474.0661969068906
+      ],
+      "size": [
+        449.3698131959434,
+        522.6572450644162
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 180
+        },
+        {
+          "name": "clip",
+          "shape": 7,
+          "type": "CLIP",
+          "link": 139
+        },
+        {
+          "name": "lora_stack",
+          "shape": 7,
+          "type": "LORA_STACK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            179
+          ]
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            200
+          ]
+        },
+        {
+          "name": "trigger_words",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "loaded_loras",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Lora Loader (LoraManager)"
+      },
+      "widgets_values": [
+        "",
+        []
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 106,
+      "type": "StylePromptEncoder //ZImagePowerNodes",
+      "pos": [
+        -652.8119382191813,
+        470.2061859621589
+      ],
+      "size": [
+        553.3869320405495,
+        513.3288611768489
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 200
+        },
+        {
+          "name": "customization",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            201
+          ]
+        },
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "StylePromptEncoder //ZImagePowerNodes"
+      },
+      "widgets_values": [
+        "photo",
+        "\"Casual Photo\"",
+        "Italian girl waliking on beach"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 97,
+      "type": "DiffusionModelLoaderKJ",
+      "pos": [
+        -1564.170033748395,
+        152.42447747400055
+      ],
+      "size": [
+        311,
+        178
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "extra_state_dict",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            180
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DiffusionModelLoaderKJ"
+      },
+      "widgets_values": [
+        "split_files/diffusion_models/z_image_turbo_bf16.safetensors",
+        "default",
+        "default",
+        true,
+        "auto",
+        true
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
       "id": 18,
       "type": "CLIPLoader",
       "pos": [
-        -1189.9748574908388,
-        256.1377056634441
+        -1205.592563917056,
+        262.3847882339313
       ],
       "size": [
         270,
@@ -588,6 +549,46 @@
       ],
       "color": "#332922",
       "bgcolor": "#593930"
+    },
+    {
+      "id": 83,
+      "type": "ModelSamplingZImage",
+      "pos": [
+        -1203.3440477925749,
+        132.205103240366
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 179
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            193
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ModelSamplingZImage"
+      },
+      "widgets_values": [
+        3,
+        1
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
     }
   ],
   "links": [
@@ -672,28 +673,28 @@
       "LATENT"
     ],
     [
-      197,
-      81,
-      1,
-      104,
-      0,
-      "CLIP"
-    ],
-    [
-      198,
-      104,
-      0,
-      82,
-      0,
-      "CONDITIONING"
-    ],
-    [
       199,
       90,
       0,
       105,
       0,
       "IMAGE"
+    ],
+    [
+      200,
+      81,
+      1,
+      106,
+      0,
+      "CLIP"
+    ],
+    [
+      201,
+      106,
+      0,
+      82,
+      0,
+      "CONDITIONING"
     ]
   ],
   "groups": [
@@ -779,13 +780,13 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.5336338627523874,
+      "scale": 0.6402988842979364,
       "offset": [
-        1872.220149837709,
-        232.82560564976856
+        1782.6652823337174,
+        91.84308672800212
       ]
     },
-    "frontendVersion": "1.36.14",
+    "frontendVersion": "1.37.11",
     "workflowRendererVersion": "LG",
     "VHS_latentpreview": true,
     "VHS_latentpreviewrate": 0,
