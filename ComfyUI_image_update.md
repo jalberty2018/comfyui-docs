@@ -1,5 +1,9 @@
 # run-comfyui-image
 
+## 31012026
+
+- Updated custom_nodes for Flux-Klein edit.
+
 ## 28012026
 
 - ComfyUI 0.11.0
