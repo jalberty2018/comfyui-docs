@@ -18,25 +18,7 @@
 - Click **Deploy On-Demand**
 - The template will download the 4B and 9B models.
 
-## Option 2: When the pod is running
-
-- Open terminal from the console or code-server (see [tutorial](ComfyUI_image_tutorial))
-
-```bash
-export HF_TOKEN=Your-hf-token-here
-hf download black-forest-labs/FLUX.2-klein-9B flux-2-klein-9b.safetensors \
---local-dir /workspace/ComfyUI/models/diffusion_models/
-hf download black-forest-labs/FLUX.2-klein-base-9B flux-2-klein-base-9b.safetensors \
---local-dir /workspace/ComfyUI/models/diffusion_models/
-```
-
-- Fill in your huggingface token (HF_TOKEN)
-- Copy and paste snippet in terminal.
-- press enter.
-- Wait until downloads ends.
-- In ComfyUI press r to refresh.
-
-## Speeding up model downloads
+### Speeding up model downloads
 
 - If you don't need the 4B model delete the following keys in the template before starting the pod.
 
@@ -48,3 +30,26 @@ HF_MODEL_DIFFUSION_MODELS_FILENAME4
 HF_MODEL_TEXT_ENCODERS2
 HF_MODEL_TEXT_ENCODERS_FILENAME2
 ```
+
+## Option 2: When the pod is running
+
+- Open terminal from the console or code-server (see [tutorial](ComfyUI_image_tutorial))
+- Fill in your huggingface token (HF_TOKEN)
+
+```bash
+export HF_TOKEN=Your-hf-token-here
+```
+- press enter.
+- Copy and paste snippet in terminal.
+
+```bash
+hf download black-forest-labs/FLUX.2-klein-9B flux-2-klein-9b.safetensors \
+--local-dir /workspace/ComfyUI/models/diffusion_models/
+hf download black-forest-labs/FLUX.2-klein-base-9B flux-2-klein-base-9b.safetensors \
+--local-dir /workspace/ComfyUI/models/diffusion_models/
+```
+
+- press enter.
+- Wait until downloads ends.
+- In ComfyUI press r to refresh.
+
