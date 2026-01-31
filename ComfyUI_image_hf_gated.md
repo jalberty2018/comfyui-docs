@@ -33,23 +33,34 @@ HF_MODEL_TEXT_ENCODERS_FILENAME2
 
 ## Option 2: When the pod is running
 
-- Open terminal from the console or code-server (see [tutorial](ComfyUI_image_tutorial))
+### Set your hugginface token
+
+- Open terminal from the console or code-server (see [tutorial](ComfyUI_image_tutorial.md))
 - Fill in your huggingface token (HF_TOKEN)
 
 ```bash
 export HF_TOKEN=Your-hf-token-here
 ```
-- press enter.
-- Copy and paste snippet in terminal.
+
+- Press enter.
+- Copy and paste one or both model downloads in the terminal.
+
+### Distill model
 
 ```bash
 hf download black-forest-labs/FLUX.2-klein-9B flux-2-klein-9b.safetensors \
 --local-dir /workspace/ComfyUI/models/diffusion_models/
+```
+
+- Press enter.
+
+### Base model
+
+```bash
 hf download black-forest-labs/FLUX.2-klein-base-9B flux-2-klein-base-9b.safetensors \
 --local-dir /workspace/ComfyUI/models/diffusion_models/
 ```
 
 - press enter.
-- Wait until downloads ends.
-- In ComfyUI press r to refresh.
+- Wait until downloads finishes.
 
