@@ -1,8 +1,8 @@
 # run-comfyui-image
 
-## 31012026
+## 01022026
 
-- Updated custom_nodes for Flux-Klein edit.
+- Updated custom_nodes for Flux-Klein edit, updatated QWEN EDIT template and workflows
 
 ## 28012026
 
