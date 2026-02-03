@@ -13,7 +13,7 @@
 
 | Component       | Model | Minimum                    |
 |-----------------|-------|----------------------------|
-| Volume Storage  | ZIT   | 50 GB (`/workspace`)       |
+| Volume Storage  | ZI   | 50 GB (`/workspace`)       |
 | Volume Storage  | Flux  | 90 GB (`/workspace`)       |
 | Volume Storage  | Qwen  | 70 GB (`/workspace`)       |
 | Pod Storage     | —     | 15 GB                      |

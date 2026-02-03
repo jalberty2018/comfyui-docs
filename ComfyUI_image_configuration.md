@@ -1,11 +1,12 @@
 # ⚙️ Environment variables
 
-## ComfyUI Configuration
+## Configuration
 
 | Variable                   | Description                    | default |
 |-------------------|-------------------------------|-------------------------------------------|
 | `COMFYUI_EXTRA_ARGUMENTS`  | Additional arguments for ComfyUI CLI |   |
 | `VRAM_THRESHOLD`  | VRAM threshold in GB for selecting model/worflow | 38 Gb |
+
 
 
 ## Authentication Tokens

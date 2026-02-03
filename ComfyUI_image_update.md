@@ -1,5 +1,12 @@
 # run-comfyui-image
 
+## 03022026
+
+- ComfyUI 0.12.0
+- [ComfyUI-ReferenceChain](https://github.com/remingtonspaz/ComfyUI-ReferenceChain)
+- [comfyui-meancache-z](https://github.com/facok/comfyui-meancache-z)
+- [ComfyUI-NAG](https://github.com/scottmudge/ComfyUI-NAG)
+
 ## 01022026
 
 - Updated custom_nodes for Flux-Klein edit, updatated QWEN EDIT template and workflows
@@ -34,5 +41,4 @@
 
 - ComfyUI 0.8.0
 - Added environment variable "CIVITAI_MODEL_UNET_URL" for download.
-- Added [ComfyUI-PainterQwenImageEdit](https://github.com/princepainter/ComfyUI-PainterQwenImageEdit).
 - Fixed civitai downloader reloading models after restarting pod. 

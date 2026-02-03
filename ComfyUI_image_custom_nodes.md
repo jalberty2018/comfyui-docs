@@ -9,6 +9,7 @@
 - [KJNodes](https://github.com/kijai/ComfyUI-KJNodes)
 - [StringEssentials](https://github.com/bradsec/ComfyUI_StringEssentials.git)
 - [PG Nodes](https://github.com/GizmoR13/PG-Nodes)
+- [ComfyUI-ReferenceChain](https://github.com/remingtonspaz/ComfyUI-ReferenceChain)
 
 ### Downloaders/Linkers
 
@@ -56,6 +57,7 @@
 - [RBG-SmartSeedVariance ZIT](https://github.com/RamonGuthrie/ComfyUI-RBG-SmartSeedVariance)
 - [LatentUtils](https://github.com/lrzjason/Comfyui-LatentUtils)
 - [LG_SamplingUtils](https://github.com/LAOGOU-666/ComfyUI-LG_SamplingUtils)
+- [ComfyUI-NAG](https://github.com/scottmudge/ComfyUI-NAG)
 
 ### Samplers
 
@@ -88,13 +90,14 @@
 ### Model Specific
 
 - [Comfyui-QwenEditUtils](https://github.com/lrzjason/Comfyui-QwenEditUtils)
-- [TextEncodeQwenImageEditAdvanced](https://github.com/BigStationW/ComfyUi-TextEncodeQwenImageEditAdvanced)
 - [LanPaint](https://github.com/scraed/LanPaint)
 - [ComfyUI-PainterQwenImageEdit](https://github.com/princepainter/ComfyUI-PainterQwenImageEdit)
 - [Flux2Klein-Enhancer](https://github.com/capitan01R/ComfyUI-Flux2Klein-Enhancer)
 - [ZImagePowerNodes](https://github.com/martin-rizzo/ComfyUI-ZImagePowerNodes.git)
 - [Fux2ImageReference](https://github.com/naku-yh/ComfyUI_Flux2ImageReference)
 - [Arthemy_Live-Tuner-ZIT-ComfyUI](https://github.com/aledelpho/Arthemy_Live-Tuner-ZIT-ComfyUI)
+- [comfyui-meancache-z](https://github.com/facok/comfyui-meancache-z)
+
 
 ## 🧩 All possible Custom Nodes
 
