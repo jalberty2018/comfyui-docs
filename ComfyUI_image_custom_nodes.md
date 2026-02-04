@@ -57,7 +57,6 @@
 - [RBG-SmartSeedVariance ZIT](https://github.com/RamonGuthrie/ComfyUI-RBG-SmartSeedVariance)
 - [LatentUtils](https://github.com/lrzjason/Comfyui-LatentUtils)
 - [LG_SamplingUtils](https://github.com/LAOGOU-666/ComfyUI-LG_SamplingUtils)
-- [ComfyUI-NAG](https://github.com/scottmudge/ComfyUI-NAG)
 
 ### Samplers
 
@@ -97,7 +96,7 @@
 - [Fux2ImageReference](https://github.com/naku-yh/ComfyUI_Flux2ImageReference)
 - [Arthemy_Live-Tuner-ZIT-ComfyUI](https://github.com/aledelpho/Arthemy_Live-Tuner-ZIT-ComfyUI)
 - [comfyui-meancache-z](https://github.com/facok/comfyui-meancache-z)
-
+- [ComfyUI-CapitanZiT-Scheduler](https://github.com/capitan01R/ComfyUI-CapitanZiT-Scheduler)
 
 ## 🧩 All possible Custom Nodes
 

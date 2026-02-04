@@ -1,11 +1,11 @@
 # run-comfyui-image
 
-## 03022026
+## 04022026
 
 - ComfyUI 0.12.0
 - [ComfyUI-ReferenceChain](https://github.com/remingtonspaz/ComfyUI-ReferenceChain)
 - [comfyui-meancache-z](https://github.com/facok/comfyui-meancache-z)
-- [ComfyUI-NAG](https://github.com/scottmudge/ComfyUI-NAG)
+- [ComfyUI-CapitanZiT-Scheduler](https://github.com/capitan01R/ComfyUI-CapitanZiT-Scheduler)
 
 ## 01022026
 
