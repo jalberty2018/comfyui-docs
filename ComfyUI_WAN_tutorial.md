@@ -127,7 +127,7 @@ Useful secrets:
 
 ## 📥 Downloading Models and LoRAs
 
-From web terminal or Code-Server.
+From web terminal, Code-Server or ComfyUI-Lora-Manager.
 
 ### 🧩 CivitAI
 
@@ -175,6 +175,43 @@ hf download ricecake/wan21NSFWClipVisionH_v10 wan21NSFWClipVisionH_v10.safetenso
 ```
 
 Refresh ComfyUI pressing key **r**.
+
+### 🧩 ComfyUI-Lora-Manager
+
+- [Github](https://github.com/willmiao/ComfyUI-Lora-Manager)
+
+#### Launch web interface
+
+![top_bar_comfyui](images/top_bar_comfyui.jpg){ width="300" }
+
+- Topbar ComfyUI.
+- Url displayed at end of container log file.
+
+```txt
+https:<pod-id>-8188.proxy.runpod.net/loras
+```
+	
+#### Civitai token (needed for download)
+
+- Go to preferences and add your token if not set before starting the pod (CIVITAI_TOKEN).
+
+#### Refresh/Fetch/Download models
+
+![top_bar](images/top_bar.jpg)
+
+- Press **Refresh** and **Fetch** to download images for lora's available in the pod.
+- Press **Download** and add the civitai's URL to download the highnoise model (not download link).
+- Press **Download** and add the civitai's URL to download the lownoise model (not download link).
+
+#### Integration basic
+
+- Add high- and lownoise node **Lora-Loader (LoraManager)** to your ComfyUI workflow.
+- Press the **Paper Airplanes** of the low- and highnoise model in the Lora-Manager web interface.
+- Your loras are available in your workflow.
+
+![send_lora](images/wan-load-lora.jpg){ width="300" }
+
+![lora_loader](images/lora_loader.jpg){ width="300" }
 
 ## 🧩 ComfyUI-manager
 
