@@ -1,5 +1,10 @@
 # run-comfyui-wan2
 
+## 05022026
+
+- ComfyUI 0.12.0
+- [Lora-Manager](https://github.com/willmiao/ComfyUI-Lora-Manager)
+
 ## 29012026
 
 - ComfyUI 0.11.0

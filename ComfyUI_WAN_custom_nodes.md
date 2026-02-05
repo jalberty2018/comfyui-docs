@@ -13,6 +13,10 @@
 - [PG Nodes](https://github.com/GizmoR13/PG-Nodes)
 - [ComfyUi-Scale-Image-to-Total-Pixels-Advanced](https://github.com/BigStationW/ComfyUi-Scale-Image-to-Total-Pixels-Advanced)
 
+### Downloading
+
+- [Lora-Manager](https://github.com/willmiao/ComfyUI-Lora-Manager)
+
 ### Video/Upscale
 
 - [Video Helper Suite](https://github.com/kosinkadink/ComfyUI-VideoHelperSuite)

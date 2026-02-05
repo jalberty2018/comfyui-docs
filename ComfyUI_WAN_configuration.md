@@ -2,10 +2,11 @@
 
 ## ComfyUI Configuration
 
-| Variable                   | Description                    |
-|----------------------------|--------------------------------|
-| `COMFYUI_EXTRA_ARGUMENTS`  | Additional arguments for ComfyUI CLI |
-| `VRAM_THRESHOLD`  | VRAM threshold in GB for selecting model/worflow | 38 Gb |
+| Variable                   | Description                    | default |
+|-------------------|-------------------------------|-------------------------------------------|
+| `COMFYUI_EXTRA_ARGUMENTS`  | Additional arguments for ComfyUI CLI |   |
+| `VRAM_THRESHOLD`  | VRAM threshold in GB for selecting model/workflow | 38 Gb |
+| `COMFYUI_START_MAX_TRIES`  | Tries to wait until ComfyUI is online (depends on shared vCPU speed) | 60 |
 
 ## Authentication Tokens
 
