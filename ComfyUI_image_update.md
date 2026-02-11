@@ -1,5 +1,11 @@
 # run-comfyui-image
 
+## 11022026
+
+- ComfyUI 0.13.0
+- [CameraAngleSelector](https://github.com/NickPittas/ComfyUI_CameraAngleSelector)
+
+
 ## 04022026
 
 - ComfyUI 0.12.0
