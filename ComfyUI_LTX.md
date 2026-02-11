@@ -2,9 +2,15 @@
 
 # LTX-2 inference with ComfyUI 
 
+A streamlined and automated environment for running **ComfyUI** with **LTX-2 video models**, optimized for use on RunPod
+
+## bf16
+
 ![Pod running on L40S native comfyUI](images/runpod_L40S_LTX.jpeg)
 
-A streamlined and automated environment for running **ComfyUI** with **LTX-2 video models**, optimized for use on RunPod
+## fp8
+
+![Pod running on RTX A5000 native comfyUI](images/runpod_A5000_LTX.jpeg)
 
 ## 🔧 Features
 
