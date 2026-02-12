@@ -78,7 +78,7 @@ You can find the url’s at the end of the log file.
 
 ![Select Workflow template](images/comfyui-template-ZIT.jpg){ width="500" }
 
-![Select number frames, size , prompt](images/ai-generated-ZIT.jpg)
+![Select number frames, size , prompt](images/ai-generated-ZIB-ZIT.jpg)
 
 ### ⚠️ ComfyUI's screen remains blank
 
