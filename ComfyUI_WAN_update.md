@@ -1,5 +1,9 @@
 # run-comfyui-wan2
 
+## 13022026
+
+- ComfyUI 0.13.0
+
 ## 05022026
 
 - ComfyUI 0.12.0
@@ -25,10 +29,6 @@
 - Added [Dynamic-RAMCache](https://github.com/Windecay/ComfyUI_Dynamic-RAMCache)
 - Updated workflows i2v
 - Updated i2v svi v2 pro workflow
-
-
-
-
 
 
 
