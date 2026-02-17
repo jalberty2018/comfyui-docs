@@ -1,5 +1,10 @@
 # run-comfyui-image
 
+## 17022026
+
+- ComfyUI 0.14.0
+- QWEN image controlnet.
+
 ## 11022026
 
 - ComfyUI 0.13.0
