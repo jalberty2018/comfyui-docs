@@ -32,6 +32,7 @@
 | Upscalers         | `HF_MODEL_UPSCALER[1-20]`      | `HF_MODEL_UPSCALER_PTH[1-20]`              |
 | Loras          | `HF_MODEL_LORA[1-20]`          | `HF_MODEL_LORA_FILENAME[1-20]`          |
 | VAE taesd          | `HF_MODEL_VAE_APPROX[1-20]`          | `HF_MODEL_VAE_APPROX_FILENAME[1-20]`          |
+| Controlnet          | `HF_MODEL_CONTROLNET[1-20]`          | `HF_MODEL_CONTROLNET_FILENAME[1-20]`          |
 
 ## Huggingface model configuration
 
@@ -49,7 +50,7 @@
 
 ## Workflows/Media
 
-- Changing WORKFLOW to WORKFLOW_LVRAM and WORKFLOW_HVRAM makes the loading VRAM dependent (cut off 40Gb) 
+- Changing WORKFLOW to WORKFLOW_LVRAM and WORKFLOW_HVRAM makes the loading VRAM dependent (VRAM_THRESHOLD) 
 
 | Variable         | Description                      |
 |------------------|----------------------------------|
