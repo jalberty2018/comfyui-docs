@@ -42,6 +42,12 @@ HF_MODEL_TEXT_ENCODERS_FILENAME2
 export HF_TOKEN=Your-hf-token-here
 ```
 
+or
+
+```bash
+hf auth login
+```
+
 - Press enter.
 - Copy and paste one or both model downloads in the terminal.
 
