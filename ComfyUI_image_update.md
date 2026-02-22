@@ -1,5 +1,10 @@
 # run-comfyui-image
 
+## 22022026
+
+- [QwenVL-mod](https://github.com/huchukato/ComfyUI-QwenVL-Mod)
+- [ZImageTurboHQNodes](https://github.com/marduk191/ComfyUI-ZImageTurboHQNodes)
+
 ## 17022026
 
 - ComfyUI 0.14.0

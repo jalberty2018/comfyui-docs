@@ -81,10 +81,11 @@
 - [AutoCropFaces](https://github.com/liusida/ComfyUI-AutoCropFaces)
 - [SAM3](https://github.com/PozzettiAndrea/ComfyUI-SAM3)
 
-### Tagging/Caption
+### Tagging/Caption/VLM
 
 - [Joytag](https://github.com/StartHua/Comfyui_joytag)
 - [JoyCaption](https://github.com/1038lab/ComfyUI-JoyCaption.git)
+- [QwenVL-mod](https://github.com/huchukato/ComfyUI-QwenVL-Mod)
 
 ### Model Specific
 
@@ -98,6 +99,7 @@
 - [comfyui-meancache-z](https://github.com/facok/comfyui-meancache-z)
 - [ComfyUI-CapitanZiT-Scheduler](https://github.com/capitan01R/ComfyUI-CapitanZiT-Scheduler)
 - [CameraAngleSelector](https://github.com/NickPittas/ComfyUI_CameraAngleSelector)
+- [ZImageTurboHQNodes](https://github.com/marduk191/ComfyUI-ZImageTurboHQNodes)
 
 ## 🧩 All possible Custom Nodes
 
