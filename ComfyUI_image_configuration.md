@@ -48,13 +48,18 @@
 | `CIVITAI_MODEL_LORA_URL[1-50]`   | Direct download link for LoRAs |
 | `CIVITAI_MODEL_UNET_URL[1-50]`   | Direct download link for URL's |
 
-## Workflows/Media
+## Workflows
 
 - Changing WORKFLOW to WORKFLOW_LVRAM and WORKFLOW_HVRAM makes the loading VRAM dependent (VRAM_THRESHOLD) 
 
 | Variable         | Description                      |
 |------------------|----------------------------------|
 | `WORKFLOW[1-50]` |  download link (compressed or plain) |
+
+## Other
+
+| Variable         | Description                      |
+|------------------|----------------------------------|
 | `MEDIA[1-50]` |  download link |
 
 ## 🌐 Network Services

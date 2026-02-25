@@ -53,7 +53,12 @@
 
 | Variable         | Description                      |
 |------------------|----------------------------------|
-| `WORKFLOW[1-50]` |  download link (compressed or plain)  |
+| `WORKFLOW[1-50]` |  download link (compressed or plain) |
+
+## Other
+
+| Variable         | Description                      |
+|------------------|----------------------------------|
 | `MEDIA[1-50]` |  download link |
 
 ## 🌐 Network Services
