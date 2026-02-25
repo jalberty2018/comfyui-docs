@@ -1,5 +1,10 @@
 # run-comfyui-image
 
+## 25022026
+
+- ComfyUI 0.15.0
+- [EasyLoRAMerger](https://github.com/Terpentinas/EasyLoRAMerger)
+
 ## 22022026
 
 - [QwenVL-mod](https://github.com/huchukato/ComfyUI-QwenVL-Mod)

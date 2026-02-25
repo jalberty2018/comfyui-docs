@@ -19,6 +19,7 @@
 ### Utilities
 
 - [GGUF](https://github.com/city96/ComfyUI-GGUF)
+- [EasyLoRAMerger](https://github.com/Terpentinas/EasyLoRAMerger)
 
 ### Resolution choosers
 

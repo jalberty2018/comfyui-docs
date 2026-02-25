@@ -63,6 +63,7 @@
 - [PainterFLF2V](https://github.com/princepainter/Comfyui-PainterFLF2V)
 - [Iamccs-nodes Fork](https://github.com/jalberty2018/IAMCCS-nodes)
 - [PainterMultiF2V](https://github.com/princepainter/ComfyUI-PainterMultiF2V)
+- [VideoChunkTools](https://github.com/gregtee2/ComfyUI_VideoChunkTools)
 
 #### Animate
 
