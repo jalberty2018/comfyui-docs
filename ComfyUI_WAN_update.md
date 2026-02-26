@@ -1,5 +1,12 @@
 # run-comfyui-wan2
 
+## 26022026
+
+- ComfyUI 0.15.0
+- [QwenVL-mod](https://github.com/huchukato/ComfyUI-QwenVL-Mod)
+- [VideoChunkTools](https://github.com/gregtee2/ComfyUI_VideoChunkTools)
+- Updated hf download logic.
+
 ## 13022026
 
 - ComfyUI 0.13.0

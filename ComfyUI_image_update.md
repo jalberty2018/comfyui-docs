@@ -1,6 +1,6 @@
 # run-comfyui-image
 
-## 25022026
+## 26022026
 
 - ComfyUI 0.15.0
 - [EasyLoRAMerger](https://github.com/Terpentinas/EasyLoRAMerger)

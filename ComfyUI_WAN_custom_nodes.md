@@ -88,9 +88,9 @@
 - [Was affine](https://github.com/WASasquatch/was_affine)
 - [LatentUtils](https://github.com/lrzjason/Comfyui-LatentUtils)
 
-### Tagging/Caption
+### VLM
 
-- [JoyCaption](https://github.com/1038lab/ComfyUI-JoyCaption)
+- [QwenVL-mod](https://github.com/huchukato/ComfyUI-QwenVL-Mod)
 
 ### VRAM/RAM management
 
