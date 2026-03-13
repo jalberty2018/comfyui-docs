@@ -4,13 +4,13 @@
 
 | Component | Version              |
 |-----------|----------------------|
-| OS        | `Ubuntu 22.04 x86_64` |
-| Python    | `3.11.x`             |
-| PyTorch   | `2.9.1`              |
+| OS        | `Ubuntu 24.04 x86_64` |
+| Python    | `3.12.x`             |
+| PyTorch   | `2.10.0`              |
 | CUDA      | `12.8`             |
-| Triton    | `3.5.1`               |
+| Triton    | `3.6.0`               |
 | onnxruntime-gpu | `1.22.x` |
-| ComfyUI | `0.15.0`  | 
+| ComfyUI | `0.17.0`  | 
 | CodeServer |  `Latest` |
 
 ## Wheels

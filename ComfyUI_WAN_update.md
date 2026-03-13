@@ -1,5 +1,10 @@
 # run-comfyui-wan2
 
+## 13032026
+
+- ComfyUI 0.17.0
+- Pytorch 2.10.0
+
 ## 26022026
 
 - ComfyUI 0.15.0
