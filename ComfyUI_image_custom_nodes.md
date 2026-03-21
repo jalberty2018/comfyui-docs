@@ -99,7 +99,7 @@
 - [Arthemy_Live-Tuner-ZIT-ComfyUI](https://github.com/aledelpho/Arthemy_Live-Tuner-ZIT-ComfyUI)
 - [comfyui-meancache-z](https://github.com/facok/comfyui-meancache-z)
 - [ComfyUI-CapitanZiT-Scheduler](https://github.com/capitan01R/ComfyUI-CapitanZiT-Scheduler)
-- [CameraAngleSelector](https://github.com/NickPittas/ComfyUI_CameraAngleSelector)
+- [QwenMultiAngle](https://github.com/jtydhr88/ComfyUI-qwenmultiangle)
 - [ZImageTurboHQNodes](https://github.com/marduk191/ComfyUI-ZImageTurboHQNodes)
 
 ## 🧩 All possible Custom Nodes

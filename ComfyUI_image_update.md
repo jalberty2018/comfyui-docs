@@ -1,8 +1,9 @@
 # run-comfyui-image
 
-## 14032026
+## 21032026
 
-- ComfyUI 0.17.0
+- ComfyUI 0.18.0
+- - [QwenMultiAngle](https://github.com/jtydhr88/ComfyUI-qwenmultiangle)
 
 ## 06032026
 
@@ -26,8 +27,6 @@
 ## 11022026
 
 - ComfyUI 0.13.0
-- [CameraAngleSelector](https://github.com/NickPittas/ComfyUI_CameraAngleSelector)
-
 
 ## 04022026
 
