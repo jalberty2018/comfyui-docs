@@ -129,7 +129,7 @@
         266
       ],
       "flags": {},
-      "order": 10,
+      "order": 12,
       "mode": 4,
       "inputs": [
         {
@@ -357,55 +357,6 @@
       "bgcolor": "#335"
     },
     {
-      "id": 87,
-      "type": "DetailDaemonSamplerNode",
-      "pos": [
-        1199.8359534954825,
-        -401.5514824644412
-      ],
-      "size": [
-        270.25390625,
-        274
-      ],
-      "flags": {},
-      "order": 9,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "sampler",
-          "type": "SAMPLER",
-          "link": 196
-        }
-      ],
-      "outputs": [
-        {
-          "name": "SAMPLER",
-          "type": "SAMPLER",
-          "links": [
-            106,
-            188
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "DetailDaemonSamplerNode"
-      },
-      "widgets_values": [
-        0.05,
-        0.2,
-        0.8,
-        0.5,
-        1,
-        0,
-        0,
-        0,
-        true,
-        0
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
       "id": 82,
       "type": "RandomNoise",
       "pos": [
@@ -433,57 +384,11 @@
         "Node name for S&R": "RandomNoise"
       },
       "widgets_values": [
-        496186950902662,
+        573067563474721,
         "randomize"
       ],
       "color": "#323",
       "bgcolor": "#535"
-    },
-    {
-      "id": 130,
-      "type": "SplitSigmas",
-      "pos": [
-        1544.8671866132638,
-        -204.85751823478523
-      ],
-      "size": [
-        270,
-        78
-      ],
-      "flags": {},
-      "order": 14,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "sigmas",
-          "type": "SIGMAS",
-          "link": 191
-        }
-      ],
-      "outputs": [
-        {
-          "name": "high_sigmas",
-          "type": "SIGMAS",
-          "links": [
-            192
-          ]
-        },
-        {
-          "name": "low_sigmas",
-          "type": "SIGMAS",
-          "links": [
-            193
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "SplitSigmas"
-      },
-      "widgets_values": [
-        30
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
     },
     {
       "id": 128,
@@ -517,57 +422,6 @@
       "bgcolor": "#353"
     },
     {
-      "id": 62,
-      "type": "CLIPLoader",
-      "pos": [
-        169.0504994992951,
-        -299.0879651725848
-      ],
-      "size": [
-        270,
-        106
-      ],
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            119
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPLoader",
-        "cnr_id": "comfy-core",
-        "ver": "0.3.73",
-        "models": [
-          {
-            "name": "qwen_3_4b.safetensors",
-            "url": "https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/text_encoders/qwen_3_4b.safetensors",
-            "directory": "text_encoders"
-          }
-        ],
-        "enableTabs": false,
-        "tabWidth": 65,
-        "tabXOffset": 10,
-        "hasSecondTab": false,
-        "secondTabText": "Send Back",
-        "secondTabOffset": 80,
-        "secondTabWidth": 65
-      },
-      "widgets_values": [
-        "split_files/text_encoders/qwen_3_4b.safetensors",
-        "lumina2",
-        "default"
-      ],
-      "color": "#233",
-      "bgcolor": "#355"
-    },
-    {
       "id": 63,
       "type": "VAELoader",
       "pos": [
@@ -579,7 +433,7 @@
         58
       ],
       "flags": {},
-      "order": 4,
+      "order": 3,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -615,69 +469,6 @@
       ],
       "color": "#233",
       "bgcolor": "#355"
-    },
-    {
-      "id": 105,
-      "type": "SamplerCustomAdvanced",
-      "pos": [
-        1793.745662269532,
-        -47.665870551877475
-      ],
-      "size": [
-        570.953111024421,
-        653.8307710601927
-      ],
-      "flags": {},
-      "order": 26,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "noise",
-          "type": "NOISE",
-          "link": 183
-        },
-        {
-          "name": "guider",
-          "type": "GUIDER",
-          "link": 142
-        },
-        {
-          "name": "sampler",
-          "type": "SAMPLER",
-          "link": 188
-        },
-        {
-          "name": "sigmas",
-          "type": "SIGMAS",
-          "link": 193
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 195
-        }
-      ],
-      "outputs": [
-        {
-          "name": "output",
-          "type": "LATENT",
-          "links": [
-            151
-          ]
-        },
-        {
-          "name": "denoised_output",
-          "type": "LATENT",
-          "links": null
-        }
-      ],
-      "title": "Sampler ZIT",
-      "properties": {
-        "Node name for S&R": "SamplerCustomAdvanced"
-      },
-      "widgets_values": [],
-      "color": "#222",
-      "bgcolor": "#000"
     },
     {
       "id": 90,
@@ -731,7 +522,7 @@
         82
       ],
       "flags": {},
-      "order": 12,
+      "order": 11,
       "mode": 0,
       "inputs": [
         {
@@ -772,7 +563,7 @@
         82
       ],
       "flags": {},
-      "order": 5,
+      "order": 4,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -823,7 +614,7 @@
         88.55605618272
       ],
       "flags": {},
-      "order": 6,
+      "order": 5,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -845,126 +636,6 @@
       ],
       "color": "#232",
       "bgcolor": "#353"
-    },
-    {
-      "id": 79,
-      "type": "ResolutionMaster",
-      "pos": [
-        -838.2471585538658,
-        -5.414750354627588
-      ],
-      "size": [
-        330,
-        475
-      ],
-      "flags": {},
-      "order": 7,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "input_image",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "",
-          "type": "INT",
-          "links": [
-            92
-          ]
-        },
-        {
-          "name": "",
-          "type": "INT",
-          "links": [
-            93
-          ]
-        },
-        {
-          "name": "",
-          "type": "FLOAT",
-          "links": null
-        },
-        {
-          "name": "",
-          "type": "INT",
-          "links": null
-        },
-        {
-          "name": "",
-          "type": "LATENT",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ResolutionMaster",
-        "mode": "Manual",
-        "valueX": 1248,
-        "valueY": 1872,
-        "batch_size": 1,
-        "canvas_min_x": 0,
-        "canvas_max_x": 2048,
-        "canvas_step_x": 64,
-        "canvas_min_y": 0,
-        "canvas_max_y": 2048,
-        "canvas_step_y": 64,
-        "canvas_decimals_x": 0,
-        "canvas_decimals_y": 0,
-        "canvas_snap": true,
-        "canvas_dots": true,
-        "canvas_frame": true,
-        "action_slider_snap_min": 16,
-        "action_slider_snap_max": 256,
-        "action_slider_snap_step": 16,
-        "scaling_slider_min": 0.1,
-        "scaling_slider_max": 4,
-        "scaling_slider_step": 0.1,
-        "megapixels_slider_min": 0.5,
-        "megapixels_slider_max": 6,
-        "megapixels_slider_step": 0.1,
-        "snapValue": 64,
-        "upscaleValue": 1,
-        "targetResolution": 1080,
-        "targetMegapixels": 2,
-        "rescaleMode": "resolution",
-        "rescaleValue": 0.9421114395319916,
-        "autoDetect": false,
-        "autoFitOnChange": false,
-        "autoResizeOnChange": false,
-        "selectedCategory": "ZImageTurbo",
-        "selectedPreset": "2:3 Portrait (1536)",
-        "useCustomCalc": false,
-        "manual_slider_min_w": 64,
-        "manual_slider_max_w": 2048,
-        "manual_slider_step_w": 64,
-        "manual_slider_min_h": 64,
-        "manual_slider_max_h": 2048,
-        "manual_slider_step_h": 64,
-        "section_actions_collapsed": false,
-        "section_scaling_collapsed": true,
-        "section_autoDetect_collapsed": true,
-        "section_presets_collapsed": false,
-        "dropdown_resolution_expanded": false,
-        "dropdown_category_expanded": false,
-        "dropdown_preset_expanded": false,
-        "preset_selector_mode": "visual",
-        "customPresetsJSON": ""
-      },
-      "widgets_values": [
-        "Manual",
-        "latent_4x8",
-        1248,
-        1872,
-        false,
-        "resolution",
-        0.9421114395319916,
-        1
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
     },
     {
       "id": 9,
@@ -1018,7 +689,7 @@
         106
       ],
       "flags": {},
-      "order": 11,
+      "order": 10,
       "mode": 0,
       "inputs": [
         {
@@ -1053,56 +724,6 @@
       ],
       "color": "#323",
       "bgcolor": "#535"
-    },
-    {
-      "id": 119,
-      "type": "FlowMatchEulerDiscreteScheduler (Custom)",
-      "pos": [
-        1536.9559890333753,
-        -744.7649949828707
-      ],
-      "size": [
-        344.6392578125,
-        466
-      ],
-      "flags": {},
-      "order": 8,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "sigmas",
-          "type": "SIGMAS",
-          "links": [
-            191
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "FlowMatchEulerDiscreteScheduler (Custom)"
-      },
-      "widgets_values": [
-        50,
-        0,
-        9999,
-        256,
-        0.5,
-        "disable",
-        8192,
-        1.15,
-        1000,
-        3,
-        0,
-        "disable",
-        "exponential",
-        "disable",
-        "disable",
-        "disable",
-        "disable",
-        "auto"
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
     },
     {
       "id": 94,
@@ -1319,6 +940,431 @@
       "bgcolor": "#353"
     },
     {
+      "id": 62,
+      "type": "CLIPLoader",
+      "pos": [
+        169.0504994992951,
+        -299.0879651725848
+      ],
+      "size": [
+        270,
+        106
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            119
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPLoader",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.73",
+        "models": [
+          {
+            "name": "qwen_3_4b.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/text_encoders/qwen_3_4b.safetensors",
+            "directory": "text_encoders"
+          }
+        ],
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65
+      },
+      "widgets_values": [
+        "qwen_3_4b_abliterated_v2.safetensors",
+        "lumina2",
+        "default"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 87,
+      "type": "DetailDaemonSamplerNode",
+      "pos": [
+        1199.8359534954825,
+        -401.5514824644412
+      ],
+      "size": [
+        270.25390625,
+        274
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "sampler",
+          "type": "SAMPLER",
+          "link": 196
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SAMPLER",
+          "type": "SAMPLER",
+          "links": [
+            106,
+            188
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DetailDaemonSamplerNode"
+      },
+      "widgets_values": [
+        0.05,
+        0.2,
+        0.8,
+        0.5,
+        1,
+        0,
+        0,
+        0,
+        true,
+        0
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 132,
+      "type": "LGNoiseInjectionLatent",
+      "pos": [
+        1935.8179041771846,
+        -421.97546266251226
+      ],
+      "size": [
+        294.45078125,
+        126
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 198
+        },
+        {
+          "name": "reference_latent",
+          "type": "LATENT",
+          "link": 200
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            199
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LGNoiseInjectionLatent"
+      },
+      "widgets_values": [
+        0.15,
+        0,
+        0.8
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 79,
+      "type": "ResolutionMaster",
+      "pos": [
+        -838.2471585538658,
+        -5.414750354627588
+      ],
+      "size": [
+        330,
+        475
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "input_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "INT",
+          "links": [
+            92
+          ]
+        },
+        {
+          "name": "",
+          "type": "INT",
+          "links": [
+            93
+          ]
+        },
+        {
+          "name": "",
+          "type": "FLOAT",
+          "links": null
+        },
+        {
+          "name": "",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "",
+          "type": "LATENT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ResolutionMaster",
+        "mode": "Manual",
+        "valueX": 1872,
+        "valueY": 1248,
+        "batch_size": 1,
+        "canvas_min_x": 0,
+        "canvas_max_x": 2048,
+        "canvas_step_x": 64,
+        "canvas_min_y": 0,
+        "canvas_max_y": 2048,
+        "canvas_step_y": 64,
+        "canvas_decimals_x": 0,
+        "canvas_decimals_y": 0,
+        "canvas_snap": true,
+        "canvas_dots": true,
+        "canvas_frame": true,
+        "action_slider_snap_min": 16,
+        "action_slider_snap_max": 256,
+        "action_slider_snap_step": 16,
+        "scaling_slider_min": 0.1,
+        "scaling_slider_max": 4,
+        "scaling_slider_step": 0.1,
+        "megapixels_slider_min": 0.5,
+        "megapixels_slider_max": 6,
+        "megapixels_slider_step": 0.1,
+        "snapValue": 64,
+        "upscaleValue": 1,
+        "targetResolution": 1080,
+        "targetMegapixels": 2,
+        "rescaleMode": "resolution",
+        "rescaleValue": 0.9421114395319916,
+        "autoDetect": false,
+        "autoFitOnChange": false,
+        "autoResizeOnChange": false,
+        "selectedCategory": "ZImageTurbo",
+        "selectedPreset": "2:3 Portrait (1536)",
+        "useCustomCalc": false,
+        "manual_slider_min_w": 64,
+        "manual_slider_max_w": 2048,
+        "manual_slider_step_w": 64,
+        "manual_slider_min_h": 64,
+        "manual_slider_max_h": 2048,
+        "manual_slider_step_h": 64,
+        "section_actions_collapsed": false,
+        "section_scaling_collapsed": true,
+        "section_autoDetect_collapsed": true,
+        "section_presets_collapsed": false,
+        "dropdown_resolution_expanded": false,
+        "dropdown_category_expanded": false,
+        "dropdown_preset_expanded": false,
+        "preset_selector_mode": "visual",
+        "customPresetsJSON": ""
+      },
+      "widgets_values": [
+        "Manual",
+        "latent_4x8",
+        1872,
+        1248,
+        false,
+        "resolution",
+        0.9421114395319916,
+        1
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 119,
+      "type": "FlowMatchEulerDiscreteScheduler (Custom)",
+      "pos": [
+        1536.9559890333753,
+        -744.7649949828707
+      ],
+      "size": [
+        344.6392578125,
+        466
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "sigmas",
+          "type": "SIGMAS",
+          "links": [
+            191
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FlowMatchEulerDiscreteScheduler (Custom)"
+      },
+      "widgets_values": [
+        30,
+        0,
+        9999,
+        256,
+        0.5,
+        "disable",
+        8192,
+        1.15,
+        1000,
+        3,
+        0,
+        "disable",
+        "exponential",
+        "disable",
+        "disable",
+        "disable",
+        "disable",
+        "auto"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 105,
+      "type": "SamplerCustomAdvanced",
+      "pos": [
+        1793.745662269532,
+        -47.665870551877475
+      ],
+      "size": [
+        570.953111024421,
+        653.8307710601927
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "noise",
+          "type": "NOISE",
+          "link": 183
+        },
+        {
+          "name": "guider",
+          "type": "GUIDER",
+          "link": 142
+        },
+        {
+          "name": "sampler",
+          "type": "SAMPLER",
+          "link": 188
+        },
+        {
+          "name": "sigmas",
+          "type": "SIGMAS",
+          "link": 193
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 195
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "LATENT",
+          "links": [
+            151
+          ]
+        },
+        {
+          "name": "denoised_output",
+          "type": "LATENT",
+          "links": null
+        }
+      ],
+      "title": "Sampler ZIT",
+      "properties": {
+        "Node name for S&R": "SamplerCustomAdvanced"
+      },
+      "widgets_values": [],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 130,
+      "type": "SplitSigmas",
+      "pos": [
+        1544.8671866132638,
+        -204.85751823478523
+      ],
+      "size": [
+        270,
+        78
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "sigmas",
+          "type": "SIGMAS",
+          "link": 191
+        }
+      ],
+      "outputs": [
+        {
+          "name": "high_sigmas",
+          "type": "SIGMAS",
+          "links": [
+            192
+          ]
+        },
+        {
+          "name": "low_sigmas",
+          "type": "SIGMAS",
+          "links": [
+            193
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SplitSigmas"
+      },
+      "widgets_values": [
+        21
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
       "id": 76,
       "type": "Lora Loader (LoraManager)",
       "pos": [
@@ -1460,52 +1506,6 @@
       "bgcolor": "#353"
     },
     {
-      "id": 132,
-      "type": "LGNoiseInjectionLatent",
-      "pos": [
-        1935.8179041771846,
-        -421.97546266251226
-      ],
-      "size": [
-        294.45078125,
-        126
-      ],
-      "flags": {},
-      "order": 24,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 198
-        },
-        {
-          "name": "reference_latent",
-          "type": "LATENT",
-          "link": 200
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            199
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LGNoiseInjectionLatent"
-      },
-      "widgets_values": [
-        0.15,
-        0,
-        0.8
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
       "id": 124,
       "type": "PgLazyPromptExt",
       "pos": [
@@ -1562,7 +1562,7 @@
         "max_entries": 500
       },
       "widgets_values": [
-        "Red robin sitting in a tree, close up view of the bird",
+        "Girl on beach",
         "Blurry, ugly, bad, unrealistic, overexpoed, plastic skin, no muscle definition, unrealistic, no face , obese , anatomical incorrect, censored, to many legs, to many arms, deformed, mutulated, sfw, to many fingers, mutulsated fingers."
       ],
       "color": "#233",
@@ -1987,13 +1987,13 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.7909089914340874,
+      "scale": 0.6162451743420122,
       "offset": [
-        -109.78663216916777,
-        562.7437401226152
+        644.2205352973834,
+        314.50169692213404
       ]
     },
-    "frontendVersion": "1.38.13",
+    "frontendVersion": "1.41.21",
     "workflowRendererVersion": "LG",
     "VHS_latentpreview": true,
     "VHS_latentpreviewrate": 0,

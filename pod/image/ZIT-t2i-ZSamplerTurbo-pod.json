@@ -1,8 +1,8 @@
 {
   "id": "92112d97-bb64-4b44-86f2-ea5691ef8f6e",
   "revision": 0,
-  "last_node_id": 106,
-  "last_link_id": 201,
+  "last_node_id": 107,
+  "last_link_id": 203,
   "nodes": [
     {
       "id": 17,
@@ -180,10 +180,13 @@
         "Node name for S&R": "ZSamplerTurbo //ZImagePowerNodes"
       },
       "widgets_values": [
-        358575182549229,
+        833314863584424,
         "randomize",
         9,
-        1
+        1,
+        null,
+        "off",
+        false
       ],
       "color": "#222",
       "bgcolor": "#000"
@@ -206,7 +209,7 @@
         {
           "name": "conditioning",
           "type": "CONDITIONING",
-          "link": 201
+          "link": 203
         }
       ],
       "outputs": [
@@ -234,7 +237,7 @@
         8,
         20,
         0,
-        27487657997877,
+        462840202420109,
         "randomize"
       ],
       "color": "#223",
@@ -348,127 +351,6 @@
       "bgcolor": "#000"
     },
     {
-      "id": 81,
-      "type": "Lora Loader (LoraManager)",
-      "pos": [
-        -1171.3336802088033,
-        474.0661969068906
-      ],
-      "size": [
-        449.3698131959434,
-        522.6572450644162
-      ],
-      "flags": {},
-      "order": 4,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 180
-        },
-        {
-          "name": "clip",
-          "shape": 7,
-          "type": "CLIP",
-          "link": 139
-        },
-        {
-          "name": "lora_stack",
-          "shape": 7,
-          "type": "LORA_STACK",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            179
-          ]
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            200
-          ]
-        },
-        {
-          "name": "trigger_words",
-          "type": "STRING",
-          "links": null
-        },
-        {
-          "name": "loaded_loras",
-          "type": "STRING",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "Lora Loader (LoraManager)"
-      },
-      "widgets_values": [
-        "",
-        []
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 106,
-      "type": "StylePromptEncoder //ZImagePowerNodes",
-      "pos": [
-        -652.8119382191813,
-        470.2061859621589
-      ],
-      "size": [
-        553.3869320405495,
-        513.3288611768489
-      ],
-      "flags": {},
-      "order": 6,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 200
-        },
-        {
-          "name": "customization",
-          "shape": 7,
-          "type": "STRING",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            201
-          ]
-        },
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "StylePromptEncoder //ZImagePowerNodes"
-      },
-      "widgets_values": [
-        "photo",
-        "\"Casual Photo\"",
-        "Italian girl waliking on beach"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
       "id": 97,
       "type": "DiffusionModelLoaderKJ",
       "pos": [
@@ -514,43 +396,6 @@
       "bgcolor": "#535"
     },
     {
-      "id": 18,
-      "type": "CLIPLoader",
-      "pos": [
-        -1205.592563917056,
-        262.3847882339313
-      ],
-      "size": [
-        270,
-        106
-      ],
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            139
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPLoader",
-        "cnr_id": "comfy-core",
-        "ver": "0.3.75"
-      },
-      "widgets_values": [
-        "split_files/text_encoders/qwen_3_4b.safetensors",
-        "lumina2",
-        "default"
-      ],
-      "color": "#332922",
-      "bgcolor": "#593930"
-    },
-    {
       "id": 83,
       "type": "ModelSamplingZImage",
       "pos": [
@@ -589,6 +434,165 @@
       ],
       "color": "#323",
       "bgcolor": "#535"
+    },
+    {
+      "id": 18,
+      "type": "CLIPLoader",
+      "pos": [
+        -1205.592563917056,
+        262.3847882339313
+      ],
+      "size": [
+        270,
+        106
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            139
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPLoader",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.75"
+      },
+      "widgets_values": [
+        "qwen_3_4b_abliterated_v2.safetensors",
+        "lumina2",
+        "default"
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 107,
+      "type": "StylePromptEncoder2 //ZImagePowerNodes",
+      "pos": [
+        -657.4535834907689,
+        499.17624351643383
+      ],
+      "size": [
+        573.7064266527698,
+        449.13171408338235
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 202
+        },
+        {
+          "name": "customization",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            203
+          ]
+        },
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "StylePromptEncoder2 //ZImagePowerNodes"
+      },
+      "widgets_values": [
+        "\"Phone Photo\"",
+        null,
+        null,
+        "Italian girl on beach"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 81,
+      "type": "Lora Loader (LoraManager)",
+      "pos": [
+        -1171.3336802088033,
+        474.0661969068906
+      ],
+      "size": [
+        449.3698131959434,
+        522.6572450644162
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 180
+        },
+        {
+          "name": "clip",
+          "shape": 7,
+          "type": "CLIP",
+          "link": 139
+        },
+        {
+          "name": "lora_stack",
+          "shape": 7,
+          "type": "LORA_STACK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            179
+          ]
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            202
+          ]
+        },
+        {
+          "name": "trigger_words",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "loaded_loras",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Lora Loader (LoraManager)"
+      },
+      "widgets_values": [
+        "",
+        []
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
     }
   ],
   "links": [
@@ -681,16 +685,16 @@
       "IMAGE"
     ],
     [
-      200,
+      202,
       81,
       1,
-      106,
+      107,
       0,
       "CLIP"
     ],
     [
-      201,
-      106,
+      203,
+      107,
       0,
       82,
       0,
@@ -780,13 +784,13 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.6402988842979364,
+      "scale": 0.8613910799289018,
       "offset": [
-        1782.6652823337174,
-        91.84308672800212
+        1725.872512388817,
+        -196.22712226929428
       ]
     },
-    "frontendVersion": "1.37.11",
+    "frontendVersion": "1.41.21",
     "workflowRendererVersion": "LG",
     "VHS_latentpreview": true,
     "VHS_latentpreviewrate": 0,
