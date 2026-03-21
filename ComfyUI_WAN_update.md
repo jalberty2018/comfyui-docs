@@ -1,5 +1,9 @@
 # run-comfyui-wan2
 
+## 21032026
+
+- ComfyUI 0.18.0
+
 ## 14032026
 
 - ComfyUI 0.17.0
