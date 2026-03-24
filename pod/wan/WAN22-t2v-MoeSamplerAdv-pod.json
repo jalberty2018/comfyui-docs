@@ -1,8 +1,8 @@
 {
   "id": "aa2890ca-ba70-430b-8d8d-7b48c2bf054e",
   "revision": 0,
-  "last_node_id": 141,
-  "last_link_id": 340,
+  "last_node_id": 143,
+  "last_link_id": 344,
   "nodes": [
     {
       "id": 106,
@@ -28,96 +28,6 @@
       "bgcolor": "#000"
     },
     {
-      "id": 121,
-      "type": "DiffusionModelLoaderKJ",
-      "pos": [
-        -330.3514358788178,
-        -429.2152952136334
-      ],
-      "size": [
-        332.0727943858368,
-        215.78570027805222
-      ],
-      "flags": {},
-      "order": 1,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "extra_state_dict",
-          "shape": 7,
-          "type": "STRING",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            340
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "DiffusionModelLoaderKJ"
-      },
-      "widgets_values": [
-        "split_files/diffusion_models/wan2.2_t2v_low_noise_14B_fp16.safetensors",
-        "default",
-        "default",
-        false,
-        "auto",
-        true
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 120,
-      "type": "DiffusionModelLoaderKJ",
-      "pos": [
-        -316.91442975491725,
-        -801.434993809298
-      ],
-      "size": [
-        316.0391853593146,
-        209.37225666744337
-      ],
-      "flags": {},
-      "order": 2,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "extra_state_dict",
-          "shape": 7,
-          "type": "STRING",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            339
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "DiffusionModelLoaderKJ"
-      },
-      "widgets_values": [
-        "split_files/diffusion_models/wan2.2_t2v_high_noise_14B_fp16.safetensors",
-        "default",
-        "default",
-        false,
-        "auto",
-        true
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
-    },
-    {
       "id": 124,
       "type": "WanMoEScheduler",
       "pos": [
@@ -129,7 +39,7 @@
         298
       ],
       "flags": {},
-      "order": 19,
+      "order": 21,
       "mode": 0,
       "inputs": [
         {
@@ -197,15 +107,15 @@
       "id": 118,
       "type": "CLIPMergeSimple",
       "pos": [
-        395.39899143143066,
-        -40.694074205419334
+        409.5714597718845,
+        -31.675208375646406
       ],
       "size": [
         270,
         78
       ],
       "flags": {},
-      "order": 14,
+      "order": 16,
       "mode": 0,
       "inputs": [
         {
@@ -251,7 +161,7 @@
         58
       ],
       "flags": {},
-      "order": 3,
+      "order": 1,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -288,7 +198,7 @@
         46
       ],
       "flags": {},
-      "order": 23,
+      "order": 25,
       "mode": 0,
       "inputs": [
         {
@@ -323,139 +233,6 @@
       "bgcolor": "#355"
     },
     {
-      "id": 77,
-      "type": "VHS_SelectEveryNthImage",
-      "pos": [
-        2371.043767994082,
-        -552.7845213968636
-      ],
-      "size": [
-        274.197265625,
-        104.95491790771484
-      ],
-      "flags": {},
-      "order": 24,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 157
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            158
-          ]
-        },
-        {
-          "name": "count",
-          "type": "INT",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VHS_SelectEveryNthImage",
-        "cnr_id": "comfyui-videohelpersuite",
-        "aux_id": "Kosinkadink/ComfyUI-VideoHelperSuite",
-        "ver": "330bce6c3c0d47ebdedcc0348d9ab355707b7523"
-      },
-      "widgets_values": {
-        "select_every_nth": 1,
-        "skip_first_images": 1
-      },
-      "color": "#233",
-      "bgcolor": "#355"
-    },
-    {
-      "id": 73,
-      "type": "FastUnsharpSharpen",
-      "pos": [
-        2139.9959538573294,
-        -383.97974997955043
-      ],
-      "size": [
-        232.9187917308409,
-        82
-      ],
-      "flags": {},
-      "order": 25,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 158
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            151
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "FastUnsharpSharpen",
-        "aux_id": "vrgamegirl19/comfyui-vrgamedevgirl",
-        "ver": "0c5580921e6e6ad56f9fc1ecddce3264790a15fb"
-      },
-      "widgets_values": [
-        0.2,
-        false
-      ],
-      "color": "#233",
-      "bgcolor": "#355"
-    },
-    {
-      "id": 74,
-      "type": "FastFilmGrain",
-      "pos": [
-        2393.7304966919583,
-        -386.2160783469667
-      ],
-      "size": [
-        270,
-        106
-      ],
-      "flags": {},
-      "order": 26,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 151
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            152
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "FastFilmGrain",
-        "aux_id": "vrgamegirl19/comfyui-vrgamedevgirl",
-        "ver": "0c5580921e6e6ad56f9fc1ecddce3264790a15fb"
-      },
-      "widgets_values": [
-        0.02,
-        0.5,
-        4
-      ],
-      "color": "#2a363b",
-      "bgcolor": "#3f5159"
-    },
-    {
       "id": 69,
       "type": "RIFE VFI",
       "pos": [
@@ -469,7 +246,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 27,
+      "order": 29,
       "mode": 4,
       "inputs": [
         {
@@ -535,7 +312,7 @@
         106
       ],
       "flags": {},
-      "order": 4,
+      "order": 2,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -575,7 +352,7 @@
         130
       ],
       "flags": {},
-      "order": 11,
+      "order": 9,
       "mode": 0,
       "inputs": [
         {
@@ -633,7 +410,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 5,
+      "order": 3,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -653,149 +430,6 @@
       "bgcolor": "#353"
     },
     {
-      "id": 138,
-      "type": "SamplerCustomAdvanced",
-      "pos": [
-        1645.1109614589013,
-        213.7229135334142
-      ],
-      "size": [
-        378.36344220098215,
-        504.02154145725854
-      ],
-      "flags": {},
-      "order": 22,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "noise",
-          "type": "NOISE",
-          "link": 329
-        },
-        {
-          "name": "guider",
-          "type": "GUIDER",
-          "link": 328
-        },
-        {
-          "name": "sampler",
-          "type": "SAMPLER",
-          "link": 332
-        },
-        {
-          "name": "sigmas",
-          "type": "SIGMAS",
-          "link": 331
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 333
-        }
-      ],
-      "outputs": [
-        {
-          "name": "output",
-          "type": "LATENT",
-          "links": [
-            336
-          ]
-        },
-        {
-          "name": "denoised_output",
-          "type": "LATENT",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "SamplerCustomAdvanced"
-      },
-      "widgets_values": [],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 70,
-      "type": "VHS_VideoCombine",
-      "pos": [
-        2123.947139015634,
-        -210.63307528499604
-      ],
-      "size": [
-        880.0685904125412,
-        334
-      ],
-      "flags": {},
-      "order": 28,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 144
-        },
-        {
-          "name": "audio",
-          "shape": 7,
-          "type": "AUDIO",
-          "link": null
-        },
-        {
-          "name": "meta_batch",
-          "shape": 7,
-          "type": "VHS_BatchManager",
-          "link": null
-        },
-        {
-          "name": "vae",
-          "shape": 7,
-          "type": "VAE",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "Filenames",
-          "type": "VHS_FILENAMES",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VHS_VideoCombine",
-        "cnr_id": "comfyui-videohelpersuite",
-        "aux_id": "Kosinkadink/ComfyUI-VideoHelperSuite",
-        "ver": "a7ce59e381934733bfae03b1be029756d6ce936d",
-        "widget_ue_connectable": {}
-      },
-      "widgets_values": {
-        "frame_rate": 16,
-        "loop_count": 0,
-        "filename_prefix": "FINAL",
-        "format": "video/h264-mp4",
-        "pix_fmt": "yuv420p",
-        "crf": 19,
-        "save_metadata": true,
-        "trim_to_audio": false,
-        "pingpong": false,
-        "save_output": true,
-        "videopreview": {
-          "hidden": false,
-          "paused": false,
-          "params": {
-            "filename": "FINAL_00008.mp4",
-            "subfolder": "",
-            "type": "output",
-            "format": "video/h264-mp4",
-            "frame_rate": 20,
-            "workflow": "FINAL_00008.png",
-            "fullpath": "/workspace/ComfyUI/output/FINAL_00008.mp4"
-          }
-        }
-      },
-      "color": "#222",
-      "bgcolor": "#000"
-    },
-    {
       "id": 119,
       "type": "ResolutionMaster",
       "pos": [
@@ -807,7 +441,7 @@
         475
       ],
       "flags": {},
-      "order": 6,
+      "order": 4,
       "mode": 0,
       "inputs": [
         {
@@ -929,7 +563,7 @@
         642.4175466389934
       ],
       "flags": {},
-      "order": 21,
+      "order": 23,
       "mode": 0,
       "inputs": [
         {
@@ -991,7 +625,7 @@
         82
       ],
       "flags": {},
-      "order": 7,
+      "order": 5,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1025,7 +659,7 @@
         130
       ],
       "flags": {},
-      "order": 8,
+      "order": 6,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1051,120 +685,18 @@
       "bgcolor": "#335"
     },
     {
-      "id": 135,
-      "type": "ScheduledCFGGuidance",
-      "pos": [
-        1646.726603878252,
-        -38.93382712168489
-      ],
-      "size": [
-        270.0875,
-        146
-      ],
-      "flags": {},
-      "order": 18,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 322
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 324
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 326
-        }
-      ],
-      "outputs": [
-        {
-          "name": "GUIDER",
-          "type": "GUIDER",
-          "links": [
-            328
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ScheduledCFGGuidance"
-      },
-      "widgets_values": [
-        1.1,
-        0,
-        1
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 134,
-      "type": "ScheduledCFGGuidance",
-      "pos": [
-        1158.9933443740204,
-        -38.91552887007888
-      ],
-      "size": [
-        270.0875,
-        146
-      ],
-      "flags": {},
-      "order": 20,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 321
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 323
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 325
-        }
-      ],
-      "outputs": [
-        {
-          "name": "GUIDER",
-          "type": "GUIDER",
-          "links": [
-            327
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ScheduledCFGGuidance"
-      },
-      "widgets_values": [
-        1.1,
-        0,
-        1
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
-    },
-    {
       "id": 113,
       "type": "PgLazyPromptMini",
       "pos": [
-        392.2089641084079,
-        104.20048527439278
+        406.3814324488619,
+        113.21935110416571
       ],
       "size": [
         637.0709838867188,
         546.4883422851562
       ],
       "flags": {},
-      "order": 15,
+      "order": 17,
       "mode": 0,
       "inputs": [
         {
@@ -1219,7 +751,7 @@
         362
       ],
       "flags": {},
-      "order": 13,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
@@ -1289,7 +821,7 @@
         371.51041352349836
       ],
       "flags": {},
-      "order": 12,
+      "order": 15,
       "mode": 0,
       "inputs": [
         {
@@ -1348,24 +880,116 @@
       "bgcolor": "#353"
     },
     {
+      "id": 123,
+      "type": "WanVideoNAG",
+      "pos": [
+        791.0595956052035,
+        -400.68597343749974
+      ],
+      "size": [
+        270,
+        150
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 320
+        },
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 282
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            322
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "WanVideoNAG"
+      },
+      "widgets_values": [
+        11,
+        0.25,
+        2.5,
+        "default"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 120,
+      "type": "DiffusionModelLoaderKJ",
+      "pos": [
+        -325.93324643582554,
+        -816.8958750646386
+      ],
+      "size": [
+        316.0391853593146,
+        209.37225666744337
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "extra_state_dict",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            341
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DiffusionModelLoaderKJ"
+      },
+      "widgets_values": [
+        "split_files/diffusion_models/wan2.2_t2v_high_noise_14B_fp16.safetensors",
+        "default",
+        "default",
+        false,
+        "auto",
+        true
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
       "id": 131,
       "type": "LoraLoaderModelOnly",
       "pos": [
-        42.341349671004366,
-        -802.370236010714
+        401.8072013305494,
+        -812.6775393298061
       ],
       "size": [
         372.9433467328938,
         84.87953417434665
       ],
       "flags": {},
-      "order": 10,
+      "order": 12,
       "mode": 0,
       "inputs": [
         {
           "name": "model",
           "type": "MODEL",
-          "link": 339
+          "link": 342
         }
       ],
       "outputs": [
@@ -1391,21 +1015,21 @@
       "id": 129,
       "type": "LoraLoaderModelOnly",
       "pos": [
-        63.94815621710281,
-        -429.6334552368885
+        387.33854455755636,
+        -427.05662940711557
       ],
       "size": [
         372.9433467328938,
         84.87953417434665
       ],
       "flags": {},
-      "order": 9,
+      "order": 13,
       "mode": 0,
       "inputs": [
         {
           "name": "model",
           "type": "MODEL",
-          "link": 340
+          "link": 343
         }
       ],
       "outputs": [
@@ -1428,18 +1052,63 @@
       "bgcolor": "#353"
     },
     {
+      "id": 121,
+      "type": "DiffusionModelLoaderKJ",
+      "pos": [
+        -330.3514358788178,
+        -429.2152952136334
+      ],
+      "size": [
+        332.0727943858368,
+        215.78570027805222
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "extra_state_dict",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            344
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DiffusionModelLoaderKJ"
+      },
+      "widgets_values": [
+        "split_files/diffusion_models/wan2.2_t2v_low_noise_14B_fp16.safetensors",
+        "default",
+        "default",
+        false,
+        "auto",
+        true
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
       "id": 122,
       "type": "WanVideoNAG",
       "pos": [
-        484.8620653890477,
-        -775.4024589062428
+        791.5032087081388,
+        -803.747420161583
       ],
       "size": [
         270,
         150
       ],
       "flags": {},
-      "order": 17,
+      "order": 19,
       "mode": 0,
       "inputs": [
         {
@@ -1476,48 +1145,471 @@
       "bgcolor": "#535"
     },
     {
-      "id": 123,
-      "type": "WanVideoNAG",
+      "id": 142,
+      "type": "TorchCompileModelAdvanced",
       "pos": [
-        496.01414394565876,
-        -401.97446007568334
+        22.1258486560453,
+        -815.3518606493084
+      ],
+      "size": [
+        353.380859375,
+        226
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 341
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            342
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "TorchCompileModelAdvanced"
+      },
+      "widgets_values": [
+        "inductor",
+        false,
+        "default",
+        "auto",
+        true,
+        128,
+        false,
+        false
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 143,
+      "type": "TorchCompileModelAdvanced",
+      "pos": [
+        20.68380865604532,
+        -435.42515230885533
+      ],
+      "size": [
+        353.380859375,
+        226
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 344
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            343
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "TorchCompileModelAdvanced"
+      },
+      "widgets_values": [
+        "inductor",
+        false,
+        "default",
+        "auto",
+        true,
+        128,
+        false,
+        false
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 138,
+      "type": "SamplerCustomAdvanced",
+      "pos": [
+        1645.1109614589013,
+        213.7229135334142
+      ],
+      "size": [
+        393.8242988818903,
+        635.439216435896
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "noise",
+          "type": "NOISE",
+          "link": 329
+        },
+        {
+          "name": "guider",
+          "type": "GUIDER",
+          "link": 328
+        },
+        {
+          "name": "sampler",
+          "type": "SAMPLER",
+          "link": 332
+        },
+        {
+          "name": "sigmas",
+          "type": "SIGMAS",
+          "link": 331
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 333
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "LATENT",
+          "links": [
+            336
+          ]
+        },
+        {
+          "name": "denoised_output",
+          "type": "LATENT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SamplerCustomAdvanced"
+      },
+      "widgets_values": [],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 73,
+      "type": "FastUnsharpSharpen",
+      "pos": [
+        2139.9959538573294,
+        -383.97974997955043
+      ],
+      "size": [
+        232.9187917308409,
+        82
+      ],
+      "flags": {},
+      "order": 27,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 158
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            151
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FastUnsharpSharpen",
+        "aux_id": "vrgamegirl19/comfyui-vrgamedevgirl",
+        "ver": "0c5580921e6e6ad56f9fc1ecddce3264790a15fb"
+      },
+      "widgets_values": [
+        0.2,
+        false
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 77,
+      "type": "VHS_SelectEveryNthImage",
+      "pos": [
+        2371.043767994082,
+        -552.7845213968636
+      ],
+      "size": [
+        274.197265625,
+        104.95491790771484
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 157
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            158
+          ]
+        },
+        {
+          "name": "count",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_SelectEveryNthImage",
+        "cnr_id": "comfyui-videohelpersuite",
+        "aux_id": "Kosinkadink/ComfyUI-VideoHelperSuite",
+        "ver": "330bce6c3c0d47ebdedcc0348d9ab355707b7523"
+      },
+      "widgets_values": {
+        "select_every_nth": 1,
+        "skip_first_images": 1
+      },
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 74,
+      "type": "FastFilmGrain",
+      "pos": [
+        2393.7304966919583,
+        -386.2160783469667
       ],
       "size": [
         270,
-        150
+        106
       ],
       "flags": {},
-      "order": 16,
+      "order": 28,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 151
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            152
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FastFilmGrain",
+        "aux_id": "vrgamegirl19/comfyui-vrgamedevgirl",
+        "ver": "0c5580921e6e6ad56f9fc1ecddce3264790a15fb"
+      },
+      "widgets_values": [
+        0.02,
+        0.5,
+        4
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 70,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        2123.947139015634,
+        -210.63307528499604
+      ],
+      "size": [
+        880.0685904125412,
+        334
+      ],
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 144
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine",
+        "cnr_id": "comfyui-videohelpersuite",
+        "aux_id": "Kosinkadink/ComfyUI-VideoHelperSuite",
+        "ver": "a7ce59e381934733bfae03b1be029756d6ce936d",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": {
+        "frame_rate": 16,
+        "loop_count": 0,
+        "filename_prefix": "t2v-Moe",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 19,
+        "save_metadata": true,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "FINAL_00008.mp4",
+            "subfolder": "",
+            "type": "output",
+            "format": "video/h264-mp4",
+            "frame_rate": 20,
+            "workflow": "FINAL_00008.png",
+            "fullpath": "/workspace/ComfyUI/output/FINAL_00008.mp4"
+          }
+        }
+      },
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 134,
+      "type": "ScheduledCFGGuidance",
+      "pos": [
+        1158.9933443740204,
+        -38.91552887007888
+      ],
+      "size": [
+        270.0875,
+        146
+      ],
+      "flags": {},
+      "order": 22,
       "mode": 0,
       "inputs": [
         {
           "name": "model",
           "type": "MODEL",
-          "link": 320
+          "link": 321
         },
         {
-          "name": "conditioning",
+          "name": "positive",
           "type": "CONDITIONING",
-          "link": 282
+          "link": 323
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 325
         }
       ],
       "outputs": [
         {
-          "name": "model",
-          "type": "MODEL",
+          "name": "GUIDER",
+          "type": "GUIDER",
           "links": [
-            322
+            327
           ]
         }
       ],
       "properties": {
-        "Node name for S&R": "WanVideoNAG"
+        "Node name for S&R": "ScheduledCFGGuidance"
       },
       "widgets_values": [
-        11,
-        0.25,
-        2.5,
-        "default"
+        1,
+        0,
+        1
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 135,
+      "type": "ScheduledCFGGuidance",
+      "pos": [
+        1646.726603878252,
+        -38.93382712168489
+      ],
+      "size": [
+        270.0875,
+        146
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 322
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 324
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 326
+        }
+      ],
+      "outputs": [
+        {
+          "name": "GUIDER",
+          "type": "GUIDER",
+          "links": [
+            328
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ScheduledCFGGuidance"
+      },
+      "widgets_values": [
+        1,
+        0,
+        1
       ],
       "color": "#232",
       "bgcolor": "#353"
@@ -1821,18 +1913,34 @@
       "NOISE"
     ],
     [
-      339,
+      341,
       120,
+      0,
+      142,
+      0,
+      "MODEL"
+    ],
+    [
+      342,
+      142,
       0,
       131,
       0,
       "MODEL"
     ],
     [
-      340,
-      121,
+      343,
+      143,
       0,
       129,
+      0,
+      "MODEL"
+    ],
+    [
+      344,
+      121,
+      0,
+      143,
       0,
       "MODEL"
     ]
@@ -1842,10 +1950,10 @@
       "id": 1,
       "title": "Model High noise",
       "bounding": [
-        -337.46683538416266,
-        -891.4452160693755,
-        1140.3695598439206,
-        351.16050622566604
+        -346.48565206507095,
+        -906.9060973247161,
+        1437.9918864821027,
+        371.77506371498487
       ],
       "color": "#3f789e",
       "font_size": 24,
@@ -1857,8 +1965,8 @@
       "bounding": [
         -349.94255331696183,
         -515.4420134004127,
-        1145.781039802804,
-        334.43944798724783
+        1440.8264914623494,
+        340.88148798724785
       ],
       "color": "#3f789e",
       "font_size": 24,
@@ -1868,8 +1976,8 @@
       "id": 3,
       "title": "CLIP",
       "bounding": [
-        353.6830289341794,
-        -124.36914109501423,
+        367.8554972746333,
+        -115.35027526524127,
         721.0030556103573,
         816.0160716248226
       ],
@@ -1883,8 +1991,8 @@
       "bounding": [
         1115.760775121945,
         -125.70825256589728,
-        941.6489603983657,
-        913.3068957338426
+        957.1098170792741,
+        1004.7838440742964
       ],
       "color": "#3f789e",
       "font_size": 24,
@@ -1959,19 +2067,19 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.3855432894295324,
+      "scale": 0.6209213230591566,
       "offset": [
-        1218.7317405033568,
-        987.2471718772485
+        1345.9849824648618,
+        488.4331858514112
       ]
     },
-    "frontendVersion": "1.41.18",
+    "frontendVersion": "1.41.21",
     "reroutes": [
       {
         "id": 2,
         "pos": [
-          1033.425524868803,
-          -46.857937317839465
+          1047.597993209257,
+          -37.83907148806654
         ],
         "linkIds": [
           282,
