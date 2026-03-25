@@ -1,9 +1,9 @@
 # run-comfyui-image
 
-## 21032026
+## 24032026
 
-- ComfyUI 0.18.0
-- - [QwenMultiAngle](https://github.com/jtydhr88/ComfyUI-qwenmultiangle)
+- ComfyUI 0.18.1
+- [QwenMultiAngle](https://github.com/jtydhr88/ComfyUI-qwenmultiangle)
 
 ## 06032026
 
