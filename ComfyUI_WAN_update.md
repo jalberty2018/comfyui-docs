@@ -1,0 +1,54 @@
+# run-comfyui-wan2
+
+## 15042026
+
+- ComfyUI 0.19.0
+- [Lora Optimizer](https://github.com/ethanfel/ComfyUI-LoRA-Optimizer)
+
+## 24032026
+
+- ComfyUI 0.18.1
+
+## 14032026
+
+- ComfyUI 0.17.0
+
+## 26022026
+
+- ComfyUI 0.15.0
+- [QwenVL-mod](https://github.com/huchukato/ComfyUI-QwenVL-Mod)
+- [VideoChunkTools](https://github.com/gregtee2/ComfyUI_VideoChunkTools)
+- Updated hf download logic.
+
+## 13022026
+
+- ComfyUI 0.13.0
+
+## 05022026
+
+- ComfyUI 0.12.0
+- [Lora-Manager](https://github.com/willmiao/ComfyUI-Lora-Manager)
+
+## 29012026
+
+- ComfyUI 0.11.0
+- Auto selection models dependent on available VRAM see configurations.
+- Added [PainterMultiF2V](https://github.com/princepainter/ComfyUI-PainterMultiF2V)
+- Added [PainterVideoUpscale](https://github.com/princepainter/ComfyUI-PainterVideoUpscale)
+
+## 14012026
+
+- ComfyUI 0.9.1
+- Added environment variable MEDIA[1-50] to download files to /workspace/ComfyUI/input for test/tutorial purpose.
+
+## 11012026
+
+- ComfyUI 0.8.0
+- IAMCCS-nodes Fork.
+- Removed old nodes.
+- Added [Dynamic-RAMCache](https://github.com/Windecay/ComfyUI_Dynamic-RAMCache)
+- Updated workflows i2v
+- Updated i2v svi v2 pro workflow
+
+
+
