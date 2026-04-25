@@ -6,6 +6,7 @@
 - [was_affine](https://github.com/WASasquatch/was_affine)
 - [MelBandRoFormer](https://github.com/kijai/ComfyUI-MelBandRoFormer.git)
 - [Iamccs-nodes](https://github.com/IAMCCS/IAMCCS-nodes.git)
+- [Prompt relay encode]( https://github.com/kijai/ComfyUI-PromptRelay.git)
 
 ## 18042026
 
