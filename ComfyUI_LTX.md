@@ -45,6 +45,10 @@ A streamlined and automated environment for running **ComfyUI** with **LTX-2.3 v
 
 ![Pod running on L40S ComfyUI](images/runpod_L40S_LTX.jpeg)
 
+### Pod running on RTX 6000 Ada bf16
+
+![Pod running on RTX 6000Ada ComfyUI](images/runpod_6000Ada_LTX.jpeg)
+
 ### Pod running on RTX A5000 fp8
 
 ![Pod running on RTX A5000 ComfyUI](images/runpod_A5000_LTX.jpeg)
