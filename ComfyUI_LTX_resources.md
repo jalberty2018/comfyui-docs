@@ -10,6 +10,7 @@
 
 - [awesome-ltx2](https://github.com/wildminder/awesome-ltx2)
 - [RuneXX](https://huggingface.co/RuneXX/LTX-2-Workflows)
+- [Prompt Relay](https://gordonchen19.github.io/Prompt-Relay/)
 
 ## Loras
 
