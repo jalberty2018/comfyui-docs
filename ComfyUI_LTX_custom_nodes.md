@@ -13,6 +13,7 @@
 - [PG Nodes](https://github.com/GizmoR13/PG-Nodes)
 - [ComfyUi-Scale-Image-to-Total-Pixels-Advanced](https://github.com/BigStationW/ComfyUi-Scale-Image-to-Total-Pixels-Advanced)
 - [Prompt relay encode]( https://github.com/kijai/ComfyUI-PromptRelay.git)
+- [Easy-Use](https://github.com/yolain/ComfyUI-Easy-Use.git)
 
 ### Downloaders/Linkers
 
