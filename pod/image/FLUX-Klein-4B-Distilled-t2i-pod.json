@@ -1,8 +1,8 @@
 {
   "id": "92112d97-bb64-4b44-86f2-ea5691ef8f6e",
   "revision": 0,
-  "last_node_id": 114,
-  "last_link_id": 225,
+  "last_node_id": 115,
+  "last_link_id": 230,
   "nodes": [
     {
       "id": 87,
@@ -43,7 +43,7 @@
           "name": "LATENT",
           "type": "LATENT",
           "links": [
-            221
+            229
           ]
         }
       ],
@@ -252,7 +252,7 @@
         {
           "name": "latent",
           "type": "LATENT",
-          "link": 222
+          "link": 230
         }
       ],
       "outputs": [
@@ -397,7 +397,7 @@
           "name": "MODEL",
           "type": "MODEL",
           "links": [
-            218
+            226
           ]
         },
         {
@@ -492,66 +492,6 @@
       "bgcolor": "#353"
     },
     {
-      "id": 111,
-      "type": "Flux2KleinKSampler",
-      "pos": [
-        907.3748767872748,
-        874.1923987114094
-      ],
-      "size": [
-        553.9583554535175,
-        757.9082775520243
-      ],
-      "flags": {},
-      "order": 10,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 218
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 224
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 220
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 221
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            222
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "Flux2KleinKSampler"
-      },
-      "widgets_values": [
-        8,
-        1,
-        369420576034163,
-        "randomize",
-        1,
-        0.5,
-        1.15
-      ],
-      "color": "#222",
-      "bgcolor": "#000"
-    },
-    {
       "id": 113,
       "type": "Flux2KleinConditioningEnhancer",
       "pos": [
@@ -577,7 +517,7 @@
           "name": "CONDITIONING",
           "type": "CONDITIONING",
           "links": [
-            224
+            227
           ]
         }
       ],
@@ -626,7 +566,7 @@
           "name": "CONDITIONING",
           "type": "CONDITIONING",
           "links": [
-            220
+            228
           ]
         }
       ],
@@ -786,6 +726,68 @@
       ],
       "color": "#222",
       "bgcolor": "#000"
+    },
+    {
+      "id": 115,
+      "type": "Flux2KleinKSamplerExperimental",
+      "pos": [
+        921.6954021060242,
+        887.9362734993059
+      ],
+      "size": [
+        536.5301778727265,
+        579.2085586048345
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 226
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 227
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 229
+        },
+        {
+          "name": "negative",
+          "shape": 7,
+          "type": "CONDITIONING",
+          "link": 228
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            230
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Flux2KleinKSamplerExperimental"
+      },
+      "widgets_values": [
+        8,
+        0,
+        "randomize",
+        1,
+        0.5,
+        1.15,
+        1,
+        1
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
     }
   ],
   "links": [
@@ -862,52 +864,52 @@
       "CONDITIONING"
     ],
     [
-      218,
-      99,
-      0,
-      111,
-      0,
-      "MODEL"
-    ],
-    [
-      220,
-      95,
-      0,
-      111,
-      2,
-      "CONDITIONING"
-    ],
-    [
-      221,
-      87,
-      0,
-      111,
-      3,
-      "LATENT"
-    ],
-    [
-      222,
-      111,
-      0,
-      103,
-      0,
-      "LATENT"
-    ],
-    [
-      224,
-      113,
-      0,
-      111,
-      1,
-      "CONDITIONING"
-    ],
-    [
       225,
       109,
       0,
       113,
       0,
       "CONDITIONING"
+    ],
+    [
+      226,
+      99,
+      0,
+      115,
+      0,
+      "MODEL"
+    ],
+    [
+      227,
+      113,
+      0,
+      115,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      228,
+      95,
+      0,
+      115,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      229,
+      87,
+      0,
+      115,
+      2,
+      "LATENT"
+    ],
+    [
+      230,
+      115,
+      0,
+      103,
+      0,
+      "LATENT"
     ]
   ],
   "groups": [
@@ -993,10 +995,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.712470462772091,
+      "scale": 0.36561000197108695,
       "offset": [
-        -480.98186160718814,
-        -606.2314230063953
+        531.6621984021626,
+        -318.18238741791765
       ]
     },
     "frontendVersion": "1.42.11",

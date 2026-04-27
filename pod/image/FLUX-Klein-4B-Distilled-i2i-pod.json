@@ -1,8 +1,8 @@
 {
   "id": "720facc5-6059-4d75-8f2e-baa80c40d74d",
   "revision": 0,
-  "last_node_id": 153,
-  "last_link_id": 283,
+  "last_node_id": 154,
+  "last_link_id": 288,
   "nodes": [
     {
       "id": 127,
@@ -22,7 +22,7 @@
         {
           "name": "latent",
           "type": "LATENT",
-          "link": 279
+          "link": 288
         }
       ],
       "outputs": [
@@ -89,7 +89,7 @@
           "name": "LATENT",
           "type": "LATENT",
           "links": [
-            278
+            287
           ]
         }
       ],
@@ -474,7 +474,7 @@
           "name": "CONDITIONING",
           "type": "CONDITIONING",
           "links": [
-            276
+            285
           ]
         }
       ],
@@ -585,7 +585,7 @@
           "name": "CONDITIONING",
           "type": "CONDITIONING",
           "links": [
-            277
+            286
           ]
         }
       ],
@@ -823,49 +823,6 @@
       "bgcolor": "#000"
     },
     {
-      "id": 153,
-      "type": "IdentityFeatureTransfer",
-      "pos": [
-        -301.53788832226587,
-        540.9722018041015
-      ],
-      "size": [
-        291.6197265625,
-        162.5976660786257
-      ],
-      "flags": {},
-      "order": 11,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 280
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            281
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "IdentityFeatureTransfer"
-      },
-      "widgets_values": [
-        0.15,
-        0,
-        23,
-        "cosine_pull",
-        0.25
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
       "id": 142,
       "type": "Flux2KleinReferenceAppearanceBalancer",
       "pos": [
@@ -960,160 +917,6 @@
       "bgcolor": "#000"
     },
     {
-      "id": 149,
-      "type": "Flux2KleinKSampler",
-      "pos": [
-        912.5430211526058,
-        1275.1968629118703
-      ],
-      "size": [
-        402.6096098089365,
-        652.4502397948695
-      ],
-      "flags": {},
-      "order": 25,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 282
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 276
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 277
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 278
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            279
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "Flux2KleinKSampler"
-      },
-      "widgets_values": [
-        8,
-        1,
-        42,
-        "fixed",
-        1,
-        0.5,
-        1.15
-      ],
-      "color": "#222",
-      "bgcolor": "#000"
-    },
-    {
-      "id": 152,
-      "type": "IdentityGuidance",
-      "pos": [
-        -303.8196852080124,
-        767.246900216717
-      ],
-      "size": [
-        305.4908203125,
-        150
-      ],
-      "flags": {},
-      "order": 18,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 281
-        },
-        {
-          "name": "identity_latent",
-          "type": "LATENT",
-          "link": 283
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            282
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "IdentityGuidance"
-      },
-      "widgets_values": [
-        0.3,
-        0,
-        0.8,
-        "adaptive"
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
-      "id": 143,
-      "type": "Flux2KleinConditioningEnhancer",
-      "pos": [
-        98.88329232649363,
-        716.8789707772721
-      ],
-      "size": [
-        339.321875,
-        250
-      ],
-      "flags": {},
-      "order": 21,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "conditioning",
-          "type": "CONDITIONING",
-          "link": 270
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            271
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "Flux2KleinConditioningEnhancer"
-      },
-      "widgets_values": [
-        1.5,
-        0.25,
-        0.15,
-        0,
-        "dampen",
-        1.75,
-        0,
-        true,
-        false
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
       "id": 145,
       "type": "Flux2KleinReferenceLatentMixer",
       "pos": [
@@ -1154,73 +957,6 @@
         "none",
         0.5,
         -1,
-        false
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 147,
-      "type": "Flux2KleinSectionedTextEncoder",
-      "pos": [
-        102.0934236883406,
-        1313.4232654120399
-      ],
-      "size": [
-        749.9284916390354,
-        630.7469773453658
-      ],
-      "flags": {},
-      "order": 12,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 263
-        }
-      ],
-      "outputs": [
-        {
-          "name": "conditioning",
-          "type": "CONDITIONING",
-          "links": [
-            264,
-            265
-          ]
-        },
-        {
-          "name": "front_section",
-          "type": "STRING",
-          "links": null
-        },
-        {
-          "name": "mid_section",
-          "type": "STRING",
-          "links": null
-        },
-        {
-          "name": "end_section",
-          "type": "STRING",
-          "links": null
-        },
-        {
-          "name": "full_prompt",
-          "type": "STRING",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "Flux2KleinSectionedTextEncoder"
-      },
-      "widgets_values": [
-        "auto_balanced",
-        "Undressed girl, naked girl.\nKeep pose.\nKeep proportions.\nKeep anatomy\nEnhance skin texture.\nEnhance face texture.",
-        "Remove clothes, dress, shirt, skirt, pants, bikini, underwear, mask.\nRemove text.\nRemove symbols.\nFill black with outpainting\n",
-        "High resolution, detailed, photorealistic, natural skin detail, natural cool colors.",
-        "",
-        "comma",
-        true,
         false
       ],
       "color": "#232",
@@ -1436,6 +1172,272 @@
       ],
       "color": "#233",
       "bgcolor": "#355"
+    },
+    {
+      "id": 154,
+      "type": "Flux2KleinKSamplerExperimental",
+      "pos": [
+        921.9737197840907,
+        1260.3797393404182
+      ],
+      "size": [
+        396.5565097219145,
+        292.3716050484725
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 284
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 285
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 287
+        },
+        {
+          "name": "negative",
+          "shape": 7,
+          "type": "CONDITIONING",
+          "link": 286
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            288
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Flux2KleinKSamplerExperimental"
+      },
+      "widgets_values": [
+        8,
+        0,
+        "randomize",
+        1,
+        0.5,
+        1.15,
+        1,
+        1
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 152,
+      "type": "IdentityGuidance",
+      "pos": [
+        -303.8196852080124,
+        767.246900216717
+      ],
+      "size": [
+        305.4908203125,
+        150
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 281
+        },
+        {
+          "name": "identity_latent",
+          "type": "LATENT",
+          "link": 283
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            284
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "IdentityGuidance"
+      },
+      "widgets_values": [
+        0.15,
+        0,
+        0.8,
+        "adaptive"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 153,
+      "type": "IdentityFeatureTransfer",
+      "pos": [
+        -301.53788832226587,
+        540.9722018041015
+      ],
+      "size": [
+        291.6197265625,
+        162.5976660786257
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 280
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            281
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "IdentityFeatureTransfer"
+      },
+      "widgets_values": [
+        0.15,
+        0,
+        23,
+        "cosine_pull",
+        0.25
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 143,
+      "type": "Flux2KleinConditioningEnhancer",
+      "pos": [
+        98.88329232649363,
+        716.8789707772721
+      ],
+      "size": [
+        339.321875,
+        250
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 270
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            271
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Flux2KleinConditioningEnhancer"
+      },
+      "widgets_values": [
+        2.5,
+        0.25,
+        0.15,
+        0,
+        "dampen",
+        1.75,
+        0,
+        true,
+        false
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 147,
+      "type": "Flux2KleinSectionedTextEncoder",
+      "pos": [
+        102.0934236883406,
+        1313.4232654120399
+      ],
+      "size": [
+        749.9284916390354,
+        630.7469773453658
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 263
+        }
+      ],
+      "outputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "links": [
+            264,
+            265
+          ]
+        },
+        {
+          "name": "front_section",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "mid_section",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "end_section",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "full_prompt",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Flux2KleinSectionedTextEncoder"
+      },
+      "widgets_values": [
+        "auto_balanced",
+        "Undressed girl, naked girl.\nKeep pose.\nKeep proportions.\nKeep anatomy\nEnhance skin texture.\nEnhance face texture.",
+        "Remove clothes, dress, shirt, skirt, pants, bikini, underwear, mask.\nRemove text.\nRemove symbols.",
+        "High resolution, natural skin detail.",
+        "",
+        "comma",
+        true,
+        false
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
     }
   ],
   "links": [
@@ -1648,38 +1650,6 @@
       "CONDITIONING"
     ],
     [
-      276,
-      144,
-      0,
-      149,
-      1,
-      "CONDITIONING"
-    ],
-    [
-      277,
-      116,
-      0,
-      149,
-      2,
-      "CONDITIONING"
-    ],
-    [
-      278,
-      106,
-      0,
-      149,
-      3,
-      "LATENT"
-    ],
-    [
-      279,
-      149,
-      0,
-      127,
-      0,
-      "LATENT"
-    ],
-    [
       280,
       133,
       0,
@@ -1696,19 +1666,51 @@
       "MODEL"
     ],
     [
-      282,
-      152,
-      0,
-      149,
-      0,
-      "MODEL"
-    ],
-    [
       283,
       117,
       0,
       152,
       1,
+      "LATENT"
+    ],
+    [
+      284,
+      152,
+      0,
+      154,
+      0,
+      "MODEL"
+    ],
+    [
+      285,
+      144,
+      0,
+      154,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      286,
+      116,
+      0,
+      154,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      287,
+      106,
+      0,
+      154,
+      2,
+      "LATENT"
+    ],
+    [
+      288,
+      154,
+      0,
+      127,
+      0,
       "LATENT"
     ]
   ],
@@ -1808,10 +1810,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.8669338929444417,
+      "scale": 0.5382977398118872,
       "offset": [
-        1616.060540162331,
-        -217.51754746678523
+        1254.6814445916575,
+        -379.9135603622932
       ]
     },
     "frontendVersion": "1.42.11",
