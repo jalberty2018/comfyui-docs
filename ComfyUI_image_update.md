@@ -1,9 +1,11 @@
 # run-comfyui-image
 
-## 20042026
+## 27042026
 
+- ComfyUI 0.19.3
 - [DiversityBoost](https://github.com/facok/ComfyUI-DiversityBoost)
 - [Flux2Klein-Conditioning-Toolkit](https://github.com/xmarre/ComfyUI-Flux2Klein-Conditioning-Toolkit)
+- [Iamccs-nodes](https://github.com/IAMCCS/IAMCCS-nodes.git)
 
 ## 16042026
 
