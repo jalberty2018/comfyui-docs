@@ -8,9 +8,13 @@ A streamlined and automated environment for running **ComfyUI** with **image/edi
 
 ![ZIB-ZIT](images/ai-generated-ZIB-ZIT.jpg)
 
-## Example QWEN-EDIT 
+## Example QWEN-EDIT MULTIPLE ANGLES
 
 ![QWEN-EDIT-CAMERA](images/ai-generated-QWEN-EDIT-CAMERA.jpg)
+
+## Example FLUX.2 Dev MULTIPLE ANGLES
+
+![FLUX2-CAMERA](images/ai-generated-FLUX2-CAMERA.jpg)
 
 ## 🔧 Features
 
@@ -47,3 +51,11 @@ A streamlined and automated environment for running **ComfyUI** with **image/edi
 ### Example is running QWEN-EDIT fp8 on a RTX A5000
 
 ![Pod running on RTX A5000 QWEN-EDIT ComfyUI](images/runpod_A5000_QWEN-EDIT.jpg)
+
+### Example is running FLUX.2 Dev bf16 on a L40S
+
+![Pod running on L40S Flux.2 Dev bf16 ComfyUI](images/runpod_L40S_FLUX_2.jpg)
+
+### Example is running FLUX.2 Dev fp8 on a RTX A5000 (slow)
+
+![Pod running on A5000 Flux.2 Dev fp8 ComfyUI](images/runpod_A5000_FLUX_2.jpg)
