@@ -2,9 +2,15 @@
 
 # Image inference with ComfyUI 
 
-![Select number frames, size , prompt](images/ai-generated-ZIB-ZIT.jpg)
-
 A streamlined and automated environment for running **ComfyUI** with **image/edit models**, optimized for use on RunPod
+
+## Example ZIB-ZIT
+
+![ZIB-ZIT](images/ai-generated-ZIB-ZIT.jpg)
+
+## Example QWEN-EDIT 
+
+![QWEN-EDIT-CAMERA](images/ai-generated-QWEN-EDIT-CAMERA.jpg)
 
 ## 🔧 Features
 
@@ -26,10 +32,18 @@ A streamlined and automated environment for running **ComfyUI** with **image/edi
 
 - [👉 Templates](ComfyUI_image_deployment.md)
 
-### Example is running Z-image Turbo on a RTX A4500 on Runpod
+### Example is running Z-image on a RTX A4500
 
-![Pod running on RTX A4500 ZIT ComfyUI](images/runpod_ZIT.jpg)
+![Pod running on RTX A4500 ZIT ComfyUI](images/runpod_A4500_ZIB_ZIT.jpg)
 
-### Example is running Flux Klein 9B on a RTX A4500 on Runpod
+### Example is running Z-image on a RTX A5000
+
+![Pod running on RTX A4500 ZIT ComfyUI](images/runpod_A5000_ZIB_ZIT.jpg)
+
+### Example is running Flux Klein 9B on a RTX A4500
 
 ![Pod running on RTX A4500 Flux Klein ComfyUI](images/runpod_FLUX_KLEIN.jpg)
+
+### Example is running QWEN-EDIT fp8 on a RTX A5000
+
+![Pod running on RTX A5000 QWEN-EDIT ComfyUI](images/runpod_A5000_QWEN-EDIT.jpg)
