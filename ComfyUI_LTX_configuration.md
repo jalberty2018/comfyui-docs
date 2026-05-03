@@ -2,7 +2,7 @@
 
 ## ComfyUI Configuration
 
-|| Variable                   | Description                    | default |
+| Variable                   | Description                    | default |
 |-------------------|-------------------------------|-------------------------------------------|
 | `COMFYUI_EXTRA_ARGUMENTS`  | Additional arguments for ComfyUI CLI |   |
 | `VRAM_THRESHOLD`  | VRAM threshold in GB for selecting model/workflow | 38 Gb |
