@@ -49,7 +49,7 @@
 - [WanMoeKSampler](https://github.com/stduhpf/ComfyUI-WanMoeKSampler)
 - [TripleKSampler](https://github.com/VraethrDalkr/ComfyUI-TripleKSampler)
 - [WanMoEScheduler](https://github.com/cmeka/ComfyUI-WanMoEScheduler)
-- [PainterSampler](https://github.com/princepainter/Comfyui-PainterSampler.git)
+- [PainterSampler](https://github.com/princepainter/Comfyui-PainterSampler)
 - [was_affine](https://github.com/WASasquatch/was_affine)
 
 ### Loras
@@ -85,6 +85,7 @@
 - [Iamccs-nodes](https://github.com/IAMCCS/IAMCCS-nodes.git)
 - [PainterMultiF2V](https://github.com/princepainter/ComfyUI-PainterMultiF2V)
 - [VideoChunkTools](https://github.com/gregtee2/ComfyUI_VideoChunkTools)
+- [Prompt relay encode]( https://github.com/kijai/ComfyUI-PromptRelay)
 
 #### Animate
 

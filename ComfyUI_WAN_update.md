@@ -1,5 +1,10 @@
 # run-comfyui-wan2
 
+## 07052026
+
+- ComfyUI 0.20.1
+- [Prompt relay encode]( https://github.com/kijai/ComfyUI-PromptRelay)
+
 ## 15042026
 
 - ComfyUI 0.19.0
