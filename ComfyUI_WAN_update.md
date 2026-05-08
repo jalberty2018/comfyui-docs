@@ -1,8 +1,9 @@
 # run-comfyui-wan2
 
-## 07052026
+## 08052026
 
 - ComfyUI 0.20.1
+- Updated Civitai downloader script an environment variables
 - [Prompt relay encode]( https://github.com/kijai/ComfyUI-PromptRelay)
 
 ## 15042026
