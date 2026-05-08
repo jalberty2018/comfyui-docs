@@ -1,8 +1,9 @@
 # run-comfyui-image
 
-## 28042026
+## 08052026
 
 - ComfyUI 0.20.1
+- Updated Civitai downloader script an environment variables
 
 ## 27042026
 
