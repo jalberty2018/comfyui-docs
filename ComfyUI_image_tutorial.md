@@ -205,20 +205,21 @@ https:<pod-id>-8188.proxy.runpod.net/loras
 
 ![ml5](images/model-linker-5.jpg){ width="400" }
 
-### 🧩 CivitAI cli
+### 🧩 CivitAI CLI
 
 If no "CIVITAI_TOKEN" was set, create or use a free token from the civitai website.
 
+![civitai version id](images/civitai_air.jpg){ width="300" }
+
 ```bash
 export CIVITAI_TOKEN=“xxxxx”
-civitai “<download-link-on-civitai>” /workspace/ComfyUI/models/<loras, etc>
+civitai_com  VERSION_ID /workspace/ComfyUI/models/<loras, etc>
+civitai_red  VERSION_ID /workspace/ComfyUI/models/<loras, etc>
 ```
 
-Download for example [CivitAI](https://civitai.com/models/2071400?modelVersionId=2344329)
-
 ```bash
-civitai "https://civitai.com/api/download/models/2377549?type=Model&format=SafeTensor" /workspace/ComfyUI/models/loras/
-civitai "https://civitai.com/api/download/models/2377566?type=Model&format=SafeTensor" /workspace/ComfyUI/models/loras/
+civitai_com 2228466 /workspace/ComfyUI/models/loras/
+civitai_red 2893442 /workspace/ComfyUI/models/loras/
 ```
 
 ![Refresh](images/refresh_nodes.jpg){ width="300" }

@@ -45,10 +45,10 @@
 
 | Variable                         | Description                      |
 |----------------------------------|----------------------------------|
-| `CIVITAI_COM_MODEL_LORA_URL[1-50]`   | Direct download link for LoRAs |
-| `CIVITAI_COM_MODEL_UNET_URL[1-50]`   | Direct download link for URL's |
-| `CIVITAI_RED_MODEL_LORA_URL[1-50]`   | Direct download link for LoRAs |
-| `CIVITAI_RED_MODEL_UNET_URL[1-50]`   | Direct download link for URL's |
+| `CIVITAI_COM_MODEL_LORA_ID[1-50]`   | Version ID for LoRA (AIR) |
+| `CIVITAI_COM_MODEL_UNET_ID[1-50]`   | Version ID for UNET (AIR) |
+| `CIVITAI_RED_MODEL_LORA_ID[1-50]`   | Version ID for LoRA (AIR)|
+| `CIVITAI_RED_MODEL_UNET_ID[1-50]`   | Version ID for UNET (AIR) |
 
 ## Workflows
 
