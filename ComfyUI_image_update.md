@@ -1,9 +1,10 @@
 # run-comfyui-image
 
-## 08052026
+## 09052026
 
 - ComfyUI 0.20.1
 - Updated Civitai downloader script an environment variables
+- [NKD-Klein-Tools](https://github.com/Nekodificador/ComfyUI-NKD-Klein-Tools.git)
 
 ## 27042026
 
