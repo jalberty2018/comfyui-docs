@@ -1,8 +1,8 @@
 {
   "id": "92112d97-bb64-4b44-86f2-ea5691ef8f6e",
   "revision": 0,
-  "last_node_id": 147,
-  "last_link_id": 283,
+  "last_node_id": 148,
+  "last_link_id": 285,
   "nodes": [
     {
       "id": 101,
@@ -303,55 +303,6 @@
       "bgcolor": "#353"
     },
     {
-      "id": 139,
-      "type": "Flux2KleinTokenRegionController",
-      "pos": [
-        388.20247421201935,
-        384.6685229182798
-      ],
-      "size": [
-        331.64727809079056,
-        299.35114280199537
-      ],
-      "flags": {},
-      "order": 19,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "conditioning",
-          "type": "CONDITIONING",
-          "link": 257
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            280
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "Flux2KleinTokenRegionController"
-      },
-      "widgets_values": [
-        1,
-        1,
-        1,
-        0,
-        0,
-        1,
-        0,
-        "blend_after",
-        0,
-        true,
-        false
-      ],
-      "color": "#233",
-      "bgcolor": "#355"
-    },
-    {
       "id": 111,
       "type": "ConditioningZeroOut",
       "pos": [
@@ -396,127 +347,6 @@
       "widgets_values": [],
       "color": "#323",
       "bgcolor": "#535"
-    },
-    {
-      "id": 142,
-      "type": "IdentityFeatureTransfer",
-      "pos": [
-        -384.6384258053771,
-        95.09461038361273
-      ],
-      "size": [
-        291.6197265625,
-        162.5976660786257
-      ],
-      "flags": {},
-      "order": 7,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 272
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            271
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "IdentityFeatureTransfer"
-      },
-      "widgets_values": [
-        0.15,
-        0,
-        23,
-        "cosine_pull",
-        0.25
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
-      "id": 134,
-      "type": "Lora Loader (LoraManager)",
-      "pos": [
-        -1036.2340943777922,
-        557.8579660729793
-      ],
-      "size": [
-        528.2004077730945,
-        371.0715712035569
-      ],
-      "flags": {},
-      "order": 6,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 250
-        },
-        {
-          "name": "clip",
-          "shape": 7,
-          "type": "CLIP",
-          "link": 252
-        },
-        {
-          "name": "lora_stack",
-          "shape": 7,
-          "type": "LORA_STACK",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            272
-          ]
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            263
-          ]
-        },
-        {
-          "name": "trigger_words",
-          "type": "STRING",
-          "links": null
-        },
-        {
-          "name": "loaded_loras",
-          "type": "STRING",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "Lora Loader (LoraManager)",
-        "__lm_widget_ids": [
-          "__lm_autocomplete_meta_text",
-          "text",
-          "loras"
-        ]
-      },
-      "widgets_values": [
-        {
-          "version": 1,
-          "textWidgetName": "text"
-        },
-        "",
-        []
-      ],
-      "color": "#233",
-      "bgcolor": "#355"
     },
     {
       "id": 128,
@@ -637,71 +467,6 @@
       ],
       "color": "#432",
       "bgcolor": "#653"
-    },
-    {
-      "id": 133,
-      "type": "ReferenceChainConditioning",
-      "pos": [
-        -365.8360693975011,
-        1205.5478028224418
-      ],
-      "size": [
-        387.731371029377,
-        554
-      ],
-      "flags": {},
-      "order": 12,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "conditioning",
-          "type": "CONDITIONING",
-          "link": 265
-        },
-        {
-          "name": "neg_conditioning",
-          "type": "CONDITIONING",
-          "link": 245
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 248
-        }
-      ],
-      "outputs": [
-        {
-          "name": "conditioning",
-          "type": "CONDITIONING",
-          "links": [
-            261
-          ]
-        },
-        {
-          "name": "neg_conditioning",
-          "type": "CONDITIONING",
-          "links": [
-            281
-          ]
-        },
-        {
-          "name": "first_image_scaled",
-          "type": "IMAGE",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ReferenceChainConditioning"
-      },
-      "widgets_values": [
-        "lanczos",
-        1,
-        "[\"FACE.png\"]",
-        0,
-        null
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
     },
     {
       "id": 136,
@@ -842,6 +607,440 @@
       "bgcolor": "#355"
     },
     {
+      "id": 132,
+      "type": "MarkdownNote",
+      "pos": [
+        -1906.8974633772743,
+        501.466591741207
+      ],
+      "size": [
+        317.1097218699085,
+        88
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "[READ THE TUTORIAL TO DOWNLOAD THE GATED 9B MODEL](https://comfyui.rozenlaan.site/ComfyUI_image_hf_gated/)\n\n"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 147,
+      "type": "Flux2KleinKSamplerExperimental",
+      "pos": [
+        93.63422841723435,
+        1040.2424109854933
+      ],
+      "size": [
+        303.6879881686531,
+        498
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 279
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 280
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 282
+        },
+        {
+          "name": "negative",
+          "shape": 7,
+          "type": "CONDITIONING",
+          "link": 281
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            283
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Flux2KleinKSamplerExperimental"
+      },
+      "widgets_values": [
+        8,
+        409267482126222,
+        "randomize",
+        1,
+        0.5,
+        1.15,
+        1,
+        1
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 139,
+      "type": "Flux2KleinTokenRegionController",
+      "pos": [
+        388.20247421201935,
+        384.6685229182798
+      ],
+      "size": [
+        331.64727809079056,
+        299.35114280199537
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 257
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            280
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Flux2KleinTokenRegionController"
+      },
+      "widgets_values": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        "blend_after",
+        0,
+        true,
+        false
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 134,
+      "type": "Lora Loader (LoraManager)",
+      "pos": [
+        -1036.2340943777922,
+        557.8579660729793
+      ],
+      "size": [
+        528.2004077730945,
+        371.0715712035569
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 250
+        },
+        {
+          "name": "clip",
+          "shape": 7,
+          "type": "CLIP",
+          "link": 252
+        },
+        {
+          "name": "lora_stack",
+          "shape": 7,
+          "type": "LORA_STACK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            284
+          ]
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            263
+          ]
+        },
+        {
+          "name": "trigger_words",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "loaded_loras",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Lora Loader (LoraManager)",
+        "__lm_widget_ids": [
+          "__lm_autocomplete_meta_text",
+          "text",
+          "loras"
+        ]
+      },
+      "widgets_values": [
+        {
+          "version": 1,
+          "textWidgetName": "text"
+        },
+        "",
+        []
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 146,
+      "type": "Flux2KleinRefLatentWeight",
+      "pos": [
+        -389.4289825874102,
+        843.0757914467478
+      ],
+      "size": [
+        306.4546875,
+        82
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 277
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            279
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Flux2KleinRefLatentWeight"
+      },
+      "widgets_values": [
+        2,
+        1
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 145,
+      "type": "Flux2KleinRefLatentWeight",
+      "pos": [
+        -391.0498351793628,
+        703.7795401453872
+      ],
+      "size": [
+        306.4546875,
+        82
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 276
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            277
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Flux2KleinRefLatentWeight"
+      },
+      "widgets_values": [
+        1,
+        1
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 144,
+      "type": "Flux2KleinRefLatentWeight",
+      "pos": [
+        -389.9453875394083,
+        564.0473934987826
+      ],
+      "size": [
+        306.4546875,
+        82
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 275
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            276
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Flux2KleinRefLatentWeight"
+      },
+      "widgets_values": [
+        0,
+        1
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 143,
+      "type": "IdentityGuidance",
+      "pos": [
+        -385.7210759519563,
+        299.78591393417514
+      ],
+      "size": [
+        305.4908203125,
+        150
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 285
+        },
+        {
+          "name": "identity_latent",
+          "type": "LATENT",
+          "link": 274
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            275
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "IdentityGuidance"
+      },
+      "widgets_values": [
+        0.3,
+        0,
+        0.8,
+        "adaptive"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 148,
+      "type": "IdentityFeatureTransferV3",
+      "pos": [
+        -395.81666450707746,
+        -98.6438813559766
+      ],
+      "size": [
+        313.8638671875,
+        318
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 284
+        },
+        {
+          "name": "subject_mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            285
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "IdentityFeatureTransferV3"
+      },
+      "widgets_values": [
+        "MIDUM_LOCK",
+        0,
+        "0-3:mid=0.25; 4:mid=0.35; 5:mid=0.65; 6-7:mid=0.45",
+        "0:mid=0.35; 1:mid=0.25; 2-10:mid=0.30; 11-19:mid=0.25; 20:mid=0.08; 21:mid=0.10; 22:mid=0.15; 23:mid=0.20",
+        0.02,
+        0.02,
+        0.035,
+        2,
+        0.5,
+        0.25,
+        false
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
       "id": 140,
       "type": "Flux2KleinSectionedTextEncoder",
       "pos": [
@@ -897,8 +1096,8 @@
       },
       "widgets_values": [
         "manual",
-        "Keep the girl's pose.",
-        "Change her blue shirt to pink",
+        "Keep the girls pose\nPut both girls on the dance floor.\n",
+        "Change background to dance room.",
         "Enhance the realism and resolution.\nAdd skin detail.",
         "",
         "comma",
@@ -909,194 +1108,69 @@
       "bgcolor": "#353"
     },
     {
-      "id": 143,
-      "type": "IdentityGuidance",
+      "id": 133,
+      "type": "ReferenceChainConditioning",
       "pos": [
-        -386.92022269112374,
-        321.3693087962286
+        -375.4916691409447,
+        1178.5120940742474
       ],
       "size": [
-        305.4908203125,
-        150
+        387.731371029377,
+        294
       ],
       "flags": {},
-      "order": 9,
+      "order": 12,
       "mode": 0,
       "inputs": [
         {
-          "name": "model",
-          "type": "MODEL",
-          "link": 271
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 265
         },
         {
-          "name": "identity_latent",
-          "type": "LATENT",
-          "link": 274
+          "name": "neg_conditioning",
+          "type": "CONDITIONING",
+          "link": 245
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 248
         }
       ],
       "outputs": [
         {
-          "name": "MODEL",
-          "type": "MODEL",
+          "name": "conditioning",
+          "type": "CONDITIONING",
           "links": [
-            275
+            261
           ]
+        },
+        {
+          "name": "neg_conditioning",
+          "type": "CONDITIONING",
+          "links": [
+            281
+          ]
+        },
+        {
+          "name": "first_image_scaled",
+          "type": "IMAGE",
+          "links": null
         }
       ],
       "properties": {
-        "Node name for S&R": "IdentityGuidance"
+        "Node name for S&R": "ReferenceChainConditioning"
       },
       "widgets_values": [
-        0.3,
-        0,
-        0.8,
-        "adaptive"
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
-      "id": 144,
-      "type": "Flux2KleinRefLatentWeight",
-      "pos": [
-        -380.3528540004339,
-        536.4686537396136
-      ],
-      "size": [
-        306.4546875,
-        82
-      ],
-      "flags": {},
-      "order": 11,
-      "mode": 4,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 275
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            276
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "Flux2KleinRefLatentWeight"
-      },
-      "widgets_values": [
-        0,
-        1
-      ],
-      "color": "#322",
-      "bgcolor": "#533"
-    },
-    {
-      "id": 145,
-      "type": "Flux2KleinRefLatentWeight",
-      "pos": [
-        -386.25352266884954,
-        680.9972043787837
-      ],
-      "size": [
-        306.4546875,
-        82
-      ],
-      "flags": {},
-      "order": 13,
-      "mode": 4,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 276
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            277
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "Flux2KleinRefLatentWeight"
-      },
-      "widgets_values": [
+        "lanczos",
         1,
-        1
+        "[]",
+        0,
+        null
       ],
-      "color": "#322",
-      "bgcolor": "#533"
-    },
-    {
-      "id": 146,
-      "type": "Flux2KleinRefLatentWeight",
-      "pos": [
-        -383.4337063018337,
-        829.8860807011715
-      ],
-      "size": [
-        306.4546875,
-        82
-      ],
-      "flags": {},
-      "order": 15,
-      "mode": 4,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 277
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            279
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "Flux2KleinRefLatentWeight"
-      },
-      "widgets_values": [
-        2,
-        1
-      ],
-      "color": "#322",
-      "bgcolor": "#533"
-    },
-    {
-      "id": 132,
-      "type": "MarkdownNote",
-      "pos": [
-        -1906.8974633772743,
-        501.466591741207
-      ],
-      "size": [
-        317.1097218699085,
-        88
-      ],
-      "flags": {},
-      "order": 2,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "properties": {},
-      "widgets_values": [
-        "[READ THE TUTORIAL TO DOWNLOAD THE GATED 9B MODEL](https://comfyui.rozenlaan.site/ComfyUI_image_hf_gated/)\n\n"
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
+      "color": "#232",
+      "bgcolor": "#353"
     },
     {
       "id": 103,
@@ -1191,68 +1265,6 @@
       ],
       "color": "#223",
       "bgcolor": "#335"
-    },
-    {
-      "id": 147,
-      "type": "Flux2KleinKSamplerExperimental",
-      "pos": [
-        94.96835038604621,
-        1051.1108097291597
-      ],
-      "size": [
-        297.74285959958627,
-        605.193379948546
-      ],
-      "flags": {},
-      "order": 20,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 279
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 280
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 282
-        },
-        {
-          "name": "negative",
-          "shape": 7,
-          "type": "CONDITIONING",
-          "link": 281
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            283
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "Flux2KleinKSamplerExperimental"
-      },
-      "widgets_values": [
-        4,
-        0,
-        "randomize",
-        1,
-        0.5,
-        1.15,
-        1,
-        1
-      ],
-      "color": "#222",
-      "bgcolor": "#000"
     }
   ],
   "links": [
@@ -1393,22 +1405,6 @@
       "CONDITIONING"
     ],
     [
-      271,
-      142,
-      0,
-      143,
-      0,
-      "MODEL"
-    ],
-    [
-      272,
-      134,
-      0,
-      142,
-      0,
-      "MODEL"
-    ],
-    [
       274,
       106,
       0,
@@ -1479,6 +1475,22 @@
       127,
       0,
       "LATENT"
+    ],
+    [
+      284,
+      134,
+      0,
+      148,
+      0,
+      "MODEL"
+    ],
+    [
+      285,
+      148,
+      0,
+      143,
+      0,
+      "MODEL"
     ]
   ],
   "groups": [
@@ -1590,10 +1602,10 @@
       "id": 10,
       "title": "Model conditioning",
       "bounding": [
-        -402.7948861057806,
-        2.547616881971849,
-        346.8692375601702,
-        966.166951781495
+        -406.39205187712645,
+        -218.08196956894045,
+        340.87386979254165,
+        1176.0048236484959
       ],
       "color": "#3f789e",
       "font_size": 24,
@@ -1603,13 +1615,13 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.3766067083334571,
+      "scale": 0.8880189183299865,
       "offset": [
-        1784.6018742836172,
-        -413.65349489693347
+        1810.2231612766695,
+        -403.5309304760034
       ]
     },
-    "frontendVersion": "1.42.11",
+    "frontendVersion": "1.42.15",
     "workflowRendererVersion": "LG",
     "VHS_latentpreview": true,
     "VHS_latentpreviewrate": 0,
