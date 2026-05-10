@@ -320,7 +320,7 @@ Refresh ComfyUI pressing key **r**.
 
 Useful when the web console is out (examples are outages from AWS and Cloudflare).
 
-#### Using runpod API
+### Using runpod API
 
 - [Docs](https://docs.runpod.io/api-reference/overview).
 - Install with "sudo apt install curl" on Ubuntu.
@@ -339,18 +339,30 @@ curl --request DELETE \
   --header 'Authorization: Bearer <api-key>'
 ```
 
-#### Using runpodctl to start/stop your pod with your api key.
+### Using runpodctl to start/stop your pod with your api key.
 
 - [Docs](https://docs.runpod.io/runpodctl/overview).
 - Install client on local computer.
-- Use Shell/PowerShell or Bash.
+- Use PowerShell or Bash.
+
+#### Install windows
+
+```powershell
+Invoke-WebRequest "https://github.com/runpod/runpodctl/releases/latest/download/runpodctl-windows-amd64.exe" -OutFile "runpodctl.exe"
+```
+
+#### install linux
 
 ```bash
-runpodctl config --apiKey <YOUR_API_KEY>
+wget --quiet --show-progress https://github.com/runpod/runpodctl/releases/latest/download/runpodctl-linux-amd64 -O runpodctl && chmod +x runpodctl && sudo cp runpodctl /usr/bin/runpodctl
+```
 
-runpodctl get pod --allfields
+#### Usage
 
-runpodctl stop pod <pod_id>
-
-runpodctl remove pod <pod_id>
+```bash
+runpodctl doctor
+                
+runpodctl pod list                 
+runpodctl pod stop <pod_id> 
+runpodctl pod delete <pod_id>
 ```
