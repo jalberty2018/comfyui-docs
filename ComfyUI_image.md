@@ -50,7 +50,11 @@ A streamlined and automated environment for running **ComfyUI** with **image/edi
 
 ### Example is running QWEN-EDIT fp8 on a RTX A5000
 
-![Pod running on RTX A5000 QWEN-EDIT ComfyUI](images/runpod_A5000_QWEN-EDIT.jpg)
+![Pod running on RTX A5000 QWEN-EDIT fp8 ComfyUI](images/runpod_A5000_QWEN-EDIT.jpg)
+
+### Example is running QWEN-EDIT bf16  on a A40
+
+![Pod running on A40 QWEN-EDIT bf16 ComfyUI](images/runpod_A40_QWEN-EDIT.jpg)
 
 ### Example is running FLUX.2 Dev bf16 on a L40S
 
