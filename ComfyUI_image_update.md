@@ -1,5 +1,9 @@
 # run-comfyui-image
 
+## 11052026
+
+- ComfyUI 0.21.0
+
 ## 09052026
 
 - ComfyUI 0.20.1
