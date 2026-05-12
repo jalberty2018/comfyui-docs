@@ -3,6 +3,7 @@
 ## 11052026
 
 - ComfyUI 0.21.0
+- [Easy-Use](https://github.com/yolain/ComfyUI-Easy-Use.git)
 
 ## 09052026
 

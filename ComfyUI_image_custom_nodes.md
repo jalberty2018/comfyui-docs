@@ -9,6 +9,7 @@
 - [KJNodes](https://github.com/kijai/ComfyUI-KJNodes)
 - [StringEssentials](https://github.com/bradsec/ComfyUI_StringEssentials.git)
 - [PG Nodes](https://github.com/GizmoR13/PG-Nodes)
+- [Easy-Use](https://github.com/yolain/ComfyUI-Easy-Use.git)
 
 ### Downloaders/Linkers
 

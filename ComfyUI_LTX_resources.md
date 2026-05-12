@@ -4,13 +4,14 @@
 
 - [LTX Github](https://github.com/Lightricks)
 - [Website](https://ltx.io/model)
-- [Kajai](https://huggingface.co/Kijai/LTXV2_comfy)
+- [Kijai](https://huggingface.co/Kijai/LTXV2_comfy)
 
-## Information and workflows
+## Nodes and workflows
 
 - [awesome-ltx2](https://github.com/wildminder/awesome-ltx2)
 - [RuneXX](https://huggingface.co/RuneXX/LTX-2-Workflows)
 - [Prompt Relay](https://gordonchen19.github.io/Prompt-Relay/)
+- [Pipelines](https://github.com/Lightricks/LTX-2/tree/main/packages/ltx-pipelines#10-lipdubpipeline)
 
 ## Loras
 
@@ -20,6 +21,7 @@
 - [Cameraman](https://huggingface.co/Cseti/LTX2.3-22B_IC-LoRA-Cameraman_v1)
 - [Transition Lora](https://huggingface.co/joyfox/LTX-2.3-Transition-LORA)
 - [VBVR Lora](https://huggingface.co/LiconStudio/Ltx2.3-VBVR-lora-I2V)
+- [Libdub](https://justdubit.github.io)
 
 ## Preview
 
