@@ -10,9 +10,13 @@ A streamlined and automated environment for running **ComfyUI** with **LTX-2.3 v
 
 ![Select number frames, size , prompt and offload](images/ai-generated-LTX.jpg)
 
-### iv2v
+### iv2v pose transfer DWPose
 
 ![Select number frames, size , prompt and offload](images/ai-generated-LTX-vi2v.jpg)
+
+### iv2v pose transfer SDPose (Body Ratio Mapper)
+
+![Select number frames, size , prompt and offload](images/ai-generated-LTX-vi2v-sdpose.jpg)
 
 ## 🔧 Features
 
