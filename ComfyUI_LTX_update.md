@@ -1,8 +1,10 @@
 # run-comfyui-ltx
 
-## 11052026
+## 12052026
 
 - ComfyUI 0.21.0
+- [BodyRatioMapper](https://github.com/wuwukaka/ComfyUI-BodyRatioMapper)
+- [YOLO_For_Multi_SDPose_Detection](https://github.com/judian17/ComfyUI_YOLO_For_Multi_SDPose_Detection)
 
 ## 08052026
 
