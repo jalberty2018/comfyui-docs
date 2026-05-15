@@ -1,9 +1,10 @@
 # run-comfyui-image
 
-## 11052026
+## 15052026
 
-- ComfyUI 0.21.0
+- ComfyUI 0.21.1
 - [Easy-Use](https://github.com/yolain/ComfyUI-Easy-Use.git)
+- [S2Guidance](https://github.com/orpheus-gaze/ComfyUI-S2Guidance.git)
 
 ## 09052026
 

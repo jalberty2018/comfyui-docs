@@ -59,6 +59,7 @@
 - [LatentUtils](https://github.com/lrzjason/Comfyui-LatentUtils)
 - [LG_SamplingUtils](https://github.com/LAOGOU-666/ComfyUI-LG_SamplingUtils)
 - [DiversityBoost](https://github.com/facok/ComfyUI-DiversityBoost)
+- [S2Guidance](https://github.com/orpheus-gaze/ComfyUI-S2Guidance.git)
 
 ### Samplers
 
