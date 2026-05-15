@@ -1,8 +1,8 @@
 {
   "id": "720facc5-6059-4d75-8f2e-baa80c40d74d",
   "revision": 0,
-  "last_node_id": 174,
-  "last_link_id": 350,
+  "last_node_id": 176,
+  "last_link_id": 361,
   "nodes": [
     {
       "id": 105,
@@ -25,7 +25,7 @@
           "type": "VAE",
           "links": [
             184,
-            324
+            359
           ]
         }
       ],
@@ -177,7 +177,7 @@
         {
           "name": "bundle",
           "type": "NKD_KLEIN_BUNDLE",
-          "link": 327
+          "link": 356
         }
       ],
       "outputs": [
@@ -224,25 +224,25 @@
           "name": "model",
           "shape": 7,
           "type": "MODEL",
-          "link": 320
+          "link": 351
         },
         {
           "name": "positive",
           "shape": 7,
           "type": "CONDITIONING",
-          "link": 321
+          "link": 352
         },
         {
           "name": "negative",
           "shape": 7,
           "type": "CONDITIONING",
-          "link": 322
+          "link": 354
         },
         {
           "name": "latent_image",
           "shape": 7,
           "type": "LATENT",
-          "link": 323
+          "link": 355
         },
         {
           "name": "sigmas",
@@ -450,47 +450,6 @@
       "bgcolor": "#593930"
     },
     {
-      "id": 170,
-      "type": "LoadImage",
-      "pos": [
-        -634.3628971036858,
-        1069.135828006223
-      ],
-      "size": [
-        354.62152304261167,
-        377.7409147092317
-      ],
-      "flags": {},
-      "order": 2,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            338,
-            339,
-            349
-          ]
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": [
-            350
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoadImage"
-      },
-      "widgets_values": [
-        "p6200064.jpg",
-        "image"
-      ]
-    },
-    {
       "id": 121,
       "type": "Image Comparer (rgthree)",
       "pos": [
@@ -540,121 +499,6 @@
       "bgcolor": "#000"
     },
     {
-      "id": 164,
-      "type": "NKDKleinPresampling",
-      "pos": [
-        -218.77016953721625,
-        1068.5928746747395
-      ],
-      "size": [
-        588.7136974142032,
-        574.052298398525
-      ],
-      "flags": {},
-      "order": 6,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 318
-        },
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 319
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 324
-        },
-        {
-          "label": "ref_0",
-          "name": "ref_images.ref_0",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 349
-        },
-        {
-          "label": "ref_1",
-          "name": "ref_images.ref_1",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": null
-        },
-        {
-          "name": "mask",
-          "shape": 7,
-          "type": "MASK",
-          "link": 350
-        }
-      ],
-      "outputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "links": [
-            320
-          ]
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "links": [
-            321
-          ]
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "links": [
-            322
-          ]
-        },
-        {
-          "name": "latent",
-          "type": "LATENT",
-          "links": [
-            323
-          ]
-        },
-        {
-          "name": "bundle",
-          "type": "NKD_KLEIN_BUNDLE",
-          "links": [
-            327
-          ]
-        },
-        {
-          "name": "mask",
-          "type": "MASK",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "NKDKleinPresampling"
-      },
-      "widgets_values": [
-        "Change red dress to blue.\nCHange green backgound to dance room.",
-        "",
-        true,
-        "As Reference",
-        "1 MP",
-        1024,
-        1024,
-        false,
-        0,
-        20,
-        10,
-        1,
-        false,
-        50
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
       "id": 133,
       "type": "Lora Loader (LoraManager)",
       "pos": [
@@ -692,14 +536,14 @@
           "name": "MODEL",
           "type": "MODEL",
           "links": [
-            318
+            357
           ]
         },
         {
           "name": "CLIP",
           "type": "CLIP",
           "links": [
-            319
+            358
           ]
         },
         {
@@ -744,7 +588,7 @@
         82
       ],
       "flags": {},
-      "order": 3,
+      "order": 2,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -787,7 +631,7 @@
         106
       ],
       "flags": {},
-      "order": 4,
+      "order": 3,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -825,6 +669,163 @@
       ],
       "color": "#223",
       "bgcolor": "#335"
+    },
+    {
+      "id": 170,
+      "type": "LoadImage",
+      "pos": [
+        -634.3628971036858,
+        1069.135828006223
+      ],
+      "size": [
+        354.62152304261167,
+        377.7409147092317
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            338,
+            339,
+            360
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            361
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "example.png",
+        "image"
+      ]
+    },
+    {
+      "id": 175,
+      "type": "NKDKleinPresampling",
+      "pos": [
+        -224.78346673608428,
+        1076.9876421845172
+      ],
+      "size": [
+        580.8010564262576,
+        560.0276136298701
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 357
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 358
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 359
+        },
+        {
+          "label": "ref_0",
+          "name": "ref_images.ref_0",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 360
+        },
+        {
+          "label": "ref_1",
+          "name": "ref_images.ref_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": 361
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            351
+          ]
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            352
+          ]
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": [
+            354
+          ]
+        },
+        {
+          "name": "latent",
+          "type": "LATENT",
+          "links": [
+            355
+          ]
+        },
+        {
+          "name": "bundle",
+          "type": "NKD_KLEIN_BUNDLE",
+          "links": [
+            356
+          ]
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "NKDKleinPresampling"
+      },
+      "widgets_values": [
+        "Change red dress to blue.\nCHange green backgound to dance room.",
+        "Deformed",
+        true,
+        "As Reference",
+        2,
+        1024,
+        1024,
+        "Native",
+        false,
+        0,
+        20,
+        10,
+        1,
+        false,
+        50
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
     }
   ],
   "links": [
@@ -869,76 +870,12 @@
       "IMAGE"
     ],
     [
-      318,
-      133,
-      0,
-      164,
-      0,
-      "MODEL"
-    ],
-    [
-      319,
-      133,
-      1,
-      164,
-      1,
-      "CLIP"
-    ],
-    [
-      320,
-      164,
-      0,
-      165,
-      0,
-      "MODEL"
-    ],
-    [
-      321,
-      164,
-      1,
-      165,
-      1,
-      "CONDITIONING"
-    ],
-    [
-      322,
-      164,
-      2,
-      165,
-      2,
-      "CONDITIONING"
-    ],
-    [
-      323,
-      164,
-      3,
-      165,
-      3,
-      "LATENT"
-    ],
-    [
-      324,
-      105,
-      0,
-      164,
-      2,
-      "VAE"
-    ],
-    [
       326,
       165,
       0,
       101,
       0,
       "LATENT"
-    ],
-    [
-      327,
-      164,
-      4,
-      166,
-      1,
-      "NKD_KLEIN_BUNDLE"
     ],
     [
       328,
@@ -989,18 +926,82 @@
       "IMAGE"
     ],
     [
-      349,
+      351,
+      175,
+      0,
+      165,
+      0,
+      "MODEL"
+    ],
+    [
+      352,
+      175,
+      1,
+      165,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      354,
+      175,
+      2,
+      165,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      355,
+      175,
+      3,
+      165,
+      3,
+      "LATENT"
+    ],
+    [
+      356,
+      175,
+      4,
+      166,
+      1,
+      "NKD_KLEIN_BUNDLE"
+    ],
+    [
+      357,
+      133,
+      0,
+      175,
+      0,
+      "MODEL"
+    ],
+    [
+      358,
+      133,
+      1,
+      175,
+      1,
+      "CLIP"
+    ],
+    [
+      359,
+      105,
+      0,
+      175,
+      2,
+      "VAE"
+    ],
+    [
+      360,
       170,
       0,
-      164,
+      175,
       3,
       "IMAGE"
     ],
     [
-      350,
+      361,
       170,
       1,
-      164,
+      175,
       5,
       "MASK"
     ]
@@ -1016,7 +1017,6 @@
         489.63638080092375
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -1029,7 +1029,6 @@
         685.2621957439712
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -1042,7 +1041,6 @@
         686.2134140363572
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -1055,7 +1053,6 @@
         1147.5793401983174
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -1068,7 +1065,6 @@
         492.84101441588314
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -1081,7 +1077,6 @@
         760.650846518575
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     }
   ],
@@ -1090,11 +1085,11 @@
     "ds": {
       "scale": 0.727947263162549,
       "offset": [
-        1331.4716103949168,
-        -359.7935721684663
+        1314.986690133309,
+        -640.0336112561185
       ]
     },
-    "frontendVersion": "1.42.15",
+    "frontendVersion": "1.43.18",
     "workflowRendererVersion": "LG",
     "VHS_latentpreview": true,
     "VHS_latentpreviewrate": 0,
