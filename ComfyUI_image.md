@@ -44,6 +44,10 @@ A streamlined and automated environment for running **ComfyUI** with **image/edi
 
 ![Pod running on RTX A4500 ZIT ComfyUI](images/runpod_A5000_ZIB_ZIT.jpg)
 
+### Example is running Z-image on a RTX 3090
+
+![Pod running on RTX 3090 ZIT ComfyUI](images/runpod_3090_ZIB_ZIT.jpg)
+
 ### Example is running Flux Klein 9B on a RTX A4500
 
 ![Pod running on RTX A4500 Flux Klein ComfyUI](images/runpod_FLUX_KLEIN.jpg)

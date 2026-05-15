@@ -43,6 +43,8 @@ Ends with (example):
 
 ### 🐳 Viewing Container Logs
 
+![start container](images/start_log.jpg)
+
 When you see:
 
 ![final message](images/final_log.jpg)

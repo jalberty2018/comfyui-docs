@@ -48,17 +48,11 @@ Steps:
 
 Ends with (example):
 
-```txt
-Digest: sha256:2b56bdd14df7af0dae7f9bd7978be9e61d791359f5ea65eedd65dcd2e16752fc
-Status: Image is up to date for ls250824/run-comfyui-image:19112025
-```
+![Download extracting end](images/download_end.jpg)
 
 ### 🐳 Viewing Container Logs
 
-```txt
-ℹ️ Pod run-comfyui-image started
-ℹ️ Wait until the message 🎉 Provisioning done, ready to create AI content 🎉
-```
+![start container](images/start_log.jpg)
 
 When you see:
 
