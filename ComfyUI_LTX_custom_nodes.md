@@ -59,6 +59,7 @@
 
 - [MelBandRoFormer](https://github.com/kijai/ComfyUI-MelBandRoFormer.git)
 - [afloy audio tools](https://github.com/afloy011-spec/afloy_audio_tools)
+- [FishAudioS2](https://github.com/Saganaki22/ComfyUI-FishAudioS2)
 
 ## 🧩 All possible Custom Nodes
 

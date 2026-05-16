@@ -6,6 +6,7 @@
 - [BodyRatioMapper](https://github.com/wuwukaka/ComfyUI-BodyRatioMapper)
 - [YOLO_For_Multi_SDPose_Detection](https://github.com/judian17/ComfyUI_YOLO_For_Multi_SDPose_Detection)
 - [Afloy audio tools](https://github.com/afloy011-spec/afloy_audio_tools)
+- [FishAudioS2](https://github.com/Saganaki22/ComfyUI-FishAudioS2)
 
 ## 08052026
 
