@@ -58,6 +58,7 @@
 ### Audio
 
 - [MelBandRoFormer](https://github.com/kijai/ComfyUI-MelBandRoFormer.git)
+- [afloy audio tools](https://github.com/afloy011-spec/afloy_audio_tools)
 
 ## 🧩 All possible Custom Nodes
 

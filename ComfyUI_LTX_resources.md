@@ -7,7 +7,6 @@
 - [Kijai LTX 2](https://huggingface.co/Kijai/LTXV2_comfy)
 - [Kijai LTX 2.3](https://huggingface.co/Kijai/LTX2.3_comfy)
 
-)
 ## Nodes and workflows
 
 - [awesome-ltx2](https://github.com/wildminder/awesome-ltx2)
