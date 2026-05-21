@@ -49,7 +49,7 @@
 - [EsesImageEffectLevels](https://github.com/quasiblob/ComfyUI-EsesImageEffectLevels)
 - [VRgamedevgirl](https://github.com/vrgamegirl19/comfyui-vrgamedevgirl)
 
-### Noise/Conditioning
+### Noise/Conditioning/Latent
 
 - [Detail Deamon](https://github.com/Jonseed/ComfyUI-Detail-Daemon)
 - [SeedVarianceEnhancer ZIT](https://github.com/ChangeTheConstants/SeedVarianceEnhancer)
@@ -60,6 +60,7 @@
 - [LG_SamplingUtils](https://github.com/LAOGOU-666/ComfyUI-LG_SamplingUtils)
 - [DiversityBoost](https://github.com/facok/ComfyUI-DiversityBoost)
 - [S2Guidance](https://github.com/orpheus-gaze/ComfyUI-S2Guidance.git)
+- [ReferenceLatentPlus](https://github.com/shootthesound/comfyui-ReferenceLatentPlus)
 
 ### Samplers
 
@@ -90,7 +91,7 @@
 - [JoyCaption](https://github.com/1038lab/ComfyUI-JoyCaption.git)
 - [QwenVL-mod](https://github.com/huchukato/ComfyUI-QwenVL-Mod)
 
-### i2i
+### i2i/Latent
 
 - [LanPaint](https://github.com/scraed/LanPaint)
 - [ComfyUI-ReferenceChain](https://github.com/remingtonspaz/ComfyUI-ReferenceChain)
@@ -110,6 +111,7 @@
 - [Fux2ImageReference](https://github.com/naku-yh/ComfyUI_Flux2ImageReference)
 - [Flux2Klein-Conditioning-Toolkit](https://github.com/xmarre/ComfyUI-Flux2Klein-Conditioning-Toolkit)
 - [NKD-Klein-Tools](https://github.com/Nekodificador/ComfyUI-NKD-Klein-Tools.git)
+- [KleinRefGrid](https://github.com/xb1n0ry/ComfyUI-KleinRefGrid)
 
 #### Z-image
 

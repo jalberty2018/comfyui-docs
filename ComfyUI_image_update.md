@@ -1,5 +1,11 @@
 # run-comfyui-image
 
+## 21052026
+
+- ComfyUI 0.22.0
+- [KleinRefGrid](https://github.com/xb1n0ry/ComfyUI-KleinRefGrid)
+- [ReferenceLatentPlus](https://github.com/shootthesound/comfyui-ReferenceLatentPlus)
+
 ## 15052026
 
 - ComfyUI 0.21.1
