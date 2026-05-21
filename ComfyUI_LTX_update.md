@@ -15,7 +15,7 @@
 ## 08052026
 
 - ComfyUI 0.20.1
-- Updated Civitai downloader script an environment variables
+- Updated Civitai downloader script and environment variables
 
 ## 26042026
 

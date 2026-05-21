@@ -1,5 +1,11 @@
 # run-comfyui-wan2
 
+## 21052026
+
+- ComfyUI 0.22.0
+- [BodyRatioMapper](https://github.com/wuwukaka/ComfyUI-BodyRatioMapper)
+- [YOLO_For_Multi_SDPose_Detection](https://github.com/judian17/ComfyUI_YOLO_For_Multi_SDPose_Detection)
+
 ## 11052026
 
 - ComfyUI 0.21.0
@@ -8,7 +14,7 @@
 ## 08052026
 
 - ComfyUI 0.20.1
-- Updated Civitai downloader script an environment variables
+- Updated Civitai downloader script and environment variables
 - [Prompt relay encode]( https://github.com/kijai/ComfyUI-PromptRelay)
 
 ## 15042026

@@ -15,7 +15,7 @@
 ## 09052026
 
 - ComfyUI 0.20.1
-- Updated Civitai downloader script an environment variables
+- Updated Civitai downloader script and environment variables
 - [NKD-Klein-Tools](https://github.com/Nekodificador/ComfyUI-NKD-Klein-Tools.git)
 
 ## 27042026

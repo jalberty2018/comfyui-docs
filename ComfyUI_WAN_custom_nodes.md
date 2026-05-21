@@ -31,6 +31,8 @@
 
 - [controlnet_aux](https://github.com/Fannovel16/comfyui_controlnet_aux)
 - [SCAIL-Pose](https://github.com/kijai/ComfyUI-SCAIL-Pose)
+- [BodyRatioMapper](https://github.com/wuwukaka/ComfyUI-BodyRatioMapper)
+- [YOLO_For_Multi_SDPose_Detection](https://github.com/judian17/ComfyUI_YOLO_For_Multi_SDPose_Detection)
 
 ### Flow
 
