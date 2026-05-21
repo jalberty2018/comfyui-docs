@@ -266,6 +266,7 @@
       "mode": 0,
       "inputs": [
         {
+          "label": "input_image",
           "name": "input_image",
           "shape": 7,
           "type": "IMAGE",
@@ -337,12 +338,19 @@
         "targetMegapixels": 2,
         "rescaleMode": "resolution",
         "rescaleValue": 0.7216878364870323,
+        "preserveScalingRatio": false,
         "autoDetect": false,
+        "autoDetectSource": "backend",
+        "autoDetectWidth": 0,
+        "autoDetectHeight": 0,
+        "autoDetectPresetsJSON": "{\"1:1 Square\":{\"width\":2048,\"height\":2048,\"isCustom\":false,\"isHidden\":false},\"1:1 Square Native\":{\"width\":2336,\"height\":2336,\"isCustom\":false,\"isHidden\":false},\"2:3 Portrait\":{\"width\":1632,\"height\":2448,\"isCustom\":false,\"isHidden\":false},\"3:4 Portrait\":{\"width\":1728,\"height\":2304,\"isCustom\":false,\"isHidden\":false},\"4:5 Portrait\":{\"width\":1792,\"height\":2240,\"isCustom\":false,\"isHidden\":false},\"9:16 Portrait\":{\"width\":1472,\"height\":2624,\"isCustom\":false,\"isHidden\":false},\"3:2 Landscape\":{\"width\":2448,\"height\":1632,\"isCustom\":false,\"isHidden\":false},\"4:3 Landscape\":{\"width\":2304,\"height\":1728,\"isCustom\":false,\"isHidden\":false},\"16:9 Landscape\":{\"width\":2624,\"height\":1472,\"isCustom\":false,\"isHidden\":false},\"21:9 Ultrawide\":{\"width\":2912,\"height\":1248,\"isCustom\":false,\"isHidden\":false}}",
         "autoFitOnChange": false,
         "autoResizeOnChange": false,
+        "autoSnapOnChange": false,
         "selectedCategory": "Flux.2",
         "selectedPreset": "3:4 Portrait",
         "useCustomCalc": false,
+        "showCalcInfo": false,
         "manual_slider_min_w": 64,
         "manual_slider_max_w": 2048,
         "manual_slider_step_w": 64,
@@ -353,6 +361,9 @@
         "section_scaling_collapsed": true,
         "section_autoDetect_collapsed": true,
         "section_presets_collapsed": false,
+        "section_extraControls_collapsed": false,
+        "preferred_compact_height": null,
+        "preferred_expanded_height": 475,
         "dropdown_resolution_expanded": false,
         "dropdown_category_expanded": false,
         "dropdown_preset_expanded": false,
@@ -365,6 +376,20 @@
         1728,
         2304,
         false,
+        "resolution",
+        0.7216878364870323,
+        1,
+        false,
+        false,
+        false,
+        false,
+        false,
+        "Flux.2",
+        64,
+        1,
+        1080,
+        2,
+        "{\"1:1 Square\":{\"width\":2048,\"height\":2048,\"isCustom\":false,\"isHidden\":false},\"1:1 Square Native\":{\"width\":2336,\"height\":2336,\"isCustom\":false,\"isHidden\":false},\"2:3 Portrait\":{\"width\":1632,\"height\":2448,\"isCustom\":false,\"isHidden\":false},\"3:4 Portrait\":{\"width\":1728,\"height\":2304,\"isCustom\":false,\"isHidden\":false},\"4:5 Portrait\":{\"width\":1792,\"height\":2240,\"isCustom\":false,\"isHidden\":false},\"9:16 Portrait\":{\"width\":1472,\"height\":2624,\"isCustom\":false,\"isHidden\":false},\"3:2 Landscape\":{\"width\":2448,\"height\":1632,\"isCustom\":false,\"isHidden\":false},\"4:3 Landscape\":{\"width\":2304,\"height\":1728,\"isCustom\":false,\"isHidden\":false},\"16:9 Landscape\":{\"width\":2624,\"height\":1472,\"isCustom\":false,\"isHidden\":false},\"21:9 Ultrawide\":{\"width\":2912,\"height\":1248,\"isCustom\":false,\"isHidden\":false}}",
         "resolution",
         0.7216878364870323,
         1
@@ -701,9 +726,18 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "Lora Loader (LoraManager)"
+        "Node name for S&R": "Lora Loader (LoraManager)",
+        "__lm_widget_ids": [
+          "__lm_autocomplete_meta_text",
+          "text",
+          "loras"
+        ]
       },
       "widgets_values": [
+        {
+          "version": 1,
+          "textWidgetName": "text"
+        },
         "",
         []
       ],
@@ -852,57 +886,6 @@
       "bgcolor": "#355"
     },
     {
-      "id": 92,
-      "type": "CLIPLoader",
-      "pos": [
-        -21.25468793688022,
-        530.2077941362401
-      ],
-      "size": [
-        364.42708333333337,
-        106
-      ],
-      "flags": {},
-      "order": 4,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            190
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPLoader",
-        "cnr_id": "comfy-core",
-        "ver": "0.8.2",
-        "models": [
-          {
-            "name": "qwen_3_8b_fp8mixed.safetensors",
-            "url": "https://huggingface.co/Comfy-Org/flux2-klein-9B/resolve/main/split_files/text_encoders/qwen_3_8b_fp8mixed.safetensors",
-            "directory": "text_encoders"
-          }
-        ],
-        "enableTabs": false,
-        "tabWidth": 65,
-        "tabXOffset": 10,
-        "hasSecondTab": false,
-        "secondTabText": "Send Back",
-        "secondTabOffset": 80,
-        "secondTabWidth": 65
-      },
-      "widgets_values": [
-        "split_files/text_encoders/qwen_3_8b.safetensors",
-        "flux2",
-        "default"
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
-    },
-    {
       "id": 93,
       "type": "VAELoader",
       "pos": [
@@ -914,7 +897,7 @@
         58
       ],
       "flags": {},
-      "order": 5,
+      "order": 4,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -963,7 +946,7 @@
         88
       ],
       "flags": {},
-      "order": 6,
+      "order": 5,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -973,6 +956,57 @@
       ],
       "color": "#432",
       "bgcolor": "#653"
+    },
+    {
+      "id": 92,
+      "type": "CLIPLoader",
+      "pos": [
+        -21.25468793688022,
+        530.2077941362401
+      ],
+      "size": [
+        364.42708333333337,
+        106
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            190
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPLoader",
+        "cnr_id": "comfy-core",
+        "ver": "0.8.2",
+        "models": [
+          {
+            "name": "qwen_3_8b_fp8mixed.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/flux2-klein-9B/resolve/main/split_files/text_encoders/qwen_3_8b_fp8mixed.safetensors",
+            "directory": "text_encoders"
+          }
+        ],
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65
+      },
+      "widgets_values": [
+        "qwen_3_8b.safetensors",
+        "flux2",
+        "default"
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
     }
   ],
   "links": [
@@ -1156,7 +1190,6 @@
         617.0182920192628
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -1169,7 +1202,6 @@
         746.9128017516252
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -1182,7 +1214,6 @@
         1122.9108989650513
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -1195,7 +1226,6 @@
         646.4763378515587
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -1208,7 +1238,6 @@
         629.5015396858155
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -1221,7 +1250,6 @@
         885.2566178123003
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     }
   ],
@@ -1234,7 +1262,7 @@
         -11.54258749565777
       ]
     },
-    "frontendVersion": "1.38.14",
+    "frontendVersion": "1.43.18",
     "workflowRendererVersion": "LG",
     "VHS_latentpreview": true,
     "VHS_latentpreviewrate": 0,

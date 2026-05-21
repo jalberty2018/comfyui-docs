@@ -1,8 +1,8 @@
 {
   "id": "720facc5-6059-4d75-8f2e-baa80c40d74d",
   "revision": 0,
-  "last_node_id": 179,
-  "last_link_id": 372,
+  "last_node_id": 180,
+  "last_link_id": 382,
   "nodes": [
     {
       "id": 103,
@@ -48,57 +48,6 @@
       "bgcolor": "#335"
     },
     {
-      "id": 104,
-      "type": "CLIPLoader",
-      "pos": [
-        -1069.2410537252083,
-        690.9212628782258
-      ],
-      "size": [
-        364.42708333333337,
-        106
-      ],
-      "flags": {},
-      "order": 1,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            238
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPLoader",
-        "cnr_id": "comfy-core",
-        "ver": "0.8.2",
-        "models": [
-          {
-            "name": "qwen_3_8b_fp8mixed.safetensors",
-            "url": "https://huggingface.co/Comfy-Org/flux2-klein-9B/resolve/main/split_files/text_encoders/qwen_3_8b_fp8mixed.safetensors",
-            "directory": "text_encoders"
-          }
-        ],
-        "enableTabs": false,
-        "tabWidth": 65,
-        "tabXOffset": 10,
-        "hasSecondTab": false,
-        "secondTabText": "Send Back",
-        "secondTabOffset": 80,
-        "secondTabWidth": 65
-      },
-      "widgets_values": [
-        "split_files/text_encoders/qwen_3_8b.safetensors",
-        "flux2",
-        "default"
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
       "id": 105,
       "type": "VAELoader",
       "pos": [
@@ -110,7 +59,7 @@
         58
       ],
       "flags": {},
-      "order": 2,
+      "order": 1,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -119,7 +68,7 @@
           "type": "VAE",
           "links": [
             184,
-            370
+            374
           ]
         }
       ],
@@ -223,7 +172,7 @@
         {
           "name": "bundle",
           "type": "NKD_KLEIN_BUNDLE",
-          "link": 367
+          "link": 382
         }
       ],
       "outputs": [
@@ -270,25 +219,25 @@
           "name": "model",
           "shape": 7,
           "type": "MODEL",
-          "link": 363
+          "link": 378
         },
         {
           "name": "positive",
           "shape": 7,
           "type": "CONDITIONING",
-          "link": 364
+          "link": 379
         },
         {
           "name": "negative",
           "shape": 7,
           "type": "CONDITIONING",
-          "link": 365
+          "link": 380
         },
         {
           "name": "latent_image",
           "shape": 7,
           "type": "LATENT",
-          "link": 366
+          "link": 381
         },
         {
           "name": "sigmas",
@@ -339,7 +288,7 @@
         -1,
         1,
         1,
-        196305726623357,
+        622723756188526,
         "randomize",
         "standard",
         true
@@ -415,7 +364,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 8,
+      "order": 7,
       "mode": 0,
       "inputs": [
         {
@@ -456,7 +405,7 @@
           "shape": 3,
           "type": "MASK",
           "links": [
-            372
+            377
           ]
         }
       ],
@@ -477,7 +426,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 7,
+      "order": 6,
       "mode": 0,
       "inputs": [
         {
@@ -521,7 +470,7 @@
             360,
             361,
             362,
-            371
+            376
           ]
         }
       ],
@@ -569,7 +518,7 @@
         88
       ],
       "flags": {},
-      "order": 3,
+      "order": 2,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -678,122 +627,6 @@
       "bgcolor": "#000"
     },
     {
-      "id": 179,
-      "type": "NKDKleinPresampling",
-      "pos": [
-        -205.93500381746307,
-        1067.3824039341619
-      ],
-      "size": [
-        593.3808168151855,
-        650.664203829956
-      ],
-      "flags": {},
-      "order": 10,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 368
-        },
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 369
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 370
-        },
-        {
-          "label": "ref_0",
-          "name": "ref_images.ref_0",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 371
-        },
-        {
-          "label": "ref_1",
-          "name": "ref_images.ref_1",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": null
-        },
-        {
-          "name": "mask",
-          "shape": 7,
-          "type": "MASK",
-          "link": 372
-        }
-      ],
-      "outputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "links": [
-            363
-          ]
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "links": [
-            364
-          ]
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "links": [
-            365
-          ]
-        },
-        {
-          "name": "latent",
-          "type": "LATENT",
-          "links": [
-            366
-          ]
-        },
-        {
-          "name": "bundle",
-          "type": "NKD_KLEIN_BUNDLE",
-          "links": [
-            367
-          ]
-        },
-        {
-          "name": "mask",
-          "type": "MASK",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "NKDKleinPresampling"
-      },
-      "widgets_values": [
-        "Change girls dress from blue to red.",
-        "deformed.",
-        true,
-        "As Reference",
-        2,
-        1024,
-        1024,
-        "Native",
-        false,
-        0,
-        20,
-        10,
-        1,
-        false,
-        50
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
       "id": 175,
       "type": "LoadLoopImagesFromDir",
       "pos": [
@@ -805,7 +638,7 @@
         123.20886033480292
       ],
       "flags": {},
-      "order": 4,
+      "order": 3,
       "mode": 4,
       "inputs": [],
       "outputs": [
@@ -835,47 +668,6 @@
       "widgets_values": [
         "Cara",
         false
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
-      "id": 170,
-      "type": "LoadImage",
-      "pos": [
-        -1067.3151208312518,
-        1069.6100853175703
-      ],
-      "size": [
-        354.62152304261167,
-        377.7409147092317
-      ],
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            357
-          ]
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": [
-            358
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoadImage"
-      },
-      "widgets_values": [
-        "example.png",
-        "image"
       ],
       "color": "#432",
       "bgcolor": "#653"
@@ -963,7 +755,7 @@
         376.3364502109179
       ],
       "flags": {},
-      "order": 6,
+      "order": 8,
       "mode": 0,
       "inputs": [
         {
@@ -989,14 +781,14 @@
           "name": "MODEL",
           "type": "MODEL",
           "links": [
-            368
+            373
           ]
         },
         {
           "name": "CLIP",
           "type": "CLIP",
           "links": [
-            369
+            375
           ]
         },
         {
@@ -1028,6 +820,219 @@
       ],
       "color": "#233",
       "bgcolor": "#355"
+    },
+    {
+      "id": 170,
+      "type": "LoadImage",
+      "pos": [
+        -1067.3151208312518,
+        1069.6100853175703
+      ],
+      "size": [
+        354.62152304261167,
+        377.7409147092317
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            357
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            358
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "pretty-teen.png",
+        "image"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 104,
+      "type": "CLIPLoader",
+      "pos": [
+        -1069.2410537252083,
+        690.9212628782258
+      ],
+      "size": [
+        364.42708333333337,
+        106
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            238
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPLoader",
+        "cnr_id": "comfy-core",
+        "ver": "0.8.2",
+        "models": [
+          {
+            "name": "qwen_3_8b_fp8mixed.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/flux2-klein-9B/resolve/main/split_files/text_encoders/qwen_3_8b_fp8mixed.safetensors",
+            "directory": "text_encoders"
+          }
+        ],
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65
+      },
+      "widgets_values": [
+        "qwen_3_8b.safetensors",
+        "flux2",
+        "default"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 180,
+      "type": "NKDKleinPresampling",
+      "pos": [
+        -208.61429152019124,
+        1058.4355538773523
+      ],
+      "size": [
+        562.6635681152343,
+        655.1200134277342
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 373
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 375
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 374
+        },
+        {
+          "label": "ref_0",
+          "name": "ref_images.ref_0",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 376
+        },
+        {
+          "label": "ref_1",
+          "name": "ref_images.ref_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": 377
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            378
+          ]
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            379
+          ]
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": [
+            380
+          ]
+        },
+        {
+          "name": "latent",
+          "type": "LATENT",
+          "links": [
+            381
+          ]
+        },
+        {
+          "name": "bundle",
+          "type": "NKD_KLEIN_BUNDLE",
+          "links": [
+            382
+          ]
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        },
+        {
+          "name": "ref_0",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "NKDKleinPresampling"
+      },
+      "widgets_values": [
+        "Change girls dress from white to pink.",
+        "deformed.",
+        true,
+        "As Reference",
+        2,
+        1024,
+        1024,
+        "Native",
+        "Gray",
+        0.5,
+        false,
+        0,
+        20,
+        10,
+        1,
+        false,
+        50
+      ]
     }
   ],
   "links": [
@@ -1168,84 +1173,84 @@
       "IMAGE"
     ],
     [
-      363,
-      179,
+      373,
+      133,
+      0,
+      180,
+      0,
+      "MODEL"
+    ],
+    [
+      374,
+      105,
+      0,
+      180,
+      2,
+      "VAE"
+    ],
+    [
+      375,
+      133,
+      1,
+      180,
+      1,
+      "CLIP"
+    ],
+    [
+      376,
+      176,
+      0,
+      180,
+      3,
+      "IMAGE"
+    ],
+    [
+      377,
+      177,
+      0,
+      180,
+      5,
+      "MASK"
+    ],
+    [
+      378,
+      180,
       0,
       165,
       0,
       "MODEL"
     ],
     [
-      364,
-      179,
+      379,
+      180,
       1,
       165,
       1,
       "CONDITIONING"
     ],
     [
-      365,
-      179,
+      380,
+      180,
       2,
       165,
       2,
       "CONDITIONING"
     ],
     [
-      366,
-      179,
+      381,
+      180,
       3,
       165,
       3,
       "LATENT"
     ],
     [
-      367,
-      179,
+      382,
+      180,
       4,
       166,
       1,
       "NKD_KLEIN_BUNDLE"
-    ],
-    [
-      368,
-      133,
-      0,
-      179,
-      0,
-      "MODEL"
-    ],
-    [
-      369,
-      133,
-      1,
-      179,
-      1,
-      "CLIP"
-    ],
-    [
-      370,
-      105,
-      0,
-      179,
-      2,
-      "VAE"
-    ],
-    [
-      371,
-      176,
-      0,
-      179,
-      3,
-      "IMAGE"
-    ],
-    [
-      372,
-      177,
-      0,
-      179,
-      5,
-      "MASK"
     ]
   ],
   "groups": [
@@ -1325,10 +1330,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.5644739300537773,
+      "scale": 0.9090909090909092,
       "offset": [
-        1240.2523811035658,
-        -653.774887790073
+        314.23705939799925,
+        -1011.7190220037262
       ]
     },
     "frontendVersion": "1.43.18",

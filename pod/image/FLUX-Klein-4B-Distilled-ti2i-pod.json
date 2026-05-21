@@ -1,8 +1,8 @@
 {
   "id": "720facc5-6059-4d75-8f2e-baa80c40d74d",
   "revision": 0,
-  "last_node_id": 176,
-  "last_link_id": 361,
+  "last_node_id": 177,
+  "last_link_id": 371,
   "nodes": [
     {
       "id": 105,
@@ -25,7 +25,7 @@
           "type": "VAE",
           "links": [
             184,
-            359
+            364
           ]
         }
       ],
@@ -177,7 +177,7 @@
         {
           "name": "bundle",
           "type": "NKD_KLEIN_BUNDLE",
-          "link": 356
+          "link": 371
         }
       ],
       "outputs": [
@@ -224,25 +224,25 @@
           "name": "model",
           "shape": 7,
           "type": "MODEL",
-          "link": 351
+          "link": 367
         },
         {
           "name": "positive",
           "shape": 7,
           "type": "CONDITIONING",
-          "link": 352
+          "link": 368
         },
         {
           "name": "negative",
           "shape": 7,
           "type": "CONDITIONING",
-          "link": 354
+          "link": 369
         },
         {
           "name": "latent_image",
           "shape": 7,
           "type": "LATENT",
-          "link": 355
+          "link": 370
         },
         {
           "name": "sigmas",
@@ -536,14 +536,14 @@
           "name": "MODEL",
           "type": "MODEL",
           "links": [
-            357
+            362
           ]
         },
         {
           "name": "CLIP",
           "type": "CLIP",
           "links": [
-            358
+            363
           ]
         },
         {
@@ -620,6 +620,47 @@
       "bgcolor": "#335"
     },
     {
+      "id": 170,
+      "type": "LoadImage",
+      "pos": [
+        -634.3628971036858,
+        1069.135828006223
+      ],
+      "size": [
+        354.62152304261167,
+        377.7409147092317
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            338,
+            339,
+            365
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            366
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "example.png",
+        "image"
+      ]
+    },
+    {
       "id": 104,
       "type": "CLIPLoader",
       "pos": [
@@ -631,7 +672,7 @@
         106
       ],
       "flags": {},
-      "order": 3,
+      "order": 4,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -671,56 +712,15 @@
       "bgcolor": "#335"
     },
     {
-      "id": 170,
-      "type": "LoadImage",
-      "pos": [
-        -634.3628971036858,
-        1069.135828006223
-      ],
-      "size": [
-        354.62152304261167,
-        377.7409147092317
-      ],
-      "flags": {},
-      "order": 4,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            338,
-            339,
-            360
-          ]
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": [
-            361
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoadImage"
-      },
-      "widgets_values": [
-        "example.png",
-        "image"
-      ]
-    },
-    {
-      "id": 175,
+      "id": 177,
       "type": "NKDKleinPresampling",
       "pos": [
-        -224.78346673608428,
-        1076.9876421845172
+        -203.91277079674106,
+        1078.370981555902
       ],
       "size": [
-        580.8010564262576,
-        560.0276136298701
+        561.2721251095425,
+        561.8394996510528
       ],
       "flags": {},
       "order": 6,
@@ -729,24 +729,24 @@
         {
           "name": "model",
           "type": "MODEL",
-          "link": 357
+          "link": 362
         },
         {
           "name": "clip",
           "type": "CLIP",
-          "link": 358
+          "link": 363
         },
         {
           "name": "vae",
           "type": "VAE",
-          "link": 359
+          "link": 364
         },
         {
           "label": "ref_0",
           "name": "ref_images.ref_0",
           "shape": 7,
           "type": "IMAGE",
-          "link": 360
+          "link": 365
         },
         {
           "label": "ref_1",
@@ -759,7 +759,7 @@
           "name": "mask",
           "shape": 7,
           "type": "MASK",
-          "link": 361
+          "link": 366
         }
       ],
       "outputs": [
@@ -767,40 +767,45 @@
           "name": "model",
           "type": "MODEL",
           "links": [
-            351
+            367
           ]
         },
         {
           "name": "positive",
           "type": "CONDITIONING",
           "links": [
-            352
+            368
           ]
         },
         {
           "name": "negative",
           "type": "CONDITIONING",
           "links": [
-            354
+            369
           ]
         },
         {
           "name": "latent",
           "type": "LATENT",
           "links": [
-            355
+            370
           ]
         },
         {
           "name": "bundle",
           "type": "NKD_KLEIN_BUNDLE",
           "links": [
-            356
+            371
           ]
         },
         {
           "name": "mask",
           "type": "MASK",
+          "links": null
+        },
+        {
+          "name": "ref_0",
+          "type": "IMAGE",
           "links": null
         }
       ],
@@ -809,13 +814,15 @@
       },
       "widgets_values": [
         "Change red dress to blue.\nCHange green backgound to dance room.",
-        "Deformed",
+        "deformed",
         true,
         "As Reference",
         2,
         1024,
         1024,
         "Native",
+        "Gray",
+        0.5,
         false,
         0,
         20,
@@ -926,84 +933,84 @@
       "IMAGE"
     ],
     [
-      351,
-      175,
+      362,
+      133,
+      0,
+      177,
+      0,
+      "MODEL"
+    ],
+    [
+      363,
+      133,
+      1,
+      177,
+      1,
+      "CLIP"
+    ],
+    [
+      364,
+      105,
+      0,
+      177,
+      2,
+      "VAE"
+    ],
+    [
+      365,
+      170,
+      0,
+      177,
+      3,
+      "IMAGE"
+    ],
+    [
+      366,
+      170,
+      1,
+      177,
+      5,
+      "MASK"
+    ],
+    [
+      367,
+      177,
       0,
       165,
       0,
       "MODEL"
     ],
     [
-      352,
-      175,
+      368,
+      177,
       1,
       165,
       1,
       "CONDITIONING"
     ],
     [
-      354,
-      175,
+      369,
+      177,
       2,
       165,
       2,
       "CONDITIONING"
     ],
     [
-      355,
-      175,
+      370,
+      177,
       3,
       165,
       3,
       "LATENT"
     ],
     [
-      356,
-      175,
+      371,
+      177,
       4,
       166,
       1,
       "NKD_KLEIN_BUNDLE"
-    ],
-    [
-      357,
-      133,
-      0,
-      175,
-      0,
-      "MODEL"
-    ],
-    [
-      358,
-      133,
-      1,
-      175,
-      1,
-      "CLIP"
-    ],
-    [
-      359,
-      105,
-      0,
-      175,
-      2,
-      "VAE"
-    ],
-    [
-      360,
-      170,
-      0,
-      175,
-      3,
-      "IMAGE"
-    ],
-    [
-      361,
-      170,
-      1,
-      175,
-      5,
-      "MASK"
     ]
   ],
   "groups": [
@@ -1083,10 +1090,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.727947263162549,
+      "scale": 0.6016093083988009,
       "offset": [
-        1314.986690133309,
-        -640.0336112561185
+        1439.9787271062994,
+        -315.52156868506887
       ]
     },
     "frontendVersion": "1.43.18",

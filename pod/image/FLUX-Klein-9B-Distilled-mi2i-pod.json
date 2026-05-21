@@ -118,7 +118,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 6,
+      "order": 5,
       "mode": 0,
       "inputs": [
         {
@@ -241,9 +241,9 @@
       ],
       "outputs": [],
       "properties": {
+        "Node name for S&R": "SaveImage",
         "cnr_id": "comfy-core",
         "ver": "0.8.2",
-        "Node name for S&R": "SaveImage",
         "enableTabs": false,
         "tabWidth": 65,
         "tabXOffset": 10,
@@ -296,57 +296,6 @@
       },
       "widgets_values": [
         "flux-2-klein-9b.safetensors",
-        "default"
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
-      "id": 104,
-      "type": "CLIPLoader",
-      "pos": [
-        -1526.9832453920976,
-        700.9863152992041
-      ],
-      "size": [
-        364.42708333333337,
-        106
-      ],
-      "flags": {},
-      "order": 2,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            252
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPLoader",
-        "cnr_id": "comfy-core",
-        "ver": "0.8.2",
-        "models": [
-          {
-            "name": "qwen_3_8b_fp8mixed.safetensors",
-            "url": "https://huggingface.co/Comfy-Org/flux2-klein-9B/resolve/main/split_files/text_encoders/qwen_3_8b_fp8mixed.safetensors",
-            "directory": "text_encoders"
-          }
-        ],
-        "enableTabs": false,
-        "tabWidth": 65,
-        "tabXOffset": 10,
-        "hasSecondTab": false,
-        "secondTabText": "Send Back",
-        "secondTabOffset": 80,
-        "secondTabWidth": 65
-      },
-      "widgets_values": [
-        "split_files/text_encoders/qwen_3_8b.safetensors",
-        "flux2",
         "default"
       ],
       "color": "#223",
@@ -454,10 +403,11 @@
         445
       ],
       "flags": {},
-      "order": 3,
+      "order": 2,
       "mode": 0,
       "inputs": [
         {
+          "label": "input_image",
           "name": "input_image",
           "shape": 7,
           "type": "IMAGE",
@@ -527,12 +477,19 @@
         "targetMegapixels": 2.5,
         "rescaleMode": "megapixels",
         "rescaleValue": 0.7910505200587045,
+        "preserveScalingRatio": false,
         "autoDetect": false,
+        "autoDetectSource": "backend",
+        "autoDetectWidth": 0,
+        "autoDetectHeight": 0,
+        "autoDetectPresetsJSON": "{\"1:1 Square\":{\"width\":2048,\"height\":2048,\"isCustom\":false,\"isHidden\":false},\"1:1 Square Native\":{\"width\":2336,\"height\":2336,\"isCustom\":false,\"isHidden\":false},\"2:3 Portrait\":{\"width\":1632,\"height\":2448,\"isCustom\":false,\"isHidden\":false},\"3:4 Portrait\":{\"width\":1728,\"height\":2304,\"isCustom\":false,\"isHidden\":false},\"4:5 Portrait\":{\"width\":1792,\"height\":2240,\"isCustom\":false,\"isHidden\":false},\"9:16 Portrait\":{\"width\":1472,\"height\":2624,\"isCustom\":false,\"isHidden\":false},\"3:2 Landscape\":{\"width\":2448,\"height\":1632,\"isCustom\":false,\"isHidden\":false},\"4:3 Landscape\":{\"width\":2304,\"height\":1728,\"isCustom\":false,\"isHidden\":false},\"16:9 Landscape\":{\"width\":2624,\"height\":1472,\"isCustom\":false,\"isHidden\":false},\"21:9 Ultrawide\":{\"width\":2912,\"height\":1248,\"isCustom\":false,\"isHidden\":false}}",
         "autoFitOnChange": false,
         "autoResizeOnChange": false,
+        "autoSnapOnChange": false,
         "selectedCategory": "Flux.2",
         "selectedPreset": "3:2 Landscape",
         "useCustomCalc": false,
+        "showCalcInfo": false,
         "manual_slider_min_w": 64,
         "manual_slider_max_w": 2048,
         "manual_slider_step_w": 64,
@@ -543,6 +500,9 @@
         "section_scaling_collapsed": true,
         "section_autoDetect_collapsed": true,
         "section_presets_collapsed": false,
+        "section_extraControls_collapsed": false,
+        "preferred_compact_height": null,
+        "preferred_expanded_height": 445,
         "dropdown_resolution_expanded": false,
         "dropdown_category_expanded": false,
         "dropdown_preset_expanded": false,
@@ -555,6 +515,20 @@
         2448,
         1632,
         false,
+        "megapixels",
+        0.7910505200587045,
+        1,
+        false,
+        false,
+        false,
+        false,
+        false,
+        "Flux.2",
+        16,
+        1,
+        1080,
+        2.5,
+        "{\"1:1 Square\":{\"width\":2048,\"height\":2048,\"isCustom\":false,\"isHidden\":false},\"1:1 Square Native\":{\"width\":2336,\"height\":2336,\"isCustom\":false,\"isHidden\":false},\"2:3 Portrait\":{\"width\":1632,\"height\":2448,\"isCustom\":false,\"isHidden\":false},\"3:4 Portrait\":{\"width\":1728,\"height\":2304,\"isCustom\":false,\"isHidden\":false},\"4:5 Portrait\":{\"width\":1792,\"height\":2240,\"isCustom\":false,\"isHidden\":false},\"9:16 Portrait\":{\"width\":1472,\"height\":2624,\"isCustom\":false,\"isHidden\":false},\"3:2 Landscape\":{\"width\":2448,\"height\":1632,\"isCustom\":false,\"isHidden\":false},\"4:3 Landscape\":{\"width\":2304,\"height\":1728,\"isCustom\":false,\"isHidden\":false},\"16:9 Landscape\":{\"width\":2624,\"height\":1472,\"isCustom\":false,\"isHidden\":false},\"21:9 Ultrawide\":{\"width\":2912,\"height\":1248,\"isCustom\":false,\"isHidden\":false}}",
         "megapixels",
         0.7910505200587045,
         1
@@ -712,7 +686,7 @@
         88
       ],
       "flags": {},
-      "order": 4,
+      "order": 3,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -774,7 +748,7 @@
       },
       "widgets_values": [
         8,
-        409267482126222,
+        69660032031773,
         "randomize",
         1,
         0.5,
@@ -846,7 +820,7 @@
         371.0715712035569
       ],
       "flags": {},
-      "order": 5,
+      "order": 6,
       "mode": 0,
       "inputs": [
         {
@@ -1202,6 +1176,57 @@
       "bgcolor": "#353"
     },
     {
+      "id": 104,
+      "type": "CLIPLoader",
+      "pos": [
+        -1526.9832453920976,
+        700.9863152992041
+      ],
+      "size": [
+        364.42708333333337,
+        106
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            252
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPLoader",
+        "cnr_id": "comfy-core",
+        "ver": "0.8.2",
+        "models": [
+          {
+            "name": "qwen_3_8b_fp8mixed.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/flux2-klein-9B/resolve/main/split_files/text_encoders/qwen_3_8b_fp8mixed.safetensors",
+            "directory": "text_encoders"
+          }
+        ],
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65
+      },
+      "widgets_values": [
+        "qwen_3_8b.safetensors",
+        "flux2",
+        "default"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
       "id": 133,
       "type": "ReferenceChainConditioning",
       "pos": [
@@ -1210,7 +1235,7 @@
       ],
       "size": [
         387.731371029377,
-        294
+        546
       ],
       "flags": {},
       "order": 12,
@@ -1259,7 +1284,7 @@
       "widgets_values": [
         "lanczos",
         1,
-        "[]",
+        "[\"portrait-asian-girl-child-age-years-old-standing-isolated-white-background-full-body-photo-clipping-path-portrait-asian-345239286.webp\"]",
         0,
         null
       ],
@@ -1504,7 +1529,6 @@
         489.63638080092375
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -1517,7 +1541,6 @@
         806.12188740506
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -1530,7 +1553,6 @@
         835.8942031696205
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -1543,7 +1565,6 @@
         1091.6151218643713
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -1556,7 +1577,6 @@
         743.0344851955151
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -1569,7 +1589,6 @@
         819.2327811844584
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -1582,7 +1601,6 @@
         493.1354215401821
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -1595,7 +1613,6 @@
         894.9321094283991
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -1608,20 +1625,19 @@
         1176.0048236484959
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     }
   ],
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.5012635287918317,
+      "scale": 0.733899932504121,
       "offset": [
-        2019.205422993575,
-        -465.0755094085451
+        1386.1958574773018,
+        -871.0640525537941
       ]
     },
-    "frontendVersion": "1.42.15",
+    "frontendVersion": "1.43.18",
     "workflowRendererVersion": "LG",
     "VHS_latentpreview": true,
     "VHS_latentpreviewrate": 0,
