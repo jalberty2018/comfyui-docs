@@ -1,15 +1,19 @@
 # 📚 LTX 2.x resources
 
+## Awesome list
+
+- [awesome-ltx2](https://github.com/wildminder/awesome-ltx2)
+
 ## Model
 
 - [LTX Github](https://github.com/Lightricks)
 - [Website](https://ltx.io/model)
 - [Kijai LTX 2](https://huggingface.co/Kijai/LTXV2_comfy)
 - [Kijai LTX 2.3](https://huggingface.co/Kijai/LTX2.3_comfy)
+- [Sulphur](https://sulphur-2.com/)
 
 ## Nodes and workflows
 
-- [awesome-ltx2](https://github.com/wildminder/awesome-ltx2)
 - [RuneXX 2](https://huggingface.co/RuneXX/LTX-2-Workflows)
 - [RuneXX 2.3](https://huggingface.co/RuneXX/LTX-2.3-Workflows)
 - [Prompt Relay](https://gordonchen19.github.io/Prompt-Relay/)

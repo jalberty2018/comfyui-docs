@@ -14,6 +14,8 @@
 - [ComfyUi-Scale-Image-to-Total-Pixels-Advanced](https://github.com/BigStationW/ComfyUi-Scale-Image-to-Total-Pixels-Advanced)
 - [Prompt relay encode]( https://github.com/kijai/ComfyUI-PromptRelay.git)
 - [Easy-Use](https://github.com/yolain/ComfyUI-Easy-Use.git)
+- [10S](https://github.com/TenStrip/10S-Comfy-nodes)
+- [WhatDreamsCost](https://github.com/WhatDreamsCost/WhatDreamsCost-ComfyUI)
 
 ### Downloaders/Linkers
 

@@ -1,8 +1,10 @@
 # run-comfyui-ltx
 
-## 21052026
+## 22052026
 
 - ComfyUI 0.22.0
+- [TenStrip 10S](https://github.com/TenStrip/10S-Comfy-nodes)
+- [WhatDreamsCost](https://github.com/WhatDreamsCost/WhatDreamsCost-ComfyUI)
 
 ## 16052026
 
