@@ -84,6 +84,7 @@
 - [SecNodes](https://github.com/9nate-drake/Comfyui-SecNodes)
 - [AutoCropFaces](https://github.com/liusida/ComfyUI-AutoCropFaces)
 - [SAM3](https://github.com/PozzettiAndrea/ComfyUI-SAM3)
+- [human-parser-comfyui-node](https://github.com/cozymantis/human-parser-comfyui-node])
 
 ### Tagging/Caption/VLM
 
