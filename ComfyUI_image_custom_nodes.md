@@ -92,10 +92,11 @@
 - [JoyCaption](https://github.com/1038lab/ComfyUI-JoyCaption.git)
 - [QwenVL-mod](https://github.com/huchukato/ComfyUI-QwenVL-Mod)
 
-### i2i/Latent
+### i2i
 
 - [LanPaint](https://github.com/scraed/LanPaint)
 - [ComfyUI-ReferenceChain](https://github.com/remingtonspaz/ComfyUI-ReferenceChain)
+- [Inpaint-CropAndStitch](https://github.com/lquesada/ComfyUI-Inpaint-CropAndStitch)
 
 ### Model Specific
 

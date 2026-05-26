@@ -1,11 +1,12 @@
 # run-comfyui-image
 
-## 21052026
+## 24052026
 
 - ComfyUI 0.22.0
 - [KleinRefGrid](https://github.com/xb1n0ry/ComfyUI-KleinRefGrid)
 - [ReferenceLatentPlus](https://github.com/shootthesound/comfyui-ReferenceLatentPlus)
 - [human-parser-comfyui-node](https://github.com/cozymantis/human-parser-comfyui-node])
+- [Inpaint-CropAndStitch](https://github.com/lquesada/ComfyUI-Inpaint-CropAndStitch)
 
 ## 15052026
 
