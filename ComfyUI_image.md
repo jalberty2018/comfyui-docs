@@ -8,6 +8,10 @@ A streamlined and automated environment for running **ComfyUI** with **image/edi
 
 ![ZIB-ZIT](images/ai-generated-ZIB-ZIT.jpg)
 
+## Example FLUX-Klein control/target image generation
+
+![FLUX-Klein](images/ai-generated-FLUX-KLEIN.jpg)
+
 ## Example QWEN-EDIT MULTIPLE ANGLES
 
 ![QWEN-EDIT-CAMERA](images/ai-generated-QWEN-EDIT-CAMERA.jpg)
