@@ -1,8 +1,8 @@
 {
   "id": "720facc5-6059-4d75-8f2e-baa80c40d74d",
   "revision": 0,
-  "last_node_id": 250,
-  "last_link_id": 511,
+  "last_node_id": 259,
+  "last_link_id": 536,
   "nodes": [
     {
       "id": 103,
@@ -803,7 +803,14 @@
         "Node name for S&R": "NKDKleinPostsampling"
       },
       "widgets_values": [
-        10
+        10,
+        0,
+        false,
+        false,
+        2,
+        0,
+        false,
+        true
       ],
       "color": "#232",
       "bgcolor": "#353"
@@ -1032,35 +1039,6 @@
       ],
       "color": "#332922",
       "bgcolor": "#593930"
-    },
-    {
-      "id": 178,
-      "type": "PreviewImage",
-      "pos": [
-        -1462.14469300393,
-        1362.456486004262
-      ],
-      "size": [
-        345.5093927409887,
-        380.20147355998483
-      ],
-      "flags": {},
-      "order": 51,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 457
-        }
-      ],
-      "outputs": [],
-      "properties": {
-        "Node name for S&R": "PreviewImage"
-      },
-      "widgets_values": [],
-      "color": "#222",
-      "bgcolor": "#000"
     },
     {
       "id": 228,
@@ -1487,53 +1465,6 @@
       "bgcolor": "#364254"
     },
     {
-      "id": 186,
-      "type": "AILab_Preview",
-      "pos": [
-        -1038.2313308426228,
-        1566.363136985395
-      ],
-      "size": [
-        531.6417666526767,
-        271.77511308144585
-      ],
-      "flags": {},
-      "order": 49,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 507
-        },
-        {
-          "name": "mask",
-          "shape": 7,
-          "type": "MASK",
-          "link": 417
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": null
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": []
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "AILab_Preview"
-      },
-      "widgets_values": [],
-      "color": "#233",
-      "bgcolor": "#355"
-    },
-    {
       "id": 182,
       "type": "AILab_ColorInput",
       "pos": [
@@ -1646,8 +1577,8 @@
       "id": 219,
       "type": "GetNode",
       "pos": [
-        1802.358739066852,
-        1452.8850192304033
+        1804.878200132169,
+        1446.5862704558317
       ],
       "size": [
         210,
@@ -1683,8 +1614,8 @@
       "id": 214,
       "type": "GetNode",
       "pos": [
-        1807.742989300703,
-        1502.3623098499218
+        1810.26245036602,
+        1496.0635610753502
       ],
       "size": [
         210,
@@ -1718,8 +1649,8 @@
       "id": 200,
       "type": "SaveImageEnhancedNode",
       "pos": [
-        1799.6544948632938,
-        1463.71766900601
+        1802.173955928611,
+        1457.4189202314385
       ],
       "size": [
         289.302734375,
@@ -1883,102 +1814,6 @@
       "bgcolor": "#355"
     },
     {
-      "id": 165,
-      "type": "ClownsharKSampler_Beta",
-      "pos": [
-        762.6565040839464,
-        1097.774815862188
-      ],
-      "size": [
-        270,
-        630
-      ],
-      "flags": {},
-      "order": 54,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "shape": 7,
-          "type": "MODEL",
-          "link": 378
-        },
-        {
-          "name": "positive",
-          "shape": 7,
-          "type": "CONDITIONING",
-          "link": 379
-        },
-        {
-          "name": "negative",
-          "shape": 7,
-          "type": "CONDITIONING",
-          "link": 380
-        },
-        {
-          "name": "latent_image",
-          "shape": 7,
-          "type": "LATENT",
-          "link": 381
-        },
-        {
-          "name": "sigmas",
-          "shape": 7,
-          "type": "SIGMAS",
-          "link": null
-        },
-        {
-          "name": "guides",
-          "shape": 7,
-          "type": "GUIDES",
-          "link": null
-        },
-        {
-          "name": "options",
-          "shape": 7,
-          "type": "OPTIONS",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "output",
-          "type": "LATENT",
-          "links": [
-            326
-          ]
-        },
-        {
-          "name": "denoised",
-          "type": "LATENT",
-          "links": null
-        },
-        {
-          "name": "options",
-          "type": "OPTIONS",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ClownsharKSampler_Beta"
-      },
-      "widgets_values": [
-        0.55,
-        "multistep/res_2m",
-        "beta57",
-        8,
-        -1,
-        1,
-        1.25,
-        44,
-        "fixed",
-        "standard",
-        true
-      ],
-      "color": "#222",
-      "bgcolor": "#000"
-    },
-    {
       "id": 227,
       "type": "SAM3Segment",
       "pos": [
@@ -2048,242 +1883,10 @@
       "bgcolor": "#364254"
     },
     {
-      "id": 244,
-      "type": "AILab_ColorInput",
-      "pos": [
-        -1176.587254409355,
-        1976.5414512148866
-      ],
-      "size": [
-        300,
-        82
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 20,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "COLOR",
-          "type": "COLORCODE",
-          "links": [
-            496
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "AILab_ColorInput"
-      },
-      "widgets_values": [
-        "black",
-        ""
-      ],
-      "color": "#2e3e57",
-      "bgcolor": "#4b5b73"
-    },
-    {
-      "id": 246,
-      "type": "AILab_Preview",
-      "pos": [
-        -449.08587326724563,
-        1977.4868189395036
-      ],
-      "size": [
-        487.0830905496555,
-        399.8480779916531
-      ],
-      "flags": {},
-      "order": 52,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 510
-        },
-        {
-          "name": "mask",
-          "shape": 7,
-          "type": "MASK",
-          "link": 511
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            501
-          ]
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "AILab_Preview"
-      },
-      "widgets_values": [],
-      "color": "#332922",
-      "bgcolor": "#593930"
-    },
-    {
-      "id": 247,
-      "type": "RMBG",
-      "pos": [
-        -1180.128794034879,
-        2032.0326085834006
-      ],
-      "size": [
-        340,
-        292
-      ],
-      "flags": {},
-      "order": 41,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 506
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            503
-          ]
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": []
-        },
-        {
-          "name": "MASK_IMAGE",
-          "type": "IMAGE",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "RMBG"
-      },
-      "widgets_values": [
-        "RMBG-2.0",
-        1,
-        1024,
-        0,
-        0,
-        false,
-        true,
-        "Color",
-        "#222222"
-      ],
-      "color": "#332922",
-      "bgcolor": "#593930"
-    },
-    {
-      "id": 175,
-      "type": "LoadLoopImagesFromDir",
-      "pos": [
-        -1834.9124239120779,
-        1611.0234983064242
-      ],
-      "size": [
-        352.2610999301546,
-        123.20886033480292
-      ],
-      "flags": {},
-      "order": 21,
-      "mode": 4,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            353
-          ]
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": []
-        },
-        {
-          "name": "FILE PATH",
-          "type": "STRING",
-          "links": [
-            435
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoadLoopImagesFromDir"
-      },
-      "widgets_values": [
-        "input",
-        false
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
-    },
-    {
-      "id": 248,
-      "type": "LoadLoopImagesFromDir",
-      "pos": [
-        -1644.2460238631747,
-        2401.4486100632507
-      ],
-      "size": [
-        352.2610999301546,
-        123.20886033480292
-      ],
-      "flags": {},
-      "order": 22,
-      "mode": 4,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            505
-          ]
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": []
-        },
-        {
-          "name": "FILE PATH",
-          "type": "STRING",
-          "links": []
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoadLoopImagesFromDir"
-      },
-      "widgets_values": [
-        "input",
-        false
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
-    },
-    {
       "id": 249,
       "type": "Any Switch (rgthree)",
       "pos": [
-        -1558.3095575762968,
+        -1387.5882591608467,
         2030.789683903251
       ],
       "size": [
@@ -2353,7 +1956,7 @@
         110.73308862883403
       ],
       "flags": {},
-      "order": 23,
+      "order": 20,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -2363,6 +1966,186 @@
       ],
       "color": "#232",
       "bgcolor": "#353"
+    },
+    {
+      "id": 244,
+      "type": "AILab_ColorInput",
+      "pos": [
+        -999.768685773867,
+        1976.5414512148866
+      ],
+      "size": [
+        300,
+        82
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 21,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "COLOR",
+          "type": "COLORCODE",
+          "links": [
+            496
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AILab_ColorInput"
+      },
+      "widgets_values": [
+        "black",
+        ""
+      ],
+      "color": "#2e3e57",
+      "bgcolor": "#4b5b73"
+    },
+    {
+      "id": 133,
+      "type": "Lora Loader (LoraManager)",
+      "pos": [
+        -1020.4013981456134,
+        564.9822954190189
+      ],
+      "size": [
+        537.7277295786995,
+        376.3364502109179
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 237
+        },
+        {
+          "name": "clip",
+          "shape": 7,
+          "type": "CLIP",
+          "link": 238
+        },
+        {
+          "name": "lora_stack",
+          "shape": 7,
+          "type": "LORA_STACK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            478
+          ]
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            479
+          ]
+        },
+        {
+          "name": "trigger_words",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "loaded_loras",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Lora Loader (LoraManager)",
+        "__lm_widget_ids": [
+          "__lm_autocomplete_meta_text",
+          "text",
+          "loras"
+        ]
+      },
+      "widgets_values": [
+        {
+          "version": 1,
+          "textWidgetName": "text"
+        },
+        "<lora:u5-Flux-Klein-2lv1_000007272-epoch5:0.65>",
+        [
+          {
+            "name": "u5-Flux-Klein-2lv1_000007272-epoch5",
+            "strength": "0.65",
+            "active": true,
+            "expanded": false,
+            "clipStrength": "0.65",
+            "locked": false
+          }
+        ]
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 247,
+      "type": "RMBG",
+      "pos": [
+        -1003.2848998847243,
+        2027.974218376097
+      ],
+      "size": [
+        340,
+        292
+      ],
+      "flags": {},
+      "order": 41,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 506
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            503
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": []
+        },
+        {
+          "name": "MASK_IMAGE",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RMBG"
+      },
+      "widgets_values": [
+        "RMBG-2.0",
+        1,
+        1024,
+        0,
+        0,
+        false,
+        true,
+        "Color",
+        "#222222"
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
     },
     {
       "id": 206,
@@ -2408,7 +2191,7 @@
         "Node name for S&R": "ImageScaleToTotalPixelsX"
       },
       "widgets_values": [
-        2,
+        1.8,
         8,
         "crop",
         "lanczos"
@@ -2507,6 +2290,391 @@
       "bgcolor": "#653"
     },
     {
+      "id": 250,
+      "type": "AILab_CropObject",
+      "pos": [
+        -270.1724883659975,
+        1976.557932861292
+      ],
+      "size": [
+        300,
+        78
+      ],
+      "flags": {},
+      "order": 50,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 533
+        },
+        {
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": 536
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            534,
+            535
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AILab_CropObject"
+      },
+      "widgets_values": [
+        10
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 242,
+      "type": "SAM3Segment",
+      "pos": [
+        -639.3672695117278,
+        1974.1111462709157
+      ],
+      "size": [
+        340,
+        394
+      ],
+      "flags": {},
+      "order": 46,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 503
+        },
+        {
+          "name": "background_color",
+          "shape": 7,
+          "type": "COLORCODE",
+          "widget": {
+            "name": "background_color"
+          },
+          "link": 496
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            533
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            536
+          ]
+        },
+        {
+          "name": "MASK_IMAGE",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SAM3Segment"
+      },
+      "widgets_values": [
+        "clothes",
+        "Merged",
+        0.5,
+        0,
+        0,
+        0,
+        0,
+        "Auto",
+        false,
+        false,
+        "Color",
+        "#222222"
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 248,
+      "type": "LoadLoopImagesFromDir",
+      "pos": [
+        -1464.3789073386527,
+        2424.3130681149432
+      ],
+      "size": [
+        352.2610999301546,
+        123.20886033480292
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            505
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": []
+        },
+        {
+          "name": "FILE PATH",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadLoopImagesFromDir"
+      },
+      "widgets_values": [
+        "input",
+        false
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 175,
+      "type": "LoadLoopImagesFromDir",
+      "pos": [
+        -1841.009577837469,
+        1719.248518344858
+      ],
+      "size": [
+        352.2610999301546,
+        123.20886033480292
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            353
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": []
+        },
+        {
+          "name": "FILE PATH",
+          "type": "STRING",
+          "links": [
+            435
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadLoopImagesFromDir"
+      },
+      "widgets_values": [
+        "input",
+        false
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 178,
+      "type": "PreviewImage",
+      "pos": [
+        -1462.14469300393,
+        1362.456486004262
+      ],
+      "size": [
+        375.9953368099143,
+        488.4265517457418
+      ],
+      "flags": {},
+      "order": 51,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 457
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": [],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 186,
+      "type": "AILab_Preview",
+      "pos": [
+        -1044.3285429153375,
+        1566.363136985395
+      ],
+      "size": [
+        531.6417666526767,
+        271.77511308144585
+      ],
+      "flags": {},
+      "order": 49,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 507
+        },
+        {
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": 417
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AILab_Preview"
+      },
+      "widgets_values": [],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 165,
+      "type": "ClownsharKSampler_Beta",
+      "pos": [
+        762.6565040839464,
+        1097.774815862188
+      ],
+      "size": [
+        292.31704960984644,
+        918.0952355245756
+      ],
+      "flags": {},
+      "order": 54,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "shape": 7,
+          "type": "MODEL",
+          "link": 378
+        },
+        {
+          "name": "positive",
+          "shape": 7,
+          "type": "CONDITIONING",
+          "link": 379
+        },
+        {
+          "name": "negative",
+          "shape": 7,
+          "type": "CONDITIONING",
+          "link": 380
+        },
+        {
+          "name": "latent_image",
+          "shape": 7,
+          "type": "LATENT",
+          "link": 381
+        },
+        {
+          "name": "sigmas",
+          "shape": 7,
+          "type": "SIGMAS",
+          "link": null
+        },
+        {
+          "name": "guides",
+          "shape": 7,
+          "type": "GUIDES",
+          "link": null
+        },
+        {
+          "name": "options",
+          "shape": 7,
+          "type": "OPTIONS",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "LATENT",
+          "links": [
+            326
+          ]
+        },
+        {
+          "name": "denoised",
+          "type": "LATENT",
+          "links": null
+        },
+        {
+          "name": "options",
+          "type": "OPTIONS",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ClownsharKSampler_Beta"
+      },
+      "widgets_values": [
+        0.5,
+        "multistep/res_2m",
+        "beta57",
+        8,
+        -1,
+        1,
+        1.25,
+        44,
+        "fixed",
+        "standard",
+        true
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
       "id": 180,
       "type": "NKDKleinPresampling",
       "pos": [
@@ -2514,8 +2682,8 @@
         1071.8586824868814
       ],
       "size": [
-        592.5682693649486,
-        964.6728408561269
+        211.5435546875,
+        502
       ],
       "flags": {},
       "order": 53,
@@ -2548,7 +2716,7 @@
           "name": "ref_images.ref_1",
           "shape": 7,
           "type": "IMAGE",
-          "link": 501
+          "link": 535
         },
         {
           "label": "ref_2",
@@ -2615,11 +2783,11 @@
         "Node name for S&R": "NKDKleinPresampling"
       },
       "widgets_values": [
-        "Use the clothing from Reference 2 on the person from Reference 1.\nPreserve face, anatomy, pose, body proportions, lighting, and realism.",
-        "different person, identity drift, different pose, different body shape, deformed anatomy, bad proportions, extra limbs, mutated hands, incorrect clothing fit, floating clothing, misaligned clothes, oversmoothed skin, plastic skin, cgi, cartoon, anime, unrealistic lighting",
+        "Use the clothing from Reference 1 on girl from Reference 0.\nPreserve face, anatomy, pose, body proportions, lighting, and realism.\n\n(preserve torso anatomy, preserve waist structure, preserve abdominal proportions, consistent navel position, preserve body proportions, same body geometry, anatomically consistent midriff).",
+        "different person, identity drift, different pose, different body shape, deformed anatomy, bad proportions, extra limbs, mutated hands, incorrect clothing fit, floating clothing, misaligned clothes, cgi, cartoon, anime, unrealistic lighting, shifted navel, distorted abdomen, warped torso, deformed waist, unrealistic stomach, asymmetrical torso, body deformation, stretched anatomy, malformed midriff",
         true,
         "As Reference",
-        2,
+        1.8,
         1024,
         1024,
         "Native",
@@ -2627,8 +2795,8 @@
         0.5,
         false,
         0,
-        15,
-        10,
+        12,
+        14,
         0.5,
         false,
         50
@@ -2637,73 +2805,31 @@
       "bgcolor": "#353"
     },
     {
-      "id": 242,
-      "type": "SAM3Segment",
+      "id": 259,
+      "type": "PreviewImageOrMask",
       "pos": [
-        -812.5842567018686,
-        1983.3862129283984
+        -266.355521598528,
+        2112.3361769604517
       ],
       "size": [
-        340,
-        394
+        310.4606840135842,
+        439.8218066977902
       ],
       "flags": {},
-      "order": 46,
+      "order": 52,
       "mode": 0,
       "inputs": [
         {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 503
-        },
-        {
-          "name": "background_color",
-          "shape": 7,
-          "type": "COLORCODE",
-          "widget": {
-            "name": "background_color"
-          },
-          "link": 496
+          "name": "input",
+          "type": "IMAGE,MASK",
+          "link": 534
         }
       ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            508
-          ]
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": [
-            509
-          ]
-        },
-        {
-          "name": "MASK_IMAGE",
-          "type": "IMAGE",
-          "links": null
-        }
-      ],
+      "outputs": [],
       "properties": {
-        "Node name for S&R": "SAM3Segment"
+        "Node name for S&R": "PreviewImageOrMask"
       },
-      "widgets_values": [
-        "clothes",
-        "Merged",
-        0.5,
-        0,
-        0,
-        0,
-        0,
-        "Auto",
-        false,
-        false,
-        "Color",
-        "#222222"
-      ],
+      "widgets_values": [],
       "color": "#332922",
       "bgcolor": "#593930"
     },
@@ -2744,12 +2870,12 @@
           {
             "name": "A",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_pxrcs_00019_.png&type=temp&subfolder=&rand=0.38553790036062663"
+            "url": "/api/view?filename=rgthree.compare._temp_targv_00037_.png&type=temp&subfolder=&rand=0.22861357563429963"
           },
           {
             "name": "B",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_pxrcs_00020_.png&type=temp&subfolder=&rand=0.8936472780086687"
+            "url": "/api/view?filename=rgthree.compare._temp_targv_00038_.png&type=temp&subfolder=&rand=0.028018040075051154"
           }
         ]
       ],
@@ -2757,64 +2883,11 @@
       "bgcolor": "#000"
     },
     {
-      "id": 250,
-      "type": "AILab_CropObject",
-      "pos": [
-        -813.8617211738441,
-        2432.624040824536
-      ],
-      "size": [
-        300,
-        78
-      ],
-      "flags": {},
-      "order": 50,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 508
-        },
-        {
-          "name": "mask",
-          "shape": 7,
-          "type": "MASK",
-          "link": 509
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            510
-          ]
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": [
-            511
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "AILab_CropObject"
-      },
-      "widgets_values": [
-        5
-      ],
-      "color": "#332922",
-      "bgcolor": "#593930"
-    },
-    {
       "id": 243,
       "type": "LoadImage",
       "pos": [
-        -1660.8475427320814,
-        1981.1905947855446
+        -1465.7374541730962,
+        1990.3362384526451
       ],
       "size": [
         354.0360063665639,
@@ -2842,7 +2915,7 @@
         "Node name for S&R": "LoadImage"
       },
       "widgets_values": [
-        "Snapshot 19-05-2026 15_16.png",
+        "example.png",
         "image"
       ],
       "color": "#332922",
@@ -2856,8 +2929,8 @@
         1097.3418579762135
       ],
       "size": [
-        338.97160753810556,
-        375.34810998557634
+        352.69024748072786,
+        543.0208023646684
       ],
       "flags": {},
       "order": 25,
@@ -2888,89 +2961,11 @@
         "Node name for S&R": "LoadImageReturnFilename"
       },
       "widgets_values": [
-        "rgthree.compare._temp_pxrcs_00004_.png",
+        "example.png",
         "image"
       ],
       "color": "#323",
       "bgcolor": "#535"
-    },
-    {
-      "id": 133,
-      "type": "Lora Loader (LoraManager)",
-      "pos": [
-        -1020.4013981456134,
-        564.9822954190189
-      ],
-      "size": [
-        537.7277295786995,
-        376.3364502109179
-      ],
-      "flags": {},
-      "order": 26,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 237
-        },
-        {
-          "name": "clip",
-          "shape": 7,
-          "type": "CLIP",
-          "link": 238
-        },
-        {
-          "name": "lora_stack",
-          "shape": 7,
-          "type": "LORA_STACK",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            478
-          ]
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            479
-          ]
-        },
-        {
-          "name": "trigger_words",
-          "type": "STRING",
-          "links": null
-        },
-        {
-          "name": "loaded_loras",
-          "type": "STRING",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "Lora Loader (LoraManager)",
-        "__lm_widget_ids": [
-          "__lm_autocomplete_meta_text",
-          "text",
-          "loras"
-        ]
-      },
-      "widgets_values": [
-        {
-          "version": 1,
-          "textWidgetName": "text"
-        },
-        "",
-        []
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
     }
   ],
   "links": [
@@ -3399,14 +3394,6 @@
       "COLORCODE"
     ],
     [
-      501,
-      246,
-      0,
-      180,
-      4,
-      "IMAGE"
-    ],
-    [
       503,
       247,
       0,
@@ -3447,7 +3434,7 @@
       "IMAGE"
     ],
     [
-      508,
+      533,
       242,
       0,
       250,
@@ -3455,26 +3442,26 @@
       "IMAGE"
     ],
     [
-      509,
-      242,
-      1,
-      250,
-      1,
-      "MASK"
-    ],
-    [
-      510,
+      534,
       250,
       0,
-      246,
+      259,
       0,
       "IMAGE"
     ],
     [
-      511,
+      535,
       250,
+      0,
+      180,
+      4,
+      "IMAGE"
+    ],
+    [
+      536,
+      242,
       1,
-      246,
+      250,
       1,
       "MASK"
     ]
@@ -3510,8 +3497,8 @@
       "bounding": [
         -1852.9632015325537,
         1003.0112146697475,
-        773.9355250586862,
-        761.244039196101
+        783.0812850204345,
+        864.8962955483075
       ],
       "color": "#3f789e",
       "flags": {}
@@ -3546,15 +3533,15 @@
       "bounding": [
         736.7619331680646,
         1011.744776243109,
-        335.1210409938671,
-        760.650846518575
+        351.35181953143365,
+        1032.5152261114963
       ],
       "color": "#3f789e",
       "flags": {}
     },
     {
       "id": 9,
-      "title": "Masking Reference 1",
+      "title": "Masking Reference 0",
       "bounding": [
         -1063.4289960114056,
         997.7791879814545,
@@ -3592,8 +3579,8 @@
       "id": 12,
       "title": "Target",
       "bounding": [
-        1779.469681352241,
-        1370.805577114733,
+        1781.989142417558,
+        1364.5068283401615,
         350.9043668375673,
         309.58345828590996
       ],
@@ -3602,24 +3589,24 @@
     },
     {
       "id": 13,
-      "title": "Image form mask Reference 2",
+      "title": "Image form mask Reference 1",
       "bounding": [
-        -1212.2262495153432,
+        -1035.4076808798554,
         1890.9559336221243,
-        1287.2901259900486,
-        624.2377628971242
+        1096.9674556715481,
+        677.7098543709542
       ],
       "color": "#3f789e",
       "flags": {}
     },
     {
       "id": 14,
-      "title": "Image for Reference 2",
+      "title": "Image for Reference 1",
       "bounding": [
-        -1682.10227009606,
+        -1511.38097168061,
         1895.6804181148007,
-        449.24267207348225,
-        632.225902115111
+        459.9127059797472,
+        670.3333322012677
       ],
       "color": "#3f789e",
       "flags": {}
@@ -3628,10 +3615,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.7471768377877875,
+      "scale": 0.2661769974771378,
       "offset": [
-        1416.9412706861958,
-        -472.0389116809159
+        3051.7434809632778,
+        134.08845452383855
       ]
     },
     "frontendVersion": "1.43.18",
