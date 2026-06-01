@@ -113,6 +113,7 @@
 - [Flux2Klein-Conditioning-Toolkit](https://github.com/xmarre/ComfyUI-Flux2Klein-Conditioning-Toolkit)
 - [NKD-Klein-Tools](https://github.com/Nekodificador/ComfyUI-NKD-Klein-Tools.git)
 - [KleinRefGrid](https://github.com/xb1n0ry/ComfyUI-KleinRefGrid)
+- [Flux2KontextConditioner](https://github.com/KursatAs/ComfyUI-Flux2KontextConditioner.git)
 
 #### Z-image
 
