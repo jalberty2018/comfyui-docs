@@ -1,6 +1,6 @@
 # run-comfyui-image
 
-## 01052026
+## 01062026
 
 - ComfyUI 0.23.0
 - [Flux2KontextConditioner](https://github.com/KursatAs/ComfyUI-Flux2KontextConditioner.git)
