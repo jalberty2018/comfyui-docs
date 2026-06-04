@@ -61,6 +61,7 @@
 - [DiversityBoost](https://github.com/facok/ComfyUI-DiversityBoost)
 - [S2Guidance](https://github.com/orpheus-gaze/ComfyUI-S2Guidance.git)
 - [ReferenceLatentPlus](https://github.com/shootthesound/comfyui-ReferenceLatentPlus)
+- [Untwisting-RoPE](https://github.com/BigStationW/ComfyUi-Untwisting-RoPE)
 
 ### Samplers
 

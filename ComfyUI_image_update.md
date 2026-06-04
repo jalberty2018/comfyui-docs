@@ -1,5 +1,10 @@
 # run-comfyui-image
 
+## 04062026
+
+- ComfyUI 0.24.0
+- [Untwisting-RoPE](https://github.com/BigStationW/ComfyUi-Untwisting-RoPE)
+
 ## 01062026
 
 - ComfyUI 0.23.0

@@ -1,5 +1,9 @@
 # run-comfyui-ltx
 
+## 04062026
+
+- ComfyUI 0.24.0
+
 ## 22052026
 
 - ComfyUI 0.22.0
