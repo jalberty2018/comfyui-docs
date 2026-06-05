@@ -215,6 +215,18 @@ hf download ricecake/wan21NSFWClipVisionH_v10 wan21NSFWClipVisionH_v10.safetenso
 
 Refresh ComfyUI pressing key **r**.
 
+## 🧩 Deleting Models and LoRAs
+
+### Web Console or code-server
+
+- Type "ncdu" in the console
+- Follow the instructions.
+
+### Lora Manager
+
+- Select lora 
+- Select delete.
+
 ## 🧩 ComfyUI-manager
 
 - Topbar or menu
@@ -232,10 +244,10 @@ Refresh ComfyUI pressing key **r**.
 - No information loss as ComfyUI is copied to the /workspace volume.
 - Use this option to pause your pod.
 
-### ⚠️ Be aware that it is possible that no GPU is available when you restart the pod.
+### ⚠️ Be aware it is possible that no GPU is available when you restart the pod.
 
 - Before stopping the pod copy your creations to cloud/local.
-- You can still access to pod  (0.5 vCPU and little memory).
+- You can still access the pod from with ssh or web console (0.5 vCPU and very little memory).
 
 ## 🔄 Uploading & Downloading Files
 
@@ -255,15 +267,25 @@ Refresh ComfyUI pressing key **r**.
 
 - [Docs](https://docs.runpod.io/runpodctl/overview)
 
+- You need to install a client on your local computer.
+- You do **not** need an api key to upload/download to/from your pod.
+
 #### Speed
 
 - **Fine** for **downloading** files from your pod.
 - **Problematic** for **uploading large files** to your pod with slow connections (timeouts).
 
-#### Installation
+#### Install windows
 
-- You need to install a client on your local computer.
-- You do **not** need an api key to upload/download to/from your pod.
+```powershell
+Invoke-WebRequest "https://github.com/runpod/runpodctl/releases/latest/download/runpodctl-windows-amd64.exe" -OutFile "runpodctl.exe"
+```
+
+#### install linux
+
+```bash
+wget --quiet --show-progress https://github.com/runpod/runpodctl/releases/latest/download/runpodctl-linux-amd64 -O runpodctl && chmod +x runpodctl && sudo cp runpodctl /usr/bin/runpodctl
+```
 
 ## 🔧 Advanced Features
 
@@ -309,18 +331,6 @@ curl --request DELETE \
 - [Docs](https://docs.runpod.io/runpodctl/overview).
 - Install client on local computer.
 - Use PowerShell or Bash.
-
-#### Install windows
-
-```powershell
-Invoke-WebRequest "https://github.com/runpod/runpodctl/releases/latest/download/runpodctl-windows-amd64.exe" -OutFile "runpodctl.exe"
-```
-
-#### install linux
-
-```bash
-wget --quiet --show-progress https://github.com/runpod/runpodctl/releases/latest/download/runpodctl-linux-amd64 -O runpodctl && chmod +x runpodctl && sudo cp runpodctl /usr/bin/runpodctl
-```
 
 #### Usage
 
