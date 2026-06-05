@@ -235,6 +235,11 @@ hf download ricecake/wan21NSFWClipVisionH_v10 wan21NSFWClipVisionH_v10.safetenso
 
 Refresh ComfyUI pressing key **r**.
 
+### Manual provisioning
+
+- Information is available in the pod's documentation.
+- Open web terminal or code-server.
+
 ## 🧩 Deleting Models and LoRAs
 
 ### Web Console or code-server
