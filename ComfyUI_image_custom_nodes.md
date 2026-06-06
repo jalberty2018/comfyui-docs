@@ -49,20 +49,6 @@
 - [EsesImageEffectLevels](https://github.com/quasiblob/ComfyUI-EsesImageEffectLevels)
 - [VRgamedevgirl](https://github.com/vrgamegirl19/comfyui-vrgamedevgirl)
 
-### Noise/Conditioning/Latent
-
-- [Detail Deamon](https://github.com/Jonseed/ComfyUI-Detail-Daemon)
-- [SeedVarianceEnhancer ZIT](https://github.com/ChangeTheConstants/SeedVarianceEnhancer)
-- [ConditioningNoiseInjection](https://github.com/BigStationW/ComfyUi-ConditioningNoiseInjection)
-- [ConditioningTimestepSwitch](https://github.com/BigStationW/ComfyUi-ConditioningTimestepSwitch)
-- [RBG-SmartSeedVariance ZIT](https://github.com/RamonGuthrie/ComfyUI-RBG-SmartSeedVariance)
-- [LatentUtils](https://github.com/lrzjason/Comfyui-LatentUtils)
-- [LG_SamplingUtils](https://github.com/LAOGOU-666/ComfyUI-LG_SamplingUtils)
-- [DiversityBoost](https://github.com/facok/ComfyUI-DiversityBoost)
-- [S2Guidance](https://github.com/orpheus-gaze/ComfyUI-S2Guidance.git)
-- [ReferenceLatentPlus](https://github.com/shootthesound/comfyui-ReferenceLatentPlus)
-- [Untwisting-RoPE](https://github.com/BigStationW/ComfyUi-Untwisting-RoPE)
-
 ### Samplers
 
 - [RES4LYF](https://github.com/ClownsharkBatwing/RES4LYF)
@@ -82,21 +68,30 @@
 
 - [Segment anything 2](https://github.com/kijai/ComfyUI-segment-anything-2)
 - [RMBG](https://github.com/1038lab/ComfyUI-RMBG)
-- [SecNodes](https://github.com/9nate-drake/Comfyui-SecNodes)
 - [AutoCropFaces](https://github.com/liusida/ComfyUI-AutoCropFaces)
 - [SAM3](https://github.com/PozzettiAndrea/ComfyUI-SAM3)
 
-### Tagging/Caption/VLM
+### Noise/diversity boost
 
-- [Joytag](https://github.com/StartHua/Comfyui_joytag)
-- [JoyCaption](https://github.com/1038lab/ComfyUI-JoyCaption.git)
-- [QwenVL-mod](https://github.com/huchukato/ComfyUI-QwenVL-Mod)
+- [Detail Deamon](https://github.com/Jonseed/ComfyUI-Detail-Daemon)
+- [LatentUtils](https://github.com/lrzjason/Comfyui-LatentUtils)
+- [LG_SamplingUtils](https://github.com/LAOGOU-666/ComfyUI-LG_SamplingUtils)
+- [DiversityBoost](https://github.com/facok/ComfyUI-DiversityBoost)
+- [S2Guidance](https://github.com/orpheus-gaze/ComfyUI-S2Guidance.git)
 
-### i2i
+### Conditioning
+
+- [ConditioningNoiseInjection](https://github.com/BigStationW/ComfyUi-ConditioningNoiseInjection)
+- [ConditioningTimestepSwitch](https://github.com/BigStationW/ComfyUi-ConditioningTimestepSwitch)
+- [Untwisting-RoPE](https://github.com/BigStationW/ComfyUi-Untwisting-RoPE)
+
+### Reference image
 
 - [LanPaint](https://github.com/scraed/LanPaint)
 - [ComfyUI-ReferenceChain](https://github.com/remingtonspaz/ComfyUI-ReferenceChain)
 - [Inpaint-CropAndStitch](https://github.com/lquesada/ComfyUI-Inpaint-CropAndStitch)
+- [TextEncodeEditAdvanced](https://github.com/BigStationW/ComfyUi-TextEncodeEditAdvanced)
+- [ReferenceLatentPlus](https://github.com/shootthesound/comfyui-ReferenceLatentPlus)
 
 ### Model Specific
 
@@ -123,6 +118,8 @@
 - [comfyui-meancache-z](https://github.com/facok/comfyui-meancache-z)
 - [ComfyUI-CapitanZiT-Scheduler](https://github.com/capitan01R/ComfyUI-CapitanZiT-Scheduler)
 - [ZImageTurboHQNodes](https://github.com/marduk191/ComfyUI-ZImageTurboHQNodes)
+- [SeedVarianceEnhancer ZIT](https://github.com/ChangeTheConstants/SeedVarianceEnhancer)
+- [RBG-SmartSeedVariance ZIT](https://github.com/RamonGuthrie/ComfyUI-RBG-SmartSeedVariance)
 
 ## 🧩 All possible Custom Nodes
 

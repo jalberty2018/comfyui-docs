@@ -1,9 +1,13 @@
 # run-comfyui-image
 
-## 04062026
+## 06062026
 
 - ComfyUI 0.24.0
 - [Untwisting-RoPE](https://github.com/BigStationW/ComfyUi-Untwisting-RoPE)
+- [TextEncodeEditAdvanced](https://github.com/BigStationW/ComfyUi-TextEncodeEditAdvanced)
+- Removed captioners as modern models do work better with simple captions.
+- Removed vlm as prompt enhance works better with a seperate pod (textgen for example).
+- Removed Comfyui-SecNodes as SAM3 in more powerful.
 
 ## 01062026
 
