@@ -12,15 +12,15 @@
 - [Resolution master](https://github.com/Azornes/Comfyui-Resolution-Master.git)
 - [PG Nodes](https://github.com/GizmoR13/PG-Nodes)
 - [ComfyUi-Scale-Image-to-Total-Pixels-Advanced](https://github.com/BigStationW/ComfyUi-Scale-Image-to-Total-Pixels-Advanced)
-- [Prompt relay encode]( https://github.com/kijai/ComfyUI-PromptRelay.git)
+- [Prompt Relay Encode](https://github.com/kijai/ComfyUI-PromptRelay.git)
 - [Easy-Use](https://github.com/yolain/ComfyUI-Easy-Use.git)
 - [10S](https://github.com/TenStrip/10S-Comfy-nodes)
 - [WhatDreamsCost](https://github.com/WhatDreamsCost/WhatDreamsCost-ComfyUI)
 
 ### Downloaders/Linkers
 
-- [Lora-Manager](https://github.com/willmiao/ComfyUI-Lora-Manager)
-- [Model linker](https://github.com/rethink-studios/comfyui-model-linker-desktop)
+- [LoRA Manager](https://github.com/willmiao/ComfyUI-Lora-Manager)
+- [Model Linker](https://github.com/rethink-studios/comfyui-model-linker-desktop)
 
 ### Video/Upscale
 
@@ -28,7 +28,7 @@
 - [Frame Interpolation](https://github.com/Fannovel16/ComfyUI-Frame-Interpolation)
 - [VRgamedevgirl](https://github.com/vrgamegirl19/comfyui-vrgamedevgirl)
 
-### Pose estimations/Controlnet
+### Pose Estimation/ControlNet
 
 - [controlnet_aux](https://github.com/Fannovel16/comfyui_controlnet_aux)
 - [BodyRatioMapper](https://github.com/wuwukaka/ComfyUI-BodyRatioMapper)
@@ -60,7 +60,7 @@
 ### Audio
 
 - [MelBandRoFormer](https://github.com/kijai/ComfyUI-MelBandRoFormer.git)
-- [afloy audio tools](https://github.com/afloy011-spec/afloy_audio_tools)
+- [afloy Audio Tools](https://github.com/afloy011-spec/afloy_audio_tools)
 - [FishAudioS2](https://github.com/Saganaki22/ComfyUI-FishAudioS2)
 
 ## 🧩 All possible Custom Nodes

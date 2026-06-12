@@ -1,54 +1,54 @@
-# 📚 image resources
+# 📚 Image Resources
 
-## Z-image Turbo
+## Z-Image Turbo
 
 - [Website](https://tongyi-mai.github.io/Z-Image-homepage/)
 - [Project](https://z-image-turbo.ai)
-- [Github](https://github.com/Tongyi-MAI/Z-Image)
-- [Huggingface](https://huggingface.co/Tongyi-MAI/Z-Image-Turbo/blob/main/README.md)
+- [GitHub](https://github.com/Tongyi-MAI/Z-Image)
+- [Hugging Face](https://huggingface.co/Tongyi-MAI/Z-Image-Turbo/blob/main/README.md)
 - [Examples](https://comfyanonymous.github.io/ComfyUI_examples/z_image/)
-- [Fun controlnet](https://vantagewithai.com/z-image-turbo-fun-controlnet-complete-guide-to-pose-guided-ai-image-generation-using-comfyui/)
+- [Fun ControlNet](https://vantagewithai.com/z-image-turbo-fun-controlnet-complete-guide-to-pose-guided-ai-image-generation-using-comfyui/)
 
 ## Z-Image
 
 - [Blog ComfyUI](https://blog.comfy.org/p/z-image-day-0-support-in-comfyui)
 
-## Flux.2 dev
+## FLUX.2 Dev
 
 - [Website](https://bfl.ai)
-- [Github](https://github.com/black-forest-labs/flux2)
-- [HF](https://huggingface.co/black-forest-labs/FLUX.2-dev)
+- [GitHub](https://github.com/black-forest-labs/flux2)
+- [Hugging Face](https://huggingface.co/black-forest-labs/FLUX.2-dev)
 - [Examples](https://comfyanonymous.github.io/ComfyUI_examples/flux2/)
 
 ## Hunyuan Image 2.1
 
-- [Github](https://github.com/Tencent-Hunyuan/HunyuanImage-2.1)
-- [HF](https://huggingface.co/tencent/HunyuanImage-2.1)
+- [GitHub](https://github.com/Tencent-Hunyuan/HunyuanImage-2.1)
+- [Hugging Face](https://huggingface.co/tencent/HunyuanImage-2.1)
 - [Examples](https://comfyanonymous.github.io/ComfyUI_examples/hunyuan_image/)
 
-## Flux.1 dev SRPO
+## FLUX.1 Dev SRPO
 
 - [Website](https://tencent.github.io/srpo-project-page/)
 
-## Flux.1 dev Kontext
+## FLUX.1 Dev Kontext
 
 - [Tutorial](https://docs.comfy.org/tutorials/flux/flux-1-kontext-dev)
 - [Examples](https://comfyanonymous.github.io/ComfyUI_examples/flux/#flux-kontext-image-editing-model)
 
-## Flux Klein
+## FLUX Klein
 
 - [ComfyUI](https://docs.comfy.org/tutorials/flux/flux-2-klein)
 
-## Bytedance USO 
+## ByteDance USO
 
 - [Website](https://bytedance.github.io/USO/)
-- [Github](https://github.com/bytedance/USO)
+- [GitHub](https://github.com/bytedance/USO)
 - [Tutorial](https://docs.comfy.org/tutorials/flux/flux-1-uso)
-- [HF](https://huggingface.co/bytedance-research/USO)
+- [Hugging Face](https://huggingface.co/bytedance-research/USO)
 
 ## Qwen-Image-Edit
 
-- [HF](https://huggingface.co/Qwen/Qwen-Image-Edit-2511)
+- [Hugging Face](https://huggingface.co/Qwen/Qwen-Image-Edit-2511)
 
 ## Qwen-Image
 

@@ -1,12 +1,10 @@
 # 🚀 Template Deployment
 
-## 📦 Template Deployment
-
 - run-comfyui-wan is tested on RunPod using an **L40S**, **RTX 6000 Ada** GPU.
 
 ### ⚠️ Important Notice
 
-- Don't use pods with **no region id** ther are unreliable. 
+- Don't use pods with **no region id**; they are unreliable.
 
 ### 🚀 RunPod Templates
 
@@ -21,6 +19,6 @@
 
 - [Specific for these templates](ComfyUI_WAN_tutorial.md)
 
-### 💻 Hardware Requirements for running templates on runpod
+### 💻 Hardware requirements for running templates on RunPod
 
 - [GPU selection](ComfyUI_WAN_hardware.md)

@@ -1,4 +1,4 @@
-# image
+# Image
 
 ## 🧩 Pre-Installed Custom Nodes
 
@@ -13,13 +13,13 @@
 
 ### Downloaders/Linkers
 
-- [Lora-Manager](https://github.com/willmiao/ComfyUI-Lora-Manager)
-- [Model linker](https://github.com/rethink-studios/comfyui-model-linker-desktop)
+- [LoRA Manager](https://github.com/willmiao/ComfyUI-Lora-Manager)
+- [Model Linker](https://github.com/rethink-studios/comfyui-model-linker-desktop)
 
 ### Utilities
 
 - [GGUF](https://github.com/city96/ComfyUI-GGUF)
-- [Lora Optimizer](https://github.com/ethanfel/ComfyUI-LoRA-Optimizer)
+- [LoRA Optimizer](https://github.com/ethanfel/ComfyUI-LoRA-Optimizer)
 
 ### Resolution choosers
 
@@ -54,11 +54,11 @@
 - [RES4LYF](https://github.com/ClownsharkBatwing/RES4LYF)
 - [EulerDiscreteScheduler](https://github.com/erosDiffusion/ComfyUI-EulerDiscreteScheduler)
 
-### Controlnet
+### ControlNet
 
 - [controlnet_aux](https://github.com/Fannovel16/comfyui_controlnet_aux)
 
-### Automatisation
+### Automation
 
 - [Power Flow](https://github.com/x3bits/ComfyUI-Power-Flow/tree/main)
 - [Comfyui-LoopLoader](https://github.com/alessandrozonta/Comfyui-LoopLoader)
@@ -73,7 +73,7 @@
 
 ### Noise/diversity boost
 
-- [Detail Deamon](https://github.com/Jonseed/ComfyUI-Detail-Daemon)
+- [Detail Daemon](https://github.com/Jonseed/ComfyUI-Detail-Daemon)
 - [LatentUtils](https://github.com/lrzjason/Comfyui-LatentUtils)
 - [LG_SamplingUtils](https://github.com/LAOGOU-666/ComfyUI-LG_SamplingUtils)
 - [DiversityBoost](https://github.com/facok/ComfyUI-DiversityBoost)
@@ -95,7 +95,7 @@
 
 ### Model Specific
 
-#### QWEN
+#### Qwen
 
 - [Comfyui-QwenEditUtils](https://github.com/lrzjason/Comfyui-QwenEditUtils)
 - [ComfyUI-PainterQwenImageEdit](https://github.com/princepainter/ComfyUI-PainterQwenImageEdit)
@@ -111,7 +111,7 @@
 - [KleinRefGrid](https://github.com/xb1n0ry/ComfyUI-KleinRefGrid)
 - [Flux2KontextConditioner](https://github.com/KursatAs/ComfyUI-Flux2KontextConditioner.git)
 
-#### Z-image
+#### Z-Image
 
 - [ZImagePowerNodes](https://github.com/martin-rizzo/ComfyUI-ZImagePowerNodes.git)
 - [Arthemy_Live-Tuner-ZIT-ComfyUI](https://github.com/aledelpho/Arthemy_Live-Tuner-ZIT-ComfyUI)

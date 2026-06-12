@@ -1,4 +1,4 @@
-# 📚 WAN 2.x resources
+# 📚 WAN 2.x Resources
 
 ## 📚 Websites and tutorials
 
@@ -27,13 +27,13 @@
 
 ## 📦 Models
 
-- [Wan-Video Github](https://github.com/Wan-Video)
-- [Wan-Video 2.2 Github](https://github.com/Wan-Video/Wan2.2)
+- [Wan-Video GitHub](https://github.com/Wan-Video)
+- [Wan-Video 2.2 GitHub](https://github.com/Wan-Video/Wan2.2)
 - [Kijai](https://huggingface.co/Kijai/WanVideo_comfy)
-- [Wan-AI Huggingface](https://huggingface.co/Wan-AI)  
-- [WAN-VACE Github](https://github.com/ali-vilab/VACE)
-- [FusionX Huggingface](https://huggingface.co/vrgamedevgirl84/Wan14BT2VFusioniX)
-- [MoviiGen Huggingface](https://huggingface.co/ZuluVision/MoviiGen1.1)
+- [Wan-AI Hugging Face](https://huggingface.co/Wan-AI)
+- [WAN-VACE GitHub](https://github.com/ali-vilab/VACE)
+- [FusionX Hugging Face](https://huggingface.co/vrgamedevgirl84/Wan14BT2VFusioniX)
+- [MoviiGen Hugging Face](https://huggingface.co/ZuluVision/MoviiGen1.1)
 - [SCAIL WAN](https://github.com/zai-org/SCAIL/tree/wan)
 - [SCAIL-Pose](https://github.com/zai-org/SCAIL-Pose)
 - [Stable Video Infinity](https://stable-video-infinity.github.io/homepage/)

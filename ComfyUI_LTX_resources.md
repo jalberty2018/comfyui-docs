@@ -1,4 +1,4 @@
-# 📚 LTX 2.x resources
+# 📚 LTX 2.x Resources
 
 ## Awesome list
 
@@ -6,7 +6,7 @@
 
 ## Model
 
-- [LTX Github](https://github.com/Lightricks)
+- [LTX GitHub](https://github.com/Lightricks)
 - [Website](https://ltx.io/model)
 - [Kijai LTX 2](https://huggingface.co/Kijai/LTXV2_comfy)
 - [Kijai LTX 2.3](https://huggingface.co/Kijai/LTX2.3_comfy)
@@ -19,15 +19,15 @@
 - [Prompt Relay](https://gordonchen19.github.io/Prompt-Relay/)
 - [Pipelines](https://github.com/Lightricks/LTX-2/tree/main/packages/ltx-pipelines#10-lipdubpipeline)
 
-## Loras
+## LoRAs
 
-- [Id-lora](https://id-lora.github.io)
+- [ID LoRA](https://id-lora.github.io)
 - [Union-Control](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Union-Control)
 - [Motion-Track-Control](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Motion-Track-Control)
 - [Cameraman](https://huggingface.co/Cseti/LTX2.3-22B_IC-LoRA-Cameraman_v1)
-- [Transition Lora](https://huggingface.co/joyfox/LTX-2.3-Transition-LORA)
-- [VBVR Lora](https://huggingface.co/LiconStudio/Ltx2.3-VBVR-lora-I2V)
-- [Libdub](https://justdubit.github.io)
+- [Transition LoRA](https://huggingface.co/joyfox/LTX-2.3-Transition-LORA)
+- [VBVR LoRA](https://huggingface.co/LiconStudio/Ltx2.3-VBVR-lora-I2V)
+- [LipDub](https://justdubit.github.io)
 
 ## Preview
 

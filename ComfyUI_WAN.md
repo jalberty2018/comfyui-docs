@@ -2,18 +2,18 @@
 
 # WAN 2.x inference with ComfyUI
 
-![Select number frames, size , prompt and offload](images/ai-generated-WAN.jpg)
+![Select number of frames, size, prompt and offload](images/ai-generated-WAN.jpg)
 
-A streamlined and automated environment for running **ComfyUI** with **WAN 2.x video models**, optimized for use on RunPod
+A streamlined and automated environment for running **ComfyUI** with **WAN 2.x video models**, optimized for use on RunPod.
 
 ## 🔧 Features
 
 - Automatic model and LoRA provisioning via environment variables.
 - Included workflows for **video generation** and **enhancement** using pre-installed custom nodes.
 - Compatible with high-performance NVIDIA GPUs (CUDA 12.8).
-- Compiled attentions and GPU accelerations.
+- Compiled attention and GPU acceleration.
 - Latent preview enabled for samplers.
-- Lora manager
+- LoRA Manager.
 
 ## 🔧 Built-in **authentication**
   
@@ -22,15 +22,15 @@ A streamlined and automated environment for running **ComfyUI** with **WAN 2.x v
 - Hugging Face API
 - CivitAI API
 
-## 📦 Deployment on runpod
+## 📦 Deployment on RunPod
 
 - [👉 Templates](ComfyUI_WAN_deployment.md)
 
 ### Pod running on L40S
 
-![Pod running on L40S native comfyUI](images/runpod.jpg)
+![Pod running on L40S native ComfyUI](images/runpod.jpg)
 
 ### Pod running on A40
 
-![Pod running on A40 comfyUI wanwrapper](images/runpod_A40_wrapper.jpg)
+![Pod running on A40 ComfyUI WanVideoWrapper](images/runpod_A40_wrapper.jpg)
 

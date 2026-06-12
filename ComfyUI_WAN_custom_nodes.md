@@ -16,7 +16,7 @@
 
 ### Downloading
 
-- [Lora-Manager](https://github.com/willmiao/ComfyUI-Lora-Manager)
+- [LoRA Manager](https://github.com/willmiao/ComfyUI-Lora-Manager)
 
 ### Video/Upscale
 
@@ -27,7 +27,7 @@
 - [VRgamedevgirl](https://github.com/vrgamegirl19/comfyui-vrgamedevgirl)
 - [PainterVideoUpscale](https://github.com/princepainter/ComfyUI-PainterVideoUpscale)
 
-### Pose estimations/Controlnet
+### Pose Estimation/ControlNet
 
 - [controlnet_aux](https://github.com/Fannovel16/comfyui_controlnet_aux)
 - [SCAIL-Pose](https://github.com/kijai/ComfyUI-SCAIL-Pose)
@@ -55,7 +55,8 @@
 - [PainterSampler](https://github.com/princepainter/Comfyui-PainterSampler)
 - [was_affine](https://github.com/WASasquatch/was_affine)
 
-### Loras
+### LoRAs
+
 - [Optimizer](https://github.com/ethanfel/ComfyUI-LoRA-Optimizer)
 
 ### Noise/Conditioning
@@ -88,16 +89,16 @@
 - [Iamccs-nodes](https://github.com/IAMCCS/IAMCCS-nodes.git)
 - [PainterMultiF2V](https://github.com/princepainter/ComfyUI-PainterMultiF2V)
 - [VideoChunkTools](https://github.com/gregtee2/ComfyUI_VideoChunkTools)
-- [Prompt relay encode]( https://github.com/kijai/ComfyUI-PromptRelay)
+- [Prompt Relay Encode](https://github.com/kijai/ComfyUI-PromptRelay)
 
 #### Animate
 
 - [WanAnimate Enhancer](https://github.com/wallen0322/ComfyUI-WanAnimate-Enhancer)
 - [WanAnimatePreprocess](https://github.com/kijai/ComfyUI-WanAnimatePreprocess)
 
-#### Lucy edit
+#### Lucy Edit
 
-- [Lucy edit](https://github.com/DecartAI/Lucy-Edit-ComfyUI)
+- [Lucy Edit](https://github.com/DecartAI/Lucy-Edit-ComfyUI)
 
 
 ## 🧩 All possible Custom Nodes

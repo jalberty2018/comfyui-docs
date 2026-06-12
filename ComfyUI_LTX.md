@@ -2,33 +2,33 @@
 
 # LTX 2.3 inference with ComfyUI
 
-A streamlined and automated environment for running **ComfyUI** with **LTX-2.3 video models**, optimized for use on RunPod
+A streamlined and automated environment for running **ComfyUI** with **LTX-2.3 video models**, optimized for use on RunPod.
 
 ## Example included workflows
 
 ### i2v
 
-![Select number frames, size , prompt and offload](images/ai-generated-LTX.jpg)
+![Select number of frames, size, prompt and offload](images/ai-generated-LTX.jpg)
 
 ### iv2v pose transfer DWPose
 
-![Select number frames, size , prompt and offload](images/ai-generated-LTX-vi2v.jpg)
+![Select number of frames, size, prompt and offload](images/ai-generated-LTX-vi2v.jpg)
 
 ### iv2v pose transfer SDPose (Body Ratio Mapper)
 
-![Select number frames, size , prompt and offload](images/ai-generated-LTX-vi2v-sdpose.jpg)
+![Select number of frames, size, prompt and offload](images/ai-generated-LTX-vi2v-sdpose.jpg)
 
 ## 🔧 Features
 
 - Automatic model and LoRA provisioning via environment variables.
-- [Kajai models no checkpoint](https://huggingface.co/Kijai/LTX2.3_comfy) 
+- [Kijai models without checkpoints](https://huggingface.co/Kijai/LTX2.3_comfy).
 - Included workflows for **video generation** and **enhancement** using pre-installed custom nodes.
 - Compatible with high-performance NVIDIA GPUs (CUDA 12.8).
-- Compiled attentions and GPU accelerations.
-- Automatic selecting bf16 or fp8 models/workflows.
+- Compiled attention and GPU acceleration.
+- Automatic selection of bf16 or fp8 models/workflows.
 - Latent preview enabled for both samplers.
-- Included worflows based on [RuneXX](https://huggingface.co/RuneXX/LTX-2.3-Workflows)
-- Lora manager
+- Included workflows based on [RuneXX](https://huggingface.co/RuneXX/LTX-2.3-Workflows).
+- LoRA Manager.
 
 ## 🔧 Built-in **authentication**
   
@@ -37,7 +37,7 @@ A streamlined and automated environment for running **ComfyUI** with **LTX-2.3 v
 - Hugging Face API
 - CivitAI API
 
-## 📦 Deployment on runpod
+## 📦 Deployment on RunPod
 
 - [👉 Templates](ComfyUI_LTX_deployment.md)
 
