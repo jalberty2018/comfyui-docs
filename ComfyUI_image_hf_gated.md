@@ -1,13 +1,13 @@
-# Flux.2 Klein 9B model download
+# FLUX.2 Klein 9B model download
 
 ## Accepting licenses
 
-- Difference between models and license [flux-2-klein-4b-vs-9b-comparison](https://apatero.com/blog/flux-2-klein-4b-vs-9b-comparison)
+- Difference between models and licenses: [FLUX.2 Klein 4B vs 9B comparison](https://apatero.com/blog/flux-2-klein-4b-vs-9b-comparison)
 
-- Login of create a account on huggingface (free).
-- Accept the [license distilled](https://huggingface.co/black-forest-labs/FLUX.2-klein-9B) on huggingface
-- Accept the [license base](https://huggingface.co/black-forest-labs/FLUX.2-klein-base-9B) on huggingface
-- Create or use a huggingface token (free).
+- Log in or create a Hugging Face account (free).
+- Accept the [distilled model license](https://huggingface.co/black-forest-labs/FLUX.2-klein-9B) on Hugging Face.
+- Accept the [base model license](https://huggingface.co/black-forest-labs/FLUX.2-klein-base-9B) on Hugging Face.
+- Create or use a Hugging Face token (free).
 - Choose between the following options.
 
 ## Option 1: Before starting the template
@@ -15,12 +15,12 @@
 - Click **Edit Template** and expand the Environment Variables section.
 - Add your token/secret to **HF_TOKEN**.
 - **Save the template**.
-- Click **Deploy On-Demand**
+- Click **Deploy On-Demand**.
 - The template will download the 4B and 9B models.
 
 ### Speeding up model downloads
 
-- If you don't need the 4B model delete the following keys in the template before starting the pod.
+- If you don't need the 4B model, delete the following keys in the template before starting the pod.
 
 ```txt
 HF_MODEL_DIFFUSION_MODELS3
@@ -33,10 +33,10 @@ HF_MODEL_TEXT_ENCODERS_FILENAME2
 
 ## Option 2: When the pod is running
 
-### Set your hugginface token
+### Set your Hugging Face token
 
 - Open terminal from the console or code-server (see [tutorial](ComfyUI_image_tutorial.md))
-- Fill in your huggingface token (HF_TOKEN)
+- Fill in your Hugging Face token (`HF_TOKEN`).
 
 ```bash
 export HF_TOKEN=Your-hf-token-here
@@ -51,7 +51,7 @@ hf auth login
 - Press enter.
 - Copy and paste one or both model downloads in the terminal.
 
-### Distill model
+### Distilled model
 
 ```bash
 hf download black-forest-labs/FLUX.2-klein-9B flux-2-klein-9b.safetensors \
@@ -67,6 +67,6 @@ hf download black-forest-labs/FLUX.2-klein-base-9B flux-2-klein-base-9b.safetens
 --local-dir /workspace/ComfyUI/models/diffusion_models/
 ```
 
-- press enter.
-- Wait until downloads finishes.
+- Press enter.
+- Wait until the downloads finish.
 

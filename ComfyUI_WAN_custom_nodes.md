@@ -4,9 +4,9 @@
 
 ### Interface
 
-- [rgthree](https://github.com/rgthree/rgthree-comfy)  
-- [Login](https://github.com/liusida/ComfyUI-Login)  
-- [KJNodes](https://github.com/kijai/ComfyUI-KJNodes)  
+- [rgthree](https://github.com/rgthree/rgthree-comfy)
+- [Login](https://github.com/liusida/ComfyUI-Login)
+- [KJNodes](https://github.com/kijai/ComfyUI-KJNodes)
 - [GGUF](https://github.com/city96/ComfyUI-GGUF)
 - [ComfyMath](https://github.com/evanspearman/ComfyMath)
 - [Resolution master](https://github.com/Azornes/Comfyui-Resolution-Master)
@@ -46,7 +46,7 @@
 - [SecNodes](https://github.com/9nate-drake/Comfyui-SecNodes)
 - [SAM3](https://github.com/PozzettiAndrea/ComfyUI-SAM3)
 
-## Sampling
+### Sampling
 
 - [RES4LYF](https://github.com/ClownsharkBatwing/RES4LYF)
 - [WanMoeKSampler](https://github.com/stduhpf/ComfyUI-WanMoeKSampler)
@@ -99,7 +99,6 @@
 #### Lucy Edit
 
 - [Lucy Edit](https://github.com/DecartAI/Lucy-Edit-ComfyUI)
-
 
 ## 🧩 All possible Custom Nodes
 

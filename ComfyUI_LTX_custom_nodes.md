@@ -4,16 +4,19 @@
 
 ### Interface
 
-- [rgthree](https://github.com/rgthree/rgthree-comfy)  
-- [Login](https://github.com/liusida/ComfyUI-Login)  
-- [KJNodes](https://github.com/kijai/ComfyUI-KJNodes)  
+- [rgthree](https://github.com/rgthree/rgthree-comfy)
+- [Login](https://github.com/liusida/ComfyUI-Login)
+- [KJNodes](https://github.com/kijai/ComfyUI-KJNodes)
+- [Easy-Use](https://github.com/yolain/ComfyUI-Easy-Use.git)
+
+### Utilities / Workflow helpers
+
 - [GGUF](https://github.com/city96/ComfyUI-GGUF)
 - [ComfyMath](https://github.com/evanspearman/ComfyMath.git)
 - [Resolution master](https://github.com/Azornes/Comfyui-Resolution-Master.git)
 - [PG Nodes](https://github.com/GizmoR13/PG-Nodes)
 - [ComfyUi-Scale-Image-to-Total-Pixels-Advanced](https://github.com/BigStationW/ComfyUi-Scale-Image-to-Total-Pixels-Advanced)
 - [Prompt Relay Encode](https://github.com/kijai/ComfyUI-PromptRelay.git)
-- [Easy-Use](https://github.com/yolain/ComfyUI-Easy-Use.git)
 - [10S](https://github.com/TenStrip/10S-Comfy-nodes)
 - [WhatDreamsCost](https://github.com/WhatDreamsCost/WhatDreamsCost-ComfyUI)
 

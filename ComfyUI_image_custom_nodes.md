@@ -4,8 +4,8 @@
 
 ### Interface
 
-- [rgthree](https://github.com/rgthree/rgthree-comfy)  
-- [Login](https://github.com/liusida/ComfyUI-Login)  
+- [rgthree](https://github.com/rgthree/rgthree-comfy)
+- [Login](https://github.com/liusida/ComfyUI-Login)
 - [KJNodes](https://github.com/kijai/ComfyUI-KJNodes)
 - [StringEssentials](https://github.com/bradsec/ComfyUI_StringEssentials.git)
 - [PG Nodes](https://github.com/GizmoR13/PG-Nodes)
@@ -105,7 +105,7 @@
 #### FLUX
 
 - [Flux2Klein-Enhancer](https://github.com/capitan01R/ComfyUI-Flux2Klein-Enhancer)
-- [Fux2ImageReference](https://github.com/naku-yh/ComfyUI_Flux2ImageReference)
+- [Flux2ImageReference](https://github.com/naku-yh/ComfyUI_Flux2ImageReference)
 - [Flux2Klein-Conditioning-Toolkit](https://github.com/xmarre/ComfyUI-Flux2Klein-Conditioning-Toolkit)
 - [NKD-Klein-Tools](https://github.com/Nekodificador/ComfyUI-NKD-Klein-Tools.git)
 - [KleinRefGrid](https://github.com/xb1n0ry/ComfyUI-KleinRefGrid)

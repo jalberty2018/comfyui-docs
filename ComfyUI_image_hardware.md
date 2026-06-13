@@ -1,30 +1,33 @@
-# 💻 Hardware
+# 💻 Hardware Requirements
 
-## Hardware requirements
+These are tested minimums for the listed templates. Larger resolutions, larger batches, or extra custom nodes can require more VRAM and RAM.
+The example screenshots in the overview page document successful runs with these GPU classes on RunPod.
+
+## Image Models
 
 | Model           | Tested GPU          | Min VRAM | Min RAM |
 |-----------------|---------------------|----------|---------|
 | Z-Image Turbo   | RTX A4500, RTX A5000 | 20 GB    | 50 GB   |
 | ERNIE-Image     | RTX A4500 | 20 GB    | 50 GB   |
-| Flux.2 Klein    | RTX A4500    | 20 GB    | 50 GB   |
+| FLUX.2 Klein    | RTX A4500    | 20 GB    | 50 GB   |
 | FLUX.2 Dev bf16 | RTX 6000 Ada | 44 GB    | 80 GB   |
-| Flux.2 Dev fp8  | RTX 3090    | 24 GB    | 50 GB   |
-| Qwen image bf16       | RTX A6000  | 44 GB    | 65 GB   |
-| Qwen image fp8        | RTX A5000, RTX 3090 | 24 GB    | 45 GB   |
-| Qwen image edit bf16  | RTX A6000 | 44 GB    | 65 GB   |
-| Qwen image edit fp8   | RTX A5000, RTX 3090  | 24 GB    | 45 GB   |
+| FLUX.2 Dev fp8  | RTX 3090    | 24 GB    | 50 GB   |
+| Qwen Image bf16       | RTX A6000  | 44 GB    | 65 GB   |
+| Qwen Image fp8        | RTX A5000, RTX 3090 | 24 GB    | 45 GB   |
+| Qwen Image Edit bf16  | RTX A6000 | 44 GB    | 65 GB   |
+| Qwen Image Edit fp8   | RTX A5000, RTX 3090  | 24 GB    | 45 GB   |
 
-## Volume storage requirements
+## Volume Storage Requirements
 
 | Model | Minimum                    |
 |-------|----------------------------|
-| ZI    | 50 GB (`/workspace`)       |
+| Z-Image | 50 GB (`/workspace`)       |
 | ERNIE | 50 GB (`/workspace`)       |
 | FLUX bf16 | 90 GB (`/workspace`)       |
 | FLUX fp8 | 75 GB (`/workspace`)       |
-| Qwen  | 70 GB (`/workspace`)       |
+| Qwen Image | 70 GB (`/workspace`)       |
 
-## Pod storage requirements
+## Pod Storage Requirements
 
 | Model | Minimum                    |
 |-------|----------------------------|
