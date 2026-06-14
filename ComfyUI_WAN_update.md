@@ -1,5 +1,10 @@
 # run-comfyui-wan2
 
+## xxxx
+
+- ComfyUI 
+- [Scail 2](https://github.com/jieg9341-lab/ComfyUI-SCAIL2-Easy)
+
 ## 04062026
 
 - ComfyUI 0.24.0

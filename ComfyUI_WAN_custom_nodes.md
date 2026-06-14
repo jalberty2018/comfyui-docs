@@ -100,6 +100,10 @@
 
 - [Lucy Edit](https://github.com/DecartAI/Lucy-Edit-ComfyUI)
 
+#### Scail 2
+
+- [Scail 2](https://github.com/jieg9341-lab/ComfyUI-SCAIL2-Easy)
+
 
 ## 🧩 All possible Custom Nodes
 

@@ -1,5 +1,10 @@
 # run-comfyui-image
 
+## tbr
+
+- [KleinTiledUpscaler](https://github.com/Gavr728/ComfyUI_KleinTiledUpscale)
+- Fixed typos and white space breaks with Codex.
+
 ## 06062026
 
 - ComfyUI 0.24.0

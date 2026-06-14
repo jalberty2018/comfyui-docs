@@ -24,6 +24,7 @@
 - [Manager](https://blog.comfy.org/p/meet-the-new-comfyui-manager?utm_source=substack&utm_medium=email#media-65c18bf3-b2eb-42f2-bb14-695a7f4f506f)
 - [SVI](https://wanx-troopers.github.io/svi.html)
 - [SVI-PRO](https://github.com/vita-epfl/Stable-Video-Infinity/blob/svi_wan22/docs/svi/svi_2.0_pro.md)
+- [SCAIL-2](https://huggingface.co/zai-org/SCAIL-2)
 
 ## 📦 Models
 

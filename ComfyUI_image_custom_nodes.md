@@ -110,6 +110,7 @@
 - [NKD-Klein-Tools](https://github.com/Nekodificador/ComfyUI-NKD-Klein-Tools.git)
 - [KleinRefGrid](https://github.com/xb1n0ry/ComfyUI-KleinRefGrid)
 - [Flux2KontextConditioner](https://github.com/KursatAs/ComfyUI-Flux2KontextConditioner.git)
+- [KleinTiledUpscaler](https://github.com/Gavr728/ComfyUI_KleinTiledUpscaler)
 
 #### Z-Image
 
