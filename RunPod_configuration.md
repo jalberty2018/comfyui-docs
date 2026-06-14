@@ -5,7 +5,7 @@
 | Variable                  | Description                                                           | Default |
 |---------------------------|-----------------------------------------------------------------------|---------|
 | `COMFYUI_EXTRA_ARGUMENTS` | Additional arguments for the ComfyUI CLI                              |         |
-| `VRAM_THRESHOLD`          | VRAM threshold in GB for selecting the model/workflow                 | 38 GB   |
+| `VRAM_THRESHOLD`          | VRAM threshold in GB for selecting the model                          | Image: 38 GB; LTX/WAN: 36 GB |
 | `COMFYUI_START_MAX_TRIES` | Number of tries to wait until ComfyUI is online; depends on vCPU speed | 60      |
 
 ## Authentication Tokens
@@ -30,16 +30,17 @@
 | Model Patches   | `HF_MODEL_PATCHES[1-20]`             | `HF_MODEL_PATCHES_FILENAME[1-20]`             |
 | VAE             | `HF_MODEL_VAE[1-20]`                 | `HF_MODEL_VAE_FILENAME[1-20]`                 |
 | Upscalers       | `HF_MODEL_UPSCALER[1-20]`            | `HF_MODEL_UPSCALER_PTH[1-20]`                 |
+| Latent Upscale  | `HF_MODEL_LATENT_UPSCALE[1-20]`      | `HF_MODEL_LATENT_UPSCALE_FILENAME[1-20]`      |
 | LoRAs           | `HF_MODEL_LORA[1-20]`                | `HF_MODEL_LORA_FILENAME[1-20]`                |
 | VAE TAESD       | `HF_MODEL_VAE_APPROX[1-20]`          | `HF_MODEL_VAE_APPROX_FILENAME[1-20]`          |
 | ControlNet      | `HF_MODEL_CONTROLNET[1-20]`          | `HF_MODEL_CONTROLNET_FILENAME[1-20]`          |
 
 ## Hugging Face Model Configuration
 
-| Type | Model                   | Safetensors/GGUF          | `/workspace/ComfyUI/<Directory>` |
-|------|-------------------------|---------------------------|----------------------------------|
-| File | `HF_MODEL[1-20]`        | `HF_MODEL_FILENAME[1-20]` | `HF_MODEL_DIR[1-20]`             |
-| Dir  | `HF_FULL_MODEL[1-20]`   |                           | `HF_FULL_MODEL_DIR[1-20]`        |
+| Type | Model                   | Safetensors/GGUF          | Include pattern                  | Exclude pattern                  | `/workspace/ComfyUI/<Directory>` |
+|------|-------------------------|---------------------------|----------------------------------|----------------------------------|----------------------------------|
+| File | `HF_MODEL[1-20]`        | `HF_MODEL_FILENAME[1-20]` | `HF_MODEL_INCLUDE[1-20]`         | `HF_MODEL_EXCLUDE[1-20]`         | `HF_MODEL_DIR[1-20]`             |
+| Dir  | `HF_FULL_MODEL[1-20]`   |                           | `HF_FULL_MODEL_INCLUDE[1-20]`    | `HF_FULL_MODEL_EXCLUDE[1-20]`    | `HF_FULL_MODEL_DIR[1-20]`        |
 
 ## CivitAI LORAs
 
@@ -52,7 +53,7 @@
 
 ## Workflows
 
-- Change `WORKFLOW` to `WORKFLOW_LVRAM` or `WORKFLOW_HVRAM` to make loading VRAM dependent through `VRAM_THRESHOLD`.
+- Change `WORKFLOW` to `WORKFLOW_LVRAM` or `WORKFLOW_HVRAM` to make loading VRAM dependent. The scripts select HVRAM workflows above 40 GB.
 
 | Variable         | Description                      |
 |------------------|----------------------------------|

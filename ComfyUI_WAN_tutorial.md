@@ -64,6 +64,10 @@ When you see:
 
 → Your pod is ready.
 
+### ⚠️ Hugging Face download takes longer than usual
+
+If the Hugging Face download takes longer than usual, restart the pod and try again. Download time still depends on the file size and the speed of the network connection.
+
 ## 🔌 Connecting to Your Pod
 
 [Docs](https://docs.runpod.io/pods/connect-to-a-pod)
