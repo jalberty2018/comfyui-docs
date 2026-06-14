@@ -2,7 +2,7 @@
 
 ## Z-Image Turbo
 
-- [Website](https://tongyi-mai.github.io/Z-Image-homepage/)
+- [Website](https://tongyi-mai.github.io/Z-Image-blog/)
 - [Project](https://z-image-turbo.ai)
 - [GitHub](https://github.com/Tongyi-MAI/Z-Image)
 - [Hugging Face](https://huggingface.co/Tongyi-MAI/Z-Image-Turbo/blob/main/README.md)

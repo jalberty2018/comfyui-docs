@@ -25,3 +25,7 @@
 ### 💻 Hardware requirements for running templates on RunPod
 
 - [GPU selection](ComfyUI_image_hardware.md)
+
+### ⚙️ Configuration
+
+- [RunPod configuration](RunPod_configuration.md)

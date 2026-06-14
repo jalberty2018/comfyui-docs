@@ -6,6 +6,14 @@
 
 A streamlined and automated environment for running **ComfyUI** with **WAN 2.x video models**, optimized for use on RunPod.
 
+## What to expect
+
+These templates are intended for users who already want to run ComfyUI on RunPod and are comfortable following technical setup steps. No Linux expertise is required for normal use, but basic familiarity with RunPod pods, logs, tokens, and file management is helpful.
+
+## When to use this template
+
+Use this template for WAN 2.x video generation, image-to-video, animation, long-video, SVI, and SCAIL workflows.
+
 ## 🔧 Features
 
 - Automatic model and LoRA provisioning via environment variables.
@@ -25,6 +33,10 @@ A streamlined and automated environment for running **ComfyUI** with **WAN 2.x v
 ## 📦 Deployment on RunPod
 
 - [👉 Templates](ComfyUI_WAN_deployment.md)
+
+## 📘 Tutorial
+
+- [Specific for these templates](ComfyUI_WAN_tutorial.md)
 
 ### Pod running on L40S
 

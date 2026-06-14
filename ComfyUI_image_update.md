@@ -11,8 +11,8 @@
 - [Untwisting-RoPE](https://github.com/BigStationW/ComfyUi-Untwisting-RoPE)
 - [TextEncodeEditAdvanced](https://github.com/BigStationW/ComfyUi-TextEncodeEditAdvanced)
 - Removed captioners as modern models do work better with simple captions.
-- Removed vlm as prompt enhance works better with a seperate pod (textgen for example).
-- Removed Comfyui-SecNodes as SAM3 in more powerful.
+- Removed VLM as prompt enhance works better with a separate pod (textgen for example).
+- Removed ComfyUI-SecNodes as SAM3 is more powerful.
 
 ## 01062026
 
@@ -95,7 +95,7 @@
 
 ## 01022026
 
-- Updated custom_nodes for Flux-Klein edit, updatated QWEN EDIT template and workflows
+- Updated custom_nodes for Flux-Klein edit, updated QWEN EDIT template and workflows
 
 ## 28012026
 
@@ -104,7 +104,7 @@
 
 ## 25012026
 
-- Added configuration for loading workflows and models depending on the availabe VRAM.
+- Added configuration for loading workflows and models depending on the available VRAM.
 - [Arthemy_Live-Tuner-ZIT-ComfyUI](https://github.com/aledelpho/Arthemy_Live-Tuner-ZIT-ComfyUI)
 - [Flux2ImageReference](https://github.com/naku-yh/ComfyUI_Flux2ImageReference)
 

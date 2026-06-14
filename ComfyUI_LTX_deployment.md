@@ -14,3 +14,7 @@
 ### 💻 Hardware requirements
 
 - [GPU selection](ComfyUI_LTX_hardware.md)
+
+### ⚙️ Configuration
+
+- [RunPod configuration](RunPod_configuration.md)

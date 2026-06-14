@@ -4,17 +4,25 @@
 
 A streamlined and automated environment for running **ComfyUI** with **LTX-2.3 video models**, optimized for use on RunPod.
 
+## What to expect
+
+These templates are intended for users who already want to run ComfyUI on RunPod and are comfortable following technical setup steps. No Linux expertise is required for normal use, but basic familiarity with RunPod pods, logs, tokens, and file management is helpful.
+
+## When to use this template
+
+Use this template for LTX 2.3 video generation, image-to-video, video-to-video, pose-transfer, camera-motion transfer, and audio/reference workflows.
+
 ## Example included workflows
 
 ### i2v
 
 ![Select number of frames, size, prompt and offload](images/ai-generated-LTX.jpg)
 
-### iv2v pose transfer DWPose
+### vi2v pose transfer DWPose
 
 ![Select number of frames, size, prompt and offload](images/ai-generated-LTX-vi2v.jpg)
 
-### iv2v pose transfer SDPose (Body Ratio Mapper)
+### vi2v pose transfer SDPose (Body Ratio Mapper)
 
 ![Select number of frames, size, prompt and offload](images/ai-generated-LTX-vi2v-sdpose.jpg)
 
@@ -51,7 +59,7 @@ A streamlined and automated environment for running **ComfyUI** with **LTX-2.3 v
 
 ### Pod running on RTX 6000 Ada bf16
 
-![Pod running on RTX 6000Ada ComfyUI](images/runpod_6000Ada_LTX.jpeg)
+![Pod running on RTX 6000 Ada ComfyUI](images/runpod_6000Ada_LTX.jpeg)
 
 ### Pod running on RTX A5000 fp8
 

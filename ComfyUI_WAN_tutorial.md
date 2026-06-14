@@ -1,7 +1,20 @@
 # 📘 Tutorial run-comfyui-wan2
 
 - This tutorial reflects my own experience on RunPod.
-- Always consult the excellent official [runpod documentation](https://docs.runpod.io/pods/overview).
+- Always consult the excellent official [RunPod documentation](https://docs.runpod.io/pods/overview).
+
+## Common tasks
+
+- [Start a pod](#starting-a-pod)
+- [Connect to your pod](#connecting-to-your-pod)
+- [Open the web terminal](#web-terminal)
+- [Log in to Code-Server](#code-server-login)
+- [Configure secrets](#secrets)
+- [Download models and LoRAs](#downloading-models-and-loras)
+- [Delete models and LoRAs](#deleting-models-and-loras)
+- [Manage the pod](#pod-management)
+- [Upload and download files](#uploading-downloading-files)
+- [Use RunPod API](#runpod-api)
 
 ## 🚀 Starting a Pod
 
@@ -14,7 +27,7 @@ Example:
 
 Steps:
 
-1. Choose a [GPU](ComfyUI_image_hardware.md)
+1. Choose a [GPU](ComfyUI_WAN_hardware.md)
 2. Edit template settings if needed.  
 3. Choose **Volume disk** (/workspace)
 4. Enable Volume encryption if desired.
@@ -24,8 +37,8 @@ Steps:
 
 ![Filter CUDA](images/filter_cuda.jpg)
 
-- Deploy on an other region.
-- Change filter to CUDA 12.8 on runpod's console
+- Deploy in another region.
+- Change filter to CUDA 12.8 on the RunPod console
 
 ### 📜 Viewing System Logs
 
@@ -51,21 +64,25 @@ When you see:
 
 → Your pod is ready.
 
+### ⚠️ Hugging Face download takes longer than usual
+
+If the Hugging Face download takes longer than usual, restart the pod and try again. Download time still depends on the file size and the speed of the network connection.
+
 ## 🔌 Connecting to Your Pod
 
 [Docs](https://docs.runpod.io/pods/connect-to-a-pod)
 
 ![Possible http services](images/services.jpg)
 
-### ⚠️ Not ready – Make sure your service is running! or Browser unautorised error.
+### ⚠️ Not ready – Make sure your service is running! or browser unauthorized error.
 
-![Unautorised](images/edge_rights_denied.jpg){ width="400" }
+![Unauthorized](images/edge_rights_denied.jpg){ width="400" }
 
-Try to Connect with the pod-id and the port number to the proxy.
-You can find the url’s at the end of the log file in the runpod's console.
+Try to connect with the pod-id and the port number to the proxy.
+You can find the URLs at the end of the log file in the RunPod console.
 
-- ComfyUI: `https:<pod-id>-8188.proxy.runpod.net/login` 
-- Code-Server: `https:<pod-id>-9000.proxy.runpod.net/login`
+- ComfyUI: `https://<pod-id>-8188.proxy.runpod.net/login`
+- Code-Server: `https://<pod-id>-9000.proxy.runpod.net/login`
 
 ### 🎨 ComfyUI
 
@@ -97,7 +114,7 @@ You can find the url’s at the end of the log file in the runpod's console.
 
 ### No "PASSWORD" set
 
-- Copy the password displayed at the end of the container log file of the Runpod console or open the web terminal and enter.
+- Copy the password displayed at the end of the container log file of the RunPod console or open the web terminal and enter.
 
 ```bash
 cat /root/.config/code-server/config.yaml
@@ -115,7 +132,7 @@ Copy the password → log in via the Code-Server service on tab **Connect**.
 - Restart your browser and/or clear cache.
 - Try another browser (brave, chrome, edge).
 
-### "PASSWORD" set as env in Runpod template
+### "PASSWORD" set as env in RunPod template
 
 Log in via the Code-Server service on tab **Connect**.
 
@@ -142,10 +159,10 @@ From web terminal, Code-Server or ComfyUI-Lora-Manager.
 ![top_bar_comfyui](images/top_bar_comfyui.jpg){ width="300" }
 
 - Topbar ComfyUI.
-- Url displayed at end of container log file.
+- URL displayed at end of container log file.
 
 ```txt
-https:<pod-id>-8188.proxy.runpod.net/loras
+https://<pod-id>-8188.proxy.runpod.net/loras
 ```
 	
 #### Civitai token (needed for download)
@@ -238,111 +255,18 @@ Refresh ComfyUI pressing key **r**.
 
 ![manage_extensions](images/manage_extensions.jpg){ width="300" }
 
-## 🧩 Restart pod
+## 🧩 Pod management
 
-- To restart ComfyUI restart the pod from runpod’s console (no information loss).
-
-![Restart_pod](images/restart_pod.jpg){ width="300" }
-
-## 🧩 Stop and restart a pod
-
-- No information loss as ComfyUI is copied to the /workspace volume.
-- Use this option to pause your pod.
-
-### ⚠️ Be aware it is possible that no GPU is available when you restart the pod.
-
-- Before stopping the pod copy your creations to cloud/local.
-- You can still access the pod from with ssh or web console (0.5 vCPU and very little memory).
+[RunPod pod management](RunPod_pod_management.md)
 
 ## 🔄 Uploading & Downloading Files
 
-### ☁️ Cloud Sync
-
-- [Docs](https://docs.runpod.io/pods/storage/cloud-sync)
-
-#### Free dropbox
-
-![Cloud sync](images/cloud-sync.jpg){ width="400" }
-
-- Reliable and fast upload and download for large files.
-- Go to [Dropbox developers](https://www.dropbox.com/developers)
-- **Create an app** to connect with runpod.io.
-
-### 📦 runpodctl  
-
-- [Docs](https://docs.runpod.io/runpodctl/overview)
-
-- You need to install a client on your local computer.
-- You do **not** need an api key to upload/download to/from your pod.
-
-#### Speed
-
-- **Fine** for **downloading** files from your pod.
-- **Problematic** for **uploading large files** to your pod with slow connections (timeouts).
-
-#### Install windows
-
-```powershell
-Invoke-WebRequest "https://github.com/runpod/runpodctl/releases/latest/download/runpodctl-windows-amd64.exe" -OutFile "runpodctl.exe"
-```
-
-#### install linux
-
-```bash
-wget --quiet --show-progress https://github.com/runpod/runpodctl/releases/latest/download/runpodctl-linux-amd64 -O runpodctl && chmod +x runpodctl && sudo cp runpodctl /usr/bin/runpodctl
-```
+[RunPod file management](RunPod_file_management.md)
 
 ## 🔧 Advanced Features
 
-### 🔐 SSH / SCP / SFTP
-
-[Docs](https://docs.runpod.io/pods/configuration/use-ssh).
-
-#### Key generation
-- Linux has ssh-keygen already installed to generate keys.
-- Windows install [Git](https://git-scm.com/install/windows) to get ssh-keygen.
-- Put your **public key** on runpod.io keep your **private key** on your local computer.
-
-#### Apps.
-
-- Use [Shellfish](https://secureshellfish.app), [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/), [Tabby terminal](https://tabby.sh/) or shell/bash.
-- File transfer [Shellfish](https://secureshellfish.app) or [WinSCP](https://winscp.net/).
+[RunPod advanced features](RunPod_advanced_features.md)
 
 ## 🔑 RunPod API
 
-Useful when the web console is out (examples are outages from AWS and Cloudflare).
-
-### Using runpod.io API
-
-- [Docs](https://docs.runpod.io/api-reference/overview).
-- Install with "sudo apt install curl" on Ubuntu.
-
-```bash
-curl --request GET \
-  --url https://rest.runpod.io/v1/pods \
-  --header 'Authorization: Bearer <api-key>'
-
-curl --request POST \
-  --url https://rest.runpod.io/v1/pods/{podId}/stop \
-  --header 'Authorization: Bearer <api-key>'
-
-curl --request DELETE \
-  --url https://rest.runpod.io/v1/pods/{podId} \
-  --header 'Authorization: Bearer <api-key>'
-```
-
-### Using runpodctl to start/stop your pod with your api key.
-
-- [Docs](https://docs.runpod.io/runpodctl/overview).
-- Install client on local computer.
-- Use PowerShell or Bash.
-
-#### Usage
-
-```bash
-runpodctl doctor
-                
-runpodctl pod list                 
-runpodctl pod stop <pod_id> 
-runpodctl pod delete <pod_id>
-```
+[RunPod API](RunPod_api.md)
