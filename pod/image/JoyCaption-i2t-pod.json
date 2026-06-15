@@ -1,0 +1,1102 @@
+{
+  "id": "720facc5-6059-4d75-8f2e-baa80c40d74d",
+  "revision": 0,
+  "last_node_id": 283,
+  "last_link_id": 577,
+  "nodes": [
+    {
+      "id": 194,
+      "type": "Any Switch (rgthree)",
+      "pos": [
+        -1773.9906043672827,
+        1057.5606089651155
+      ],
+      "size": [
+        263.72841796875,
+        106
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "any_01",
+          "type": "STRING",
+          "link": 427
+        },
+        {
+          "dir": 3,
+          "name": "any_02",
+          "type": "STRING",
+          "link": 436
+        },
+        {
+          "dir": 3,
+          "name": "any_03",
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "any_04",
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "any_05",
+          "type": "STRING",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "dir": 4,
+          "label": "STRING",
+          "name": "*",
+          "shape": 3,
+          "type": "STRING",
+          "links": [
+            458
+          ]
+        }
+      ],
+      "properties": {},
+      "widgets_values": []
+    },
+    {
+      "id": 176,
+      "type": "Any Switch (rgthree)",
+      "pos": [
+        -1782.1527728551787,
+        1122.2457709316636
+      ],
+      "size": [
+        263.72841796875,
+        106
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "any_01",
+          "type": "IMAGE",
+          "link": 426
+        },
+        {
+          "dir": 3,
+          "name": "any_02",
+          "type": "IMAGE",
+          "link": 353
+        },
+        {
+          "dir": 3,
+          "name": "any_03",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "any_04",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "any_05",
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "dir": 4,
+          "label": "IMAGE",
+          "name": "*",
+          "shape": 3,
+          "type": "IMAGE",
+          "links": [
+            450
+          ]
+        }
+      ],
+      "properties": {},
+      "widgets_values": []
+    },
+    {
+      "id": 193,
+      "type": "RegexExtract",
+      "pos": [
+        -1671.439334655006,
+        1635.9848606852752
+      ],
+      "size": [
+        400,
+        262
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string",
+          "type": "STRING",
+          "widget": {
+            "name": "string"
+          },
+          "link": 435
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            436
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RegexExtract"
+      },
+      "widgets_values": [
+        "",
+        "([^/]+)\\.[^.]+$",
+        "All Groups",
+        true,
+        false,
+        false,
+        1
+      ]
+    },
+    {
+      "id": 207,
+      "type": "SetNode",
+      "pos": [
+        -1382.5159803639583,
+        1175.6592266828911
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "link": 449
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            457
+          ]
+        }
+      ],
+      "title": "Set_control_image",
+      "properties": {
+        "Node name for S&R": "SetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes",
+        "previousName": "control_image"
+      },
+      "widgets_values": [
+        "control_image"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 212,
+      "type": "SetNode",
+      "pos": [
+        -1732.8692426825567,
+        1186.463684830504
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "link": 458
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "title": "Set_filename",
+      "properties": {
+        "Node name for S&R": "SetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes",
+        "previousName": "filename"
+      },
+      "widgets_values": [
+        "filename"
+      ]
+    },
+    {
+      "id": 178,
+      "type": "PreviewImage",
+      "pos": [
+        -1463.7751740426384,
+        1287.4532697435397
+      ],
+      "size": [
+        375.9953368099143,
+        488.4265517457418
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 457
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": [],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 175,
+      "type": "LoadLoopImagesFromDir",
+      "pos": [
+        -1842.6400588761774,
+        1644.2453020841358
+      ],
+      "size": [
+        352.2610999301546,
+        123.20886033480292
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            353
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": []
+        },
+        {
+          "name": "FILE PATH",
+          "type": "STRING",
+          "links": [
+            435
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadLoopImagesFromDir"
+      },
+      "widgets_values": [
+        "nude",
+        false
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 270,
+      "type": "SetNode",
+      "pos": [
+        -857.0992519258573,
+        1081.4369899078433
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "link": 560
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "title": "Set_system_prompt",
+      "properties": {
+        "Node name for S&R": "SetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes",
+        "previousName": "system_prompt"
+      },
+      "widgets_values": [
+        "system_prompt"
+      ]
+    },
+    {
+      "id": 271,
+      "type": "GetNode",
+      "pos": [
+        -542.147159269233,
+        1236.2456467155039
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            561
+          ]
+        }
+      ],
+      "title": "Get_system_prompt",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": [
+        "system_prompt"
+      ]
+    },
+    {
+      "id": 208,
+      "type": "GetNode",
+      "pos": [
+        -544.5821293636291,
+        1189.7390662887376
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            554
+          ]
+        }
+      ],
+      "title": "Get_control_image",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": [
+        "control_image"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 266,
+      "type": "SetNode",
+      "pos": [
+        -402.4855527295672,
+        1240.6555930445086
+      ],
+      "size": [
+        231.9556640625,
+        60
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "link": 556
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "title": "Set_CAPTION_TRANFORMER",
+      "properties": {
+        "Node name for S&R": "SetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes",
+        "previousName": "CAPTION_TRANFORMER"
+      },
+      "widgets_values": [
+        "CAPTION_TRANFORMER"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 264,
+      "type": "JJC_DownloadAndLoadJoyCaptionModel",
+      "pos": [
+        -570.9379243657752,
+        1023.9387742397614
+      ],
+      "size": [
+        356.0083984375,
+        106
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "joycaption_model",
+          "type": "JOYCAPMODEL",
+          "links": [
+            553
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "JJC_DownloadAndLoadJoyCaptionModel"
+      },
+      "widgets_values": [
+        "fancyfeast/llama-joycaption-beta-one-hf-llava",
+        "Default",
+        true
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 265,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        -1036.1325733117487,
+        1003.998482279637
+      ],
+      "size": [
+        421.4568234389675,
+        696.9004239818494
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            560
+          ]
+        }
+      ],
+      "title": "Instructions / Context",
+      "properties": {
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        "Analyze the image and generate a caption for text-to-image LoRA training.\n\nRequirements:\n\n* Write one coherent paragraph using complete sentences.\n* Describe only what is directly visible in the image.\n* Use objective, factual language.\n* Do not speculate, infer, or guess missing information.\n* If a detail is unclear, omit it.\n* Maintain consistent wording and structure across images.\n* Prioritize physical observations over artistic interpretation.\n\nPriority order:\n\n1. Person\n2. Pose and body position\n3. Clothing and accessories\n4. Camera framing and angle\n5. Lighting\n6. Background\n\nDescribe when visible:\n\n* Age group.\n* Body type and physique\n* Skin tone\n* Hair color, length, and style\n* Facial expression\n* Eye color\n* Visible anatomy and body features\n* Pose, stance, and body orientation\n* Hand and arm placement\n* Clothing, footwear, and accessories\n* Camera framing (close-up, headshot, upper-body portrait, waist-up portrait, full-body shot)\n* Camera angle (eye level, low angle, high angle)\n* Lighting conditions\n* Background and surroundings\n\nDo not describe:\n\n* Personality traits\n* Intentions\n* Emotions beyond visible facial expressions\n* Mood or atmosphere\n* Image quality\n* Artistic merit\n* Color harmony\n* Composition analysis\n* Aesthetic judgments\n* Subjective opinions\n\nOutput only the caption. Do not output lists, labels, explanations, markdown, metadata, or reasoning.\n```"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 267,
+      "type": "GetNode",
+      "pos": [
+        -13.931578734313437,
+        1092.543874555222
+      ],
+      "size": [
+        233.4185546875,
+        60
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            574
+          ]
+        }
+      ],
+      "title": "Get_CAPTION_TRANFORMER",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": [
+        "CAPTION_TRANFORMER"
+      ]
+    },
+    {
+      "id": 269,
+      "type": "StringPreview",
+      "pos": [
+        -71.72443688125473,
+        1236.993938312639
+      ],
+      "size": [
+        512.615100149068,
+        544.1120230646954
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "input_string",
+          "type": "STRING",
+          "link": 559
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output_string",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "StringPreview"
+      },
+      "widgets_values": [
+        "Digital drawing of an anime-style character with large, yellow, fox-like ears with white tips. The character has blue, circular eyes and a small, black, smiling mouth. They have short, blonde hair and a pale skin tone. The character is wearing a simple, sleeveless, pink dress that reaches to their knees. They are standing with their arms outstretched to the sides. The background consists of a bright blue sky and a green hill. The camera angle is eye level, and the framing is a full-body shot. The lighting is even, with no shadows. The character's body type is slender, and their physique is petite. The overall style is simplistic and cartoonish."
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 191,
+      "type": "LoadImageReturnFilename",
+      "pos": [
+        -1836.928285134635,
+        1022.3386417154915
+      ],
+      "size": [
+        352.69024748072786,
+        543.0208023646684
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            426
+          ]
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        },
+        {
+          "name": "filename",
+          "type": "STRING",
+          "links": [
+            427
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImageReturnFilename"
+      },
+      "widgets_values": [
+        "example.png",
+        "image"
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 263,
+      "type": "JJC_JoyCaption_Custom",
+      "pos": [
+        -567.2602772743091,
+        1185.9267034188765
+      ],
+      "size": [
+        434.75107334099425,
+        585.307246796845
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "JOYCAPMODEL",
+          "link": 553
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 554
+        },
+        {
+          "name": "system_prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "system_prompt"
+          },
+          "link": 561
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            556
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "JJC_JoyCaption_Custom"
+      },
+      "widgets_values": [
+        "",
+        "Create a caption of the anime character",
+        256,
+        0,
+        0.9,
+        0
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 213,
+      "type": "GetNode",
+      "pos": [
+        273.70093357856064,
+        1049.4969366384626
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            552
+          ]
+        }
+      ],
+      "title": "Get_filename",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": [
+        "filename"
+      ]
+    },
+    {
+      "id": 262,
+      "type": "easy saveText",
+      "pos": [
+        -18.695480980559417,
+        1021.2554493714008
+      ],
+      "size": [
+        428.71737705479677,
+        150
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 574
+        },
+        {
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "file_name",
+          "type": "STRING",
+          "widget": {
+            "name": "file_name"
+          },
+          "link": 552
+        }
+      ],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            559
+          ]
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "easy saveText"
+      },
+      "widgets_values": [
+        "/workspace/captions",
+        "",
+        "txt",
+        true
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 206,
+      "type": "ImageScaleToTotalPixelsX",
+      "pos": [
+        -1464.3948210447056,
+        1023.0823471856996
+      ],
+      "size": [
+        306.5982421875,
+        215
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 450
+        },
+        {
+          "name": "width",
+          "shape": 7,
+          "type": "INT",
+          "link": null
+        },
+        {
+          "name": "height",
+          "shape": 7,
+          "type": "INT",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            449
+          ]
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": []
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageScaleToTotalPixelsX"
+      },
+      "widgets_values": [
+        1,
+        8,
+        "crop",
+        "lanczos"
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    }
+  ],
+  "links": [
+    [
+      353,
+      175,
+      0,
+      176,
+      1,
+      "IMAGE"
+    ],
+    [
+      426,
+      191,
+      0,
+      176,
+      0,
+      "IMAGE"
+    ],
+    [
+      427,
+      191,
+      2,
+      194,
+      0,
+      "STRING"
+    ],
+    [
+      435,
+      175,
+      2,
+      193,
+      0,
+      "STRING"
+    ],
+    [
+      436,
+      193,
+      0,
+      194,
+      1,
+      "STRING"
+    ],
+    [
+      449,
+      206,
+      0,
+      207,
+      0,
+      "IMAGE"
+    ],
+    [
+      450,
+      176,
+      0,
+      206,
+      0,
+      "IMAGE"
+    ],
+    [
+      457,
+      207,
+      0,
+      178,
+      0,
+      "IMAGE"
+    ],
+    [
+      458,
+      194,
+      0,
+      212,
+      0,
+      "STRING"
+    ],
+    [
+      552,
+      213,
+      0,
+      262,
+      2,
+      "STRING"
+    ],
+    [
+      553,
+      264,
+      0,
+      263,
+      0,
+      "JOYCAPMODEL"
+    ],
+    [
+      554,
+      208,
+      0,
+      263,
+      1,
+      "IMAGE"
+    ],
+    [
+      556,
+      263,
+      0,
+      266,
+      0,
+      "STRING"
+    ],
+    [
+      559,
+      262,
+      0,
+      269,
+      0,
+      "STRING"
+    ],
+    [
+      560,
+      265,
+      0,
+      270,
+      0,
+      "STRING"
+    ],
+    [
+      561,
+      271,
+      0,
+      263,
+      2,
+      "STRING"
+    ],
+    [
+      574,
+      267,
+      0,
+      262,
+      0,
+      "STRING"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 4,
+      "title": "Start image",
+      "bounding": [
+        -1854.5936825712622,
+        928.007998409026,
+        783.0812850204345,
+        864.8962955483075
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 9,
+      "title": "TRANSFORMERS",
+      "bounding": [
+        -592.0797590983383,
+        941.2547000210351,
+        483.92605936652535,
+        856.5504393741612
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 11,
+      "title": "CAPTION",
+      "bounding": [
+        -93.72285979876307,
+        944.4136077148768,
+        559.2625375002885,
+        852.2054347780316
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 16,
+      "title": "SYSTEM PROMPT",
+      "bounding": [
+        -1055.2645623113003,
+        934.292675656916,
+        446.7183643304959,
+        854.3279808255351
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.7801807857615315,
+      "offset": [
+        1811.3421185304544,
+        -832.3972916362574
+      ]
+    },
+    "frontendVersion": "1.44.19",
+    "workflowRendererVersion": "LG",
+    "VHS_latentpreview": true,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}

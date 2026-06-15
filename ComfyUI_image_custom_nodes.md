@@ -95,7 +95,7 @@
 
 ### Taggers
 
-- [JoyCaption](https://github.com/1038lab/ComfyUI-JoyCaption)
+- [JoyCaption](https://github.com/fpgaminer/joycaption_comfyui)
 
 ### Model Specific
 

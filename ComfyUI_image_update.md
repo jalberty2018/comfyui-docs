@@ -4,6 +4,7 @@
 
 - ComfyUI 
 - [KleinTiledUpscaler](https://github.com/Gavr728/ComfyUI_KleinTiledUpscale)
+- [JoyCaption](https://github.com/fpgaminer/joycaption_comfyui)
 - Fixed typos, white space breaks, documentation with Codex.
 - Enhanced hf download.
 
