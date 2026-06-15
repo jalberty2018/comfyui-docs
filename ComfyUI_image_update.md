@@ -2,15 +2,16 @@
 
 ## tbr
 
+- ComfyUI 
 - [KleinTiledUpscaler](https://github.com/Gavr728/ComfyUI_KleinTiledUpscale)
-- Fixed typos and white space breaks with Codex.
+- Fixed typos, white space breaks, documentation with Codex.
+- Enhanced hf download.
 
 ## 06062026
 
 - ComfyUI 0.24.0
 - [Untwisting-RoPE](https://github.com/BigStationW/ComfyUi-Untwisting-RoPE)
 - [TextEncodeEditAdvanced](https://github.com/BigStationW/ComfyUi-TextEncodeEditAdvanced)
-- Removed captioners as modern models do work better with simple captions.
 - Removed VLM as prompt enhance works better with a separate pod (textgen for example).
 - Removed ComfyUI-SecNodes as SAM3 is more powerful.
 

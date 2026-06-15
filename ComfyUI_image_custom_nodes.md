@@ -93,6 +93,10 @@
 - [TextEncodeEditAdvanced](https://github.com/BigStationW/ComfyUi-TextEncodeEditAdvanced)
 - [ReferenceLatentPlus](https://github.com/shootthesound/comfyui-ReferenceLatentPlus)
 
+### Taggers
+
+- [JoyCaption](https://github.com/1038lab/ComfyUI-JoyCaption)
+
 ### Model Specific
 
 #### Qwen
