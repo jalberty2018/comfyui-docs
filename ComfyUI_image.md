@@ -10,7 +10,7 @@ These templates are intended for users who already want to run ComfyUI on RunPod
 
 ## When to use this template
 
-Use this template for image generation and image editing workflows with Z-Image, ERNIE-Image, FLUX.2, FLUX.2 Klein, Qwen-Image, and Qwen-Image-Edit models.
+Use this template for image generation and image editing workflows with Z-Image, ERNIE-Image, FLUX.2, FLUX.2 Klein, Qwen-Image, JoyCaption and Qwen-Image-Edit models.
 
 ## Example ZIB-ZIT
 
@@ -27,6 +27,10 @@ Use this template for image generation and image editing workflows with Z-Image,
 ## Example FLUX.2 Dev multiple angles
 
 ![FLUX2-CAMERA](images/ai-generated-FLUX2-CAMERA.jpg)
+
+## Example JoyCaption
+
+![JoyCaption workflow](images/joycaption-workflow.jpg)
 
 ## 🔧 Features
 
