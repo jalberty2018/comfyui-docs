@@ -1,8 +1,8 @@
 # run-comfyui-image
 
-## tbr
+## 16062026
 
-- ComfyUI 
+- ComfyUI 0.25.0
 - [KleinTiledUpscaler](https://github.com/Gavr728/ComfyUI_KleinTiledUpscale)
 - [JoyCaption](https://github.com/fpgaminer/joycaption_comfyui)
 - Fixed typos, white space breaks, documentation with Codex.
