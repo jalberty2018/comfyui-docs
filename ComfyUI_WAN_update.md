@@ -1,6 +1,6 @@
 # run-comfyui-wan2
 
-## 16062026
+## to be released
 
 - ComfyUI 0.25.0
 - [Scail 2](https://github.com/jieg9341-lab/ComfyUI-SCAIL2-Easy)
