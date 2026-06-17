@@ -63,6 +63,7 @@
 - [Power Flow](https://github.com/x3bits/ComfyUI-Power-Flow/tree/main)
 - [Comfyui-LoopLoader](https://github.com/alessandrozonta/Comfyui-LoopLoader)
 - [Outputlists-combiner](https://github.com/geroldmeisinger/ComfyUI-outputlists-combiner)
+- [SequentialImageLoader](https://github.com/shootthesound/ComfyUI-SequentialImageLoader)
 
 ### Segmentation
 
