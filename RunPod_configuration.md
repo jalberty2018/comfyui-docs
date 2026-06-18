@@ -37,6 +37,10 @@
 
 ## Hugging Face Model Configuration
 
+| Variable              | Description                                                                                               | Default |
+|-----------------------|-----------------------------------------------------------------------------------------------------------|---------|
+| `HF_DOWNLOAD_TIMEOUT` | Maximum duration for each `hf download`. Supports GNU duration suffixes such as `s`, `m`, `h`, and `d`. | `10m`   |
+
 | Type | Model                   | Safetensors/GGUF          | Include pattern                  | Exclude pattern                  | `/workspace/ComfyUI/<Directory>` |
 |------|-------------------------|---------------------------|----------------------------------|----------------------------------|----------------------------------|
 | File | `HF_MODEL[1-20]`        | `HF_MODEL_FILENAME[1-20]` | `HF_MODEL_INCLUDE[1-20]`         | `HF_MODEL_EXCLUDE[1-20]`         | `HF_MODEL_DIR[1-20]`             |
