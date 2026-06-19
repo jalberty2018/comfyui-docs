@@ -2,9 +2,17 @@
 
 # WAN 2.x inference with ComfyUI
 
-![Select number of frames, size, prompt and offload](images/ai-generated-WAN.jpg)
-
 A streamlined and automated environment for running **ComfyUI** with **WAN 2.x video models**, optimized for use on RunPod.
+
+## Example workflows
+
+### WAN 2.2 i2v long video
+
+![wani2v](images/ai-generated-WAN.jpg)
+
+## Scail-2 i2v long video motion transfer
+
+![Scail2](images/ai-generated-scail2.jpg)
 
 ## What to expect
 
@@ -12,7 +20,7 @@ These templates are intended for users who already want to run ComfyUI on RunPod
 
 ## When to use this template
 
-Use this template for WAN 2.x video generation, image-to-video, animation, long-video, SVI, and SCAIL workflows.
+Use this template for WAN 2.x video generation, image-to-video, animation, long-video, SVI, and SCAIL-2 workflows.
 
 ## 🔧 Features
 

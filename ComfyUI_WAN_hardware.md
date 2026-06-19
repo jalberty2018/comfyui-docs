@@ -43,14 +43,23 @@ The example screenshots in the overview page document successful runs with these
 |--------------------------|-------|-------|
 | L40S, RTX 6000 (Ada) | 40 GB | 105 GB |
 
-### SCAIL
+### SCAIL/SCAIL-2
 
 - Precision: fp16.
 - Depends on the length and size of the video.
 
 | Recommended GPU        | Min VRAM  | Min RAM    |
 |------------------------|-------|--------|
-| L40S, RTX 6000 (Ada)   | 40 GB | 105 GB |
+| L40S, RTX 6000 (Ada)   | 48 GB | 96 GB |
+
+### SCAIL-2
+
+- Precision: fp8
+- Depends on the length and size of the video.
+
+| GPU          | Min VRAM  | Min RAM |
+|--------------------------|-------|-------------------------|
+| RTX A5000 / RTX 4090 | 24 GB | 60 GB           |
 
 ## Storage
 
