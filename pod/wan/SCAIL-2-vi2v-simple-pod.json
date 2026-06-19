@@ -1,0 +1,1404 @@
+{
+  "id": "SCAIL2_simple",
+  "revision": 0,
+  "last_node_id": 48,
+  "last_link_id": 43,
+  "nodes": [
+    {
+      "id": 45,
+      "type": "VHS_LoadVideo",
+      "pos": [
+        -867.1647406268527,
+        -20.83042798932604
+      ],
+      "size": [
+        380.4347390680962,
+        818.7380756292822
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            37
+          ]
+        },
+        {
+          "name": "frame_count",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [
+            39
+          ]
+        },
+        {
+          "name": "video_info",
+          "type": "VHS_VIDEOINFO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_LoadVideo"
+      },
+      "widgets_values": {
+        "video": "girl_on_beach_video_pod.mp4",
+        "force_rate": 0,
+        "custom_width": 0,
+        "custom_height": 0,
+        "frame_load_cap": 0,
+        "skip_first_frames": 0,
+        "select_every_nth": 1,
+        "format": "AnimateDiff",
+        "choose video to upload": "image",
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "girl_on_beach_video_pod.mp4",
+            "type": "input",
+            "format": "video/mp4",
+            "force_rate": 0,
+            "custom_width": 0,
+            "custom_height": 0,
+            "frame_load_cap": 0,
+            "skip_first_frames": 0,
+            "select_every_nth": 1
+          }
+        }
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 15,
+      "type": "KSamplerSelect",
+      "pos": [
+        425.98382920053047,
+        -432.98027148471465
+      ],
+      "size": [
+        260,
+        110
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "SAMPLER",
+          "type": "SAMPLER",
+          "links": [
+            23
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSamplerSelect",
+        "cnr_id": "comfy-core",
+        "ver": "0.24.0"
+      },
+      "widgets_values": [
+        "euler"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 20,
+      "type": "CLIPVisionLoader",
+      "pos": [
+        423.6097973062137,
+        -609.065065154999
+      ],
+      "size": [
+        300,
+        110
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP_VISION",
+          "type": "CLIP_VISION",
+          "links": [
+            8
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPVisionLoader",
+        "cnr_id": "comfy-core",
+        "ver": "0.24.0"
+      },
+      "widgets_values": [
+        "split_files/clip_vision/clip_vision_h.safetensors"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 19,
+      "type": "VAELoader",
+      "pos": [
+        420.4235750814731,
+        -785.0493907473088
+      ],
+      "size": [
+        250,
+        110
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            22
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader",
+        "cnr_id": "comfy-core",
+        "ver": "0.24.0"
+      },
+      "widgets_values": [
+        "Wan2_1_VAE_bf16.safetensors"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 44,
+      "type": "LoraLoaderModelOnly",
+      "pos": [
+        -445.3770720045944,
+        -411.61781410120517
+      ],
+      "size": [
+        310,
+        90
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 35
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            36
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoaderModelOnly",
+        "cnr_id": "comfy-core",
+        "ver": "0.24.0"
+      },
+      "widgets_values": [
+        "loras/wan2.1_SCAIL_2_DPO_lora_bf16.safetensors",
+        1
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 12,
+      "type": "LoraLoaderModelOnly",
+      "pos": [
+        -445.3770720045944,
+        -271.61781410120517
+      ],
+      "size": [
+        310,
+        90
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 36
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            4,
+            5
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoaderModelOnly",
+        "cnr_id": "comfy-core",
+        "ver": "0.24.0"
+      },
+      "widgets_values": [
+        "Lightx2v/lightx2v_I2V_14B_480p_cfg_step_distill_rank128_bf16.safetensors",
+        0.8
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 13,
+      "type": "ModelSamplingSD3",
+      "pos": [
+        -74.94011571661113,
+        -407.7065475360282
+      ],
+      "size": [
+        260,
+        60
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 4
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            19
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ModelSamplingSD3",
+        "cnr_id": "comfy-core",
+        "ver": "0.24.0"
+      },
+      "widgets_values": [
+        5
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 14,
+      "type": "BasicScheduler",
+      "pos": [
+        -89.46153743408286,
+        -294.8355952844065
+      ],
+      "size": [
+        260,
+        110
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 5
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SIGMAS",
+          "type": "SIGMAS",
+          "links": [
+            24
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BasicScheduler",
+        "cnr_id": "comfy-core",
+        "ver": "0.24.0"
+      },
+      "widgets_values": [
+        "simple",
+        8,
+        1
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 48,
+      "type": "DiffusionModelLoaderKJ",
+      "pos": [
+        -456.26630838789816,
+        -687.7125330264091
+      ],
+      "size": [
+        312.095703125,
+        178
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "extra_state_dict",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            43
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DiffusionModelLoaderKJ"
+      },
+      "widgets_values": [
+        "diffusion_models/wan2.1_14B_SCAIL_2_fp16.safetensors",
+        "default",
+        "default",
+        false,
+        "auto",
+        true
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 3,
+      "type": "SCAIL2FitVideo",
+      "pos": [
+        -88.37917859002748,
+        -700.3946385036842
+      ],
+      "size": [
+        300,
+        118
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "IMAGE",
+          "link": 37
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            11,
+            26
+          ]
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "slot_index": 1,
+          "links": []
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "slot_index": 2,
+          "links": []
+        },
+        {
+          "name": "summary",
+          "type": "STRING",
+          "slot_index": 3,
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SCAIL2FitVideo"
+      },
+      "widgets_values": [
+        "512p",
+        832,
+        480
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 11,
+      "type": "WanChunkFeedForward",
+      "pos": [
+        -88.58097172899697,
+        -539.3732132321151
+      ],
+      "size": [
+        240,
+        90
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 43
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            35
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "WanChunkFeedForward"
+      },
+      "widgets_values": [
+        2,
+        4096
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 40,
+      "type": "SCAIL2SimpleVideo",
+      "pos": [
+        419.22270488917917,
+        -232.68710381725066
+      ],
+      "size": [
+        420,
+        1038
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 19
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 41
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 42
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 22
+        },
+        {
+          "name": "sampler",
+          "type": "SAMPLER",
+          "link": 23
+        },
+        {
+          "name": "sigmas",
+          "type": "SIGMAS",
+          "link": 24
+        },
+        {
+          "label": "Reference image",
+          "name": "reference_image",
+          "type": "IMAGE,SCAIL2_REFERENCE_PACK",
+          "link": 25
+        },
+        {
+          "name": "pose_video",
+          "type": "IMAGE",
+          "link": 26
+        },
+        {
+          "name": "clip_vision",
+          "type": "CLIP_VISION",
+          "link": 8
+        },
+        {
+          "name": "driving_track_data",
+          "shape": 7,
+          "type": "SAM3_TRACK_DATA",
+          "link": 17
+        },
+        {
+          "name": "reference_track_data",
+          "shape": 7,
+          "type": "SAM3_TRACK_DATA",
+          "link": 18
+        },
+        {
+          "label": "Advanced",
+          "name": "advanced",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "advanced"
+          },
+          "link": null
+        },
+        {
+          "label": "Long video mode",
+          "name": "long_video_mode",
+          "type": "COMBO",
+          "widget": {
+            "name": "long_video_mode"
+          },
+          "link": null
+        },
+        {
+          "label": "Max frames",
+          "name": "max_frames",
+          "type": "INT",
+          "widget": {
+            "name": "max_frames"
+          },
+          "link": null
+        },
+        {
+          "label": "Chunk frames",
+          "name": "chunk_frames",
+          "type": "INT",
+          "widget": {
+            "name": "chunk_frames"
+          },
+          "link": null
+        },
+        {
+          "label": "Overlap frames",
+          "name": "overlap_frames",
+          "type": "INT",
+          "widget": {
+            "name": "overlap_frames"
+          },
+          "link": null
+        },
+        {
+          "label": "Color correction",
+          "name": "color_correction",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "color_correction"
+          },
+          "link": null
+        },
+        {
+          "label": "Context frames",
+          "name": "context_frames",
+          "type": "INT",
+          "widget": {
+            "name": "context_frames"
+          },
+          "link": null
+        },
+        {
+          "label": "Context overlap",
+          "name": "context_overlap_frames",
+          "type": "INT",
+          "widget": {
+            "name": "context_overlap_frames"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "frames",
+          "type": "IMAGE",
+          "links": [
+            38
+          ]
+        },
+        {
+          "name": "summary",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "title": "SCAIL-2 Simple Video (long video)",
+      "properties": {
+        "Node name for S&R": "SCAIL2SimpleVideo"
+      },
+      "widgets_values": [
+        988922860602799,
+        "randomize",
+        1,
+        "animation",
+        true,
+        "chunk",
+        0,
+        81,
+        5,
+        false,
+        81,
+        20
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 30,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        -383.7163827118293,
+        1.866650225573522
+      ],
+      "size": [
+        330,
+        100
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            12,
+            15
+          ]
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            10
+          ]
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple",
+        "cnr_id": "comfy-core",
+        "ver": "0.24.0"
+      },
+      "widgets_values": [
+        "checkpoints/sam3.1_multiplex_fp16.safetensors"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 32,
+      "type": "SAM3_VideoTrack",
+      "pos": [
+        -379.88113180606365,
+        174.7377318380823
+      ],
+      "size": [
+        310,
+        170
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 11
+        },
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 12
+        },
+        {
+          "name": "initial_mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        },
+        {
+          "name": "conditioning",
+          "shape": 7,
+          "type": "CONDITIONING",
+          "link": 13
+        }
+      ],
+      "outputs": [
+        {
+          "name": "track_data",
+          "type": "SAM3_TRACK_DATA",
+          "links": [
+            17
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SAM3_VideoTrack",
+        "cnr_id": "comfy-core",
+        "ver": "0.24.0"
+      },
+      "widgets_values": [
+        0.5,
+        2,
+        2
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 31,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -3.7163827118292767,
+        11.866650225573519
+      ],
+      "size": [
+        260,
+        140
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 10
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            13,
+            16
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode",
+        "cnr_id": "comfy-core",
+        "ver": "0.24.0"
+      },
+      "widgets_values": [
+        "person"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 33,
+      "type": "SAM3_VideoTrack",
+      "pos": [
+        2.899693089154322,
+        206.21478683814266
+      ],
+      "size": [
+        270,
+        170
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 14
+        },
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 15
+        },
+        {
+          "name": "initial_mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        },
+        {
+          "name": "conditioning",
+          "shape": 7,
+          "type": "CONDITIONING",
+          "link": 16
+        }
+      ],
+      "outputs": [
+        {
+          "name": "track_data",
+          "type": "SAM3_TRACK_DATA",
+          "links": [
+            18
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SAM3_VideoTrack",
+        "cnr_id": "comfy-core",
+        "ver": "0.24.0"
+      },
+      "widgets_values": [
+        0.5,
+        2,
+        2
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 47,
+      "type": "PgLazyPromptMini",
+      "pos": [
+        -395.64963764504694,
+        537.6849331154505
+      ],
+      "size": [
+        417.9570638308272,
+        271.82825532330855
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 40
+        }
+      ],
+      "outputs": [
+        {
+          "name": "POS_OUT",
+          "type": "CONDITIONING",
+          "links": [
+            41
+          ]
+        },
+        {
+          "name": "NEG_OUT",
+          "type": "CONDITIONING",
+          "links": [
+            42
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PgLazyPromptMini",
+        "history_path": "custom_nodes\\prompt_history.json",
+        "max_entries": 500
+      },
+      "widgets_values": [
+        "Make the person in the reference image perform the motion from the driving video.",
+        "bad video, blurry, low quality, distorted, artifacts"
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 16,
+      "type": "CLIPLoader",
+      "pos": [
+        36.5476412166168,
+        544.3626456274376
+      ],
+      "size": [
+        280,
+        110
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            40
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPLoader",
+        "cnr_id": "comfy-core",
+        "ver": "0.24.0"
+      },
+      "widgets_values": [
+        "split_files/text_encoders/umt5_xxl_fp16.safetensors",
+        "wan",
+        "default"
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 46,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        918.4642177808046,
+        -92.2428694920258
+      ],
+      "size": [
+        512.770789078708,
+        929.5598349832236
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 38
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 39
+        },
+        {
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 24,
+        "loop_count": 0,
+        "filename_prefix": "AnimateDiff",
+        "format": "image/gif",
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "AnimateDiff_00001.gif",
+            "subfolder": "",
+            "type": "output",
+            "format": "image/gif",
+            "frame_rate": 24,
+            "workflow": "AnimateDiff_00001.png",
+            "fullpath": "/workspace/ComfyUI/output/AnimateDiff_00001.gif"
+          }
+        }
+      },
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 1,
+      "type": "LoadImage",
+      "pos": [
+        -1205.7311244687667,
+        -41.595726235001415
+      ],
+      "size": [
+        300,
+        370
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            14,
+            25
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage",
+        "cnr_id": "comfy-core",
+        "ver": "0.24.0"
+      },
+      "widgets_values": [
+        "waist-up-portrait-child-model_564364-13.png",
+        "image"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    }
+  ],
+  "links": [
+    [
+      4,
+      12,
+      0,
+      13,
+      0,
+      "MODEL"
+    ],
+    [
+      5,
+      12,
+      0,
+      14,
+      0,
+      "MODEL"
+    ],
+    [
+      8,
+      20,
+      0,
+      40,
+      8,
+      "CLIP_VISION"
+    ],
+    [
+      10,
+      30,
+      1,
+      31,
+      0,
+      "CLIP"
+    ],
+    [
+      11,
+      3,
+      0,
+      32,
+      0,
+      "IMAGE"
+    ],
+    [
+      12,
+      30,
+      0,
+      32,
+      1,
+      "MODEL"
+    ],
+    [
+      13,
+      31,
+      0,
+      32,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      14,
+      1,
+      0,
+      33,
+      0,
+      "IMAGE"
+    ],
+    [
+      15,
+      30,
+      0,
+      33,
+      1,
+      "MODEL"
+    ],
+    [
+      16,
+      31,
+      0,
+      33,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      17,
+      32,
+      0,
+      40,
+      9,
+      "SAM3_TRACK_DATA"
+    ],
+    [
+      18,
+      33,
+      0,
+      40,
+      10,
+      "SAM3_TRACK_DATA"
+    ],
+    [
+      19,
+      13,
+      0,
+      40,
+      0,
+      "MODEL"
+    ],
+    [
+      22,
+      19,
+      0,
+      40,
+      3,
+      "VAE"
+    ],
+    [
+      23,
+      15,
+      0,
+      40,
+      4,
+      "SAMPLER"
+    ],
+    [
+      24,
+      14,
+      0,
+      40,
+      5,
+      "SIGMAS"
+    ],
+    [
+      25,
+      1,
+      0,
+      40,
+      6,
+      "IMAGE"
+    ],
+    [
+      26,
+      3,
+      0,
+      40,
+      7,
+      "IMAGE"
+    ],
+    [
+      35,
+      11,
+      0,
+      44,
+      0,
+      "MODEL"
+    ],
+    [
+      36,
+      44,
+      0,
+      12,
+      0,
+      "MODEL"
+    ],
+    [
+      37,
+      45,
+      0,
+      3,
+      0,
+      "IMAGE"
+    ],
+    [
+      38,
+      40,
+      0,
+      46,
+      0,
+      "IMAGE"
+    ],
+    [
+      39,
+      45,
+      2,
+      46,
+      1,
+      "AUDIO"
+    ],
+    [
+      40,
+      16,
+      0,
+      47,
+      0,
+      "CLIP"
+    ],
+    [
+      41,
+      47,
+      0,
+      40,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      42,
+      47,
+      1,
+      40,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      43,
+      48,
+      0,
+      11,
+      0,
+      "MODEL"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "1. Inputs: replace these two files",
+      "bounding": [
+        -1245.7311244687667,
+        -111.59572623500142,
+        799.2048193894834,
+        931.2583635984474
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "2. Models and sampling",
+      "bounding": [
+        -475.37707200459437,
+        -781.6178141012055,
+        820,
+        620
+      ],
+      "color": "#8e6c2f",
+      "flags": {}
+    },
+    {
+      "id": 3,
+      "title": "3. SAM3 masks for SCAIL-2",
+      "bounding": [
+        -423.71638271182934,
+        -68.13334977442656,
+        763.3982946177825,
+        478.00287408375334
+      ],
+      "color": "#6f8e2f",
+      "flags": {}
+    },
+    {
+      "id": 4,
+      "title": "4. Simple SCAIL-2 generation and output",
+      "bounding": [
+        370.97986883992047,
+        -889.5712371490354,
+        515.5502349628773,
+        1721.1986741757537
+      ],
+      "color": "#8e3f3f",
+      "flags": {}
+    },
+    {
+      "id": 5,
+      "title": "Prompt",
+      "bounding": [
+        -410.51050280353445,
+        446.51766321913374,
+        740.793743625675,
+        372.7726441901741
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.385455986821603,
+      "offset": [
+        1439.9153700195152,
+        1127.7986211638809
+      ]
+    },
+    "frontendVersion": "1.45.15",
+    "workflow_notes": "Simple SCAIL-2 workflow. Output uses VHS_VideoCombine; source video audio is wired from VHS_LoadVideo.audio.",
+    "workflow_name": "SCAIL2_simple",
+    "VHS_latentpreview": true,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
