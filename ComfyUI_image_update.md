@@ -1,12 +1,13 @@
 # run-comfyui-image
 
-## 18062026
+## 19062026
 
 - ComfyUI 0.25.0
 - [KleinTiledUpscaler](https://github.com/Gavr728/ComfyUI_KleinTiledUpscale)
 - [JoyCaption](https://github.com/fpgaminer/joycaption_comfyui)
+- [Lama-remover](https://github.com/silveroxides/comfyui-lama-remover)
 - Fixed typos, white space breaks, documentation with Codex.
-- Enhanced hf download.
+- Made moves and hf downloads more verbose.
 - Fixed Flux-Klein downloads.
 
 ## 06062026

@@ -5,6 +5,8 @@
 - ComfyUI 0.25.0
 - [ComfyUI-SCAIL2-Easy](https://github.com/jieg9341-lab/ComfyUI-SCAIL2-Easy)
 - [SCAIL2-LongVideoContext](https://github.com/1GirlUniversity/ComfyUI-SCAIL2-LongVideoContext)
+- Fixed typos, white space breaks, documentation with Codex.
+- Made moves and hf downloads more verbose.
 
 ## 04062026
 

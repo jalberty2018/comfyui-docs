@@ -1,8 +1,10 @@
 # run-comfyui-ltx
 
-## 18062026
+## 19062026
 
 - ComfyUI 0.25.0
+- Fixed typos, white space breaks, documentation with Codex.
+- Made moves and hf downloads more verbose.
 
 ## 04062026
 

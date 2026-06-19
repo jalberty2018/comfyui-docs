@@ -2,11 +2,13 @@
 
 ## ComfyUI Configuration
 
-| Variable                  | Description                                                           | Default |
-|---------------------------|-----------------------------------------------------------------------|---------|
-| `COMFYUI_EXTRA_ARGUMENTS` | Additional arguments for the ComfyUI CLI                              |         |
-| `VRAM_THRESHOLD`          | VRAM threshold in GB for selecting the model                          | Image: 38 GB; LTX/WAN: 36 GB |
-| `COMFYUI_START_MAX_TRIES` | Number of tries to wait until ComfyUI is online; depends on vCPU speed | 60      |
+| Variable                  | Description                                                                    | Default |
+|---------------------------|--------------------------------------------------------------------------------|---------|
+| `COMFYUI_EXTRA_ARGUMENTS` | Additional arguments for the ComfyUI CLI                                       |         |
+| `VRAM_THRESHOLD`          | VRAM threshold in GB for selecting the model                                   | Image: 38 GB; LTX/WAN: 36 GB |
+| `COMFYUI_START_MAX_TRIES` | Number of tries to wait until ComfyUI is online; depends on vCPU speed          | 60      |
+| `MOVE_STATUS_INTERVAL`    | Seconds between progress updates while moving ComfyUI to the network volume     | 5       |
+| `MOVE_STALL_TIMEOUT`      | Stop the move after this many seconds without a change in copied directory size | 300     |
 
 ## Authentication Tokens
 
