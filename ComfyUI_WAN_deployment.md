@@ -13,7 +13,7 @@
 - 👉 [RunPod WAN 2.2 T2V (lightx2v)](https://console.runpod.io/deploy?template=qvozvvb1xd&ref=se4tkc5o)
 - 👉 [RunPod WAN 2.2 I2V + I2LV SVI 2.0 PRO (lightx2v)](https://console.runpod.io/deploy?template=moem21s8xb&ref=se4tkc5o)
 - 👉 [RunPod WAN 2.2 Animate (lightx2v)](https://console.runpod.io/deploy?template=tp7gj0khyo&ref=se4tkc5o)
-- 👉 [RunPod WAN SCAIL VI2V (lightx2v)](https://console.runpod.io/deploy?template=9i0lkwau54&ref=se4tkc5o)
+- 👉 [RunPod WAN SCAIL-2 VI2V (lightx2v)](https://console.runpod.io/deploy?template=9i0lkwau54&ref=se4tkc5o)
 
 ## 📘 Tutorial
 

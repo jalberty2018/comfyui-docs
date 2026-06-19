@@ -98,6 +98,10 @@
 
 - [JoyCaption](https://github.com/fpgaminer/joycaption_comfyui)
 
+### Object removers
+
+- [Lama-remover](https://github.com/silveroxides/comfyui-lama-remover)
+
 ### Model Specific
 
 #### Qwen

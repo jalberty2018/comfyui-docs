@@ -97,13 +97,12 @@
 - [WanAnimatePreprocess](https://github.com/kijai/ComfyUI-WanAnimatePreprocess)
 
 #### Lucy Edit
-
 - [Lucy Edit](https://github.com/DecartAI/Lucy-Edit-ComfyUI)
 
 #### Scail 2
 
-- [Scail 2](https://github.com/jieg9341-lab/ComfyUI-SCAIL2-Easy)
-
+- [ComfyUI-SCAIL2-Easy](https://github.com/jieg9341-lab/ComfyUI-SCAIL2-Easy)
+- [SCAIL2-LongVideoContext](https://github.com/1GirlUniversity/ComfyUI-SCAIL2-LongVideoContext)
 
 ## 🧩 All possible Custom Nodes
 

@@ -112,7 +112,7 @@
       ],
       "size": [
         270,
-        68.33333333333334
+        82
       ],
       "flags": {},
       "order": 13,
@@ -146,7 +146,8 @@
         "secondTabWidth": 65
       },
       "widgets_values": [
-        1
+        1,
+        false
       ],
       "color": "#232",
       "bgcolor": "#353"
@@ -191,6 +192,7 @@
       "mode": 0,
       "inputs": [
         {
+          "label": "input_image",
           "name": "input_image",
           "shape": 7,
           "type": "IMAGE",
@@ -260,12 +262,20 @@
         "targetMegapixels": 2,
         "rescaleMode": "resolution",
         "rescaleValue": 1.6237976320958225,
+        "preserveScalingRatio": false,
         "autoDetect": false,
+        "autoDetectSource": "backend",
+        "autoDetectWidth": 0,
+        "autoDetectHeight": 0,
+        "autoDetectPresetsJSON": "{\"1:1 Square (Default)\":{\"width\":1328,\"height\":1328,\"isCustom\":false,\"isHidden\":false},\"16:9 Landscape\":{\"width\":1664,\"height\":928,\"isCustom\":false,\"isHidden\":false},\"4:3 Landscape\":{\"width\":1472,\"height\":1104,\"isCustom\":false,\"isHidden\":false},\"3:2 Landscape\":{\"width\":1584,\"height\":1056,\"isCustom\":false,\"isHidden\":false},\"1:1 Square-1024\":{\"width\":1024,\"height\":1024,\"isCustom\":false,\"isHidden\":false},\"3:4 Portrait\":{\"width\":768,\"height\":1024,\"isCustom\":false,\"isHidden\":false}}",
         "autoFitOnChange": false,
         "autoResizeOnChange": false,
+        "autoSnapOnChange": false,
+        "smartFit": false,
         "selectedCategory": "Qwen-Image",
         "selectedPreset": "3:4 Portrait",
         "useCustomCalc": false,
+        "showCalcInfo": false,
         "manual_slider_min_w": 64,
         "manual_slider_max_w": 2048,
         "manual_slider_step_w": 64,
@@ -276,6 +286,9 @@
         "section_scaling_collapsed": true,
         "section_autoDetect_collapsed": true,
         "section_presets_collapsed": false,
+        "section_extraControls_collapsed": false,
+        "preferred_compact_height": null,
+        "preferred_expanded_height": 475,
         "dropdown_resolution_expanded": false,
         "dropdown_category_expanded": false,
         "dropdown_preset_expanded": false,
@@ -288,6 +301,21 @@
         768,
         1024,
         false,
+        "resolution",
+        1.6237976320958225,
+        1,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        "Qwen-Image",
+        64,
+        1,
+        1080,
+        2,
+        "{\"1:1 Square (Default)\":{\"width\":1328,\"height\":1328,\"isCustom\":false,\"isHidden\":false},\"16:9 Landscape\":{\"width\":1664,\"height\":928,\"isCustom\":false,\"isHidden\":false},\"4:3 Landscape\":{\"width\":1472,\"height\":1104,\"isCustom\":false,\"isHidden\":false},\"3:2 Landscape\":{\"width\":1584,\"height\":1056,\"isCustom\":false,\"isHidden\":false},\"1:1 Square-1024\":{\"width\":1024,\"height\":1024,\"isCustom\":false,\"isHidden\":false},\"3:4 Portrait\":{\"width\":768,\"height\":1024,\"isCustom\":false,\"isHidden\":false}}",
         "resolution",
         1.6237976320958225,
         1
@@ -625,46 +653,6 @@
       "bgcolor": "#353"
     },
     {
-      "id": 9,
-      "type": "SaveImage",
-      "pos": [
-        736.6586325666425,
-        327.6177521005379
-      ],
-      "size": [
-        448.46861563790026,
-        402.5749824913439
-      ],
-      "flags": {},
-      "order": 16,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 9
-        }
-      ],
-      "outputs": [],
-      "properties": {
-        "Node name for S&R": "SaveImage",
-        "cnr_id": "comfy-core",
-        "ver": "0.5.1",
-        "enableTabs": false,
-        "tabWidth": 65,
-        "tabXOffset": 10,
-        "hasSecondTab": false,
-        "secondTabText": "Send Back",
-        "secondTabOffset": 80,
-        "secondTabWidth": 65
-      },
-      "widgets_values": [
-        "QWEN-EDIT-Orientation-LVRAM"
-      ],
-      "color": "#222",
-      "bgcolor": "#000"
-    },
-    {
       "id": 8,
       "type": "VAEDecode",
       "pos": [
@@ -869,100 +857,6 @@
       "bgcolor": "#335"
     },
     {
-      "id": 41,
-      "type": "LoadImage",
-      "pos": [
-        -1076.635078140685,
-        196.6917776892964
-      ],
-      "size": [
-        325.5201457140864,
-        404.7847951149806
-      ],
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            265,
-            302
-          ]
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": null
-        }
-      ],
-      "title": "Image 1",
-      "properties": {
-        "Node name for S&R": "LoadImage",
-        "cnr_id": "comfy-core",
-        "ver": "0.5.1",
-        "enableTabs": false,
-        "tabWidth": 65,
-        "tabXOffset": 10,
-        "hasSecondTab": false,
-        "secondTabText": "Send Back",
-        "secondTabOffset": 80,
-        "secondTabWidth": 65
-      },
-      "widgets_values": [
-        "S1_296_05007.jpg",
-        "image"
-      ],
-      "color": "#222",
-      "bgcolor": "#000"
-    },
-    {
-      "id": 127,
-      "type": "StringConcatenate",
-      "pos": [
-        -279.8316148283065,
-        721.5399318283311
-      ],
-      "size": [
-        511.45981386508583,
-        294.44566159110445
-      ],
-      "flags": {},
-      "order": 9,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "string_a",
-          "type": "STRING",
-          "widget": {
-            "name": "string_a"
-          },
-          "link": 304
-        }
-      ],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            305
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "StringConcatenate"
-      },
-      "widgets_values": [
-        "",
-        "Mover the girl's arms behind her head.\nRemove background.",
-        ". "
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
       "id": 65,
       "type": "KSampler",
       "pos": [
@@ -1020,13 +914,147 @@
         "secondTabWidth": 65
       },
       "widgets_values": [
-        390953436759832,
+        218931571564500,
         "randomize",
         20,
         4,
         "euler",
         "simple",
         1
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 41,
+      "type": "LoadImage",
+      "pos": [
+        -1076.635078140685,
+        196.6917776892964
+      ],
+      "size": [
+        325.5201457140864,
+        404.7847951149806
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            265,
+            302
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "Image 1",
+      "properties": {
+        "Node name for S&R": "LoadImage",
+        "cnr_id": "comfy-core",
+        "ver": "0.5.1",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65
+      },
+      "widgets_values": [
+        "ZIB-2ZIT_00002_.png",
+        "image"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 127,
+      "type": "StringConcatenate",
+      "pos": [
+        -279.8316148283065,
+        721.5399318283311
+      ],
+      "size": [
+        511.45981386508583,
+        294.44566159110445
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string_a",
+          "type": "STRING",
+          "widget": {
+            "name": "string_a"
+          },
+          "link": 304
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            305
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "StringConcatenate"
+      },
+      "widgets_values": [
+        "",
+        "Move the girl's arms behind her head.",
+        ". "
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 9,
+      "type": "SaveImage",
+      "pos": [
+        736.6586325666425,
+        327.6177521005379
+      ],
+      "size": [
+        448.46861563790026,
+        402.5749824913439
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 9
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveImage",
+        "cnr_id": "comfy-core",
+        "ver": "0.5.1",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65
+      },
+      "widgets_values": [
+        "QWEN-EDIT-Orientation-HVRAM"
       ],
       "color": "#222",
       "bgcolor": "#000"
@@ -1279,13 +1307,13 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.6911909501453971,
+      "scale": 0.5193019910934618,
       "offset": [
-        839.824759712707,
-        49.06400447541688
+        1073.841323960091,
+        449.1806430349548
       ]
     },
-    "frontendVersion": "1.43.18",
+    "frontendVersion": "1.45.15",
     "workflowRendererVersion": "LG",
     "groupNodes": {},
     "VHS_latentpreview": true,
