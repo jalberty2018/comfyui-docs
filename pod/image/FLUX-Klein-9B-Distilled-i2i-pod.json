@@ -1,8 +1,8 @@
 {
   "id": "720facc5-6059-4d75-8f2e-baa80c40d74d",
   "revision": 0,
-  "last_node_id": 255,
-  "last_link_id": 536,
+  "last_node_id": 256,
+  "last_link_id": 545,
   "nodes": [
     {
       "id": 104,
@@ -168,7 +168,7 @@
           "name": "VAE",
           "type": "VAE",
           "links": [
-            467
+            539
           ]
         }
       ],
@@ -203,7 +203,7 @@
         {
           "name": "NKD_KLEIN_BUNDLE",
           "type": "NKD_KLEIN_BUNDLE",
-          "link": 472
+          "link": 545
         }
       ],
       "outputs": [
@@ -427,7 +427,7 @@
           "name": "MODEL",
           "type": "MODEL",
           "links": [
-            480
+            537
           ]
         }
       ],
@@ -464,7 +464,7 @@
           "name": "CLIP",
           "type": "CLIP",
           "links": [
-            481
+            538
           ]
         }
       ],
@@ -1337,8 +1337,8 @@
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            527,
-            533
+            533,
+            540
           ]
         }
       ],
@@ -1366,7 +1366,7 @@
         380.20147355998483
       ],
       "flags": {},
-      "order": 32,
+      "order": 31,
       "mode": 0,
       "inputs": [
         {
@@ -1593,6 +1593,173 @@
       "bgcolor": "#535"
     },
     {
+      "id": 103,
+      "type": "UNETLoader",
+      "pos": [
+        -1485.8915178086122,
+        566.0420862557568
+      ],
+      "size": [
+        364.42708333333337,
+        82
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            237
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UNETLoader",
+        "cnr_id": "comfy-core",
+        "ver": "0.8.2",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65
+      },
+      "widgets_values": [
+        "flux-2-klein.safetensors",
+        "default"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 256,
+      "type": "NKDKleinPresampling",
+      "pos": [
+        -986.8726342176654,
+        1084.6522318335178
+      ],
+      "size": [
+        595.9362572021479,
+        739.1984324951172
+      ],
+      "flags": {},
+      "order": 32,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 537
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 538
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 539
+        },
+        {
+          "label": "ref_0",
+          "name": "ref_images.ref_0",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 540
+        },
+        {
+          "label": "ref_1",
+          "name": "ref_images.ref_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            541
+          ]
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            542
+          ]
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": [
+            543
+          ]
+        },
+        {
+          "name": "latent",
+          "type": "LATENT",
+          "links": [
+            544
+          ]
+        },
+        {
+          "name": "bundle",
+          "type": "NKD_KLEIN_BUNDLE",
+          "links": [
+            545
+          ]
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        },
+        {
+          "name": "ref_0",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "NKDKleinPresampling"
+      },
+      "widgets_values": [
+        "\nEnhance image of the complete undressed woman, while preserving identity and facial structure.\n\nRemove all clothes, shirt, skirt, pants , blouse, bikini, masks.\n\nNatural bare skin, minimal makeup appearance, authentic human skin texture, natural complexion, healthy skin tone, realistic facial coloration, soft tonal variation, fine skin texture, natural lips, natural eyelashes, balanced exposure, soft realistic lighting, photorealistic, authentic facial details.\n\n\nPreserve identity, preserve facial structure, same person, consistent face, authentic proportions, anatomy, pose, body proportions, lighting, and realism.\n\nPreserve torso anatomy, preserve waist structure, preserve abdominal proportions, consistent navel position, preserve body proportions, same body geometry, anatomically consistent midriff.\n\nRemove logo and text.",
+        "different person, identity drift, different pose, different body shape, deformed anatomy, adult anatomy, big breasts, bad proportions, extra limbs, mutated hands, clothes, oversmoothed skin, plastic skin, cgi, cartoon, anime, unrealistic lighting, dressed, clothes, make-up.",
+        false,
+        false,
+        "As Reference",
+        1,
+        1024,
+        1024,
+        "Native",
+        "Gray",
+        0.5,
+        false,
+        0,
+        20,
+        10,
+        1,
+        false,
+        50
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
       "id": 165,
       "type": "ClownsharKSampler_Beta",
       "pos": [
@@ -1611,25 +1778,25 @@
           "name": "model",
           "shape": 7,
           "type": "MODEL",
-          "link": 378
+          "link": 541
         },
         {
           "name": "positive",
           "shape": 7,
           "type": "CONDITIONING",
-          "link": 379
+          "link": 542
         },
         {
           "name": "negative",
           "shape": 7,
           "type": "CONDITIONING",
-          "link": 380
+          "link": 543
         },
         {
           "name": "latent_image",
           "shape": 7,
           "type": "LATENT",
-          "link": 381
+          "link": 544
         },
         {
           "name": "sigmas",
@@ -1673,63 +1840,20 @@
         "Node name for S&R": "ClownsharKSampler_Beta"
       },
       "widgets_values": [
-        0.55,
-        "multistep/res_2m",
-        "beta57",
+        0.5,
+        "linear/euler",
+        "simple",
         8,
         -1,
         1,
         1.2,
-        78,
+        79,
         "increment",
         "standard",
         true
       ],
       "color": "#222",
       "bgcolor": "#000"
-    },
-    {
-      "id": 103,
-      "type": "UNETLoader",
-      "pos": [
-        -1485.8915178086122,
-        566.0420862557568
-      ],
-      "size": [
-        364.42708333333337,
-        82
-      ],
-      "flags": {},
-      "order": 14,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            237
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "UNETLoader",
-        "cnr_id": "comfy-core",
-        "ver": "0.8.2",
-        "enableTabs": false,
-        "tabWidth": 65,
-        "tabXOffset": 10,
-        "hasSecondTab": false,
-        "secondTabText": "Send Back",
-        "secondTabOffset": 80,
-        "secondTabWidth": 65
-      },
-      "widgets_values": [
-        "flux-2-klein.safetensors",
-        "default"
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
     },
     {
       "id": 191,
@@ -1776,129 +1900,6 @@
       ],
       "color": "#323",
       "bgcolor": "#535"
-    },
-    {
-      "id": 180,
-      "type": "NKDKleinPresampling",
-      "pos": [
-        -980.0511870584482,
-        1082.1919270924802
-      ],
-      "size": [
-        594.8715546874997,
-        959.6959999999995
-      ],
-      "flags": {},
-      "order": 31,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 480
-        },
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 481
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 467
-        },
-        {
-          "label": "ref_0",
-          "name": "ref_images.ref_0",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 527
-        },
-        {
-          "label": "ref_1",
-          "name": "ref_images.ref_1",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": null
-        },
-        {
-          "name": "mask",
-          "shape": 7,
-          "type": "MASK",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "links": [
-            378
-          ]
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "links": [
-            379
-          ]
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "links": [
-            380
-          ]
-        },
-        {
-          "name": "latent",
-          "type": "LATENT",
-          "links": [
-            381
-          ]
-        },
-        {
-          "name": "bundle",
-          "type": "NKD_KLEIN_BUNDLE",
-          "links": [
-            472
-          ]
-        },
-        {
-          "name": "mask",
-          "type": "MASK",
-          "links": null
-        },
-        {
-          "name": "ref_0",
-          "type": "IMAGE",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "NKDKleinPresampling"
-      },
-      "widgets_values": [
-        "Complete nude woman\n\nEnhance image of the complete undressed woman, while preserving identity and facial structure.\n\nRemove all clothes, shirt, skirt, pants , blouse, bikini, masks.\n\nNatural bare skin, minimal makeup appearance, authentic human skin texture, natural complexion, healthy skin tone, realistic facial coloration, soft tonal variation, fine skin texture, natural lips, natural eyelashes, balanced exposure, soft realistic lighting, photorealistic, authentic facial details.\n\n\nPreserve identity, preserve facial structure, same person, consistent face, authentic proportions, anatomy, pose, body proportions, lighting, and realism.\n\nPreserve torso anatomy, preserve waist structure, preserve abdominal proportions, consistent navel position, preserve body proportions, same body geometry, anatomically consistent midriff.\n\nRemove logo and text.",
-        "different person, identity drift, different pose, different body shape, deformed anatomy, adult anatomy, big breasts, bad proportions, extra limbs, mutated hands, clothes, oversmoothed skin, plastic skin, cgi, cartoon, anime, unrealistic lighting, dressed, clothes, make-up.",
-        true,
-        "As Reference",
-        1.6,
-        1024,
-        1024,
-        "Native",
-        "Gray",
-        0.5,
-        false,
-        3,
-        15,
-        10,
-        0.5,
-        false,
-        50
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
     }
   ],
   "links": [
@@ -1949,38 +1950,6 @@
       176,
       1,
       "IMAGE"
-    ],
-    [
-      378,
-      180,
-      0,
-      165,
-      0,
-      "MODEL"
-    ],
-    [
-      379,
-      180,
-      1,
-      165,
-      1,
-      "CONDITIONING"
-    ],
-    [
-      380,
-      180,
-      2,
-      165,
-      2,
-      "CONDITIONING"
-    ],
-    [
-      381,
-      180,
-      3,
-      165,
-      3,
-      "LATENT"
     ],
     [
       426,
@@ -2095,28 +2064,12 @@
       "VAE"
     ],
     [
-      467,
-      221,
-      0,
-      180,
-      2,
-      "VAE"
-    ],
-    [
       468,
       222,
       0,
       101,
       1,
       "VAE"
-    ],
-    [
-      472,
-      180,
-      4,
-      225,
-      0,
-      "NKD_KLEIN_BUNDLE"
     ],
     [
       473,
@@ -2143,35 +2096,11 @@
       "CLIP"
     ],
     [
-      480,
-      231,
-      0,
-      180,
-      0,
-      "MODEL"
-    ],
-    [
-      481,
-      232,
-      0,
-      180,
-      1,
-      "CLIP"
-    ],
-    [
       513,
       166,
       0,
       216,
       0,
-      "IMAGE"
-    ],
-    [
-      527,
-      252,
-      0,
-      180,
-      3,
       "IMAGE"
     ],
     [
@@ -2205,6 +2134,78 @@
       252,
       0,
       "IMAGE"
+    ],
+    [
+      537,
+      231,
+      0,
+      256,
+      0,
+      "MODEL"
+    ],
+    [
+      538,
+      232,
+      0,
+      256,
+      1,
+      "CLIP"
+    ],
+    [
+      539,
+      221,
+      0,
+      256,
+      2,
+      "VAE"
+    ],
+    [
+      540,
+      252,
+      0,
+      256,
+      3,
+      "IMAGE"
+    ],
+    [
+      541,
+      256,
+      0,
+      165,
+      0,
+      "MODEL"
+    ],
+    [
+      542,
+      256,
+      1,
+      165,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      543,
+      256,
+      2,
+      165,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      544,
+      256,
+      3,
+      165,
+      3,
+      "LATENT"
+    ],
+    [
+      545,
+      256,
+      4,
+      225,
+      0,
+      "NKD_KLEIN_BUNDLE"
     ]
   ],
   "groups": [
@@ -2226,8 +2227,8 @@
       "bounding": [
         -998.5550348227146,
         1013.7354003960585,
-        620.4814103342333,
-        1047.38044653901
+        628.9996803537645,
+        846.1332302914517
       ],
       "color": "#3f789e",
       "flags": {}
@@ -2310,8 +2311,8 @@
     "ds": {
       "scale": 0.7513148009015783,
       "offset": [
-        2271.203931703016,
-        -733.3837587195035
+        1934.7269448560937,
+        -952.7323190680154
       ]
     },
     "frontendVersion": "1.45.15",
