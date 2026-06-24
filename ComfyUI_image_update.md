@@ -3,6 +3,7 @@
 ## 24062026
 
  - ComfyUI 0.26.0
+ - Added Krea-2 basic t2v workflow and public runpod template.
 
 ## 19062026
 

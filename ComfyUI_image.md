@@ -12,30 +12,6 @@ These templates are intended for users who already want to run ComfyUI on RunPod
 
 Use this template for image generation and image editing workflows with Z-Image, ERNIE-Image, FLUX.2, FLUX.2 Klein, Qwen-Image, JoyCaption and Qwen-Image-Edit models.
 
-## Example ZIB-ZIT
-
-![ZIB-ZIT](images/ai-generated-ZIB-ZIT.jpg)
-
-## Example FLUX-Klein control/target image generation
-
-![FLUX-Klein](images/ai-generated-FLUX-KLEIN.jpg)
-
-## Example Qwen-Image-Edit multiple angles
-
-![Qwen-Image-Edit camera angles](images/ai-generated-QWEN-EDIT-CAMERA.jpg)
-
-## Example FLUX.2 Dev multiple angles
-
-![FLUX2-CAMERA](images/ai-generated-FLUX2-CAMERA.jpg)
-
-## Example Krea-2 basic worflow
-
-![krea-2](images/ai-generated-krea2.jpg)
-
-## Example JoyCaption
-
-![JoyCaption workflow](images/joycaption-workflow.jpg)
-
 ## 🔧 Features
 
 - Automatic model and LoRA provisioning via environment variables.
@@ -60,42 +36,66 @@ Use this template for image generation and image editing workflows with Z-Image,
 
 - [Specific for these templates](ComfyUI_image_tutorial.md)
 
-### Example running Z-Image on an RTX A4500
+##  Example workflow ZIB-ZIT
+
+![ZIB-ZIT](images/ai-generated-ZIB-ZIT.jpg)
+
+##  Example workflow FLUX-Klein control/target image generation
+
+![FLUX-Klein](images/ai-generated-FLUX-KLEIN.jpg)
+
+##  Example workflow Qwen-Image-Edit multiple angles
+
+![Qwen-Image-Edit camera angles](images/ai-generated-QWEN-EDIT-CAMERA.jpg)
+
+##  Example workflow FLUX.2 Dev multiple angles
+
+![FLUX2-CAMERA](images/ai-generated-FLUX2-CAMERA.jpg)
+
+##  Example workflow Krea-2 basic worflow
+
+![krea-2](images/ai-generated-krea2.jpg)
+
+##  Example workflow JoyCaption
+
+![JoyCaption workflow](images/joycaption-workflow.jpg)
+
+###  Example running Z-Image on an RTX A4500
 
 ![Pod running on RTX A4500 ZIT ComfyUI](images/runpod_A4500_ZIB_ZIT.jpg)
 
-### Example running Z-Image on an RTX A5000
+###  Example running Z-Image on an RTX A5000
 
 ![Pod running on RTX A5000 ZIT ComfyUI](images/runpod_A5000_ZIB_ZIT.jpg)
 
-### Example running Z-Image on an RTX 4000 Ada
+###  Example running Z-Image on an RTX 4000 Ada
 
 ![Pod running on RTX 4000 Ada ZIT ComfyUI](images/runpod_4000ADA_ZIB_ZIT.jpg)
 
-### Example running Z-Image on an RTX 3090
+###  Example running Z-Image on an RTX 3090
 
 ![Pod running on RTX 3090 ZIT ComfyUI](images/runpod_3090_ZIB_ZIT.jpg)
 
-### Example running FLUX.2 Klein 9B on an RTX A4500
+###  Example running FLUX.2 Klein 9B on an RTX A4500
 
 ![Pod running on RTX A4500 FLUX.2 Klein ComfyUI](images/runpod_FLUX_KLEIN.jpg)
 
-### Example running Qwen-Image-Edit fp8 on an RTX A5000
+###  Example running Qwen-Image-Edit fp8 on an RTX A5000
 
 ![Pod running on RTX A5000 Qwen-Image-Edit fp8 ComfyUI](images/runpod_A5000_QWEN-EDIT.jpg)
 
-### Example running Qwen-Image-Edit bf16 on an A40
+###  Example running Qwen-Image-Edit bf16 on an A40
 
 ![Pod running on A40 Qwen-Image-Edit bf16 ComfyUI](images/runpod_A40_QWEN-EDIT.jpg)
 
-### Example running FLUX.2 Dev bf16 on an L40S
+###  Example running FLUX.2 Dev bf16 on an L40S
 
 ![Pod running on L40S FLUX.2 Dev bf16 ComfyUI](images/runpod_L40S_FLUX_2.jpg)
 
-### Example running FLUX.2 Dev fp8 on an RTX A5000 (slow)
+###  Example running FLUX.2 Dev fp8 on an RTX A5000 (slow)
 
 ![Pod running on RTX A5000 FLUX.2 Dev fp8 ComfyUI](images/runpod_A5000_FLUX_2.jpg)
 
-### Example running Krea-2 turbo fp8 on an RTX A5000
+###  Example running Krea-2 turbo fp8 on an RTX A5000
 
 ![Pod running on RTX A5000 FLUX.2 Dev fp8 ComfyUI](images/runpod_A5000_krea2.jpg)
