@@ -28,6 +28,10 @@ Use this template for image generation and image editing workflows with Z-Image,
 
 ![FLUX2-CAMERA](images/ai-generated-FLUX2-CAMERA.jpg)
 
+## Example Krea-2 basic worflow
+
+![krea-2](images/ai-generated-krea2.jpg)
+
 ## Example JoyCaption
 
 ![JoyCaption workflow](images/joycaption-workflow.jpg)
@@ -91,3 +95,7 @@ Use this template for image generation and image editing workflows with Z-Image,
 ### Example running FLUX.2 Dev fp8 on an RTX A5000 (slow)
 
 ![Pod running on RTX A5000 FLUX.2 Dev fp8 ComfyUI](images/runpod_A5000_FLUX_2.jpg)
+
+### Example running Krea-2 turbo fp8 on an RTX A5000
+
+![Pod running on RTX A5000 FLUX.2 Dev fp8 ComfyUI](images/runpod_A5000_krea2.jpg)

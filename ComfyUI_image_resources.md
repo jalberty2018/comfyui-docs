@@ -58,3 +58,7 @@
 
 - [ComfyUI](https://comfyui.org/en/ernie-image-day-0-support)
 - [Official](https://ernie.baidu.com/blog/posts/ernie-image/)
+
+## Krea-2
+
+- [ComfyUI](https://comfyui.org/en/krea-2-open-source-models-are-now)
