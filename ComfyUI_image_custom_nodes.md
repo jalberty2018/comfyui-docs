@@ -131,6 +131,11 @@
 - [SeedVarianceEnhancer ZIT](https://github.com/ChangeTheConstants/SeedVarianceEnhancer)
 - [RBG-SmartSeedVariance ZIT](https://github.com/RamonGuthrie/ComfyUI-RBG-SmartSeedVariance)
 
+#### Krea-2
+
+ - [ConditioningKrea2Rebalance](https://github.com/nova452/ComfyUI-ConditioningKrea2Rebalance)
+
+
 ## 🧩 All possible Custom Nodes
 
 - [Full List](https://comfyui.rozenlaan.site)

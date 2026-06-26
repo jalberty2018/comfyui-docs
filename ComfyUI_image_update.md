@@ -1,9 +1,11 @@
 # run-comfyui-image
 
-## 24062026
+## 26062026
 
  - ComfyUI 0.26.0
  - Added Krea-2 basic t2v workflow and public runpod template.
+ - [ConditioningKrea2Rebalance](https://github.com/nova452/ComfyUI-ConditioningKrea2Rebalance)
+ 
 
 ## 19062026
 
