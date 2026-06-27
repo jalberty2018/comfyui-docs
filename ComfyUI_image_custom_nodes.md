@@ -133,8 +133,7 @@
 
 #### Krea-2
 
- - [ConditioningKrea2Rebalance](https://github.com/nova452/ComfyUI-ConditioningKrea2Rebalance)
-
+ - [comfyui-krea2-conditioning](https://github.com/huwhitememes/comfyui-krea2-conditioning)
 
 ## 🧩 All possible Custom Nodes
 

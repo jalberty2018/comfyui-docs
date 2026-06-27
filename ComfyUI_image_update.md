@@ -1,18 +1,16 @@
 # run-comfyui-image
 
-## 26062026
+## 27062026
 
  - ComfyUI 0.26.0
- - Added Krea-2 basic t2v workflow and public runpod template.
- - [ConditioningKrea2Rebalance](https://github.com/nova452/ComfyUI-ConditioningKrea2Rebalance)
- 
+ - Added Krea-2 t2v uncensored workflow.
+ - [comfyui-krea2-conditioning](https://github.com/huwhitememes/comfyui-krea2-conditioning)
 
 ## 19062026
 
 - ComfyUI 0.25.0
 - [KleinTiledUpscaler](https://github.com/Gavr728/ComfyUI_KleinTiledUpscale)
 - [JoyCaption](https://github.com/fpgaminer/joycaption_comfyui)
-- [Lama-remover](https://github.com/silveroxides/comfyui-lama-remover)
 - Fixed typos, white space breaks, documentation with Codex.
 - Made moves and hf downloads more verbose.
 - Fixed Flux-Klein downloads.
