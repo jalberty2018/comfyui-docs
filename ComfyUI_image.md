@@ -102,4 +102,8 @@ Use this template for image generation and image editing workflows with Z-Image,
 
 ###  Example running Krea-2 turbo fp8 on an RTX A5000
 
-![Pod running on RTX A5000 FLUX.2 Dev fp8 ComfyUI](images/runpod_A5000_krea2.jpg)
+![Pod running on RTX A5000 krea2 turbo fp8 ComfyUI](images/runpod_A5000_krea2.jpg)
+
+###  Example running Krea-2 turbo bf16 on an RTX A5000
+
+![Pod running on RTX A5000 krea2 turbo bf16 ComfyUI](images/runpod_A5000_krea2-bf16.jpg)

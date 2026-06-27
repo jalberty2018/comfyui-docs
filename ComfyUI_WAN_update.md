@@ -1,6 +1,6 @@
 # run-comfyui-wan2
 
-## tbr
+## 27062025
 
  - ComfyUI 0.26.0
 

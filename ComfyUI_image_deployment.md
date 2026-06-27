@@ -4,8 +4,6 @@
 
 ### 🚀 RunPod Templates
 
-- FLUX.2 Klein downloads the 4B non-gated model by default. See the [tutorial](ComfyUI_image_hf_gated.md) to add the gated 9B model.
-
 **One-Click Deployment links:**
 
 - 👉 [Z-Image Turbo and Base](https://console.runpod.io/deploy?template=ia5t70hfak&ref=se4tkc5o)
