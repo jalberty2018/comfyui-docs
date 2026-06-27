@@ -4,7 +4,8 @@
 
  - ComfyUI 0.26.0
  - Added Krea-2 t2v uncensored workflow.
- - [comfyui-krea2-conditioning](https://github.com/huwhitememes/comfyui-krea2-conditioning)
+ - [krea2-conditioning](https://github.com/huwhitememes/comfyui-krea2-conditioning)
+ - [Krea2TextEncoder](https://github.com/ethanfel/ComfyUI-Krea2TextEncoder)
 
 ## 19062026
 

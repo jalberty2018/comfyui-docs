@@ -52,9 +52,13 @@ Use this template for image generation and image editing workflows with Z-Image,
 
 ![FLUX2-CAMERA](images/ai-generated-FLUX2-CAMERA.jpg)
 
-##  Example workflow Krea-2 uncensored
+##  Example t2i workflow Krea-2 uncensored with prompt enhancer
 
 ![krea-2](images/ai-generated-krea2.jpg)
+
+##  Example t2i workflow Krea-2 uncensored with image input.
+
+![krea-2b](images/ai-generated-krea2-vlm.jpg)
 
 ##  Example workflow JoyCaption
 

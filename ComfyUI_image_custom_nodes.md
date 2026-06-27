@@ -133,7 +133,8 @@
 
 #### Krea-2
 
- - [comfyui-krea2-conditioning](https://github.com/huwhitememes/comfyui-krea2-conditioning)
+ - [krea2-conditioning](https://github.com/huwhitememes/comfyui-krea2-conditioning)
+ - [Krea2TextEncoder](https://github.com/ethanfel/ComfyUI-Krea2TextEncoder)
 
 ## 🧩 All possible Custom Nodes
 
