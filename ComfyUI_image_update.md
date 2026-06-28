@@ -7,6 +7,7 @@
  - [krea2-conditioning](https://github.com/huwhitememes/comfyui-krea2-conditioning)
  - [Krea2TextEncoder](https://github.com/ethanfel/ComfyUI-Krea2TextEncoder)
  - [Conditioning-Rebalance](https://github.com/nova452/ComfyUI-Conditioning-Rebalance)
+ - [COmfyUI-JoyAI](https://github.com/Nynxz/ComfyUI-JoyAI.git)
 
 ## 19062026
 

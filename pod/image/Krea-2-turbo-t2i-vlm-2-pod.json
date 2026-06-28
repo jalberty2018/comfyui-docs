@@ -1,8 +1,8 @@
 {
   "id": "08988737-a544-4ab1-99fb-22d67b7c36e3",
   "revision": 0,
-  "last_node_id": 102,
-  "last_link_id": 159,
+  "last_node_id": 103,
+  "last_link_id": 165,
   "nodes": [
     {
       "id": 76,
@@ -134,7 +134,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 15,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
@@ -174,7 +174,7 @@
         60
       ],
       "flags": {},
-      "order": 19,
+      "order": 17,
       "mode": 0,
       "inputs": [
         {
@@ -627,84 +627,6 @@
       "bgcolor": "#653"
     },
     {
-      "id": 92,
-      "type": "LoadImage",
-      "pos": [
-        733.6729737084092,
-        -1834.732564661737
-      ],
-      "size": [
-        361.4471483897106,
-        414.325119920499
-      ],
-      "flags": {},
-      "order": 4,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            148
-          ]
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoadImage"
-      },
-      "widgets_values": [
-        "girl_on_beach_image_pod.png",
-        "image"
-      ],
-      "color": "#233",
-      "bgcolor": "#355"
-    },
-    {
-      "id": 98,
-      "type": "LoadImage",
-      "pos": [
-        740.2579798761544,
-        -1363.3173418245644
-      ],
-      "size": [
-        352.13053998935834,
-        419.53824899534595
-      ],
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            154
-          ]
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoadImage"
-      },
-      "widgets_values": [
-        "pretty-teen.png",
-        "image"
-      ],
-      "color": "#233",
-      "bgcolor": "#355"
-    },
-    {
       "id": 56,
       "type": "CLIPLoader",
       "pos": [
@@ -716,7 +638,7 @@
         170
       ],
       "flags": {},
-      "order": 6,
+      "order": 4,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -760,16 +682,14 @@
         543.7852819190293
       ],
       "flags": {},
-      "order": 7,
+      "order": 5,
       "mode": 0,
       "inputs": [],
       "outputs": [
         {
           "name": "STRING",
           "type": "STRING",
-          "links": [
-            138
-          ]
+          "links": []
         }
       ],
       "title": "Text String (System Prompt)",
@@ -798,7 +718,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 8,
+      "order": 6,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -806,7 +726,7 @@
           "name": "CLIP",
           "type": "CLIP",
           "links": [
-            133
+            163
           ]
         }
       ],
@@ -820,134 +740,6 @@
       ],
       "color": "#432",
       "bgcolor": "#653"
-    },
-    {
-      "id": 58,
-      "type": "ConditioningZeroOut",
-      "pos": [
-        1498.6391801091481,
-        -1711.4287135444126
-      ],
-      "size": [
-        230,
-        30
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 17,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "conditioning",
-          "type": "CONDITIONING",
-          "link": 136
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            106
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ConditioningZeroOut",
-        "cnr_id": "comfy-core",
-        "ver": "0.25.0"
-      },
-      "widgets_values": [],
-      "color": "#323",
-      "bgcolor": "#535"
-    },
-    {
-      "id": 91,
-      "type": "TextEncodeKrea2",
-      "pos": [
-        1184.7707024289546,
-        -1631.6011924103343
-      ],
-      "size": [
-        560.9237137363198,
-        673.1299698415992
-      ],
-      "flags": {},
-      "order": 13,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 133
-        },
-        {
-          "name": "system_prompt",
-          "shape": 7,
-          "type": "STRING",
-          "link": 138
-        },
-        {
-          "name": "image1",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 148
-        },
-        {
-          "name": "mask1",
-          "shape": 7,
-          "type": "MASK",
-          "link": null
-        },
-        {
-          "name": "image2",
-          "type": "IMAGE",
-          "link": 154
-        },
-        {
-          "name": "mask2",
-          "type": "MASK",
-          "link": null
-        },
-        {
-          "name": "image3",
-          "type": "IMAGE",
-          "link": null
-        },
-        {
-          "name": "mask3",
-          "type": "MASK",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            136,
-            157
-          ]
-        },
-        {
-          "name": "vlm_prompt",
-          "type": "STRING",
-          "links": []
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "TextEncodeKrea2"
-      },
-      "widgets_values": [
-        "Two Young woman posing on a beach standing in front of a beach house in the background sea and palm trees.\n\nProfessional quality photoshoot, sunset light, bokeh.\n",
-        1,
-        0,
-        "after prompt",
-        true
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
     },
     {
       "id": 101,
@@ -1001,13 +793,13 @@
         130
       ],
       "flags": {},
-      "order": 18,
+      "order": 19,
       "mode": 0,
       "inputs": [
         {
           "name": "conditioning",
           "type": "CONDITIONING",
-          "link": 157
+          "link": 165
         }
       ],
       "outputs": [
@@ -1043,7 +835,7 @@
         362
       ],
       "flags": {},
-      "order": 14,
+      "order": 13,
       "mode": 0,
       "inputs": [
         {
@@ -1119,7 +911,7 @@
         140
       ],
       "flags": {},
-      "order": 9,
+      "order": 7,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1162,7 +954,7 @@
         120
       ],
       "flags": {},
-      "order": 10,
+      "order": 8,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1230,6 +1022,196 @@
       ],
       "color": "#222",
       "bgcolor": "#000"
+    },
+    {
+      "id": 92,
+      "type": "LoadImage",
+      "pos": [
+        733.6729737084092,
+        -1834.732564661737
+      ],
+      "size": [
+        361.4471483897106,
+        414.325119920499
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            160
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "girl_on_beach_image_pod.png",
+        "image"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 98,
+      "type": "LoadImage",
+      "pos": [
+        740.2579798761544,
+        -1363.3173418245644
+      ],
+      "size": [
+        352.13053998935834,
+        419.53824899534595
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            162
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "pretty-teen.png",
+        "image"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 58,
+      "type": "ConditioningZeroOut",
+      "pos": [
+        1552.7522767900555,
+        -1716.5822914806615
+      ],
+      "size": [
+        230,
+        30
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 164
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            106
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ConditioningZeroOut",
+        "cnr_id": "comfy-core",
+        "ver": "0.25.0"
+      },
+      "widgets_values": [],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 103,
+      "type": "Krea2EditRebalance",
+      "pos": [
+        1170.5554165411804,
+        -1647.3587467634834
+      ],
+      "size": [
+        573.93508,
+        719.9456233190919
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 163
+        },
+        {
+          "name": "image1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 160
+        },
+        {
+          "name": "image2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 162
+        },
+        {
+          "name": "image3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image4",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "links": [
+            164,
+            165
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Krea2EditRebalance"
+      },
+      "widgets_values": [
+        "Two Young woman posing on a beach standing in front of a beach house in the background sea and palm trees.\n\nProfessional quality photoshoot, sunset light, bokeh.\n",
+        0.8,
+        0.5,
+        true,
+        "normal",
+        "normal",
+        "normal",
+        "normal"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
     }
   ],
   "links": [
@@ -1338,54 +1320,6 @@
       "LATENT"
     ],
     [
-      133,
-      80,
-      0,
-      91,
-      0,
-      "CLIP"
-    ],
-    [
-      136,
-      91,
-      0,
-      58,
-      0,
-      "CONDITIONING"
-    ],
-    [
-      138,
-      61,
-      0,
-      91,
-      1,
-      "STRING"
-    ],
-    [
-      148,
-      92,
-      0,
-      91,
-      2,
-      "IMAGE"
-    ],
-    [
-      154,
-      98,
-      0,
-      91,
-      4,
-      "IMAGE"
-    ],
-    [
-      157,
-      91,
-      0,
-      102,
-      0,
-      "CONDITIONING"
-    ],
-    [
       158,
       102,
       0,
@@ -1399,6 +1333,46 @@
       0,
       73,
       1,
+      "CONDITIONING"
+    ],
+    [
+      160,
+      92,
+      0,
+      103,
+      1,
+      "IMAGE"
+    ],
+    [
+      162,
+      98,
+      0,
+      103,
+      2,
+      "IMAGE"
+    ],
+    [
+      163,
+      80,
+      0,
+      103,
+      0,
+      "CLIP"
+    ],
+    [
+      164,
+      103,
+      0,
+      58,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      165,
+      103,
+      0,
+      102,
+      0,
       "CONDITIONING"
     ]
   ],
@@ -1421,8 +1395,8 @@
       "bounding": [
         688.3793185061061,
         -1934.5993644528087,
-        1093.8488258308514,
-        1095.5011196287837
+        1101.451695216943,
+        1053.1700440397524
       ],
       "color": "#3f789e",
       "flags": {}
@@ -1467,10 +1441,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.23825519396369257,
+      "scale": 0.35049389948139253,
       "offset": [
-        1082.2390623116976,
-        3512.9714567611054
+        373.3910423075374,
+        2674.813021457868
       ]
     },
     "frontendVersion": "1.45.19",
