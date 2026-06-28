@@ -14,6 +14,7 @@ The example screenshots in the overview page document successful runs with these
 | FLUX.2 Klein    | RTX A4500    | 20 GB    | 50 GB   |
 | FLUX.2 Dev bf16 | RTX 6000 Ada | 44 GB    | 80 GB   |
 | FLUX.2 Dev fp8  | RTX 3090    | 24 GB    | 50 GB   |
+| JoyAI-image-edit bf16 | L40S | 43 GB    | 60 GB   |
 | Qwen Image bf16       | RTX A6000  | 44 GB    | 65 GB   |
 | Qwen Image fp8        | RTX A5000, RTX 3090 | 24 GB    | 45 GB   |
 | Qwen Image Edit bf16  | RTX A5000 | 24 GB    | 65 GB   |
@@ -29,6 +30,7 @@ The example screenshots in the overview page document successful runs with these
 | Krea-2 fp8 | 60 GB (`/workspace`)       |
 | FLUX bf16 | 90 GB (`/workspace`)       |
 | FLUX fp8 | 75 GB (`/workspace`)       |
+| JoyAI-image-edit bf16 | 70 GB (`/workspace`)       |
 | Qwen Image | 70 GB (`/workspace`)       |
 
 ## Pod Storage Requirements
