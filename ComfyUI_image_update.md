@@ -7,9 +7,7 @@
  - [krea2-conditioning](https://github.com/huwhitememes/comfyui-krea2-conditioning)
  - [Krea2TextEncoder](https://github.com/ethanfel/ComfyUI-Krea2TextEncoder)
  - [Conditioning-Rebalance](https://github.com/nova452/ComfyUI-Conditioning-Rebalance)
- - [JoyAI](https://github.com/Nynxz/ComfyUI-JoyAI.git)
  - [Krea2T-Enhancer](https://github.com/capitan01R/ComfyUI-Krea2T-Enhancer)
- - [JoyAI-Image-Edit](https://github.com/judian17/ComfyUI-JoyAI-Image-Edit)
 
 ## 19062026
 

@@ -138,11 +138,6 @@
  - [Conditioning-Rebalance](https://github.com/nova452/ComfyUI-Conditioning-Rebalance)
  - [Krea2T-Enhancer](https://github.com/capitan01R/ComfyUI-Krea2T-Enhancer)
 
-#### JoyAI
-
-  - [JoyAI](https://github.com/Nynxz/ComfyUI-JoyAI.git)
-  - [JoyAI-Image-Edit](https://github.com/judian17/ComfyUI-JoyAI-Image-Edit)
-
 ## 🧩 All possible Custom Nodes
 
 - [Full List](https://comfyui.rozenlaan.site)
