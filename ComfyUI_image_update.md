@@ -1,13 +1,16 @@
 # run-comfyui-image
 
-## 28062026
+## 30062026
 
  - ComfyUI 0.26.0
  - Added Krea-2 t2v uncensored workflow.
  - [krea2-conditioning](https://github.com/huwhitememes/comfyui-krea2-conditioning)
  - [Krea2TextEncoder](https://github.com/ethanfel/ComfyUI-Krea2TextEncoder)
  - [Conditioning-Rebalance](https://github.com/nova452/ComfyUI-Conditioning-Rebalance)
- - [COmfyUI-JoyAI](https://github.com/Nynxz/ComfyUI-JoyAI.git)
+ - [JoyAI](https://github.com/Nynxz/ComfyUI-JoyAI.git)
+ - [Krea2T-Enhancer](https://github.com/capitan01R/ComfyUI-Krea2T-Enhancer)
+ - [JoyAI-Image-Edit](https://github.com/judian17/ComfyUI-JoyAI-Image-Edit)
+ - [Krea-Moodboards](https://github.com/Andro-Meta/ComfyUI-Krea-Moodboards)
 
 ## 19062026
 
