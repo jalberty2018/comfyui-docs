@@ -137,7 +137,6 @@
  - [Krea2TextEncoder](https://github.com/ethanfel/ComfyUI-Krea2TextEncoder)
  - [Conditioning-Rebalance](https://github.com/nova452/ComfyUI-Conditioning-Rebalance)
  - [Krea2T-Enhancer](https://github.com/capitan01R/ComfyUI-Krea2T-Enhancer)
- - [Krea-Moodboards](https://github.com/Andro-Meta/ComfyUI-Krea-Moodboards)
 
 #### JoyAI
 

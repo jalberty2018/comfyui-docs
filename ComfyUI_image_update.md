@@ -10,7 +10,6 @@
  - [JoyAI](https://github.com/Nynxz/ComfyUI-JoyAI.git)
  - [Krea2T-Enhancer](https://github.com/capitan01R/ComfyUI-Krea2T-Enhancer)
  - [JoyAI-Image-Edit](https://github.com/judian17/ComfyUI-JoyAI-Image-Edit)
- - [Krea-Moodboards](https://github.com/Andro-Meta/ComfyUI-Krea-Moodboards)
 
 ## 19062026
 
