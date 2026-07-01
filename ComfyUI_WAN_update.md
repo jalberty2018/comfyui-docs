@@ -1,5 +1,12 @@
 # run-comfyui-wan2
 
+## Release Notes Policy
+
+- A new dated subtitle is added whenever a new stable ComfyUI release is included.
+- The date is updated later when custom nodes are added, removed, or changed, or when code improvements and bug fixes are applied.
+- The date reflects when the related custom nodes were cloned from their upstream repositories.
+- Pinned custom nodes are not updated automatically, because changing those pins can introduce compatibility issues.
+
 ## 27062025
 
  - ComfyUI 0.26.0
