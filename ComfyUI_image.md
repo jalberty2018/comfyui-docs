@@ -42,9 +42,13 @@ The guiding idea is aligned with the open-model discussion described by Eric Har
 
 - [Specific for these templates](ComfyUI_image_tutorial.md)
 
-##  Example workflow ZIB-ZIT uncensored
+##  Example t2i workflow Krea-2 uncensored with prompt enhancer
 
-![ZIB-ZIT](images/ai-generated-ZIB-ZIT.jpg)
+![krea-2](images/ai-generated-krea2.jpg)
+
+##  Example t2i workflow Krea-2 uncensored with image conditioning without vae encoding.
+
+![krea-2b](images/ai-generated-krea2-vlm.jpg)
 
 ##  Example workflow FLUX-Klein control/target image generation uncensored
 
@@ -58,13 +62,9 @@ The guiding idea is aligned with the open-model discussion described by Eric Har
 
 ![FLUX2-CAMERA](images/ai-generated-FLUX2-CAMERA.jpg)
 
-##  Example t2i workflow Krea-2 uncensored with prompt enhancer
+##  Example workflow ZIB-ZIT uncensored
 
-![krea-2](images/ai-generated-krea2.jpg)
-
-##  Example t2i workflow Krea-2 uncensored with image input.
-
-![krea-2b](images/ai-generated-krea2-vlm.jpg)
+![ZIB-ZIT](images/ai-generated-ZIB-ZIT.jpg)
 
 ##  Example workflow JoyCaption
 
