@@ -12,19 +12,11 @@ These templates are intended for users who already want to run ComfyUI on RunPod
 
 Use this template for LTX 2.3 video generation, image-to-video, video-to-video, pose-transfer, camera-motion transfer, and audio/reference workflows.
 
-## Example included workflows
+## Purpose of this pod
 
-### i2v
+This pod is designed as an experimental ComfyUI environment for image creators who want maximum creative freedom. It focuses on integrating image models, editing models, LoRAs, and custom nodes that reduce unnecessary workflow restrictions and make it easier to test open, flexible, and uncensored creative pipelines.
 
-![Select number of frames, size, prompt and offload](images/ai-generated-LTX.jpg)
-
-### vi2v pose transfer DWPose
-
-![Select number of frames, size, prompt and offload](images/ai-generated-LTX-vi2v.jpg)
-
-### vi2v pose transfer SDPose (Body Ratio Mapper)
-
-![Select number of frames, size, prompt and offload](images/ai-generated-LTX-vi2v-sdpose.jpg)
+The guiding idea is aligned with the open-model discussion described by Eric Hartford in [Uncensored Models](https://erichartford.com/uncensored-models): local and open AI systems should give advanced users more ownership, control, and composability. In this context, the pod is not a safety policy or content platform. It is a technical workspace for responsible users who want to explore creative image generation, image editing, prompt enhancement, captioning, and model combinations with as much artistic latitude as the available models and custom nodes allow.
 
 ## 🔧 Features
 
@@ -44,6 +36,21 @@ Use this template for LTX 2.3 video generation, image-to-video, video-to-video, 
 - Code Server
 - Hugging Face API
 - CivitAI API
+
+## Example included workflows
+
+### i2v
+
+![Select number of frames, size, prompt and offload](images/ai-generated-LTX.jpg)
+
+### vi2v pose transfer DWPose
+
+![Select number of frames, size, prompt and offload](images/ai-generated-LTX-vi2v.jpg)
+
+### vi2v pose transfer SDPose (Body Ratio Mapper)
+
+![Select number of frames, size, prompt and offload](images/ai-generated-LTX-vi2v-sdpose.jpg)
+
 
 ## 📦 Deployment on RunPod
 
