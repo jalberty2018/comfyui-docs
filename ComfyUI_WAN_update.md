@@ -7,6 +7,10 @@
 - The date reflects when the related custom nodes were cloned from their upstream repositories.
 - Pinned custom nodes are not updated automatically, because changing those pins can introduce compatibility issues.
 
+## 02072025
+
+ - ComfyUI 0.27.0
+
 ## 27062025
 
  - ComfyUI 0.26.0
