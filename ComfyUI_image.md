@@ -50,6 +50,10 @@ The guiding idea is aligned with the open-model discussion described by Eric Har
 
 ![krea-2b](images/ai-generated-krea2-vlm.jpg)
 
+##  Example t2i workflow Krea-2 artist friendly conditioning
+
+![krea-2c](images/ai-generated-krea2-vlm-artist.jpg)
+
 ##  Example workflow FLUX-Klein control/target image generation uncensored
 
 ![FLUX-Klein](images/ai-generated-FLUX-KLEIN.jpg)
