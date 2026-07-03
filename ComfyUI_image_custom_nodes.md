@@ -137,6 +137,7 @@
  - [Krea2TextEncoder](https://github.com/ethanfel/ComfyUI-Krea2TextEncoder)
  - [Conditioning-Rebalance](https://github.com/nova452/ComfyUI-Conditioning-Rebalance)
  - [Krea2T-Enhancer](https://github.com/capitan01R/ComfyUI-Krea2T-Enhancer)
+ - [krea-reference](https://github.com/kgilper/krea-reference)
 
 ## 🧩 All possible Custom Nodes
 
