@@ -15,6 +15,10 @@
 - 👉 [RunPod WAN 2.2 Animate (lightx2v)](https://console.runpod.io/deploy?template=tp7gj0khyo&ref=se4tkc5o)
 - 👉 [RunPod WAN SCAIL-2 VI2V (lightx2v)](https://console.runpod.io/deploy?template=9i0lkwau54&ref=se4tkc5o)
 
+### 🏷️ Container date tags
+
+- The container date tag used by a RunPod template, for example `01072026`, can differ between models. This is intentional: a template may stay on an earlier validated container when a newer build has not yet been tested with that specific model, or when only minor changes were made compared with the previous version.
+
 ## 📘 Tutorial
 
 - [Specific for these templates](ComfyUI_WAN_tutorial.md)

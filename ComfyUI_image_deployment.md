@@ -18,6 +18,10 @@
 - 👉 [Qwen-Image 2512](https://console.runpod.io/deploy?template=3fri17sxaa&ref=se4tkc5o)
 - 👉 [Qwen-Image-Edit 2511](https://console.runpod.io/deploy?template=mxvvx0hcmp&ref=se4tkc5o)
 
+### 🏷️ Container date tags
+
+- The container date tag used by a RunPod template, for example `01072026`, can differ between models. This is intentional: a template may stay on an earlier validated container when a newer build has not yet been tested with that specific model, or when only minor changes were made compared with the previous version.
+
 ## 📘 Tutorial
 
 - [Specific for these templates](ComfyUI_image_tutorial.md)

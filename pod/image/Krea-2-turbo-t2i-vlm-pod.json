@@ -203,42 +203,6 @@
       "bgcolor": "#355"
     },
     {
-      "id": 61,
-      "type": "PrimitiveStringMultiline",
-      "pos": [
-        708.2377014758024,
-        -2566.4590182490633
-      ],
-      "size": [
-        476.9386283201334,
-        543.7852819190293
-      ],
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            138
-          ]
-        }
-      ],
-      "title": "Text String (System Prompt)",
-      "properties": {
-        "Node name for S&R": "PrimitiveStringMultiline",
-        "cnr_id": "comfy-core",
-        "ver": "0.25.0"
-      },
-      "widgets_values": [
-        "You are an expert prompt engineer for text-to-image models. Your task is to improve the user's prompt into a clear, detailed, and effective image-generation prompt while preserving the user's original intent.\n\nInternally analyze the request before answering:\n\n* Identify the primary subject, action, and overall mood.\n* Determine the most appropriate visual style, composition, framing, camera perspective, and lighting.\n* Decide which details improve image generation without changing the meaning.\n* Preserve the user's requested medium whenever one is specified.\n\nOutput a single cohesive prompt paragraph only.\n\nFollow these rules strictly:\n\n1. **Preserve Intent:** Keep all original subjects, actions, relationships, colors, poses, expressions, and composition unless the user explicitly requests changes.\n\n2. **Do Not Invent Content:** Never introduce additional people, objects, clothing, accessories, animals, backgrounds, or events that are not supported by the user's prompt.\n\n3. **Improve Clarity:** Rewrite ambiguous wording into precise visual descriptions that are easy for a text-to-image model to interpret.\n\n4. **Natural Detail:** Add only realistic visual details that strengthen image generation, such as camera angle, framing, perspective, lighting, depth of field, textures, or atmosphere, when they naturally fit the existing scene.\n\n5. **Respect Existing Detail:** If the user's prompt is already detailed, make only minimal improvements for clarity and structure.\n\n6. **Prompt Structure:** Produce one continuous paragraph written specifically for text-to-image generation. Do not use lists, JSON, markdown, explanations, or reasoning.\n\n7. **Text Rendering:** If visible text is requested inside the image, reproduce the exact requested wording enclosed in quotation marks.\n\n8. **Preserve Medium:** If the user specifies a medium such as photograph, cinematic still, illustration, painting, watercolor, sketch, comic, anime, pixel art, or 3D render, preserve that medium exactly.\n\n9. **Avoid Redundancy:** Do not repeat information unnecessarily. Every sentence should contribute useful visual guidance.\n\n10. **Focus on Visual Information:** Describe only elements that influence the generated image. Avoid storytelling, emotional interpretation, or information that cannot be depicted visually.\n\nUser's Input:\n"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
       "id": 80,
       "type": "GetNode",
       "pos": [
@@ -252,7 +216,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 4,
+      "order": 3,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -289,7 +253,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 16,
+      "order": 17,
       "mode": 0,
       "inputs": [
         {
@@ -368,7 +332,7 @@
         130
       ],
       "flags": {},
-      "order": 17,
+      "order": 18,
       "mode": 0,
       "inputs": [
         {
@@ -589,7 +553,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 11,
+      "order": 13,
       "mode": 0,
       "inputs": [
         {
@@ -618,92 +582,6 @@
       "bgcolor": "#533"
     },
     {
-      "id": 57,
-      "type": "VAELoader",
-      "pos": [
-        1873.162547933066,
-        -2546.1123193561493
-      ],
-      "size": [
-        372.57381044740873,
-        58
-      ],
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [
-            122
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VAELoader",
-        "cnr_id": "comfy-core",
-        "ver": "0.25.0",
-        "models": [
-          {
-            "name": "qwen_image_vae.safetensors",
-            "url": "https://huggingface.co/Comfy-Org/Krea-2/resolve/main/vae/qwen_image_vae.safetensors",
-            "directory": "vae"
-          }
-        ]
-      },
-      "widgets_values": [
-        "vae/qwen_image_vae.safetensors"
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
-      "id": 56,
-      "type": "CLIPLoader",
-      "pos": [
-        1242.5851430520117,
-        -2593.9578166391893
-      ],
-      "size": [
-        450,
-        170
-      ],
-      "flags": {},
-      "order": 6,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            162
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPLoader",
-        "cnr_id": "comfy-core",
-        "ver": "0.25.0",
-        "models": [
-          {
-            "name": "qwen3vl_4b_fp8_scaled.safetensors",
-            "url": "https://huggingface.co/Comfy-Org/Krea-2/resolve/main/text_encoders/qwen3vl_4b_fp8_scaled.safetensors",
-            "directory": "text_encoders"
-          }
-        ]
-      },
-      "widgets_values": [
-        "Huihui-Qwen3-VL-4B-Instruct-abliterated.safetensors",
-        "krea2",
-        "default"
-      ],
-      "color": "#233",
-      "bgcolor": "#355"
-    },
-    {
       "id": 55,
       "type": "UNETLoader",
       "pos": [
@@ -715,7 +593,7 @@
         138.93934287959428
       ],
       "flags": {},
-      "order": 7,
+      "order": 4,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -758,7 +636,7 @@
         106
       ],
       "flags": {},
-      "order": 12,
+      "order": 11,
       "mode": 0,
       "inputs": [
         {
@@ -866,84 +744,6 @@
       "bgcolor": "#535"
     },
     {
-      "id": 92,
-      "type": "LoadImage",
-      "pos": [
-        733.6729737084092,
-        -1834.732564661737
-      ],
-      "size": [
-        361.4471483897106,
-        414.325119920499
-      ],
-      "flags": {},
-      "order": 8,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            148
-          ]
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoadImage"
-      },
-      "widgets_values": [
-        "0a5550b0a64da1ca45329ab7321ff095.jpg",
-        "image"
-      ],
-      "color": "#233",
-      "bgcolor": "#355"
-    },
-    {
-      "id": 98,
-      "type": "LoadImage",
-      "pos": [
-        740.2579798761544,
-        -1363.3173418245644
-      ],
-      "size": [
-        352.13053998935834,
-        419.53824899534595
-      ],
-      "flags": {},
-      "order": 9,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            154
-          ]
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoadImage"
-      },
-      "widgets_values": [
-        "0ef2974cb21b4bb992647fc088f72029xl.jpg",
-        "image"
-      ],
-      "color": "#233",
-      "bgcolor": "#355"
-    },
-    {
       "id": 52,
       "type": "EmptyLatentImage",
       "pos": [
@@ -957,7 +757,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 14,
+      "order": 12,
       "mode": 0,
       "inputs": [
         {
@@ -1012,7 +812,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 18,
+      "order": 16,
       "mode": 0,
       "inputs": [
         {
@@ -1052,7 +852,7 @@
         475
       ],
       "flags": {},
-      "order": 10,
+      "order": 5,
       "mode": 0,
       "inputs": [
         {
@@ -1199,7 +999,7 @@
         673.1299698415992
       ],
       "flags": {},
-      "order": 13,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
@@ -1270,6 +1070,206 @@
         0,
         "after prompt",
         false
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 92,
+      "type": "LoadImage",
+      "pos": [
+        733.6729737084092,
+        -1834.732564661737
+      ],
+      "size": [
+        361.4471483897106,
+        414.325119920499
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            148
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "example.png",
+        "image"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 98,
+      "type": "LoadImage",
+      "pos": [
+        740.2579798761544,
+        -1363.3173418245644
+      ],
+      "size": [
+        352.13053998935834,
+        419.53824899534595
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            154
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "example.png",
+        "image"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 56,
+      "type": "CLIPLoader",
+      "pos": [
+        1242.5851430520117,
+        -2593.9578166391893
+      ],
+      "size": [
+        450,
+        170
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            162
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPLoader",
+        "cnr_id": "comfy-core",
+        "ver": "0.25.0",
+        "models": [
+          {
+            "name": "qwen3vl_4b_fp8_scaled.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/Krea-2/resolve/main/text_encoders/qwen3vl_4b_fp8_scaled.safetensors",
+            "directory": "text_encoders"
+          }
+        ]
+      },
+      "widgets_values": [
+        "qwen3-vl-4b-instruct-abliterated.safetensors",
+        "krea2",
+        "default"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 57,
+      "type": "VAELoader",
+      "pos": [
+        1873.162547933066,
+        -2546.1123193561493
+      ],
+      "size": [
+        372.57381044740873,
+        58
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            122
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader",
+        "cnr_id": "comfy-core",
+        "ver": "0.25.0",
+        "models": [
+          {
+            "name": "qwen_image_vae.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/Krea-2/resolve/main/vae/qwen_image_vae.safetensors",
+            "directory": "vae"
+          }
+        ]
+      },
+      "widgets_values": [
+        "krea2RealVae_v10.safetensors"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 61,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        708.2377014758024,
+        -2566.4590182490633
+      ],
+      "size": [
+        476.9386283201334,
+        543.7852819190293
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            138
+          ]
+        }
+      ],
+      "title": "Text String (System Prompt)",
+      "properties": {
+        "Node name for S&R": "PrimitiveStringMultiline",
+        "cnr_id": "comfy-core",
+        "ver": "0.25.0"
+      },
+      "widgets_values": [
+        "You are an expert visual analyst for text-to-image conditioning.\n\nYour task is to convert the user's request and any provided image into a single highly descriptive image-generation prompt that preserves every visible detail useful for image synthesis.\n\nInternally analyze the image before answering:\n\n• Identify every visible characteristic of each person.\n• Describe identity-related features as precisely as possible.\n• Describe body proportions, anatomy, pose, clothing, hairstyle, facial features, expression, lighting, camera, and environment.\n• Preserve all existing visual relationships.\n• Infer only information that is visually well supported.\n• Ignore information that cannot be reliably observed.\n\nOutput a single continuous prompt paragraph only.\n\nFollow these rules strictly:\n\n1. Person First\nAlways begin by describing the main person before describing the environment.\n\nInclude whenever visible:\n\n- approximate age\n- gender presentation\n- ethnicity or skin tone if visually apparent\n- height impression\n- body build\n- body proportions\n- posture\n- pose\n- head orientation\n- gaze direction\n- facial expression\n\n2. Identity Preservation\n\nDescribe stable identity characteristics with maximum precision, including:\n\n- face shape\n- forehead\n- eyebrows\n- eye shape\n- eye color\n- eyelashes\n- nose shape\n- lips\n- jawline\n- chin\n- ears\n- cheekbones\n- skin texture\n- freckles\n- moles\n- scars\n- wrinkles\n- makeup\n- facial hair\n\nDo not exaggerate or invent details.\n\n3. Hair\n\nDescribe completely:\n\n- color\n- length\n- style\n- texture\n- bangs\n- parting\n- tied or loose\n- curls\n- highlights\n- flyaway hair\n\n4. Clothing\n\nDescribe every visible clothing item separately.\n\nInclude:\n\n- garment type\n- color\n- material\n- texture\n- pattern\n- fit\n- sleeves\n- neckline\n- buttons\n- zippers\n- logos\n- folds\n- wrinkles\n- transparency\n- accessories\n\n5. Hands and Feet\n\nDescribe:\n\n- hand positions\n- finger placement\n- visible fingernails\n- footwear\n- bare feet\n- socks\n\n6. Body Details\n\nDescribe visible anatomy without adding information that cannot be seen.\n\nInclude:\n\n- shoulders\n- arms\n- elbows\n- wrists\n- hands\n- torso\n- waist\n- hips\n- legs\n- knees\n- calves\n- ankles\n\nMention visible muscle tone, body fat distribution, veins, skin pores, body hair, or other natural skin details only when clearly visible.\n\n7. Pose\n\nDescribe precisely:\n\n- body orientation\n- weight distribution\n- arm positions\n- leg positions\n- interaction with objects\n- sitting, standing, walking, kneeling, lying, etc.\n\n8. Camera\n\nDescribe:\n\n- framing\n- crop\n- camera distance\n- viewing angle\n- perspective\n- focal length impression\n- depth of field\n\n9. Lighting\n\nDescribe:\n\n- light source\n- direction\n- softness\n- shadows\n- reflections\n- exposure\n- contrast\n- color temperature\n\n10. Environment\n\nDescribe only visible elements:\n\n- location\n- background\n- furniture\n- vegetation\n- weather\n- architecture\n- floor\n- walls\n- objects\n\nNever invent unseen scenery.\n\n11. Photographic Characteristics\n\nWhen applicable describe:\n\n- realism\n- lens characteristics\n- focus\n- sharpness\n- bokeh\n- motion blur\n- film grain\n- image noise\n\n12. Preserve Intent\n\nPreserve all subjects, poses, relationships, composition, colors, clothing, and requested edits exactly.\n\n13. Do Not Invent\n\nNever add people, objects, accessories, clothing, backgrounds, poses, or actions that are not supported by the image or explicitly requested.\n\n14. Clear Prompt\n\nProduce one continuous paragraph.\n\nDo not use bullet lists.\n\nDo not explain your reasoning.\n\nDo not use markdown.\n\nOutput only the final prompt."
       ],
       "color": "#232",
       "bgcolor": "#353"
@@ -1526,13 +1526,13 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.35187096658564093,
+      "scale": 0.66516454867635,
       "offset": [
-        -103.57326214836708,
-        2815.835215834013
+        -246.67460230622015,
+        2799.7219743012624
       ]
     },
-    "frontendVersion": "1.45.19",
+    "frontendVersion": "1.45.20",
     "VHS_latentpreview": true,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
