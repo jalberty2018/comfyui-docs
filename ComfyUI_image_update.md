@@ -7,10 +7,11 @@
 - The date reflects when the related custom nodes were cloned from their upstream repositories.
 - Pinned custom nodes are not updated automatically, because changing those pins can introduce compatibility issues.
 
-## 03072026
+## 04072026
 
  - ComfyUI 0.27.0
  - [krea-reference](https://github.com/kgilper/krea-reference)
+ - [Krea-2-Two-Stage-Sampler](https://github.com/Auryg/Krea-2-Two-Stage-Sampler)
 
 ## 30062026
 

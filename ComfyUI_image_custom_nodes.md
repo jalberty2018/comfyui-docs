@@ -138,6 +138,7 @@
  - [Conditioning-Rebalance](https://github.com/nova452/ComfyUI-Conditioning-Rebalance)
  - [Krea2T-Enhancer](https://github.com/capitan01R/ComfyUI-Krea2T-Enhancer)
  - [krea-reference](https://github.com/kgilper/krea-reference)
+ - [Krea-2-Two-Stage-Sampler](https://github.com/Auryg/Krea-2-Two-Stage-Sampler)
 
 ## 🧩 All possible Custom Nodes
 
