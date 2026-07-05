@@ -1,8 +1,8 @@
 {
   "id": "08988737-a544-4ab1-99fb-22d67b7c36e3",
   "revision": 0,
-  "last_node_id": 111,
-  "last_link_id": 185,
+  "last_node_id": 115,
+  "last_link_id": 193,
   "nodes": [
     {
       "id": 76,
@@ -408,7 +408,7 @@
           "name": "positive",
           "shape": 7,
           "type": "CONDITIONING",
-          "link": 179
+          "link": 192
         },
         {
           "name": "negative",
@@ -471,7 +471,7 @@
         -1,
         1,
         1,
-        953910579082697,
+        245760820750114,
         "randomize",
         "standard",
         true
@@ -732,7 +732,7 @@
       "id": 58,
       "type": "ConditioningZeroOut",
       "pos": [
-        1249.0473553737213,
+        1317.6228872343709,
         -1757.235068246658
       ],
       "size": [
@@ -748,7 +748,7 @@
         {
           "name": "conditioning",
           "type": "CONDITIONING",
-          "link": 180
+          "link": 193
         }
       ],
       "outputs": [
@@ -773,7 +773,7 @@
       "id": 80,
       "type": "GetNode",
       "pos": [
-        1295.0707974636828,
+        1363.6463293243323,
         -1681.508422748451
       ],
       "size": [
@@ -791,7 +791,7 @@
           "name": "CLIP",
           "type": "CLIP",
           "links": [
-            177
+            189
           ]
         }
       ],
@@ -993,15 +993,15 @@
       "bgcolor": "#000"
     },
     {
-      "id": 107,
-      "type": "KGKrea2ImageGuideCardV9",
+      "id": 113,
+      "type": "KGKrea2ImageGuideCardV10",
       "pos": [
-        661.8746513699895,
-        -1815.1260124556134
+        760.8484558639326,
+        -1809.4636577385209
       ],
       "size": [
-        377.0299164540738,
-        370
+        341.9609375,
+        466
       ],
       "flags": {},
       "order": 13,
@@ -1010,7 +1010,7 @@
         {
           "name": "Reference image",
           "type": "IMAGE",
-          "link": 181
+          "link": 186
         }
       ],
       "outputs": [
@@ -1018,16 +1018,72 @@
           "name": "guide_card",
           "type": "KG_KREA_REFERENCE",
           "links": [
-            178
+            190
           ]
         }
       ],
       "properties": {
-        "Node name for S&R": "KGKrea2ImageGuideCardV9"
+        "Node name for S&R": "KGKrea2ImageGuideCardV10"
       },
       "widgets_values": [
-        0.9,
-        "keep the same subject",
+        0.8,
+        "manual tuning",
+        "same person/product/object",
+        "use image as-is",
+        1,
+        1,
+        "medium - balanced default (384)",
+        "use stack setting",
+        "recipe decides",
+        1,
+        1,
+        3,
+        1,
+        1,
+        "toward this image",
+        "recipe decides",
+        1,
+        1
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 114,
+      "type": "KGKrea2ImageGuideCardV10",
+      "pos": [
+        765.5431636092418,
+        -1277.6332719595025
+      ],
+      "size": [
+        341.9609375,
+        466
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "Reference image",
+          "type": "IMAGE",
+          "link": 188
+        }
+      ],
+      "outputs": [
+        {
+          "name": "guide_card",
+          "type": "KG_KREA_REFERENCE",
+          "links": [
+            191
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KGKrea2ImageGuideCardV10"
+      },
+      "widgets_values": [
+        0.8,
+        "manual tuning",
         "same person/product/object",
         "use image as-is",
         1,
@@ -1039,7 +1095,88 @@
         1,
         3,
         1,
+        1,
+        "toward this image",
+        "recipe decides",
+        1,
         1
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 115,
+      "type": "KGTextEncodeKreaImageReferencesV10",
+      "pos": [
+        1138.5501954604686,
+        -1800.6694059164743
+      ],
+      "size": [
+        526.0997144980438,
+        836.0203692608359
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "Krea CLIP",
+          "type": "CLIP",
+          "link": 189
+        },
+        {
+          "name": "Reference 1 guide card",
+          "shape": 7,
+          "type": "KG_KREA_REFERENCE",
+          "link": 190
+        },
+        {
+          "name": "Reference 2 guide card",
+          "shape": 7,
+          "type": "KG_KREA_REFERENCE",
+          "link": 191
+        },
+        {
+          "name": "Reference 3 guide card",
+          "shape": 7,
+          "type": "KG_KREA_REFERENCE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "links": [
+            192,
+            193
+          ]
+        },
+        {
+          "name": "stack_report",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "prepared_references",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KGTextEncodeKreaImageReferencesV10"
+      },
+      "widgets_values": [
+        "Place both girls in a teenager room.\n",
+        1,
+        "artist friendly - soft at low values",
+        "medium - balanced default (384)",
+        "keep full image shape",
+        "smart per-card timing",
+        0.4,
+        "full guard - rewrite my prompt",
+        "off - use my values",
+        "reuse between runs - faster tuning"
       ],
       "color": "#233",
       "bgcolor": "#355"
@@ -1048,12 +1185,12 @@
       "id": 92,
       "type": "LoadImage",
       "pos": [
-        276.0493602598457,
+        344.62489212049525,
         -1812.8860496736306
       ],
       "size": [
-        361.4471483897106,
-        414.325119920499
+        373.5666031461359,
+        450.6834841897746
       ],
       "flags": {},
       "order": 8,
@@ -1064,7 +1201,7 @@
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            181
+            186
           ]
         },
         {
@@ -1077,7 +1214,7 @@
         "Node name for S&R": "LoadImage"
       },
       "widgets_values": [
-        "0a5550b0a64da1ca45329ab7321ff095.jpg",
+        "example.png",
         "image"
       ],
       "color": "#233",
@@ -1087,12 +1224,12 @@
       "id": 111,
       "type": "LoadImage",
       "pos": [
-        274.58918329281477,
-        -1345.7605075121396
+        352.5909919878459,
+        -1273.0435221282082
       ],
       "size": [
-        361.4471483897106,
-        414.325119920499
+        370.873373855016,
+        447.99035763680706
       ],
       "flags": {},
       "order": 9,
@@ -1103,7 +1240,7 @@
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            184
+            188
           ]
         },
         {
@@ -1116,126 +1253,11 @@
         "Node name for S&R": "LoadImage"
       },
       "widgets_values": [
-        "0ef2974cb21b4bb992647fc088f72029xl.jpg",
+        "example.png",
         "image"
       ],
       "color": "#233",
       "bgcolor": "#355"
-    },
-    {
-      "id": 110,
-      "type": "KGKrea2ImageGuideCardV9",
-      "pos": [
-        652.4806857261894,
-        -1341.8492647695361
-      ],
-      "size": [
-        377.0299164540738,
-        370
-      ],
-      "flags": {},
-      "order": 14,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "Reference image",
-          "type": "IMAGE",
-          "link": 184
-        }
-      ],
-      "outputs": [
-        {
-          "name": "guide_card",
-          "type": "KG_KREA_REFERENCE",
-          "links": [
-            185
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "KGKrea2ImageGuideCardV9"
-      },
-      "widgets_values": [
-        0.9,
-        "keep the same subject",
-        "same person/product/object",
-        "use image as-is",
-        1,
-        1,
-        "use stack setting",
-        "use stack setting",
-        "recipe decides",
-        1,
-        1,
-        3,
-        1,
-        1
-      ],
-      "color": "#233",
-      "bgcolor": "#355"
-    },
-    {
-      "id": 108,
-      "type": "KGTextEncodeKreaImageReferencesV9",
-      "pos": [
-        1062.229543661491,
-        -1808.7567125570208
-      ],
-      "size": [
-        609.6197428546609,
-        642.9668960202973
-      ],
-      "flags": {},
-      "order": 17,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "Krea CLIP",
-          "type": "CLIP",
-          "link": 177
-        },
-        {
-          "name": "Reference 1 guide card",
-          "shape": 7,
-          "type": "KG_KREA_REFERENCE",
-          "link": 178
-        },
-        {
-          "name": "Reference 2 guide card",
-          "type": "KG_KREA_REFERENCE",
-          "link": 185
-        },
-        {
-          "name": "Reference 3 guide card",
-          "type": "KG_KREA_REFERENCE",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            179,
-            180
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "KGTextEncodeKreaImageReferencesV9"
-      },
-      "widgets_values": [
-        "Place subjects in front of a beach house",
-        1,
-        "artist friendly - soft at low values",
-        "medium - balanced default (384)",
-        "keep full image shape",
-        "smart per-card timing",
-        0.4,
-        "gentle guard - keep my prompt words"
-      ],
-      "color": "#2a363b",
-      "bgcolor": "#3f5159"
     }
   ],
   "links": [
@@ -1344,46 +1366,6 @@
       "CLIP"
     ],
     [
-      177,
-      80,
-      0,
-      108,
-      0,
-      "CLIP"
-    ],
-    [
-      178,
-      107,
-      0,
-      108,
-      1,
-      "KG_KREA_REFERENCE"
-    ],
-    [
-      179,
-      108,
-      0,
-      73,
-      1,
-      "CONDITIONING"
-    ],
-    [
-      180,
-      108,
-      0,
-      58,
-      0,
-      "CONDITIONING"
-    ],
-    [
-      181,
-      92,
-      0,
-      107,
-      0,
-      "IMAGE"
-    ],
-    [
       182,
       55,
       0,
@@ -1400,20 +1382,60 @@
       "MODEL"
     ],
     [
-      184,
-      111,
+      186,
+      92,
       0,
-      110,
+      113,
       0,
       "IMAGE"
     ],
     [
-      185,
-      110,
+      188,
+      111,
       0,
-      108,
+      114,
+      0,
+      "IMAGE"
+    ],
+    [
+      189,
+      80,
+      0,
+      115,
+      0,
+      "CLIP"
+    ],
+    [
+      190,
+      113,
+      0,
+      115,
+      1,
+      "KG_KREA_REFERENCE"
+    ],
+    [
+      191,
+      114,
+      0,
+      115,
       2,
       "KG_KREA_REFERENCE"
+    ],
+    [
+      192,
+      115,
+      0,
+      73,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      193,
+      115,
+      0,
+      58,
+      0,
+      "CONDITIONING"
     ]
   ],
   "groups": [
@@ -1433,10 +1455,10 @@
       "id": 11,
       "title": "Conditioning",
       "bounding": [
-        248.54779360280955,
+        317.1233254634591,
         -1903.6044264945165,
-        1446.0211328774437,
-        994.700879957207
+        1370.974796113337,
+        1095.7182151458123
       ],
       "color": "#3f789e",
       "flags": {}
@@ -1469,10 +1491,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.3257855758635733,
+      "scale": 0.6127356847654655,
       "offset": [
-        -28.912209384948206,
-        2810.1452322442924
+        218.40490107041046,
+        2077.0813023937426
       ]
     },
     "frontendVersion": "1.45.20",
