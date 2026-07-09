@@ -139,7 +139,9 @@
  - [Krea2T-Enhancer](https://github.com/capitan01R/ComfyUI-Krea2T-Enhancer)
  - [krea-reference](https://github.com/kgilper/krea-reference)
  - [Krea-2-Two-Stage-Sampler](https://github.com/Auryg/Krea-2-Two-Stage-Sampler)
-
+ - [Krea2-StyleTransfer](https://github.com/jieg9341-lab/ComfyUI-Krea2-StyleTransfer)
+ - [KreaReason](https://github.com/shootthesound/ComfyUI-KreaReason)
+ 
 ## 🧩 All possible Custom Nodes
 
 - [Full List](https://comfyui.rozenlaan.site)
