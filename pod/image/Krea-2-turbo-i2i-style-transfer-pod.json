@@ -480,46 +480,6 @@
       ]
     },
     {
-      "id": 98,
-      "type": "LoraLoaderModelOnly",
-      "pos": [
-        1152.393890003757,
-        -2258.447427419921
-      ],
-      "size": [
-        270,
-        82
-      ],
-      "flags": {},
-      "order": 12,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 142
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            143
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoraLoaderModelOnly"
-      },
-      "widgets_values": [
-        "loras/krea2_turbo_lora_rank_64_bf16.safetensors",
-        1
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
-    },
-    {
       "id": 87,
       "type": "ResolutionMaster",
       "pos": [
@@ -704,93 +664,6 @@
       "bgcolor": "#535"
     },
     {
-      "id": 71,
-      "type": "Lora Loader (LoraManager)",
-      "pos": [
-        1578.2133318425128,
-        -2419.4766536433835
-      ],
-      "size": [
-        575.9016095588904,
-        397.6517816755313
-      ],
-      "flags": {},
-      "order": 20,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 140
-        },
-        {
-          "name": "clip",
-          "shape": 7,
-          "type": "CLIP",
-          "link": 134
-        },
-        {
-          "name": "lora_stack",
-          "shape": 7,
-          "type": "LORA_STACK",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            112
-          ]
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            135
-          ]
-        },
-        {
-          "name": "trigger_words",
-          "type": "STRING",
-          "links": null
-        },
-        {
-          "name": "loaded_loras",
-          "type": "STRING",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "Lora Loader (LoraManager)",
-        "__lm_widget_ids": [
-          "__lm_autocomplete_meta_text",
-          "text",
-          "loras"
-        ]
-      },
-      "widgets_values": [
-        {
-          "version": 1,
-          "textWidgetName": "text"
-        },
-        "<lora:fedor_bypass:5.00>",
-        [
-          {
-            "name": "fedor_bypass",
-            "strength": "5.00",
-            "active": true,
-            "expanded": false,
-            "clipStrength": "5.00",
-            "locked": false
-          }
-        ]
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
-    },
-    {
       "id": 96,
       "type": "Krea2T-Enhancer-Advanced",
       "pos": [
@@ -908,66 +781,6 @@
       },
       "widgets_values": [
         "CLIP"
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
-      "id": 101,
-      "type": "KSampler",
-      "pos": [
-        1794.6883796994655,
-        -1852.2387026674417
-      ],
-      "size": [
-        564.6404107387543,
-        737.4472501639082
-      ],
-      "flags": {},
-      "order": 24,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 168
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 154
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 155
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 152
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            157
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "KSampler"
-      },
-      "widgets_values": [
-        89263825722424,
-        "randomize",
-        8,
-        1,
-        "er_sde",
-        "sgm_uniform",
-        1
       ],
       "color": "#432",
       "bgcolor": "#653"
@@ -1294,6 +1107,124 @@
       "bgcolor": "#353"
     },
     {
+      "id": 71,
+      "type": "Lora Loader (LoraManager)",
+      "pos": [
+        1578.2133318425128,
+        -2419.4766536433835
+      ],
+      "size": [
+        575.9016095588904,
+        397.6517816755313
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 140
+        },
+        {
+          "name": "clip",
+          "shape": 7,
+          "type": "CLIP",
+          "link": 134
+        },
+        {
+          "name": "lora_stack",
+          "shape": 7,
+          "type": "LORA_STACK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            112
+          ]
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            135
+          ]
+        },
+        {
+          "name": "trigger_words",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "loaded_loras",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Lora Loader (LoraManager)",
+        "__lm_widget_ids": [
+          "__lm_autocomplete_meta_text",
+          "text",
+          "loras"
+        ]
+      },
+      "widgets_values": [
+        {
+          "version": 1,
+          "textWidgetName": "text"
+        },
+        "",
+        []
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 98,
+      "type": "LoraLoaderModelOnly",
+      "pos": [
+        1152.393890003757,
+        -2258.447427419921
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 142
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            143
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoaderModelOnly"
+      },
+      "widgets_values": [
+        "loras/krea2_turbo_lora_rank_64_bf16.safetensors",
+        0.6
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
       "id": 104,
       "type": "CLIPTextEncode",
       "pos": [
@@ -1328,10 +1259,70 @@
         "Node name for S&R": "CLIPTextEncode"
       },
       "widgets_values": [
-        "A photograph girl standing indoors, and light skin. Her mouth is slightly open, and she is looking directly at the camera with a neutral expression."
+        "A photograph of a woman standing indoors, and light skin. Her mouth is slightly open, and she is looking directly at the camera with a neutral expression."
       ],
       "color": "#232",
       "bgcolor": "#353"
+    },
+    {
+      "id": 101,
+      "type": "KSampler",
+      "pos": [
+        1794.6883796994655,
+        -1852.2387026674417
+      ],
+      "size": [
+        564.6404107387543,
+        737.4472501639082
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 168
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 154
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 155
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 152
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            157
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        89263825722424,
+        "randomize",
+        12,
+        1,
+        "er_sde",
+        "sgm_uniform",
+        1
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
     }
   ],
   "links": [
@@ -1609,10 +1600,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.41367492890870283,
+      "scale": 0.5005466639795312,
       "offset": [
-        614.499855177309,
-        2569.2575000991064
+        -189.04786911689962,
+        2372.6305526319115
       ]
     },
     "frontendVersion": "1.45.20",
