@@ -42,17 +42,21 @@ The guiding idea is aligned with the open-model discussion described by Eric Har
 
 - [Specific for these templates](ComfyUI_image_tutorial.md)
 
-##  Example t2i workflow Krea-2 uncensored with prompt enhancer
+##  Example t2i workflow Krea-2 with prompt enhancer
 
-![krea-2](images/ai-generated-krea2.jpg)
+![krea-2a](images/ai-generated-krea2.jpg)
 
-##  Example t2i workflow Krea-2 uncensored with image conditioning without vae encoding.
+##  Example t2i workflow Krea-2 with image conditioning without vae encoding.
 
 ![krea-2b](images/ai-generated-krea2-vlm.jpg)
 
 ##  Example t2i workflow Krea-2 artist friendly conditioning
 
 ![krea-2c](images/ai-generated-krea2-vlm-artist.jpg)
+
+##  Example i2i workflow Krea-2 style transfer with vae encoding
+
+![krea-2d](images/ai-generated-krea2-style-transfer.jpg)
 
 ##  Example workflow FLUX-Klein control/target image generation uncensored
 
