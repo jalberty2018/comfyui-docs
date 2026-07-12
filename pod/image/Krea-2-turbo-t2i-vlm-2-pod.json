@@ -1,8 +1,8 @@
 {
   "id": "08988737-a544-4ab1-99fb-22d67b7c36e3",
   "revision": 0,
-  "last_node_id": 113,
-  "last_link_id": 190,
+  "last_node_id": 114,
+  "last_link_id": 196,
   "nodes": [
     {
       "id": 76,
@@ -26,7 +26,7 @@
           "name": "MODEL",
           "type": "MODEL",
           "links": [
-            113
+            192
           ]
         }
       ],
@@ -79,43 +79,6 @@
       "bgcolor": "#533"
     },
     {
-      "id": 90,
-      "type": "GetNode",
-      "pos": [
-        1943.8237067075772,
-        -1694.7907514320543
-      ],
-      "size": [
-        210,
-        60
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 2,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            127
-          ]
-        }
-      ],
-      "title": "Get_EMPTY_LATENT",
-      "properties": {
-        "Node name for S&R": "GetNode",
-        "aux_id": "kijai/ComfyUI-KJNodes"
-      },
-      "widgets_values": [
-        "EMPTY_LATENT"
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
-    },
-    {
       "id": 80,
       "type": "GetNode",
       "pos": [
@@ -129,7 +92,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 3,
+      "order": 2,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -180,7 +143,7 @@
           "name": "CONDITIONING",
           "type": "CONDITIONING",
           "links": [
-            106
+            195
           ]
         }
       ],
@@ -213,7 +176,7 @@
         {
           "name": "samples",
           "type": "LATENT",
-          "link": 108
+          "link": 194
         },
         {
           "name": "vae",
@@ -391,7 +354,7 @@
         475
       ],
       "flags": {},
-      "order": 4,
+      "order": 3,
       "mode": 0,
       "inputs": [
         {
@@ -538,7 +501,7 @@
         171.1307711111749
       ],
       "flags": {},
-      "order": 5,
+      "order": 4,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -582,7 +545,7 @@
         140
       ],
       "flags": {},
-      "order": 6,
+      "order": 5,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -654,48 +617,6 @@
       "bgcolor": "#335"
     },
     {
-      "id": 57,
-      "type": "VAELoader",
-      "pos": [
-        1304.901163072959,
-        -2492.4511159979565
-      ],
-      "size": [
-        370.6832605484674,
-        120
-      ],
-      "flags": {},
-      "order": 7,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [
-            122
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VAELoader",
-        "cnr_id": "comfy-core",
-        "ver": "0.25.0",
-        "models": [
-          {
-            "name": "qwen_image_vae.safetensors",
-            "url": "https://huggingface.co/Comfy-Org/Krea-2/resolve/main/vae/qwen_image_vae.safetensors",
-            "directory": "vae"
-          }
-        ]
-      },
-      "widgets_values": [
-        "krea2RealVae_v10.safetensors"
-      ],
-      "color": "#2a363b",
-      "bgcolor": "#3f5159"
-    },
-    {
       "id": 85,
       "type": "SetNode",
       "pos": [
@@ -709,7 +630,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 13,
+      "order": 15,
       "mode": 0,
       "inputs": [
         {
@@ -749,7 +670,7 @@
         214
       ],
       "flags": {},
-      "order": 14,
+      "order": 13,
       "mode": 0,
       "inputs": [
         {
@@ -811,7 +732,7 @@
         214
       ],
       "flags": {},
-      "order": 15,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
@@ -862,254 +783,6 @@
       ]
     },
     {
-      "id": 73,
-      "type": "ClownsharKSampler_Beta",
-      "pos": [
-        1722.494897700242,
-        -1816.0701623606114
-      ],
-      "size": [
-        576.9013700362739,
-        924.1875579613002
-      ],
-      "flags": {},
-      "order": 23,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "shape": 7,
-          "type": "MODEL",
-          "link": 113
-        },
-        {
-          "name": "positive",
-          "shape": 7,
-          "type": "CONDITIONING",
-          "link": 176
-        },
-        {
-          "name": "negative",
-          "shape": 7,
-          "type": "CONDITIONING",
-          "link": 106
-        },
-        {
-          "name": "latent_image",
-          "shape": 7,
-          "type": "LATENT",
-          "link": 127
-        },
-        {
-          "name": "sigmas",
-          "shape": 7,
-          "type": "SIGMAS",
-          "link": null
-        },
-        {
-          "name": "guides",
-          "shape": 7,
-          "type": "GUIDES",
-          "link": null
-        },
-        {
-          "name": "options",
-          "shape": 7,
-          "type": "OPTIONS",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "output",
-          "type": "LATENT",
-          "links": [
-            108
-          ]
-        },
-        {
-          "name": "denoised",
-          "type": "LATENT",
-          "links": null
-        },
-        {
-          "name": "options",
-          "type": "OPTIONS",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ClownsharKSampler_Beta"
-      },
-      "widgets_values": [
-        0.45,
-        "exponential/ddim",
-        "ddim_uniform",
-        8,
-        -1,
-        1,
-        1,
-        128787288964333,
-        "randomize",
-        "standard",
-        true
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
-      "id": 92,
-      "type": "LoadImage",
-      "pos": [
-        699.9992978729894,
-        -1827.2688120395776
-      ],
-      "size": [
-        361.4471483897106,
-        414.325119920499
-      ],
-      "flags": {},
-      "order": 8,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            188
-          ]
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoadImage"
-      },
-      "widgets_values": [
-        "tiktok09_007.jpg",
-        "image"
-      ],
-      "color": "#233",
-      "bgcolor": "#355"
-    },
-    {
-      "id": 98,
-      "type": "LoadImage",
-      "pos": [
-        704.172227728487,
-        -1361.111752378423
-      ],
-      "size": [
-        352.13053998935834,
-        419.53824899534595
-      ],
-      "flags": {},
-      "order": 9,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            189
-          ]
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoadImage"
-      },
-      "widgets_values": [
-        "TikTok09a_174.jpg",
-        "image"
-      ],
-      "color": "#233",
-      "bgcolor": "#355"
-    },
-    {
-      "id": 104,
-      "type": "Krea2EditRebalance",
-      "pos": [
-        1089.5140241643558,
-        -1815.3735534631046
-      ],
-      "size": [
-        562.9466794078044,
-        723.0850179870436
-      ],
-      "flags": {},
-      "order": 18,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 168
-        },
-        {
-          "name": "negative",
-          "shape": 7,
-          "type": "STRING",
-          "link": 174
-        },
-        {
-          "name": "image1",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 187
-        },
-        {
-          "name": "image2",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 190
-        },
-        {
-          "name": "image3",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": null
-        },
-        {
-          "name": "image4",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "conditioning",
-          "type": "CONDITIONING",
-          "links": [
-            173,
-            176
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "Krea2EditRebalance"
-      },
-      "widgets_values": [
-        "Keep identity of girl in image 1\nKeep identity of girl in image 2\n\nTwo complete naked girls kissing each other outsite in a park.\nSensual looking at each other.",
-        "max",
-        "max",
-        "normal",
-        "normal"
-      ],
-      "color": "#233",
-      "bgcolor": "#355"
-    },
-    {
       "id": 106,
       "type": "PrimitiveStringMultiline",
       "pos": [
@@ -1121,7 +794,7 @@
         127.56077081407079
       ],
       "flags": {},
-      "order": 10,
+      "order": 6,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1138,127 +811,6 @@
       },
       "widgets_values": [
         "identity drift."
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
-    },
-    {
-      "id": 29,
-      "type": "SaveImage",
-      "pos": [
-        2360.6428529841205,
-        -1869.8308020807638
-      ],
-      "size": [
-        854.4412157993743,
-        1025.3837869644474
-      ],
-      "flags": {},
-      "order": 25,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 97
-        }
-      ],
-      "outputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "SaveImage",
-        "cnr_id": "comfy-core",
-        "ver": "0.25.0"
-      },
-      "widgets_values": [
-        "Krea2_turbo"
-      ],
-      "color": "#222",
-      "bgcolor": "#000"
-    },
-    {
-      "id": 108,
-      "type": "LoraLoaderModelOnly",
-      "pos": [
-        710.0591360061836,
-        -2078.501390693753
-      ],
-      "size": [
-        270,
-        82
-      ],
-      "flags": {},
-      "order": 12,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 179
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            180
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoraLoaderModelOnly"
-      },
-      "widgets_values": [
-        "loras/krea2_turbo_lora_rank_64_bf16.safetensors",
-        1
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
-    },
-    {
-      "id": 107,
-      "type": "Krea2T-Enhancer-Advanced",
-      "pos": [
-        1004.2294935443981,
-        -2079.229241613292
-      ],
-      "size": [
-        285.4478515625,
-        130
-      ],
-      "flags": {},
-      "order": 17,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 180
-        }
-      ],
-      "outputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "links": [
-            178
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "Krea2T-Enhancer-Advanced"
-      },
-      "widgets_values": [
-        true,
-        1,
-        2,
-        false
       ],
       "color": "#323",
       "bgcolor": "#535"
@@ -1340,6 +892,418 @@
       ],
       "color": "#323",
       "bgcolor": "#535"
+    },
+    {
+      "id": 92,
+      "type": "LoadImage",
+      "pos": [
+        699.9992978729894,
+        -1827.2688120395776
+      ],
+      "size": [
+        361.4471483897106,
+        414.325119920499
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            188
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "example.png",
+        "image"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 98,
+      "type": "LoadImage",
+      "pos": [
+        704.172227728487,
+        -1361.111752378423
+      ],
+      "size": [
+        352.13053998935834,
+        419.53824899534595
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            189
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "example.png",
+        "image"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 90,
+      "type": "GetNode",
+      "pos": [
+        1935.0385026202796,
+        -1763.6083696324374
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            193
+          ]
+        }
+      ],
+      "title": "Get_EMPTY_LATENT",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": [
+        "EMPTY_LATENT"
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 29,
+      "type": "SaveImage",
+      "pos": [
+        2386.998576955945,
+        -1868.3665641629038
+      ],
+      "size": [
+        854.4412157993743,
+        1025.3837869644474
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 97
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SaveImage",
+        "cnr_id": "comfy-core",
+        "ver": "0.25.0"
+      },
+      "widgets_values": [
+        "Krea2_turbo"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 114,
+      "type": "KSampler",
+      "pos": [
+        1728.745904094907,
+        -1795.8341997795787
+      ],
+      "size": [
+        573.0902671263204,
+        919.6978840777269
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 192
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 196
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 195
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 193
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            194
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        20000,
+        "randomize",
+        12,
+        1,
+        "er_sde",
+        "sgm_uniform",
+        1
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 104,
+      "type": "Krea2EditRebalance",
+      "pos": [
+        1089.3784421644784,
+        -1818.6961366832954
+      ],
+      "size": [
+        562.9466794078044,
+        723.0850179870436
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 168
+        },
+        {
+          "name": "negative",
+          "shape": 7,
+          "type": "STRING",
+          "link": 174
+        },
+        {
+          "name": "image1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 187
+        },
+        {
+          "name": "image2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 190
+        },
+        {
+          "name": "image3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image4",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "links": [
+            173,
+            196
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Krea2EditRebalance"
+      },
+      "widgets_values": [
+        "Keep identity of girl in image 1\nKeep identity of girl in image 2\n\nTwo complete naked girls kissing each other outsite in a park.\nSensual looking at each other.",
+        "max",
+        "max",
+        "normal",
+        "normal"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 107,
+      "type": "Krea2T-Enhancer-Advanced",
+      "pos": [
+        1004.2294935443981,
+        -2079.229241613292
+      ],
+      "size": [
+        285.4478515625,
+        130
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 180
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            178
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Krea2T-Enhancer-Advanced"
+      },
+      "widgets_values": [
+        true,
+        1,
+        1.5,
+        false
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 108,
+      "type": "LoraLoaderModelOnly",
+      "pos": [
+        710.0591360061836,
+        -2078.501390693753
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 179
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            180
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoaderModelOnly"
+      },
+      "widgets_values": [
+        "loras/krea2_turbo_lora_rank_64_bf16.safetensors",
+        0.6
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 57,
+      "type": "VAELoader",
+      "pos": [
+        1304.901163072959,
+        -2492.4511159979565
+      ],
+      "size": [
+        370.6832605484674,
+        120
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            122
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader",
+        "cnr_id": "comfy-core",
+        "ver": "0.25.0",
+        "models": [
+          {
+            "name": "qwen_image_vae.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/Krea-2/resolve/main/vae/qwen_image_vae.safetensors",
+            "directory": "vae"
+          }
+        ]
+      },
+      "widgets_values": [
+        "krea2RealVae_v10.safetensors"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
     }
   ],
   "links": [
@@ -1352,34 +1316,10 @@
       "IMAGE"
     ],
     [
-      106,
-      58,
-      0,
-      73,
-      2,
-      "CONDITIONING"
-    ],
-    [
-      108,
-      73,
-      0,
-      54,
-      0,
-      "LATENT"
-    ],
-    [
       112,
       71,
       0,
       75,
-      0,
-      "MODEL"
-    ],
-    [
-      113,
-      76,
-      0,
-      73,
       0,
       "MODEL"
     ],
@@ -1424,14 +1364,6 @@
       "INT"
     ],
     [
-      127,
-      90,
-      0,
-      73,
-      3,
-      "LATENT"
-    ],
-    [
       168,
       80,
       0,
@@ -1470,14 +1402,6 @@
       104,
       1,
       "STRING"
-    ],
-    [
-      176,
-      104,
-      0,
-      73,
-      1,
-      "CONDITIONING"
     ],
     [
       178,
@@ -1534,6 +1458,46 @@
       104,
       3,
       "IMAGE"
+    ],
+    [
+      192,
+      76,
+      0,
+      114,
+      0,
+      "MODEL"
+    ],
+    [
+      193,
+      90,
+      0,
+      114,
+      3,
+      "LATENT"
+    ],
+    [
+      194,
+      114,
+      0,
+      54,
+      0,
+      "LATENT"
+    ],
+    [
+      195,
+      58,
+      0,
+      114,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      196,
+      104,
+      0,
+      114,
+      1,
+      "CONDITIONING"
     ]
   ],
   "groups": [
@@ -1589,10 +1553,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.6918314994726827,
+      "scale": 0.39270073460540394,
       "offset": [
-        -423.1438344490373,
-        2443.6243084170114
+        4.128533512610147,
+        2772.7530452946567
       ]
     },
     "frontendVersion": "1.45.20",
