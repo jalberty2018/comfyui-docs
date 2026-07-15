@@ -7,22 +7,26 @@
 - The date reflects when the related custom nodes were cloned from their upstream repositories.
 - Pinned custom nodes are not updated automatically, because changing those pins can introduce compatibility issues.
 
+## 15072026
+
+- ComfyUI 0.28.0
+
 ## 09072026
 
- - ComfyUI 0.27.0
- - [krea-reference](https://github.com/kgilper/krea-reference)
- - [Krea-2-Two-Stage-Sampler](https://github.com/Auryg/Krea-2-Two-Stage-Sampler)
- - [KreaReason](https://github.com/shootthesound/ComfyUI-KreaReason)
- - [Krea2-StyleTransfer](https://github.com/jieg9341-lab/ComfyUI-Krea2-StyleTransfer)
+- ComfyUI 0.27.0
+- [krea-reference](https://github.com/kgilper/krea-reference)
+- [Krea-2-Two-Stage-Sampler](https://github.com/Auryg/Krea-2-Two-Stage-Sampler)
+- [KreaReason](https://github.com/shootthesound/ComfyUI-KreaReason)
+- [Krea2-StyleTransfer](https://github.com/jieg9341-lab/ComfyUI-Krea2-StyleTransfer)
 
 ## 30062026
 
- - ComfyUI 0.26.0
- - Added Krea-2 t2v uncensored workflow.
- - [krea2-conditioning](https://github.com/huwhitememes/comfyui-krea2-conditioning)
- - [Krea2TextEncoder](https://github.com/ethanfel/ComfyUI-Krea2TextEncoder)
- - [Conditioning-Rebalance](https://github.com/nova452/ComfyUI-Conditioning-Rebalance)
- - [Krea2T-Enhancer](https://github.com/capitan01R/ComfyUI-Krea2T-Enhancer)
+- ComfyUI 0.26.0
+- Added Krea-2 t2v uncensored workflow.
+- [krea2-conditioning](https://github.com/huwhitememes/comfyui-krea2-conditioning)
+- [Krea2TextEncoder](https://github.com/ethanfel/ComfyUI-Krea2TextEncoder)
+- [Conditioning-Rebalance](https://github.com/nova452/ComfyUI-Conditioning-Rebalance)
+- [Krea2T-Enhancer](https://github.com/capitan01R/ComfyUI-Krea2T-Enhancer)
 
 ## 19062026
 
