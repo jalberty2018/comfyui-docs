@@ -5,57 +5,6 @@
   "last_link_id": 545,
   "nodes": [
     {
-      "id": 104,
-      "type": "CLIPLoader",
-      "pos": [
-        -1484.0051164805004,
-        708.4964809433101
-      ],
-      "size": [
-        364.42708333333337,
-        106
-      ],
-      "flags": {},
-      "order": 0,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            238
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPLoader",
-        "cnr_id": "comfy-core",
-        "ver": "0.8.2",
-        "models": [
-          {
-            "name": "qwen_3_8b_fp8mixed.safetensors",
-            "url": "https://huggingface.co/Comfy-Org/flux2-klein-9B/resolve/main/split_files/text_encoders/qwen_3_8b_fp8mixed.safetensors",
-            "directory": "text_encoders"
-          }
-        ],
-        "enableTabs": false,
-        "tabWidth": 65,
-        "tabXOffset": 10,
-        "hasSecondTab": false,
-        "secondTabText": "Send Back",
-        "secondTabOffset": 80,
-        "secondTabWidth": 65
-      },
-      "widgets_values": [
-        "qwen_3_8b.safetensors",
-        "flux2",
-        "default"
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
       "id": 220,
       "type": "SetNode",
       "pos": [
@@ -109,7 +58,7 @@
         58
       ],
       "flags": {},
-      "order": 1,
+      "order": 0,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -160,7 +109,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 2,
+      "order": 1,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -237,7 +186,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 3,
+      "order": 2,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -338,7 +287,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 4,
+      "order": 3,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -419,7 +368,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 5,
+      "order": 4,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -456,7 +405,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 6,
+      "order": 5,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -789,7 +738,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 7,
+      "order": 6,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -826,7 +775,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 8,
+      "order": 7,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -915,7 +864,7 @@
         123.20886033480292
       ],
       "flags": {},
-      "order": 9,
+      "order": 8,
       "mode": 4,
       "inputs": [],
       "outputs": [
@@ -963,7 +912,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 10,
+      "order": 9,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1000,7 +949,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 11,
+      "order": 10,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1141,7 +1090,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 12,
+      "order": 11,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1232,7 +1181,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 13,
+      "order": 12,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1375,7 +1324,13 @@
           "link": 533
         }
       ],
-      "outputs": [],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
       "properties": {
         "Node name for S&R": "PreviewImage"
       },
@@ -1411,7 +1366,15 @@
           "link": 463
         }
       ],
-      "outputs": [],
+      "outputs": [
+        {
+          "dir": 4,
+          "name": "images",
+          "shape": 3,
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
       "properties": {
         "comparer_mode": "Slide"
       },
@@ -1420,12 +1383,12 @@
           {
             "name": "A",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_nqunl_00001_.png&type=temp&subfolder=&rand=0.009597702907990113"
+            "url": "/api/view?filename=rgthree.compare._temp_depkg_00005_.png&type=temp&subfolder=&rand=0.7291912494953562"
           },
           {
             "name": "B",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_nqunl_00002_.png&type=temp&subfolder=&rand=0.8962761734857168"
+            "url": "/api/view?filename=rgthree.compare._temp_depkg_00006_.png&type=temp&subfolder=&rand=0.10511953132107044"
           }
         ]
       ],
@@ -1604,7 +1567,7 @@
         82
       ],
       "flags": {},
-      "order": 14,
+      "order": 13,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1636,6 +1599,153 @@
       "bgcolor": "#335"
     },
     {
+      "id": 165,
+      "type": "ClownsharKSampler_Beta",
+      "pos": [
+        -313.7225893831871,
+        1102.9413888922686
+      ],
+      "size": [
+        285.09077887177637,
+        654.5227135534822
+      ],
+      "flags": {},
+      "order": 33,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "shape": 7,
+          "type": "MODEL",
+          "link": 541
+        },
+        {
+          "name": "positive",
+          "shape": 7,
+          "type": "CONDITIONING",
+          "link": 542
+        },
+        {
+          "name": "negative",
+          "shape": 7,
+          "type": "CONDITIONING",
+          "link": 543
+        },
+        {
+          "name": "latent_image",
+          "shape": 7,
+          "type": "LATENT",
+          "link": 544
+        },
+        {
+          "name": "sigmas",
+          "shape": 7,
+          "type": "SIGMAS",
+          "link": null
+        },
+        {
+          "name": "guides",
+          "shape": 7,
+          "type": "GUIDES",
+          "link": null
+        },
+        {
+          "name": "options",
+          "shape": 7,
+          "type": "OPTIONS",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "LATENT",
+          "links": [
+            326
+          ]
+        },
+        {
+          "name": "denoised",
+          "type": "LATENT",
+          "links": null
+        },
+        {
+          "name": "options",
+          "type": "OPTIONS",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ClownsharKSampler_Beta"
+      },
+      "widgets_values": [
+        0.5,
+        "linear/euler",
+        "simple",
+        8,
+        -1,
+        1,
+        1.2,
+        80,
+        "increment",
+        "standard",
+        true
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 104,
+      "type": "CLIPLoader",
+      "pos": [
+        -1484.0051164805004,
+        708.4964809433101
+      ],
+      "size": [
+        364.42708333333337,
+        106
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            238
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPLoader",
+        "cnr_id": "comfy-core",
+        "ver": "0.8.2",
+        "models": [
+          {
+            "name": "qwen_3_8b_fp8mixed.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/flux2-klein-9B/resolve/main/split_files/text_encoders/qwen_3_8b_fp8mixed.safetensors",
+            "directory": "text_encoders"
+          }
+        ],
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65
+      },
+      "widgets_values": [
+        "flux2-klein-9b-uncensored-text-encoder.safetensors",
+        "flux2",
+        "default"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
       "id": 256,
       "type": "NKDKleinPresampling",
       "pos": [
@@ -1643,8 +1753,8 @@
         1084.6522318335178
       ],
       "size": [
-        595.9362572021479,
-        739.1984324951172
+        602.3252034301755,
+        766.8830943908688
       ],
       "flags": {},
       "order": 32,
@@ -1737,7 +1847,7 @@
         "Node name for S&R": "NKDKleinPresampling"
       },
       "widgets_values": [
-        "\nEnhance image of the complete undressed woman, while preserving identity and facial structure.\n\nRemove all clothes, shirt, skirt, pants , blouse, bikini, masks.\n\nNatural bare skin, minimal makeup appearance, authentic human skin texture, natural complexion, healthy skin tone, realistic facial coloration, soft tonal variation, fine skin texture, natural lips, natural eyelashes, balanced exposure, soft realistic lighting, photorealistic, authentic facial details.\n\n\nPreserve identity, preserve facial structure, same person, consistent face, authentic proportions, anatomy, pose, body proportions, lighting, and realism.\n\nPreserve torso anatomy, preserve waist structure, preserve abdominal proportions, consistent navel position, preserve body proportions, same body geometry, anatomically consistent midriff.\n\nRemove logo and text.",
+        "Enhance image of the complete undressed woman, while preserving identity and facial structure.\n\nRemove all clothes, shirt, skirt, pants , blouse, bikini, masks.\n\nNatural bare skin, minimal makeup appearance, authentic human skin texture, natural complexion, healthy skin tone, realistic facial coloration, soft tonal variation, fine skin texture, natural lips, natural eyelashes, balanced exposure, soft realistic lighting, photorealistic, authentic facial details.\n\n\nPreserve identity, preserve facial structure, same person, consistent face, authentic proportions, anatomy, pose, body proportions, lighting, and realism.\n\nPreserve torso anatomy, preserve waist structure, preserve abdominal proportions, consistent navel position, preserve body proportions, same body geometry, anatomically consistent midriff.\n\nRemove logo and text.",
         "different person, identity drift, different pose, different body shape, deformed anatomy, adult anatomy, big breasts, bad proportions, extra limbs, mutated hands, clothes, oversmoothed skin, plastic skin, cgi, cartoon, anime, unrealistic lighting, dressed, clothes, make-up.",
         false,
         false,
@@ -1758,102 +1868,6 @@
       ],
       "color": "#232",
       "bgcolor": "#353"
-    },
-    {
-      "id": 165,
-      "type": "ClownsharKSampler_Beta",
-      "pos": [
-        -313.7225893831871,
-        1102.9413888922686
-      ],
-      "size": [
-        285.09077887177637,
-        654.5227135534822
-      ],
-      "flags": {},
-      "order": 33,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "shape": 7,
-          "type": "MODEL",
-          "link": 541
-        },
-        {
-          "name": "positive",
-          "shape": 7,
-          "type": "CONDITIONING",
-          "link": 542
-        },
-        {
-          "name": "negative",
-          "shape": 7,
-          "type": "CONDITIONING",
-          "link": 543
-        },
-        {
-          "name": "latent_image",
-          "shape": 7,
-          "type": "LATENT",
-          "link": 544
-        },
-        {
-          "name": "sigmas",
-          "shape": 7,
-          "type": "SIGMAS",
-          "link": null
-        },
-        {
-          "name": "guides",
-          "shape": 7,
-          "type": "GUIDES",
-          "link": null
-        },
-        {
-          "name": "options",
-          "shape": 7,
-          "type": "OPTIONS",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "output",
-          "type": "LATENT",
-          "links": [
-            326
-          ]
-        },
-        {
-          "name": "denoised",
-          "type": "LATENT",
-          "links": null
-        },
-        {
-          "name": "options",
-          "type": "OPTIONS",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ClownsharKSampler_Beta"
-      },
-      "widgets_values": [
-        0.5,
-        "linear/euler",
-        "simple",
-        8,
-        -1,
-        1,
-        1.2,
-        79,
-        "increment",
-        "standard",
-        true
-      ],
-      "color": "#222",
-      "bgcolor": "#000"
     },
     {
       "id": 191,
@@ -2309,13 +2323,13 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.7513148009015783,
+      "scale": 0.5557808784889959,
       "offset": [
-        1934.7269448560937,
-        -952.7323190680154
+        2030.7546204324071,
+        -789.4804223229655
       ]
     },
-    "frontendVersion": "1.45.15",
+    "frontendVersion": "1.45.21",
     "workflowRendererVersion": "LG",
     "VHS_latentpreview": true,
     "VHS_latentpreviewrate": 0,

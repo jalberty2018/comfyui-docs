@@ -191,7 +191,13 @@
           "link": 178
         }
       ],
-      "outputs": [],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
       "properties": {
         "Node name for S&R": "SaveImage",
         "cnr_id": "comfy-core",
@@ -343,10 +349,11 @@
         "autoDetectSource": "backend",
         "autoDetectWidth": 0,
         "autoDetectHeight": 0,
-        "autoDetectPresetsJSON": "{\"1:1 Square\":{\"width\":2048,\"height\":2048,\"isCustom\":false,\"isHidden\":false},\"1:1 Square Native\":{\"width\":2336,\"height\":2336,\"isCustom\":false,\"isHidden\":false},\"2:3 Portrait\":{\"width\":1632,\"height\":2448,\"isCustom\":false,\"isHidden\":false},\"3:4 Portrait\":{\"width\":1728,\"height\":2304,\"isCustom\":false,\"isHidden\":false},\"4:5 Portrait\":{\"width\":1792,\"height\":2240,\"isCustom\":false,\"isHidden\":false},\"9:16 Portrait\":{\"width\":1472,\"height\":2624,\"isCustom\":false,\"isHidden\":false},\"3:2 Landscape\":{\"width\":2448,\"height\":1632,\"isCustom\":false,\"isHidden\":false},\"4:3 Landscape\":{\"width\":2304,\"height\":1728,\"isCustom\":false,\"isHidden\":false},\"16:9 Landscape\":{\"width\":2624,\"height\":1472,\"isCustom\":false,\"isHidden\":false},\"21:9 Ultrawide\":{\"width\":2912,\"height\":1248,\"isCustom\":false,\"isHidden\":false}}",
+        "autoDetectPresetsJSON": "{\"__resolutionMasterConfigVersion\":1,\"__resolutionMasterProfile\":{\"strategy\":\"flux_like\",\"options\":{\"max_megapixels\":6,\"max_dimension\":3840,\"min_dimension\":320,\"multiple\":16}},\"__resolutionMasterPresets\":{\"1:1 Square\":{\"width\":2048,\"height\":2048,\"isCustom\":false,\"isHidden\":false},\"1:1 Square Native\":{\"width\":2336,\"height\":2336,\"isCustom\":false,\"isHidden\":false},\"2:3 Portrait\":{\"width\":1632,\"height\":2448,\"isCustom\":false,\"isHidden\":false},\"3:4 Portrait\":{\"width\":1728,\"height\":2304,\"isCustom\":false,\"isHidden\":false},\"4:5 Portrait\":{\"width\":1792,\"height\":2240,\"isCustom\":false,\"isHidden\":false},\"9:16 Portrait\":{\"width\":1472,\"height\":2624,\"isCustom\":false,\"isHidden\":false},\"3:2 Landscape\":{\"width\":2448,\"height\":1632,\"isCustom\":false,\"isHidden\":false},\"4:3 Landscape\":{\"width\":2304,\"height\":1728,\"isCustom\":false,\"isHidden\":false},\"16:9 Landscape\":{\"width\":2624,\"height\":1472,\"isCustom\":false,\"isHidden\":false},\"21:9 Ultrawide\":{\"width\":2912,\"height\":1248,\"isCustom\":false,\"isHidden\":false}}}",
         "autoFitOnChange": false,
         "autoResizeOnChange": false,
         "autoSnapOnChange": false,
+        "smartFit": false,
         "selectedCategory": "Flux.2",
         "selectedPreset": "3:4 Portrait",
         "useCustomCalc": false,
@@ -368,7 +375,8 @@
         "dropdown_category_expanded": false,
         "dropdown_preset_expanded": false,
         "preset_selector_mode": "visual",
-        "customPresetsJSON": ""
+        "customPresetsJSON": "",
+        "aux_id": "Azornes/Comfyui-Resolution-Master"
       },
       "widgets_values": [
         "Manual",
@@ -384,12 +392,13 @@
         false,
         false,
         false,
+        false,
         "Flux.2",
         64,
         1,
         1080,
         2,
-        "{\"1:1 Square\":{\"width\":2048,\"height\":2048,\"isCustom\":false,\"isHidden\":false},\"1:1 Square Native\":{\"width\":2336,\"height\":2336,\"isCustom\":false,\"isHidden\":false},\"2:3 Portrait\":{\"width\":1632,\"height\":2448,\"isCustom\":false,\"isHidden\":false},\"3:4 Portrait\":{\"width\":1728,\"height\":2304,\"isCustom\":false,\"isHidden\":false},\"4:5 Portrait\":{\"width\":1792,\"height\":2240,\"isCustom\":false,\"isHidden\":false},\"9:16 Portrait\":{\"width\":1472,\"height\":2624,\"isCustom\":false,\"isHidden\":false},\"3:2 Landscape\":{\"width\":2448,\"height\":1632,\"isCustom\":false,\"isHidden\":false},\"4:3 Landscape\":{\"width\":2304,\"height\":1728,\"isCustom\":false,\"isHidden\":false},\"16:9 Landscape\":{\"width\":2624,\"height\":1472,\"isCustom\":false,\"isHidden\":false},\"21:9 Ultrawide\":{\"width\":2912,\"height\":1248,\"isCustom\":false,\"isHidden\":false}}",
+        "{\"__resolutionMasterConfigVersion\":1,\"__resolutionMasterProfile\":{\"strategy\":\"flux_like\",\"options\":{\"max_megapixels\":6,\"max_dimension\":3840,\"min_dimension\":320,\"multiple\":16}},\"__resolutionMasterPresets\":{\"1:1 Square\":{\"width\":2048,\"height\":2048,\"isCustom\":false,\"isHidden\":false},\"1:1 Square Native\":{\"width\":2336,\"height\":2336,\"isCustom\":false,\"isHidden\":false},\"2:3 Portrait\":{\"width\":1632,\"height\":2448,\"isCustom\":false,\"isHidden\":false},\"3:4 Portrait\":{\"width\":1728,\"height\":2304,\"isCustom\":false,\"isHidden\":false},\"4:5 Portrait\":{\"width\":1792,\"height\":2240,\"isCustom\":false,\"isHidden\":false},\"9:16 Portrait\":{\"width\":1472,\"height\":2624,\"isCustom\":false,\"isHidden\":false},\"3:2 Landscape\":{\"width\":2448,\"height\":1632,\"isCustom\":false,\"isHidden\":false},\"4:3 Landscape\":{\"width\":2304,\"height\":1728,\"isCustom\":false,\"isHidden\":false},\"16:9 Landscape\":{\"width\":2624,\"height\":1472,\"isCustom\":false,\"isHidden\":false},\"21:9 Ultrawide\":{\"width\":2912,\"height\":1248,\"isCustom\":false,\"isHidden\":false}}}",
         "resolution",
         0.7216878364870323,
         1
@@ -837,55 +846,6 @@
       "bgcolor": "#535"
     },
     {
-      "id": 109,
-      "type": "PgLazyPromptMini",
-      "pos": [
-        419.5996987812545,
-        885.5944519170324
-      ],
-      "size": [
-        445.3331395795367,
-        614.1247351195937
-      ],
-      "flags": {},
-      "order": 12,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 212
-        }
-      ],
-      "outputs": [
-        {
-          "name": "POS_OUT",
-          "type": "CONDITIONING",
-          "links": [
-            213
-          ]
-        },
-        {
-          "name": "NEG_OUT",
-          "type": "CONDITIONING",
-          "links": [
-            214
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "PgLazyPromptMini",
-        "history_path": "custom_nodes\\prompt_history.json",
-        "max_entries": 500
-      },
-      "widgets_values": [
-        "Ginger long haired freckled GIrl leans against a stone wall, wearing a pink croptop and short unzipped jeans accentating her defined belly, realistic, high resolution, detaile skin.",
-        ""
-      ],
-      "color": "#233",
-      "bgcolor": "#355"
-    },
-    {
       "id": 93,
       "type": "VAELoader",
       "pos": [
@@ -1001,12 +961,61 @@
         "secondTabWidth": 65
       },
       "widgets_values": [
-        "qwen_3_8b.safetensors",
+        "flux2-klein-9b-uncensored-text-encoder.safetensors",
         "flux2",
         "default"
       ],
       "color": "#323",
       "bgcolor": "#535"
+    },
+    {
+      "id": 109,
+      "type": "PgLazyPromptMini",
+      "pos": [
+        419.5996987812545,
+        885.5944519170324
+      ],
+      "size": [
+        445.3331395795367,
+        614.1247351195937
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 212
+        }
+      ],
+      "outputs": [
+        {
+          "name": "POS_OUT",
+          "type": "CONDITIONING",
+          "links": [
+            213
+          ]
+        },
+        {
+          "name": "NEG_OUT",
+          "type": "CONDITIONING",
+          "links": [
+            214
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PgLazyPromptMini",
+        "history_path": "custom_nodes\\prompt_history.json",
+        "max_entries": 500
+      },
+      "widgets_values": [
+        "Ginger long haired freckled woman leans against a stone wall, wearing a pink croptop and short unzipped jeans accentating her defined belly, realistic, high resolution, detaile skin.",
+        ""
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
     }
   ],
   "links": [
@@ -1256,13 +1265,13 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.5935849350843413,
+      "scale": 1.1567291133012465,
       "offset": [
-        771.9562407574102,
-        -11.54258749565777
+        142.50736700853804,
+        -435.7267852415996
       ]
     },
-    "frontendVersion": "1.43.18",
+    "frontendVersion": "1.45.21",
     "workflowRendererVersion": "LG",
     "VHS_latentpreview": true,
     "VHS_latentpreviewrate": 0,
