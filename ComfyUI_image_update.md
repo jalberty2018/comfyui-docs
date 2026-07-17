@@ -10,6 +10,7 @@
 ## 15072026
 
 - ComfyUI 0.28.0
+- Fixed Flux-Klein text_encoder download.
 
 ## 09072026
 
@@ -35,7 +36,7 @@
 - [JoyCaption](https://github.com/fpgaminer/joycaption_comfyui)
 - Fixed typos, white space breaks, documentation with Codex.
 - Made moves and hf downloads more verbose.
-- Fixed Flux-Klein downloads.
+- Fixed Flux-Klein download.
 
 ## 06062026
 
