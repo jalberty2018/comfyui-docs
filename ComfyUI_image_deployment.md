@@ -22,6 +22,12 @@
 
 - The container date tag used by a RunPod template, for example `01072026`, can differ between models. This is intentional: a template may stay on an earlier validated container when a newer build has not yet been tested with that specific model, or when only minor changes were made compared with the previous version.
 
+### 👉 License note on FLUX.2 [klein] 9B
+
+- The 9B model is released under the FLUX Non-Commercial License by Black Forest Labs. This means you can use it for personal and research purposes, but commercial use is not permitted. If you use the 9B model, you are responsible for complying with that license.
+
+- 👉 [Accepting license](ComfyUI_image_hf_gated.md)
+
 ## 📘 Tutorial
 
 - [Specific for these templates](ComfyUI_image_tutorial.md)

@@ -120,6 +120,7 @@
 - [KleinRefGrid](https://github.com/xb1n0ry/ComfyUI-KleinRefGrid)
 - [Flux2KontextConditioner](https://github.com/KursatAs/ComfyUI-Flux2KontextConditioner.git)
 - [KleinTiledUpscaler](https://github.com/Gavr728/ComfyUI_KleinTiledUpscaler)
+- [one-node-flux-2-klein](https://github.com/yanokusnir-ai/one-node-flux-2-klein)
 
 #### Z-Image
 
@@ -133,15 +134,19 @@
 
 #### Krea
 
- - [krea2-conditioning](https://github.com/huwhitememes/comfyui-krea2-conditioning)
- - [Krea2TextEncoder](https://github.com/ethanfel/ComfyUI-Krea2TextEncoder)
- - [Conditioning-Rebalance](https://github.com/nova452/ComfyUI-Conditioning-Rebalance)
- - [Krea2T-Enhancer](https://github.com/capitan01R/ComfyUI-Krea2T-Enhancer)
- - [krea-reference](https://github.com/kgilper/krea-reference)
- - [Krea-2-Two-Stage-Sampler](https://github.com/Auryg/Krea-2-Two-Stage-Sampler)
- - [Krea2-StyleTransfer](https://github.com/jieg9341-lab/ComfyUI-Krea2-StyleTransfer)
- - [KreaReason](https://github.com/shootthesound/ComfyUI-KreaReason)
- 
+- [krea2-conditioning](https://github.com/huwhitememes/comfyui-krea2-conditioning)
+- [Krea2TextEncoder](https://github.com/ethanfel/ComfyUI-Krea2TextEncoder)
+- [Conditioning-Rebalance](https://github.com/nova452/ComfyUI-Conditioning-Rebalance)
+- [Krea2T-Enhancer](https://github.com/capitan01R/ComfyUI-Krea2T-Enhancer)
+- [krea-reference](https://github.com/kgilper/krea-reference)
+- [Krea-2-Two-Stage-Sampler](https://github.com/Auryg/Krea-2-Two-Stage-Sampler)
+- [Krea2-StyleTransfer](https://github.com/jieg9341-lab/ComfyUI-Krea2-StyleTransfer)
+- [KreaReason](https://github.com/shootthesound/ComfyUI-KreaReason)
+- [Krea2edit](https://github.com/lbouaraba/comfyui-krea2edit)
+- [krea2-negpip](https://github.com/blue-pen5805/ComfyUI-krea2-negpip)
+- [Krea2-Projector-Tuner](https://github.com/BlackSnowSkill/ComfyUI-Krea2-Projector-Tuner)
+- [Krea2-attention-tweak.git](https://github.com/Extraltodeus/ComfyUI-Krea2-attention-tweak)
+
 ## 🧩 All possible Custom Nodes
 
 - [Full List](https://comfyui.rozenlaan.site)

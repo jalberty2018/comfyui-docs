@@ -7,10 +7,15 @@
 - The date reflects when the related custom nodes were cloned from their upstream repositories.
 - Pinned custom nodes are not updated automatically, because changing those pins can introduce compatibility issues.
 
-## 15072026
+## 19072026
 
 - ComfyUI 0.28.0
 - Fixed Flux-Klein text_encoder download.
+- [one-node-flux-2-klein](https://github.com/yanokusnir-ai/one-node-flux-2-klein)
+- [Krea2edit](https://github.com/lbouaraba/comfyui-krea2edit)
+- [krea2-negpip](https://github.com/blue-pen5805/ComfyUI-krea2-negpip)
+- [Krea2-Projector-Tuner](https://github.com/BlackSnowSkill/ComfyUI-Krea2-Projector-Tuner)
+- [Krea2-attention-tweak.git](https://github.com/Extraltodeus/ComfyUI-Krea2-attention-tweak)
 
 ## 09072026
 

@@ -1,4 +1,4 @@
-# FLUX.2 Klein 9B model download
+# FLUX.2 Klein 9B model license
 
 ## Accepting licenses
 
@@ -16,20 +16,7 @@
 - Add your token/secret to **HF_TOKEN**.
 - **Save the template**.
 - Click **Deploy On-Demand**.
-- The template will download the 4B and 9B models.
-
-### Speeding up model downloads
-
-- If you don't need the 4B model, delete the following keys in the template before starting the pod.
-
-```txt
-HF_MODEL_DIFFUSION_MODELS3
-HF_MODEL_DIFFUSION_MODELS_FILENAME3
-HF_MODEL_DIFFUSION_MODELS4
-HF_MODEL_DIFFUSION_MODELS_FILENAME4
-HF_MODEL_TEXT_ENCODERS2
-HF_MODEL_TEXT_ENCODERS_FILENAME2
-```
+- The template will download the 9B model.
 
 ## Option 2: When the pod is running
 
@@ -69,4 +56,3 @@ hf download black-forest-labs/FLUX.2-klein-base-9B flux-2-klein-base-9b.safetens
 
 - Press enter.
 - Wait until the downloads finish.
-
