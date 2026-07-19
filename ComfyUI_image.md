@@ -46,31 +46,35 @@ The guiding idea is aligned with the open-model discussion described by Eric Har
 
 ![krea-2a](images/ai-generated-krea2.jpg)
 
-##  Example t2i workflow Krea-2 with image conditioning without vae encoding.
+## Example t2i workflow Krea-2 with image conditioning without vae encoding.
 
 ![krea-2b](images/ai-generated-krea2-vlm.jpg)
 
-##  Example t2i workflow Krea-2 artist friendly conditioning
+## Example t2i workflow Krea-2 artist friendly conditioning
 
 ![krea-2c](images/ai-generated-krea2-vlm-artist.jpg)
 
-##  Example i2i workflow Krea-2 style transfer with vae encoding
+## Example i2i workflow Krea-2 style transfer with vae encoding
 
 ![krea-2d](images/ai-generated-krea2-style-transfer.jpg)
 
-##  Example workflow FLUX-Klein control/target image generation uncensored
+## Example workflow FLUX-Klein control/target image generation 
 
 ![FLUX-Klein](images/ai-generated-FLUX-KLEIN.jpg)
 
-##  Example workflow Qwen-Image-Edit multiple angles
+## Example workflow FLUX-Klein RefControl image generation
+
+![FLUX-Klein-RefControl](images/ai-generated-FLUX-KLEIN-2.jpg)
+
+## Example workflow Qwen-Image-Edit multiple angles
 
 ![Qwen-Image-Edit camera angles](images/ai-generated-QWEN-EDIT-CAMERA.jpg)
 
-##  Example workflow FLUX.2 Dev multiple angles
+## Example workflow FLUX.2 Dev multiple angles
 
 ![FLUX2-CAMERA](images/ai-generated-FLUX2-CAMERA.jpg)
 
-##  Example workflow ZIB-ZIT uncensored
+## Example workflow ZIB-ZIT
 
 ![ZIB-ZIT](images/ai-generated-ZIB-ZIT.jpg)
 
