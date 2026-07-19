@@ -58,7 +58,11 @@ The guiding idea is aligned with the open-model discussion described by Eric Har
 
 ![krea-2d](images/ai-generated-krea2-style-transfer.jpg)
 
-## Example workflow FLUX-Klein control/target image generation 
+## Example i2i workflow Krea-2 edit with edit-lora
+
+![krea-2e](images/ai-generated-krea2-edit.jpg)
+
+## Example workflow FLUX-Klein control/target image generation
 
 ![FLUX-Klein](images/ai-generated-FLUX-KLEIN.jpg)
 
@@ -78,50 +82,50 @@ The guiding idea is aligned with the open-model discussion described by Eric Har
 
 ![ZIB-ZIT](images/ai-generated-ZIB-ZIT.jpg)
 
-##  Example workflow JoyCaption
+## Example workflow JoyCaption
 
 ![JoyCaption workflow](images/joycaption-workflow.jpg)
 
-###  Example running Z-Image on an RTX A4500
+### Example running Z-Image on an RTX A4500
 
 ![Pod running on RTX A4500 ZIT ComfyUI](images/runpod_A4500_ZIB_ZIT.jpg)
 
-###  Example running Z-Image on an RTX A5000
+### Example running Z-Image on an RTX A5000
 
 ![Pod running on RTX A5000 ZIT ComfyUI](images/runpod_A5000_ZIB_ZIT.jpg)
 
-###  Example running Z-Image on an RTX 4000 Ada
+### Example running Z-Image on an RTX 4000 Ada
 
 ![Pod running on RTX 4000 Ada ZIT ComfyUI](images/runpod_4000ADA_ZIB_ZIT.jpg)
 
-###  Example running Z-Image on an RTX 3090
+### Example running Z-Image on an RTX 3090
 
 ![Pod running on RTX 3090 ZIT ComfyUI](images/runpod_3090_ZIB_ZIT.jpg)
 
-###  Example running FLUX.2 Klein 9B on an RTX A4500
+### Example running FLUX.2 Klein 9B on an RTX A4500
 
 ![Pod running on RTX A4500 FLUX.2 Klein ComfyUI](images/runpod_FLUX_KLEIN.jpg)
 
-###  Example running Qwen-Image-Edit fp8 on an RTX A5000
+### Example running Qwen-Image-Edit fp8 on an RTX A5000
 
 ![Pod running on RTX A5000 Qwen-Image-Edit fp8 ComfyUI](images/runpod_A5000_QWEN-EDIT.jpg)
 
-###  Example running Qwen-Image-Edit bf16 on an A40
+### Example running Qwen-Image-Edit bf16 on an A40
 
 ![Pod running on A40 Qwen-Image-Edit bf16 ComfyUI](images/runpod_A40_QWEN-EDIT.jpg)
 
-###  Example running FLUX.2 Dev bf16 on an L40S
+### Example running FLUX.2 Dev bf16 on an L40S
 
 ![Pod running on L40S FLUX.2 Dev bf16 ComfyUI](images/runpod_L40S_FLUX_2.jpg)
 
-###  Example running FLUX.2 Dev fp8 on an RTX A5000 (slow)
+### Example running FLUX.2 Dev fp8 on an RTX A5000 (slow)
 
 ![Pod running on RTX A5000 FLUX.2 Dev fp8 ComfyUI](images/runpod_A5000_FLUX_2.jpg)
 
-###  Example running Krea-2 turbo fp8 on an RTX A5000
+### Example running Krea-2 turbo fp8 on an RTX A5000
 
 ![Pod running on RTX A5000 krea2 turbo fp8 ComfyUI](images/runpod_A5000_krea2.jpg)
 
-###  Example running Krea-2 turbo bf16 on an RTX A5000
+### Example running Krea-2 turbo bf16 on an RTX A5000
 
 ![Pod running on RTX A5000 krea2 turbo bf16 ComfyUI](images/runpod_A5000_krea2-bf16.jpg)
