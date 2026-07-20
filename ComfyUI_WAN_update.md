@@ -7,9 +7,10 @@
 - The date reflects when the related custom nodes were cloned from their upstream repositories.
 - Pinned custom nodes are not updated automatically, because changing those pins can introduce compatibility issues.
 
-## 02072025
+## 20072025
 
 - ComfyUI 0.28.0
+- Updated hf download logic trying to prevent hf xet stalls.
 
 ## 02072025
 

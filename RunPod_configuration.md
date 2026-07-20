@@ -20,7 +20,7 @@
 
 ## Hugging Face ComfyUI Model Configuration
 
-- Change `HF_MODEL_` to `HF_MODEL_LVRAM_` or `HF_MODEL_HVRAM_` to make loading VRAM dependent through `VRAM_THRESHOLD`.
+- Change `HF_MODEL_` to `HF_MODEL_LVRAM_` or `HF_MODEL_HVRAM_` makes loading VRAM dependent through `VRAM_THRESHOLD`.
 
 | Model Type      | Model                                | Safetensors/GGUF                              |
 |-----------------|--------------------------------------|-----------------------------------------------|
@@ -41,7 +41,9 @@
 
 | Variable              | Description                                                                                               | Default |
 |-----------------------|-----------------------------------------------------------------------------------------------------------|---------|
-| `HF_DOWNLOAD_TIMEOUT` | Maximum duration for each `hf download`. Supports GNU duration suffixes such as `s`, `m`, `h`, and `d`. | `10m`   |
+| `HF_DOWNLOAD_STALL_TIMEOUT` | Stall watchdog for `hf download` in seconds. | `300`   |
+| `HF_DOWNLOAD_KILL_AFTER` | Kill grace period `hf download` in seconds. | `30`   |
+
 
 | Type | Model                   | Safetensors/GGUF          | Include pattern                  | Exclude pattern                  | `/workspace/ComfyUI/<Directory>` |
 |------|-------------------------|---------------------------|----------------------------------|----------------------------------|----------------------------------|
@@ -59,7 +61,7 @@
 
 ## Workflows
 
-- Change `WORKFLOW` to `WORKFLOW_LVRAM` or `WORKFLOW_HVRAM` to make loading VRAM dependent. The scripts select HVRAM workflows above 40 GB.
+- Change `WORKFLOW` to `WORKFLOW_LVRAM` or `WORKFLOW_HVRAM` makes loading VRAM dependent. Makes loading VRAM dependent through `VRAM_THRESHOLD`.
 
 | Variable         | Description                      |
 |------------------|----------------------------------|
