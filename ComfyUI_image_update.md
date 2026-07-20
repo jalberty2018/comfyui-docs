@@ -7,21 +7,22 @@
 - The date reflects when the related custom nodes were cloned from their upstream repositories.
 - Pinned custom nodes are not updated automatically, because changing those pins can introduce compatibility issues.
 
-## 19072026
+## 20072026
 
 - ComfyUI 0.28.0
 - Fixed Flux-Klein text_encoder download.
+- Updated hf download logic trying to prevent xet stalls.
 - [one-node-flux-2-klein](https://github.com/yanokusnir-ai/one-node-flux-2-klein)
 - [Krea2edit](https://github.com/lbouaraba/comfyui-krea2edit)
 - [krea2-negpip](https://github.com/blue-pen5805/ComfyUI-krea2-negpip)
 - [Krea2-Projector-Tuner](https://github.com/BlackSnowSkill/ComfyUI-Krea2-Projector-Tuner)
 - [Krea2-attention-tweak.git](https://github.com/Extraltodeus/ComfyUI-Krea2-attention-tweak)
+- [Krea2-Ostris-Edit](https://github.com/ostris/ComfyUI-Krea2-Ostris-Edit)
 
 ## 09072026
 
 - ComfyUI 0.27.0
 - [krea-reference](https://github.com/kgilper/krea-reference)
-- [Krea-2-Two-Stage-Sampler](https://github.com/Auryg/Krea-2-Two-Stage-Sampler)
 - [KreaReason](https://github.com/shootthesound/ComfyUI-KreaReason)
 - [Krea2-StyleTransfer](https://github.com/jieg9341-lab/ComfyUI-Krea2-StyleTransfer)
 

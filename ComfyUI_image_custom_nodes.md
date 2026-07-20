@@ -139,13 +139,13 @@
 - [Conditioning-Rebalance](https://github.com/nova452/ComfyUI-Conditioning-Rebalance)
 - [Krea2T-Enhancer](https://github.com/capitan01R/ComfyUI-Krea2T-Enhancer)
 - [krea-reference](https://github.com/kgilper/krea-reference)
-- [Krea-2-Two-Stage-Sampler](https://github.com/Auryg/Krea-2-Two-Stage-Sampler)
 - [Krea2-StyleTransfer](https://github.com/jieg9341-lab/ComfyUI-Krea2-StyleTransfer)
 - [KreaReason](https://github.com/shootthesound/ComfyUI-KreaReason)
 - [Krea2edit](https://github.com/lbouaraba/comfyui-krea2edit)
 - [krea2-negpip](https://github.com/blue-pen5805/ComfyUI-krea2-negpip)
 - [Krea2-Projector-Tuner](https://github.com/BlackSnowSkill/ComfyUI-Krea2-Projector-Tuner)
 - [Krea2-attention-tweak.git](https://github.com/Extraltodeus/ComfyUI-Krea2-attention-tweak)
+- [Krea2-Ostris-Edit](https://github.com/ostris/ComfyUI-Krea2-Ostris-Edit)
 
 ## 🧩 All possible Custom Nodes
 
