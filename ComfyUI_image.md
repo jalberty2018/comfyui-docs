@@ -42,6 +42,14 @@ The guiding idea is aligned with the open-model discussion described by Eric Har
 
 - [Specific for these templates](ComfyUI_image_tutorial.md)
 
+## Example i2i workflow Krea-2 identity transfer
+
+![krea-2d](images/ai-generated-krea2-identity.jpg)
+
+## Example i2i workflow Krea-2 edit
+
+![krea-2e](images/ai-generated-krea2-edit.jpg)
+
 ##  Example t2i workflow Krea-2 with prompt enhancer
 
 ![krea-2a](images/ai-generated-krea2.jpg)
@@ -53,14 +61,6 @@ The guiding idea is aligned with the open-model discussion described by Eric Har
 ## Example t2i workflow Krea-2 artist friendly conditioning
 
 ![krea-2c](images/ai-generated-krea2-vlm-artist.jpg)
-
-## Example i2i workflow Krea-2 style transfer with vae encoding
-
-![krea-2d](images/ai-generated-krea2-style-transfer.jpg)
-
-## Example i2i workflow Krea-2 edit with edit-lora
-
-![krea-2e](images/ai-generated-krea2-edit.jpg)
 
 ## Example workflow FLUX-Klein control/target image generation
 
