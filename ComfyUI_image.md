@@ -46,9 +46,13 @@ The guiding idea is aligned with the open-model discussion described by Eric Har
 
 ![krea-2d](images/ai-generated-krea2-identity.jpg)
 
-## Example i2i workflow Krea-2 edit
+## Example i2i workflow Krea-2 edit loop
 
 ![krea-2e](images/ai-generated-krea2-edit.jpg)
+
+## Example i2i workflow Krea-2 ostris edit
+
+![krea-2f](images/ai-generated-krea2-ostris-edit.jpg)
 
 ##  Example t2i workflow Krea-2 with prompt enhancer
 
