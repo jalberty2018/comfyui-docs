@@ -2815,7 +2815,7 @@
       ],
       "size": [
         261.61813617906625,
-        463.25334884466645
+        339.415869156683
       ],
       "flags": {},
       "order": 93,
@@ -3077,7 +3077,7 @@
         "Node name for S&R": "SeedGenerator"
       },
       "widgets_values": [
-        946586300801024,
+        669633592863685,
         "randomize"
       ],
       "color": "#223",
@@ -3705,89 +3705,6 @@
       "bgcolor": "#353"
     },
     {
-      "id": 847,
-      "type": "53ea1aa7-76ef-4d3f-9b2a-d774c4194985",
-      "pos": [
-        256.9181215801042,
-        3740.4037278867204
-      ],
-      "size": [
-        273.3603604518253,
-        173.59717579818425
-      ],
-      "flags": {
-        "collapsed": false
-      },
-      "order": 82,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 1867
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 1844
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 1843
-        },
-        {
-          "label": "MultiModal",
-          "name": "switch",
-          "type": "BOOLEAN",
-          "widget": {
-            "name": "switch"
-          },
-          "link": null
-        },
-        {
-          "label": "video_cfg",
-          "name": "cfg_1",
-          "type": "FLOAT",
-          "widget": {
-            "name": "cfg_1"
-          },
-          "link": null
-        },
-        {
-          "label": "audio_cfg",
-          "name": "cfg_2",
-          "type": "FLOAT",
-          "widget": {
-            "name": "cfg_2"
-          },
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "GUIDER",
-          "type": "GUIDER",
-          "links": [
-            1842
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.20.1",
-        "previewExposures": []
-      },
-      "widgets_values": [
-        1,
-        true,
-        2,
-        1.2
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
       "id": 103,
       "type": "CFGGuider",
       "pos": [
@@ -3921,7 +3838,7 @@
       ],
       "size": [
         608.2491442496339,
-        334
+        862.7180012184297
       ],
       "flags": {},
       "order": 98,
@@ -3986,13 +3903,13 @@
           "hidden": false,
           "paused": false,
           "params": {
-            "filename": "LTX-23-i2v_00007-audio.mp4",
+            "filename": "LTX-23-i2v_00001-audio.mp4",
             "subfolder": "",
             "type": "output",
             "format": "video/h264-mp4",
             "frame_rate": 24,
-            "workflow": "LTX-23-i2v_00007.png",
-            "fullpath": "/workspace/ComfyUI/output/LTX-23-i2v_00007-audio.mp4"
+            "workflow": "LTX-23-i2v_00001.png",
+            "fullpath": "/workspace/ComfyUI/output/LTX-23-i2v_00001-audio.mp4"
           }
         }
       },
@@ -4070,45 +3987,6 @@
       "widgets_values": [],
       "color": "#222",
       "bgcolor": "#000"
-    },
-    {
-      "id": 857,
-      "type": "CLIPTextEncode",
-      "pos": [
-        -634.5146127142718,
-        4390.167608137487
-      ],
-      "size": [
-        420.9268109991142,
-        276.73179998898286
-      ],
-      "flags": {},
-      "order": 47,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 1865
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            1863
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPTextEncode"
-      },
-      "widgets_values": [
-        "blurry, oversaturated, pixelated, low resolution, grainy, distorted, noise, compression artifacts, jpeg artifacts, glitches, watermark, text, logo, signature, copyright, subtitles, distorted sound, saturated sound, loud, music, text, comfortable treatment."
-      ],
-      "color": "#332922",
-      "bgcolor": "#593930"
     },
     {
       "id": 287,
@@ -4383,6 +4261,82 @@
       "bgcolor": "rgba(24,24,27,.9)"
     },
     {
+      "id": 366,
+      "type": "Lora Loader (LoraManager)",
+      "pos": [
+        -1238.3454800399052,
+        2840.5846579904937
+      ],
+      "size": [
+        541.8388703830533,
+        362
+      ],
+      "flags": {},
+      "order": 64,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 647
+        },
+        {
+          "name": "clip",
+          "shape": 7,
+          "type": "CLIP",
+          "link": null
+        },
+        {
+          "name": "lora_stack",
+          "shape": 7,
+          "type": "LORA_STACK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            653
+          ]
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": null
+        },
+        {
+          "name": "trigger_words",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "loaded_loras",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Lora Loader (LoraManager)",
+        "__lm_widget_ids": [
+          "__lm_autocomplete_meta_text",
+          "text",
+          "loras"
+        ]
+      },
+      "widgets_values": [
+        {
+          "version": 1,
+          "textWidgetName": "text"
+        },
+        "",
+        []
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
       "id": 167,
       "type": "LoadImage",
       "pos": [
@@ -4474,7 +4428,7 @@
         "Node name for S&R": "PromptRelaySmartEncode"
       },
       "widgets_values": [
-        "cinematic Disney blonf girl standing in front of a frozen mountain , dressed as a ice princess.",
+        "Disney blond girl standing in front of a frozen mountain , dressed as a ice princess.\n\nCartoon style with bright colors.",
         "0-5 seconds: girl looks with a senual smile at the camera.\n\n5-10 seconds: girl moves her hands behind her head, showing her upper body in a provoking pose\n\n10-20 seconds: girl starts wiggling her hips teasing the viewer.",
         false,
         0.001
@@ -4483,80 +4437,126 @@
       "bgcolor": "#353"
     },
     {
-      "id": 366,
-      "type": "Lora Loader (LoraManager)",
+      "id": 857,
+      "type": "CLIPTextEncode",
       "pos": [
-        -1238.3454800399052,
-        2840.5846579904937
+        -634.5146127142718,
+        4390.167608137487
       ],
       "size": [
-        541.8388703830533,
-        362
+        420.9268109991142,
+        276.73179998898286
       ],
       "flags": {},
-      "order": 64,
+      "order": 47,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 1865
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            1863
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "blurry, oversaturated, pixelated, low resolution, grainy, distorted, noise, compression artifacts, jpeg artifacts, glitches, watermark, text, logo, signature, copyright, subtitles, distorted sound, saturated sound."
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 847,
+      "type": "53ea1aa7-76ef-4d3f-9b2a-d774c4194985",
+      "pos": [
+        256.9181215801042,
+        3740.4037278867204
+      ],
+      "size": [
+        273.3603604518253,
+        173.59717579818425
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 82,
       "mode": 0,
       "inputs": [
         {
           "name": "model",
           "type": "MODEL",
-          "link": 647
+          "link": 1867
         },
         {
-          "name": "clip",
-          "shape": 7,
-          "type": "CLIP",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 1844
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 1843
+        },
+        {
+          "label": "MultiModal",
+          "name": "switch",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "switch"
+          },
           "link": null
         },
         {
-          "name": "lora_stack",
-          "shape": 7,
-          "type": "LORA_STACK",
+          "label": "video_cfg",
+          "name": "cfg_1",
+          "type": "FLOAT",
+          "widget": {
+            "name": "cfg_1"
+          },
+          "link": null
+        },
+        {
+          "label": "audio_cfg",
+          "name": "cfg_2",
+          "type": "FLOAT",
+          "widget": {
+            "name": "cfg_2"
+          },
           "link": null
         }
       ],
       "outputs": [
         {
-          "name": "MODEL",
-          "type": "MODEL",
+          "name": "GUIDER",
+          "type": "GUIDER",
           "links": [
-            653
+            1842
           ]
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": null
-        },
-        {
-          "name": "trigger_words",
-          "type": "STRING",
-          "links": null
-        },
-        {
-          "name": "loaded_loras",
-          "type": "STRING",
-          "links": null
         }
       ],
       "properties": {
-        "Node name for S&R": "Lora Loader (LoraManager)",
-        "__lm_widget_ids": [
-          "__lm_autocomplete_meta_text",
-          "text",
-          "loras"
-        ]
+        "cnr_id": "comfy-core",
+        "ver": "0.20.1",
+        "previewExposures": []
       },
       "widgets_values": [
-        {
-          "version": 1,
-          "textWidgetName": "text"
-        },
-        "",
-        []
+        1,
+        false,
+        2,
+        1.2
       ],
-      "color": "#233",
-      "bgcolor": "#355"
+      "color": "#232",
+      "bgcolor": "#353"
     }
   ],
   "links": [
@@ -6022,10 +6022,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.4134854247261107,
+      "scale": 0.34343316933200113,
       "offset": [
-        1918.5446823949214,
-        -2870.244993849992
+        1610.981666593297,
+        -2904.8277473696135
       ]
     },
     "frontendVersion": "1.47.10",
