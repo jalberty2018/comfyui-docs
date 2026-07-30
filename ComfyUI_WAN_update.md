@@ -11,6 +11,7 @@
 
 - ComfyUI 0.29.0
 - [ComfyUI-WanAnimatePlus](https://github.com/wuwukaka/ComfyUI-WanAnimatePlus)
+- Fixed logic error with hf download watchdog.
 
 ## 20072025
 

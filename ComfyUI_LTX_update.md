@@ -10,6 +10,7 @@
 ## 30072026
 
 - ComfyUI 0.29.0
+- Fixed logic error with hf download watchdog.
 
 ## 20072026
 
