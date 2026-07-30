@@ -95,6 +95,7 @@
 
 - [WanAnimate Enhancer](https://github.com/wallen0322/ComfyUI-WanAnimate-Enhancer)
 - [WanAnimatePreprocess](https://github.com/kijai/ComfyUI-WanAnimatePreprocess)
+- [ComfyUI-WanAnimatePlus](https://github.com/wuwukaka/ComfyUI-WanAnimatePlus)
 
 #### Lucy Edit
 - [Lucy Edit](https://github.com/DecartAI/Lucy-Edit-ComfyUI)

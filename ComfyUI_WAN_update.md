@@ -7,6 +7,11 @@
 - The date reflects when the related custom nodes were cloned from their upstream repositories.
 - Pinned custom nodes are not updated automatically, because changing those pins can introduce compatibility issues.
 
+## 30072026
+
+- ComfyUI 0.29.0
+- [ComfyUI-WanAnimatePlus](https://github.com/wuwukaka/ComfyUI-WanAnimatePlus)
+
 ## 20072025
 
 - ComfyUI 0.28.0
