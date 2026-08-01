@@ -19,55 +19,7 @@
 
 ## 🚀 Starting a Pod
 
-### 🧩 Choose a Template
-
-![t2v/i2v template example](images/template_LTX.jpg){ width="300" }
-
-Example:
-👉 [RunPod LTX-2.3 dev i2v t2v vi2v vt2v bf16/fp8](https://console.runpod.io/deploy?template=p4f6rm9tb4&ref=se4tkc5o)
-
-Steps:
-
-1. Choose a [GPU](ComfyUI_LTX_hardware.md)
-2. Edit template settings if needed.  
-3. Choose **Volume disk** (/workspace)
-4. Enable Volume encryption if desired.
-5. Click **Deploy On-Demand**.
-
-### ⚠️ CUDA errors when deploying pod
-
-![Filter CUDA](images/filter_cuda.jpg)
-
-- Deploy in another region.
-- Change filter to CUDA 12.8 on the RunPod console
-
-### 📜 Viewing System Logs
-
-![deployment start](images/downloading.jpg)
-
-- Go to **Logs**.  
-- Loading takes **9–15 minutes** depending on region.  
-- If the image doesn’t begin downloading after **1 minute**, delete and redeploy in another region.
-
-![extracting start](images/extracting.jpg)
-
-Ends with (example):
-
-![Download extracting end](images/download_end.jpg)
-
-### 🐳 Viewing Container Logs
-
-![start container](images/start_log.jpg)
-
-When you see:
-
-![final message](images/final_log.jpg)
-
-→ Your pod is ready.
-
-### ⚠️ Hugging Face download takes longer than usual
-
-If the Hugging Face download takes longer than usual, restart the pod and try again. Download time still depends on the file size and the speed of the network connection.
+[Start a pod on RunPod](Runpod_pod_deployment.md#ltx-templates)
 
 ## 🔌 Connecting to Your Pod
 
@@ -165,7 +117,7 @@ From web terminal, Code-Server or ComfyUI-Lora-Manager.
 ```txt
 https://<pod-id>-8188.proxy.runpod.net/loras
 ```
-	
+
 #### Civitai token (needed for download)
 
 - Go to preferences and add your token if not set before starting the pod (CIVITAI_TOKEN).
@@ -254,6 +206,11 @@ hf download ricecake/wan21NSFWClipVisionH_v10 wan21NSFWClipVisionH_v10.safetenso
 Refresh ComfyUI pressing key **r**.
 
 ### Manual provisioning
+
+![manual provisioning](images/codeserver_manual_provisioning.jpg)
+
+- Information is available in the pod's documentation.
+- Open web terminal or code-server.
 
 - Information is available in the pod's documentation.
 - Open web terminal or code-server.

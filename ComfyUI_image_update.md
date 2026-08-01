@@ -11,6 +11,7 @@
 
 - ComfyUI 0.29.0
 - Fixed logic error with hf download watchdog.
+- Updated deployment tutorial.
 - [Comfyui-Model-Resolver](https://github.com/Azornes/Comfyui-Model-Resolver)
 
 ## 20072026

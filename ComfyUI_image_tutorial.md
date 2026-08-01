@@ -19,66 +19,7 @@
 
 ## 🚀 Starting a Pod
 
-### 🧩 Choose a Template
-
-![t2v template](images/template_ZIT.jpg){ width="300" }
-
-Example:
-
-- 👉 [Z-Image Turbo and base](https://console.runpod.io/deploy?template=ia5t70hfak&ref=se4tkc5o)
-
-- 👉 [Krea-2 Base and Turbo](https://console.runpod.io/deploy?template=e2hlyrm22l&ref=se4tkc5o)
-
-- 👉 [ERNIE-Image Base and Turbo](https://console.runpod.io/deploy?template=g8ow1s1s0a&ref=se4tkc5o)
-
-- 👉 [FLUX.2 Dev](https://console.runpod.io/deploy?template=8nl523gts5&ref=se4tkc5o)
-- 👉 [FLUX.2 Klein](https://console.runpod.io/deploy?template=n1wa3lb44l&ref=se4tkc5o)
-
-- 👉 [Qwen-Image 2512](https://console.runpod.io/deploy?template=3fri17sxaa&ref=se4tkc5o)
-- 👉 [Qwen-Image-Edit 2511](https://console.runpod.io/deploy?template=mxvvx0hcmp&ref=se4tkc5o)
-
-Steps:
-
-1. Choose a [GPU](ComfyUI_image_hardware.md)
-2. Edit template settings if needed.  
-3. Choose **Volume disk** (/workspace)
-4. Enable Volume encryption if desired.
-5. Click **Deploy On-Demand**.
-
-### ⚠️ CUDA errors when deploying pod
-
-![Filter CUDA](images/filter_cuda.jpg)
-
-- Deploy in another region.
-- Change filter to CUDA 12.8 on the RunPod console
-
-### 📜 Viewing System Logs
-
-![deployment start](images/downloading.jpg)
-
-- Go to **Logs**.  
-- Loading takes **9–15 minutes** depending on region  
-- If the image doesn’t begin downloading after **1 minute**, delete and redeploy in another region.
-
-![extracting start](images/extracting.jpg)
-
-Ends with (example):
-
-![Download extracting end](images/download_end.jpg)
-
-### 🐳 Viewing Container Logs
-
-![start container](images/start_log.jpg)
-
-When you see:
-
-![final message](images/final_log.jpg)
-
-→ Your pod is ready.
-
-### ⚠️ Hugging Face download takes longer than usual
-
-If the Hugging Face download takes longer than usual, restart the pod and try again. Download time still depends on the file size and the speed of the network connection.
+[Start a pod on RunPod](Runpod_pod_deployment.md#image-templates)
 
 ## 🔌 Connecting to Your Pod
 
@@ -176,7 +117,7 @@ From web terminal, Code-Server or ComfyUI-Lora-Manager.
 ```txt
 https://<pod-id>-8188.proxy.runpod.net/loras
 ```
-	
+
 #### Civitai token (needed for download)
 
 - Go to preferences and add your token if not set before starting the pod (CIVITAI_TOKEN).
@@ -265,6 +206,8 @@ hf download ricecake/wan21NSFWClipVisionH_v10 wan21NSFWClipVisionH_v10.safetenso
 Refresh ComfyUI pressing key **r**.
 
 ### Manual provisioning
+
+![manual provisioning](images/codeserver_manual_provisioning.jpg)
 
 - Information is available in the pod's documentation.
 - Open web terminal or code-server.

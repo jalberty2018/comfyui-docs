@@ -2,10 +2,6 @@
 
 - run-comfyui-wan is tested on RunPod using an **L40S**, **RTX 6000 Ada** GPU.
 
-### ⚠️ Important Notice
-
-- Don't use pods with **no region id**; they are unreliable.
-
 ### 🚀 RunPod Templates
 
 **One-Click Deployment links:**
