@@ -17,6 +17,7 @@
 ### Downloading
 
 - [LoRA Manager](https://github.com/willmiao/ComfyUI-Lora-Manager)
+- [Comfyui-Model-Resolver](https://github.com/Azornes/Comfyui-Model-Resolver)
 
 ### Video/Upscale
 

@@ -14,7 +14,7 @@
 ### Downloaders/Linkers
 
 - [LoRA Manager](https://github.com/willmiao/ComfyUI-Lora-Manager)
-- [Model Linker](https://github.com/rethink-studios/comfyui-model-linker-desktop)
+- [Comfyui-Model-Resolver](https://github.com/Azornes/Comfyui-Model-Resolver)
 
 ### Utilities
 
