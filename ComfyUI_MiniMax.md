@@ -23,13 +23,17 @@ Use this template for MiniMax H3 text-to-video, image-to-video, first/last-frame
 - Authentication for ComfyUI, Code Server, Hugging Face and CivitAI.
 - LoRA Manager and common video, workflow and utility nodes.
 
-## Example workflow
-
-![MiniMax H3 workflow](images/ai-generated-MiniMax.jpg)
-
 ## 📦 Deployment on RunPod
 
 - [RunPod deployment](ComfyUI_MiniMax_deployment.md)
+
+## Example standard workflow Reference to video/audio
+
+![MiniMax H3 workflow Ref2va](images/ai-generated-MiniMax.jpg)
+
+## Example standard workflow image to video/audio
+
+![MiniMax H3 workflow Ref2va](images/ai-generated-MiniMax-i2v.jpg)
 
 ## 📘 Tutorial
 
@@ -39,9 +43,9 @@ Use this template for MiniMax H3 text-to-video, image-to-video, first/last-frame
 
 ![Pod running on L40S](images/runpod_L40S_MiniMax.jpg)
 
-### Pod running on RTX A5000
+### Pod running on RTX 5090
 
-![Pod running on RTX A5000](images/runpod_A5000_MiniMax.jpeg)
+![Pod running on RTX 5090](images/runpod_A5000_MiniMax.jpeg)
 
 ## More information
 

@@ -2,22 +2,20 @@
 
 MiniMax H3 model files are large and rely on ComfyUI offloading. Resolution, duration and concurrent model loading can increase both VRAM and system RAM requirements.
 
-## High-VRAM profile
+## Hardware tested
 
-- Full `fl2va` and `ref2va` INT8 ConvRot diffusion models: about 34 GB each.
-- Selected automatically when detected VRAM is above the default 36 GiB threshold.
-- The workflow loads the diffusion model needed for its task; it does not require both diffusion models in VRAM simultaneously.
+### MiniMax H3 INT8 Convrot
 
-## Lower-VRAM profile
+- video settings 1 MP 15 sec 24fps
 
-- Pruned `fl2va` and `ref2va` INT8 ConvRot diffusion models: about 21 GB each.
-- Selected automatically at or below the default 36 GiB threshold.
-- Sufficient system RAM and model offloading remain necessary.
+| GPU          | VRAM  | RAM |
+|--------------------------|-------|-------------------------|
+| L40S | 45Gb | 80Gb           |
 
-## Shared models
+### MiniMax H3 fp8 pruned
 
-- Qwen3-VL 32B INT8 ConvRot text encoder: about 27 GB on disk.
-- Video VAE: about 5.2 GB on disk.
-- Audio VAE: about 605 MB on disk.
+- video settings 1 MP 15sec 24fps
 
-Override automatic profile selection with the `VRAM_THRESHOLD` environment variable when testing a different balance between VRAM and offloading.
+| GPU          | VRAM  | RAM |
+|--------------------------|-------|-------------------------|
+| RTX 5090 | 32Gb | 70Gb           |
