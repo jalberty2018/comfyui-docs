@@ -1,5 +1,12 @@
 # ⚙️ Environment Variables
 
+## ComfyUI move to workspace configuration
+
+| Variable                  | Description                                                                    | Default |
+|---------------------------|--------------------------------------------------------------------------------|---------|
+| `MOVE_STATUS_INTERVAL`    | Seconds between progress updates while moving ComfyUI to the pod volume     | 5       |
+| `MOVE_STALL_TIMEOUT`      | Stop the move after this many seconds without a change in copied directory size | 300     |
+
 ## ComfyUI Configuration
 
 | Variable                  | Description                                                                    | Default |
@@ -7,8 +14,6 @@
 | `COMFYUI_EXTRA_ARGUMENTS` | Additional arguments for the ComfyUI CLI                                       |         |
 | `VRAM_THRESHOLD`          | VRAM threshold in GB for selecting the model                                   | Image: 38 GB; LTX/WAN: 36 GB |
 | `COMFYUI_START_MAX_TRIES` | Number of tries to wait until ComfyUI is online; depends on vCPU speed          | 60      |
-| `MOVE_STATUS_INTERVAL`    | Seconds between progress updates while moving ComfyUI to the network volume     | 5       |
-| `MOVE_STALL_TIMEOUT`      | Stop the move after this many seconds without a change in copied directory size | 300     |
 
 ## Authentication Tokens
 
@@ -17,6 +22,13 @@
 | Code Server    | `PASSWORD`       |
 | Hugging Face   | `HF_TOKEN`       |
 | CivitAI        | `CIVITAI_TOKEN`  |
+
+## Hugging Face hub model transfer Configuration
+
+| Variable              | Description                                                                                               | Default |
+|-----------------------|-----------------------------------------------------------------------------------------------------------|---------|
+| `HF_DOWNLOAD_STALL_TIMEOUT` | Stall watchdog for `hf download` in seconds. | `300`   |
+| `HF_DOWNLOAD_KILL_AFTER` | Kill grace period `hf download` in seconds. | `30`   |
 
 ## Hugging Face ComfyUI Model Configuration
 
@@ -39,19 +51,13 @@
 
 ## Hugging Face Model Configuration
 
-| Variable              | Description                                                                                               | Default |
-|-----------------------|-----------------------------------------------------------------------------------------------------------|---------|
-| `HF_DOWNLOAD_STALL_TIMEOUT` | Stall watchdog for `hf download` in seconds. | `300`   |
-| `HF_DOWNLOAD_KILL_AFTER` | Kill grace period `hf download` in seconds. | `30`   |
-
-
 | Type | Model                   | Safetensors/GGUF          | Include pattern                  | Exclude pattern                  | `/workspace/ComfyUI/<Directory>` |
 |------|-------------------------|---------------------------|----------------------------------|----------------------------------|----------------------------------|
 | File | `HF_MODEL[1-20]`        | `HF_MODEL_FILENAME[1-20]` | `HF_MODEL_INCLUDE[1-20]`         | `HF_MODEL_EXCLUDE[1-20]`         | `HF_MODEL_DIR[1-20]`             |
 | Dir  | `HF_FULL_MODEL[1-20]`   |                           | `HF_FULL_MODEL_INCLUDE[1-20]`    | `HF_FULL_MODEL_EXCLUDE[1-20]`    | `HF_FULL_MODEL_DIR[1-20]`        |
 
-## CivitAI LORAs
-
+## CivitAI LORAs download Configuration
+ 
 | Variable                         | Description                      |
 |----------------------------------|----------------------------------|
 | `CIVITAI_COM_MODEL_LORA_ID[1-50]`   | Version ID for LoRA (AIR) |
@@ -59,7 +65,7 @@
 | `CIVITAI_RED_MODEL_LORA_ID[1-50]`   | Version ID for LoRA (AIR) |
 | `CIVITAI_RED_MODEL_UNET_ID[1-50]`   | Version ID for UNET (AIR) |
 
-## Workflows
+## Workflows download Configuration
 
 - Change `WORKFLOW` to `WORKFLOW_LVRAM` or `WORKFLOW_HVRAM` makes loading VRAM dependent. Makes loading VRAM dependent through `VRAM_THRESHOLD`.
 
@@ -67,13 +73,13 @@
 |------------------|----------------------------------|
 | `WORKFLOW[1-50]` | Download link (compressed or plain) |
 
-## Other
+## Media download Configuration
 
 | Variable         | Description                      |
 |------------------|----------------------------------|
 | `MEDIA[1-50]` | Download link |
 
-## 🌐 Network Services
+## 🌐 Available Network Services
 
 | Service       | Port   | Access Type |
 |---------------|--------|-------------|
