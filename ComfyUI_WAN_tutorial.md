@@ -76,7 +76,7 @@ Copy the password → log in via the Code-Server service on tab **Connect**.
 
 ### Information in pod available
 
-![Code-Server](images/code-server-wan.jpg)
+![Code-Server](images/code-server_info_pod.jpg)
 
 ### ⚠️ Code-Server's screen remains blank
 
