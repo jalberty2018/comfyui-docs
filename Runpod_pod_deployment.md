@@ -2,11 +2,13 @@
 
 ![deployment speed](images/runpod_ready.jpg)
 
-The containers are thoroughly tested before being used in the templates. However, deploying a pod can still be frustrating due to slow or overloaded hardware on RunPod, as well as limited network performance when connecting to Docker Hub or the Hugging Face Hub. The parameters below will help you identify and stop an underperforming pod. A fast GPU provides little benefit when the rest of the system cannot operate at a comparable speed. The screenshot above is an example of the deployment speed of an excellent performing pod running Krea-2.
+- The containers are thoroughly tested before being used in the templates. However, deploying a pod can still be frustrating due to slow or overloaded hardware on RunPod, as well as limited network performance when connecting to Docker Hub or the Hugging Face Hub. The parameters below will help you identify and stop an underperforming pod. A fast GPU provides little benefit when the rest of the system cannot operate at a comparable speed. The screenshot above is an example of the deployment speed of an excellent performing pod running Krea-2.
+
+- Check [runpod uptime](https://uptime.runpod.io/) to check if there are issues for a specific regio.
 
 ## 🧩 Choose a Template
 
-A compatible GPU is preconfigured in each RunPod template and is marked with an asterisk (*). For a more comprehensive list of compatible GPUs, refer to the model-specific hardware sections below.
+- A compatible GPU is preconfigured in each RunPod template and is marked with an asterisk (*). For a more comprehensive list of compatible GPUs, refer to the model-specific hardware sections below.
 
 ### Image templates
 
@@ -29,7 +31,7 @@ A compatible GPU is preconfigured in each RunPod template and is marked with an 
 
 ![Runpod_deploy](images/runpod_deploy_01.jpg)
 
-1. Edit the template settings if needed.
+1. Choose an available **GPU** (preferable marked with an asterisk)
 2. Choose **Volume disk** (`/workspace`).
 3. Enable volume encryption if desired.
 4. Click **Deploy pod**.

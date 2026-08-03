@@ -23,7 +23,7 @@
 ### Downloaders/Linkers
 
 - [LoRA Manager](https://github.com/willmiao/ComfyUI-Lora-Manager)
-- [Comfyui-Model-Resolver](https://github.com/Azornes/Comfyui-Model-Resolver)
+- [comfyui-model-linker](https://github.com/kianxyzw/comfyui-model-linker)
 
 ### Video/Upscale
 
