@@ -9,6 +9,11 @@
 
 ## 03082026
 
+- [comfyui-model-linker](https://github.com/kianxyzw/comfyui-model-linker)
+- ComfyUI 0.30.0
+
+## 01082026
+
 - ComfyUI 0.29.0
 - Fixed logic error with hf download watchdog.
 - Updated deployment tutorial.
