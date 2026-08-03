@@ -7,12 +7,12 @@
 - The date reflects when the related custom nodes were cloned from their upstream repositories.
 - Pinned custom nodes are not updated automatically, because changing those pins can introduce compatibility issues.
 
-## 01082026
+## 03082026
 
 - ComfyUI 0.29.0
 - Fixed logic error with hf download watchdog.
 - Updated deployment tutorial.
-- [Comfyui-Model-Resolver](https://github.com/Azornes/Comfyui-Model-Resolver)
+- [comfyui-model-linker](https://github.com/kianxyzw/comfyui-model-linker)
 
 ## 20072026
 
