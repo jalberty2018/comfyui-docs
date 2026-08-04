@@ -9,6 +9,11 @@
 
 ## 30072026
 
+- ComfyUI 0.30.0
+- [PrunaVAED](https://huggingface.co/PrunaAI/PrunaVAED)
+
+## 30072026
+
 - ComfyUI 0.29.0
 - Fixed logic error with hf download watchdog.
 

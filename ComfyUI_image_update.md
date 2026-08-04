@@ -164,7 +164,7 @@
 - [Flux2Klein-Enhancer](https://github.com/capitan01R/ComfyUI-Flux2Klein-Enhancer)
 
 ## 20012026
- 
+
 - ComfyUI 0.9.2
 
 ## 14012026
