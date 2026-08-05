@@ -5,7 +5,7 @@
 
 ## Common tasks
 
-- [Start a pod](Runpod_pod_deployment)
+- [Start a pod](Runpod_pod_deployment.md)
 - [Connect to your pod](#connecting-to-your-pod)
 - [Open the web terminal](#web-terminal)
 - [Log in to Code-Server](#code-server-login)
@@ -19,7 +19,7 @@
 
 ## 🚀 Starting a Pod
 
-[Start a pod on RunPod](Runpod_pod_deployment)
+[Start a pod on RunPod](Runpod_pod_deployment.md)
 
 ## 🔌 Connecting to Your Pod
 
