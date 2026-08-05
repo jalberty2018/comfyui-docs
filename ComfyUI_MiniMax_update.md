@@ -10,7 +10,7 @@
 
 - ComfyUI 0.30.0
 - [Running hub](https://github.com/HM-RunningHub/ComfyUI_RH_MinMaxH3)
-- [Guide](ComfyUI-MiniMax-H3-Guide)
+- [Guide](https://github.com/ethanfel/ComfyUI-MiniMax-H3-Guide)
 - [sol-attn_Blackwell](https://github.com/KingGore/ComfyUI_sol-attn_Blackwell)
 - [Director](https://github.com/AIMixer/ComfyUI_MiniMaxH3_Director)
 - Blackwell configurations for model downloads

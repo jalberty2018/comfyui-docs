@@ -38,7 +38,7 @@
 
 ### Text encoders
 
-- [Guide](ComfyUI-MiniMax-H3-Guide)
+- [Guide](https://github.com/ethanfel/ComfyUI-MiniMax-H3-Guide)
 
 ### Sampling / Flow
 
