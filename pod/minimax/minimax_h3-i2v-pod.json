@@ -1,260 +1,15 @@
 {
   "id": "e3f2b845-8f2c-4b5a-9caf-eac1029d3e7e",
   "revision": 0,
-  "last_node_id": 135,
-  "last_link_id": 250,
+  "last_node_id": 138,
+  "last_link_id": 259,
   "nodes": [
-    {
-      "id": 116,
-      "type": "MarkdownNote",
-      "pos": [
-        -2090,
-        4860
-      ],
-      "size": [
-        450,
-        630
-      ],
-      "flags": {},
-      "order": 0,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "title": "Note: MiniMax H3",
-      "properties": {},
-      "widgets_values": [
-        "## MiniMax H3\n\n[MiniMax H3](https://www.minimax.io/blog/minimax-h3) is MiniMax's general-purpose, omni-modal generation model. It jointly understands text, image, video, and audio, and generates video with **native stereo audio**: voice, sound effects, and music are modeled jointly in a single forward pass, not layered on afterward. Output is up to 2K resolution, 24fps, and up to about 15 seconds.\n\n## About this workflow\n\nThis template runs the **Image to Video** task (`MiniMaxH3ImageToVideo` node), which covers both:\n\n- **t2va** (text-to-video), when no images are connected\n- **fl2va** (first/last-frame image-to-video), when `first_frame` and/or `last_frame` are connected\n\n**Key inputs**\n\n- **first_frame / last_frame**: optional keyframes; the model generates the motion between them\n- **prompt**: describe the shots, motion, and the accompanying audio (dialogue, SFX, music) in one block\n- **width / height**: set via Resolution Selector. H3's native canvas is a 768px short edge, capped at 768x1344 pixels, rounded to a multiple of 32\n- **duration (seconds)**: converted to a valid frame `length` by the Math Expression node, snapping up to the model's 17-frame-per-block (17k+5) grid at 24fps"
-      ],
-      "color": "#222",
-      "bgcolor": "#000"
-    },
-    {
-      "id": 117,
-      "type": "MarkdownNote",
-      "pos": [
-        -2570,
-        4860
-      ],
-      "size": [
-        440,
-        680
-      ],
-      "flags": {},
-      "order": 1,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "title": "Note: Model Links",
-      "properties": {},
-      "widgets_values": [
-        "## Model Links\n\n**vae**\n\n- [minimax_h3_video_vae_fp16.safetensors](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_video_vae_fp16.safetensors)\n- [minimax_h3_audio_vae_fp32.safetensors](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_audio_vae_fp32.safetensors)\n\n**diffusion_models**\n\n- [minimax_h3_fl2va_pruned_int8_convrot.safetensors](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/diffusion_models/minimax_h3_fl2va_pruned_int8_convrot.safetensors)\n\n**text_encoders**\n\n- [qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/text_encoders/qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors)\n\n\n## Model Storage Location\n\n```\n📂 ComfyUI/\n├── 📂 models/\n│   ├── 📂 vae/\n│   │   ├── minimax_h3_video_vae_fp16.safetensors\n│   │   └── minimax_h3_audio_vae_fp32.safetensors\n│   ├── 📂 diffusion_models/\n│   │   └── minimax_h3_fl2va_pruned_int8_convrot.safetensors\n│   └── 📂 text_encoders/\n│       └── qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors\n```\n\n## Report Issue\n\nNote: Please update ComfyUI first ([guide](https://docs.comfy.org/installation/update_comfyui)) and prepare required models. Desktop/Cloud updates follow stable releases, so some nightly-supported models may not be available yet.\n\n- Cannot run / runtime errors: [ComfyUI/issues](https://github.com/comfyanonymous/ComfyUI/issues)\n- UI / frontend issues: [ComfyUI_frontend/issues](https://github.com/Comfy-Org/ComfyUI_frontend/issues)\n- Workflow issues: [workflow_templates/issues](https://github.com/Comfy-Org/workflow_templates/issues)\n"
-      ],
-      "color": "#222",
-      "bgcolor": "#000"
-    },
-    {
-      "id": 119,
-      "type": "ImageScaleToTotalPixels",
-      "pos": [
-        -1520,
-        5610
-      ],
-      "size": [
-        280,
-        150
-      ],
-      "flags": {},
-      "order": 2,
-      "mode": 0,
-      "showAdvanced": true,
-      "inputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            228
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ImageScaleToTotalPixels"
-      },
-      "widgets_values": [
-        "nearest-exact",
-        1,
-        32
-      ]
-    },
-    {
-      "id": 120,
-      "type": "GetImageSize",
-      "pos": [
-        -1490,
-        5810
-      ],
-      "size": [
-        230,
-        80
-      ],
-      "flags": {},
-      "order": 13,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 228
-        }
-      ],
-      "outputs": [
-        {
-          "name": "width",
-          "type": "INT",
-          "links": null
-        },
-        {
-          "name": "height",
-          "type": "INT",
-          "links": null
-        },
-        {
-          "name": "batch_size",
-          "type": "INT",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "GetImageSize"
-      },
-      "widgets_values": []
-    },
-    {
-      "id": 114,
-      "type": "LoadImage",
-      "pos": [
-        -1610,
-        4860
-      ],
-      "size": [
-        450,
-        630
-      ],
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            244
-          ]
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoadImage"
-      },
-      "widgets_values": [
-        "3e8a4d2254befeadd04a528577ee1cd0.jpg",
-        "image"
-      ]
-    },
-    {
-      "id": 121,
-      "type": "VAELoader",
-      "pos": [
-        -688.5635583318573,
-        5348.614466808401
-      ],
-      "size": [
-        640,
-        70
-      ],
-      "flags": {},
-      "order": 4,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [
-            230,
-            242
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VAELoader",
-        "models": [
-          {
-            "name": "minimax_h3_video_vae_fp16.safetensors",
-            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_video_vae_fp16.safetensors",
-            "directory": "vae"
-          }
-        ]
-      },
-      "widgets_values": [
-        "minimax_h3_video_vae_fp16.safetensors"
-      ]
-    },
-    {
-      "id": 122,
-      "type": "VAELoader",
-      "pos": [
-        -688.5635583318573,
-        5488.614466808401
-      ],
-      "size": [
-        650,
-        70
-      ],
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [
-            229
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VAELoader",
-        "models": [
-          {
-            "name": "minimax_h3_audio_vae_fp32.safetensors",
-            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_audio_vae_fp32.safetensors",
-            "directory": "vae"
-          }
-        ]
-      },
-      "widgets_values": [
-        "minimax_h3_audio_vae_fp32.safetensors"
-      ]
-    },
     {
       "id": 123,
       "type": "VAEDecodeAudio",
       "pos": [
-        1301.4364416681424,
-        5298.614466808401
+        1194.5712469659957,
+        5287.449393795096
       ],
       "size": [
         230,
@@ -288,14 +43,15 @@
       ],
       "properties": {
         "Node name for S&R": "VAEDecodeAudio"
-      }
+      },
+      "widgets_values": []
     },
     {
       "id": 124,
       "type": "VAEDecode",
       "pos": [
-        1301.4364416681424,
-        5178.614466808401
+        1194.5712469659957,
+        5167.449393795096
       ],
       "size": [
         230,
@@ -329,21 +85,22 @@
       ],
       "properties": {
         "Node name for S&R": "VAEDecode"
-      }
+      },
+      "widgets_values": []
     },
     {
       "id": 125,
       "type": "KSamplerSelect",
       "pos": [
-        551.4364416681424,
-        5278.614466808401
+        427.0263929926065,
+        5261.0694607239575
       ],
       "size": [
         370,
         70
       ],
       "flags": {},
-      "order": 6,
+      "order": 0,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -366,21 +123,21 @@
       "id": 126,
       "type": "BasicScheduler",
       "pos": [
-        551.4364416681424,
-        5428.614466808401
+        427.0263929926065,
+        5411.0694607239575
       ],
       "size": [
         370,
         130
       ],
       "flags": {},
-      "order": 14,
+      "order": 15,
       "mode": 0,
       "inputs": [
         {
           "name": "model",
           "type": "MODEL",
-          "link": 231
+          "link": 253
         }
       ],
       "outputs": [
@@ -405,8 +162,8 @@
       "id": 127,
       "type": "BasicGuider",
       "pos": [
-        551.4364416681424,
-        5148.614466808401
+        427.0263929926065,
+        5131.0694607239575
       ],
       "size": [
         360,
@@ -419,7 +176,7 @@
         {
           "name": "model",
           "type": "MODEL",
-          "link": 237
+          "link": 252
         },
         {
           "name": "conditioning",
@@ -438,61 +195,22 @@
       ],
       "properties": {
         "Node name for S&R": "BasicGuider"
-      }
-    },
-    {
-      "id": 128,
-      "type": "UNETLoader",
-      "pos": [
-        -688.5635583318573,
-        4998.614466808401
-      ],
-      "size": [
-        640,
-        90
-      ],
-      "flags": {},
-      "order": 7,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            231,
-            237
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "UNETLoader",
-        "models": [
-          {
-            "name": "minimax_h3_fl2va_pruned_int8_convrot.safetensors",
-            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/diffusion_models/minimax_h3_fl2va_pruned_int8_convrot.safetensors",
-            "directory": "diffusion_models"
-          }
-        ]
       },
-      "widgets_values": [
-        "minimax_h3_fl2va_pruned_int8_convrot.safetensors",
-        "default"
-      ]
+      "widgets_values": []
     },
     {
       "id": 130,
       "type": "RandomNoise",
       "pos": [
-        551.4364416681424,
-        4988.614466808401
+        427.0263929926065,
+        4971.0694607239575
       ],
       "size": [
         360,
         90
       ],
       "flags": {},
-      "order": 8,
+      "order": 1,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -508,7 +226,7 @@
         "Node name for S&R": "RandomNoise"
       },
       "widgets_values": [
-        246665116416723,
+        987268382013278,
         "randomize"
       ]
     },
@@ -516,8 +234,8 @@
       "id": 131,
       "type": "CreateVideo",
       "pos": [
-        1631.4364416681435,
-        5218.614466808401
+        1524.5712469659968,
+        5207.449393795096
       ],
       "size": [
         270,
@@ -557,133 +275,15 @@
       ]
     },
     {
-      "id": 92,
-      "type": "SaveVideo",
-      "pos": [
-        2063.9070248895614,
-        4880.25959039459
-      ],
-      "size": [
-        1030,
-        1414.111111111111
-      ],
-      "flags": {},
-      "order": 22,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "video",
-          "type": "VIDEO",
-          "link": 243
-        }
-      ],
-      "outputs": [
-        {
-          "name": "video",
-          "type": "VIDEO",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "SaveVideo"
-      },
-      "widgets_values": [
-        "video/MiniMax_H3",
-        "auto",
-        "auto"
-      ]
-    },
-    {
-      "id": 129,
-      "type": "CLIPLoader",
-      "pos": [
-        -688.5635583318573,
-        5158.614466808401
-      ],
-      "size": [
-        640,
-        120
-      ],
-      "flags": {},
-      "order": 9,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            241
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPLoader",
-        "models": [
-          {
-            "name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
-            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/text_encoders/qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
-            "directory": "text_encoders"
-          }
-        ]
-      },
-      "widgets_values": [
-        "qwen3vl_32b_minimax_h3_int8_convrot.safetensors",
-        "minimax",
-        "default"
-      ]
-    },
-    {
-      "id": 115,
-      "type": "ResolutionSelector",
-      "pos": [
-        -1110,
-        5230
-      ],
-      "size": [
-        270,
-        170
-      ],
-      "flags": {},
-      "order": 10,
-      "mode": 0,
-      "showAdvanced": false,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "width",
-          "type": "INT",
-          "links": [
-            246
-          ]
-        },
-        {
-          "name": "height",
-          "type": "INT",
-          "links": [
-            247
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ResolutionSelector"
-      },
-      "widgets_values": [
-        "3:4 (Portrait Standard)",
-        0.4,
-        32
-      ]
-    },
-    {
       "id": 135,
       "type": "SamplerCustomAdvanced",
       "pos": [
-        962.2501601286444,
-        5030.262312670319
+        837.8401114531089,
+        5012.717306585876
       ],
       "size": [
         245.70085673488802,
-        388.13683960018955
+        304.6354530968689
       ],
       "flags": {},
       "order": 18,
@@ -732,14 +332,216 @@
       ],
       "properties": {
         "Node name for S&R": "SamplerCustomAdvanced"
-      }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 120,
+      "type": "GetImageSize",
+      "pos": [
+        -1401.5500221252441,
+        5125.60001659394
+      ],
+      "size": [
+        230,
+        124
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 228
+        }
+      ],
+      "outputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "links": [
+            254
+          ]
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": [
+            255
+          ]
+        },
+        {
+          "name": "batch_size",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "GetImageSize"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 129,
+      "type": "CLIPLoader",
+      "pos": [
+        -1034.678509656317,
+        5129.904539821706
+      ],
+      "size": [
+        436.9742503927346,
+        106
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            241
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPLoader",
+        "models": [
+          {
+            "name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/text_encoders/qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+            "directory": "text_encoders"
+          }
+        ]
+      },
+      "widgets_values": [
+        "qwen3vl_32b_heretic_minimax_h3_nvfp4.safetensors",
+        "minimax",
+        "default"
+      ]
+    },
+    {
+      "id": 121,
+      "type": "VAELoader",
+      "pos": [
+        -1034.678509656317,
+        5319.904539821706
+      ],
+      "size": [
+        447.868299893968,
+        58
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            230,
+            242
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader",
+        "models": [
+          {
+            "name": "minimax_h3_video_vae_fp16.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_video_vae_fp16.safetensors",
+            "directory": "vae"
+          }
+        ]
+      },
+      "widgets_values": [
+        "minimax_h3_video_vae_fp16.safetensors"
+      ]
+    },
+    {
+      "id": 92,
+      "type": "SaveVideo",
+      "pos": [
+        1869.3169518762575,
+        4896.209590394591
+      ],
+      "size": [
+        1030,
+        904.0869565217392
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 243
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SaveVideo"
+      },
+      "widgets_values": [
+        "video/MiniMax_H3",
+        "auto",
+        "auto"
+      ]
+    },
+    {
+      "id": 122,
+      "type": "VAELoader",
+      "pos": [
+        -1037.211886867323,
+        5447.729313237584
+      ],
+      "size": [
+        450.9357435456915,
+        58
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            229
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader",
+        "models": [
+          {
+            "name": "minimax_h3_audio_vae_fp32.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_audio_vae_fp32.safetensors",
+            "directory": "vae"
+          }
+        ]
+      },
+      "widgets_values": [
+        "minimax_h3_audio_vae_fp32.safetensors"
+      ]
     },
     {
       "id": 133,
       "type": "ComfyMathExpression",
       "pos": [
-        -1040.051125066986,
-        5065.143406142231
+        -1333.198924118602,
+        5343.56036938868
       ],
       "size": [
         360,
@@ -748,7 +550,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 15,
+      "order": 10,
       "mode": 0,
       "inputs": [
         {
@@ -795,15 +597,15 @@
       "id": 134,
       "type": "PrimitiveFloat",
       "pos": [
-        -1115.1751102944613,
-        5047.168130960696
+        -1403.0514685442415,
+        5324.042105415475
       ],
       "size": [
         270,
         70
       ],
       "flags": {},
-      "order": 11,
+      "order": 5,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -820,22 +622,100 @@
         "Node name for S&R": "PrimitiveFloat"
       },
       "widgets_values": [
-        2
+        15
+      ]
+    },
+    {
+      "id": 115,
+      "type": "ResolutionSelector",
+      "pos": [
+        -1399.1851994853328,
+        5452.652874505232
+      ],
+      "size": [
+        270,
+        170
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "showAdvanced": false,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "links": []
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ResolutionSelector"
+      },
+      "widgets_values": [
+        "4:3 (Standard)",
+        0.4,
+        32
+      ]
+    },
+    {
+      "id": 119,
+      "type": "ImageScaleToTotalPixels",
+      "pos": [
+        -1409.8000221252441,
+        4918.35001659394
+      ],
+      "size": [
+        280,
+        150
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "showAdvanced": true,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 256
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            228,
+            257
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageScaleToTotalPixels"
+      },
+      "widgets_values": [
+        "nearest-exact",
+        0.4,
+        32
       ]
     },
     {
       "id": 118,
       "type": "MarkdownNote",
       "pos": [
-        -1969.2150406729154,
-        5558.897392824996
+        -2224.4150738607777,
+        4881.7473817623795
       ],
       "size": [
         300,
         520
       ],
       "flags": {},
-      "order": 12,
+      "order": 7,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -848,11 +728,128 @@
       "bgcolor": "#000"
     },
     {
+      "id": 128,
+      "type": "UNETLoader",
+      "pos": [
+        -1034.678509656317,
+        4969.904539821706
+      ],
+      "size": [
+        434.00311163821766,
+        82
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            258
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UNETLoader",
+        "models": [
+          {
+            "name": "minimax_h3_fl2va_pruned_int8_convrot.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/diffusion_models/minimax_h3_fl2va_pruned_int8_convrot.safetensors",
+            "directory": "diffusion_models"
+          }
+        ]
+      },
+      "widgets_values": [
+        "minimax_h3_fl2va_pruned_nvfp4.safetensors",
+        "default"
+      ]
+    },
+    {
+      "id": 137,
+      "type": "MiniMaxH3MemoryEfficientSageAttentionPatch",
+      "pos": [
+        -550.176943051554,
+        4963.346771475906
+      ],
+      "size": [
+        320.323828125,
+        26
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 258
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            259
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MiniMaxH3MemoryEfficientSageAttentionPatch"
+      }
+    },
+    {
+      "id": 136,
+      "type": "SolAttnMiniMaxH3Patcher",
+      "pos": [
+        -550.8369661252724,
+        5061.221989318578
+      ],
+      "size": [
+        314.2818359375,
+        202
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 259
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            252,
+            253
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SolAttnMiniMaxH3Patcher"
+      },
+      "widgets_values": [
+        true,
+        1,
+        "diag",
+        "off",
+        0,
+        0,
+        0
+      ]
+    },
+    {
       "id": 132,
       "type": "MiniMaxH3ImageToVideo",
       "pos": [
-        41.43644166814304,
-        4958.614466808401
+        -95.73353399408718,
+        4936.284472892843
       ],
       "size": [
         430,
@@ -876,7 +873,7 @@
           "name": "first_frame",
           "shape": 7,
           "type": "IMAGE",
-          "link": 244
+          "link": 257
         },
         {
           "name": "last_frame",
@@ -890,7 +887,7 @@
           "widget": {
             "name": "width"
           },
-          "link": 246
+          "link": 254
         },
         {
           "name": "height",
@@ -898,7 +895,7 @@
           "widget": {
             "name": "height"
           },
-          "link": 247
+          "link": 255
         },
         {
           "name": "length",
@@ -929,10 +926,47 @@
         "Node name for S&R": "MiniMaxH3ImageToVideo"
       },
       "widgets_values": [
-        "\n",
+        "GIrl walking on a beach.",
         1344,
         768,
         73
+      ]
+    },
+    {
+      "id": 114,
+      "type": "LoadImage",
+      "pos": [
+        -1894.2000885009738,
+        4883.199950218201
+      ],
+      "size": [
+        450,
+        630
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            256
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "girl_on_beach_image_pod.png",
+        "image"
       ]
     }
   ],
@@ -960,14 +994,6 @@
       124,
       1,
       "VAE"
-    ],
-    [
-      231,
-      128,
-      0,
-      126,
-      0,
-      "MODEL"
     ],
     [
       232,
@@ -1008,14 +1034,6 @@
       135,
       4,
       "LATENT"
-    ],
-    [
-      237,
-      128,
-      0,
-      127,
-      0,
-      "MODEL"
     ],
     [
       238,
@@ -1066,35 +1084,11 @@
       "VIDEO"
     ],
     [
-      244,
-      114,
-      0,
-      132,
-      2,
-      "IMAGE"
-    ],
-    [
       245,
       133,
       1,
       132,
       6,
-      "INT"
-    ],
-    [
-      246,
-      115,
-      0,
-      132,
-      4,
-      "INT"
-    ],
-    [
-      247,
-      115,
-      1,
-      132,
-      5,
       "INT"
     ],
     [
@@ -1120,17 +1114,81 @@
       123,
       0,
       "LATENT"
+    ],
+    [
+      252,
+      136,
+      0,
+      127,
+      0,
+      "MODEL"
+    ],
+    [
+      253,
+      136,
+      0,
+      126,
+      0,
+      "MODEL"
+    ],
+    [
+      254,
+      120,
+      0,
+      132,
+      4,
+      "INT"
+    ],
+    [
+      255,
+      120,
+      1,
+      132,
+      5,
+      "INT"
+    ],
+    [
+      256,
+      114,
+      0,
+      119,
+      0,
+      "IMAGE"
+    ],
+    [
+      257,
+      119,
+      0,
+      132,
+      2,
+      "IMAGE"
+    ],
+    [
+      258,
+      128,
+      0,
+      137,
+      0,
+      "MODEL"
+    ],
+    [
+      259,
+      137,
+      0,
+      136,
+      0,
+      "MODEL"
     ]
   ],
   "groups": [
     {
       "id": 5,
-      "title": "Use Image Size",
+      "title": "Size",
       "bounding": [
-        -1530,
-        5540,
-        296.484375,
-        354
+        -1419.8000221252441,
+        4848.35001659394,
+        325.3645951452331,
+        789.6711436815467
       ],
       "color": "#3f789e",
       "flags": {}
@@ -1139,10 +1197,10 @@
       "id": 1,
       "title": "Models",
       "bounding": [
-        -718.5635583318573,
-        4868.614466808401,
-        700,
-        800
+        -1064.6785096563171,
+        4839.904539821706,
+        865.880024337767,
+        693.1350486755382
       ],
       "color": "#3f789e",
       "flags": {}
@@ -1151,8 +1209,8 @@
       "id": 2,
       "title": "Sampling",
       "bounding": [
-        521.4364416681425,
-        4868.614466808401,
+        397.0263929926065,
+        4851.0694607239575,
         700,
         800
       ],
@@ -1163,8 +1221,8 @@
       "id": 3,
       "title": "Conditioning",
       "bounding": [
-        11.43644166814315,
-        4868.614466808401,
+        -125.7335339940871,
+        4846.284472892843,
         480,
         800
       ],
@@ -1175,8 +1233,8 @@
       "id": 4,
       "title": "Decoding and create video",
       "bounding": [
-        1241.4364416681424,
-        4868.614466808401,
+        1134.5712469659957,
+        4857.449393795096,
         700,
         800
       ],
@@ -1192,10 +1250,10 @@
     "VHS_MetadataImage": true,
     "VHS_KeepIntermediate": true,
     "ds": {
-      "scale": 0.6068965517241429,
+      "scale": 0.6675862068965616,
       "offset": [
-        1516.4572840698784,
-        -4583.794781835637
+        2000.759982454671,
+        -4647.141002582246
       ]
     }
   },

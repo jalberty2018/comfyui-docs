@@ -4,7 +4,7 @@ MiniMax H3 model files are large and rely on ComfyUI offloading. Resolution, dur
 
 ## Hardware tested
 
-### MiniMax H3 INT8 Convrot
+### MiniMax H3 full INT8 ConvRot
 
 - video settings 1 MP 15 sec 24fps
 
@@ -12,9 +12,9 @@ MiniMax H3 model files are large and rely on ComfyUI offloading. Resolution, dur
 |--------------------------|-------|-------------------------|
 | L40S | 45Gb | 80Gb           |
 
-### MiniMax H3 fp8 pruned
+### MiniMax H3 pruned NVFP4
 
-- video settings 1 MP 15sec 24fps
+- video settings 0.4 MP 15sec 24fps
 
 | GPU          | VRAM  | RAM |
 |--------------------------|-------|-------------------------|

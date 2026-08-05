@@ -36,6 +36,15 @@
 3. Enable volume encryption if desired.
 4. Click **Deploy pod**.
 
+## ⚠️ Assign enough system memory (RAM) to your pod
+
+![Filter ram](images/filter_ram.jpg)
+
+- For image generation, allocate at least twice as much system RAM as GPU VRAM.
+- For video generation, allocate at least three times as much. 
+
+You can set the minimum amount of RAM in RunPod's filters. For example, for image generation with an RTX 4090 (24 GB VRAM), selecting 60 GB of RAM is a reasonable choice.
+
 ## ⚠️ CUDA errors when deploying the pod
 
 ![Filter CUDA](images/filter_cuda.jpg)

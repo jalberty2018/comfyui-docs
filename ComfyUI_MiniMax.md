@@ -15,17 +15,19 @@ Use this template for MiniMax H3 text-to-video, image-to-video, first/last-frame
 ## 🔧 Features
 
 - Automatic model provisioning through environment variables.
-- Full INT8 ConvRot diffusion models for high-VRAM GPUs.
-- Pruned INT8 ConvRot diffusion models for lower-VRAM GPUs.
-- INT8 ConvRot Qwen3-VL text encoder.
-- Official I2V, T2V and R2V workflows.
+- Models downloads depending on VRAM and architecture (blackwell).
 - CUDA 12.8 runtime with compiled attention acceleration.
 - Authentication for ComfyUI, Code Server, Hugging Face and CivitAI.
-- LoRA Manager and common video, workflow and utility nodes.
+- LoRA Manager, utility nodes.
+- Example workflows.
 
 ## 📦 Deployment on RunPod
 
 - [RunPod deployment](ComfyUI_MiniMax_deployment.md)
+
+## 📘 Tutorial
+
+- [MiniMax tutorial](ComfyUI_MiniMax_tutorial.md)
 
 ## Example standard workflow Reference to video/audio
 
@@ -33,11 +35,11 @@ Use this template for MiniMax H3 text-to-video, image-to-video, first/last-frame
 
 ## Example standard workflow image to video/audio
 
-![MiniMax H3 workflow Ref2va](images/ai-generated-MiniMax-i2v.jpg)
+![MiniMax H3 workflow i2v](images/ai-generated-MiniMax-i2v.jpg)
 
-## 📘 Tutorial
+## Example standard workflow with director custom node
 
-- [MiniMax tutorial](ComfyUI_MiniMax_tutorial.md)
+![MiniMax H3 workflow director](images/ai-generated-MiniMax-director.jpg)
 
 ### Pod running on L40S
 

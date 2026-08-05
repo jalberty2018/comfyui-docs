@@ -1,0 +1,541 @@
+{
+  "id": "072f0863-a8b6-41b7-83b0-cb3e5194b848",
+  "revision": 0,
+  "last_node_id": 11,
+  "last_link_id": 11,
+  "nodes": [
+    {
+      "id": 4,
+      "type": "UNETLoader",
+      "pos": [
+        138.9045946385974,
+        4611.496496434327
+      ],
+      "size": [
+        434.00311163821766,
+        82
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            1
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UNETLoader",
+        "models": [
+          {
+            "name": "minimax_h3_fl2va_pruned_int8_convrot.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/diffusion_models/minimax_h3_fl2va_pruned_int8_convrot.safetensors",
+            "directory": "diffusion_models"
+          }
+        ]
+      },
+      "widgets_values": [
+        "minimax_h3_fl2va_pruned_nvfp4.safetensors",
+        "default"
+      ]
+    },
+    {
+      "id": 5,
+      "type": "MiniMaxH3MemoryEfficientSageAttentionPatch",
+      "pos": [
+        623.4061612433595,
+        4604.938728088528
+      ],
+      "size": [
+        320.323828125,
+        26
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            2
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MiniMaxH3MemoryEfficientSageAttentionPatch"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 6,
+      "type": "SolAttnMiniMaxH3Patcher",
+      "pos": [
+        622.7461381696411,
+        4702.8139459312
+      ],
+      "size": [
+        314.2818359375,
+        202
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 2
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            3
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SolAttnMiniMaxH3Patcher"
+      },
+      "widgets_values": [
+        true,
+        1,
+        "diag",
+        "off",
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "type": "VAELoader",
+      "pos": [
+        138.9045946385974,
+        4961.496496434327
+      ],
+      "size": [
+        447.868299893968,
+        58
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            4
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader",
+        "models": [
+          {
+            "name": "minimax_h3_video_vae_fp16.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_video_vae_fp16.safetensors",
+            "directory": "vae"
+          }
+        ]
+      },
+      "widgets_values": [
+        "minimax_h3_video_vae_fp16.safetensors"
+      ]
+    },
+    {
+      "id": 1,
+      "type": "VAELoader",
+      "pos": [
+        136.3712174275913,
+        5089.321269850206
+      ],
+      "size": [
+        450.9357435456915,
+        58
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            5
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader",
+        "models": [
+          {
+            "name": "minimax_h3_audio_vae_fp32.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_audio_vae_fp32.safetensors",
+            "directory": "vae"
+          }
+        ]
+      },
+      "widgets_values": [
+        "minimax_h3_audio_vae_fp32.safetensors"
+      ]
+    },
+    {
+      "id": 3,
+      "type": "CLIPLoader",
+      "pos": [
+        138.9045946385974,
+        4771.496496434327
+      ],
+      "size": [
+        436.9742503927346,
+        106
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            6
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPLoader",
+        "models": [
+          {
+            "name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/text_encoders/qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+            "directory": "text_encoders"
+          }
+        ]
+      },
+      "widgets_values": [
+        "qwen3vl_32b_heretic_minimax_h3_nvfp4.safetensors",
+        "minimax",
+        "default"
+      ]
+    },
+    {
+      "id": 10,
+      "type": "CreateVideo",
+      "pos": [
+        2106.849980379452,
+        4577.718214228415
+      ],
+      "size": [
+        270,
+        110
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 10
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 11
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            9
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CreateVideo"
+      },
+      "widgets_values": [
+        24,
+        8
+      ]
+    },
+    {
+      "id": 7,
+      "type": "MiniMaxH3Director",
+      "pos": [
+        1024.0435629422059,
+        4523.089258877705
+      ],
+      "size": [
+        1000,
+        1934.9565217391305
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 3
+        },
+        {
+          "name": "video_vae",
+          "type": "VAE",
+          "link": 4
+        },
+        {
+          "name": "audio_vae",
+          "type": "VAE",
+          "link": 5
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 6
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            10
+          ]
+        },
+        {
+          "name": "audio",
+          "shape": 6,
+          "type": "AUDIO",
+          "links": [
+            11
+          ]
+        },
+        {
+          "name": "fps",
+          "type": "FLOAT",
+          "links": null
+        },
+        {
+          "name": "frame_count",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "source_images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "report",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MiniMaxH3Director"
+      },
+      "widgets_values": [
+        "i2v — 图生视频(Image to Video)",
+        "",
+        "Sampling settings",
+        1,
+        796058447437744,
+        "randomize",
+        24,
+        736,
+        576,
+        736,
+        248,
+        "{\"version\":5,\"editMode\":\"segment\",\"totalFrames\":248,\"frameRate\":24,\"video\":{\"fileName\":\"\",\"videoFile\":\"\",\"subfolder\":\"\",\"type\":\"input\",\"frames\":[],\"frameMap\":[]},\"videoClips\":[],\"global\":{\"taskType\":\"i2v — 图生视频(Image to Video)\",\"prompt\":\"\",\"refs\":[],\"refAudios\":[],\"referenceVideo\":{},\"continuousReference\":false,\"sourceWidth\":1819,\"sourceHeight\":1643},\"output\":{\"mode\":\"fixed\",\"aspectRatio\":\"4:3 (标准)\",\"megapixels\":0.4,\"multiple\":32,\"longEdge\":736,\"width\":736,\"height\":576,\"maxExportFrames\":0,\"exportMode\":\"all\",\"audioMode\":\"generate\",\"continuityEnabled\":false,\"continuityOverlapFrames\":9,\"sourceWidth\":1819,\"sourceHeight\":1643},\"runSelectEnabled\":false,\"runSelection\":[],\"segments\":[{\"id\":\"msgblggwwhb3d\",\"start\":0,\"length\":124,\"frameCount\":124,\"durationSec\":5,\"prompt\":\"Disney style, Princess looking at the camera, saying in an exited voice \\\"Hello i am Minimax H3 how can i please you\\\".\",\"negativePrompt\":\"\",\"taskType\":\"\",\"refs\":[],\"refAudios\":[],\"refVideos\":[],\"genImage\":{\"imageFile\":\"11-facts-about-queen-elsa-frozen-1692051586.jpg\",\"fileName\":\"\"}},{\"id\":\"msgbq89zsprag\",\"start\":124,\"length\":124,\"frameCount\":124,\"durationSec\":5,\"prompt\":\"GIrl  answering to the princess \\\"To make it run much faster on Runpod's RTX 5090\\\"\",\"negativePrompt\":\"\",\"taskType\":\"\",\"refs\":[],\"refAudios\":[],\"refVideos\":[],\"genImage\":{\"imageFile\":\"3e8a4d2254befeadd04a528577ee1cd0.jpg\",\"fileName\":\"\"}}],\"timelineMode\":\"prompt_batch\",\"width\":736,\"height\":576,\"refMaxSize\":864}",
+        "Advanced sampling",
+        25,
+        "res_multistep",
+        "simple",
+        12,
+        3,
+        "Performance",
+        true,
+        false,
+        ""
+      ]
+    },
+    {
+      "id": 11,
+      "type": "SaveVideo",
+      "pos": [
+        2063.9720028390557,
+        4791.305787902184
+      ],
+      "size": [
+        1030,
+        106
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 9
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SaveVideo"
+      },
+      "widgets_values": [
+        "video/MiniMax_H3",
+        "auto",
+        "auto"
+      ]
+    }
+  ],
+  "links": [
+    [
+      1,
+      4,
+      0,
+      5,
+      0,
+      "MODEL"
+    ],
+    [
+      2,
+      5,
+      0,
+      6,
+      0,
+      "MODEL"
+    ],
+    [
+      3,
+      6,
+      0,
+      7,
+      0,
+      "MODEL"
+    ],
+    [
+      4,
+      2,
+      0,
+      7,
+      1,
+      "VAE"
+    ],
+    [
+      5,
+      1,
+      0,
+      7,
+      2,
+      "VAE"
+    ],
+    [
+      6,
+      3,
+      0,
+      7,
+      3,
+      "CLIP"
+    ],
+    [
+      9,
+      10,
+      0,
+      11,
+      0,
+      "VIDEO"
+    ],
+    [
+      10,
+      7,
+      0,
+      10,
+      0,
+      "IMAGE"
+    ],
+    [
+      11,
+      7,
+      1,
+      10,
+      1,
+      "AUDIO"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "Models",
+      "bounding": [
+        108.90459463859655,
+        4481.496496434327,
+        865.880024337767,
+        693.1350486755382
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "Decoding and create video",
+      "bounding": [
+        2064.6103205993127,
+        4497.379102731186,
+        353.45017901334586,
+        238.71810236844976
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.23398489289516852,
+      "offset": [
+        755.0347122568368,
+        -3207.5898090954797
+      ]
+    },
+    "frontendVersion": "1.47.11",
+    "VHS_latentpreview": true,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
