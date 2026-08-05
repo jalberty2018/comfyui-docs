@@ -9,6 +9,7 @@
 - [KJNodes](https://github.com/kijai/ComfyUI-KJNodes)
 - [Easy-Use](https://github.com/yolain/ComfyUI-Easy-Use)
 - [Running hub](https://github.com/HM-RunningHub/ComfyUI_RH_MinMaxH3)
+- [Director](https://github.com/AIMixer/ComfyUI_MiniMaxH3_Director)
 
 ### Utilities / Workflow helpers
 
