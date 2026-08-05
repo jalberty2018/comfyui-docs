@@ -13,3 +13,4 @@
 - [Guide](ComfyUI-MiniMax-H3-Guide)
 - [sol-attn_Blackwell](https://github.com/KingGore/ComfyUI_sol-attn_Blackwell)
 - [Director](https://github.com/AIMixer/ComfyUI_MiniMaxH3_Director)
+- Blackwell configurations for model downloads

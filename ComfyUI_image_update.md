@@ -7,10 +7,11 @@
 - The date reflects when the related custom nodes were cloned from their upstream repositories.
 - Pinned custom nodes are not updated automatically, because changing those pins can introduce compatibility issues.
 
-## 04082026
+## 05082026
 
 - ComfyUI 0.30.0
 - [comfyui-model-linker](https://github.com/kianxyzw/comfyui-model-linker)
+- Added blackwell configurations for model downloads
 
 ## 01082026
 

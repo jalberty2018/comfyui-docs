@@ -14,6 +14,7 @@
 | `COMFYUI_EXTRA_ARGUMENTS` | Additional arguments for the ComfyUI CLI                                       |         |
 | `VRAM_THRESHOLD`          | VRAM threshold in GB for selecting the model                                   | Image: 38 GB; LTX/WAN: 36 GB |
 | `COMFYUI_START_MAX_TRIES` | Number of tries to wait until ComfyUI is online; depends on vCPU speed          | 60      |
+| `HAS_GPU_BLACKWELL`       | Automatically exported as `1` when a Blackwell GPU is detected; otherwise `0`  | `0`     |
 
 ## Authentication Tokens
 
@@ -32,7 +33,32 @@
 
 ## Hugging Face ComfyUI Model Configuration
 
-- Change `HF_MODEL_` to `HF_MODEL_LVRAM_` or `HF_MODEL_HVRAM_` makes loading VRAM dependent through `VRAM_THRESHOLD`.
+- Change `HF_MODEL_` to `HF_MODEL_LVRAM_` or `HF_MODEL_HVRAM_` to make model loading VRAM dependent through `VRAM_THRESHOLD`.
+- Insert `BLACKWELL_` after the standard or VRAM prefix to select models specifically for Blackwell GPUs.
+
+| Selection             | Variable prefix                 |
+|-----------------------|---------------------------------|
+| Standard              | `HF_MODEL_`                     |
+| High VRAM             | `HF_MODEL_HVRAM_`               |
+| Low VRAM              | `HF_MODEL_LVRAM_`               |
+| Blackwell             | `HF_MODEL_BLACKWELL_`           |
+| Blackwell + high VRAM | `HF_MODEL_HVRAM_BLACKWELL_`     |
+| Blackwell + low VRAM  | `HF_MODEL_LVRAM_BLACKWELL_`     |
+
+The Blackwell prefixes can be used for every model type in the table below. For example:
+
+```text
+HF_MODEL_BLACKWELL_DIFFUSION_MODELS1=org/repository
+HF_MODEL_BLACKWELL_DIFFUSION_MODELS_FILENAME1=model.safetensors
+
+HF_MODEL_HVRAM_BLACKWELL_TEXT_ENCODERS1=org/repository
+HF_MODEL_HVRAM_BLACKWELL_TEXT_ENCODERS_FILENAME1=text_encoder.safetensors
+
+HF_MODEL_LVRAM_BLACKWELL_VAE1=org/repository
+HF_MODEL_LVRAM_BLACKWELL_VAE_FILENAME1=vae.safetensors
+```
+
+Blackwell selection and fallback are evaluated separately for each model type and for the VRAM-dependent and VRAM-independent prefixes. A Blackwell variant is selected when at least one matching model and filename pair is configured. When no complete Blackwell pair exists for a model type, the corresponding standard `HF_MODEL_`, `HF_MODEL_HVRAM_`, or `HF_MODEL_LVRAM_` variables are used automatically.
 
 | Model Type      | Model                                | Safetensors/GGUF                              |
 |-----------------|--------------------------------------|-----------------------------------------------|
