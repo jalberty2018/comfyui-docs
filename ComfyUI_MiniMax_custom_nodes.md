@@ -45,4 +45,9 @@
 - [RES4LYF](https://github.com/ClownsharkBatwing/RES4LYF)
 - [Power Flow](https://github.com/x3bits/ComfyUI-Power-Flow)
 - [Output Lists Combiner](https://github.com/geroldmeisinger/ComfyUI-outputlists-combiner)
+
+### Accelerators
+ 
 - [sol-attn_Blackwell](https://github.com/KingGore/ComfyUI_sol-attn_Blackwell)
+- [ComfyUI-SolAttn_triton](https://github.com/kijai/ComfyUI-SolAttn_triton)
+- [ComfyUI-Spectrum](https://github.com/xmarre/ComfyUI-Spectrum-MiniMax-H3)
