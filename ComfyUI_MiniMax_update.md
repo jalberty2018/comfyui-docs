@@ -14,7 +14,6 @@
 - [Guide](https://github.com/ethanfel/ComfyUI-MiniMax-H3-Guide)
 - [sol-attn_Blackwell](https://github.com/KingGore/ComfyUI_sol-attn_Blackwell)
 - [ComfyUI-SolAttn_triton](https://github.com/kijai/ComfyUI-SolAttn_triton)
-- [ComfyUI-sol-attn](https://github.com/Saganaki22/ComfyUI-sol-attn.git)
 - [PromptBuilder](https://github.com/Adudeguyman/ComfyUI-Fantastic-MiniMaxH3-PromptBuilder.git)
 - [Director](https://github.com/AIMixer/ComfyUI_MiniMaxH3_Director)
 - [ComfyUI-Spectrum](https://github.com/xmarre/ComfyUI-Spectrum-MiniMax-H3)
