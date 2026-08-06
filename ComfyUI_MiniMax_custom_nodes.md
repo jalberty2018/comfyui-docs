@@ -8,8 +8,8 @@
 - [Login](https://github.com/liusida/ComfyUI-Login)
 - [KJNodes](https://github.com/kijai/ComfyUI-KJNodes)
 - [Easy-Use](https://github.com/yolain/ComfyUI-Easy-Use)
-- [Running hub](https://github.com/HM-RunningHub/ComfyUI_RH_MinMaxH3)
 - [Director](https://github.com/AIMixer/ComfyUI_MiniMaxH3_Director)
+- [PromptBuilder](https://github.com/Adudeguyman/ComfyUI-Fantastic-MiniMaxH3-PromptBuilder.git)
 
 ### Utilities / Workflow helpers
 
@@ -40,14 +40,18 @@
 
 - [Guide](https://github.com/ethanfel/ComfyUI-MiniMax-H3-Guide)
 
-### Sampling / Flow
+### Sampling
 
 - [RES4LYF](https://github.com/ClownsharkBatwing/RES4LYF)
+- [Running hub](https://github.com/HM-RunningHub/ComfyUI_RH_MinMaxH3)
+
+### Flow
+
 - [Power Flow](https://github.com/x3bits/ComfyUI-Power-Flow)
 - [Output Lists Combiner](https://github.com/geroldmeisinger/ComfyUI-outputlists-combiner)
 
 ### Accelerators
- 
-- [sol-attn_Blackwell](https://github.com/KingGore/ComfyUI_sol-attn_Blackwell)
+
 - [ComfyUI-SolAttn_triton](https://github.com/kijai/ComfyUI-SolAttn_triton)
 - [ComfyUI-Spectrum](https://github.com/xmarre/ComfyUI-Spectrum-MiniMax-H3)
+- [ComfyUI-sol-attn](https://github.com/Saganaki22/ComfyUI-sol-attn.git)
