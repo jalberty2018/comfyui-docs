@@ -13,7 +13,6 @@
 - ComfyUI 0.30.0
 - [Running hub](https://github.com/HM-RunningHub/ComfyUI_RH_MinMaxH3)
 - [Guide](https://github.com/ethanfel/ComfyUI-MiniMax-H3-Guide)
-- [sol-attn_Blackwell](https://github.com/KingGore/ComfyUI_sol-attn_Blackwell)
 - [ComfyUI-SolAttn_triton](https://github.com/kijai/ComfyUI-SolAttn_triton)
 - [PromptBuilder](https://github.com/Adudeguyman/ComfyUI-Fantastic-MiniMaxH3-PromptBuilder.git)
 - [Director](https://github.com/AIMixer/ComfyUI_MiniMaxH3_Director)

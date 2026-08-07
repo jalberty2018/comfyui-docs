@@ -9,6 +9,8 @@
 
 ## ComfyUI Configuration
 
+- VRAM_TRESHHOLD_BLACKWELL is only available for MiniMax H3 pod.
+
 | Variable                  | Description                                                                    | Default |
 |---------------------------|--------------------------------------------------------------------------------|---------|
 | `COMFYUI_EXTRA_ARGUMENTS` | Additional arguments for the ComfyUI CLI                                       |         |
