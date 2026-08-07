@@ -32,11 +32,11 @@ Use this template for MiniMax H3 text-to-video, image-to-video, first/last-frame
 
 - [MiniMax tutorial](ComfyUI_MiniMax_tutorial.md)
 
-## Example standard workflow Reference to video/audio
+## Example standard workflow Reference to video/audio (Ref2va)
 
 ![MiniMax H3 workflow Ref2va](images/ai-generated-MiniMax.jpg)
 
-## Example standard workflow image to video/audio
+## Example standard workflow image to video/audio (fl2va)
 
 ![MiniMax H3 workflow i2v](images/ai-generated-MiniMax-i2v.jpg)
 
