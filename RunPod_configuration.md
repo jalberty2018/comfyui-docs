@@ -13,6 +13,7 @@
 |---------------------------|--------------------------------------------------------------------------------|---------|
 | `COMFYUI_EXTRA_ARGUMENTS` | Additional arguments for the ComfyUI CLI                                       |         |
 | `VRAM_THRESHOLD`          | VRAM threshold in GB for selecting the model                                   | Image: 38 GB; LTX/WAN: 36 GB |
+| `VRAM_TRESHHOLD_BLACKWELL` | VRAM threshold in GB for selecting Blackwell-specific high- or low-VRAM models | MiniMax: 40 GB |
 | `COMFYUI_START_MAX_TRIES` | Number of tries to wait until ComfyUI is online; depends on vCPU speed          | 60      |
 | `HAS_GPU_BLACKWELL`       | Automatically exported as `1` when a Blackwell GPU is detected; otherwise `0`  | `0`     |
 
@@ -33,32 +34,28 @@
 
 ## Hugging Face ComfyUI Model Configuration
 
-- Change `HF_MODEL_` to `HF_MODEL_LVRAM_` or `HF_MODEL_HVRAM_` to make model loading VRAM dependent through `VRAM_THRESHOLD`.
-- Insert `BLACKWELL_` after the standard or VRAM prefix to select models specifically for Blackwell GPUs.
+Choose the prefix that matches when the model should be downloaded:
 
-| Selection             | Variable prefix                 |
-|-----------------------|---------------------------------|
-| Standard              | `HF_MODEL_`                     |
-| High VRAM             | `HF_MODEL_HVRAM_`               |
-| Low VRAM              | `HF_MODEL_LVRAM_`               |
-| Blackwell             | `HF_MODEL_BLACKWELL_`           |
-| Blackwell + high VRAM | `HF_MODEL_HVRAM_BLACKWELL_`     |
-| Blackwell + low VRAM  | `HF_MODEL_LVRAM_BLACKWELL_`     |
+| Condition | Prefix |
+|-----------|--------|
+| Every GPU, independent of VRAM | `HF_MODEL_` |
+| Every Blackwell GPU, independent of VRAM | `HF_MODEL_BLACKWELL_` |
+| More VRAM than `VRAM_THRESHOLD` | `HF_MODEL_HVRAM_` |
+| VRAM equal to or below `VRAM_THRESHOLD` | `HF_MODEL_LVRAM_` |
+| Blackwell with more VRAM than `VRAM_TRESHHOLD_BLACKWELL` | `HF_MODEL_HVRAM_BLACKWELL_` |
+| Blackwell with VRAM equal to or below `VRAM_TRESHHOLD_BLACKWELL` | `HF_MODEL_LVRAM_BLACKWELL_` |
 
-The Blackwell prefixes can be used for every model type in the table below. For example:
+`VRAM_TRESHHOLD_BLACKWELL` defaults to 40 GB in the MiniMax image. For example, a 48 GB Blackwell GPU selects the high-VRAM pair below, while a 32 GB or 40 GB Blackwell GPU selects the low-VRAM pair:
 
 ```text
-HF_MODEL_BLACKWELL_DIFFUSION_MODELS1=org/repository
-HF_MODEL_BLACKWELL_DIFFUSION_MODELS_FILENAME1=model.safetensors
+HF_MODEL_HVRAM_BLACKWELL_DIFFUSION_MODELS1=org/high-vram-model
+HF_MODEL_HVRAM_BLACKWELL_DIFFUSION_MODELS_FILENAME1=high-vram-model.safetensors
 
-HF_MODEL_HVRAM_BLACKWELL_TEXT_ENCODERS1=org/repository
-HF_MODEL_HVRAM_BLACKWELL_TEXT_ENCODERS_FILENAME1=text_encoder.safetensors
-
-HF_MODEL_LVRAM_BLACKWELL_VAE1=org/repository
-HF_MODEL_LVRAM_BLACKWELL_VAE_FILENAME1=vae.safetensors
+HF_MODEL_LVRAM_BLACKWELL_DIFFUSION_MODELS1=org/low-vram-model
+HF_MODEL_LVRAM_BLACKWELL_DIFFUSION_MODELS_FILENAME1=low-vram-model.safetensors
 ```
 
-Blackwell selection and fallback are evaluated separately for each model type and for the VRAM-dependent and VRAM-independent prefixes. A Blackwell variant is selected when at least one matching model and filename pair is configured. When no complete Blackwell pair exists for a model type, the corresponding standard `HF_MODEL_`, `HF_MODEL_HVRAM_`, or `HF_MODEL_LVRAM_` variables are used automatically.
+Always configure both the model and filename variable. Selection is evaluated per model type. If no complete matching Blackwell pair exists, the corresponding standard high- or low-VRAM pair is used automatically.
 
 | Model Type      | Model                                | Safetensors/GGUF                              |
 |-----------------|--------------------------------------|-----------------------------------------------|

@@ -55,3 +55,4 @@
 
 - [ComfyUI-Spectrum](https://github.com/xmarre/ComfyUI-Spectrum-MiniMax-H3)
 - [ComfyUI-sol-attn](https://github.com/Saganaki22/ComfyUI-sol-attn.git)
+- [FirstBlockCache](https://github.com/duckyshell/ComfyUI-MiniMaxH3-FirstBlockCache)
