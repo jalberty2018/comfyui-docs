@@ -15,11 +15,14 @@ Use this template for MiniMax H3 text-to-video, image-to-video, first/last-frame
 ## 🔧 Features
 
 - Automatic model provisioning through environment variables.
-- Models downloads depending on VRAM and architecture (blackwell).
+- Models downloads depending on VRAM and architecture (Ada Lovelace / Blackwell).
 - CUDA 12.8 runtime with compiled attention acceleration.
 - Authentication for ComfyUI, Code Server, Hugging Face and CivitAI.
-- LoRA Manager, utility nodes.
+- Uncensored heretic QWEN VL text encoder.
+- LoRA Manager
+- Installed custom nodes and accelerators.
 - Example workflows.
+- Turbo-lora (experimental)
 
 ## 📦 Deployment on RunPod
 

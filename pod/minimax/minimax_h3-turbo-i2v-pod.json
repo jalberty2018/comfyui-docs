@@ -751,47 +751,6 @@
       "bgcolor": "#335"
     },
     {
-      "id": 126,
-      "type": "BasicScheduler",
-      "pos": [
-        -357.61744523853827,
-        4751.1639637023745
-      ],
-      "size": [
-        298.0045143682428,
-        121.69285702008074
-      ],
-      "flags": {},
-      "order": 14,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 275
-        }
-      ],
-      "outputs": [
-        {
-          "name": "SIGMAS",
-          "type": "SIGMAS",
-          "links": [
-            235
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "BasicScheduler"
-      },
-      "widgets_values": [
-        "simple",
-        8,
-        1
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
       "id": 155,
       "type": "ImageScaleToTotalPixelsX",
       "pos": [
@@ -1181,7 +1140,7 @@
       ],
       "size": [
         270,
-        322
+        342
       ],
       "flags": {},
       "order": 23,
@@ -1191,6 +1150,12 @@
           "name": "model",
           "type": "MODEL",
           "link": 290
+        },
+        {
+          "name": "tau_profile",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
         }
       ],
       "outputs": [
@@ -1356,7 +1321,7 @@
       ],
       "size": [
         270,
-        82
+        106
       ],
       "flags": {},
       "order": 27,
@@ -1382,7 +1347,8 @@
       },
       "widgets_values": [
         "minimax_h3_turbo_4step_ema_ckpt850.safetensors",
-        1
+        1,
+        false
       ],
       "color": "#432",
       "bgcolor": "#653"
@@ -1515,6 +1481,47 @@
       ],
       "color": "#232",
       "bgcolor": "#353"
+    },
+    {
+      "id": 126,
+      "type": "BasicScheduler",
+      "pos": [
+        -357.61744523853827,
+        4751.1639637023745
+      ],
+      "size": [
+        298.0045143682428,
+        121.69285702008074
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 275
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SIGMAS",
+          "type": "SIGMAS",
+          "links": [
+            235
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BasicScheduler"
+      },
+      "widgets_values": [
+        "simple",
+        4,
+        1
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
     }
   ],
   "links": [

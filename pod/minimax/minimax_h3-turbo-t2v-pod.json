@@ -828,7 +828,7 @@
       ],
       "size": [
         270,
-        322
+        342
       ],
       "flags": {},
       "order": 22,
@@ -838,6 +838,12 @@
           "name": "model",
           "type": "MODEL",
           "link": 290
+        },
+        {
+          "name": "tau_profile",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
         }
       ],
       "outputs": [
@@ -927,7 +933,7 @@
       ],
       "size": [
         270,
-        82
+        106
       ],
       "flags": {},
       "order": 26,
@@ -953,7 +959,8 @@
       },
       "widgets_values": [
         "minimax_h3_turbo_4step_ema_ckpt850.safetensors",
-        1
+        1,
+        false
       ],
       "color": "#432",
       "bgcolor": "#653"
@@ -1098,7 +1105,7 @@
       ],
       "size": [
         1030,
-        1405.3076923076924
+        106
       ],
       "flags": {},
       "order": 33,
@@ -1168,92 +1175,6 @@
       ],
       "color": "#432",
       "bgcolor": "#653"
-    },
-    {
-      "id": 163,
-      "type": "Lora Loader (LoraManager)",
-      "pos": [
-        -1021.0035032057833,
-        4220.718528443095
-      ],
-      "size": [
-        550.0952338952154,
-        585.8718694029803
-      ],
-      "flags": {},
-      "order": 29,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 295
-        },
-        {
-          "name": "clip",
-          "shape": 7,
-          "type": "CLIP",
-          "link": null
-        },
-        {
-          "name": "lora_stack",
-          "shape": 7,
-          "type": "LORA_STACK",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            293
-          ]
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": null
-        },
-        {
-          "name": "trigger_words",
-          "type": "STRING",
-          "links": null
-        },
-        {
-          "name": "loaded_loras",
-          "type": "STRING",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "Lora Loader (LoraManager)",
-        "__lm_widget_ids": [
-          "__lm_autocomplete_meta_text",
-          "text",
-          "loras"
-        ]
-      },
-      "widgets_values": [
-        {
-          "version": 1,
-          "textWidgetName": "text"
-        },
-        "<lora:SexGod-NaughtyTimes-lora-MINIMAXH3:1.00>",
-        [
-          {
-            "name": "SexGod-NaughtyTimes-lora-MINIMAXH3",
-            "strength": "1.00",
-            "active": true,
-            "expanded": false,
-            "clipStrength": "1.00",
-            "selected": false,
-            "locked": false
-          }
-        ]
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
     },
     {
       "id": 133,
@@ -1501,6 +1422,82 @@
       ],
       "color": "#232",
       "bgcolor": "#353"
+    },
+    {
+      "id": 163,
+      "type": "Lora Loader (LoraManager)",
+      "pos": [
+        -1021.0035032057833,
+        4220.718528443095
+      ],
+      "size": [
+        550.0952338952154,
+        585.8718694029803
+      ],
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 295
+        },
+        {
+          "name": "clip",
+          "shape": 7,
+          "type": "CLIP",
+          "link": null
+        },
+        {
+          "name": "lora_stack",
+          "shape": 7,
+          "type": "LORA_STACK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            293
+          ]
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": null
+        },
+        {
+          "name": "trigger_words",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "loaded_loras",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Lora Loader (LoraManager)",
+        "__lm_widget_ids": [
+          "__lm_autocomplete_meta_text",
+          "text",
+          "loras"
+        ]
+      },
+      "widgets_values": [
+        {
+          "version": 1,
+          "textWidgetName": "text"
+        },
+        "",
+        []
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
     }
   ],
   "links": [
@@ -1833,8 +1830,8 @@
     "ds": {
       "scale": 0.6479022071235517,
       "offset": [
-        1676.412812366918,
-        -4630.320848018277
+        1856.6869602650956,
+        -4162.34894711688
       ]
     }
   },
