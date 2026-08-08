@@ -13,20 +13,21 @@
 | cuDNN     | `9`                  |
 | Triton    | `3.6.0`              |
 | onnxruntime-gpu | `1.22.0`     |
-| ComfyUI | `0.30.0` |
+| ComfyUI | `0.31.0` |
 | CodeServer | `latest`          |
 
 ## Wheels
 
 | Package        | Version  |
 |----------------|----------|
-| flash_attn     | `2.8.3`    |
+| flash_attn     | `2.8.4`    |
 | sageattention  |  `2.2.0`   |
 | torch_generic_nms | `0.1` |
 
 ## Optimised
 
-| Family | Compute Capability | Processor example | SM |
-|------------|---------|--------|-----------|
-| Ampere  | 8.6 |  A40   | sm_86 |
-| Ada Lovelace | 8.9 | L40S  | sm_89 |
+| Architecture | Compute Capability | Native Build Target | Examples |
+|---|---:|---:|---|
+| Ampere | 8.6 | `sm_86` | RTX 3090, RTX A5000, RTX A6000, A40 |
+| Ada Lovelace | 8.9 | `sm_89` | RTX 4090, RTX 6000 Ada, L40, L40S |
+| Blackwell | 12.0 | `sm_120` | RTX 5090, RTX 5080, RTX 5070 Ti |

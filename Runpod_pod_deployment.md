@@ -1,8 +1,9 @@
 # 🚀 Starting a Pod
 
-![deployment speed](images/runpod_ready.jpg)
+![deployment speed 1](images/runpod_ready.jpg)
+![deployment speed 2](images/runpod_ready_RTX6000PRO.jpg)
 
-- The containers are thoroughly tested before being used in the templates. However, deploying a pod can still be frustrating due to slow or overloaded hardware on RunPod, as well as limited network performance when connecting to Docker Hub or the Hugging Face Hub. The parameters below will help you identify and stop an underperforming pod. A fast GPU provides little benefit when the rest of the system cannot operate at a comparable speed. The screenshot above is an example of the deployment speed of an excellent performing pod running Krea-2.
+- The containers are thoroughly tested before being used in the templates. However, deploying a pod can still be frustrating due to slow or overloaded hardware on RunPod, as well as limited network performance when connecting to Docker Hub or the Hugging Face Hub. The parameters below will help you identify and stop an underperforming pod. A fast GPU provides little benefit when the rest of the system cannot operate at a comparable speed. The screenshots above are examples of full deployment speeds of an excellent performing pod.
 
 - Check [runpod uptime](https://uptime.runpod.io/) to check if there are issues for a specific regio.
 
@@ -82,6 +83,8 @@ The extraction ends with a message like this in the **Logs** section:
 ### Downloading models form huggingface hub
 
 ![huggingface download](images/runpod_deploy_hf_download.jpg)
+
+![huggingface download2](images/runpod_deploy_hf_download2.jpg)
 
 - Model download speeds depend on both network and storage performance. A download speed above **200 MB/s** is considered acceptable. If a download fails, allow the startup script to finish and then restart the pod so that it can download any missing models.
 

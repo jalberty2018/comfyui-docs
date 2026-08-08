@@ -52,6 +52,10 @@ Use this template for MiniMax H3 text-to-video, image-to-video, first/last-frame
 
 ![Pod running on RTX 5090](images/runpod_A5000_MiniMax.jpeg)
 
+### Pod running on RTX PRO 6000
+
+![Pod running on RTX PRO 6000](images/runpod_RTXPRO6000_MiniMax.jpg)
+
 ## More information
 
 - [Environment configuration](ComfyUI_MiniMax_configuration.md)
