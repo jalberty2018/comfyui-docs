@@ -7,11 +7,16 @@
 - The date reflects when the related custom nodes were cloned from their upstream repositories.
 - Pinned custom nodes are not updated automatically, because changing those pins can introduce compatibility issues.
 
+## 09082026
+
+- - ComfyUI 0.31.0
+- [krea2-anypaint](https://github.com/alexw5702-afk/krea2-anypaint)
+- [Krea-Moodboard](https://github.com/Andro-Meta/ComfyUI-Krea-Moodboards)
+
 ## 05082026
 
 - ComfyUI 0.30.0
 - [comfyui-model-linker](https://github.com/kianxyzw/comfyui-model-linker)
-- Added blackwell configurations for model downloads
 
 ## 01082026
 

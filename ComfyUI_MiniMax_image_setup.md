@@ -30,4 +30,4 @@
 |---|---:|---:|---|
 | Ampere | 8.6 | `sm_86` | RTX 3090, RTX A5000, RTX A6000, A40 |
 | Ada Lovelace | 8.9 | `sm_89` | RTX 4090, RTX 6000 Ada, L40, L40S |
-| Blackwell | 12.0 | `sm_120` | RTX 5090, RTX 5080, RTX 5070 Ti |
+| Blackwell | 12.0 | `sm_120` | RTX 5090, RTX PRO 6000 |

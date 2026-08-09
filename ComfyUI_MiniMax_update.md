@@ -5,14 +5,16 @@
 - A new dated subtitle is added whenever a new stable ComfyUI release is included.
 - The date is updated when custom nodes, provisioning or runtime behavior changes.
 - Pinned custom nodes are not updated automatically because pin changes can introduce compatibility issues.
-- This pod is stable but many custom_nodes are experimental.
+- This pod is stable but many custom_nodes are experimental and in full development.
 - Tested on L40S, RTX 5090 and RTX PRO 6000.
 
-## 08082026
+## 09082026
 
 - ComfyUI 0.31.0
 - sm_120 (Blackwell) attentions added.
 - Updated turbo lora
+- [ComfyUI-sol-attn](https://github.com/Saganaki22/ComfyUI-sol-attn)
+- [ComfyUI-H3-multishot](https://github.com/jlucasmcrell/ComfyUI-H3-Multishot)
 
 ## 07082026
 

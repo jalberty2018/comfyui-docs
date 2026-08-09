@@ -145,6 +145,8 @@
 - [Krea2-Projector-Tuner](https://github.com/BlackSnowSkill/ComfyUI-Krea2-Projector-Tuner)
 - [Krea2-attention-tweak.git](https://github.com/Extraltodeus/ComfyUI-Krea2-attention-tweak)
 - [Krea2-Ostris-Edit](https://github.com/ostris/ComfyUI-Krea2-Ostris-Edit)
+- [krea2-anypaint](https://github.com/alexw5702-afk/krea2-anypaint)
+- [Krea-Moodboard](https://github.com/Andro-Meta/ComfyUI-Krea-Moodboards)
 
 ## 🧩 All possible Custom Nodes
 

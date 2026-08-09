@@ -7,6 +7,13 @@
 - The date reflects when the related custom nodes were cloned from their upstream repositories.
 - Pinned custom nodes are not updated automatically, because changing those pins can introduce compatibility issues.
 
+## 08082026
+
+- ComfyUI 0.31.0
+- Added WAN-Animate-2
+- Added Blackwell support.
+- Changed output hf download.
+
 ## 30072026
 
 - ComfyUI 0.29.0
