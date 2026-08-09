@@ -47,8 +47,8 @@ Use this template for MiniMax H3 text-to-video, image-to-video, first/last-frame
 ## Example video with fl2va.
 
 <div style="text-align: center;">
-  <video controls style="max-width: 50%; height: auto;">
-    <source src="video/Video_girl_drinking_cocktail.mp4" type="video/mp4">
+  <video controls preload="metadata" style="max-width: 50%; height: auto;">
+    <source src="/video/Video_girl_drinking_cocktail.mp4" type="video/mp4">
   </video>
 </div>
 
