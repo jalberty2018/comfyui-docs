@@ -40,10 +40,6 @@ Use this template for MiniMax H3 text-to-video, image-to-video, first/last-frame
 
 ![MiniMax H3 workflow i2v](images/ai-generated-MiniMax-i2v.jpg)
 
-## Example standard workflow with director custom node
-
-![MiniMax H3 workflow director](images/ai-generated-MiniMax-director.jpg)
-
 ## Example video with Ref2va
 
 <div style="text-align: center;">
@@ -52,7 +48,7 @@ Use this template for MiniMax H3 text-to-video, image-to-video, first/last-frame
   </video>
 </div>
 
-## Example video with fl2va.
+## Example video with fl2va
 
 <div style="text-align: center;">
   <video controls preload="metadata" style="max-width: 50%; height: auto;">
