@@ -24,7 +24,8 @@
 
 ## Optimized
 
-| Processor example | Compute Capability | Family | SM |
-|------------|---------|--------|-----------|
-| A40  | 8.6 | Ampere    | sm_86 |
-| L40S | 8.9 | Ada Lovelace  | sm_89 |
+|| Architecture | Compute Capability | Native Build Target | Examples |
+|---|---:|---:|---|
+| Ampere | 8.6 | `sm_86` | RTX 3090, RTX A5000, RTX A6000, A40 |
+| Ada Lovelace | 8.9 | `sm_89` | RTX 4090, RTX 6000 Ada, L40, L40S |
+
