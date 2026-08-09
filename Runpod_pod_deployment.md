@@ -13,22 +13,22 @@
 
 ### Image templates
 
-- [View available image templates](ComfyUI_image_deployment.md)
+- [View available templates](ComfyUI_image_deployment.md)
 - [Compatible GPUs](ComfyUI_image_hardware.md)
 
 ### MiniMax H3 templates
 
-- [View available WAN templates](ComfyUI_MiniMax_deployment.md)
+- [View available templates](ComfyUI_MiniMax_deployment.md)
 - [Compatible GPUs](ComfyUI_MiniMax_hardware.md)
 
 ### WAN templates
 
-- [View available WAN templates](ComfyUI_WAN_deployment.md)
+- [View available templates](ComfyUI_WAN_deployment.md)
 - [Compatible GPUs](ComfyUI_WAN_hardware.md)
 
 ### LTX templates
 
-- [View available LTX templates](ComfyUI_LTX_deployment.md)
+- [View available templates](ComfyUI_LTX_deployment.md)
 - [Compatible GPUs](ComfyUI_LTX_hardware.md)
 
 ## Deploy the Pod
