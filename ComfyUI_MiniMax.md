@@ -44,6 +44,14 @@ Use this template for MiniMax H3 text-to-video, image-to-video, first/last-frame
 
 ![MiniMax H3 workflow director](images/ai-generated-MiniMax-director.jpg)
 
+## Example video with Ref2va
+
+<div style="text-align: center;">
+  <video controls preload="metadata" style="max-width: 50%; height: auto;">
+    <source src="/video/Video_tickling_princess.mp4" type="video/mp4">
+  </video>
+</div>
+
 ## Example video with fl2va.
 
 <div style="text-align: center;">
