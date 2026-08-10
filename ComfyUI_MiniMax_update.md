@@ -8,11 +8,12 @@
 - This pod is stable but many custom_nodes are experimental and in full development.
 - Tested on L40S, RTX 5090 and RTX PRO 6000.
 
-## 09082026
+## 10082026
 
 - ComfyUI 0.31.0
 - sm_120 (Blackwell) attentions added.
-- Updated turbo lora
+- llama-cpp-python added for sm_120.
+- Updated base image.
 - [ComfyUI-sol-attn](https://github.com/Saganaki22/ComfyUI-sol-attn)
 - [ComfyUI-H3-multishot](https://github.com/jlucasmcrell/ComfyUI-H3-Multishot)
 
@@ -22,7 +23,7 @@
 - [Running hub](https://github.com/HM-RunningHub/ComfyUI_RH_MinMaxH3)
 - [Guide](https://github.com/ethanfel/ComfyUI-MiniMax-H3-Guide)
 - [ComfyUI-SolAttn_triton](https://github.com/kijai/ComfyUI-SolAttn_triton)
-- [PromptBuilder](https://github.com/Adudeguyman/ComfyUI-Fantastic-MiniMaxH3-PromptBuilder.git)
+- [Fantastic PromptBuilder](https://github.com/Adudeguyman/ComfyUI-Fantastic-MiniMaxH3-PromptBuilder.git)
 - [Director](https://github.com/AIMixer/ComfyUI_MiniMaxH3_Director)
 - [ComfyUI-Spectrum](https://github.com/xmarre/ComfyUI-Spectrum-MiniMax-H3)
 - [Turbo Lora](https://github.com/Larryvrh/ComfyUI-MiniMax-H3-Turbo)
