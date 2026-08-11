@@ -2,6 +2,7 @@
 
 ![deployment speed 1](images/runpod_ready.jpg)
 ![deployment speed 2](images/runpod_ready_RTX6000PRO.jpg)
+![deployment speed 3](images/runpod_ready_L40S.jpg)
 
 - The containers are thoroughly tested before being used in the templates. However, deploying a pod can still be frustrating due to slow or overloaded hardware on RunPod, as well as limited network performance when connecting to Docker Hub or the Hugging Face Hub. The parameters below will help you identify and stop an underperforming pod. A fast GPU provides little benefit when the rest of the system cannot operate at a comparable speed. The screenshots above are examples of full deployment speeds of an excellent performing pod.
 

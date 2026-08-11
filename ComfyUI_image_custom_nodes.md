@@ -131,24 +131,6 @@
 - [SeedVarianceEnhancer ZIT](https://github.com/ChangeTheConstants/SeedVarianceEnhancer)
 - [RBG-SmartSeedVariance ZIT](https://github.com/RamonGuthrie/ComfyUI-RBG-SmartSeedVariance)
 
-#### Krea
-
-- [krea2-conditioning](https://github.com/huwhitememes/comfyui-krea2-conditioning)
-- [Krea2TextEncoder](https://github.com/ethanfel/ComfyUI-Krea2TextEncoder)
-- [Conditioning-Rebalance](https://github.com/nova452/ComfyUI-Conditioning-Rebalance)
-- [Krea2T-Enhancer](https://github.com/capitan01R/ComfyUI-Krea2T-Enhancer)
-- [krea-reference](https://github.com/kgilper/krea-reference)
-- [Krea2-StyleTransfer](https://github.com/jieg9341-lab/ComfyUI-Krea2-StyleTransfer)
-- [KreaReason](https://github.com/shootthesound/ComfyUI-KreaReason)
-- [Krea2edit](https://github.com/lbouaraba/comfyui-krea2edit)
-- [krea2-negpip](https://github.com/blue-pen5805/ComfyUI-krea2-negpip)
-- [Krea2-Projector-Tuner](https://github.com/BlackSnowSkill/ComfyUI-Krea2-Projector-Tuner)
-- [Krea2-attention-tweak.git](https://github.com/Extraltodeus/ComfyUI-Krea2-attention-tweak)
-- [Krea2-Ostris-Edit](https://github.com/ostris/ComfyUI-Krea2-Ostris-Edit)
-- [krea2-anypaint](https://github.com/alexw5702-afk/krea2-anypaint)
-- [Krea-Moodboard](https://github.com/Andro-Meta/ComfyUI-Krea-Moodboards)
-- [Krea2-NAG](https://github.com/iljung1106/ComfyUI-Krea2-NAG)
-
 ## 🧩 All possible Custom Nodes
 
 - [Full List](https://comfyui.rozenlaan.site)
