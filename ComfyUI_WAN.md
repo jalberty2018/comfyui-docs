@@ -60,3 +60,12 @@ The guiding idea is aligned with the open-model discussion described by Eric Har
 
 ![Pod running on A40 ComfyUI WanVideoWrapper](images/runpod_A40_wrapper.jpg)
 
+## More information
+
+- [Environment configuration](RunPod_configuration.md)
+- [Hardware guidance](ComfyUI_WAN_hardware.md)
+- [Image setup](ComfyUI_WAN_image_setup.md)
+- [Custom nodes](ComfyUI_WAN_custom_nodes.md)
+- [Resources](ComfyUI_WAN_resources.md)
+- [Updates](ComfyUI_WAN_update.md)
+

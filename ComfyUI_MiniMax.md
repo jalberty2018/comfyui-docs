@@ -70,7 +70,7 @@ Use this template for MiniMax H3 text-to-video, image-to-video, first/last-frame
 
 ## More information
 
-- [Environment configuration](ComfyUI_MiniMax_configuration.md)
+- [Environment configuration](RunPod_configuration.md)
 - [Hardware guidance](ComfyUI_MiniMax_hardware.md)
 - [Image setup](ComfyUI_MiniMax_image_setup.md)
 - [Custom nodes](ComfyUI_MiniMax_custom_nodes.md)

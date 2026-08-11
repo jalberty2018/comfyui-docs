@@ -137,3 +137,14 @@ The guiding idea is aligned with the open-model discussion described by Eric Har
 ### Example running Krea-2 turbo bf16 on an RTX A5000
 
 ![Pod running on RTX A5000 krea2 turbo bf16 ComfyUI](images/runpod_A5000_krea2-bf16.jpg)
+
+## More information
+
+- [Environment configuration](RunPod_configuration.md)
+- [Hardware guidance](ComfyUI_image_hardware.md)
+- [Image setup](ComfyUI_image_image_setup.md)
+- [Image2 setup](ComfyUI_image2_image_setup.md)
+- [Custom nodes](ComfyUI_image_custom_nodes.md)
+- [Custom nodes image2](ComfyUI_image2_custom_nodes.md)
+- [Resources](ComfyUI_image_resources.md)
+- [Updates](ComfyUI_image_update.md)

@@ -147,6 +147,7 @@
 - [Krea2-Ostris-Edit](https://github.com/ostris/ComfyUI-Krea2-Ostris-Edit)
 - [krea2-anypaint](https://github.com/alexw5702-afk/krea2-anypaint)
 - [Krea-Moodboard](https://github.com/Andro-Meta/ComfyUI-Krea-Moodboards)
+- [Krea2-NAG](https://github.com/iljung1106/ComfyUI-Krea2-NAG)
 
 ## 🧩 All possible Custom Nodes
 

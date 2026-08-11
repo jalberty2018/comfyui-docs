@@ -75,3 +75,12 @@ The guiding idea is aligned with the open-model discussion described by Eric Har
 ### Pod running on RTX 4090 fp8
 
 ![Pod running on RTX 4090 ComfyUI](images/runpod_RTX4090_LTX.jpeg)
+
+## More information
+
+- [Environment configuration](RunPod_configuration.md)
+- [Hardware guidance](ComfyUI_LTX_hardware.md)
+- [Image setup](ComfyUI_LTX_image_setup.md)
+- [Custom nodes](ComfyUI_LTX_custom_nodes.md)
+- [Resources](ComfyUI_LTX_resources.md)
+- [Updates](ComfyUI_LTX_update.md)
