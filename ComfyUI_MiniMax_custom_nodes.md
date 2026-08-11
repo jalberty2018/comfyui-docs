@@ -9,7 +9,6 @@
 - [KJNodes](https://github.com/kijai/ComfyUI-KJNodes)
 - [Easy-Use](https://github.com/yolain/ComfyUI-Easy-Use)
 - [Director](https://github.com/AIMixer/ComfyUI_MiniMaxH3_Director)
-- [PromptBuilder](https://github.com/Adudeguyman/ComfyUI-Fantastic-MiniMaxH3-PromptBuilder.git)
 
 ### Utilities / Workflow helpers
 
@@ -38,7 +37,8 @@
 
 ### Text encoders
 
-- [Guide](https://github.com/ethanfel/ComfyUI-MiniMax-H3-Guide)
+- [ComfyUI-MiniMax-H3-Guide](https://github.com/ethanfel/ComfyUI-MiniMax-H3-Guide)
+- [ComfyUI-Fantastic-MiniMaxH3-PromptBuilder](https://github.com/Adudeguyman/ComfyUI-Fantastic-MiniMaxH3-PromptBuilder)
 
 ### Sampling
 
@@ -58,3 +58,8 @@
 - [ComfyUI-Spectrum](https://github.com/xmarre/ComfyUI-Spectrum-MiniMax-H3)
 - [FirstBlockCache](https://github.com/duckyshell/ComfyUI-MiniMaxH3-FirstBlockCache)
 - [ComfyUI-sol-attn](https://github.com/Saganaki22/ComfyUI-sol-attn)
+
+### Long video
+
+- [ComfyUI-H3-Continuum](https://github.com/ukr8b3g-cmyk/ComfyUI-H3-Continuum)
+- [ComfyUI-H3-multishot](https://github.com/jlucasmcrell/ComfyUI-H3-Multishot)
