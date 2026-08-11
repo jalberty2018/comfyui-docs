@@ -18,6 +18,7 @@
 - [ComfyUI-H3-multishot](https://github.com/jlucasmcrell/ComfyUI-H3-Multishot)
 - [ComfyUI-H3-PowerLoraStack](https://github.com/cicalooo/ComfyUI-H3-PowerLoraStack)
 - [ComfyUI-H3-Continuum](https://github.com/ukr8b3g-cmyk/ComfyUI-H3-Continuum)
+- [ComfyUI-MiniMaxH3-Preview](https://github.com/Brioch/ComfyUI-MiniMaxH3-Preview)
 
 ## 07082026
 

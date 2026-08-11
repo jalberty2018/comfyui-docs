@@ -32,13 +32,21 @@ Use this template for MiniMax H3 text-to-video, image-to-video, first/last-frame
 
 - [MiniMax tutorial](ComfyUI_tutorial.md)
 
-## Example standard workflow Reference to video/audio (Ref2va)
+## Example standard workflow Reference to video/audio (Ref2va) with or without turbo
 
 ![MiniMax H3 workflow Ref2va](images/ai-generated-MiniMax.jpg)
 
-## Example standard workflow image to video/audio (fl2va)
+## Example standard workflow image to video/audio (fl2va) with or without turbo
 
-![MiniMax H3 workflow i2v](images/ai-generated-MiniMax-i2v.jpg)
+![MiniMax H3 workflow i2v](images/ai-generated-MiniMax-i2v.jpg) with or without turbo
+
+## Example standard workflow text to video/audio (fl2va) with or without turbo
+
+![MiniMax H3 workflow t2v](images/ai-generated-MiniMax-t2v.jpg)
+
+## Example workflow all in one with or without turbo
+
+![MiniMax H3 workflow all in onde](images/ai-generated-MiniMax-director.jpg)
 
 ## Example video with Ref2va
 
@@ -50,13 +58,31 @@ Use this template for MiniMax H3 text-to-video, image-to-video, first/last-frame
 
 ## Example video with fl2va
 
+### i2v
+
 <div style="text-align: center;">
   <video controls preload="metadata" style="max-width: 50%; height: auto;">
     <source src="/video/Video_girl_drinking_cocktail.mp4" type="video/mp4">
   </video>
 </div>
 
-### Pod running on L40S
+### t2v
+
+<div style="text-align: center;">
+  <video controls preload="metadata" style="max-width: 50%; height: auto;">
+    <source src="/video/Video_girl_walking_on_beach.mp4" type="video/mp4">
+  </video>
+</div>
+
+## Example video with director
+
+<div style="text-align: center;">
+  <video controls preload="metadata" style="max-width: 50%; height: auto;">
+    <source src="/video/Video_minimax_slow.mp4" type="video/mp4">
+  </video>
+</div>
+
+### Pod running on L40
 
 ![Pod running on L40S](images/runpod_L40S_MiniMax.jpg)
 
