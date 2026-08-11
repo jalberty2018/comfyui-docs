@@ -42,45 +42,6 @@
       "bgcolor": "#533"
     },
     {
-      "id": 58,
-      "type": "ConditioningZeroOut",
-      "pos": [
-        1557.8125268191257,
-        -1852.3675085608377
-      ],
-      "size": [
-        230,
-        30
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 19,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "conditioning",
-          "type": "CONDITIONING",
-          "link": 161
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            155
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ConditioningZeroOut",
-        "cnr_id": "comfy-core",
-        "ver": "0.25.0"
-      },
-      "widgets_values": []
-    },
-    {
       "id": 54,
       "type": "VAEDecode",
       "pos": [
@@ -141,7 +102,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 23,
+      "order": 24,
       "mode": 0,
       "inputs": [
         {
@@ -225,7 +186,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 22,
+      "order": 23,
       "mode": 0,
       "inputs": [
         {
@@ -340,49 +301,6 @@
       "bgcolor": "#335"
     },
     {
-      "id": 55,
-      "type": "UNETLoader",
-      "pos": [
-        1150.0929653565736,
-        -2439.481363674946
-      ],
-      "size": [
-        393.12186986859206,
-        135.62473996270455
-      ],
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            142
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "UNETLoader",
-        "cnr_id": "comfy-core",
-        "ver": "0.25.0",
-        "models": [
-          {
-            "name": "krea2_turbo_fp8_scaled.safetensors",
-            "url": "https://huggingface.co/Comfy-Org/Krea-2/resolve/main/diffusion_models/krea2_turbo_fp8_scaled.safetensors",
-            "directory": "diffusion_models"
-          }
-        ]
-      },
-      "widgets_values": [
-        "diffusion_models/krea2_raw_bf16.safetensors",
-        "default"
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
-    },
-    {
       "id": 89,
       "type": "SetNode",
       "pos": [
@@ -396,7 +314,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 17,
+      "order": 19,
       "mode": 0,
       "inputs": [
         {
@@ -438,7 +356,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 13,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
@@ -480,153 +398,6 @@
       ]
     },
     {
-      "id": 87,
-      "type": "ResolutionMaster",
-      "pos": [
-        734.7158770877345,
-        -1870.495886762367
-      ],
-      "size": [
-        330,
-        475
-      ],
-      "flags": {},
-      "order": 4,
-      "mode": 0,
-      "inputs": [
-        {
-          "label": "input_image",
-          "name": "input_image",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "",
-          "type": "INT",
-          "links": [
-            125
-          ]
-        },
-        {
-          "name": "",
-          "type": "INT",
-          "links": [
-            126
-          ]
-        },
-        {
-          "name": "",
-          "type": "FLOAT",
-          "links": null
-        },
-        {
-          "name": "",
-          "type": "INT",
-          "links": null
-        },
-        {
-          "name": "",
-          "type": "LATENT",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ResolutionMaster",
-        "mode": "Manual",
-        "valueX": 1296,
-        "valueY": 1728,
-        "batch_size": 1,
-        "canvas_min_x": 0,
-        "canvas_max_x": 2048,
-        "canvas_step_x": 64,
-        "canvas_min_y": 0,
-        "canvas_max_y": 2048,
-        "canvas_step_y": 64,
-        "canvas_decimals_x": 0,
-        "canvas_decimals_y": 0,
-        "canvas_snap": true,
-        "canvas_dots": true,
-        "canvas_frame": true,
-        "action_slider_snap_min": 16,
-        "action_slider_snap_max": 256,
-        "action_slider_snap_step": 16,
-        "scaling_slider_min": 0.1,
-        "scaling_slider_max": 4,
-        "scaling_slider_step": 0.1,
-        "megapixels_slider_min": 0.5,
-        "megapixels_slider_max": 6,
-        "megapixels_slider_step": 0.1,
-        "snapValue": 16,
-        "upscaleValue": 1,
-        "targetResolution": 1080,
-        "targetMegapixels": 2,
-        "rescaleMode": "manual",
-        "rescaleValue": 1,
-        "preserveScalingRatio": false,
-        "autoDetect": false,
-        "autoDetectSource": "backend",
-        "autoDetectWidth": 0,
-        "autoDetectHeight": 0,
-        "autoDetectPresetsJSON": "{\"1:1 Square (1024)\":{\"width\":1024,\"height\":1024,\"isCustom\":false,\"isHidden\":false},\"9:7 Landscape (1024)\":{\"width\":1152,\"height\":896,\"isCustom\":false,\"isHidden\":false},\"7:9 Portrait (1024)\":{\"width\":896,\"height\":1152,\"isCustom\":false,\"isHidden\":false},\"4:3 Landscape (1024)\":{\"width\":1152,\"height\":864,\"isCustom\":false,\"isHidden\":false},\"3:4 Portrait (1024)\":{\"width\":864,\"height\":1152,\"isCustom\":false,\"isHidden\":false},\"3:2 Landscape (1024)\":{\"width\":1248,\"height\":832,\"isCustom\":false,\"isHidden\":false},\"2:3 Portrait (1024)\":{\"width\":832,\"height\":1248,\"isCustom\":false,\"isHidden\":false},\"16:9 Widescreen (1024)\":{\"width\":1280,\"height\":720,\"isCustom\":false,\"isHidden\":false},\"9:16 Portrait (1024)\":{\"width\":720,\"height\":1280,\"isCustom\":false,\"isHidden\":false},\"21:9 Ultrawide (1024)\":{\"width\":1344,\"height\":576,\"isCustom\":false,\"isHidden\":false},\"9:21 Ultra Portrait (1024)\":{\"width\":576,\"height\":1344,\"isCustom\":false,\"isHidden\":false},\"1:1 Square (1280)\":{\"width\":1280,\"height\":1280,\"isCustom\":false,\"isHidden\":false},\"9:7 Landscape (1280)\":{\"width\":1440,\"height\":1120,\"isCustom\":false,\"isHidden\":false},\"7:9 Portrait (1280)\":{\"width\":1120,\"height\":1440,\"isCustom\":false,\"isHidden\":false},\"4:3 Landscape (1280)\":{\"width\":1472,\"height\":1104,\"isCustom\":false,\"isHidden\":false},\"3:4 Portrait (1280)\":{\"width\":1104,\"height\":1472,\"isCustom\":false,\"isHidden\":false},\"3:2 Landscape (1280)\":{\"width\":1536,\"height\":1024,\"isCustom\":false,\"isHidden\":false},\"2:3 Portrait (1280)\":{\"width\":1024,\"height\":1536,\"isCustom\":false,\"isHidden\":false},\"16:9 Widescreen (1280)\":{\"width\":1536,\"height\":864,\"isCustom\":false,\"isHidden\":false},\"9:16 Portrait (1280)\":{\"width\":864,\"height\":1536,\"isCustom\":false,\"isHidden\":false},\"21:9 Ultrawide (1280)\":{\"width\":1680,\"height\":720,\"isCustom\":false,\"isHidden\":false},\"9:21 Ultra Portrait (1280)\":{\"width\":720,\"height\":1680,\"isCustom\":false,\"isHidden\":false},\"1:1 Square (1536)\":{\"width\":1536,\"height\":1536,\"isCustom\":false,\"isHidden\":false},\"9:7 Landscape (1536)\":{\"width\":1728,\"height\":1344,\"isCustom\":false,\"isHidden\":false},\"7:9 Portrait (1536)\":{\"width\":1344,\"height\":1728,\"isCustom\":false,\"isHidden\":false},\"4:3 Landscape (1536)\":{\"width\":1728,\"height\":1296,\"isCustom\":false,\"isHidden\":false},\"3:4 Portrait (1536)\":{\"width\":1296,\"height\":1728,\"isCustom\":false,\"isHidden\":false},\"3:2 Landscape (1536)\":{\"width\":1872,\"height\":1248,\"isCustom\":false,\"isHidden\":false},\"2:3 Portrait (1536)\":{\"width\":1248,\"height\":1872,\"isCustom\":false,\"isHidden\":false},\"16:9 Widescreen (1536)\":{\"width\":2048,\"height\":1152,\"isCustom\":false,\"isHidden\":false},\"9:16 Portrait (1536)\":{\"width\":1152,\"height\":2048,\"isCustom\":false,\"isHidden\":false},\"21:9 Ultrawide (1536)\":{\"width\":2016,\"height\":864,\"isCustom\":false,\"isHidden\":false},\"9:21 Ultra Portrait (1536)\":{\"width\":864,\"height\":2016,\"isCustom\":false,\"isHidden\":false}}",
-        "autoFitOnChange": false,
-        "autoResizeOnChange": false,
-        "autoSnapOnChange": false,
-        "smartFit": false,
-        "selectedCategory": "ZImageTurbo",
-        "selectedPreset": "3:4 Portrait (1536)",
-        "useCustomCalc": false,
-        "showCalcInfo": false,
-        "manual_slider_min_w": 64,
-        "manual_slider_max_w": 2048,
-        "manual_slider_step_w": 64,
-        "manual_slider_min_h": 64,
-        "manual_slider_max_h": 2048,
-        "manual_slider_step_h": 64,
-        "section_actions_collapsed": false,
-        "section_scaling_collapsed": true,
-        "section_autoDetect_collapsed": true,
-        "section_presets_collapsed": false,
-        "section_extraControls_collapsed": false,
-        "preferred_compact_height": null,
-        "preferred_expanded_height": 475,
-        "dropdown_resolution_expanded": false,
-        "dropdown_category_expanded": true,
-        "dropdown_preset_expanded": false,
-        "preset_selector_mode": "visual",
-        "customPresetsJSON": ""
-      },
-      "widgets_values": [
-        "Manual",
-        "latent_4x8",
-        1296,
-        1728,
-        false,
-        "backend",
-        0,
-        0,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        "ZImageTurbo",
-        16,
-        1,
-        1080,
-        2,
-        "{\"1:1 Square (1024)\":{\"width\":1024,\"height\":1024,\"isCustom\":false,\"isHidden\":false},\"9:7 Landscape (1024)\":{\"width\":1152,\"height\":896,\"isCustom\":false,\"isHidden\":false},\"7:9 Portrait (1024)\":{\"width\":896,\"height\":1152,\"isCustom\":false,\"isHidden\":false},\"4:3 Landscape (1024)\":{\"width\":1152,\"height\":864,\"isCustom\":false,\"isHidden\":false},\"3:4 Portrait (1024)\":{\"width\":864,\"height\":1152,\"isCustom\":false,\"isHidden\":false},\"3:2 Landscape (1024)\":{\"width\":1248,\"height\":832,\"isCustom\":false,\"isHidden\":false},\"2:3 Portrait (1024)\":{\"width\":832,\"height\":1248,\"isCustom\":false,\"isHidden\":false},\"16:9 Widescreen (1024)\":{\"width\":1280,\"height\":720,\"isCustom\":false,\"isHidden\":false},\"9:16 Portrait (1024)\":{\"width\":720,\"height\":1280,\"isCustom\":false,\"isHidden\":false},\"21:9 Ultrawide (1024)\":{\"width\":1344,\"height\":576,\"isCustom\":false,\"isHidden\":false},\"9:21 Ultra Portrait (1024)\":{\"width\":576,\"height\":1344,\"isCustom\":false,\"isHidden\":false},\"1:1 Square (1280)\":{\"width\":1280,\"height\":1280,\"isCustom\":false,\"isHidden\":false},\"9:7 Landscape (1280)\":{\"width\":1440,\"height\":1120,\"isCustom\":false,\"isHidden\":false},\"7:9 Portrait (1280)\":{\"width\":1120,\"height\":1440,\"isCustom\":false,\"isHidden\":false},\"4:3 Landscape (1280)\":{\"width\":1472,\"height\":1104,\"isCustom\":false,\"isHidden\":false},\"3:4 Portrait (1280)\":{\"width\":1104,\"height\":1472,\"isCustom\":false,\"isHidden\":false},\"3:2 Landscape (1280)\":{\"width\":1536,\"height\":1024,\"isCustom\":false,\"isHidden\":false},\"2:3 Portrait (1280)\":{\"width\":1024,\"height\":1536,\"isCustom\":false,\"isHidden\":false},\"16:9 Widescreen (1280)\":{\"width\":1536,\"height\":864,\"isCustom\":false,\"isHidden\":false},\"9:16 Portrait (1280)\":{\"width\":864,\"height\":1536,\"isCustom\":false,\"isHidden\":false},\"21:9 Ultrawide (1280)\":{\"width\":1680,\"height\":720,\"isCustom\":false,\"isHidden\":false},\"9:21 Ultra Portrait (1280)\":{\"width\":720,\"height\":1680,\"isCustom\":false,\"isHidden\":false},\"1:1 Square (1536)\":{\"width\":1536,\"height\":1536,\"isCustom\":false,\"isHidden\":false},\"9:7 Landscape (1536)\":{\"width\":1728,\"height\":1344,\"isCustom\":false,\"isHidden\":false},\"7:9 Portrait (1536)\":{\"width\":1344,\"height\":1728,\"isCustom\":false,\"isHidden\":false},\"4:3 Landscape (1536)\":{\"width\":1728,\"height\":1296,\"isCustom\":false,\"isHidden\":false},\"3:4 Portrait (1536)\":{\"width\":1296,\"height\":1728,\"isCustom\":false,\"isHidden\":false},\"3:2 Landscape (1536)\":{\"width\":1872,\"height\":1248,\"isCustom\":false,\"isHidden\":false},\"2:3 Portrait (1536)\":{\"width\":1248,\"height\":1872,\"isCustom\":false,\"isHidden\":false},\"16:9 Widescreen (1536)\":{\"width\":2048,\"height\":1152,\"isCustom\":false,\"isHidden\":false},\"9:16 Portrait (1536)\":{\"width\":1152,\"height\":2048,\"isCustom\":false,\"isHidden\":false},\"21:9 Ultrawide (1536)\":{\"width\":2016,\"height\":864,\"isCustom\":false,\"isHidden\":false},\"9:21 Ultra Portrait (1536)\":{\"width\":864,\"height\":2016,\"isCustom\":false,\"isHidden\":false}}",
-        "manual",
-        1,
-        1
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
       "id": 90,
       "type": "GetNode",
       "pos": [
@@ -640,7 +411,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 5,
+      "order": 3,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -675,7 +446,7 @@
         130
       ],
       "flags": {},
-      "order": 16,
+      "order": 18,
       "mode": 0,
       "inputs": [
         {
@@ -706,49 +477,6 @@
       "bgcolor": "#535"
     },
     {
-      "id": 91,
-      "type": "krea2-conditioning",
-      "pos": [
-        1434.4763392482823,
-        -1862.4327436414508
-      ],
-      "size": [
-        306.0513671875,
-        130
-      ],
-      "flags": {},
-      "order": 18,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "conditioning",
-          "type": "CONDITIONING",
-          "link": 160
-        }
-      ],
-      "outputs": [
-        {
-          "name": "conditioning",
-          "type": "CONDITIONING",
-          "links": [
-            154,
-            167
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "krea2-conditioning"
-      },
-      "widgets_values": [
-        "subtle",
-        "1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 2.5, 5.0, 1.1, 4.0, 1.0",
-        1,
-        true
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
       "id": 80,
       "type": "GetNode",
       "pos": [
@@ -762,7 +490,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 6,
+      "order": 4,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -799,7 +527,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 7,
+      "order": 5,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -836,7 +564,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 8,
+      "order": 6,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -871,7 +599,7 @@
         101.12470190618399
       ],
       "flags": {},
-      "order": 21,
+      "order": 20,
       "mode": 0,
       "inputs": [
         {
@@ -984,7 +712,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 9,
+      "order": 7,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1008,105 +736,6 @@
       "bgcolor": "#533"
     },
     {
-      "id": 105,
-      "type": "Krea2StyleReference",
-      "pos": [
-        1145.1570852607751,
-        -1125.2464195005211
-      ],
-      "size": [
-        319.83804000333225,
-        122
-      ],
-      "flags": {},
-      "order": 15,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 162
-        },
-        {
-          "name": "target_latent",
-          "type": "LATENT",
-          "link": 164
-        },
-        {
-          "name": "reference_image",
-          "type": "IMAGE",
-          "link": 163
-        }
-      ],
-      "outputs": [
-        {
-          "name": "reference_latent",
-          "type": "LATENT",
-          "links": [
-            166
-          ]
-        },
-        {
-          "name": "reference_preview",
-          "type": "IMAGE",
-          "links": null
-        },
-        {
-          "name": "debug",
-          "type": "STRING",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "Krea2StyleReference"
-      },
-      "widgets_values": [
-        "crop",
-        "lanczos"
-      ],
-      "color": "#332922",
-      "bgcolor": "#593930"
-    },
-    {
-      "id": 103,
-      "type": "LoadImage",
-      "pos": [
-        676.4287830498198,
-        -1326.5527344154489
-      ],
-      "size": [
-        414.1345555569243,
-        524.5034955832746
-      ],
-      "flags": {},
-      "order": 10,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            163
-          ]
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoadImage"
-      },
-      "widgets_values": [
-        "example.png",
-        "image"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
       "id": 71,
       "type": "Lora Loader (LoraManager)",
       "pos": [
@@ -1118,7 +747,7 @@
         397.6517816755313
       ],
       "flags": {},
-      "order": 20,
+      "order": 21,
       "mode": 0,
       "inputs": [
         {
@@ -1185,46 +814,6 @@
       "bgcolor": "#535"
     },
     {
-      "id": 98,
-      "type": "LoraLoaderModelOnly",
-      "pos": [
-        1152.393890003757,
-        -2258.447427419921
-      ],
-      "size": [
-        270,
-        82
-      ],
-      "flags": {},
-      "order": 12,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 142
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            143
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoraLoaderModelOnly"
-      },
-      "widgets_values": [
-        "loras/krea2_turbo_lora_rank_64_bf16.safetensors",
-        0.6
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
-    },
-    {
       "id": 104,
       "type": "CLIPTextEncode",
       "pos": [
@@ -1236,7 +825,7 @@
         417.2677030308837
       ],
       "flags": {},
-      "order": 14,
+      "order": 12,
       "mode": 0,
       "inputs": [
         {
@@ -1276,7 +865,7 @@
         737.4472501639082
       ],
       "flags": {},
-      "order": 24,
+      "order": 22,
       "mode": 0,
       "inputs": [
         {
@@ -1313,7 +902,7 @@
         "Node name for S&R": "KSampler"
       },
       "widgets_values": [
-        89263825722424,
+        627350681909355,
         "randomize",
         12,
         1,
@@ -1323,6 +912,418 @@
       ],
       "color": "#222",
       "bgcolor": "#000"
+    },
+    {
+      "id": 55,
+      "type": "UNETLoader",
+      "pos": [
+        1150.0929653565736,
+        -2439.481363674946
+      ],
+      "size": [
+        393.12186986859206,
+        135.62473996270455
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            142
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UNETLoader",
+        "cnr_id": "comfy-core",
+        "ver": "0.25.0",
+        "models": [
+          {
+            "name": "krea2_turbo_fp8_scaled.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/Krea-2/resolve/main/diffusion_models/krea2_turbo_fp8_scaled.safetensors",
+            "directory": "diffusion_models"
+          }
+        ]
+      },
+      "widgets_values": [
+        "krea2_raw_bf16.safetensors",
+        "default"
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 98,
+      "type": "LoraLoaderModelOnly",
+      "pos": [
+        1152.393890003757,
+        -2258.447427419921
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 142
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            143
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoaderModelOnly"
+      },
+      "widgets_values": [
+        "krea2_turbo_lora_rank_64_bf16.safetensors",
+        0.6
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 87,
+      "type": "ResolutionMaster",
+      "pos": [
+        744.8451418302735,
+        -1864.1651989351078
+      ],
+      "size": [
+        330,
+        475
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "input_image",
+          "name": "input_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "INT",
+          "links": [
+            125
+          ]
+        },
+        {
+          "name": "",
+          "type": "INT",
+          "links": [
+            126
+          ]
+        },
+        {
+          "name": "",
+          "type": "FLOAT",
+          "links": null
+        },
+        {
+          "name": "",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "",
+          "type": "LATENT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ResolutionMaster",
+        "mode": "Manual",
+        "valueX": 1344,
+        "valueY": 1776,
+        "batch_size": 1,
+        "canvas_min_x": 0,
+        "canvas_max_x": 2048,
+        "canvas_step_x": 64,
+        "canvas_min_y": 0,
+        "canvas_max_y": 2048,
+        "canvas_step_y": 64,
+        "canvas_decimals_x": 0,
+        "canvas_decimals_y": 0,
+        "canvas_snap": true,
+        "canvas_dots": true,
+        "canvas_frame": true,
+        "action_slider_snap_min": 16,
+        "action_slider_snap_max": 256,
+        "action_slider_snap_step": 16,
+        "scaling_slider_min": 0.1,
+        "scaling_slider_max": 4,
+        "scaling_slider_step": 0.1,
+        "megapixels_slider_min": 0.5,
+        "megapixels_slider_max": 6,
+        "megapixels_slider_step": 0.1,
+        "snapValue": 16,
+        "upscaleValue": 1,
+        "targetResolution": 1080,
+        "targetMegapixels": 2,
+        "rescaleMode": "manual",
+        "rescaleValue": 1,
+        "preserveScalingRatio": false,
+        "autoDetect": false,
+        "autoDetectSource": "backend",
+        "autoDetectWidth": 0,
+        "autoDetectHeight": 0,
+        "autoDetectPresetsJSON": "{\"__resolutionMasterConfigVersion\":1,\"__resolutionMasterProfile\":{\"strategy\":\"closest_preset\",\"options\":{}},\"__resolutionMasterPresets\":{\"1:1 Square (1024)\":{\"width\":1024,\"height\":1024,\"isCustom\":false,\"isHidden\":false},\"4:3 Landscape (1024)\":{\"width\":1184,\"height\":896,\"isCustom\":false,\"isHidden\":false},\"3:2 Landscape (1024)\":{\"width\":1248,\"height\":832,\"isCustom\":false,\"isHidden\":false},\"16:9 Widescreen (1024)\":{\"width\":1376,\"height\":768,\"isCustom\":false,\"isHidden\":false},\"2.35:1 Cinematic (1024)\":{\"width\":1568,\"height\":672,\"isCustom\":false,\"isHidden\":false},\"4:5 Portrait (1024)\":{\"width\":928,\"height\":1152,\"isCustom\":false,\"isHidden\":false},\"3:4 Portrait (1024)\":{\"width\":896,\"height\":1184,\"isCustom\":false,\"isHidden\":false},\"2:3 Portrait (1024)\":{\"width\":832,\"height\":1248,\"isCustom\":false,\"isHidden\":false},\"9:16 Portrait (1024)\":{\"width\":768,\"height\":1376,\"isCustom\":false,\"isHidden\":false},\"1:1 Square (1536)\":{\"width\":1536,\"height\":1536,\"isCustom\":false,\"isHidden\":false},\"4:3 Landscape (1536)\":{\"width\":1776,\"height\":1344,\"isCustom\":false,\"isHidden\":false},\"3:2 Landscape (1536)\":{\"width\":1872,\"height\":1248,\"isCustom\":false,\"isHidden\":false},\"16:9 Widescreen (1536)\":{\"width\":2064,\"height\":1152,\"isCustom\":false,\"isHidden\":false},\"2.35:1 Cinematic (1536)\":{\"width\":2352,\"height\":1008,\"isCustom\":false,\"isHidden\":false},\"4:5 Portrait (1536)\":{\"width\":1392,\"height\":1728,\"isCustom\":false,\"isHidden\":false},\"3:4 Portrait (1536)\":{\"width\":1344,\"height\":1776,\"isCustom\":false,\"isHidden\":false},\"2:3 Portrait (1536)\":{\"width\":1248,\"height\":1872,\"isCustom\":false,\"isHidden\":false},\"9:16 Portrait (1536)\":{\"width\":1152,\"height\":2064,\"isCustom\":false,\"isHidden\":false},\"1:1 Square (2048)\":{\"width\":2048,\"height\":2048,\"isCustom\":false,\"isHidden\":false},\"4:3 Landscape (2048)\":{\"width\":2368,\"height\":1792,\"isCustom\":false,\"isHidden\":false},\"3:2 Landscape (2048)\":{\"width\":2496,\"height\":1664,\"isCustom\":false,\"isHidden\":false},\"16:9 Widescreen (2048)\":{\"width\":2752,\"height\":1536,\"isCustom\":false,\"isHidden\":false},\"2.35:1 Cinematic (2048)\":{\"width\":3136,\"height\":1344,\"isCustom\":false,\"isHidden\":false},\"4:5 Portrait (2048)\":{\"width\":1856,\"height\":2304,\"isCustom\":false,\"isHidden\":false},\"3:4 Portrait (2048)\":{\"width\":1792,\"height\":2368,\"isCustom\":false,\"isHidden\":false},\"2:3 Portrait (2048)\":{\"width\":1664,\"height\":2496,\"isCustom\":false,\"isHidden\":false},\"9:16 Portrait (2048)\":{\"width\":1536,\"height\":2752,\"isCustom\":false,\"isHidden\":false}}}",
+        "autoFitOnChange": false,
+        "autoResizeOnChange": false,
+        "autoSnapOnChange": false,
+        "smartFit": false,
+        "selectedCategory": "Krea 2 Turbo",
+        "selectedPreset": "3:4 Portrait (1536)",
+        "useCustomCalc": false,
+        "showCalcInfo": false,
+        "manual_slider_min_w": 64,
+        "manual_slider_max_w": 2048,
+        "manual_slider_step_w": 64,
+        "manual_slider_min_h": 64,
+        "manual_slider_max_h": 2048,
+        "manual_slider_step_h": 64,
+        "section_actions_collapsed": false,
+        "section_scaling_collapsed": true,
+        "section_autoDetect_collapsed": true,
+        "section_presets_collapsed": false,
+        "section_extraControls_collapsed": false,
+        "preferred_compact_height": null,
+        "preferred_expanded_height": 475,
+        "dropdown_resolution_expanded": false,
+        "dropdown_category_expanded": true,
+        "dropdown_preset_expanded": false,
+        "preset_selector_mode": "visual",
+        "customPresetsJSON": "",
+        "aux_id": "Azornes/Comfyui-Resolution-Master"
+      },
+      "widgets_values": [
+        "Manual",
+        "latent_4x8",
+        1344,
+        1776,
+        false,
+        "backend",
+        0,
+        0,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        "Krea 2 Turbo",
+        16,
+        1,
+        1080,
+        2,
+        "{\"__resolutionMasterConfigVersion\":1,\"__resolutionMasterProfile\":{\"strategy\":\"closest_preset\",\"options\":{}},\"__resolutionMasterPresets\":{\"1:1 Square (1024)\":{\"width\":1024,\"height\":1024,\"isCustom\":false,\"isHidden\":false},\"4:3 Landscape (1024)\":{\"width\":1184,\"height\":896,\"isCustom\":false,\"isHidden\":false},\"3:2 Landscape (1024)\":{\"width\":1248,\"height\":832,\"isCustom\":false,\"isHidden\":false},\"16:9 Widescreen (1024)\":{\"width\":1376,\"height\":768,\"isCustom\":false,\"isHidden\":false},\"2.35:1 Cinematic (1024)\":{\"width\":1568,\"height\":672,\"isCustom\":false,\"isHidden\":false},\"4:5 Portrait (1024)\":{\"width\":928,\"height\":1152,\"isCustom\":false,\"isHidden\":false},\"3:4 Portrait (1024)\":{\"width\":896,\"height\":1184,\"isCustom\":false,\"isHidden\":false},\"2:3 Portrait (1024)\":{\"width\":832,\"height\":1248,\"isCustom\":false,\"isHidden\":false},\"9:16 Portrait (1024)\":{\"width\":768,\"height\":1376,\"isCustom\":false,\"isHidden\":false},\"1:1 Square (1536)\":{\"width\":1536,\"height\":1536,\"isCustom\":false,\"isHidden\":false},\"4:3 Landscape (1536)\":{\"width\":1776,\"height\":1344,\"isCustom\":false,\"isHidden\":false},\"3:2 Landscape (1536)\":{\"width\":1872,\"height\":1248,\"isCustom\":false,\"isHidden\":false},\"16:9 Widescreen (1536)\":{\"width\":2064,\"height\":1152,\"isCustom\":false,\"isHidden\":false},\"2.35:1 Cinematic (1536)\":{\"width\":2352,\"height\":1008,\"isCustom\":false,\"isHidden\":false},\"4:5 Portrait (1536)\":{\"width\":1392,\"height\":1728,\"isCustom\":false,\"isHidden\":false},\"3:4 Portrait (1536)\":{\"width\":1344,\"height\":1776,\"isCustom\":false,\"isHidden\":false},\"2:3 Portrait (1536)\":{\"width\":1248,\"height\":1872,\"isCustom\":false,\"isHidden\":false},\"9:16 Portrait (1536)\":{\"width\":1152,\"height\":2064,\"isCustom\":false,\"isHidden\":false},\"1:1 Square (2048)\":{\"width\":2048,\"height\":2048,\"isCustom\":false,\"isHidden\":false},\"4:3 Landscape (2048)\":{\"width\":2368,\"height\":1792,\"isCustom\":false,\"isHidden\":false},\"3:2 Landscape (2048)\":{\"width\":2496,\"height\":1664,\"isCustom\":false,\"isHidden\":false},\"16:9 Widescreen (2048)\":{\"width\":2752,\"height\":1536,\"isCustom\":false,\"isHidden\":false},\"2.35:1 Cinematic (2048)\":{\"width\":3136,\"height\":1344,\"isCustom\":false,\"isHidden\":false},\"4:5 Portrait (2048)\":{\"width\":1856,\"height\":2304,\"isCustom\":false,\"isHidden\":false},\"3:4 Portrait (2048)\":{\"width\":1792,\"height\":2368,\"isCustom\":false,\"isHidden\":false},\"2:3 Portrait (2048)\":{\"width\":1664,\"height\":2496,\"isCustom\":false,\"isHidden\":false},\"9:16 Portrait (2048)\":{\"width\":1536,\"height\":2752,\"isCustom\":false,\"isHidden\":false}}}",
+        "manual",
+        1,
+        1
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 105,
+      "type": "Krea2StyleReference",
+      "pos": [
+        1156.5811419654385,
+        -1127.3234666951528
+      ],
+      "size": [
+        319.83804000333225,
+        122
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 162
+        },
+        {
+          "name": "target_latent",
+          "type": "LATENT",
+          "link": 164
+        },
+        {
+          "name": "reference_image",
+          "type": "IMAGE",
+          "link": 163
+        }
+      ],
+      "outputs": [
+        {
+          "name": "reference_latent",
+          "type": "LATENT",
+          "links": [
+            166
+          ]
+        },
+        {
+          "name": "reference_preview",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "debug",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Krea2StyleReference"
+      },
+      "widgets_values": [
+        "crop",
+        "lanczos"
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 103,
+      "type": "LoadImage",
+      "pos": [
+        669.9075683706393,
+        -1315.297194759259
+      ],
+      "size": [
+        414.1345555569243,
+        524.5034955832746
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            163
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "11-facts-about-queen-elsa-frozen-1692051586.jpg",
+        "image"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 91,
+      "type": "krea2-conditioning",
+      "pos": [
+        1237.6437146433132,
+        -1872.7584042933229
+      ],
+      "size": [
+        306.0513671875,
+        130
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 160
+        }
+      ],
+      "outputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "links": [
+            154,
+            167
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "krea2-conditioning"
+      },
+      "widgets_values": [
+        "subtle",
+        "1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 2.5, 5.0, 1.1, 4.0, 1.0",
+        1,
+        true
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 58,
+      "type": "ConditioningZeroOut",
+      "pos": [
+        1559.1032620961498,
+        -1872.3734376078094
+      ],
+      "size": [
+        230,
+        30
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 161
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            155
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ConditioningZeroOut",
+        "cnr_id": "comfy-core",
+        "ver": "0.25.0"
+      },
+      "widgets_values": []
     }
   ],
   "links": [
@@ -1600,13 +1601,13 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.5005466639795312,
+      "scale": 0.3825998854778597,
       "offset": [
-        -189.04786911689962,
-        2372.6305526319115
+        330.1517975774082,
+        2470.8806077485824
       ]
     },
-    "frontendVersion": "1.45.20",
+    "frontendVersion": "1.48.7",
     "VHS_latentpreview": true,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
