@@ -7,14 +7,18 @@
 - The date reflects when the related custom nodes were cloned from their upstream repositories.
 - Pinned custom nodes are not updated automatically, because changing those pins can introduce compatibility issues.
 
-## 11082026
+## 11082026 image2
 
 - ComfyUI 0.31.0
 - [krea2-anypaint](https://github.com/alexw5702-afk/krea2-anypaint)
 - [Krea-Moodboard](https://github.com/Andro-Meta/ComfyUI-Krea-Moodboards)
 - [Krea2-NAG](https://github.com/iljung1106/ComfyUI-Krea2-NAG)
 
-## 05082026
+## split
+
+Krea-2 has been moved to image2 to reduce the number of custom nodes in image and ensure compatibility with future models. Both images will continue to be updated as long as ComfyUI supports their respective PyTorch versions.
+
+## 05082026 image
 
 - ComfyUI 0.30.0
 - [comfyui-model-linker](https://github.com/kianxyzw/comfyui-model-linker)

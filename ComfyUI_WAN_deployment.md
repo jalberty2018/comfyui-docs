@@ -17,7 +17,7 @@
 
 ## 📘 Tutorial
 
-- [Specific for these templates](ComfyUI_WAN_tutorial.md)
+- [Specific for these templates](ComfyUI_tutorial.md)
 
 ### 💻 Hardware requirements for running templates on RunPod
 

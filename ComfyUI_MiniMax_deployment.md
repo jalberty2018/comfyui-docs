@@ -19,7 +19,7 @@ The dated image tag used by a RunPod template can remain on an earlier validated
 
 ## 📘 Tutorial
 
-- [Specific for this template](ComfyUI_MiniMax_tutorial.md)
+- [Specific for this template](ComfyUI_tutorial.md)
 
 ## 💻 Hardware requirements
 

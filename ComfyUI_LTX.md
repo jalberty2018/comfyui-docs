@@ -58,7 +58,7 @@ The guiding idea is aligned with the open-model discussion described by Eric Har
 
 ## 📘 Tutorial
 
-- [Specific for this template](ComfyUI_LTX_tutorial.md)
+- [Specific for this template](ComfyUI_tutorial.md)
 
 ### Pod running on L40S bf16
 

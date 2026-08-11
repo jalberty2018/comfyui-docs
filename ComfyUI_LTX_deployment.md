@@ -13,7 +13,7 @@
 
 ## 📘 Tutorial
 
-- [Specific for this template](ComfyUI_LTX_tutorial.md)
+- [Specific for this template](ComfyUI_tutorial.md)
 
 ### 💻 Hardware requirements
 

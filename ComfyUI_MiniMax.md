@@ -30,7 +30,7 @@ Use this template for MiniMax H3 text-to-video, image-to-video, first/last-frame
 
 ## 📘 Tutorial
 
-- [MiniMax tutorial](ComfyUI_MiniMax_tutorial.md)
+- [MiniMax tutorial](ComfyUI_tutorial.md)
 
 ## Example standard workflow Reference to video/audio (Ref2va)
 

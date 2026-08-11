@@ -50,7 +50,7 @@ The guiding idea is aligned with the open-model discussion described by Eric Har
 
 ## 📘 Tutorial
 
-- [Specific for these templates](ComfyUI_WAN_tutorial.md)
+- [Specific for these templates](ComfyUI_tutorial.md)
 
 ### Pod running on L40S
 

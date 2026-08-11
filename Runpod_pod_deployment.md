@@ -99,6 +99,4 @@ The extraction ends with a message like this in the **Logs** section:
 
 ## Continue with the tutorials
 
-- [ComfyUI image tutorial](ComfyUI_image_tutorial.md#connecting-to-your-pod)
-- [ComfyUI WAN tutorial](ComfyUI_WAN_tutorial.md#connecting-to-your-pod)
-- [ComfyUI LTX tutorial](ComfyUI_LTX_tutorial.md#connecting-to-your-pod)
+- [ComfyUI tutorial](ComfyUI_tutorial.md#connecting-to-your-pod)

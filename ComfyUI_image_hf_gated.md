@@ -22,7 +22,7 @@
 
 ### Set your Hugging Face token
 
-- Open terminal from the console or code-server (see [tutorial](ComfyUI_image_tutorial.md))
+- Open terminal from the console or code-server (see [tutorial](ComfyUI_tutorial.md))
 - Fill in your Hugging Face token (`HF_TOKEN`).
 
 ```bash

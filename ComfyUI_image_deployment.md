@@ -6,9 +6,9 @@
 
 **One-Click Deployment links:**
 
-- 👉 [Z-Image Turbo and Base](https://console.runpod.io/deploy?template=ia5t70hfak&ref=se4tkc5o)
-
 - 👉 [Krea-2 Base and Turbo](https://console.runpod.io/deploy?template=e2hlyrm22l&ref=se4tkc5o)
+
+- 👉 [Z-Image Turbo and Base](https://console.runpod.io/deploy?template=ia5t70hfak&ref=se4tkc5o)
 
 - 👉 [ERNIE-Image Base and Turbo](https://console.runpod.io/deploy?template=g8ow1s1s0a&ref=se4tkc5o)
 
@@ -30,7 +30,7 @@
 
 ## 📘 Tutorial
 
-- [Specific for these templates](ComfyUI_image_tutorial.md)
+- [Specific for these templates](ComfyUI_tutorial.md)
 
 ### 💻 Hardware requirements for running templates on RunPod
 
