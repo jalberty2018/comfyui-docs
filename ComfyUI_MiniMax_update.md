@@ -8,6 +8,11 @@
 - This pod is stable but many custom_nodes are experimental and in full development.
 - Tested on L40S, RTX 5090 and RTX PRO 6000.
 
+## 12082026
+
+- ComfyUI 0.32.0
+- [ComfyUI-H3-Motion-Context](https://github.com/NikoDemon80/ComfyUI-H3-Motion-Context)
+
 ## 11082026
 
 - ComfyUI 0.31.0
@@ -17,7 +22,6 @@
 - [ComfyUI-sol-attn](https://github.com/Saganaki22/ComfyUI-sol-attn)
 - [ComfyUI-H3-multishot](https://github.com/jlucasmcrell/ComfyUI-H3-Multishot)
 - [ComfyUI-H3-PowerLoraStack](https://github.com/cicalooo/ComfyUI-H3-PowerLoraStack)
-- [ComfyUI-H3-Continuum](https://github.com/ukr8b3g-cmyk/ComfyUI-H3-Continuum)
 - [ComfyUI-MiniMaxH3-Preview](https://github.com/Brioch/ComfyUI-MiniMaxH3-Preview)
 
 ## 07082026
