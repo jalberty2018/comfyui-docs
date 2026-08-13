@@ -7,6 +7,12 @@
 - The date reflects when the related custom nodes were cloned from their upstream repositories.
 - Pinned custom nodes are not updated automatically, because changing those pins can introduce compatibility issues.
 
+## 13082026
+
+- ComfyUI 0.32.0
+- Added the complete LTX-2.5 dev + distilled LoRA provisioning chain.
+- BF16/ComfyUI int8-convrot selection based on VRAM.
+
 ## 04082026
 
 - ComfyUI 0.30.0

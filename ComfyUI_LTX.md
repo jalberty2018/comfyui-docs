@@ -1,8 +1,8 @@
 [![Docker Image Version](https://img.shields.io/docker/v/ls250824/run-comfyui-ltx)](https://hub.docker.com/r/ls250824/run-comfyui-ltx)
 
-# LTX 2.3 inference with ComfyUI
+# LTX 2.x inference with ComfyUI
 
-A streamlined and automated environment for running **ComfyUI** with **LTX-2.3 video models**, optimized for use on RunPod.
+A streamlined and automated environment for running **ComfyUI** with **LTX-2.x video models**, optimized for use on RunPod.
 
 ## What to expect
 
@@ -10,7 +10,7 @@ These templates are intended for users who already want to run ComfyUI on RunPod
 
 ## When to use this template
 
-Use this template for LTX 2.3 video generation, image-to-video, video-to-video, pose-transfer, camera-motion transfer, and audio/reference workflows.
+Use this template for LTX 2.x video generation, image-to-video, video-to-video, pose-transfer, camera-motion transfer, and audio/reference workflows.
 
 ## Purpose of this pod
 
@@ -20,15 +20,14 @@ The guiding idea is aligned with the open-model discussion described by Eric Har
 
 ## 🔧 Features
 
-- Automatic model and LoRA provisioning via environment variables.
-- [Kijai models without checkpoints](https://huggingface.co/Kijai/LTX2.3_comfy).
-- Included workflows for **video generation** and **enhancement** using pre-installed custom nodes.
-- Compatible with high-performance NVIDIA GPUs (CUDA 12.8).
-- Compiled attention and GPU acceleration.
-- Automatic selection of bf16 or fp8 models/workflows.
-- Latent preview enabled for both samplers.
-- Included workflows based on [RuneXX](https://huggingface.co/RuneXX/LTX-2.3-Workflows).
-- LoRA Manager.
+- Complete LTX-2.x dev chain with the distilled LoRA.
+- Automatic BF16 or ComfyUI int8-convrot transformer selection by GPU VRAM.
+- Official Gemma 4 projected text encoder profile.
+- Optional community Heretic BF16 and int8-convrot text encoder profiles.
+- Video and audio VAEs, spatial and temporal latent upscalers, and duration
+  head patch.
+- CUDA 12.8 runtime with compiled attention and GPU acceleration packages.
+- ComfyUI, Code Server, SSH, LoRA Manager, Hugging Face, and CivitAI support.
 
 ## 🔧 Built-in **authentication**
   
@@ -36,6 +35,14 @@ The guiding idea is aligned with the open-model discussion described by Eric Har
 - Code Server
 - Hugging Face API
 - CivitAI API
+
+## 📦 Deployment on RunPod
+
+- [👉 Templates](ComfyUI_LTX_deployment.md)
+
+## 📘 Tutorial
+
+- [Specific for this template](ComfyUI_tutorial.md)
 
 ## Example included workflows
 
@@ -50,15 +57,6 @@ The guiding idea is aligned with the open-model discussion described by Eric Har
 ### vi2v pose transfer SDPose (Body Ratio Mapper)
 
 ![Select number of frames, size, prompt and offload](images/ai-generated-LTX-vi2v-sdpose.jpg)
-
-
-## 📦 Deployment on RunPod
-
-- [👉 Templates](ComfyUI_LTX_deployment.md)
-
-## 📘 Tutorial
-
-- [Specific for this template](ComfyUI_tutorial.md)
 
 ### Pod running on L40S bf16
 

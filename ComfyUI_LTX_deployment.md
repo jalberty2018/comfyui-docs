@@ -14,6 +14,7 @@
 ## 📘 Tutorial
 
 - [Specific for this template](ComfyUI_tutorial.md)
+- [Accept the gated LTX-2.5 license](ComfyUI_LTX_25_hf_gated.md)
 
 ### 💻 Hardware requirements
 
