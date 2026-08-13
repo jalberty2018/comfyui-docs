@@ -21,8 +21,8 @@ The guiding idea is aligned with the open-model discussion described by Eric Har
 ## 🔧 Features
 
 - Complete LTX-2.x chain
-- Automatic BF16 or ComfyUI int8-convrot transformer selection by GPU VRAM.
-- Community Heretic BF16 and int8-convrot text encoder profiles.
+- ComfyUI int8-convrot transformer selection.
+- Community Heretic BF16 and int8-convrot text encoder profiles by GPU VRAM.
 - Video and audio VAEs, spatial and temporal latent upscalers, and duration
   head patch.
 - CUDA 12.8 runtime with compiled attention and GPU acceleration packages.
