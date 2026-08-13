@@ -46,31 +46,55 @@ The guiding idea is aligned with the open-model discussion described by Eric Har
 
 ## Example included workflows
 
-### i2v
+### LTX 25 i2v
 
-![Select number of frames, size, prompt and offload](images/ai-generated-LTX.jpg)
+![Select number of frames, size, prompt and offload](images/ai-generated-i2v-LTX25.jpg)
 
-### vi2v pose transfer DWPose
+### LTX 25 t2v
+
+![Select number of frames, size, prompt and offload](images/ai-generated-t2v-LTX25.jpg)
+
+### LTX 23 vi2v pose transfer DWPose
 
 ![Select number of frames, size, prompt and offload](images/ai-generated-LTX-vi2v.jpg)
 
-### vi2v pose transfer SDPose (Body Ratio Mapper)
+### LTX 23 vi2v pose transfer SDPose (Body Ratio Mapper)
 
 ![Select number of frames, size, prompt and offload](images/ai-generated-LTX-vi2v-sdpose.jpg)
 
-### Pod running on L40S bf16
+### i2v LTX25
+
+<div style="text-align: center;">
+  <video controls preload="metadata" style="max-width: 50%; height: auto;">
+    <source src="/video/Video_girl_drinking_cocktail_LTX25.mp4" type="video/mp4">
+  </video>
+</div>
+
+### t2v LTX25
+
+<div style="text-align: center;">
+  <video controls preload="metadata" style="max-width: 50%; height: auto;">
+    <source src="/video/Video_girl_walking_on_beach_LTX25.mp4" type="video/mp4">
+  </video>
+</div>
+
+### LTX 25 Pod running on L40S INT8 convrot
+
+![Pod running on L40S ComfyUI](images/runpod_L40S_LTX25.jpeg)
+
+### LTX 23 Pod running on L40S bf16 
 
 ![Pod running on L40S ComfyUI](images/runpod_L40S_LTX.jpeg)
 
-### Pod running on RTX 6000 Ada bf16
+### LTX 23 Pod running on RTX 6000 Ada bf16
 
 ![Pod running on RTX 6000 Ada ComfyUI](images/runpod_6000Ada_LTX.jpeg)
 
-### Pod running on RTX A5000 fp8
+### LTX 23 Pod running on RTX A5000 fp8
 
 ![Pod running on RTX A5000 ComfyUI](images/runpod_A5000_LTX.jpeg)
 
-### Pod running on RTX 4090 fp8
+### LTX23 Pod running on RTX 4090 fp8
 
 ![Pod running on RTX 4090 ComfyUI](images/runpod_RTX4090_LTX.jpeg)
 
