@@ -5,7 +5,8 @@
 
 ### 🚀 Template
 
-- 👉 [RunPod LTX-2.3 Dev i2v/t2v/vi2v/vt2v bf16/fp8](https://console.runpod.io/deploy?template=p4f6rm9tb4&ref=se4tkc5o)
+- [**👉 One-click Deploy on RunPod LTX-2.5 i2v/t2v vi2v/vt2v dev bf16/int8 convrot**](https://console.runpod.io/deploy?template=ka3hvli4kf&ref=se4tkc5o)
+- [**👉 One-click Deploy on RunPod LTX-2.3 i2v/t2v vi2v/vt2v dev bf16/fp8**](https://console.runpod.io/deploy?template=p4f6rm9tb4&ref=se4tkc5o)
 
 ### 🏷️ Container date tags
 
