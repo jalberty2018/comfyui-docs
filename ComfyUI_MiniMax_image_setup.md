@@ -13,10 +13,10 @@
 | cuDNN     | `9`                  |
 | Triton    | `3.6.0`              |
 | onnxruntime-gpu | `1.22.0`     |
-| ComfyUI | `0.32.0` |
+| ComfyUI | `0.33.1`|
 | CodeServer | `latest`          |
 
-## Wheels
+## Wheel
 
 | Package        | Version  |
 |----------------|----------|
