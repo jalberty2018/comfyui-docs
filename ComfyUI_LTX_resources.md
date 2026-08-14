@@ -7,6 +7,9 @@
 - [LTX-2.5 model weights](https://huggingface.co/Lightricks/LTX-2.5) — gated
   repository containing the BF16, int8-convrot, and NVFP4 transformers,
   projected Gemma 4 encoders, distilled LoRA, VAEs, upscalers, and model patch.
+- [comfyicu LTX-2.5](https://huggingface.co/comfyicu/LTX-2.5) — public ungated
+  source for every LTX-2.5 model component provisioned by the public template.
+  transformers.
 - [LTX-2 source and pipelines](https://github.com/Lightricks/LTX-2)
 - [LTX-2.5 ComfyUI integration](https://github.com/Lightricks/ComfyUI-LTXVideo)
 - [LTX-2 paper](https://arxiv.org/abs/2601.03233)

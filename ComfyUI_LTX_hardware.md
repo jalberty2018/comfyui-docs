@@ -15,23 +15,19 @@ less offloading can require more VRAM and system RAM.
 | int8-convrot transformer with BF16 encoder | L40S, RTX A6000, RTX 6000 Ada | 48 GB | 80 GB minimum; 96 GB recommended | HVRAM model set used by an L40S with the supplied threshold. |
 | int8-convrot transformer with BF16 encoder | A100/H100 80 GB, RTX PRO 6000 96 GB | 80 GB or more | 96 GB minimum; 128 GB recommended | HVRAM model set with more headroom for larger workflows. |
 
-The templates do not provision a BF16 transformer. The public profile uses the
-distilled int8-convrot transformer without the distilled LoRA. The private
-profile uses the dev int8-convrot transformer with the distilled LoRA.
-
 ### RunPod VRAM selection
 
 The supplied LTX 2.5 profiles use `VRAM_THRESHOLD=40`. The startup script
 selects the HVRAM model set when detected VRAM is **greater than** 40 GB. An
-L40S therefore receives the int8-convrot transformer with the Heretic BF16
-text encoder. GPUs at or below the threshold receive the same transformer
-precision with the Heretic int8-convrot text encoder.
+L40S therefore receives the comfyicu Dev INT8 ConvRot transformer with the
+Heretic BF16 text encoder. GPUs at or below the threshold receive the same Dev
+transformer with the Heretic INT8 ConvRot text encoder.
 
 ### Storage
 
 | Selected chain | Model storage guidance |
 |----------------|------------------------|
-| Public distilled int8-convrot with Heretic encoder | Allow at least 60 GB |
+| Public Dev INT8 ConvRot with Heretic encoder | Allow at least 60 GB |
 | Private dev int8-convrot, distilled LoRA, and Heretic encoder | Allow at least 65 GB |
 
 Use at least 120 GB of persistent `/workspace` storage for one complete profile,
