@@ -1,8 +1,8 @@
 {
   "id": "e3f2b845-8f2c-4b5a-9caf-eac1029d3e7e",
   "revision": 0,
-  "last_node_id": 177,
-  "last_link_id": 312,
+  "last_node_id": 178,
+  "last_link_id": 314,
   "nodes": [
     {
       "id": 148,
@@ -492,7 +492,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 35,
+      "order": 37,
       "mode": 0,
       "inputs": [
         {
@@ -794,138 +794,6 @@
       "bgcolor": "#000"
     },
     {
-      "id": 142,
-      "type": "SolAttnPatch",
-      "pos": [
-        -1061.637761574673,
-        3820.2386291199714
-      ],
-      "size": [
-        270,
-        342
-      ],
-      "flags": {},
-      "order": 28,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 290
-        },
-        {
-          "name": "tau_profile",
-          "shape": 7,
-          "type": "STRING",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            291
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "SolAttnPatch"
-      },
-      "widgets_values": [
-        1.2,
-        0.2,
-        0.9,
-        4096,
-        true,
-        "exact_kv_and_rows",
-        true,
-        "3d",
-        true,
-        false,
-        false,
-        "0,-1"
-      ],
-      "color": "#2a363b",
-      "bgcolor": "#3f5159"
-    },
-    {
-      "id": 163,
-      "type": "Lora Loader (LoraManager)",
-      "pos": [
-        -1021.0035032057833,
-        4220.718528443095
-      ],
-      "size": [
-        550.0952338952154,
-        585.8718694029803
-      ],
-      "flags": {},
-      "order": 32,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 311
-        },
-        {
-          "name": "clip",
-          "shape": 7,
-          "type": "CLIP",
-          "link": null
-        },
-        {
-          "name": "lora_stack",
-          "shape": 7,
-          "type": "LORA_STACK",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            293
-          ]
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": null
-        },
-        {
-          "name": "trigger_words",
-          "type": "STRING",
-          "links": null
-        },
-        {
-          "name": "loaded_loras",
-          "type": "STRING",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "Lora Loader (LoraManager)",
-        "__lm_widget_ids": [
-          "__lm_autocomplete_meta_text",
-          "text",
-          "loras"
-        ]
-      },
-      "widgets_values": [
-        {
-          "version": 1,
-          "textWidgetName": "text"
-        },
-        "",
-        []
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
-    },
-    {
       "id": 92,
       "type": "SaveVideo",
       "pos": [
@@ -937,7 +805,7 @@
         106
       ],
       "flags": {},
-      "order": 37,
+      "order": 38,
       "mode": 0,
       "inputs": [
         {
@@ -1662,21 +1530,21 @@
       "id": 145,
       "type": "SpectrumApplyMiniMaxH3",
       "pos": [
-        -751.3437761927694,
-        3821.976784231425
+        -363.180052100346,
+        3837.7557983846473
       ],
       "size": [
-        288.8521484375,
-        322
+        330.669921875,
+        538
       ],
       "flags": {},
-      "order": 30,
+      "order": 32,
       "mode": 4,
       "inputs": [
         {
           "name": "model",
           "type": "MODEL",
-          "link": 291
+          "link": 314
         }
       ],
       "outputs": [
@@ -1703,10 +1571,206 @@
         8,
         false,
         "system_ram",
-        true
+        true,
+        false,
+        false,
+        true,
+        0,
+        "system_ram",
+        "off",
+        0.65,
+        false,
+        false
       ],
       "color": "#2a363b",
       "bgcolor": "#3f5159"
+    },
+    {
+      "id": 142,
+      "type": "SolAttnPatch",
+      "pos": [
+        -1061.637761574673,
+        3820.2386291199714
+      ],
+      "size": [
+        270,
+        342
+      ],
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 290
+        },
+        {
+          "name": "tau_profile",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            313
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SolAttnPatch"
+      },
+      "widgets_values": [
+        1.2,
+        0.2,
+        0.9,
+        4096,
+        true,
+        "exact_kv_and_rows",
+        true,
+        "3d",
+        true,
+        false,
+        false,
+        "0,-1"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 178,
+      "type": "MiniMaxH3ScheduledSolAttentionPatch",
+      "pos": [
+        -749.5700410547547,
+        3838.3738567264636
+      ],
+      "size": [
+        322.6548828125,
+        342
+      ],
+      "flags": {},
+      "order": 30,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 313
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            314
+          ]
+        },
+        {
+          "name": "tau_graph",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MiniMaxH3ScheduledSolAttentionPatch"
+      },
+      "widgets_values": [
+        true,
+        1.3,
+        0.8,
+        "linear",
+        4096,
+        false,
+        0,
+        "diag",
+        false,
+        false,
+        "exact_kv",
+        ""
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 163,
+      "type": "Lora Loader (LoraManager)",
+      "pos": [
+        -981.5559678227256,
+        4236.497542596314
+      ],
+      "size": [
+        550.0952338952154,
+        585.8718694029803
+      ],
+      "flags": {},
+      "order": 35,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 311
+        },
+        {
+          "name": "clip",
+          "shape": 7,
+          "type": "CLIP",
+          "link": null
+        },
+        {
+          "name": "lora_stack",
+          "shape": 7,
+          "type": "LORA_STACK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            293
+          ]
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": null
+        },
+        {
+          "name": "trigger_words",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "loaded_loras",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Lora Loader (LoraManager)",
+        "__lm_widget_ids": [
+          "__lm_autocomplete_meta_text",
+          "text",
+          "loras"
+        ]
+      },
+      "widgets_values": [
+        {
+          "version": 1,
+          "textWidgetName": "text"
+        },
+        "",
+        []
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
     }
   ],
   "links": [
@@ -1863,14 +1927,6 @@
       "MODEL"
     ],
     [
-      291,
-      142,
-      0,
-      145,
-      0,
-      "MODEL"
-    ],
-    [
       293,
       163,
       0,
@@ -1997,6 +2053,22 @@
       135,
       2,
       "SAMPLER"
+    ],
+    [
+      313,
+      142,
+      0,
+      178,
+      0,
+      "MODEL"
+    ],
+    [
+      314,
+      178,
+      0,
+      145,
+      0,
+      "MODEL"
     ]
   ],
   "groups": [
@@ -2018,8 +2090,8 @@
       "bounding": [
         -2036.8175008326764,
         3758.1526532531907,
-        1615.9072705476697,
-        1072.0772481767535
+        2032.4733886539484,
+        1089.434139668434
       ],
       "color": "#3f789e",
       "flags": {}
@@ -2069,10 +2141,10 @@
     "VHS_MetadataImage": true,
     "VHS_KeepIntermediate": true,
     "ds": {
-      "scale": 1,
+      "scale": 0.5070025238785836,
       "offset": [
-        2096.008313829444,
-        -3517.921914635418
+        2519.5741070478643,
+        -3488.3360836668576
       ]
     }
   },
