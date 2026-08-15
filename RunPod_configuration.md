@@ -9,13 +9,14 @@
 
 ## ComfyUI Configuration
 
-- VRAM_TRESHHOLD_BLACKWELL is only available for MiniMax and Image2 pod.
+- `VRAM_THRESHOLD_BLACKWELL` is supported by the MiniMax, Image2, and LTX pods.
+  Image and WAN use `VRAM_THRESHOLD` for both standard and Blackwell model selection.
 
 | Variable                  | Description                                                                    | Default |
 |---------------------------|--------------------------------------------------------------------------------|---------|
 | `COMFYUI_EXTRA_ARGUMENTS` | Additional arguments for the ComfyUI CLI                                       |         |
-| `VRAM_THRESHOLD`          | VRAM threshold in GB for selecting the model                                   | Image: 38 GB; LTX/WAN: 36 GB |
-| `VRAM_TRESHOLD_BLACKWELL` | VRAM threshold in GB for selecting Blackwell-specific high- or low-VRAM models | MiniMax: 40 GB |
+| `VRAM_THRESHOLD`          | VRAM threshold in GB for selecting the standard high- or low-VRAM model set | Image: 38 GB; Image2/LTX/MiniMax/WAN: 36 GB |
+| `VRAM_THRESHOLD_BLACKWELL` | VRAM threshold in GB for selecting Blackwell-specific high- or low-VRAM models | Image2/LTX/MiniMax: 40 GB |
 | `COMFYUI_START_MAX_TRIES` | Number of tries to wait until ComfyUI is online; depends on vCPU speed          | 60      |
 | `HAS_GPU_BLACKWELL`       | Automatically exported as `1` when a Blackwell GPU is detected; otherwise `0`  | `0`     |
 
@@ -27,14 +28,14 @@
 | Hugging Face   | `HF_TOKEN`       |
 | CivitAI        | `CIVITAI_TOKEN`  |
 
-## Hugging Face hub model transfer Configuration
+## Hugging Face Hub model-transfer configuration
 
 | Variable              | Description                                                                                               | Default |
 |-----------------------|-----------------------------------------------------------------------------------------------------------|---------|
 | `HF_DOWNLOAD_STALL_TIMEOUT` | Stall watchdog for `hf download` in seconds. | `300`   |
 | `HF_DOWNLOAD_KILL_AFTER` | Kill grace period `hf download` in seconds. | `30`   |
 
-## Hugging Face ComfyUI Model Configuration
+## Hugging Face ComfyUI model configuration
 
 Choose the prefix that matches when the model should be downloaded:
 
@@ -44,10 +45,8 @@ Choose the prefix that matches when the model should be downloaded:
 | Every Blackwell GPU, independent of VRAM | `HF_MODEL_BLACKWELL_` |
 | More VRAM than `VRAM_THRESHOLD` | `HF_MODEL_HVRAM_` |
 | VRAM equal to or below `VRAM_THRESHOLD` | `HF_MODEL_LVRAM_` |
-| Blackwell with more VRAM than `VRAM_TRESHHOLD_BLACKWELL` | `HF_MODEL_HVRAM_BLACKWELL_` |
-| Blackwell with VRAM equal to or below `VRAM_TRESHHOLD_BLACKWELL` | `HF_MODEL_LVRAM_BLACKWELL_` |
-
-`VRAM_TRESHHOLD_BLACKWELL` defaults to 40 GB in the MiniMax image. For example, a 48 GB Blackwell GPU selects the high-VRAM pair below, while a 32 GB or 40 GB Blackwell GPU selects the low-VRAM pair:
+| Blackwell with more VRAM than `VRAM_THRESHOLD_BLACKWELL` | `HF_MODEL_HVRAM_BLACKWELL_` |
+| Blackwell with VRAM equal to or below `VRAM_THRESHOLD_BLACKWELL` | `HF_MODEL_LVRAM_BLACKWELL_` |
 
 ```text
 HF_MODEL_HVRAM_BLACKWELL_DIFFUSION_MODELS1=org/high-vram-model
@@ -74,15 +73,15 @@ Always configure both the model and filename variable. Selection is evaluated pe
 | VAE TAESD       | `HF_MODEL_VAE_APPROX[1-20]`          | `HF_MODEL_VAE_APPROX_FILENAME[1-20]`          |
 | ControlNet      | `HF_MODEL_CONTROLNET[1-20]`          | `HF_MODEL_CONTROLNET_FILENAME[1-20]`          |
 
-## Hugging Face Model Configuration
+## Hugging Face model configuration
 
 | Type | Model                   | Safetensors/GGUF          | Include pattern                  | Exclude pattern                  | `/workspace/ComfyUI/<Directory>` |
 |------|-------------------------|---------------------------|----------------------------------|----------------------------------|----------------------------------|
 | File | `HF_MODEL[1-20]`        | `HF_MODEL_FILENAME[1-20]` | `HF_MODEL_INCLUDE[1-20]`         | `HF_MODEL_EXCLUDE[1-20]`         | `HF_MODEL_DIR[1-20]`             |
 | Dir  | `HF_FULL_MODEL[1-20]`   |                           | `HF_FULL_MODEL_INCLUDE[1-20]`    | `HF_FULL_MODEL_EXCLUDE[1-20]`    | `HF_FULL_MODEL_DIR[1-20]`        |
 
-## CivitAI LORAs download Configuration
- 
+## CivitAI LoRA download configuration
+
 | Variable                         | Description                      |
 |----------------------------------|----------------------------------|
 | `CIVITAI_COM_MODEL_LORA_ID[1-50]`   | Version ID for LoRA (AIR) |
@@ -90,9 +89,10 @@ Always configure both the model and filename variable. Selection is evaluated pe
 | `CIVITAI_RED_MODEL_LORA_ID[1-50]`   | Version ID for LoRA (AIR) |
 | `CIVITAI_RED_MODEL_UNET_ID[1-50]`   | Version ID for UNET (AIR) |
 
-## Workflows download Configuration
+## Workflow download configuration
 
-- Change `WORKFLOW` to `WORKFLOW_LVRAM` or `WORKFLOW_HVRAM` makes loading VRAM dependent. Makes loading VRAM dependent through `VRAM_THRESHOLD`.
+- Use `WORKFLOW_LVRAM` and `WORKFLOW_HVRAM` instead of `WORKFLOW` to select
+  workflows according to `VRAM_THRESHOLD`.
 
 | Variable         | Description                      |
 |------------------|----------------------------------|
