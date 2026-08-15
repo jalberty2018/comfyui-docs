@@ -22,7 +22,7 @@ Use this template for MiniMax H3 text-to-video, image-to-video, first/last-frame
 - LoRA Manager
 - Installed custom nodes and accelerators.
 - Example workflows.
-- Turbo-lora (experimental)
+- 4-step , 8-step Turbo-loras (turbo and lightx2v) included
 
 ## 📦 Deployment on RunPod
 
@@ -82,7 +82,7 @@ Use this template for MiniMax H3 text-to-video, image-to-video, first/last-frame
   </video>
 </div>
 
-### Pod running on L40
+### Pod running on L40S
 
 ![Pod running on L40S](images/runpod_L40S_MiniMax.jpg)
 
@@ -93,6 +93,10 @@ Use this template for MiniMax H3 text-to-video, image-to-video, first/last-frame
 ### Pod running on RTX PRO 6000
 
 ![Pod running on RTX PRO 6000](images/runpod_RTXPRO6000_MiniMax.jpg)
+
+### Pod running on RTX 3090 (lower quality with acceptable speed for t2v with lightx2v 4-step lora)
+
+![Pod running on RTX 3090](images/runpod_RTX3090_MiniMax.jpg)
 
 ## More information
 
