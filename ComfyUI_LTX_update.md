@@ -7,10 +7,11 @@
 - The date reflects when the related custom nodes were cloned from their upstream repositories.
 - Pinned custom nodes are not updated automatically, because changing those pins can introduce compatibility issues.
 
-## 14082026
+## 15082026
 
 - ComfyUI 0.33.1
 - Updated ungated provisioning.
+- Fixed THRESHOLD typo.
 
 ## 13082026
 

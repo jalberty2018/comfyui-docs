@@ -15,7 +15,7 @@
 |---------------------------|--------------------------------------------------------------------------------|---------|
 | `COMFYUI_EXTRA_ARGUMENTS` | Additional arguments for the ComfyUI CLI                                       |         |
 | `VRAM_THRESHOLD`          | VRAM threshold in GB for selecting the model                                   | Image: 38 GB; LTX/WAN: 36 GB |
-| `VRAM_TRESHHOLD_BLACKWELL` | VRAM threshold in GB for selecting Blackwell-specific high- or low-VRAM models | MiniMax: 40 GB |
+| `VRAM_TRESHOLD_BLACKWELL` | VRAM threshold in GB for selecting Blackwell-specific high- or low-VRAM models | MiniMax: 40 GB |
 | `COMFYUI_START_MAX_TRIES` | Number of tries to wait until ComfyUI is online; depends on vCPU speed          | 60      |
 | `HAS_GPU_BLACKWELL`       | Automatically exported as `1` when a Blackwell GPU is detected; otherwise `0`  | `0`     |
 
