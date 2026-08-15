@@ -10,10 +10,11 @@
 
 ## 15082026
 
-- ComfyUI 0.33.1
+- ComfyUI 0.33.0
 - [ComfyUI-OrbitSheets](https://github.com/lumos675/ComfyUI-OrbitSheets)
 - Fixed THRESHOLD typo.
 - Updated configuration for RTX PRO 6000 for higher quality.
+- Changed configuration diffusion model LVRAM BACKWELL for lora compatibility.
 
 ## 13082026
 
