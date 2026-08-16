@@ -82,19 +82,19 @@ Use this template for MiniMax H3 text-to-video, image-to-video, first/last-frame
   </video>
 </div>
 
-### Pod running on L40S
+### Pod running on L40S (good quality)
 
 ![Pod running on L40S](images/runpod_L40S_MiniMax.jpg)
 
-### Pod running on RTX 5090
+### Pod running on RTX 5090 (fast but restricted in resolution and duration)
 
 ![Pod running on RTX 5090](images/runpod_A5000_MiniMax.jpeg)
 
-### Pod running on RTX PRO 6000
+### Pod running on RTX PRO 6000 (fast and no restrictions)
 
 ![Pod running on RTX PRO 6000](images/runpod_RTXPRO6000_MiniMax.jpg)
 
-### Pod running on RTX 3090 (lower quality with acceptable speed for t2v with lightx2v 4-step lora)
+### Pod running on RTX 3090/4090 (slow and restricted in resolution and duration)
 
 ![Pod running on RTX 3090](images/runpod_RTX3090_MiniMax.jpg)
 

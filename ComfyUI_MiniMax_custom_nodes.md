@@ -42,7 +42,6 @@
 ### Sampling
 
 - [RES4LYF](https://github.com/ClownsharkBatwing/RES4LYF)
-- [Running hub](https://github.com/HM-RunningHub/ComfyUI_RH_MinMaxH3)
 - [Turbo Lora](https://github.com/Larryvrh/ComfyUI-MiniMax-H3-Turbo)
 - [ComfyUI-H3-PowerLoraStack](https://github.com/cicalooo/ComfyUI-H3-PowerLoraStack)
 - [ComfyUI-MiniMaxH3-Preview](https://github.com/Brioch/ComfyUI-MiniMaxH3-Preview)

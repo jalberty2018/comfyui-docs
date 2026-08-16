@@ -5,10 +5,10 @@
 - A new dated subtitle is added whenever a new stable ComfyUI release is included.
 - The date is updated when custom nodes, provisioning or runtime behavior changes.
 - Pinned custom nodes are not updated automatically because pin changes can introduce compatibility issues.
-- This pod is stable but many custom_nodes are experimental and in full development.
-- Tested on L40S, RTX 5090 and RTX PRO 6000.
+- This pod is stable but many custom_nodes and turbo loaras are experimental and in full development.
+- Tested on L40S, RTX 4090, RTX 3090, RTX 5090 and RTX PRO 6000.
 
-## 15082026
+## 16082026
 
 - ComfyUI 0.33.0
 - [ComfyUI-OrbitSheets](https://github.com/lumos675/ComfyUI-OrbitSheets)
@@ -35,7 +35,6 @@
 ## 07082026
 
 - ComfyUI 0.30.0
-- [ComfyUI_RH_MinMaxH3](https://github.com/HM-RunningHub/ComfyUI_RH_MinMaxH3)
 - [ComfyUI-MiniMax-H3-Guide)](https://github.com/ethanfel/ComfyUI-MiniMax-H3-Guide)
 - [ComfyUI-SolAttn_triton](https://github.com/kijai/ComfyUI-SolAttn_triton)
 - [ComfyUI-Fantastic-MiniMaxH3-PromptBuilder](https://github.com/Adudeguyman/ComfyUI-Fantastic-MiniMaxH3-PromptBuilder)
