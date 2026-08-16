@@ -46,7 +46,11 @@ Use this template for MiniMax H3 text-to-video, image-to-video, first/last-frame
 
 ## Example workflow all in one with or without turbo
 
-![MiniMax H3 workflow all in onde](images/ai-generated-MiniMax-director.jpg)
+![MiniMax H3 workflow all in one](images/ai-generated-MiniMax-director.jpg)
+
+## Example experimental workflow with 3 x 15 seconds multi-shot from one reference image (Ref2va)
+
+![MiniMax H3 workflow multi-shot](images/ai-generated-MiniMax-multi-shot.jpg)
 
 ## Example video with Ref2va
 
@@ -79,6 +83,14 @@ Use this template for MiniMax H3 text-to-video, image-to-video, first/last-frame
 <div style="text-align: center;">
   <video controls preload="metadata" style="max-width: 50%; height: auto;">
     <source src="/video/Video_minimax_slow.mp4" type="video/mp4">
+  </video>
+</div>
+
+## Example video multi-shot (45 seconds video generated on RTX 5090)
+
+<div style="text-align: center;">
+  <video controls preload="metadata" style="max-width: 50%; height: auto;">
+    <source src="/video/Video_minimax_multi-shot.mp4" type="video/mp4">
   </video>
 </div>
 
