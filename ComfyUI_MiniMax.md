@@ -32,15 +32,23 @@ Use this template for MiniMax H3 text-to-video, image-to-video, first/last-frame
 
 - [MiniMax tutorial](ComfyUI_tutorial.md)
 
-## Example standard workflow Reference to video/audio (Ref2va) with or without turbo
+## Ref2va
+
+###  Workflow Reference to video/audio (Ref2va) with or without turbo
 
 ![MiniMax H3 workflow Ref2va](images/ai-generated-MiniMax.jpg)
 
-## Example standard workflow image to video/audio (fl2va) with or without turbo
+### Experimental workflow with 3 x 15 seconds multi-shot turbo from one reference image
+
+![MiniMax H3 workflow multi-shot](images/ai-generated-MiniMax-multi-shot.jpg)
+
+## fl2va
+
+### Workflow image to video/audio with or without turbo
 
 ![MiniMax H3 workflow i2v](images/ai-generated-MiniMax-i2v.jpg) with or without turbo
 
-## Example standard workflow text to video/audio (fl2va) with or without turbo
+### Workflow text to video/audio with or without turbo
 
 ![MiniMax H3 workflow t2v](images/ai-generated-MiniMax-t2v.jpg)
 
@@ -48,11 +56,9 @@ Use this template for MiniMax H3 text-to-video, image-to-video, first/last-frame
 
 ![MiniMax H3 workflow all in one](images/ai-generated-MiniMax-director.jpg)
 
-## Example experimental workflow with 3 x 15 seconds multi-shot from one reference image (Ref2va)
+## Ref2va
 
-![MiniMax H3 workflow multi-shot](images/ai-generated-MiniMax-multi-shot.jpg)
-
-## Example video with Ref2va
+### **Standard**
 
 <div style="text-align: center;">
   <video controls preload="metadata" style="max-width: 50%; height: auto;">
@@ -60,9 +66,17 @@ Use this template for MiniMax H3 text-to-video, image-to-video, first/last-frame
   </video>
 </div>
 
-## Example video with fl2va
+### **Multi-shot continuation**
 
-### i2v
+<div style="text-align: center;">
+  <video controls preload="metadata" style="max-width: 50%; height: auto;">
+    <source src="/video/Video_minimax_multi-shot.mp4" type="video/mp4">
+  </video>
+</div>
+
+## fl2va
+
+### **i2v**
 
 <div style="text-align: center;">
   <video controls preload="metadata" style="max-width: 50%; height: auto;">
@@ -70,7 +84,7 @@ Use this template for MiniMax H3 text-to-video, image-to-video, first/last-frame
   </video>
 </div>
 
-### t2v
+### **t2v**
 
 <div style="text-align: center;">
   <video controls preload="metadata" style="max-width: 50%; height: auto;">
@@ -83,14 +97,6 @@ Use this template for MiniMax H3 text-to-video, image-to-video, first/last-frame
 <div style="text-align: center;">
   <video controls preload="metadata" style="max-width: 50%; height: auto;">
     <source src="/video/Video_minimax_slow.mp4" type="video/mp4">
-  </video>
-</div>
-
-## Example video multi-shot (45 seconds video generated on RTX 5090)
-
-<div style="text-align: center;">
-  <video controls preload="metadata" style="max-width: 50%; height: auto;">
-    <source src="/video/Video_minimax_multi-shot.mp4" type="video/mp4">
   </video>
 </div>
 
