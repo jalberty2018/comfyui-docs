@@ -161,17 +161,17 @@ For `run-comfyui-image`, `run-comfyui-ltx`, and `run-comfyui-minimax`:
 
 #### Example: linking models in a ComfyUI template
 
-![Model Linker step 1](images/model-linker-1.jpg){ width="300" }
+![Model Linker step 1](images/model-linker-1.jpg){ width="500" }
 
-![Model Linker step 2](images/model-linker-2.jpg){ width="400" }
+![Model Linker step 2](images/model-linker-2.jpg){ width="500" }
 
-![Model Linker step 3](images/model-linker-3.jpg){ width="200" }
+![Model Linker step 3](images/model-linker-3.jpg){ width="500" }
 
 ### 🧩 CivitAI CLI
 
 If no `CIVITAI_TOKEN` was set, create or use a free token from the Civitai website.
 
-![Civitai version ID](images/civitai_air.jpg){ width="300" }
+![Civitai version ID](images/civitai_air.jpg){ width="400" }
 
 ```bash
 export CIVITAI_TOKEN="xxxxx"
@@ -186,7 +186,7 @@ civitai_com 2228466 /workspace/ComfyUI/models/loras/
 civitai_red 2893442 /workspace/ComfyUI/models/loras/
 ```
 
-![Refresh ComfyUI nodes](images/refresh_nodes.jpg){ width="300" }
+![Refresh ComfyUI nodes](images/refresh_nodes.jpg){ width="400" }
 
 Refresh ComfyUI by pressing **R**.
 

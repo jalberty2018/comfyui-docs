@@ -15,7 +15,6 @@
 - [GGUF](https://github.com/city96/ComfyUI-GGUF)
 - [ComfyMath](https://github.com/evanspearman/ComfyMath)
 - [Resolution Master](https://github.com/Azornes/Comfyui-Resolution-Master)
-- [PG Nodes](https://github.com/GizmoR13/PG-Nodes)
 - [ComfyUI Essentials](https://github.com/cubiq/ComfyUI_essentials)
 - [Scale Image to Total Pixels Advanced](https://github.com/BigStationW/ComfyUi-Scale-Image-to-Total-Pixels-Advanced)
 
@@ -64,3 +63,6 @@
 
 - [ComfyUI-H3-multishot](https://github.com/jlucasmcrell/ComfyUI-H3-Multishot)
 - [ComfyUI-H3-Motion-Context](https://github.com/NikoDemon80/ComfyUI-H3-Motion-Context)
+
+### Other
+- [ComfyUI-OrbitSheets](https://github.com/lumos675/ComfyUI-OrbitSheets)

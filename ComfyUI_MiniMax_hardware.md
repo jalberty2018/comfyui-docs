@@ -4,8 +4,6 @@ MiniMax H3 model files are large and rely on ComfyUI offloading. Resolution, dur
 
 ## Tested configurations
 
-## Tested configurations
-
 | Provisioning | GPU | Model | Purpose | Pod RAM | Tested output |
 |---|---|---|---|---:|---|
 | NVIDIA LVRAM | RTX 3090 24 GB | Pruned INT8 ConvRot | Lowest cost and maximum compatibility | 50 GB | 0.9 MP, 15 seconds |
