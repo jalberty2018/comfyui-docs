@@ -64,7 +64,7 @@ You can set the minimum amount of RAM in RunPod's filters. For example, for imag
 ![Deployment start](images/downloading.jpg)
 
 - Go to **Logs or Connect**.
-- Loading and extracting takes around **4–10 minutes**, depending on the region.
+- Loading and extracting takes around **4–8 minutes**, depending on the region.
 - If the image does not begin downloading after **1 minute**, delete the pod and redeploy it in another region.
 - If it keeps downloading without extracting after **3 minutes** delete the pod and redeploy it in another region.
 
@@ -78,12 +78,14 @@ The extraction ends with a message like this in the **Logs** section:
 
 ### Copy ComfyUI from container to workspace
 
-- The time required to copy ComfyUI from the container to the workspace is a useful indicator of overall system performance. Depending on the hardware, this process typically takes between **5 and 90 seconds**. If the copy operation stalls or takes longer than **120 seconds**, consider starting another pod and comparing its performance. A slow copy operation often indicates storage or system performance issues that can also cause problems when extracting models or loading them from disk into the GPU's video memory (VRAM). 
+- The time required to copy ComfyUI from the container to the workspace is a useful indicator of overall system performance. Depending on the hardware, this process typically takes between **5 and 100 seconds**. If the copy operation stalls or takes longer than **120 seconds**, consider starting another pod and comparing its performance. A slow copy operation often indicates storage or system performance issues that can also cause problems when extracting models or loading them from disk into the GPU's video memory (VRAM).
 
 #### Example excellent performance
+
 ![good](images/runpod_deploy_comfyuionworkspace.jpg)
 
 #### Example acceptable/slow performance
+
 ![bad](images/runpod_deploy_comfyuionworkspace_slow.jpg)
 
 ### Downloading models form huggingface hub

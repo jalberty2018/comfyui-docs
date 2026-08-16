@@ -5,16 +5,17 @@
 - A new dated subtitle is added whenever a new stable ComfyUI release is included.
 - The date is updated when custom nodes, provisioning or runtime behavior changes.
 - Pinned custom nodes are not updated automatically because pin changes can introduce compatibility issues.
-- This pod is stable but many custom_nodes and turbo loaras are experimental and in full development.
+- This pod is stable but many custom_nodes and turbo loras are experimental and in full development.
 - Tested on L40S, RTX 4090, RTX 3090, RTX 5090 and RTX PRO 6000.
 
 ## 16082026
 
 - ComfyUI 0.33.0
-- [ComfyUI-OrbitSheets](https://github.com/lumos675/ComfyUI-OrbitSheets)
 - Fixed THRESHOLD typo.
 - Updated configuration for RTX PRO 6000 for higher quality.
 - Changed configuration diffusion model LVRAM BACKWELL for lora compatibility.
+- [ComfyUI-H3-Qwen3VL-TextGen](https://github.com/ethanfel/ComfyUI-H3-Qwen3VL-TextGen.git)
+
 
 ## 13082026
 
@@ -35,7 +36,7 @@
 ## 07082026
 
 - ComfyUI 0.30.0
-- [ComfyUI-MiniMax-H3-Guide)](https://github.com/ethanfel/ComfyUI-MiniMax-H3-Guide)
+- [ComfyUI-MiniMax-H3-Guide](https://github.com/ethanfel/ComfyUI-MiniMax-H3-Guide)
 - [ComfyUI-SolAttn_triton](https://github.com/kijai/ComfyUI-SolAttn_triton)
 - [ComfyUI-Fantastic-MiniMaxH3-PromptBuilder](https://github.com/Adudeguyman/ComfyUI-Fantastic-MiniMaxH3-PromptBuilder)
 - [ComfyUI_MiniMaxH3_Director](https://github.com/AIMixer/ComfyUI_MiniMaxH3_Director)

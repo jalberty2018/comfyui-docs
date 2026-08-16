@@ -17,6 +17,7 @@
 - [Resolution Master](https://github.com/Azornes/Comfyui-Resolution-Master)
 - [ComfyUI Essentials](https://github.com/cubiq/ComfyUI_essentials)
 - [Scale Image to Total Pixels Advanced](https://github.com/BigStationW/ComfyUi-Scale-Image-to-Total-Pixels-Advanced)
+- [comfyui-obvpm](https://github.com/obvpm/comfyui-obvpm)
 
 ### Downloaders
 
@@ -38,6 +39,10 @@
 
 - [ComfyUI-MiniMax-H3-Guide](https://github.com/ethanfel/ComfyUI-MiniMax-H3-Guide)
 - [ComfyUI-Fantastic-MiniMaxH3-PromptBuilder](https://github.com/Adudeguyman/ComfyUI-Fantastic-MiniMaxH3-PromptBuilder)
+
+### Prompt enhancer
+
+- [ComfyUI-H3-Qwen3VL-TextGen](https://github.com/ethanfel/ComfyUI-H3-Qwen3VL-TextGen.git)
 
 ### Sampling
 
@@ -62,6 +67,3 @@
 
 - [ComfyUI-H3-multishot](https://github.com/jlucasmcrell/ComfyUI-H3-Multishot)
 - [ComfyUI-H3-Motion-Context](https://github.com/NikoDemon80/ComfyUI-H3-Motion-Context)
-
-### Other
-- [ComfyUI-OrbitSheets](https://github.com/lumos675/ComfyUI-OrbitSheets)
