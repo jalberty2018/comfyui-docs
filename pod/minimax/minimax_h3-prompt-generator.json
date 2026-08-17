@@ -1,8 +1,8 @@
 {
   "id": "0707ffc9-90d5-4138-bd0f-da02dcb9b649",
   "revision": 0,
-  "last_node_id": 18,
-  "last_link_id": 15,
+  "last_node_id": 20,
+  "last_link_id": 18,
   "nodes": [
     {
       "id": 13,
@@ -50,7 +50,7 @@
         106
       ],
       "flags": {},
-      "order": 7,
+      "order": 8,
       "mode": 0,
       "inputs": [
         {
@@ -102,47 +102,6 @@
       "bgcolor": "#533"
     },
     {
-      "id": 6,
-      "type": "LoadImageCrop",
-      "pos": [
-        -3700.8102641480004,
-        6042.206630716248
-      ],
-      "size": [
-        270,
-        402
-      ],
-      "flags": {},
-      "order": 1,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "links": [
-            7
-          ]
-        },
-        {
-          "name": "mask",
-          "type": "MASK",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoadImageCrop"
-      },
-      "widgets_values": [
-        "example.png",
-        "{\"x\":0.0033,\"y\":0,\"w\":0.9967,\"h\":1}",
-        0.5,
-        "image"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
       "id": 8,
       "type": "PrimitiveStringMultiline",
       "pos": [
@@ -154,7 +113,7 @@
         258.76991179756897
       ],
       "flags": {},
-      "order": 2,
+      "order": 1,
       "mode": 4,
       "inputs": [],
       "outputs": [
@@ -177,40 +136,6 @@
       "bgcolor": "#355"
     },
     {
-      "id": 15,
-      "type": "PrimitiveStringMultiline",
-      "pos": [
-        -3407.3299412958477,
-        6049.758987892733
-      ],
-      "size": [
-        581.9533281922986,
-        394.00321869421714
-      ],
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            14
-          ]
-        }
-      ],
-      "title": "Start prompt",
-      "properties": {
-        "Node name for S&R": "PrimitiveStringMultiline"
-      },
-      "widgets_values": [
-        ""
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
       "id": 7,
       "type": "H3QwenVLGenerateText",
       "pos": [
@@ -222,7 +147,7 @@
         654
       ],
       "flags": {},
-      "order": 8,
+      "order": 10,
       "mode": 0,
       "inputs": [
         {
@@ -239,7 +164,7 @@
           "name": "image",
           "shape": 7,
           "type": "IMAGE",
-          "link": 7
+          "link": 17
         },
         {
           "name": "system_prompt",
@@ -329,7 +254,7 @@
         127.02979772569142
       ],
       "flags": {},
-      "order": 4,
+      "order": 2,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -339,41 +264,6 @@
       ],
       "color": "#432",
       "bgcolor": "#653"
-    },
-    {
-      "id": 5,
-      "type": "CLIPLoader",
-      "pos": [
-        -2684.523666598866,
-        5433.913510991995
-      ],
-      "size": [
-        277.8609461807805,
-        116.98692984388435
-      ],
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            9
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPLoader"
-      },
-      "widgets_values": [
-        null,
-        "minimax",
-        "cpu"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
     },
     {
       "id": 1,
@@ -387,7 +277,7 @@
         58
       ],
       "flags": {},
-      "order": 6,
+      "order": 3,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -420,7 +310,7 @@
         625.1806519753936
       ],
       "flags": {},
-      "order": 9,
+      "order": 11,
       "mode": 0,
       "inputs": [
         {
@@ -456,7 +346,7 @@
         214.1344983006975
       ],
       "flags": {},
-      "order": 10,
+      "order": 12,
       "mode": 0,
       "inputs": [
         {
@@ -479,6 +369,208 @@
       "widgets_values": [],
       "color": "#323",
       "bgcolor": "#535"
+    },
+    {
+      "id": 5,
+      "type": "CLIPLoader",
+      "pos": [
+        -2684.523666598866,
+        5433.913510991995
+      ],
+      "size": [
+        277.8609461807805,
+        116.98692984388435
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            9
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPLoader"
+      },
+      "widgets_values": [
+        null,
+        "minimax",
+        "default"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 19,
+      "type": "CreateList",
+      "pos": [
+        -2991.763392661962,
+        5867.967309322296
+      ],
+      "size": [
+        140,
+        66
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "input0",
+          "name": "inputs.input0",
+          "type": "IMAGE",
+          "link": 16
+        },
+        {
+          "label": "input1",
+          "name": "inputs.input1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 18
+        },
+        {
+          "label": "input2",
+          "name": "inputs.input2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "list",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            17
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CreateList"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 15,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        -3422.9196186257204,
+        6034.169251092732
+      ],
+      "size": [
+        581.9533281922986,
+        394.00321869421714
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            14
+          ]
+        }
+      ],
+      "title": "Start prompt",
+      "properties": {
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        ""
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 6,
+      "type": "LoadImageCrop",
+      "pos": [
+        -4076.5229567100746,
+        6037.529721570273
+      ],
+      "size": [
+        270,
+        402
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            16
+          ]
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImageCrop"
+      },
+      "widgets_values": [
+        "example.png",
+        "{\"x\":0.0033,\"y\":0,\"w\":0.9967,\"h\":1}",
+        0.5,
+        "image"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 20,
+      "type": "LoadImageCrop",
+      "pos": [
+        -3744.1383054997004,
+        6030.057706143793
+      ],
+      "size": [
+        270,
+        402
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            18
+          ]
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImageCrop"
+      },
+      "widgets_values": [
+        "example.png",
+        "{\"x\":0.0033,\"y\":0,\"w\":0.9967,\"h\":1}",
+        0.5,
+        "image"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
     }
   ],
   "links": [
@@ -489,14 +581,6 @@
       4,
       0,
       "STRING"
-    ],
-    [
-      7,
-      6,
-      0,
-      7,
-      2,
-      "IMAGE"
     ],
     [
       8,
@@ -553,6 +637,30 @@
       17,
       0,
       "STRING"
+    ],
+    [
+      16,
+      6,
+      0,
+      19,
+      0,
+      "IMAGE"
+    ],
+    [
+      17,
+      19,
+      0,
+      7,
+      2,
+      "IMAGE"
+    ],
+    [
+      18,
+      20,
+      0,
+      19,
+      1,
+      "IMAGE"
     ]
   ],
   "groups": [
@@ -572,10 +680,10 @@
       "id": 2,
       "title": "Input",
       "bounding": [
-        -3727.583954522851,
-        5955.4097313959555,
-        914.8078121799826,
-        522.2308986803855
+        -4120.445333776878,
+        5960.08664054193,
+        1298.3154326121853,
+        483.2565566803851
       ],
       "color": "#3f789e",
       "flags": {}
@@ -596,10 +704,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.35033714954845235,
+      "scale": 0.5131581182307068,
       "offset": [
-        4501.7824557803115,
-        -4662.179310222013
+        4446.439669542997,
+        -4951.424060879189
       ]
     },
     "frontendVersion": "1.48.7",

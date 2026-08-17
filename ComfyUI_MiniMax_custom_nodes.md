@@ -35,12 +35,12 @@
 - [SAM3](https://github.com/PozzettiAndrea/ComfyUI-SAM3)
 - [SecNodes](https://github.com/9nate-drake/Comfyui-SecNodes)
 
-### Text encoders
+### Prompt builders
 
 - [ComfyUI-MiniMax-H3-Guide](https://github.com/ethanfel/ComfyUI-MiniMax-H3-Guide)
 - [ComfyUI-Fantastic-MiniMaxH3-PromptBuilder](https://github.com/Adudeguyman/ComfyUI-Fantastic-MiniMaxH3-PromptBuilder)
 
-### Prompt enhancer
+### Prompt generators
 
 - [ComfyUI-H3-Qwen3VL-TextGen](https://github.com/ethanfel/ComfyUI-H3-Qwen3VL-TextGen.git)
 
