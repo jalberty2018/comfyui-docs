@@ -34,27 +34,37 @@ Use this template for MiniMax H3 text-to-video, image-to-video, first/last-frame
 
 ## Ref2va
 
-###  Workflow Reference to video/audio (Ref2va) with or without turbo
+### Enhanced standard workflow Reference to video/audio (Ref2va) with or without turbo
 
 ![MiniMax H3 workflow Ref2va](images/ai-generated-MiniMax.jpg)
 
-### Experimental workflow with 3 x 15 seconds multi-shot turbo from one reference image
+### Multi-Shot Workflow with 3 x 15 seconds from one reference image
 
 ![MiniMax H3 workflow multi-shot](images/ai-generated-MiniMax-multi-shot.jpg)
 
 ## fl2va
 
-### Workflow image to video/audio with or without turbo
+### Enhanced standard workflow image to video/audio with or without turbo
 
 ![MiniMax H3 workflow i2v](images/ai-generated-MiniMax-i2v.jpg) with or without turbo
 
-### Workflow text to video/audio with or without turbo
+### Enhanced standard workflow text to video/audio with or without turbo
 
 ![MiniMax H3 workflow t2v](images/ai-generated-MiniMax-t2v.jpg)
 
-## Example workflow all in one with or without turbo
+## Custom workflows
+
+### Director , all in one
 
 ![MiniMax H3 workflow all in one](images/ai-generated-MiniMax-director.jpg)
+
+### Prompt generator using uncensored heretic Minimax-H2 QWEN-VL with tail
+
+![MiniMax H3 workflow prompt generator](images/ai-generated-MiniMax-prompt-generator.jpg)
+
+### Fantastic prompt builder & media manager
+
+![MiniMax H3 workflow prompt creator](images/ai-generated-MiniMax-prompt-creator.jpg)
 
 ## Ref2va
 
