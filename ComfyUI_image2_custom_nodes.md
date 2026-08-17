@@ -46,6 +46,7 @@
 ### Samplers
 
 - [RES4LYF](https://github.com/ClownsharkBatwing/RES4LYF)
+- [ComfyUI-CyberKrea-Sampler](https://github.com/cyberdeliaAI/ComfyUI-CyberKrea-Sampler)
 
 ### Automation
 
