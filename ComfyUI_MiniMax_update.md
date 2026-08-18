@@ -8,14 +8,14 @@
 - This pod is stable but many custom_nodes and turbo loras are experimental and in full development.
 - Tested on L40S, RTX 4090, RTX 3090, RTX 5090 and RTX PRO 6000.
 
-## 17082026
+## 18082026
 
 - ComfyUI 0.33.0
 - Fixed THRESHOLD typo.
 - Updated configuration for RTX PRO 6000 for higher quality.
 - Changed configuration diffusion model LVRAM BACKWELL for lora compatibility.
 - [ComfyUI-H3-Qwen3VL-TextGen](https://github.com/ethanfel/ComfyUI-H3-Qwen3VL-TextGen.git)
-
+- [ComfyUI_MiniMax_H3_Extender](https://github.com/tritant/ComfyUI_MiniMax_H3_Extender)
 
 ## 13082026
 
