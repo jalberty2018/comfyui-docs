@@ -15,7 +15,6 @@
 - Updated configuration for RTX PRO 6000 for higher quality.
 - Changed configuration diffusion model LVRAM BACKWELL for lora compatibility.
 - [ComfyUI-H3-Qwen3VL-TextGen](https://github.com/ethanfel/ComfyUI-H3-Qwen3VL-TextGen.git)
-- [ComfyUI_MiniMax_H3_Extender](https://github.com/tritant/ComfyUI_MiniMax_H3_Extender)
 
 ## 13082026
 

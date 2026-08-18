@@ -38,7 +38,7 @@ Use this template for MiniMax H3 text-to-video, image-to-video, first/last-frame
 
 ![MiniMax H3 workflow Ref2va](images/ai-generated-MiniMax.jpg)
 
-### Multi-Shot Workflow with 3 x 15 seconds from one reference image
+### Multi-Shot/Motion-Context Workflow with 3 x 10 seconds starting from a reference image
 
 ![MiniMax H3 workflow multi-shot](images/ai-generated-MiniMax-multi-shot.jpg)
 
@@ -65,6 +65,10 @@ Use this template for MiniMax H3 text-to-video, image-to-video, first/last-frame
 ### Fantastic prompt builder & media manager
 
 ![MiniMax H3 workflow prompt creator](images/ai-generated-MiniMax-prompt-creator.jpg)
+
+### Video & sound preview
+
+![MiniMax H3 video en sound preview](images/ai-generated-MiniMax-preview.jpg)
 
 ## Ref2va
 

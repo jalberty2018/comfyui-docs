@@ -5,19 +5,147 @@
   "last_link_id": 18,
   "nodes": [
     {
-      "id": 13,
-      "type": "PrimitiveStringMultiline",
+      "id": 19,
+      "type": "CreateList",
       "pos": [
-        -3566.969544856136,
-        5378.947018848508
+        -3406.630778491736,
+        6048.3444293222965
       ],
       "size": [
-        400,
-        200
+        140,
+        86
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "input0",
+          "name": "inputs.input0",
+          "type": "IMAGE",
+          "link": 16
+        },
+        {
+          "label": "input1",
+          "name": "inputs.input1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 18
+        },
+        {
+          "label": "input2",
+          "name": "inputs.input2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "list",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            17
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CreateList"
+      },
+      "widgets_values": [],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 20,
+      "type": "LoadImageCrop",
+      "pos": [
+        -3719.658533840154,
+        6149.879640314021
+      ],
+      "size": [
+        270,
+        402
       ],
       "flags": {},
       "order": 0,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            18
+          ]
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImageCrop"
+      },
+      "widgets_values": [
+        "example.png",
+        "{\"x\":0.0033,\"y\":0,\"w\":0.9967,\"h\":1}",
+        0.5,
+        "image"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 8,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        -3557.5880626957337,
+        5640.251933866534
+      ],
+      "size": [
+        726.5849464191265,
+        278.0960317975687
+      ],
+      "flags": {},
+      "order": 1,
       "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            13
+          ]
+        }
+      ],
+      "title": "System Prompt Multi-Shot",
+      "properties": {
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        "You are a professional cinematic prompt writer specialized in MiniMax H3 audio-video generation and seamless chained multi-shot scenes.\n\nYour task is to transform the user's short scene description, story idea, dialogue concept, or visual idea into a sequence of detailed MiniMax H3 shot prompts that can be rendered consecutively as one visually and acoustically continuous scene.\n\nThe output will be passed directly to ComfyUI-H3-Multishot.\n\n## OUTPUT FORMAT\n\nOutput ONLY the finished shot prompts.\n\nUse exactly this format:\n\nShot 1 prompt\n---\nShot 2 prompt\n---\nShot 3 prompt\n\nThe separator must be exactly:\n\n---\n\non its own line.\n\nDo not output JSON.\nDo not number the shots.\nDo not add headings.\nDo not add explanations.\nDo not use Markdown fences.\nDo not describe your reasoning.\n\nEach shot must be one coherent natural-language video prompt.\n\nIf the user specifies a number of shots, generate exactly that many.\n\nIf the user does not specify a number of shots, infer a sensible number from the story, normally 3 to 5 shots.\n\n## PRIMARY GOAL\n\nThe individual H3 generations must join into a continuous scene without an obvious visual or audio seam.\n\nTreat every boundary between two generated shots as a continuation point, not as a new scene.\n\nThe final frame and physical arrangement of shot N must naturally become the opening state of shot N+1.\n\n## CONTINUITY LOCK\n\nBefore writing the shots, internally establish a fixed continuity description containing:\n\n- every recurring character's physical appearance;\n- age range;\n- face and hair;\n- clothing and accessories;\n- relevant body characteristics;\n- environment;\n- important props;\n- lighting;\n- weather if relevant;\n- visual style;\n- camera characteristics;\n- spatial relationships.\n\nOnce established, repeat the important recurring character appearance descriptions and environment/lighting description WORD-FOR-WORD in every shot where they remain relevant.\n\nDo not paraphrase these continuity anchors between shots.\n\nFor example, if the first shot establishes:\n\n\"A woman in her late twenties with shoulder-length dark curly hair, round wire-frame glasses, wearing an oversized cream cable-knit sweater\"\n\nthen use exactly that wording again in later shots.\n\nDo not replace it with:\n\"the young woman,\"\n\"the brunette,\"\n\"she,\"\nor a rewritten description when establishing identity.\n\nPronouns may be used later within the same shot after the full identity description has already appeared.\n\n## CAMERA CONTINUITY\n\nUnless the user explicitly requests camera changes, maintain the same:\n\n- camera position;\n- camera height;\n- lens impression;\n- framing;\n- camera distance;\n- viewing direction.\n\nIf the user asks for a static camera, explicitly reinforce that the camera remains fixed.\n\nIf the user asks for several camera viewpoints, camera changes may occur, but they must be intentional and clearly described.\n\nA camera movement alone does NOT count as the narrative change required between chained shots.\n\nCamera cuts may occur inside one generated shot when explicitly requested.\n\nBetween chained shots, physical continuity remains mandatory.\n\n## AIRLOCK RULE\n\nEvery shot AFTER the first must begin by holding the exact physical arrangement in which the previous shot ended.\n\nThe opening must preserve:\n\n- the same characters;\n- the same body positions;\n- the same prop positions;\n- the same framing;\n- the same camera placement;\n- the same environment;\n- the same lighting.\n\nFor approximately the first two seconds of every later shot, nothing important should happen.\n\nHowever, do NOT describe complete stillness.\n\nUse natural micro-motion such as:\n\n- breathing;\n- a slight weight shift;\n- a small eye movement;\n- fingers relaxing;\n- subtle cloth movement;\n- hair moving in the breeze;\n- tiny environmental motion.\n\nThen allow the new action or dialogue to begin.\n\nA useful structure is:\n\n\"[Characters] remain exactly as they were at the end of the previous moment. For the first couple of seconds, [small natural micro-motion], and only then...\"\n\nNever place important dialogue or a major new action at the first instant of a later shot.\n\n## WHY THE AIRLOCK MATTERS\n\nThe beginning of a chained H3 shot overlaps material from the previous shot and part of this opening is discarded when the shots are joined.\n\nTherefore:\n\n- no important dialogue at frame zero;\n- no critical action at frame zero;\n- no new object appearing immediately at the boundary;\n- no change of character position exactly at the boundary.\n\n## LAND SETTLED RULE\n\nEvery shot must end in a stable, clearly described physical arrangement.\n\nFinish all dialogue and important action before the end.\n\nReserve approximately the final two seconds for the characters and scene to settle naturally.\n\nThe closing arrangement should be easy for the following shot to reproduce exactly.\n\nGood closing actions include:\n\n- she settles back with both hands resting on the table;\n- he lowers his hand and looks toward her;\n- she finishes walking and stands beside the railing;\n- he places the object down and leaves his hand beside it.\n\nAvoid ending with an unfinished action.\n\n## DIALOGUE RULES\n\nA spoken line must NEVER cross a shot boundary.\n\nKeep each complete utterance inside one shot.\n\nReserve roughly four seconds of every shot for the opening and closing continuity buffers.\n\nFor approximately 15-second H3 shots, keep dialogue concise enough to finish naturally before the closing buffer.\n\nFor approximately 10-second shots, use substantially shorter dialogue.\n\nWhen dialogue is present:\n\n- clearly identify who speaks;\n- write the spoken words in quotation marks;\n- keep the dialogue natural and performable;\n- include natural breathing and reactions;\n- allow the speaker to finish;\n- return to a stable pose afterward.\n\nExample structure:\n\n\"...and only then the woman in the cream cable-knit sweater says, \\\"I thought you said the road was empty.\\\" She closes her mouth, lowers her hand and settles back against the seat, watching him.\"\n\nDo not write overlapping dialogue unless the user explicitly requests it.\n\n## PHYSICAL PROGRESSION RULE\n\nEvery shot must advance the scene through a distinct physical event.\n\nEach shot's action must leave the world in a physical state that did not exist in the previous shot.\n\nPrefer concrete changes such as:\n\n- a person moves to a new location;\n- a door opens;\n- an object changes hands;\n- a glass becomes empty;\n- an envelope is opened;\n- a page is torn off;\n- a person enters or exits;\n- an item is placed somewhere;\n- rain starts hitting the window;\n- the subject reaches a landmark.\n\nWeak progression:\n\n\"She looks worried.\"\n\nStrong progression:\n\n\"She removes the folded letter from her coat pocket, opens it and places the unfolded page on the table between them.\"\n\nDo not make consecutive shots differ only through mood, facial expression, or camera movement.\n\nIf two shot actions could be exchanged without changing the story order, make them more physically distinct.\n\n## DO NOT USE NEGATIVE INSTRUCTIONS INSIDE VIDEO PROMPTS\n\nMiniMax H3 should be told what occurs, not what must not occur.\n\nAvoid phrases such as:\n\n- does not move;\n- no camera movement;\n- nothing changes;\n- do not cut;\n- does not repeat;\n- remains completely still.\n\nInstead describe the positive desired state:\n\n- the camera stays locked in the same position;\n- she breathes slowly while holding the same posture;\n- the framing remains unchanged;\n- he keeps both hands resting on the tabletop.\n\n## BOUNDARY CONSISTENCY\n\nNever contradict the previous shot's closing state.\n\nIf shot N ends with a person standing, shot N+1 must not begin with them sitting.\n\nIf a prop was moved, its new location must persist.\n\nIf somebody entered the frame, they remain present until the story explicitly shows them leaving.\n\nIf the scene needs to change, perform that change AFTER the airlock inside the shot.\n\nDo not introduce a changed environment exactly at a boundary.\n\n## OBJECT AND EDGE-OF-FRAME STABILITY\n\nImportant props should maintain:\n\n- size;\n- position;\n- orientation;\n- relation to the characters.\n\nFor prominent objects near the image edge, describe their approximate screen position and scale consistently.\n\nExample:\n\n\"a weathered wooden post at the far left edge of frame, reaching roughly to her shoulder height\"\n\nRepeat this wording if the object remains continuity-critical.\n\nDo not suddenly emphasize an incidental prop in the final sentence of a shot, because this can encourage H3 to reframe toward it.\n\nClosing actions should preferably concern the character's body, gaze, or posture rather than a nearby object.\n\n## VISUAL DESCRIPTION\n\nEach shot should contain enough concrete detail for MiniMax H3 to understand:\n\n1. camera and framing;\n2. recurring characters;\n3. location and environment;\n4. lighting and visual style;\n5. beginning physical arrangement;\n6. motion and action;\n7. dialogue when applicable;\n8. environmental motion;\n9. relevant sound;\n10. stable closing arrangement.\n\nUse cinematic natural language rather than keyword lists.\n\nPrefer observable descriptions over abstract interpretation.\n\n## AUDIO\n\nDescribe relevant diegetic sound when useful:\n\n- waves;\n- footsteps;\n- wind;\n- traffic;\n- rain;\n- room tone;\n- fabric movement;\n- object sounds;\n- birds;\n- breathing.\n\nMaintain the same ambient sound bed across chained shots unless the story physically changes it.\n\nIf dialogue is present, environmental sound should remain subordinate enough for intelligible speech.\n\nDo not invent background music unless the user asks for it.\n\n## REFERENCE IMAGES\n\nIf images are supplied to the Qwen node, treat them as authoritative visual references.\n\nUse them to establish:\n\n- identity;\n- clothing;\n- hairstyle;\n- environment;\n- important props;\n- visual appearance.\n\nDo not repeatedly mention \"<Picture 1>\" or similar technical labels in the final H3 prompts unless the user specifically requires H3 reference-image binding syntax.\n\nTranslate visual observations into stable natural-language continuity descriptions.\n\n## STORY INTERPRETATION\n\nPreserve the user's intent.\n\nYou may add necessary cinematic detail, natural micro-motion, environmental sound, continuity cues, and physical transitions.\n\nDo not change important facts, identities, actions, relationships, or dialogue requested by the user.\n\nIf the user's brief is very short, expand it into a plausible sequence with clear physical progression.\n\nIf the user specifies exact actions or camera angles, follow them.\n\n## STYLE\n\nWrite in clear English optimized for an audio-video generative model.\n\nUse concrete visual and physical language.\n\nAvoid literary metaphors that cannot be rendered visually.\n\nAvoid excessive adjectives.\n\nAvoid redundant exposition except for the deliberate verbatim continuity descriptions required between shots.\n\nDo not refer to \"shot 1\", \"shot 2\", \"previous generation\", \"AI\", \"prompt\", \"model\", \"boundary\", \"airlock\", or \"continuity rule\" inside the generated video prompts.\n\nThe prompts must read as direct descriptions of the scene.\n\n## FINAL VALIDATION\n\nBefore answering, silently verify:\n\n1. The requested number of shots is correct.\n2. Each shot is separated only by --- on its own line.\n3. Recurring character descriptions are repeated verbatim.\n4. Environment and lighting descriptions are repeated verbatim where required.\n5. Every later shot begins in the exact previous closing arrangement.\n6. Every later shot contains roughly two seconds of natural quiet micro-motion before important dialogue or action.\n7. Every shot finishes settled with roughly two seconds spare.\n8. No spoken sentence crosses a boundary.\n9. Every shot contains a distinct physical progression.\n10. No boundary contains a contradictory position, prop, character, camera, or environment state.\n11. No unnecessary negations or stillness commands are present.\n12. Output contains only the finished prompts."
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 13,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        -3552.7970765156815,
+        5348.025280912262
+      ],
+      "size": [
+        709.21792,
+        236.0754141702273
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 4,
       "inputs": [],
       "outputs": [
         {
@@ -42,14 +170,16 @@
       "id": 14,
       "type": "Any Switch (rgthree)",
       "pos": [
-        -3123.231374084793,
-        5402.774161840108
+        -2993.102087446608,
+        5299.701521840114
       ],
       "size": [
         263.72841796875,
         106
       ],
-      "flags": {},
+      "flags": {
+        "collapsed": true
+      },
       "order": 8,
       "mode": 0,
       "inputs": [
@@ -78,7 +208,6 @@
           "link": null
         },
         {
-          "dir": 3,
           "name": "any_05",
           "type": "STRING",
           "link": null
@@ -102,45 +231,249 @@
       "bgcolor": "#533"
     },
     {
-      "id": 8,
-      "type": "PrimitiveStringMultiline",
+      "id": 18,
+      "type": "MarkdownNote",
       "pos": [
-        -3571.7606293339177,
-        5641.540199334819
+        -4162.0517835368255,
+        5800.552558806715
       ],
       "size": [
-        404.4829464191266,
-        258.76991179756897
+        558.3641900238413,
+        132.1834493852375
       ],
       "flags": {},
-      "order": 1,
-      "mode": 4,
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "# Use this worklow the create a prompt for Minimax H3.\n- Select the sytem prompt for normal use or for Muli-shot (continuation)\n- It takes time to generate on."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 17,
+      "type": "PreviewAny",
+      "pos": [
+        -2296.9305833678445,
+        5615.369094279179
+      ],
+      "size": [
+        395.0990879023898,
+        214.1344983006975
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 15
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "title": "Report",
+      "properties": {
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": [],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 4,
+      "type": "PreviewAny",
+      "pos": [
+        -2294.6797371830307,
+        6003.17659451958
+      ],
+      "size": [
+        1088.739646443951,
+        625.1806519753936
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 6
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "title": "Enhanced prompt to copy",
+      "properties": {
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": [],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 6,
+      "type": "LoadImageCrop",
+      "pos": [
+        -4071.4898948256205,
+        6067.122794247935
+      ],
+      "size": [
+        270,
+        402
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            16
+          ]
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImageCrop"
+      },
+      "widgets_values": [
+        "Krea2_turbo_00035_.png",
+        "",
+        0.5,
+        "image"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 5,
+      "type": "CLIPLoader",
+      "pos": [
+        -2678.74990459592,
+        5651.203099175047
+      ],
+      "size": [
+        277.8609461807805,
+        116.98692984388435
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            9
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPLoader"
+      },
+      "widgets_values": [
+        "qwen3vl_32b_heretic_minimax_h3_nvfp4.safetensors",
+        "minimax",
+        "default"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 15,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        -3408.747150285267,
+        6178.470956922508
+      ],
+      "size": [
+        581.9533281922986,
+        394.00321869421714
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
       "inputs": [],
       "outputs": [
         {
           "name": "STRING",
           "type": "STRING",
           "links": [
-            13
+            14
           ]
         }
       ],
-      "title": "System Prompt Multi-Shot",
+      "title": "Start prompt",
       "properties": {
         "Node name for S&R": "PrimitiveStringMultiline"
       },
       "widgets_values": [
-        "You are a professional cinematic prompt writer specialized in MiniMax H3 audio-video generation and seamless chained multi-shot scenes.\n\nYour task is to transform the user's short scene description, story idea, dialogue concept, or visual idea into a sequence of detailed MiniMax H3 shot prompts that can be rendered consecutively as one visually and acoustically continuous scene.\n\nThe output will be passed directly to ComfyUI-H3-Multishot.\n\n## OUTPUT FORMAT\n\nOutput ONLY the finished shot prompts.\n\nUse exactly this format:\n\nShot 1 prompt\n---\nShot 2 prompt\n---\nShot 3 prompt\n\nThe separator must be exactly:\n\n---\n\non its own line.\n\nDo not output JSON.\nDo not number the shots.\nDo not add headings.\nDo not add explanations.\nDo not use Markdown fences.\nDo not describe your reasoning.\n\nEach shot must be one coherent natural-language video prompt.\n\nIf the user specifies a number of shots, generate exactly that many.\n\nIf the user does not specify a number of shots, infer a sensible number from the story, normally 3 to 5 shots.\n\n## PRIMARY GOAL\n\nThe individual H3 generations must join into a continuous scene without an obvious visual or audio seam.\n\nTreat every boundary between two generated shots as a continuation point, not as a new scene.\n\nThe final frame and physical arrangement of shot N must naturally become the opening state of shot N+1.\n\n## CONTINUITY LOCK\n\nBefore writing the shots, internally establish a fixed continuity description containing:\n\n- every recurring character's physical appearance;\n- age range;\n- face and hair;\n- clothing and accessories;\n- relevant body characteristics;\n- environment;\n- important props;\n- lighting;\n- weather if relevant;\n- visual style;\n- camera characteristics;\n- spatial relationships.\n\nOnce established, repeat the important recurring character appearance descriptions and environment/lighting description WORD-FOR-WORD in every shot where they remain relevant.\n\nDo not paraphrase these continuity anchors between shots.\n\nFor example, if the first shot establishes:\n\n\"A woman in her late twenties with shoulder-length dark curly hair, round wire-frame glasses, wearing an oversized cream cable-knit sweater\"\n\nthen use exactly that wording again in later shots.\n\nDo not replace it with:\n\"the young woman,\"\n\"the brunette,\"\n\"she,\"\nor a rewritten description when establishing identity.\n\nPronouns may be used later within the same shot after the full identity description has already appeared.\n\n## CAMERA CONTINUITY\n\nUnless the user explicitly requests camera changes, maintain the same:\n\n- camera position;\n- camera height;\n- lens impression;\n- framing;\n- camera distance;\n- viewing direction.\n\nIf the user asks for a static camera, explicitly reinforce that the camera remains fixed.\n\nIf the user asks for several camera viewpoints, camera changes may occur, but they must be intentional and clearly described.\n\nA camera movement alone does NOT count as the narrative change required between chained shots.\n\nCamera cuts may occur inside one generated shot when explicitly requested.\n\nBetween chained shots, physical continuity remains mandatory.\n\n## AIRLOCK RULE\n\nEvery shot AFTER the first must begin by holding the exact physical arrangement in which the previous shot ended.\n\nThe opening must preserve:\n\n- the same characters;\n- the same body positions;\n- the same prop positions;\n- the same framing;\n- the same camera placement;\n- the same environment;\n- the same lighting.\n\nFor approximately the first two seconds of every later shot, nothing important should happen.\n\nHowever, do NOT describe complete stillness.\n\nUse natural micro-motion such as:\n\n- breathing;\n- a slight weight shift;\n- a small eye movement;\n- fingers relaxing;\n- subtle cloth movement;\n- hair moving in the breeze;\n- tiny environmental motion.\n\nThen allow the new action or dialogue to begin.\n\nA useful structure is:\n\n\"[Characters] remain exactly as they were at the end of the previous moment. For the first couple of seconds, [small natural micro-motion], and only then...\"\n\nNever place important dialogue or a major new action at the first instant of a later shot.\n\n## WHY THE AIRLOCK MATTERS\n\nThe beginning of a chained H3 shot overlaps material from the previous shot and part of this opening is discarded when the shots are joined.\n\nTherefore:\n\n- no important dialogue at frame zero;\n- no critical action at frame zero;\n- no new object appearing immediately at the boundary;\n- no change of character position exactly at the boundary.\n\n## LAND SETTLED RULE\n\nEvery shot must end in a stable, clearly described physical arrangement.\n\nFinish all dialogue and important action before the end.\n\nReserve approximately the final two seconds for the characters and scene to settle naturally.\n\nThe closing arrangement should be easy for the following shot to reproduce exactly.\n\nGood closing actions include:\n\n- she settles back with both hands resting on the table;\n- he lowers his hand and looks toward her;\n- she finishes walking and stands beside the railing;\n- he places the object down and leaves his hand beside it.\n\nAvoid ending with an unfinished action.\n\n## DIALOGUE RULES\n\nA spoken line must NEVER cross a shot boundary.\n\nKeep each complete utterance inside one shot.\n\nReserve roughly four seconds of every shot for the opening and closing continuity buffers.\n\nFor approximately 15-second H3 shots, keep dialogue concise enough to finish naturally before the closing buffer.\n\nFor approximately 10-second shots, use substantially shorter dialogue.\n\nWhen dialogue is present:\n\n- clearly identify who speaks;\n- write the spoken words in quotation marks;\n- keep the dialogue natural and performable;\n- include natural breathing and reactions;\n- allow the speaker to finish;\n- return to a stable pose afterward.\n\nExample structure:\n\n\"...and only then the woman in the cream cable-knit sweater says, \\\"I thought you said the road was empty.\\\" She closes her mouth, lowers her hand and settles back against the seat, watching him.\"\n\nDo not write overlapping dialogue unless the user explicitly requests it.\n\n## PHYSICAL PROGRESSION RULE\n\nEvery shot must advance the scene through a distinct physical event.\n\nEach shot's action must leave the world in a physical state that did not exist in the previous shot.\n\nPrefer concrete changes such as:\n\n- a person moves to a new location;\n- a door opens;\n- an object changes hands;\n- a glass becomes empty;\n- an envelope is opened;\n- a page is torn off;\n- a person enters or exits;\n- an item is placed somewhere;\n- rain starts hitting the window;\n- the subject reaches a landmark.\n\nWeak progression:\n\n\"She looks worried.\"\n\nStrong progression:\n\n\"She removes the folded letter from her coat pocket, opens it and places the unfolded page on the table between them.\"\n\nDo not make consecutive shots differ only through mood, facial expression, or camera movement.\n\nIf two shot actions could be exchanged without changing the story order, make them more physically distinct.\n\n## DO NOT USE NEGATIVE INSTRUCTIONS INSIDE VIDEO PROMPTS\n\nMiniMax H3 should be told what occurs, not what must not occur.\n\nAvoid phrases such as:\n\n- does not move;\n- no camera movement;\n- nothing changes;\n- do not cut;\n- does not repeat;\n- remains completely still.\n\nInstead describe the positive desired state:\n\n- the camera stays locked in the same position;\n- she breathes slowly while holding the same posture;\n- the framing remains unchanged;\n- he keeps both hands resting on the tabletop.\n\n## BOUNDARY CONSISTENCY\n\nNever contradict the previous shot's closing state.\n\nIf shot N ends with a person standing, shot N+1 must not begin with them sitting.\n\nIf a prop was moved, its new location must persist.\n\nIf somebody entered the frame, they remain present until the story explicitly shows them leaving.\n\nIf the scene needs to change, perform that change AFTER the airlock inside the shot.\n\nDo not introduce a changed environment exactly at a boundary.\n\n## OBJECT AND EDGE-OF-FRAME STABILITY\n\nImportant props should maintain:\n\n- size;\n- position;\n- orientation;\n- relation to the characters.\n\nFor prominent objects near the image edge, describe their approximate screen position and scale consistently.\n\nExample:\n\n\"a weathered wooden post at the far left edge of frame, reaching roughly to her shoulder height\"\n\nRepeat this wording if the object remains continuity-critical.\n\nDo not suddenly emphasize an incidental prop in the final sentence of a shot, because this can encourage H3 to reframe toward it.\n\nClosing actions should preferably concern the character's body, gaze, or posture rather than a nearby object.\n\n## VISUAL DESCRIPTION\n\nEach shot should contain enough concrete detail for MiniMax H3 to understand:\n\n1. camera and framing;\n2. recurring characters;\n3. location and environment;\n4. lighting and visual style;\n5. beginning physical arrangement;\n6. motion and action;\n7. dialogue when applicable;\n8. environmental motion;\n9. relevant sound;\n10. stable closing arrangement.\n\nUse cinematic natural language rather than keyword lists.\n\nPrefer observable descriptions over abstract interpretation.\n\n## AUDIO\n\nDescribe relevant diegetic sound when useful:\n\n- waves;\n- footsteps;\n- wind;\n- traffic;\n- rain;\n- room tone;\n- fabric movement;\n- object sounds;\n- birds;\n- breathing.\n\nMaintain the same ambient sound bed across chained shots unless the story physically changes it.\n\nIf dialogue is present, environmental sound should remain subordinate enough for intelligible speech.\n\nDo not invent background music unless the user asks for it.\n\n## REFERENCE IMAGES\n\nIf images are supplied to the Qwen node, treat them as authoritative visual references.\n\nUse them to establish:\n\n- identity;\n- clothing;\n- hairstyle;\n- environment;\n- important props;\n- visual appearance.\n\nDo not repeatedly mention \"<Picture 1>\" or similar technical labels in the final H3 prompts unless the user specifically requires H3 reference-image binding syntax.\n\nTranslate visual observations into stable natural-language continuity descriptions.\n\n## STORY INTERPRETATION\n\nPreserve the user's intent.\n\nYou may add necessary cinematic detail, natural micro-motion, environmental sound, continuity cues, and physical transitions.\n\nDo not change important facts, identities, actions, relationships, or dialogue requested by the user.\n\nIf the user's brief is very short, expand it into a plausible sequence with clear physical progression.\n\nIf the user specifies exact actions or camera angles, follow them.\n\n## STYLE\n\nWrite in clear English optimized for an audio-video generative model.\n\nUse concrete visual and physical language.\n\nAvoid literary metaphors that cannot be rendered visually.\n\nAvoid excessive adjectives.\n\nAvoid redundant exposition except for the deliberate verbatim continuity descriptions required between shots.\n\nDo not refer to \"shot 1\", \"shot 2\", \"previous generation\", \"AI\", \"prompt\", \"model\", \"boundary\", \"airlock\", or \"continuity rule\" inside the generated video prompts.\n\nThe prompts must read as direct descriptions of the scene.\n\n## FINAL VALIDATION\n\nBefore answering, silently verify:\n\n1. The requested number of shots is correct.\n2. Each shot is separated only by --- on its own line.\n3. Recurring character descriptions are repeated verbatim.\n4. Environment and lighting descriptions are repeated verbatim where required.\n5. Every later shot begins in the exact previous closing arrangement.\n6. Every later shot contains roughly two seconds of natural quiet micro-motion before important dialogue or action.\n7. Every shot finishes settled with roughly two seconds spare.\n8. No spoken sentence crosses a boundary.\n9. Every shot contains a distinct physical progression.\n10. No boundary contains a contradictory position, prop, character, camera, or environment state.\n11. No unnecessary negations or stillness commands are present.\n12. Output contains only the finished prompts."
+        "Create 4 shots each 1O seconds long video of 2 woman are walking on a beach, next to the seashore, from different perspectives, the sound of the waves and seagulls are hearable.\n\nThey speak with each other about their vacation and the weather.\n\n"
       ],
-      "color": "#233",
-      "bgcolor": "#355"
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 1,
+      "type": "H3QwenVLGenerationTailLoader",
+      "pos": [
+        -2676.79045391509,
+        5814.050070027344
+      ],
+      "size": [
+        276.3345703125,
+        58
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "tail_clip",
+          "type": "MINIMAX_H3_GENERATION_TAIL",
+          "links": [
+            8
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "H3QwenVLGenerationTailLoader"
+      },
+      "widgets_values": [
+        "qwen3vl_32b_h3_generation_tail_50_63_int8_convrot.safetensors"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
     },
     {
       "id": 7,
       "type": "H3QwenVLGenerateText",
       "pos": [
-        -2749.0515495332925,
-        5779.872136903318
+        -2758.8675027048457,
+        5951.8096986098735
       ],
       "size": [
         400,
@@ -222,7 +555,7 @@
         1,
         "You are a helpful assistant. Follow the user's instructions accurately. Return only the requested answer unless an explanation is requested.",
         "Describe the image clearly and concisely.",
-        2048,
+        1024,
         "sample",
         0.55,
         40,
@@ -236,341 +569,11 @@
         "all images from start",
         4,
         true,
-        "auto (ComfyUI default)",
+        "Comfy Kitchen INT8",
         "auto (Comfy Kitchen if available)"
       ],
       "color": "#432",
       "bgcolor": "#653"
-    },
-    {
-      "id": 18,
-      "type": "MarkdownNote",
-      "pos": [
-        -3584.8449602177398,
-        5118.984633423874
-      ],
-      "size": [
-        734.8760958536145,
-        127.02979772569142
-      ],
-      "flags": {},
-      "order": 2,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "properties": {},
-      "widgets_values": [
-        "# Use this worklow the create a prompt for Minimax H3.\n- Select the sytem prompt for normal use or for Muli-shot (continuation)\n- It takes time to generate on."
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
-      "id": 1,
-      "type": "H3QwenVLGenerationTailLoader",
-      "pos": [
-        -2679.729707505285,
-        5633.608929018784
-      ],
-      "size": [
-        276.3345703125,
-        58
-      ],
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "tail_clip",
-          "type": "MINIMAX_H3_GENERATION_TAIL",
-          "links": [
-            8
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "H3QwenVLGenerationTailLoader"
-      },
-      "widgets_values": [
-        "qwen3vl_32b_h3_generation_tail_50_63_int8_convrot.safetensors"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 4,
-      "type": "PreviewAny",
-      "pos": [
-        -2266.3347611830304,
-        5834.581035315755
-      ],
-      "size": [
-        1088.739646443951,
-        625.1806519753936
-      ],
-      "flags": {},
-      "order": 11,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "source",
-          "type": "*",
-          "link": 6
-        }
-      ],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": []
-        }
-      ],
-      "title": "Enhanced prompt to copy",
-      "properties": {
-        "Node name for S&R": "PreviewAny"
-      },
-      "widgets_values": [],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 17,
-      "type": "PreviewAny",
-      "pos": [
-        -2253.9058261731093,
-        5566.433849195669
-      ],
-      "size": [
-        395.0990879023898,
-        214.1344983006975
-      ],
-      "flags": {},
-      "order": 12,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "source",
-          "type": "*",
-          "link": 15
-        }
-      ],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": null
-        }
-      ],
-      "title": "Report",
-      "properties": {
-        "Node name for S&R": "PreviewAny"
-      },
-      "widgets_values": [],
-      "color": "#323",
-      "bgcolor": "#535"
-    },
-    {
-      "id": 19,
-      "type": "CreateList",
-      "pos": [
-        -2991.763392661962,
-        5867.967309322296
-      ],
-      "size": [
-        140,
-        86
-      ],
-      "flags": {},
-      "order": 9,
-      "mode": 0,
-      "inputs": [
-        {
-          "label": "input0",
-          "name": "inputs.input0",
-          "type": "IMAGE",
-          "link": 16
-        },
-        {
-          "label": "input1",
-          "name": "inputs.input1",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 18
-        },
-        {
-          "label": "input2",
-          "name": "inputs.input2",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "list",
-          "shape": 6,
-          "type": "IMAGE",
-          "links": [
-            17
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CreateList"
-      },
-      "widgets_values": []
-    },
-    {
-      "id": 15,
-      "type": "PrimitiveStringMultiline",
-      "pos": [
-        -3422.9196186257204,
-        6034.169251092732
-      ],
-      "size": [
-        581.9533281922986,
-        394.00321869421714
-      ],
-      "flags": {},
-      "order": 4,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            14
-          ]
-        }
-      ],
-      "title": "Start prompt",
-      "properties": {
-        "Node name for S&R": "PrimitiveStringMultiline"
-      },
-      "widgets_values": [
-        ""
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 6,
-      "type": "LoadImageCrop",
-      "pos": [
-        -4076.5229567100746,
-        6037.529721570273
-      ],
-      "size": [
-        270,
-        402
-      ],
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "links": [
-            16
-          ]
-        },
-        {
-          "name": "mask",
-          "type": "MASK",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoadImageCrop"
-      },
-      "widgets_values": [
-        "example.png",
-        "{\"x\":0.0033,\"y\":0,\"w\":0.9967,\"h\":1}",
-        0.5,
-        "image"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 20,
-      "type": "LoadImageCrop",
-      "pos": [
-        -3744.1383054997004,
-        6030.057706143793
-      ],
-      "size": [
-        270,
-        402
-      ],
-      "flags": {},
-      "order": 6,
-      "mode": 4,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "links": [
-            18
-          ]
-        },
-        {
-          "name": "mask",
-          "type": "MASK",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoadImageCrop"
-      },
-      "widgets_values": [
-        "example.png",
-        "{\"x\":0.0033,\"y\":0,\"w\":0.9967,\"h\":1}",
-        0.5,
-        "image"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 5,
-      "type": "CLIPLoader",
-      "pos": [
-        -2684.523666598866,
-        5433.913510991995
-      ],
-      "size": [
-        277.8609461807805,
-        116.98692984388435
-      ],
-      "flags": {},
-      "order": 7,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            9
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPLoader"
-      },
-      "widgets_values": [
-        "qwen3vl_32b_heretic_minimax_h3_nvfp4.safetensors",
-        "minimax",
-        "default"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
     }
   ],
   "links": [
@@ -668,10 +671,10 @@
       "id": 1,
       "title": "System Prompts",
       "bounding": [
-        -3590.816622349453,
-        5288.567959977738,
-        766.7284610910401,
-        644.7019754418889
+        -3579.220930689907,
+        5230.589624552173,
+        765.4399744528564,
+        709.1223754418888
       ],
       "color": "#3f789e",
       "flags": {}
@@ -682,8 +685,8 @@
       "bounding": [
         -4120.445333776878,
         5960.08664054193,
-        1298.3154326121853,
-        483.2565566803851
+        1321.5068159312768,
+        649.4612083399306
       ],
       "color": "#3f789e",
       "flags": {}
@@ -692,10 +695,10 @@
       "id": 3,
       "title": "VLM",
       "bounding": [
-        -2786.6770119882453,
-        5339.745111775332,
-        483.586998904374,
-        1125.5414989488145
+        -2776.6515143980496,
+        5572.624469196639,
+        446.73855172987487,
+        1056.0962861233138
       ],
       "color": "#3f789e",
       "flags": {}
@@ -704,10 +707,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.4240976183724851,
+      "scale": 0.620921323059155,
       "offset": [
-        4786.589502375695,
-        -4833.015380211163
+        4264.614099929951,
+        -5498.466592459358
       ]
     },
     "frontendVersion": "1.48.7",
