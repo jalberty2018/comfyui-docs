@@ -67,4 +67,4 @@
 
 - [ComfyUI-H3-multishot](https://github.com/jlucasmcrell/ComfyUI-H3-Multishot)
 - [ComfyUI-H3-Motion-Context](https://github.com/NikoDemon80/ComfyUI-H3-Motion-Context)
-- [ComfyUI_MiniMax_H3_Extender](https://github.com/tritant/ComfyUI_MiniMax_H3_Extender)
+- [MiniMax H3 Audio T8](https://github.com/T8mars/comfyui-minimax-h3-audio-T8)
