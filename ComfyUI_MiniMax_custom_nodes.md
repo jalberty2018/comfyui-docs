@@ -38,13 +38,12 @@
 
 ### Prompt builders
 
-- [ComfyUI-MiniMax-H3-Guide](https://github.com/ethanfel/ComfyUI-MiniMax-H3-Guide)
 - [ComfyUI-Fantastic-MiniMaxH3-PromptBuilder](https://github.com/Adudeguyman/ComfyUI-Fantastic-MiniMaxH3-PromptBuilder)
 
 ### Prompt generators
 
 - [ComfyUI-H3-Qwen3VL-TextGen](https://github.com/ethanfel/ComfyUI-H3-Qwen3VL-TextGen.git)
-- [ComfyUI-MiniMax-H3-Prompt-Enhancer](https://github.com/hyukudan/ComfyUI-MiniMax-H3-Prompt-Enhancer)
+- [comfyui-minimax-h3-prompt-enhancer-T8](https://github.com/jalberty2018/comfyui-minimax-h3-prompt-enhancer-T8)
 
 ### Sampling
 

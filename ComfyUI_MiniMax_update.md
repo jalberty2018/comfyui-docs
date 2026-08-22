@@ -14,8 +14,10 @@
 - Fixed THRESHOLD typo.
 - Updated configuration for RTX PRO 6000 for higher quality.
 - Changed configuration diffusion model LVRAM BACKWELL for lora compatibility.
+- Added local llama-cpp (cli,server) support
 - [ComfyUI-H3-Qwen3VL-TextGen](https://github.com/ethanfel/ComfyUI-H3-Qwen3VL-TextGen.git)
 - [MiniMax H3 Audio T8](https://github.com/T8mars/comfyui-minimax-h3-audio-T8)
+- [comfyui-minimax-h3-prompt-enhancer-T8](https://github.com/jalberty2018/comfyui-minimax-h3-prompt-enhancer-T8)
 
 ## 13082026
 
@@ -36,7 +38,6 @@
 ## 07082026
 
 - ComfyUI 0.30.0
-- [ComfyUI-MiniMax-H3-Guide](https://github.com/ethanfel/ComfyUI-MiniMax-H3-Guide)
 - [ComfyUI-SolAttn_triton](https://github.com/kijai/ComfyUI-SolAttn_triton)
 - [ComfyUI-Fantastic-MiniMaxH3-PromptBuilder](https://github.com/Adudeguyman/ComfyUI-Fantastic-MiniMaxH3-PromptBuilder)
 - [ComfyUI_MiniMaxH3_Director](https://github.com/AIMixer/ComfyUI_MiniMaxH3_Director)

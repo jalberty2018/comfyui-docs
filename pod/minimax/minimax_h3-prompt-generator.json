@@ -1,7 +1,7 @@
 {
   "id": "0707ffc9-90d5-4138-bd0f-da02dcb9b649",
   "revision": 0,
-  "last_node_id": 20,
+  "last_node_id": 21,
   "last_link_id": 18,
   "nodes": [
     {
@@ -572,6 +572,30 @@
       "properties": {},
       "widgets_values": [
         "# Use this worklow the create a prompt for Minimax H3.\n\n- Select the sytem prompt for normal use or for Muli-shot (continuation)\n- It takes a long time to generate something.\n\n# To speed things up use an external application like [textgen](https://github.com/oobabooga/textgen)\n\n## Model \n\n- [Qwen3 VL 32B Instruct ultra uncensored heretic](https://huggingface.co/mradermacher/Qwen3-VL-32B-Instruct-ultra-uncensored-heretic-GGUF)\n\n## 24 GB VRAM (tested on RTX 4090) \n\n- mradermacher/Qwen3-VL-32B-Instruct-ultra-uncensored-heretic-GGUF Qwen3-VL-32B-Instruct-ultra-uncensored-heretic.Q4_K_M.gguf\n- mradermacher/Qwen3-VL-32B-Instruct-ultra-uncensored-heretic-GGUF Qwen3-VL-32B-Instruct-ultra-uncensored-heretic.mmproj-Q8_0.gguf\n\n## 48 GB VRAM (tested on L40S)\n\n- mradermacher/Qwen3-VL-32B-Instruct-ultra-uncensored-heretic-GGUF Qwen3-VL-32B-Instruct-ultra-uncensored-heretic.Q5_K_M.gguf\n- mradermacher/Qwen3-VL-32B-Instruct-ultra-uncensored-heretic-GGUF Qwen3-VL-32B-Instruct-ultra-uncensored-heretic.mmproj-Q8_0.gguf"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 21,
+      "type": "MarkdownNote",
+      "pos": [
+        -4346.711212127599,
+        5965
+      ],
+      "size": [
+        900,
+        590
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Required H3 generation tail",
+      "properties": {},
+      "widgets_values": [
+        "# Download the H3 generation tail before using this workflow\n\nThis prompt-generator workflow uses `H3QwenVLGenerationTailLoader` and requires:\n\n`qwen3vl_32b_h3_generation_tail_50_63_int8_convrot.safetensors`\n\nDownload it from Hugging Face to the directory specified by the provisioning documentation:\n\n```bash\nmkdir -p /workspace/ComfyUI/models/text_encoders/H3\n\nhf download ethanfel/Qwen3-VL-32B-Ultra-Heretic-MiniMax-H3-ComfyUI-INT8-ConvRot \\\n  qwen3vl_32b_h3_generation_tail_50_63_int8_convrot.safetensors \\\n  --local-dir /workspace/ComfyUI/models/text_encoders/H3\n```\n\nRestart ComfyUI or refresh the loader after the download.\n\n## Provisioning documentation inside the pod\n\n1. Start the pod and wait until code-server is ready.\n2. In RunPod, select **Connect** and open the HTTP service on port **9000**, or use `https://<POD_ID>-9000.proxy.runpod.net`.\n3. Sign in with the pod's `PASSWORD` environment variable.\n4. Open `/workspace/README.md` in the code-server Explorer.\n5. Open `/workspace/docs/provisioning/hf_MiniMax-H3.md` and see **Optional uncensored INT8 ConvRot text encoder** for the complete provisioning command."
       ],
       "color": "#432",
       "bgcolor": "#653"
