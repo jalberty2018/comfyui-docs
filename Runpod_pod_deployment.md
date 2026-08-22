@@ -82,6 +82,8 @@ The extraction ends with a message like this in the **Logs** section:
 
 #### Example excellent performance
 
+![perfect](images/runpod_deploy_comfyuionworkspace_perfect.jpg)
+
 ![good](images/runpod_deploy_comfyuionworkspace.jpg)
 
 #### Example acceptable/slow performance

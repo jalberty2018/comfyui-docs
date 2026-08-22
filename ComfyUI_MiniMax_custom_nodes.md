@@ -21,6 +21,7 @@
 
 ### Downloaders
 
+- [comfyui-model-linker](https://github.com/kianxyzw/comfyui-model-linker)
 - [LoRA Manager](https://github.com/willmiao/ComfyUI-Lora-Manager)
 
 ### Video / Upscale
@@ -43,6 +44,7 @@
 ### Prompt generators
 
 - [ComfyUI-H3-Qwen3VL-TextGen](https://github.com/ethanfel/ComfyUI-H3-Qwen3VL-TextGen.git)
+- [ComfyUI-MiniMax-H3-Prompt-Enhancer](https://github.com/hyukudan/ComfyUI-MiniMax-H3-Prompt-Enhancer)
 
 ### Sampling
 
