@@ -18,11 +18,12 @@ Use this template for MiniMax H3 text-to-video, image-to-video, first/last-frame
 - Models downloads depending on VRAM and architecture (Ada Lovelace / Blackwell).
 - CUDA 12.8 runtime with compiled attention acceleration.
 - Authentication for ComfyUI, Code Server, Hugging Face and CivitAI.
-- Uncensored heretic QWEN VL text encoder.
+- Uncensored heretic QWEN VL text encoders for inference and prompt enhancement.
 - LoRA Manager
 - Installed custom nodes and accelerators.
 - Example workflows.
 - 4-step , 8-step Turbo-loras (turbo and lightx2v) included
+- llama-cpp native and llama-cpp-python with CUDA 12.8 support.
 
 ## 📦 Deployment on RunPod
 

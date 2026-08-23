@@ -38,42 +38,6 @@
       "bgcolor": "#353"
     },
     {
-      "id": 5,
-      "type": "MiniMaxH3MediaLoader",
-      "pos": [
-        -375.1304438684536,
-        -98.98241578713262
-      ],
-      "size": [
-        660,
-        562
-      ],
-      "flags": {},
-      "order": 1,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "references",
-          "type": "H3_REFS",
-          "links": [
-            5
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "MiniMaxH3MediaLoader"
-      },
-      "widgets_values": [
-        "[{\"kind\":\"picture\",\"file\":\"minimax_h3/studio-portrait-of-a-pretty-eleven-years-old-girl-JB4G80_13338.jpg [input]\",\"name\":\"studio-portrait-of-a-pretty-eleven-years-old-girl-JB4G80.jpg\",\"duration\":null,\"width\":866,\"height\":1390,\"has_audio\":false,\"audio_mode\":\"off\",\"uid\":\"mmt4tx3du4\"},{\"kind\":\"picture\",\"file\":\"minimax_h3/dies-ist-ein-portrat-eines-schonen-11-jahrigen-madchens-mit-langen-haaren-das-ein-weisses-armelloses-oberteil-und-weisse_17537 [input]\",\"name\":\"dies-ist-ein-portrat-eines-schonen-11-jahrigen-madchens-mit-langen-haaren-das-ein-weisses-armelloses-oberteil-und-weisse-shorts-tragt-2xarm49.jpg\",\"duration\":null,\"width\":866,\"height\":1390,\"has_audio\":false,\"audio_mode\":\"off\",\"uid\":\"mmt4tx6lc5\"},{\"kind\":\"picture\",\"file\":\"minimax_h3/528537.jpg [input]\",\"name\":\"528537.jpg\",\"duration\":null,\"width\":1920,\"height\":1080,\"has_audio\":false,\"audio_mode\":\"off\",\"uid\":\"mmt4txju16\"}]",
-        null,
-        null,
-        ""
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
       "id": 6,
       "type": "MiniMaxH3ReferenceSplitter",
       "pos": [
@@ -85,7 +49,7 @@
         366
       ],
       "flags": {},
-      "order": 3,
+      "order": 2,
       "mode": 0,
       "inputs": [
         {
@@ -223,7 +187,7 @@
         976
       ],
       "flags": {},
-      "order": 4,
+      "order": 3,
       "mode": 0,
       "inputs": [
         {
@@ -383,7 +347,7 @@
         763.2573099523864
       ],
       "flags": {},
-      "order": 5,
+      "order": 4,
       "mode": 0,
       "inputs": [
         {
@@ -407,28 +371,40 @@
       "bgcolor": "#335"
     },
     {
-      "id": 8,
-      "type": "MarkdownNote",
+      "id": 5,
+      "type": "MiniMaxH3MediaLoader",
       "pos": [
-        -375.9027055154836,
-        -559.7618340108924
+        -375.1304438684536,
+        -98.98241578713262
       ],
       "size": [
-        736.8465247201775,
-        398.9519132573623
+        660,
+        562
       ],
       "flags": {},
-      "order": 2,
+      "order": 1,
       "mode": 0,
       "inputs": [],
-      "outputs": [],
-      "title": "Local Qwen model setup",
-      "properties": {},
-      "widgets_values": [
-        "# Download the local Qwen model and MMProj\n\nThe MiniMax H3 Prompt Enhancer expects both GGUF files in:\n\n`/workspace/ComfyUI/models/LLM/Qwen3.8`\n\nOpen a terminal in the pod and run:\n\n```bash\nmkdir -p /workspace/ComfyUI/models/LLM/Qwen3.8\n\nhf download theresa00l/Qwen3.8-27B-Uncensored-FP8-Q4_K_M-GGUF \\\n  qwen3.8-27b-uncensored-fp8-q4_k_m.gguf \\\n  --local-dir /workspace/ComfyUI/models/LLM/Qwen3.8\n\nhf download unsloth/Qwen3.8-27B-GGUF \\\n  mmproj-F16.gguf \\\n  --local-dir /workspace/ComfyUI/models/LLM/Qwen3.8\n```\n\nThe model and projector together require approximately 18 GB. Restart ComfyUI or refresh the node after downloading them.\n\n## Documentation available inside the pod\n\n1. Start the pod and wait until code-server is ready.\n2. In RunPod, select **Connect** and open the HTTP service on port **9000**. You can also use `https://<POD_ID>-9000.proxy.runpod.net`.\n3. Sign in with the `PASSWORD` environment variable configured for the pod.\n4. Open `/workspace/README.md` in the code-server Explorer.\n5. For the complete Qwen, MMProj and llama.cpp test instructions, open `/workspace/docs/provisioning/hf_vlm.md`."
+      "outputs": [
+        {
+          "name": "references",
+          "type": "H3_REFS",
+          "links": [
+            5
+          ]
+        }
       ],
-      "color": "#432",
-      "bgcolor": "#653"
+      "properties": {
+        "Node name for S&R": "MiniMaxH3MediaLoader"
+      },
+      "widgets_values": [
+        "[]",
+        null,
+        null,
+        ""
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
     }
   ],
   "links": [
@@ -533,10 +509,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.7383815209413683,
+      "scale": 1.1891708232912845,
       "offset": [
-        936.1904973259217,
-        691.9703241383967
+        559.0960898573927,
+        3.5966322144190888
       ]
     },
     "frontendVersion": "1.48.7",
