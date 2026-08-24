@@ -35,9 +35,11 @@ Use this template for MiniMax H3 text-to-video, image-to-video, first/last-frame
 
 ## Ref2va
 
-### Enhanced standard workflow Reference to video/audio (Ref2va) with or without turbo
+### Enhanced standard workflow Reference to video/audio (Ref2va)
 
-![MiniMax H3 workflow Ref2va](images/ai-generated-MiniMax.jpg)
+![MiniMax H3 workflow Ref2va-1](images/ai-generated-MiniMax.jpg)
+
+![MiniMax H3 workflow Ref2va-1](images/ai-generated-Ref2VA.jpg)
 
 ### Multi-Shot/Motion-Context Workflow with 3 x 10 seconds starting from a reference image
 
@@ -45,11 +47,11 @@ Use this template for MiniMax H3 text-to-video, image-to-video, first/last-frame
 
 ## fl2va
 
-### Enhanced standard workflow image to video/audio with or without turbo
+### Enhanced standard workflow image to video/audio
 
 ![MiniMax H3 workflow i2v](images/ai-generated-MiniMax-i2v.jpg) with or without turbo
 
-### Enhanced standard workflow text to video/audio with or without turbo
+### Enhanced standard workflow text to video/audio
 
 ![MiniMax H3 workflow t2v](images/ai-generated-MiniMax-t2v.jpg)
 
@@ -59,9 +61,13 @@ Use this template for MiniMax H3 text-to-video, image-to-video, first/last-frame
 
 ![MiniMax H3 workflow all in one](images/ai-generated-MiniMax-director.jpg)
 
-### Prompt generator using uncensored heretic Minimax-H2 QWEN-VL with tail
+### Prompt generator using uncensored heretic Minimax-H2 QWEN-VL with generation tail
 
 ![MiniMax H3 workflow prompt generator](images/ai-generated-MiniMax-prompt-generator.jpg)
+
+### Prompt generator using Qwen3.8-27B-Uncensored with llama-cpp
+
+![MiniMax H3 workflow prompt generator](images/ai-generated-MiniMax-prompt-enhancer.jpg)
 
 ### Fantastic prompt builder & media manager
 
@@ -78,6 +84,14 @@ Use this template for MiniMax H3 text-to-video, image-to-video, first/last-frame
 <div style="text-align: center;">
   <video controls preload="metadata" style="max-width: 50%; height: auto;">
     <source src="/video/Video_tickling_princess.mp4" type="video/mp4">
+  </video>
+</div>
+
+### **Enhanced**
+
+<div style="text-align: center;">
+  <video controls preload="metadata" style="max-width: 50%; height: auto;">
+    <source src="/video/Video_girls_in_love.mp4" type="video/mp4">
   </video>
 </div>
 
