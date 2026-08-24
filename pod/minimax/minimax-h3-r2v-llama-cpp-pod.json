@@ -1,7 +1,7 @@
 {
   "id": "5e5babfd-0871-4eaf-96bb-a03b238ee51f",
   "revision": 0,
-  "last_node_id": 8,
+  "last_node_id": 9,
   "last_link_id": 16,
   "nodes": [
     {
@@ -49,7 +49,7 @@
         366
       ],
       "flags": {},
-      "order": 2,
+      "order": 3,
       "mode": 0,
       "inputs": [
         {
@@ -347,7 +347,7 @@
         763.2573099523864
       ],
       "flags": {},
-      "order": 4,
+      "order": 5,
       "mode": 0,
       "inputs": [
         {
@@ -405,6 +405,30 @@
       ],
       "color": "#232",
       "bgcolor": "#353"
+    },
+    {
+      "id": 9,
+      "type": "MarkdownNote",
+      "pos": [
+        -1039.5518869462198,
+        -86.14696174120935
+      ],
+      "size": [
+        622.0899908441588,
+        480.051690237922
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "RunPod templates and manual provisioning",
+      "properties": {},
+      "widgets_values": [
+        "# RunPod templates\n\nMiniMax H3 FL2VA and Ref2VA each have two RunPod templates:\n\n- **Plus tail:** provisions the H3 generation tail.\n- **Plus QWEN prompt enhancer:** provisions the local Qwen3.8 GGUF prompt enhancer used by this workflow.\n\n## FL2VA\n\n- [Deploy MiniMax H3 FL2VA plus tail](https://console.runpod.io/deploy?template=v7b5g03csk&ref=se4tkc5o)\n- [Deploy MiniMax H3 FL2VA plus prompt enhancer](https://console.runpod.io/hub/template/a1nkufhzxq?ref=se4tkc5o)\n\n## Ref2VA\n\n- [Deploy MiniMax H3 Ref2VA plus tail](https://console.runpod.io/deploy?template=6qtfx7lxgc&ref=se4tkc5o)\n- [Deploy MiniMax H3 Ref2VA plus prompt enhancer](https://console.runpod.io/hub/template/pcsqepl6kt?ref=se4tkc5o)\n\n# Manual Qwen3.8 prompt-enhancer download\n\nThe **plus prompt enhancer** template provisions these files automatically. For manual installation:\n\n```bash\nmkdir -p /workspace/ComfyUI/models/LLM/Qwen3.8\n\nhf download theresa00l/Qwen3.8-27B-Uncensored-FP8-Q4_K_M-GGUF \\\n  qwen3.8-27b-uncensored-fp8-q4_k_m.gguf \\\n  --local-dir /workspace/ComfyUI/models/LLM/Qwen3.8\n\nhf download unsloth/Qwen3.8-27B-GGUF \\\n  mmproj-F16.gguf \\\n  --local-dir /workspace/ComfyUI/models/LLM/Qwen3.8\n```\n\nRestart ComfyUI or refresh the node after downloading.\n"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
     }
   ],
   "links": [
@@ -509,10 +533,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 1.1891708232912845,
+      "scale": 0.3789064718226001,
       "offset": [
-        559.0960898573927,
-        3.5966322144190888
+        2946.5481130932676,
+        1350.1193888964854
       ]
     },
     "frontendVersion": "1.48.7",

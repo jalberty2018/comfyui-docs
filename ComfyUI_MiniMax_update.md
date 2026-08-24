@@ -15,6 +15,7 @@
 - Updated configuration for RTX PRO 6000 for higher quality.
 - Changed configuration diffusion model LVRAM BACKWELL for lora compatibility.
 - Added local llama-cpp (cli,server) support
+- Split runpod prompt enhancement templates for tail and llma-cpp zie deployment for more information
 - [ComfyUI-H3-Qwen3VL-TextGen](https://github.com/ethanfel/ComfyUI-H3-Qwen3VL-TextGen.git)
 - [MiniMax H3 Audio T8](https://github.com/T8mars/comfyui-minimax-h3-audio-T8)
 - [comfyui-minimax-h3-prompt-enhancer-T8](https://github.com/jalberty2018/comfyui-minimax-h3-prompt-enhancer-T8)

@@ -4,14 +4,23 @@
 
 ## 🚀 Template
 
-
-| Checkpoint | Supported Tasks | Input Conditions | Output | 
+| Template | Tasks | Inputs | Output |
 |---|---|---|---|
-| MiniMax-H3 Base FL2VA | Text-to-Audio-Video (`t2va`), First/Last-Frame-to-Audio-Video (`fl2va`) | Text; optional first frame, last frame, or both | Video and audio |
-| MiniMax-H3 Base Ref2VA | Reference-to-Audio-Video (`ref2va`) | Text with reference images, videos, and/or audio | Video and audio |
+| MiniMax H3 FL2VA | Text-to-video, image-to-video and first/last-frame-to-video | Text with optional first and/or last frame | Video with audio |
+| MiniMax H3 Ref2VA | Reference-to-video | Text with reference images, video and/or audio | Video with audio |
 
-- [**👉 One-click Deploy on RunPod MiniMax H3 FL2VA  **](https://console.runpod.io/deploy?template=v7b5g03csk&ref=se4tkc5o)
-- [**👉 One-click Deploy on RunPod MiniMax H3 Ref2VA **](https://console.runpod.io/deploy?template=6qtfx7lxgc&ref=se4tkc5o)
+### **Two prompt-enhancement options are available**
+
+- The **tail** uses the MiniMax H3 text encoder and is slower.
+- The **QWEN prompt enhancer** uses a second, separate Qwen model together with llama.cpp for faster prompt generation.
+- Both are only needed for prompt enhancement, not for inference with the MiniMax H3 model itself.
+
+### Links to the templates
+
+- [**👉 One-click Deploy MiniMax H3 FL2VA plus tail**](https://console.runpod.io/deploy?template=v7b5g03csk&ref=se4tkc5o)
+- [**👉 One-click Deploy MiniMax H3 Ref2VA plus tail**](https://console.runpod.io/deploy?template=6qtfx7lxgc&ref=se4tkc5o)
+- [**👉 One-click Deploy MiniMax H3 FL2VA plus prompt enhancer**](https://console.runpod.io/hub/template/a1nkufhzxq?ref=se4tkc5o)
+- [**👉 One-click Deploy MiniMax H3 Ref2VA plus prompt enhancer**](https://console.runpod.io/hub/template/pcsqepl6kt?ref=se4tkc5o)
 
 ## 🏷️ Container date tags
 
