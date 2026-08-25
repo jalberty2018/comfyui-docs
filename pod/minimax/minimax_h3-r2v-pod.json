@@ -2,7 +2,7 @@
   "id": "e3f2b845-8f2c-4b5a-9caf-eac1029d3e7e",
   "revision": 0,
   "last_node_id": 178,
-  "last_link_id": 314,
+  "last_link_id": 315,
   "nodes": [
     {
       "id": 148,
@@ -492,7 +492,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 37,
+      "order": 35,
       "mode": 0,
       "inputs": [
         {
@@ -805,7 +805,7 @@
         106
       ],
       "flags": {},
-      "order": 38,
+      "order": 37,
       "mode": 0,
       "inputs": [
         {
@@ -1512,7 +1512,7 @@
           "name": "MODEL",
           "type": "MODEL",
           "links": [
-            290
+            315
           ]
         }
       ],
@@ -1527,176 +1527,6 @@
       "bgcolor": "#535"
     },
     {
-      "id": 145,
-      "type": "SpectrumApplyMiniMaxH3",
-      "pos": [
-        -363.180052100346,
-        3837.7557983846473
-      ],
-      "size": [
-        330.669921875,
-        538
-      ],
-      "flags": {},
-      "order": 32,
-      "mode": 4,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 314
-        }
-      ],
-      "outputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "links": [
-            311
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "SpectrumApplyMiniMaxH3"
-      },
-      "widgets_values": [
-        true,
-        0.5,
-        4,
-        0.1,
-        2,
-        0.75,
-        5,
-        3,
-        8,
-        false,
-        "system_ram",
-        true,
-        false,
-        false,
-        true,
-        0,
-        "system_ram",
-        "off",
-        0.65,
-        false,
-        false
-      ],
-      "color": "#2a363b",
-      "bgcolor": "#3f5159"
-    },
-    {
-      "id": 142,
-      "type": "SolAttnPatch",
-      "pos": [
-        -1061.637761574673,
-        3820.2386291199714
-      ],
-      "size": [
-        270,
-        342
-      ],
-      "flags": {},
-      "order": 28,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 290
-        },
-        {
-          "name": "tau_profile",
-          "shape": 7,
-          "type": "STRING",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            313
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "SolAttnPatch"
-      },
-      "widgets_values": [
-        1.2,
-        0.2,
-        0.9,
-        4096,
-        true,
-        "exact_kv_and_rows",
-        true,
-        "3d",
-        true,
-        false,
-        false,
-        "0,-1"
-      ],
-      "color": "#2a363b",
-      "bgcolor": "#3f5159"
-    },
-    {
-      "id": 178,
-      "type": "MiniMaxH3ScheduledSolAttentionPatch",
-      "pos": [
-        -749.5700410547547,
-        3838.3738567264636
-      ],
-      "size": [
-        322.6548828125,
-        342
-      ],
-      "flags": {},
-      "order": 30,
-      "mode": 4,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 313
-        }
-      ],
-      "outputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "links": [
-            314
-          ]
-        },
-        {
-          "name": "tau_graph",
-          "type": "IMAGE",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "MiniMaxH3ScheduledSolAttentionPatch"
-      },
-      "widgets_values": [
-        true,
-        1.3,
-        0.8,
-        "linear",
-        4096,
-        false,
-        0,
-        "diag",
-        false,
-        false,
-        "exact_kv",
-        ""
-      ],
-      "color": "#233",
-      "bgcolor": "#355"
-    },
-    {
       "id": 163,
       "type": "Lora Loader (LoraManager)",
       "pos": [
@@ -1708,7 +1538,7 @@
         585.8718694029803
       ],
       "flags": {},
-      "order": 35,
+      "order": 32,
       "mode": 0,
       "inputs": [
         {
@@ -1771,6 +1601,124 @@
       ],
       "color": "#323",
       "bgcolor": "#535"
+    },
+    {
+      "id": 178,
+      "type": "MiniMaxH3ScheduledSolAttentionPatch",
+      "pos": [
+        -978.3657462764897,
+        3825.7506574423187
+      ],
+      "size": [
+        322.6548828125,
+        342
+      ],
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 315
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            314
+          ]
+        },
+        {
+          "name": "tau_graph",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MiniMaxH3ScheduledSolAttentionPatch"
+      },
+      "widgets_values": [
+        true,
+        1.3,
+        0.8,
+        "linear",
+        4096,
+        false,
+        0,
+        "diag",
+        false,
+        false,
+        "exact_kv",
+        "0,-1"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 145,
+      "type": "SpectrumApplyMiniMaxH3",
+      "pos": [
+        -363.180052100346,
+        3837.7557983846473
+      ],
+      "size": [
+        330.669921875,
+        634
+      ],
+      "flags": {},
+      "order": 30,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 314
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            311
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SpectrumApplyMiniMaxH3"
+      },
+      "widgets_values": [
+        false,
+        0.5,
+        4,
+        0.1,
+        2,
+        0.75,
+        5,
+        3,
+        8,
+        false,
+        "system_ram",
+        true,
+        false,
+        false,
+        true,
+        0,
+        "system_ram",
+        "off",
+        0.65,
+        false,
+        false,
+        "coordinate_rls",
+        "hard_clip",
+        0.4,
+        "no_attenuation"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
     }
   ],
   "links": [
@@ -1919,14 +1867,6 @@
       "MODEL"
     ],
     [
-      290,
-      141,
-      0,
-      142,
-      0,
-      "MODEL"
-    ],
-    [
       293,
       163,
       0,
@@ -2055,18 +1995,18 @@
       "SAMPLER"
     ],
     [
-      313,
-      142,
-      0,
-      178,
-      0,
-      "MODEL"
-    ],
-    [
       314,
       178,
       0,
       145,
+      0,
+      "MODEL"
+    ],
+    [
+      315,
+      141,
+      0,
+      178,
       0,
       "MODEL"
     ]
@@ -2141,10 +2081,10 @@
     "VHS_MetadataImage": true,
     "VHS_KeepIntermediate": true,
     "ds": {
-      "scale": 0.5070025238785836,
+      "scale": 0.8165326347316978,
       "offset": [
-        2519.5741070478643,
-        -3488.3360836668576
+        1633.1115874956013,
+        -3497.299561915447
       ]
     }
   },
