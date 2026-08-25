@@ -17,6 +17,7 @@
 - Added local llama-cpp (cli,server) support
 - Split runpod prompt enhancement templates for tail and llma-cpp see deployment for more information
 - Added uncensored profile to_QWEN_H3_prompt modified workflows.
+- Fixed crash mult-shot context pin after first shot in workflows (sol attention)
 - [ComfyUI-H3-Qwen3VL-TextGen](https://github.com/ethanfel/ComfyUI-H3-Qwen3VL-TextGen.git)
 - [MiniMax H3 Audio T8](https://github.com/T8mars/comfyui-minimax-h3-audio-T8)
 - [ComfyUI_Qwen_H3_Prompt](https://github.com/chflame163/ComfyUI_Qwen_H3_Prompt)
