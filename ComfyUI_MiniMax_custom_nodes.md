@@ -43,7 +43,7 @@
 ### Prompt generators
 
 - [ComfyUI-H3-Qwen3VL-TextGen](https://github.com/ethanfel/ComfyUI-H3-Qwen3VL-TextGen.git)
-- [comfyui-minimax-h3-prompt-enhancer-T8](https://github.com/jalberty2018/comfyui-minimax-h3-prompt-enhancer-T8)
+- [ComfyUI_Qwen_H3_Prompt](https://github.com/chflame163/ComfyUI_Qwen_H3_Prompt)
 
 ### Sampling
 

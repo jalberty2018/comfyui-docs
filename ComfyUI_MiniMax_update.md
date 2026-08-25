@@ -8,7 +8,7 @@
 - This pod is stable but many custom_nodes and turbo loras are experimental and in full development.
 - Tested on L40S, RTX 4090, RTX 3090, RTX 5090 and RTX PRO 6000.
 
-## 22082026
+## 25082026
 
 - ComfyUI 0.33.0
 - Fixed THRESHOLD typo.
@@ -16,9 +16,10 @@
 - Changed configuration diffusion model LVRAM BACKWELL for lora compatibility.
 - Added local llama-cpp (cli,server) support
 - Split runpod prompt enhancement templates for tail and llma-cpp see deployment for more information
+- Added uncensored profile to_QWEN_H3_prompt modified workflows.
 - [ComfyUI-H3-Qwen3VL-TextGen](https://github.com/ethanfel/ComfyUI-H3-Qwen3VL-TextGen.git)
 - [MiniMax H3 Audio T8](https://github.com/T8mars/comfyui-minimax-h3-audio-T8)
-- [comfyui-minimax-h3-prompt-enhancer-T8](https://github.com/jalberty2018/comfyui-minimax-h3-prompt-enhancer-T8)
+- [ComfyUI_Qwen_H3_Prompt](https://github.com/chflame163/ComfyUI_Qwen_H3_Prompt)
 
 ## 13082026
 

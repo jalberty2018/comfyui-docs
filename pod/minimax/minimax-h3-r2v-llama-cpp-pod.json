@@ -1,41 +1,32 @@
 {
   "id": "5e5babfd-0871-4eaf-96bb-a03b238ee51f",
   "revision": 0,
-  "last_node_id": 9,
-  "last_link_id": 16,
+  "last_node_id": 10,
+  "last_link_id": 31,
   "nodes": [
     {
-      "id": 7,
-      "type": "PrimitiveStringMultiline",
+      "id": 9,
+      "type": "MarkdownNote",
       "pos": [
-        -358.6378691039096,
-        539.2477219590057
+        -1039.5518869462198,
+        -86.14696174120935
       ],
       "size": [
-        746.6121676846687,
-        288.1626308879614
+        622.0899908441588,
+        480.051690237922
       ],
       "flags": {},
       "order": 0,
       "mode": 0,
       "inputs": [],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            16
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "PrimitiveStringMultiline"
-      },
+      "outputs": [],
+      "title": "RunPod templates and manual provisioning",
+      "properties": {},
       "widgets_values": [
-        "Two girls in love walking on a beach by sunset, the first girl says in dutch \"ik hou van je\" the other girl grabs her with her hands and kiss on her mouth."
+        "# RunPod templates\n\nMiniMax H3 FL2VA and Ref2VA each have two RunPod templates:\n\n- **Plus tail:** provisions the H3 generation tail.\n- **Plus QWEN prompt enhancer:** provisions the local Qwen3.8 GGUF prompt enhancer used by this workflow.\n\n## FL2VA\n\n- [Deploy MiniMax H3 FL2VA plus tail](https://console.runpod.io/deploy?template=v7b5g03csk&ref=se4tkc5o)\n- [Deploy MiniMax H3 FL2VA plus prompt enhancer](https://console.runpod.io/hub/template/a1nkufhzxq?ref=se4tkc5o)\n\n## Ref2VA\n\n- [Deploy MiniMax H3 Ref2VA plus tail](https://console.runpod.io/deploy?template=6qtfx7lxgc&ref=se4tkc5o)\n- [Deploy MiniMax H3 Ref2VA plus prompt enhancer](https://console.runpod.io/hub/template/pcsqepl6kt?ref=se4tkc5o)\n\n# Manual Qwen3.8 prompt-enhancer download\n\nThe **plus prompt enhancer** template provisions these files automatically. For manual installation:\n\n```bash\nmkdir -p /workspace/ComfyUI/models/LLM/Qwen3.8\n\nhf download theresa00l/Qwen3.8-27B-Uncensored-FP8-Q4_K_M-GGUF \\\n  qwen3.8-27b-uncensored-fp8-q4_k_m.gguf \\\n  --local-dir /workspace/ComfyUI/models/LLM/Qwen3.8\n\nhf download unsloth/Qwen3.8-27B-GGUF \\\n  mmproj-F16.gguf \\\n  --local-dir /workspace/ComfyUI/models/LLM/Qwen3.8\n```\n\nRestart ComfyUI or refresh the node after downloading.\n"
       ],
-      "color": "#232",
-      "bgcolor": "#353"
+      "color": "#432",
+      "bgcolor": "#653"
     },
     {
       "id": 6,
@@ -63,79 +54,85 @@
           "name": "picture_1",
           "type": "IMAGE",
           "links": [
-            6
+            17
           ]
         },
         {
           "name": "picture_2",
           "type": "IMAGE",
           "links": [
-            7
+            18
           ]
         },
         {
           "name": "picture_3",
           "type": "IMAGE",
           "links": [
-            8
+            19
           ]
         },
         {
           "name": "picture_4",
           "type": "IMAGE",
           "links": [
-            9
+            20
           ]
         },
         {
           "name": "picture_5",
           "type": "IMAGE",
           "links": [
-            10
+            21
           ]
         },
         {
           "name": "picture_6",
           "type": "IMAGE",
           "links": [
-            11
+            22
           ]
         },
         {
           "name": "picture_7",
           "type": "IMAGE",
           "links": [
-            12
+            23
           ]
         },
         {
           "name": "picture_8",
           "type": "IMAGE",
           "links": [
-            13
+            24
           ]
         },
         {
           "name": "picture_9",
           "type": "IMAGE",
           "links": [
-            14
+            25
           ]
         },
         {
           "name": "video_1",
           "type": "IMAGE",
-          "links": null
+          "links": [
+            26
+          ]
         },
         {
           "name": "video_2",
           "type": "IMAGE",
-          "links": null
+          "links": [
+            27
+          ]
         },
         {
           "name": "video_3",
           "type": "IMAGE",
-          "links": null
+          "links": [
+            28
+          ]
         },
         {
           "name": "video_audio_1",
@@ -176,107 +173,136 @@
       "bgcolor": "#000"
     },
     {
-      "id": 1,
-      "type": "MiniMaxH3PromptEnhancerT8",
+      "id": 7,
+      "type": "PrimitiveStringMultiline",
       "pos": [
-        588.961095791414,
-        -136.69954078691282
+        -358.6378691039096,
+        539.2477219590057
       ],
       "size": [
-        546.4177987557869,
-        976
+        642.5068565858786,
+        354.41142419771757
       ],
       "flags": {},
-      "order": 3,
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            30
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        "Two girls in love walking on a beach by sunset, the first girl says in dutch \"ik hou van je\" the other girl grabs her with her hands and kiss on her mouth."
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 10,
+      "type": "QwenH3PromptLocal",
+      "pos": [
+        588.4001083412069,
+        -94.39691120235274
+      ],
+      "size": [
+        409.4641520114692,
+        818.3277315054274
+      ],
+      "flags": {},
+      "order": 4,
       "mode": 0,
       "inputs": [
-        {
-          "name": "first_frame",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": null
-        },
-        {
-          "name": "last_frame",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": null
-        },
         {
           "label": "reference_image_0",
           "name": "reference_images.reference_image_0",
           "shape": 7,
           "type": "IMAGE",
-          "link": 6
+          "link": 17
         },
         {
           "label": "reference_image_1",
           "name": "reference_images.reference_image_1",
           "shape": 7,
           "type": "IMAGE",
-          "link": 7
+          "link": 18
         },
         {
           "label": "reference_image_2",
           "name": "reference_images.reference_image_2",
           "shape": 7,
           "type": "IMAGE",
-          "link": 8
+          "link": 19
         },
         {
           "label": "reference_image_3",
           "name": "reference_images.reference_image_3",
           "shape": 7,
           "type": "IMAGE",
-          "link": 9
+          "link": 20
         },
         {
           "label": "reference_image_4",
           "name": "reference_images.reference_image_4",
           "shape": 7,
           "type": "IMAGE",
-          "link": 10
+          "link": 21
         },
         {
           "label": "reference_image_5",
           "name": "reference_images.reference_image_5",
           "shape": 7,
           "type": "IMAGE",
-          "link": 11
+          "link": 22
         },
         {
           "label": "reference_image_6",
           "name": "reference_images.reference_image_6",
           "shape": 7,
           "type": "IMAGE",
-          "link": 12
+          "link": 23
         },
         {
           "label": "reference_image_7",
           "name": "reference_images.reference_image_7",
           "shape": 7,
           "type": "IMAGE",
-          "link": 13
+          "link": 24
         },
         {
           "label": "reference_image_8",
           "name": "reference_images.reference_image_8",
           "shape": 7,
           "type": "IMAGE",
-          "link": 14
+          "link": 25
         },
         {
           "label": "reference_video_0",
           "name": "reference_videos.reference_video_0",
           "shape": 7,
-          "type": "VIDEO",
-          "link": null
+          "type": "IMAGE",
+          "link": 26
         },
         {
-          "name": "api_key",
+          "label": "reference_video_1",
+          "name": "reference_videos.reference_video_1",
           "shape": 7,
-          "type": "STRING",
-          "link": null
+          "type": "IMAGE",
+          "link": 27
+        },
+        {
+          "label": "reference_video_2",
+          "name": "reference_videos.reference_video_2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 28
         },
         {
           "name": "prompt",
@@ -284,63 +310,57 @@
           "widget": {
             "name": "prompt"
           },
-          "link": 16
+          "link": 30
         }
       ],
       "outputs": [
         {
-          "name": "enhanced_prompt",
+          "name": "h3_prompt",
           "type": "STRING",
           "links": [
-            1
+            31
           ]
+        },
+        {
+          "name": "selected_skill",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "detected_mode",
+          "type": "STRING",
+          "links": null
         }
       ],
       "properties": {
-        "Node name for S&R": "MiniMaxH3PromptEnhancerT8"
+        "Node name for S&R": "QwenH3PromptLocal"
       },
       "widgets_values": [
-        "",
-        "Ref2VA（参考图/视频生音视频）",
-        15,
-        "AUTO（系统自动判断）",
-        "balanced",
-        0,
-        "English",
-        "官方增强",
-        "现有兼容（保留中英文）",
-        "无（仅核心规则）",
-        "无（不使用 T8 案例）",
-        "本地 Qwen3.8-27B（GGUF，离线）",
-        "gemini-3.5-flash",
-        "",
-        "",
-        "",
-        null,
-        "",
-        "",
-        "",
-        416514444456819,
-        "randomize",
+        "Describe the video or production task.",
+        "h3-prompt-writing",
+        10,
         "qwen3.8-27b-uncensored-fp8-q4_k_m.gguf",
         "mmproj-F16.gguf",
-        32768,
-        4096,
-        "关闭（推荐，速度优先）",
+        false,
         "medium",
+        957512856358155,
+        "randomize",
+        8192,
         2,
-        "执行后卸载（推荐）",
-        "AUTO（显存不足时释放）"
+        true,
+        "standard",
+        3,
+        ""
       ],
-      "color": "#432",
-      "bgcolor": "#653"
+      "color": "#332922",
+      "bgcolor": "#593930"
     },
     {
       "id": 2,
       "type": "PreviewAny",
       "pos": [
-        1172.9119290584952,
-        -136.61975242942705
+        1036.4224929217519,
+        -98.28002975076672
       ],
       "size": [
         836.5469560447514,
@@ -353,7 +373,7 @@
         {
           "name": "source",
           "type": "*",
-          "link": 1
+          "link": 31
         }
       ],
       "outputs": [
@@ -382,7 +402,7 @@
         562
       ],
       "flags": {},
-      "order": 1,
+      "order": 2,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -405,41 +425,9 @@
       ],
       "color": "#232",
       "bgcolor": "#353"
-    },
-    {
-      "id": 9,
-      "type": "MarkdownNote",
-      "pos": [
-        -1039.5518869462198,
-        -86.14696174120935
-      ],
-      "size": [
-        622.0899908441588,
-        480.051690237922
-      ],
-      "flags": {},
-      "order": 2,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "title": "RunPod templates and manual provisioning",
-      "properties": {},
-      "widgets_values": [
-        "# RunPod templates\n\nMiniMax H3 FL2VA and Ref2VA each have two RunPod templates:\n\n- **Plus tail:** provisions the H3 generation tail.\n- **Plus QWEN prompt enhancer:** provisions the local Qwen3.8 GGUF prompt enhancer used by this workflow.\n\n## FL2VA\n\n- [Deploy MiniMax H3 FL2VA plus tail](https://console.runpod.io/deploy?template=v7b5g03csk&ref=se4tkc5o)\n- [Deploy MiniMax H3 FL2VA plus prompt enhancer](https://console.runpod.io/hub/template/a1nkufhzxq?ref=se4tkc5o)\n\n## Ref2VA\n\n- [Deploy MiniMax H3 Ref2VA plus tail](https://console.runpod.io/deploy?template=6qtfx7lxgc&ref=se4tkc5o)\n- [Deploy MiniMax H3 Ref2VA plus prompt enhancer](https://console.runpod.io/hub/template/pcsqepl6kt?ref=se4tkc5o)\n\n# Manual Qwen3.8 prompt-enhancer download\n\nThe **plus prompt enhancer** template provisions these files automatically. For manual installation:\n\n```bash\nmkdir -p /workspace/ComfyUI/models/LLM/Qwen3.8\n\nhf download theresa00l/Qwen3.8-27B-Uncensored-FP8-Q4_K_M-GGUF \\\n  qwen3.8-27b-uncensored-fp8-q4_k_m.gguf \\\n  --local-dir /workspace/ComfyUI/models/LLM/Qwen3.8\n\nhf download unsloth/Qwen3.8-27B-GGUF \\\n  mmproj-F16.gguf \\\n  --local-dir /workspace/ComfyUI/models/LLM/Qwen3.8\n```\n\nRestart ComfyUI or refresh the node after downloading.\n"
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
     }
   ],
   "links": [
-    [
-      1,
-      1,
-      0,
-      2,
-      0,
-      "STRING"
-    ],
     [
       5,
       5,
@@ -449,83 +437,115 @@
       "H3_REFS"
     ],
     [
-      6,
+      17,
       6,
       0,
+      10,
+      0,
+      "IMAGE"
+    ],
+    [
+      18,
+      6,
       1,
+      10,
+      1,
+      "IMAGE"
+    ],
+    [
+      19,
+      6,
+      2,
+      10,
       2,
       "IMAGE"
     ],
     [
-      7,
+      20,
       6,
-      1,
-      1,
+      3,
+      10,
       3,
       "IMAGE"
     ],
     [
-      8,
+      21,
       6,
-      2,
-      1,
+      4,
+      10,
       4,
       "IMAGE"
     ],
     [
-      9,
+      22,
       6,
-      3,
-      1,
+      5,
+      10,
       5,
       "IMAGE"
     ],
     [
-      10,
+      23,
       6,
-      4,
-      1,
+      6,
+      10,
       6,
       "IMAGE"
     ],
     [
+      24,
+      6,
+      7,
+      10,
+      7,
+      "IMAGE"
+    ],
+    [
+      25,
+      6,
+      8,
+      10,
+      8,
+      "IMAGE"
+    ],
+    [
+      26,
+      6,
+      9,
+      10,
+      9,
+      "IMAGE"
+    ],
+    [
+      27,
+      6,
+      10,
+      10,
+      10,
+      "IMAGE"
+    ],
+    [
+      28,
+      6,
       11,
-      6,
-      5,
-      1,
-      7,
-      "IMAGE"
-    ],
-    [
-      12,
-      6,
-      6,
-      1,
-      8,
-      "IMAGE"
-    ],
-    [
-      13,
-      6,
-      7,
-      1,
-      9,
-      "IMAGE"
-    ],
-    [
-      14,
-      6,
-      8,
-      1,
       10,
+      11,
       "IMAGE"
     ],
     [
-      16,
+      30,
       7,
       0,
-      1,
-      13,
+      10,
+      12,
+      "STRING"
+    ],
+    [
+      31,
+      10,
+      0,
+      2,
+      0,
       "STRING"
     ]
   ],
@@ -533,10 +553,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.3789064718226001,
+      "scale": 0.5216521821930631,
       "offset": [
-        2946.5481130932676,
-        1350.1193888964854
+        519.5210264461592,
+        339.95320559839166
       ]
     },
     "frontendVersion": "1.48.7",
