@@ -4,7 +4,7 @@
 ![deployment speed 2](images/runpod_ready_RTX6000PRO.jpg)
 ![deployment speed 3](images/runpod_ready_L40S.jpg)
 
-- The containers are thoroughly tested before being used in the templates. However, deploying a pod can still be frustrating due to slow or overloaded hardware on RunPod, as well as limited network performance when connecting to Docker Hub or the Hugging Face Hub. The parameters below will help you identify and stop an underperforming pod. A fast GPU provides little benefit when the rest of the system cannot operate at a comparable speed. The screenshots above are examples of full deployment speeds of an excellent performing pod.
+- The containers are thoroughly tested before being used in the templates. However, deploying a pod can still be frustrating due to slow or overloaded hardware on RunPod, as well as limited network performance when connecting to Docker Hub or the Hugging Face Hub. The parameters below will help you identify and stop an underperforming pod. A fast GPU provides little benefit when the rest of the system cannot operate at a comparable speed. The screenshots above are examples of full deployment speeds of an excellent performing pods.
 
 - Check [runpod uptime](https://uptime.runpod.io/) to check if there are issues for a specific regio.
 
@@ -34,7 +34,7 @@
 
 ## Deploy the Pod
 
-- The screenshow shows the New Pod deploy page (Early access features)
+- The screenshots shows the New Pod deployment page (Early access features)
 
 ![Runpod_deploy](images/runpod_deploy_01.jpg)
 
@@ -61,6 +61,8 @@ You can set the minimum amount of RAM in RunPod's filters. For example, for imag
 
 ## 📜 Viewing System Logs
 
+### Docker download and extraction
+
 ![Deployment start](images/downloading.jpg)
 
 - Go to **Logs or Connect**.
@@ -71,6 +73,10 @@ You can set the minimum amount of RAM in RunPod's filters. For example, for imag
 The extraction ends with a message like this in the **Logs** section:
 
 ![Download and extraction complete](images/download_end.jpg)
+
+### Slow download without extraction after 3 minutes (delete pod)
+
+![Deployment docker bad](images/runpod_deploy_docker_download_slow.jpg)
 
 ## 🐳 Viewing Container Logs
 
@@ -99,7 +105,7 @@ The extraction ends with a message like this in the **Logs** section:
 
 - Model download speeds depend on both network and storage performance. A download speed above **200 MB/s** is considered acceptable. If a download fails, allow the startup script to finish and then restart the pod so that it can download any missing models.
 
-### When you see the final message, your pod is ready:
+### When you see the final message, your pod is ready
 
 ![Final message](images/final_log.jpg)
 
