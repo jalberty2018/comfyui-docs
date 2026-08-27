@@ -18,6 +18,8 @@
 - [ComfyUI Essentials](https://github.com/cubiq/ComfyUI_essentials)
 - [Scale Image to Total Pixels Advanced](https://github.com/BigStationW/ComfyUi-Scale-Image-to-Total-Pixels-Advanced)
 - [comfyui-obvpm](https://github.com/obvpm/comfyui-obvpm)
+- [ComfyUI-MiniMaxH3-Preview](https://github.com/Brioch/ComfyUI-MiniMaxH3-Preview)
+- [ComfyUI-H3-PowerLoraStack](https://github.com/cicalooo/ComfyUI-H3-PowerLoraStack)
 
 ### Downloaders
 
@@ -36,11 +38,11 @@
 - [SAM3](https://github.com/PozzettiAndrea/ComfyUI-SAM3)
 - [SecNodes](https://github.com/9nate-drake/Comfyui-SecNodes)
 
-### Prompt builders
+### Manual prompt builders
 
 - [ComfyUI-Fantastic-MiniMaxH3-PromptBuilder](https://github.com/Adudeguyman/ComfyUI-Fantastic-MiniMaxH3-PromptBuilder)
 
-### Prompt generators
+### Prompt VLM generators
 
 - [ComfyUI-H3-Qwen3VL-TextGen](https://github.com/ethanfel/ComfyUI-H3-Qwen3VL-TextGen.git)
 - [ComfyUI_Qwen_H3_Prompt](https://github.com/chflame163/ComfyUI_Qwen_H3_Prompt)
@@ -48,9 +50,6 @@
 ### Sampling
 
 - [RES4LYF](https://github.com/ClownsharkBatwing/RES4LYF)
-- [Turbo Lora](https://github.com/Larryvrh/ComfyUI-MiniMax-H3-Turbo)
-- [ComfyUI-H3-PowerLoraStack](https://github.com/cicalooo/ComfyUI-H3-PowerLoraStack)
-- [ComfyUI-MiniMaxH3-Preview](https://github.com/Brioch/ComfyUI-MiniMaxH3-Preview)
 
 ### Flow
 
@@ -63,6 +62,11 @@
 - [ComfyUI-Spectrum](https://github.com/xmarre/ComfyUI-Spectrum-MiniMax-H3)
 - [FirstBlockCache](https://github.com/duckyshell/ComfyUI-MiniMaxH3-FirstBlockCache)
 - [ComfyUI-sol-attn](https://github.com/Saganaki22/ComfyUI-sol-attn)
+
+### Step distillers
+
+- [Turbo Lora](https://github.com/Larryvrh/ComfyUI-MiniMax-H3-Turbo)
+- [ComfyUI-MiniMax-H3-PDD-Acc](https://github.com/Jalen-Brunson/ComfyUI-MiniMax-H3-PDD-Acc)
 
 ### Long video
 
