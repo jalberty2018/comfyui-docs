@@ -12,6 +12,7 @@
 
 - ComfyUI 0.34.0
 - [ComfyUI-MiniMax-H3-PDD-Acc](https://github.com/Jalen-Brunson/ComfyUI-MiniMax-H3-PDD-Acc)
+- Fixed Multi-shot audio crash.
 
 ## 25082026
 
