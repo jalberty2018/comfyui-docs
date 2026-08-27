@@ -74,7 +74,11 @@ The extraction ends with a message like this in the **Logs** section:
 
 ![Download and extraction complete](images/download_end.jpg)
 
-### Slow download without extraction after 3 minutes (delete pod)
+### Bad pod: not downloading after 1 minute
+
+![Deployment docker bad](images/runpod_deploy_docker_download_stall.jpg)
+
+### Bad pod: slow download without extraction after 3 minutes
 
 ![Deployment docker bad](images/runpod_deploy_docker_download_slow.jpg)
 
