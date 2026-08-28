@@ -61,6 +61,10 @@ Use this template for MiniMax H3 text-to-video, image-to-video, first/last-frame
 
 ![MiniMax H3 workflow all in one](images/ai-generated-MiniMax-director.jpg)
 
+### Advanced REF workflow with 2 samplers (warmup) and PDD Acc turbo lora
+
+![MiniMax H3 workflow Ref2va-uncensored](images/ai-generated-MiniMax-uncensored.jpg)
+
 ### Prompt generator using uncensored heretic Minimax-H2 QWEN-VL with generation tail
 
 ![MiniMax H3 workflow prompt generator](images/ai-generated-MiniMax-prompt-generator.jpg)
