@@ -22,7 +22,7 @@ Use this template for MiniMax H3 text-to-video, image-to-video, first/last-frame
 - LoRA Manager
 - Installed custom nodes and accelerators.
 - Example workflows.
-- 4-step , 8-step Turbo-loras (turbo and lightx2v) included
+- 4-step , 8-step Turbo-loras (turbo, lightx2v, Alibaba PDD Acc) included
 - llama-cpp native and llama-cpp-python with CUDA 12.8 support.
 
 ## 📦 Deployment on RunPod
