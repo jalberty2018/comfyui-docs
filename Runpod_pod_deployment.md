@@ -91,13 +91,13 @@ The extraction ends with a message like this in the **Logs** section:
 - The time required to copy ComfyUI from the container to the workspace is a useful indicator of overall system performance. Depending on the hardware, this process typically takes between **0 and 100 seconds**. If the copy operation stalls or takes longer than **120 seconds**, consider starting another pod and comparing its performance. A slow copy operation often indicates storage or system performance issues that can also cause problems when extracting models or loading them from disk into the GPU's video memory (VRAM).
 - Acceptable performance 1Gb/30seconds
 
-#### Example excellent performance
+#### Excellent performing pod
 
 ![perfect](images/runpod_deploy_comfyuionworkspace_perfect.jpg)
 
 ![good](images/runpod_deploy_comfyuionworkspace.jpg)
 
-#### Example not acceptable performance (delete pod)
+#### Bad pod: not acceptable performance
 
 ![bad](images/runpod_deploy_comfyuionworkspace_slow.jpg)
 

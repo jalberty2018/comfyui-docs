@@ -7,11 +7,11 @@
 - The date reflects when the related custom nodes were cloned from their upstream repositories.
 - Pinned custom nodes are not updated automatically, because changing those pins can introduce compatibility issues.
 
-## 26082026
+## 31082026
 
 - ComfyUI 0.34.0
 - [comfyui-obvpm](https://github.com/obvpm/comfyui-obvpm)
-- Added native llama-cpp with CUDA support.
+- Added native llama-cpp with CUDA support + tests
 
 ## 15082026
 
