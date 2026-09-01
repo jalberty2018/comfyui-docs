@@ -1,8 +1,8 @@
 {
   "id": "5e5babfd-0871-4eaf-96bb-a03b238ee51f",
   "revision": 0,
-  "last_node_id": 12,
-  "last_link_id": 33,
+  "last_node_id": 15,
+  "last_link_id": 36,
   "nodes": [
     {
       "id": 9,
@@ -43,7 +43,7 @@
         122
       ],
       "flags": {},
-      "order": 7,
+      "order": 10,
       "mode": 0,
       "inputs": [
         {
@@ -79,7 +79,7 @@
         122
       ],
       "flags": {},
-      "order": 6,
+      "order": 9,
       "mode": 0,
       "inputs": [
         {
@@ -115,7 +115,7 @@
         763.2573099523864
       ],
       "flags": {},
-      "order": 5,
+      "order": 8,
       "mode": 0,
       "inputs": [
         {
@@ -151,13 +151,13 @@
         366
       ],
       "flags": {},
-      "order": 3,
+      "order": 6,
       "mode": 0,
       "inputs": [
         {
           "name": "references",
           "type": "H3_REFS",
-          "link": 5
+          "link": 36
         }
       ],
       "outputs": [
@@ -330,7 +330,7 @@
         1301.9474432779775
       ],
       "flags": {},
-      "order": 4,
+      "order": 7,
       "mode": 0,
       "inputs": [
         {
@@ -490,6 +490,32 @@
       "bgcolor": "#593930"
     },
     {
+      "id": 14,
+      "type": "MarkdownNote",
+      "pos": [
+        -735.9339359866984,
+        -745.8342665389002
+      ],
+      "size": [
+        317.9514502621889,
+        177.55063328128068
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "# Two media loaders\n\n## Input Media Loader\n\n- Loads media from /workspace/ComfyUI/input\n\n## Media Loader\n\n- Uploads media"
+      ],
+      "widgets_values_named": {
+        "text": "# Two media loaders\n\n## Input Media Loader\n\n- Loads media from /workspace/ComfyUI/input\n\n## Media Loader\n\n- Uploads media"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
       "id": 5,
       "type": "MiniMaxH3MediaLoader",
       "pos": [
@@ -501,7 +527,7 @@
         562
       ],
       "flags": {},
-      "order": 2,
+      "order": 3,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -509,7 +535,7 @@
           "name": "references",
           "type": "H3_REFS",
           "links": [
-            5
+            34
           ]
         }
       ],
@@ -530,17 +556,113 @@
       },
       "color": "#232",
       "bgcolor": "#353"
+    },
+    {
+      "id": 15,
+      "type": "Any Switch (rgthree)",
+      "pos": [
+        328.3319384927674,
+        -734.7937576320763
+      ],
+      "size": [
+        263.72841796875,
+        106
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "any_01",
+          "type": "H3_REFS",
+          "link": 34
+        },
+        {
+          "dir": 3,
+          "name": "any_02",
+          "type": "H3_REFS",
+          "link": 35
+        },
+        {
+          "dir": 3,
+          "name": "any_03",
+          "type": "H3_REFS",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "any_04",
+          "type": "H3_REFS",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "any_05",
+          "type": "H3_REFS",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "dir": 4,
+          "label": "H3_REFS",
+          "name": "*",
+          "shape": 3,
+          "type": "H3_REFS",
+          "links": [
+            36
+          ]
+        }
+      ],
+      "properties": {}
+    },
+    {
+      "id": 13,
+      "type": "MiniMaxH3InputMediaLoader",
+      "pos": [
+        -386.2535239934654,
+        -751.967872199203
+      ],
+      "size": [
+        660,
+        562
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "references",
+          "type": "H3_REFS",
+          "links": [
+            35
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MiniMaxH3InputMediaLoader"
+      },
+      "widgets_values": [
+        "[]",
+        null,
+        null,
+        ""
+      ],
+      "widgets_values_named": {
+        "media_state": "[]",
+        "Open loader…": null,
+        "+ Native-output splitter": null,
+        "mml_panel": ""
+      },
+      "color": "#432",
+      "bgcolor": "#653"
     }
   ],
   "links": [
-    [
-      5,
-      5,
-      0,
-      6,
-      0,
-      "H3_REFS"
-    ],
     [
       17,
       6,
@@ -668,16 +790,40 @@
       12,
       0,
       "STRING"
+    ],
+    [
+      34,
+      5,
+      0,
+      15,
+      0,
+      "H3_REFS"
+    ],
+    [
+      35,
+      13,
+      0,
+      15,
+      1,
+      "H3_REFS"
+    ],
+    [
+      36,
+      15,
+      0,
+      6,
+      0,
+      "H3_REFS"
     ]
   ],
   "groups": [],
   "config": {},
   "extra": {
     "ds": {
-      "scale": 1.8606456718113649,
+      "scale": 0.9548054316408291,
       "offset": [
-        478.4396053527208,
-        -15.926088313178695
+        921.6023721020722,
+        806.1516634406283
       ]
     },
     "frontendVersion": "1.49.6",

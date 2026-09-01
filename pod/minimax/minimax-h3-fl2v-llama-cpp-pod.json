@@ -1,8 +1,8 @@
 {
   "id": "5e5babfd-0871-4eaf-96bb-a03b238ee51f",
   "revision": 0,
-  "last_node_id": 12,
-  "last_link_id": 27,
+  "last_node_id": 15,
+  "last_link_id": 30,
   "nodes": [
     {
       "id": 10,
@@ -25,6 +25,9 @@
       "widgets_values": [
         "# RunPod templates\n\nMiniMax H3 FL2VA and Ref2VA each have two RunPod templates:\n\n- **Plus tail:** provisions the H3 generation tail.\n- **Plus QWEN prompt enhancer:** provisions the local Qwen3.8 GGUF prompt enhancer used by this workflow.\n\n## FL2VA\n\n- [Deploy MiniMax H3 FL2VA plus tail](https://console.runpod.io/deploy?template=v7b5g03csk&ref=se4tkc5o)\n- [Deploy MiniMax H3 FL2VA plus prompt enhancer](https://console.runpod.io/hub/template/a1nkufhzxq?ref=se4tkc5o)\n\n## Ref2VA\n\n- [Deploy MiniMax H3 Ref2VA plus tail](https://console.runpod.io/deploy?template=6qtfx7lxgc&ref=se4tkc5o)\n- [Deploy MiniMax H3 Ref2VA plus prompt enhancer](https://console.runpod.io/hub/template/pcsqepl6kt?ref=se4tkc5o)\n\n# Manual Qwen3.8 prompt-enhancer download\n\nThe **plus prompt enhancer** template provisions these files automatically. For manual installation:\n\n```bash\nmkdir -p /workspace/ComfyUI/models/LLM/Qwen3.8\n\nhf download theresa00l/Qwen3.8-27B-Uncensored-FP8-Q4_K_M-GGUF \\\n  qwen3.8-27b-uncensored-fp8-q4_k_m.gguf \\\n  --local-dir /workspace/ComfyUI/models/LLM/Qwen3.8\n\nhf download unsloth/Qwen3.8-27B-GGUF \\\n  mmproj-F16.gguf \\\n  --local-dir /workspace/ComfyUI/models/LLM/Qwen3.8\n```\n\nRestart ComfyUI or refresh the node after downloading.\n"
       ],
+      "widgets_values_named": {
+        "text": "# RunPod templates\n\nMiniMax H3 FL2VA and Ref2VA each have two RunPod templates:\n\n- **Plus tail:** provisions the H3 generation tail.\n- **Plus QWEN prompt enhancer:** provisions the local Qwen3.8 GGUF prompt enhancer used by this workflow.\n\n## FL2VA\n\n- [Deploy MiniMax H3 FL2VA plus tail](https://console.runpod.io/deploy?template=v7b5g03csk&ref=se4tkc5o)\n- [Deploy MiniMax H3 FL2VA plus prompt enhancer](https://console.runpod.io/hub/template/a1nkufhzxq?ref=se4tkc5o)\n\n## Ref2VA\n\n- [Deploy MiniMax H3 Ref2VA plus tail](https://console.runpod.io/deploy?template=6qtfx7lxgc&ref=se4tkc5o)\n- [Deploy MiniMax H3 Ref2VA plus prompt enhancer](https://console.runpod.io/hub/template/pcsqepl6kt?ref=se4tkc5o)\n\n# Manual Qwen3.8 prompt-enhancer download\n\nThe **plus prompt enhancer** template provisions these files automatically. For manual installation:\n\n```bash\nmkdir -p /workspace/ComfyUI/models/LLM/Qwen3.8\n\nhf download theresa00l/Qwen3.8-27B-Uncensored-FP8-Q4_K_M-GGUF \\\n  qwen3.8-27b-uncensored-fp8-q4_k_m.gguf \\\n  --local-dir /workspace/ComfyUI/models/LLM/Qwen3.8\n\nhf download unsloth/Qwen3.8-27B-GGUF \\\n  mmproj-F16.gguf \\\n  --local-dir /workspace/ComfyUI/models/LLM/Qwen3.8\n```\n\nRestart ComfyUI or refresh the node after downloading.\n"
+      },
       "color": "#432",
       "bgcolor": "#653"
     },
@@ -40,13 +43,13 @@
         366
       ],
       "flags": {},
-      "order": 3,
+      "order": 6,
       "mode": 0,
       "inputs": [
         {
           "name": "references",
           "type": "H3_REFS",
-          "link": 21
+          "link": 30
         }
       ],
       "outputs": [
@@ -148,7 +151,6 @@
       "properties": {
         "Node name for S&R": "MiniMaxH3ReferenceSplitter"
       },
-      "widgets_values": [],
       "color": "#222",
       "bgcolor": "#000"
     },
@@ -164,7 +166,7 @@
         763.2573099523864
       ],
       "flags": {},
-      "order": 5,
+      "order": 8,
       "mode": 0,
       "inputs": [
         {
@@ -184,6 +186,7 @@
         "Node name for S&R": "PreviewAny"
       },
       "widgets_values": [],
+      "widgets_values_named": {},
       "color": "#223",
       "bgcolor": "#335"
     },
@@ -199,7 +202,7 @@
         122
       ],
       "flags": {},
-      "order": 6,
+      "order": 9,
       "mode": 0,
       "inputs": [
         {
@@ -219,44 +222,9 @@
         "Node name for S&R": "PreviewAny"
       },
       "widgets_values": [],
+      "widgets_values_named": {},
       "color": "#323",
       "bgcolor": "#535"
-    },
-    {
-      "id": 5,
-      "type": "MiniMaxH3MediaLoader",
-      "pos": [
-        -375.1304438684536,
-        -115.66750706355522
-      ],
-      "size": [
-        660,
-        562
-      ],
-      "flags": {},
-      "order": 1,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "references",
-          "type": "H3_REFS",
-          "links": [
-            21
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "MiniMaxH3MediaLoader"
-      },
-      "widgets_values": [
-        "[]",
-        null,
-        null,
-        ""
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
     },
     {
       "id": 7,
@@ -270,7 +238,7 @@
         278.91979427535216
       ],
       "flags": {},
-      "order": 2,
+      "order": 1,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -288,6 +256,9 @@
       "widgets_values": [
         "fl2va, princess dancing on the screen, cartoon style"
       ],
+      "widgets_values_named": {
+        "value": "fl2va, princess dancing on the screen, cartoon style"
+      },
       "color": "#232",
       "bgcolor": "#353"
     },
@@ -303,7 +274,7 @@
         534
       ],
       "flags": {},
-      "order": 4,
+      "order": 7,
       "mode": 0,
       "inputs": [
         {
@@ -384,19 +355,199 @@
         3,
         ""
       ],
+      "widgets_values_named": {
+        "prompt": "Describe the video or production task.",
+        "skill": "h3-prompt-writing",
+        "duration": 10,
+        "llm_model": "qwen3.8-27b-uncensored-fp8-q4_k_m.gguf",
+        "vision_model": "mmproj-F16.gguf",
+        "think_mode": false,
+        "reasoning_effort": "medium",
+        "seed": 443695864874024,
+        "control_after_generate": "randomize",
+        "max_tokens": 8192,
+        "video_sample_frames_per_sec": 2,
+        "force_unload_model": true,
+        "prompt_profile": "uncensored fidelity",
+        "shot_count": 3,
+        "additional_system_instructions": ""
+      },
       "color": "#332922",
       "bgcolor": "#593930"
+    },
+    {
+      "id": 5,
+      "type": "MiniMaxH3MediaLoader",
+      "pos": [
+        -375.1304438684536,
+        -115.66750706355522
+      ],
+      "size": [
+        660,
+        562
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "references",
+          "type": "H3_REFS",
+          "links": [
+            29
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MiniMaxH3MediaLoader"
+      },
+      "widgets_values": [
+        "[]",
+        null,
+        null,
+        ""
+      ],
+      "widgets_values_named": {
+        "media_state": "[]",
+        "Open loader…": null,
+        "+ Native-output splitter": null,
+        "mml_panel": ""
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 14,
+      "type": "Any Switch (rgthree)",
+      "pos": [
+        317.0176825612897,
+        -733.2443631235373
+      ],
+      "size": [
+        263.72841796875,
+        106
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "any_01",
+          "type": "H3_REFS",
+          "link": 29
+        },
+        {
+          "dir": 3,
+          "name": "any_02",
+          "type": "H3_REFS",
+          "link": 28
+        },
+        {
+          "dir": 3,
+          "name": "any_03",
+          "type": "H3_REFS",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "any_04",
+          "type": "H3_REFS",
+          "link": null
+        },
+        {
+          "name": "any_05",
+          "type": "H3_REFS",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "dir": 4,
+          "label": "H3_REFS",
+          "name": "*",
+          "shape": 3,
+          "type": "H3_REFS",
+          "links": [
+            30
+          ]
+        }
+      ],
+      "properties": {}
+    },
+    {
+      "id": 13,
+      "type": "MiniMaxH3InputMediaLoader",
+      "pos": [
+        -399.8702198642475,
+        -759.817518384789
+      ],
+      "size": [
+        660,
+        562
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "references",
+          "type": "H3_REFS",
+          "links": [
+            28
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MiniMaxH3InputMediaLoader"
+      },
+      "widgets_values": [
+        "[]",
+        null,
+        null,
+        ""
+      ],
+      "widgets_values_named": {
+        "media_state": "[]",
+        "Open loader…": null,
+        "+ Native-output splitter": null,
+        "mml_panel": ""
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 15,
+      "type": "MarkdownNote",
+      "pos": [
+        -800.7306136446933,
+        -756.3514987281719
+      ],
+      "size": [
+        371.07007792611887,
+        307.24490977885125
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "# Two media loaders\n\n## Input Media Loader\n\n- Loads media from /workspace/ComfyUI/input\n\n## Media Loader\n\n- Uploads media"
+      ],
+      "widgets_values_named": {
+        "text": "# Two media loaders\n\n## Input Media Loader\n\n- Loads media from /workspace/ComfyUI/input\n\n## Media Loader\n\n- Uploads media"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
     }
   ],
   "links": [
-    [
-      21,
-      5,
-      0,
-      9,
-      0,
-      "H3_REFS"
-    ],
     [
       23,
       9,
@@ -436,6 +587,30 @@
       12,
       0,
       "STRING"
+    ],
+    [
+      28,
+      13,
+      0,
+      14,
+      1,
+      "H3_REFS"
+    ],
+    [
+      29,
+      5,
+      0,
+      14,
+      0,
+      "H3_REFS"
+    ],
+    [
+      30,
+      14,
+      0,
+      9,
+      0,
+      "H3_REFS"
     ]
   ],
   "groups": [],
@@ -444,11 +619,11 @@
     "ds": {
       "scale": 0.6924307636609518,
       "offset": [
-        731.8859021116033,
-        281.8553486129304
+        1352.3089958946616,
+        989.9117168151566
       ]
     },
-    "frontendVersion": "1.48.7",
+    "frontendVersion": "1.49.6",
     "VHS_latentpreview": true,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
