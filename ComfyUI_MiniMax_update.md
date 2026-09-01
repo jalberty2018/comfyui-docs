@@ -6,9 +6,9 @@
 - The date is updated when custom nodes, provisioning or runtime behavior changes.
 - Pinned custom nodes are not updated automatically because pin changes can introduce compatibility issues.
 - This pod is stable but many custom_nodes and turbo loras are experimental and in full development.
-- Tested on L40S, RTX 4090, RTX 3090, RTX 5090 and RTX PRO 6000.
+- Tested on L40S, RTX 4090, RTX 5090 and RTX PRO 6000.
 
-## 30082026
+## 31082026
 
 - ComfyUI 0.34.0
 - [ComfyUI-MiniMax-H3-PDD-Acc](https://github.com/Jalen-Brunson/ComfyUI-MiniMax-H3-PDD-Acc)
