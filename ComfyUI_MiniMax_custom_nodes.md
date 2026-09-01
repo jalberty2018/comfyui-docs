@@ -38,8 +38,6 @@
 ### Segmentation
 
 - [RMBG](https://github.com/1038lab/ComfyUI-RMBG)
-- [SAM3](https://github.com/PozzettiAndrea/ComfyUI-SAM3)
-- [SecNodes](https://github.com/9nate-drake/Comfyui-SecNodes)
 
 ### Manual prompt builders
 
