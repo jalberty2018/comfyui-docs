@@ -55,7 +55,6 @@
 ### Flow
 
 - [Power Flow](https://github.com/x3bits/ComfyUI-Power-Flow)
-- [Output Lists Combiner](https://github.com/geroldmeisinger/ComfyUI-outputlists-combiner)
 
 ### Accelerators
 
