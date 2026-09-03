@@ -45,9 +45,9 @@ Use the enhanced Ref2va workflow to generate video and audio from a reference im
 <details>
 <summary><strong>View the enhanced Ref2va workflow</strong></summary>
 
-<img loading="lazy" src="images/ai-generated-MiniMax.jpg" alt="Enhanced MiniMax H3 Ref2va workflow" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/ai-generated-MiniMax.jpg" alt="Enhanced MiniMax H3 Ref2va workflow" style="width: 100%; height: auto;">
 
-<img loading="lazy" src="images/ai-generated-Ref2VA.jpg" alt="Detailed MiniMax H3 Ref2va workflow" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/ai-generated-Ref2VA.jpg" alt="Detailed MiniMax H3 Ref2va workflow" style="width: 100%; height: auto;">
 
 </details>
 
@@ -60,7 +60,7 @@ Use motion context to create three connected 10-second shots from one reference 
 <details>
 <summary><strong>View the multi-shot workflow</strong></summary>
 
-<img loading="lazy" src="images/ai-generated-MiniMax-multi-shot.jpg" alt="MiniMax H3 multi-shot reference-to-video workflow" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/ai-generated-MiniMax-multi-shot.jpg" alt="MiniMax H3 multi-shot reference-to-video workflow" style="width: 100%; height: auto;">
 
 </details>
 
@@ -74,7 +74,7 @@ Use the enhanced fl2va image-to-video workflow with or without a turbo LoRA.
 <details>
 <summary><strong>View the image-to-video workflow</strong></summary>
 
-<img loading="lazy" src="images/ai-generated-MiniMax-i2v.jpg" alt="MiniMax H3 image-to-video workflow" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/ai-generated-MiniMax-i2v.jpg" alt="MiniMax H3 image-to-video workflow" style="width: 100%; height: auto;">
 
 </details>
 
@@ -87,7 +87,7 @@ Use the enhanced fl2va text-to-video workflow to generate video and native audio
 <details>
 <summary><strong>View the text-to-video workflow</strong></summary>
 
-<img loading="lazy" src="images/ai-generated-MiniMax-t2v.jpg" alt="MiniMax H3 text-to-video workflow" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/ai-generated-MiniMax-t2v.jpg" alt="MiniMax H3 text-to-video workflow" style="width: 100%; height: auto;">
 
 </details>
 
@@ -103,7 +103,7 @@ Use Director to manage generation stages in a single workflow.
 <details>
 <summary><strong>View the Director workflow</strong></summary>
 
-<img loading="lazy" src="images/ai-generated-MiniMax-director.jpg" alt="MiniMax H3 Director all-in-one workflow" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/ai-generated-MiniMax-director.jpg" alt="MiniMax H3 Director all-in-one workflow" style="width: 100%; height: auto;">
 
 </details>
 
@@ -116,7 +116,7 @@ This workflow combines two samplers, a warm-up stage and the PDD Acc turbo LoRA.
 <details>
 <summary><strong>View the advanced reference workflow</strong></summary>
 
-<img loading="lazy" src="images/ai-generated-MiniMax-uncensored.jpg" alt="Advanced MiniMax H3 reference workflow with two samplers" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/ai-generated-MiniMax-uncensored.jpg" alt="Advanced MiniMax H3 reference workflow with two samplers" style="width: 100%; height: auto;">
 
 </details>
 
@@ -134,7 +134,7 @@ Choose a prompt workflow based on the model and interface you want to use.
 <details>
 <summary><strong>View the Heretic MiniMax-H2 Qwen-VL prompt generator</strong></summary>
 
-<img loading="lazy" src="images/ai-generated-MiniMax-prompt-generator.jpg" alt="MiniMax-H2 Qwen-VL prompt generator workflow" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/ai-generated-MiniMax-prompt-generator.jpg" alt="MiniMax-H2 Qwen-VL prompt generator workflow" style="width: 100%; height: auto;">
 
 </details>
 
@@ -142,7 +142,7 @@ Choose a prompt workflow based on the model and interface you want to use.
 <details>
 <summary><strong>View the Qwen3.8-27B prompt enhancer</strong></summary>
 
-<img loading="lazy" src="images/ai-generated-MiniMax-prompt-enhancer.jpg" alt="Qwen3.8-27B prompt enhancer workflow using llama.cpp" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/ai-generated-MiniMax-prompt-enhancer.jpg" alt="Qwen3.8-27B prompt enhancer workflow using llama.cpp" style="width: 100%; height: auto;">
 
 </details>
 
@@ -150,7 +150,7 @@ Choose a prompt workflow based on the model and interface you want to use.
 <details>
 <summary><strong>View the fantastic prompt builder and media manager</strong></summary>
 
-<img loading="lazy" src="images/ai-generated-MiniMax-prompt-creator.jpg" alt="MiniMax H3 prompt builder and media manager workflow" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/ai-generated-MiniMax-prompt-creator.jpg" alt="MiniMax H3 prompt builder and media manager workflow" style="width: 100%; height: auto;">
 
 </details>
 
@@ -163,7 +163,7 @@ Preview generated video and audio inside the workflow before exporting the resul
 <details>
 <summary><strong>View the video and sound preview workflow</strong></summary>
 
-<img loading="lazy" src="images/ai-generated-MiniMax-preview.jpg" alt="MiniMax H3 video and sound preview workflow" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/ai-generated-MiniMax-preview.jpg" alt="MiniMax H3 video and sound preview workflow" style="width: 100%; height: auto;">
 
 </details>
 
@@ -255,19 +255,19 @@ These examples illustrate the quality, speed and generation limits of several GP
 
 <p><strong>L40S — good quality</strong></p>
 
-<img loading="lazy" src="images/runpod_L40S_MiniMax.jpg" alt="MiniMax H3 output from a pod running on an L40S" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/runpod_L40S_MiniMax.jpg" alt="MiniMax H3 output from a pod running on an L40S" style="width: 100%; height: auto;">
 
 <p><strong>RTX 5090 — fast, with resolution and duration restrictions</strong></p>
 
-<img loading="lazy" src="images/runpod_A5000_MiniMax.jpeg" alt="MiniMax H3 output from a pod running on an RTX 5090" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/runpod_A5000_MiniMax.jpeg" alt="MiniMax H3 output from a pod running on an RTX 5090" style="width: 100%; height: auto;">
 
 <p><strong>RTX PRO 6000 — fast, without restrictions</strong></p>
 
-<img loading="lazy" src="images/runpod_RTXPRO6000_MiniMax.jpg" alt="MiniMax H3 output from a pod running on an RTX PRO 6000" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/runpod_RTXPRO6000_MiniMax.jpg" alt="MiniMax H3 output from a pod running on an RTX PRO 6000" style="width: 100%; height: auto;">
 
 <p><strong>RTX 3090/4090 — slower, with resolution and duration restrictions</strong></p>
 
-<img loading="lazy" src="images/runpod_RTX3090_MiniMax.jpg" alt="MiniMax H3 output from a pod running on an RTX 3090" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/runpod_RTX3090_MiniMax.jpg" alt="MiniMax H3 output from a pod running on an RTX 3090" style="width: 100%; height: auto;">
 
 </details>
 
