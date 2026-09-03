@@ -4,19 +4,6 @@
 
 Run **MiniMax H3 video and native-audio generation** in ComfyUI on RunPod. The template provisions the models, VAEs, custom nodes and example workflows needed for text-to-video, image-to-video, first/last-frame video and reference-to-video generation.
 
-## Choose a workflow
-
-| Goal | Input | Recommended workflow | Go to |
-| --- | --- | --- | --- |
-| Animate a subject or preserve its appearance | Reference image | Ref2va enhanced | [Workflow](#reference-to-video-ref2va) |
-| Continue a scene across several shots | Reference image and motion context | Ref2va multi-shot | [Workflow](#multi-shot-reference-to-video) |
-| Animate a still image | Image and prompt | fl2va image-to-video | [Workflow](#image-to-video-i2v) |
-| Generate a scene from a description | Text prompt | fl2va text-to-video | [Workflow](#text-to-video-t2v) |
-| Build a complete sequence in one graph | Prompt and optional reference media | Director | [Workflow](#director-all-in-one) |
-| Create or improve prompts | Text or reference media | Prompt tools | [Workflows](#prompt-tools) |
-
-Already know which workflow you need? Follow the [MiniMax tutorial](ComfyUI_tutorial.md). For installation and startup instructions, see [RunPod deployment](ComfyUI_MiniMax_deployment.md).
-
 ## What to expect
 
 The template provisions the official ComfyUI MiniMax H3 model repacks, VAEs and workflows. Basic familiarity with RunPod pods, logs, secrets and file management is useful. Normal use does not require Linux administration experience.
@@ -32,6 +19,19 @@ The template provisions the official ComfyUI MiniMax H3 model repacks, VAEs and 
 - Ready-to-use example workflows.
 - 4-step and 8-step turbo LoRAs, including LightX2V and Alibaba PDD Acc.
 - Native `llama.cpp` and CUDA-enabled `llama-cpp-python` support.
+
+## Choose a workflow
+
+| Goal | Input | Recommended workflow | Go to |
+| --- | --- | --- | --- |
+| Animate a subject or preserve its appearance | Reference image | Ref2va enhanced | [Workflow](#reference-to-video-ref2va) |
+| Continue a scene across several shots | Reference image and motion context | Ref2va multi-shot | [Workflow](#multi-shot-reference-to-video) |
+| Animate a still image | Image and prompt | fl2va image-to-video | [Workflow](#image-to-video-i2v) |
+| Generate a scene from a description | Text prompt | fl2va text-to-video | [Workflow](#text-to-video-t2v) |
+| Build a complete sequence in one graph | Prompt and optional reference media | Director | [Workflow](#director-all-in-one) |
+| Create or improve prompts | Text or reference media | Prompt tools | [Workflows](#prompt-tools) |
+
+Already know which workflow you need? Follow the [MiniMax tutorial](ComfyUI_tutorial.md). For installation and startup instructions, see [RunPod deployment](ComfyUI_MiniMax_deployment.md).
 
 ## Standard workflows
 
