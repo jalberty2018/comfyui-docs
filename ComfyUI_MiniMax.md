@@ -2,152 +2,274 @@
 
 # MiniMax inference with ComfyUI
 
-A streamlined and automated environment for running **ComfyUI** with **MiniMax H3 video and native-audio generation**, optimized for RunPod.
+Run **MiniMax H3 video and native-audio generation** in ComfyUI on RunPod. The template provisions the models, VAEs, custom nodes and example workflows needed for text-to-video, image-to-video, first/last-frame video and reference-to-video generation.
+
+## Choose a workflow
+
+| Goal | Input | Recommended workflow | Go to |
+| --- | --- | --- | --- |
+| Animate a subject or preserve its appearance | Reference image | Ref2va enhanced | [Workflow](#reference-to-video-ref2va) |
+| Continue a scene across several shots | Reference image and motion context | Ref2va multi-shot | [Workflow](#multi-shot-reference-to-video) |
+| Animate a still image | Image and prompt | fl2va image-to-video | [Workflow](#image-to-video-i2v) |
+| Generate a scene from a description | Text prompt | fl2va text-to-video | [Workflow](#text-to-video-t2v) |
+| Build a complete sequence in one graph | Prompt and optional reference media | Director | [Workflow](#director-all-in-one) |
+| Create or improve prompts | Text or reference media | Prompt tools | [Workflows](#prompt-tools) |
+
+Already know which workflow you need? Follow the [MiniMax tutorial](ComfyUI_tutorial.md). For installation and startup instructions, see [RunPod deployment](ComfyUI_MiniMax_deployment.md).
 
 ## What to expect
 
-The template provisions the official ComfyUI MiniMax H3 model repacks, VAEs and workflows. Basic familiarity with RunPod pods, logs, secrets and file management is useful; normal use does not require Linux administration experience.
+The template provisions the official ComfyUI MiniMax H3 model repacks, VAEs and workflows. Basic familiarity with RunPod pods, logs, secrets and file management is useful. Normal use does not require Linux administration experience.
 
-## When to use this template
-
-Use this template for MiniMax H3 text-to-video, image-to-video, first/last-frame video and reference-to-video workflows with generated audio.
-
-## 🔧 Features
+### Included features
 
 - Automatic model provisioning through environment variables.
-- Models downloads depending on VRAM and architecture (Ada Lovelace / Blackwell).
+- Model downloads selected for the available VRAM and GPU architecture (Ada Lovelace or Blackwell).
 - CUDA 12.8 runtime with compiled attention acceleration.
 - Authentication for ComfyUI, Code Server, Hugging Face and CivitAI.
-- Uncensored heretic QWEN VL text encoders for inference and prompt enhancement.
-- LoRA Manager
-- Installed custom nodes and accelerators.
-- Example workflows.
-- 4-step , 8-step Turbo-loras (turbo, lightx2v, Alibaba PDD Acc) included
-- llama-cpp native and llama-cpp-python with CUDA 12.8 support.
+- Uncensored Heretic Qwen-VL text encoders for inference and prompt enhancement.
+- LoRA Manager, installed custom nodes and accelerators.
+- Ready-to-use example workflows.
+- 4-step and 8-step turbo LoRAs, including LightX2V and Alibaba PDD Acc.
+- Native `llama.cpp` and CUDA-enabled `llama-cpp-python` support.
 
-## 📦 Deployment on RunPod
+## Standard workflows
 
-- [RunPod deployment](ComfyUI_MiniMax_deployment.md)
+<a id="ref2va"></a>
+<a id="enhanced-standard-workflow-reference-to-videoaudio-ref2va"></a>
 
-## 📘 Tutorial
+### Reference-to-video (Ref2va)
 
-- [MiniMax tutorial](ComfyUI_tutorial.md)
+Use the enhanced Ref2va workflow to generate video and audio from a reference image while preserving the subject or visual direction.
 
-## Ref2va
+<details>
+<summary><strong>View the enhanced Ref2va workflow</strong></summary>
 
-### Enhanced standard workflow Reference to video/audio (Ref2va)
+<img loading="lazy" src="images/ai-generated-MiniMax.jpg" alt="Enhanced MiniMax H3 Ref2va workflow" style="width: 100%; height: auto;">
 
-![MiniMax H3 workflow Ref2va-1](images/ai-generated-MiniMax.jpg)
+<img loading="lazy" src="images/ai-generated-Ref2VA.jpg" alt="Detailed MiniMax H3 Ref2va workflow" style="width: 100%; height: auto;">
 
-![MiniMax H3 workflow Ref2va-1](images/ai-generated-Ref2VA.jpg)
+</details>
 
-### Multi-Shot/Motion-Context Workflow with 3 x 10 seconds starting from a reference image
+<a id="multi-shotmotion-context-workflow-with-3-x-10-seconds-starting-from-a-reference-image"></a>
 
-![MiniMax H3 workflow multi-shot](images/ai-generated-MiniMax-multi-shot.jpg)
+### Multi-shot reference-to-video
 
-## fl2va
+Use motion context to create three connected 10-second shots from one reference image.
 
-### Enhanced standard workflow image to video/audio
+<details>
+<summary><strong>View the multi-shot workflow</strong></summary>
 
-![MiniMax H3 workflow i2v](images/ai-generated-MiniMax-i2v.jpg) with or without turbo
+<img loading="lazy" src="images/ai-generated-MiniMax-multi-shot.jpg" alt="MiniMax H3 multi-shot reference-to-video workflow" style="width: 100%; height: auto;">
 
-### Enhanced standard workflow text to video/audio
+</details>
 
-![MiniMax H3 workflow t2v](images/ai-generated-MiniMax-t2v.jpg)
+<a id="fl2va"></a>
+<a id="enhanced-standard-workflow-image-to-videoaudio"></a>
 
-## Custom workflows
+### Image-to-video (i2v)
 
-### Director , all in one
+Use the enhanced fl2va image-to-video workflow with or without a turbo LoRA.
 
-![MiniMax H3 workflow all in one](images/ai-generated-MiniMax-director.jpg)
+<details>
+<summary><strong>View the image-to-video workflow</strong></summary>
 
-### Advanced REF workflow with 2 samplers (warmup) and PDD Acc turbo lora
+<img loading="lazy" src="images/ai-generated-MiniMax-i2v.jpg" alt="MiniMax H3 image-to-video workflow" style="width: 100%; height: auto;">
 
-![MiniMax H3 workflow Ref2va-uncensored](images/ai-generated-MiniMax-uncensored.jpg)
+</details>
 
-### Prompt generator using uncensored heretic Minimax-H2 QWEN-VL with generation tail
+<a id="enhanced-standard-workflow-text-to-videoaudio"></a>
 
-![MiniMax H3 workflow prompt generator](images/ai-generated-MiniMax-prompt-generator.jpg)
+### Text-to-video (t2v)
 
-### Prompt generator using Qwen3.8-27B-Uncensored with llama-cpp
+Use the enhanced fl2va text-to-video workflow to generate video and native audio from a prompt.
 
-![MiniMax H3 workflow prompt generator](images/ai-generated-MiniMax-prompt-enhancer.jpg)
+<details>
+<summary><strong>View the text-to-video workflow</strong></summary>
 
-### Fantastic prompt builder & media manager
+<img loading="lazy" src="images/ai-generated-MiniMax-t2v.jpg" alt="MiniMax H3 text-to-video workflow" style="width: 100%; height: auto;">
 
-![MiniMax H3 workflow prompt creator](images/ai-generated-MiniMax-prompt-creator.jpg)
+</details>
 
-### Video & sound preview
+## Advanced workflows and tools
 
-![MiniMax H3 video en sound preview](images/ai-generated-MiniMax-preview.jpg)
+<a id="custom-workflows"></a>
+<a id="director-all-in-one"></a>
 
-## Ref2va
+### Director: all-in-one
 
-### **Standard**
+Use Director to manage generation stages in a single workflow.
+
+<details>
+<summary><strong>View the Director workflow</strong></summary>
+
+<img loading="lazy" src="images/ai-generated-MiniMax-director.jpg" alt="MiniMax H3 Director all-in-one workflow" style="width: 100%; height: auto;">
+
+</details>
+
+<a id="advanced-ref-workflow-with-2-samplers-warmup-and-pdd-acc-turbo-lora"></a>
+
+### Advanced reference workflow
+
+This workflow combines two samplers, a warm-up stage and the PDD Acc turbo LoRA.
+
+<details>
+<summary><strong>View the advanced reference workflow</strong></summary>
+
+<img loading="lazy" src="images/ai-generated-MiniMax-uncensored.jpg" alt="Advanced MiniMax H3 reference workflow with two samplers" style="width: 100%; height: auto;">
+
+</details>
+
+### Prompt tools
+
+Choose a prompt workflow based on the model and interface you want to use.
+
+| Tool | Best suited for |
+| --- | --- |
+| Heretic MiniMax-H2 Qwen-VL with generation tail | Generating prompts from text and visual input |
+| Qwen3.8-27B-Uncensored with `llama.cpp` | Local prompt generation and enhancement |
+| Fantastic prompt builder and media manager | Building prompts while organizing reference media |
+
+<a id="prompt-generator-using-uncensored-heretic-minimax-h2-qwen-vl-with-generation-tail"></a>
+<details>
+<summary><strong>View the Heretic MiniMax-H2 Qwen-VL prompt generator</strong></summary>
+
+<img loading="lazy" src="images/ai-generated-MiniMax-prompt-generator.jpg" alt="MiniMax-H2 Qwen-VL prompt generator workflow" style="width: 100%; height: auto;">
+
+</details>
+
+<a id="prompt-generator-using-qwen38-27b-uncensored-with-llama-cpp"></a>
+<details>
+<summary><strong>View the Qwen3.8-27B prompt enhancer</strong></summary>
+
+<img loading="lazy" src="images/ai-generated-MiniMax-prompt-enhancer.jpg" alt="Qwen3.8-27B prompt enhancer workflow using llama.cpp" style="width: 100%; height: auto;">
+
+</details>
+
+<a id="fantastic-prompt-builder-media-manager" style="display: block; scroll-margin-top: 5rem;"></a>
+<details>
+<summary><strong>View the fantastic prompt builder and media manager</strong></summary>
+
+<img loading="lazy" src="images/ai-generated-MiniMax-prompt-creator.jpg" alt="MiniMax H3 prompt builder and media manager workflow" style="width: 100%; height: auto;">
+
+</details>
+
+<a id="video-sound-preview"></a>
+
+### Video and sound preview
+
+Preview generated video and audio inside the workflow before exporting the result.
+
+<details>
+<summary><strong>View the video and sound preview workflow</strong></summary>
+
+<img loading="lazy" src="images/ai-generated-MiniMax-preview.jpg" alt="MiniMax H3 video and sound preview workflow" style="width: 100%; height: auto;">
+
+</details>
+
+## Output examples
+
+The following clips show the output of the standard and advanced workflows.
+
+<a id="ref2va_1"></a>
+
+### Ref2va examples
+
+<a id="standard"></a>
+**Standard reference-to-video**
 
 <div style="text-align: center;">
-  <video controls preload="metadata" style="max-width: 50%; height: auto;">
+  <video controls preload="metadata" style="width: 100%; max-width: 720px; height: auto;">
     <source src="/video/Video_tickling_princess.mp4" type="video/mp4">
   </video>
 </div>
 
-### **Enhanced**
+<a id="enhanced"></a>
+**Enhanced reference-to-video**
 
 <div style="text-align: center;">
-  <video controls preload="metadata" style="max-width: 50%; height: auto;">
+  <video controls preload="metadata" style="width: 100%; max-width: 720px; height: auto;">
     <source src="/video/Video_girls_in_love.mp4" type="video/mp4">
   </video>
 </div>
 
-### **Multi-shot continuation**
+<a id="multi-shot-continuation"></a>
+**Multi-shot continuation**
 
 <div style="text-align: center;">
-  <video controls preload="metadata" style="max-width: 50%; height: auto;">
+  <video controls preload="metadata" style="width: 100%; max-width: 720px; height: auto;">
     <source src="/video/Video_minimax_multi-shot.mp4" type="video/mp4">
   </video>
 </div>
 
-## fl2va
+<a id="fl2va_1"></a>
 
-### **i2v**
+### fl2va examples
+
+<a id="i2v"></a>
+**Image-to-video**
 
 <div style="text-align: center;">
-  <video controls preload="metadata" style="max-width: 50%; height: auto;">
+  <video controls preload="metadata" style="width: 100%; max-width: 720px; height: auto;">
     <source src="/video/Video_girl_drinking_cocktail.mp4" type="video/mp4">
   </video>
 </div>
 
-### **t2v**
+<a id="t2v"></a>
+**Text-to-video**
 
 <div style="text-align: center;">
-  <video controls preload="metadata" style="max-width: 50%; height: auto;">
+  <video controls preload="metadata" style="width: 100%; max-width: 720px; height: auto;">
     <source src="/video/Video_girl_walking_on_beach.mp4" type="video/mp4">
   </video>
 </div>
 
-## Example video with director
+<a id="example-video-with-director"></a>
+
+### Director example
 
 <div style="text-align: center;">
-  <video controls preload="metadata" style="max-width: 50%; height: auto;">
+  <video controls preload="metadata" style="width: 100%; max-width: 720px; height: auto;">
     <source src="/video/Video_minimax_slow.mp4" type="video/mp4">
   </video>
 </div>
 
-### Pod running on L40S (good quality)
+## Hardware output comparison
 
-![Pod running on L40S](images/runpod_L40S_MiniMax.jpg)
+These examples illustrate the quality, speed and generation limits of several GPU configurations.
 
-### Pod running on RTX 5090 (fast but restricted in resolution and duration)
+| GPU | Characteristic |
+| --- | --- |
+| L40S | Good output quality |
+| RTX 5090 | Fast, with resolution and duration restrictions |
+| RTX PRO 6000 | Fast, without those restrictions |
+| RTX 3090/4090 | Slower, with resolution and duration restrictions |
 
-![Pod running on RTX 5090](images/runpod_A5000_MiniMax.jpeg)
+<a id="pod-running-on-l40s-good-quality"></a>
+<a id="pod-running-on-rtx-5090-fast-but-restricted-in-resolution-and-duration"></a>
+<a id="pod-running-on-rtx-pro-6000-fast-and-no-restrictions"></a>
+<a id="pod-running-on-rtx-30904090-slow-and-restricted-in-resolution-and-duration"></a>
 
-### Pod running on RTX PRO 6000 (fast and no restrictions)
+<details>
+<summary><strong>View the hardware comparison screenshots</strong></summary>
 
-![Pod running on RTX PRO 6000](images/runpod_RTXPRO6000_MiniMax.jpg)
+<p><strong>L40S — good quality</strong></p>
 
-### Pod running on RTX 3090/4090 (slow and restricted in resolution and duration)
+<img loading="lazy" src="images/runpod_L40S_MiniMax.jpg" alt="MiniMax H3 output from a pod running on an L40S" style="width: 100%; height: auto;">
 
-![Pod running on RTX 3090](images/runpod_RTX3090_MiniMax.jpg)
+<p><strong>RTX 5090 — fast, with resolution and duration restrictions</strong></p>
+
+<img loading="lazy" src="images/runpod_A5000_MiniMax.jpeg" alt="MiniMax H3 output from a pod running on an RTX 5090" style="width: 100%; height: auto;">
+
+<p><strong>RTX PRO 6000 — fast, without restrictions</strong></p>
+
+<img loading="lazy" src="images/runpod_RTXPRO6000_MiniMax.jpg" alt="MiniMax H3 output from a pod running on an RTX PRO 6000" style="width: 100%; height: auto;">
+
+<p><strong>RTX 3090/4090 — slower, with resolution and duration restrictions</strong></p>
+
+<img loading="lazy" src="images/runpod_RTX3090_MiniMax.jpg" alt="MiniMax H3 output from a pod running on an RTX 3090" style="width: 100%; height: auto;">
+
+</details>
 
 ## More information
 
