@@ -1,155 +1,265 @@
-- image: [![Docker Image Version](https://img.shields.io/docker/v/ls250824/run-comfyui-image)](https://hub.docker.com/r/ls250824/run-comfyui-image)
-- image2: [![Docker Image2 Version](https://img.shields.io/docker/v/ls250824/run-comfyui-image2)](https://hub.docker.com/r/ls250824/run-comfyui-image2)
+[![Docker Image Version](https://img.shields.io/docker/v/ls250824/run-comfyui-image)](https://hub.docker.com/r/ls250824/run-comfyui-image) [![Docker Image2 Version](https://img.shields.io/docker/v/ls250824/run-comfyui-image2)](https://hub.docker.com/r/ls250824/run-comfyui-image2)
 
 # Image inference with ComfyUI
 
-A streamlined and automated environment for running **ComfyUI** with **image/edit models**, optimized for use on RunPod.
+Run **image generation and image editing models** in ComfyUI on RunPod. The templates provision the models, LoRAs, custom nodes and example workflows needed for Z-Image, ERNIE-Image, FLUX.2, FLUX.2 Klein, Qwen-Image, JoyCaption, Krea-2 and Qwen-Image-Edit.
 
 ## What to expect
 
-These templates are intended for users who already want to run ComfyUI on RunPod and are comfortable following technical setup steps. No Linux expertise is required for normal use, but basic familiarity with RunPod pods, logs, tokens, and file management is helpful.
+These templates are intended for users who want to run ComfyUI on RunPod and are comfortable following technical setup steps. No Linux expertise is required for normal use, but basic familiarity with RunPod pods, logs, tokens and file management is helpful.
 
-## When to use this template
+<a id="when-to-use-this-template"></a>
+<a id="purpose-of-this-pod"></a>
 
-Use this template for image generation and image editing workflows with Z-Image, ERNIE-Image, FLUX.2, FLUX.2 Klein, Qwen-Image, JoyCaption, Krea-2 and Qwen-Image-Edit models.
+The pod is an experimental workspace for image creators who want to combine generation models, editing models, LoRAs and custom nodes in open and flexible creative pipelines. It supports image generation, identity-aware editing, prompt enhancement, captioning and controlled image creation.
 
-## Purpose of this pod
+The approach is aligned with the open-model discussion in Eric Hartford's [Uncensored Models](https://erichartford.com/uncensored-models): local and open AI systems give advanced users more ownership, control and composability. The pod is a technical workspace for responsible use rather than a content platform or safety policy.
 
-This pod is designed as an experimental ComfyUI environment for image creators who want maximum creative freedom. It focuses on integrating image models, editing models, LoRAs, and custom nodes that reduce unnecessary workflow restrictions and make it easier to test open, flexible, and uncensored creative pipelines.
+<a id="features"></a>
+<a id="built-in-authentication"></a>
 
-The guiding idea is aligned with the open-model discussion described by Eric Hartford in [Uncensored Models](https://erichartford.com/uncensored-models): local and open AI systems should give advanced users more ownership, control, and composability. In this context, the pod is not a safety policy or content platform. It is a technical workspace for responsible users who want to explore creative image generation, image editing, prompt enhancement, captioning, and model combinations with as much artistic latitude as the available models and custom nodes allow.
+### Included features
 
-## 🔧 Features
+- Automatic model and LoRA provisioning through environment variables.
+- Ready-to-use workflows for image generation, editing and enhancement.
+- CUDA 12.8 with compiled attention and GPU acceleration.
+- Automatic selection of bf16 or fp8 models and workflows.
+- LoRA Manager and pre-installed custom nodes.
+- Authentication for ComfyUI, Code Server, Hugging Face and CivitAI.
 
-- Automatic model and LoRA provisioning via environment variables.
-- Included workflows for **image generation** and **enhancement** using pre-installed custom nodes.
-- Compatible with high-performance NVIDIA GPUs (CUDA 12.8).
-- Compiled attention and GPU acceleration.
-- Automatic selection of bf16 or fp8 models/workflows.
-- LoRA Manager.
+<a id="deployment-on-runpod"></a>
+<a id="tutorial"></a>
 
-## 🔧 Built-in **authentication**
-  
-- ComfyUI
-- Code Server
-- Hugging Face API
-- CivitAI API
+## RunPod deployment
 
-## 📦 Deployment on RunPod
+**Start here:** [Choose, deploy and start an image template on RunPod](ComfyUI_image_deployment.md).
 
-- [👉 Templates](ComfyUI_image_deployment.md)
+Once the pod is running, use the workflow examples below to choose what you want to create. Follow the [ComfyUI tutorial](ComfyUI_tutorial.md) for the steps from opening ComfyUI to running your first workflow.
 
-## 📘 Tutorial
+## Choose a workflow
 
-- [Specific for these templates](ComfyUI_tutorial.md)
+| Goal | Input | Recommended workflow | Go to |
+| --- | --- | --- | --- |
+| Preserve or transfer a subject's identity | Source and target images | Krea-2 identity workflows | [Workflows](#krea-2-identity-workflows) |
+| Generate an image from a description | Text prompt | Krea-2 text-to-image | [Workflows](#krea-2-text-to-image-workflows) |
+| Guide generation with a control or reference image | Prompt and control image | FLUX.2 Klein control | [Workflows](#flux2-klein-control-workflows) |
+| Create several views of the same subject | Image and angle instructions | Multiple-angle workflows | [Workflows](#multiple-angle-workflows) |
+| Generate images with ZIB-ZIT | Text prompt | ZIB-ZIT | [Workflow](#zib-zit) |
+| Describe or caption an image | Image | JoyCaption | [Workflow](#joycaption) |
 
-## Example i2i workflow Krea-2 identity transfer
+## Standard workflows
 
-![krea-2d](images/ai-generated-krea2-identity.jpg)
+### Krea-2 identity workflows
 
-## Example i2i workflow Krea-2 identity edit loop
+Use these image-to-image workflows to transfer, edit or compose identities while retaining control over the target image.
 
-![krea-2e](images/ai-generated-krea2-edit.jpg)
+<a id="example-i2i-workflow-krea-2-identity-transfer"></a>
+<details>
+<summary><strong>View the Krea-2 identity transfer workflow</strong></summary>
 
-## Example i2i workflow Krea-2 identity composition
+<img loading="lazy" src="../images/ai-generated-krea2-identity.jpg" alt="Krea-2 identity transfer workflow" style="width: 100%; height: auto;">
 
-![krea-2c](images/ai-generated-krea2-composition.jpg)
+</details>
 
-## Example i2i workflow Krea-2 ostris edit
+<a id="example-i2i-workflow-krea-2-identity-edit-loop"></a>
+<details>
+<summary><strong>View the Krea-2 identity edit loop</strong></summary>
 
-![krea-2f](images/ai-generated-krea2-ostris-edit.jpg)
+<img loading="lazy" src="../images/ai-generated-krea2-edit.jpg" alt="Krea-2 identity edit loop workflow" style="width: 100%; height: auto;">
 
-##  Example t2i workflow Krea-2 with prompt enhancer
+</details>
 
-![krea-2a](images/ai-generated-krea2.jpg)
+<a id="example-i2i-workflow-krea-2-identity-composition"></a>
+<details>
+<summary><strong>View the Krea-2 identity composition workflow</strong></summary>
 
-## Example t2i workflow Krea-2 with image conditioning without vae encoding.
+<img loading="lazy" src="../images/ai-generated-krea2-composition.jpg" alt="Krea-2 identity composition workflow" style="width: 100%; height: auto;">
 
-![krea-2b](images/ai-generated-krea2-vlm.jpg)
+</details>
 
-## Example t2i workflow Krea-2 artist friendly conditioning
+<a id="example-i2i-workflow-krea-2-ostris-edit"></a>
+<details>
+<summary><strong>View the Krea-2 Ostris edit workflow</strong></summary>
 
-![krea-2c](images/ai-generated-krea2-vlm-artist.jpg)
+<img loading="lazy" src="../images/ai-generated-krea2-ostris-edit.jpg" alt="Krea-2 Ostris image editing workflow" style="width: 100%; height: auto;">
 
-## Example workflow FLUX-Klein control/target image generation
+</details>
 
-![FLUX-Klein](images/ai-generated-FLUX-KLEIN.jpg)
+### Krea-2 text-to-image workflows
 
-## Example workflow FLUX-Klein RefControl image generation
+Choose a workflow based on how you want to build and condition the prompt.
 
-![FLUX-Klein-RefControl](images/ai-generated-FLUX-KLEIN-2.jpg)
+| Workflow | Best suited for |
+| --- | --- |
+| Prompt enhancer | Expanding a short prompt before generation |
+| Image conditioning without VAE encoding | Conditioning directly from a reference image |
+| Artist-friendly conditioning | Creative control with an artist-oriented setup |
 
-## Example workflow Qwen-Image-Edit multiple angles
+<a id="example-t2i-workflow-krea-2-with-prompt-enhancer"></a>
+<details>
+<summary><strong>View the Krea-2 prompt enhancer workflow</strong></summary>
 
-![Qwen-Image-Edit camera angles](images/ai-generated-QWEN-EDIT-CAMERA.jpg)
+<img loading="lazy" src="../images/ai-generated-krea2.jpg" alt="Krea-2 text-to-image workflow with prompt enhancer" style="width: 100%; height: auto;">
 
-## Example workflow FLUX.2 Dev multiple angles
+</details>
 
-![FLUX2-CAMERA](images/ai-generated-FLUX2-CAMERA.jpg)
+<a id="example-t2i-workflow-krea-2-with-image-conditioning-without-vae-encoding"></a>
+<details>
+<summary><strong>View the Krea-2 image-conditioning workflow</strong></summary>
 
-## Example workflow ZIB-ZIT
+<img loading="lazy" src="../images/ai-generated-krea2-vlm.jpg" alt="Krea-2 text-to-image workflow with image conditioning and no VAE encoding" style="width: 100%; height: auto;">
 
-![ZIB-ZIT](images/ai-generated-ZIB-ZIT.jpg)
+</details>
 
-## Example workflow JoyCaption
+<a id="example-t2i-workflow-krea-2-artist-friendly-conditioning"></a>
+<details>
+<summary><strong>View the Krea-2 artist-friendly workflow</strong></summary>
 
-![JoyCaption workflow](images/joycaption-workflow.jpg)
+<img loading="lazy" src="../images/ai-generated-krea2-vlm-artist.jpg" alt="Krea-2 text-to-image workflow with artist-friendly conditioning" style="width: 100%; height: auto;">
 
-### Example running Z-Image on an RTX A4500
+</details>
 
-![Pod running on RTX A4500 ZIT ComfyUI](images/runpod_A4500_ZIB_ZIT.jpg)
+## Advanced workflows and tools
 
-### Example running Z-Image on an RTX A5000
+### FLUX.2 Klein control workflows
 
-![Pod running on RTX A5000 ZIT ComfyUI](images/runpod_A5000_ZIB_ZIT.jpg)
+Use FLUX.2 Klein when generation needs to follow a control, target or reference image.
 
-### Example running Z-Image on an RTX 4000 Ada
+<a id="example-workflow-flux-klein-controltarget-image-generation"></a>
+<details>
+<summary><strong>View the FLUX.2 Klein control and target workflow</strong></summary>
 
-![Pod running on RTX 4000 Ada ZIT ComfyUI](images/runpod_4000ADA_ZIB_ZIT.jpg)
+<img loading="lazy" src="../images/ai-generated-FLUX-KLEIN.jpg" alt="FLUX.2 Klein control and target image generation workflow" style="width: 100%; height: auto;">
 
-### Example running Z-Image on an RTX 3090
+</details>
 
-![Pod running on RTX 3090 ZIT ComfyUI](images/runpod_3090_ZIB_ZIT.jpg)
+<a id="example-workflow-flux-klein-refcontrol-image-generation"></a>
+<details>
+<summary><strong>View the FLUX.2 Klein RefControl workflow</strong></summary>
 
-### Example running FLUX.2 Klein 9B on an RTX A4500
+<img loading="lazy" src="../images/ai-generated-FLUX-KLEIN-2.jpg" alt="FLUX.2 Klein RefControl image generation workflow" style="width: 100%; height: auto;">
 
-![Pod running on RTX A4500 FLUX.2 Klein ComfyUI](images/runpod_FLUX_KLEIN.jpg)
+</details>
 
-### Example running Qwen-Image-Edit fp8 on an RTX A5000
+### Multiple-angle workflows
 
-![Pod running on RTX A5000 Qwen-Image-Edit fp8 ComfyUI](images/runpod_A5000_QWEN-EDIT.jpg)
+Generate several viewing angles with Qwen-Image-Edit or FLUX.2 Dev.
 
-### Example running Qwen-Image-Edit bf16 on an A40
+<a id="example-workflow-qwen-image-edit-multiple-angles"></a>
+<details>
+<summary><strong>View the Qwen-Image-Edit multiple-angle workflow</strong></summary>
 
-![Pod running on A40 Qwen-Image-Edit bf16 ComfyUI](images/runpod_A40_QWEN-EDIT.jpg)
+<img loading="lazy" src="../images/ai-generated-QWEN-EDIT-CAMERA.jpg" alt="Qwen-Image-Edit workflow for multiple camera angles" style="width: 100%; height: auto;">
 
-### Example running FLUX.2 Dev bf16 on an L40S
+</details>
 
-![Pod running on L40S FLUX.2 Dev bf16 ComfyUI](images/runpod_L40S_FLUX_2.jpg)
+<a id="example-workflow-flux2-dev-multiple-angles"></a>
+<details>
+<summary><strong>View the FLUX.2 Dev multiple-angle workflow</strong></summary>
 
-### Example running FLUX.2 Dev fp8 on an RTX A5000 (slow)
+<img loading="lazy" src="../images/ai-generated-FLUX2-CAMERA.jpg" alt="FLUX.2 Dev workflow for multiple camera angles" style="width: 100%; height: auto;">
 
-![Pod running on RTX A5000 FLUX.2 Dev fp8 ComfyUI](images/runpod_A5000_FLUX_2.jpg)
+</details>
 
-### Example running Krea-2 turbo fp8 on an RTX A5000
+<a id="example-workflow-zib-zit"></a>
 
-![Pod running on RTX A5000 krea2 turbo fp8 ComfyUI](images/runpod_A5000_krea2.jpg)
+### ZIB-ZIT
 
-### Example running Krea-2 turbo bf16 on an RTX A5000
+Use the ZIB-ZIT workflow for text-to-image generation with the Z-Image model family.
 
-![Pod running on RTX A5000 krea2 turbo bf16 ComfyUI](images/runpod_A5000_krea2-bf16.jpg)
+<details>
+<summary><strong>View the ZIB-ZIT workflow</strong></summary>
 
-## Example running Krea-2 turbo bf16 on an RTX 4090
+<img loading="lazy" src="../images/ai-generated-ZIB-ZIT.jpg" alt="ZIB-ZIT image generation workflow" style="width: 100%; height: auto;">
 
-![Pod running on RTX A5000 krea2 turbo bf16 ComfyUI](images/runpod_RTX490_krea2-bf16.jpg)
+</details>
+
+<a id="example-workflow-joycaption"></a>
+
+### JoyCaption
+
+Use JoyCaption to analyze an image and generate a detailed description or prompt.
+
+<details>
+<summary><strong>View the JoyCaption workflow</strong></summary>
+
+<img loading="lazy" src="../images/joycaption-workflow.jpg" alt="JoyCaption image captioning workflow" style="width: 100%; height: auto;">
+
+</details>
+
+## Hardware output comparison
+
+These screenshots show the workflows running with different models, precisions and GPU configurations.
+
+| Workload | Precision | Example GPUs | Note |
+| --- | --- | --- | --- |
+| Z-Image | — | RTX A4500, RTX A5000, RTX 4000 Ada, RTX 3090 | Four GPU examples |
+| FLUX.2 Klein 9B | — | RTX A4500 | One GPU example |
+| Qwen-Image-Edit | fp8 or bf16 | RTX A5000, A40 | Two precision examples |
+| FLUX.2 Dev | bf16 or fp8 | L40S, RTX A5000 | The fp8 A5000 example is slower |
+| Krea-2 turbo | fp8 or bf16 | RTX A5000, RTX 4090 | Three configuration examples |
+
+<a id="example-running-z-image-on-an-rtx-a4500"></a>
+<a id="example-running-z-image-on-an-rtx-a5000"></a>
+<a id="example-running-z-image-on-an-rtx-4000-ada"></a>
+<a id="example-running-z-image-on-an-rtx-3090"></a>
+<a id="example-running-flux2-klein-9b-on-an-rtx-a4500"></a>
+<a id="example-running-qwen-image-edit-fp8-on-an-rtx-a5000"></a>
+<a id="example-running-qwen-image-edit-bf16-on-an-a40"></a>
+<a id="example-running-flux2-dev-bf16-on-an-l40s"></a>
+<a id="example-running-flux2-dev-fp8-on-an-rtx-a5000-slow"></a>
+<a id="example-running-krea-2-turbo-fp8-on-an-rtx-a5000"></a>
+<a id="example-running-krea-2-turbo-bf16-on-an-rtx-a5000"></a>
+<a id="example-running-krea-2-turbo-bf16-on-an-rtx-4090"></a>
+
+<details>
+<summary><strong>View the hardware comparison screenshots</strong></summary>
+
+<p><strong>Z-Image on an RTX A4500</strong></p>
+<img loading="lazy" src="../images/runpod_A4500_ZIB_ZIT.jpg" alt="Z-Image running on an RTX A4500" style="width: 100%; height: auto;">
+
+<p><strong>Z-Image on an RTX A5000</strong></p>
+<img loading="lazy" src="../images/runpod_A5000_ZIB_ZIT.jpg" alt="Z-Image running on an RTX A5000" style="width: 100%; height: auto;">
+
+<p><strong>Z-Image on an RTX 4000 Ada</strong></p>
+<img loading="lazy" src="../images/runpod_4000ADA_ZIB_ZIT.jpg" alt="Z-Image running on an RTX 4000 Ada" style="width: 100%; height: auto;">
+
+<p><strong>Z-Image on an RTX 3090</strong></p>
+<img loading="lazy" src="../images/runpod_3090_ZIB_ZIT.jpg" alt="Z-Image running on an RTX 3090" style="width: 100%; height: auto;">
+
+<p><strong>FLUX.2 Klein 9B on an RTX A4500</strong></p>
+<img loading="lazy" src="../images/runpod_FLUX_KLEIN.jpg" alt="FLUX.2 Klein 9B running on an RTX A4500" style="width: 100%; height: auto;">
+
+<p><strong>Qwen-Image-Edit fp8 on an RTX A5000</strong></p>
+<img loading="lazy" src="../images/runpod_A5000_QWEN-EDIT.jpg" alt="Qwen-Image-Edit fp8 running on an RTX A5000" style="width: 100%; height: auto;">
+
+<p><strong>Qwen-Image-Edit bf16 on an A40</strong></p>
+<img loading="lazy" src="../images/runpod_A40_QWEN-EDIT.jpg" alt="Qwen-Image-Edit bf16 running on an A40" style="width: 100%; height: auto;">
+
+<p><strong>FLUX.2 Dev bf16 on an L40S</strong></p>
+<img loading="lazy" src="../images/runpod_L40S_FLUX_2.jpg" alt="FLUX.2 Dev bf16 running on an L40S" style="width: 100%; height: auto;">
+
+<p><strong>FLUX.2 Dev fp8 on an RTX A5000</strong></p>
+<img loading="lazy" src="../images/runpod_A5000_FLUX_2.jpg" alt="FLUX.2 Dev fp8 running on an RTX A5000" style="width: 100%; height: auto;">
+
+<p><strong>Krea-2 turbo fp8 on an RTX A5000</strong></p>
+<img loading="lazy" src="../images/runpod_A5000_krea2.jpg" alt="Krea-2 turbo fp8 running on an RTX A5000" style="width: 100%; height: auto;">
+
+<p><strong>Krea-2 turbo bf16 on an RTX A5000</strong></p>
+<img loading="lazy" src="../images/runpod_A5000_krea2-bf16.jpg" alt="Krea-2 turbo bf16 running on an RTX A5000" style="width: 100%; height: auto;">
+
+<p><strong>Krea-2 turbo bf16 on an RTX 4090</strong></p>
+<img loading="lazy" src="../images/runpod_RTX490_krea2-bf16.jpg" alt="Krea-2 turbo bf16 running on an RTX 4090" style="width: 100%; height: auto;">
+
+</details>
 
 ## More information
 
 - [Environment configuration](RunPod_configuration.md)
 - [Hardware guidance](ComfyUI_image_hardware.md)
-- [Image setup image](ComfyUI_image_image_setup.md)
-- [Image setup image2](ComfyUI_image2_image_setup.md)
-- [Custom nodes image](ComfyUI_image_custom_nodes.md)
-- [Custom nodes image2](ComfyUI_image2_custom_nodes.md)
+- [Image setup](ComfyUI_image_image_setup.md)
+- [Image2 setup](ComfyUI_image2_image_setup.md)
+- [Image custom nodes](ComfyUI_image_custom_nodes.md)
+- [Image2 custom nodes](ComfyUI_image2_custom_nodes.md)
 - [Resources](ComfyUI_image_resources.md)
 - [Updates](ComfyUI_image_update.md)
