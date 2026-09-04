@@ -1,182 +1,264 @@
-# 📘 ComfyUI tutorials
+# ComfyUI on RunPod
 
-The general instructions apply to every template. Where the templates differ, the instructions are split by template.
+Use this tutorial after deploying one of the ComfyUI templates. It shows the shortest route from a running pod to your first workflow, followed by optional tools for managing models, files and the pod itself.
 
-- This tutorial reflects my own experience on RunPod.
-- Always consult the excellent official [RunPod documentation](https://docs.runpod.io/pods/overview).
+For general RunPod concepts and connection methods, consult the official [RunPod Pod documentation](https://docs.runpod.io/pods/overview).
 
-## Common tasks
+<a id="common-tasks"></a>
 
-- [Start a pod](Runpod_pod_deployment.md)
-- [Connect to your pod](#connecting-to-your-pod)
-- [Open the web terminal](#web-terminal)
-- [Log in to Code-Server](#code-server-login)
-- [Configure secrets](#secrets)
-- [Download models and LoRAs](#downloading-models-and-loras)
-- [Link models](#model-linker)
-- [Delete models and LoRAs](#deleting-models-and-loras)
-- [Manage the pod](#pod-management)
-- [Upload and download files](#uploading-downloading-files)
-- [Use the RunPod API](#runpod-api)
+## Start here
 
-## 🚀 Starting a Pod
+| Task | Where to go |
+| --- | --- |
+| Deploy a template | [Start a pod](Runpod_pod_deployment.md) |
+| Open ComfyUI | [Connect to your pod](#connecting-to-your-pod) |
+| Run an included workflow | [Run your first workflow](#run-your-first-workflow) |
+| Open a command line | [Web Terminal](#web-terminal) |
+| Edit files in the browser | [Code-Server](#code-server-login) |
+| Configure passwords and tokens | [RunPod secrets](#secrets) |
+| Add models or LoRAs | [Model and LoRA management](#downloading-models-and-loras) |
+| Free storage space | [Delete models and LoRAs](#deleting-models-and-loras) |
+| Manage the pod or transfer files | [Pod and file management](#pod-and-file-management) |
 
-[Start a pod on RunPod](Runpod_pod_deployment.md)
+<a id="starting-a-pod"></a>
 
-## 🔌 Connecting to Your Pod
+## 1. Start the pod
 
-[RunPod connection documentation](https://docs.runpod.io/pods/connect-to-a-pod)
+If you have not deployed a pod yet, follow [Starting a Pod](Runpod_pod_deployment.md). Continue here when the container log shows the final ready message.
 
-![Possible HTTP services](images/services.jpg)
+<a id="connecting-to-your-pod"></a>
 
-### ⚠️ Service not ready or browser unauthorized
+## 2. Connect to your pod
 
-![Unauthorized](images/edge_rights_denied.jpg){ width="400" }
+1. Open **Pods** in the RunPod console.
+2. Expand your running pod and select **Connect**.
+3. Under **HTTP Services**, open **ComfyUI** on port `8188`.
+4. Complete the ComfyUI login page.
 
-Try to connect through the proxy with the pod ID and port number. You can find the URLs at the end of the log file in the RunPod console.
+| Service | Port | Use it for |
+| --- | --- | --- |
+| ComfyUI | `8188` | Loading and running workflows |
+| Code-Server | `9000` | Editing files in a browser-based code editor |
+| Web Terminal | — | Quick commands and troubleshooting |
+| SSH/SCP | `22` | Persistent terminal access and file transfer |
 
-- ComfyUI: `https://<pod-id>-8188.proxy.runpod.net/login`
-- Code-Server: `https://<pod-id>-9000.proxy.runpod.net/login`
+[View the official RunPod connection options](https://docs.runpod.io/pods/connect-to-a-pod).
 
-### 🎨 ComfyUI
+<details>
+<summary><strong>View the RunPod HTTP Services panel</strong></summary>
 
-1. Select the **Connect** tab → **ComfyUI**.
-2. Set the username and password.
-3. Load a workflow from the left menu.
-4. Press **Run**.
-5. Monitor GPU and RAM usage via **Telemetry**.
+<img loading="lazy" src="../images/services.jpg" alt="RunPod Connect panel with the available HTTP services" style="width: 100%; height: auto;">
 
-![Select the LTX workflow](images/workflow_LTX.jpg){ width="500" }
+</details>
 
-![Select the MiniMax workflow](images/ai-generated-MiniMax.jpg){ width="500" }
+<a id="comfyui"></a>
+<a id="run-your-first-workflow"></a>
 
-### ⚠️ ComfyUI screen remains blank
+## 3. Run your first workflow
 
-- Wait one minute and try again.
-- Restart your browser and/or clear its cache.
-- Try another browser, such as Brave, Chrome, or Edge.
+1. Open **ComfyUI** from the RunPod **Connect** panel.
+2. Complete the login page if prompted.
+3. Open the workflow browser from the left menu.
+4. Select one of the workflows included with your template.
+5. Review its prompt, media inputs, output size and duration settings.
+6. Select **Run**.
+7. Monitor GPU and system RAM usage in **Telemetry**.
 
-## 💻 Web Terminal
+The exact workflows depend on whether you deployed the Image, MiniMax, WAN or LTX template.
 
-![Web Terminal](images/web-console.jpg)
+<details>
+<summary><strong>View example workflow selections</strong></summary>
 
-- Select the **Connect** tab.
-- Enable **Web Terminal**.
-- The terminal is now available directly in your browser.
+<p><strong>LTX workflow</strong></p>
+<img loading="lazy" src="../images/workflow_LTX.jpg" alt="Selecting an included LTX workflow in ComfyUI" style="width: 100%; max-width: 800px; height: auto;">
 
-## 🧑‍💻 Code-Server Login
+<p><strong>MiniMax workflow</strong></p>
+<img loading="lazy" src="../images/ai-generated-MiniMax.jpg" alt="Included MiniMax workflow in ComfyUI" style="width: 100%; max-width: 800px; height: auto;">
 
-![Login without a password variable](images/code-server.jpg){ width="500" }
+</details>
 
-### No `PASSWORD` set
+## Optional pod tools
 
-Copy the password displayed at the end of the container log in the RunPod console, or open the web terminal and enter:
+Use these tools when you need terminal access, file editing or template credentials. They are not required for running an included workflow.
+
+<a id="web-terminal"></a>
+
+### Web Terminal
+
+The Web Terminal is suitable for quick commands and troubleshooting. Use SSH instead for long-running processes.
+
+1. Open **Pods** in the RunPod console.
+2. Expand the pod and select **Connect**.
+3. Select **Start** if the terminal is stopped.
+4. Select **Open Web Terminal**.
+
+<details>
+<summary><strong>View the Web Terminal</strong></summary>
+
+<img loading="lazy" src="../images/web-console.jpg" alt="RunPod Web Terminal open in the browser" style="width: 100%; height: auto;">
+
+</details>
+
+<a id="code-server-login"></a>
+
+### Code-Server login
+
+Open **Code-Server** under **HTTP Services** in the RunPod **Connect** panel. It uses the `PASSWORD` environment variable when one is configured.
+
+<a id="password-set-in-the-runpod-template"></a>
+
+**When `PASSWORD` is configured:** use that password on the Code-Server login page.
+
+<a id="no-password-set"></a>
+
+**When `PASSWORD` is not configured:** copy the generated password from the end of the container log, or open the Web Terminal and run:
 
 ```bash
 cat /root/.config/code-server/config.yaml
 ```
 
-Copy the password and log in through the Code-Server service on the **Connect** tab.
+Copy the password from the configuration file and enter it on the Code-Server login page.
 
-### `PASSWORD` set in the RunPod template
+<a id="information-available-in-the-pod"></a>
+<details>
+<summary><strong>View Code-Server login and pod information</strong></summary>
 
-Log in through the Code-Server service on the **Connect** tab.
+<img loading="lazy" src="../images/code-server.jpg" alt="Code-Server password login page" style="width: 100%; max-width: 800px; height: auto;">
 
-### Information available in the pod
+<img loading="lazy" src="../images/code-server_info_pod.jpg" alt="Pod information available through Code-Server" style="width: 100%; height: auto;">
 
-![Code-Server](images/code-server_info_pod.jpg)
+</details>
 
-### ⚠️ Code-Server screen remains blank
+<a id="secrets"></a>
 
-- Wait one minute and try again.
-- Restart your browser and/or clear its cache.
-- Try another browser, such as Brave, Chrome, or Edge.
+### RunPod secrets
 
-## 🔐 Secrets
+Use [RunPod secrets](https://docs.runpod.io/pods/templates/secrets#manage-secrets) to store passwords and access tokens separately from the template configuration.
 
-[RunPod secrets documentation](https://docs.runpod.io/pods/templates/secrets#manage-secrets)
+| Environment variable | Purpose |
+| --- | --- |
+| `PASSWORD` | Code-Server login |
+| `CIVITAI_TOKEN` | CivitAI downloads |
+| `HF_TOKEN` | Hugging Face downloads, gated repositories and uploads |
 
-Useful secrets:
+Configure required secrets before starting the pod so the startup script and tools can use them immediately.
 
-- `PASSWORD` for the Code-Server login
-- `CIVITAI_TOKEN` for Civitai
-- `HF_TOKEN` for Hugging Face
+<a id="downloading-models-and-loras"></a>
 
-## 📥 Downloading Models and LoRAs
+## Model and LoRA management
 
-Use the web terminal, Code-Server, or ComfyUI-Lora-Manager.
+Choose the method that matches the source and the amount of control you need.
 
-### 🧩 ComfyUI-Lora-Manager
+| Method | Best suited for |
+| --- | --- |
+| ComfyUI-LoRA-Manager | Browsing, downloading and inserting LoRAs through a web interface |
+| Model Linker | Finding models referenced by a workflow |
+| CivitAI CLI | Downloading a known CivitAI version ID |
+| Hugging Face CLI | Downloading Hub files and gated models |
+| Manual provisioning | Advanced template-specific model placement |
 
-- [ComfyUI-Lora-Manager on GitHub](https://github.com/willmiao/ComfyUI-Lora-Manager)
+<a id="comfyui-lora-manager"></a>
 
-#### Launch the web interface
+### ComfyUI-LoRA-Manager
 
-![ComfyUI top bar](images/top_bar_comfyui.jpg){ width="300" }
+[ComfyUI-LoRA-Manager](https://github.com/willmiao/ComfyUI-Lora-Manager) provides a web interface for managing LoRAs.
+
+<a id="launch-the-web-interface"></a>
+
+#### Open LoRA Manager
 
 - Open it from the ComfyUI top bar.
-- Alternatively, use the URL displayed at the end of the container log:
+- Alternatively, use the URL printed near the end of the container log:
 
-```txt
+```text
 https://<pod-id>-8188.proxy.runpod.net/loras
 ```
 
-#### Civitai token
+<a id="civitai-token"></a>
 
-Go to Preferences and add your `CIVITAI_TOKEN` if it was not set before starting the pod.
+If `CIVITAI_TOKEN` was not configured before deployment, open **Preferences** in LoRA Manager and add it there.
 
-#### Refresh, fetch, and download models
+<a id="refresh-fetch-and-download-models"></a>
 
-![LoRA Manager top bar](images/top_bar.jpg)
+#### Refresh and download
 
-- Press **Refresh** and **Fetch** to download images for LoRAs already available in the pod.
-- Press **Download** and enter the Civitai page URL, not the download URL.
-- For `run-comfyui-wan2`, download both the high-noise and low-noise models separately.
+- Select **Refresh** and **Fetch** to retrieve preview images for LoRAs already stored on the pod.
+- Select **Download** and enter the CivitAI model page URL, not its file-download URL.
+- For `run-comfyui-wan2`, download the high-noise and low-noise LoRAs separately.
 
-#### Basic integration
+<details>
+<summary><strong>View the LoRA Manager controls</strong></summary>
 
-For `run-comfyui-image`, `run-comfyui-ltx`, and `run-comfyui-minimax`:
+<img loading="lazy" src="../images/top_bar_comfyui.jpg" alt="LoRA Manager button in the ComfyUI top bar" style="width: 100%; max-width: 600px; height: auto;">
 
-- Add a **Lora-Loader (LoraManager)** node to your ComfyUI workflow.
-- Press the **Paper Airplane** in the LoRA Manager web interface.
-- The LoRA becomes available in your workflow.
+<img loading="lazy" src="../images/top_bar.jpg" alt="Refresh, fetch and download controls in LoRA Manager" style="width: 100%; height: auto;">
 
-![Send an Image LoRA](images/send_lora.jpg)
+</details>
 
-![LoRA Loader node](images/lora_loader.jpg){ width="300" }
+<a id="basic-integration"></a>
 
-#### High/Low noise model WAN 2.2
+#### Add a LoRA to Image, LTX or MiniMax
 
-- Add high-noise and low-noise **Lora-Loader (LoraManager)** nodes to your workflow.
-- Press the **Paper Airplane** for both models in the LoRA Manager web interface.
-- Both LoRAs become available in your workflow.
+For `run-comfyui-image`, `run-comfyui-ltx` and `run-comfyui-minimax`:
 
-![Send the WAN LoRAs](images/wan-load-lora.jpg){ width="300" }
+1. Add a **LoRA Loader (LoraManager)** node to the workflow.
+2. Select the **Paper Airplane** for the LoRA in the LoRA Manager web interface.
+3. Confirm that the LoRA appears in the workflow node.
 
-### 🧩 Model linker
+<details>
+<summary><strong>View the LoRA insertion controls</strong></summary>
 
-- It tries to link models found in workflows to the pod provisioning.
-- It can download models, but be aware of the pod's limited volume capacity.
-- [Author's example](https://github.com/kianxyzw/comfyui-model-linker)
+<img loading="lazy" src="../images/send_lora.jpg" alt="Sending an image LoRA from LoRA Manager to ComfyUI" style="width: 100%; height: auto;">
 
-#### Example: linking models in a ComfyUI template
+<img loading="lazy" src="../images/lora_loader.jpg" alt="LoRA Loader node managed by LoRA Manager" style="width: 100%; max-width: 600px; height: auto;">
 
-![Model Linker step 1](images/model-linker-1.jpg){ width="500" }
+</details>
 
-![Model Linker step 2](images/model-linker-2.jpg){ width="500" }
+<a id="highlow-noise-model-wan-22"></a>
 
-![Model Linker step 3](images/model-linker-3.jpg){ width="500" }
+#### Add WAN 2.2 high-noise and low-noise LoRAs
 
-### 🧩 CivitAI CLI
+1. Add separate high-noise and low-noise **LoRA Loader (LoraManager)** nodes.
+2. Select the **Paper Airplane** for each LoRA in LoRA Manager.
+3. Confirm that both LoRAs appear in their corresponding workflow nodes.
 
-If no `CIVITAI_TOKEN` was set, create or use a free token from the Civitai website.
+<details>
+<summary><strong>View the WAN LoRA controls</strong></summary>
 
-![Civitai version ID](images/civitai_air.jpg){ width="400" }
+<img loading="lazy" src="../images/wan-load-lora.jpg" alt="Sending WAN high-noise and low-noise LoRAs to ComfyUI" style="width: 100%; max-width: 600px; height: auto;">
+
+</details>
+
+<a id="model-linker"></a>
+
+### Model Linker
+
+Model Linker tries to match models referenced by a workflow with the pod's provisioning system. It can also download missing models, so check the free space on the `/workspace` volume first.
+
+- [Model Linker example project](https://github.com/kianxyzw/comfyui-model-linker)
+
+<a id="example-linking-models-in-a-comfyui-template"></a>
+
+<details>
+<summary><strong>View an example of linking workflow models</strong></summary>
+
+<img loading="lazy" src="../images/model-linker-1.jpg" alt="Model Linker workflow model discovery" style="width: 100%; max-width: 800px; height: auto;">
+
+<img loading="lazy" src="../images/model-linker-2.jpg" alt="Model Linker model selection" style="width: 100%; max-width: 800px; height: auto;">
+
+<img loading="lazy" src="../images/model-linker-3.jpg" alt="Model Linker provisioning result" style="width: 100%; max-width: 800px; height: auto;">
+
+</details>
+
+<a id="civitai-cli"></a>
+
+### CivitAI CLI
+
+Use this method when you know the CivitAI version ID and destination directory. Configure `CIVITAI_TOKEN` first.
 
 ```bash
-export CIVITAI_TOKEN="xxxxx"
-civitai_com VERSION_ID /workspace/ComfyUI/models/<loras, etc>
-civitai_red VERSION_ID /workspace/ComfyUI/models/<loras, etc>
+civitai_com VERSION_ID /workspace/ComfyUI/models/loras/
+civitai_red VERSION_ID /workspace/ComfyUI/models/loras/
 ```
 
 Examples:
@@ -186,70 +268,128 @@ civitai_com 2228466 /workspace/ComfyUI/models/loras/
 civitai_red 2893442 /workspace/ComfyUI/models/loras/
 ```
 
-![Refresh ComfyUI nodes](images/refresh_nodes.jpg){ width="400" }
+<details>
+<summary><strong>View where to find a CivitAI version ID</strong></summary>
 
-Refresh ComfyUI by pressing **R**.
+<img loading="lazy" src="../images/civitai_air.jpg" alt="CivitAI model page showing a version identifier" style="width: 100%; max-width: 600px; height: auto;">
 
-### ☁️ Hugging Face CLI
+</details>
 
-`HF_TOKEN` is required for gated repositories and uploads.
+Refresh ComfyUI by pressing **R** after downloading a model.
 
-Log in:
+<a id="hugging-face-cli"></a>
+
+### Hugging Face CLI
+
+`HF_TOKEN` is required for gated repositories and uploads. If it was not configured as a RunPod secret, log in interactively:
 
 ```bash
-hf auth login --token xxxxx
+hf auth login
 ```
 
-Or set the token:
-
-```bash
-export HF_TOKEN="xxxxx"
-```
-
-Download the example from [Hugging Face](https://huggingface.co/ricecake/wan21NSFWClipVisionH_v10/tree/main):
+Download a file to the appropriate ComfyUI model directory:
 
 ```bash
 hf download ricecake/wan21NSFWClipVisionH_v10 wan21NSFWClipVisionH_v10.safetensors --local-dir /workspace/ComfyUI/models/clip_vision
 ```
-Refresh ComfyUI by pressing **R**.
+
+Refresh ComfyUI by pressing **R** after the download completes.
+
+<details>
+<summary><strong>View the ComfyUI refresh control</strong></summary>
+
+<img loading="lazy" src="../images/refresh_nodes.jpg" alt="Refreshing models and nodes in ComfyUI" style="width: 100%; max-width: 600px; height: auto;">
+
+</details>
+
+<a id="manual-provisioning"></a>
 
 ### Manual provisioning
 
-![Manual provisioning](images/codeserver_manual_provisioning.jpg)
+Use the Web Terminal or Code-Server and follow the documentation stored inside the pod for template-specific model directories and provisioning options.
 
-- Information is available in the pod's documentation.
-- Open the web terminal or Code-Server.
+<details>
+<summary><strong>View manual provisioning in Code-Server</strong></summary>
 
-## 🧩 Deleting Models and LoRAs
+<img loading="lazy" src="../images/codeserver_manual_provisioning.jpg" alt="Manual model provisioning documentation in Code-Server" style="width: 100%; height: auto;">
 
-### Web terminal or Code-Server
+</details>
 
-- Enter `ncdu` in the terminal.
-- Follow the on-screen instructions.
+<a id="deleting-models-and-loras"></a>
+
+## Delete models and LoRAs
+
+Deleting unused models frees space on the `/workspace` volume.
+
+<a id="web-terminal-or-code-server"></a>
+
+### Web Terminal or Code-Server
+
+1. Open a terminal.
+2. Run `ncdu`.
+3. Navigate to the model directory and follow the on-screen instructions.
+
+<a id="lora-manager"></a>
 
 ### LoRA Manager
 
-- Select the LoRA.
-- Select **Delete**.
+1. Select the LoRA.
+2. Select **Delete**.
 
-## 🧩 ComfyUI Manager
+<a id="comfyui-manager"></a>
 
-Open it from the top bar or menu.
+## ComfyUI Manager
 
-![Manage extensions](images/manage_extensions.jpg){ width="300" }
+Open ComfyUI Manager from the ComfyUI top bar or menu to manage custom nodes and extensions.
 
-## 🧩 Pod management
+<details>
+<summary><strong>View the ComfyUI Manager control</strong></summary>
 
-[RunPod pod management](RunPod_pod_management.md)
+<img loading="lazy" src="../images/manage_extensions.jpg" alt="Manage extensions button in ComfyUI" style="width: 100%; max-width: 600px; height: auto;">
 
-## 🔄 Uploading and Downloading Files
+</details>
 
-[RunPod file management](RunPod_file_management.md)
+## Pod and file management
 
-## 🔧 Advanced Features
+<a id="pod-management"></a>
+<a id="uploading-and-downloading-files"></a>
+<a id="uploading-downloading-files"></a>
+<a id="advanced-features"></a>
+<a id="runpod-api"></a>
 
-[RunPod advanced features](RunPod_advanced_features.md)
+| Task | Guide |
+| --- | --- |
+| Restart, stop or resume the pod | [Pod management](RunPod_pod_management.md) |
+| Upload or download files | [File management](RunPod_file_management.md) |
+| Use SSH and other advanced options | [Advanced features](RunPod_advanced_features.md) |
+| Automate RunPod operations | [RunPod API](RunPod_api.md) |
 
-## 🔑 RunPod API
+## Troubleshooting
 
-[RunPod API](RunPod_api.md)
+<a id="service-not-ready-or-browser-unauthorized"></a>
+
+### Service is not ready or the browser is unauthorized
+
+First confirm that the container log shows the final ready message. If the **Connect** buttons still do not work, use the proxy URLs printed near the end of the container log:
+
+- ComfyUI: `https://<pod-id>-8188.proxy.runpod.net/login`
+- Code-Server: `https://<pod-id>-9000.proxy.runpod.net/login`
+
+Replace `<pod-id>` with the ID displayed in the RunPod console.
+
+<details>
+<summary><strong>View an unauthorized browser response</strong></summary>
+
+<img loading="lazy" src="../images/edge_rights_denied.jpg" alt="Browser response when a RunPod proxy service is not authorized or ready" style="width: 100%; max-width: 600px; height: auto;">
+
+</details>
+
+<a id="comfyui-screen-remains-blank"></a>
+<a id="code-server-screen-remains-blank"></a>
+
+### ComfyUI or Code-Server remains blank
+
+1. Wait one minute and try again.
+2. Confirm that pod startup completed successfully.
+3. Refresh the page or clear the browser cache.
+4. Try another browser such as Chrome, Edge or Brave.
