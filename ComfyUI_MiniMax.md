@@ -6,7 +6,17 @@ Run **MiniMax H3 video and native-audio generation** in ComfyUI on RunPod. The t
 
 ## What to expect
 
-The template provisions the official ComfyUI MiniMax H3 model repacks, VAEs and workflows. Basic familiarity with RunPod pods, logs, secrets and file management is useful. Normal use does not require Linux administration experience.
+These templates are intended for users who want to run ComfyUI on RunPod and are comfortable following technical setup steps. No Linux expertise is required for normal use, but basic familiarity with RunPod pods, logs, tokens and file management is helpful.
+
+<a id="when-to-use-this-template"></a>
+<a id="purpose-of-this-pod"></a>
+
+The pod is an experimental workspace for video creators who want to combine generation models, editing models, LoRAs and custom nodes in open and flexible creative pipelines. It supports video generation, identity-aware video generation, prompt enhancement and long video generation.
+
+The approach is aligned with the open-model discussion in Eric Hartford's [Uncensored Models](https://erichartford.com/uncensored-models): local and open AI systems give advanced users more ownership, control and composability. The pod is a technical workspace for responsible use rather than a content platform or safety policy.
+
+<a id="features"></a>
+<a id="built-in-authentication"></a>
 
 ### Included features
 
