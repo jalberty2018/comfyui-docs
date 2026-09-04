@@ -20,6 +20,12 @@ The template provisions the official ComfyUI MiniMax H3 model repacks, VAEs and 
 - 4-step and 8-step turbo LoRAs, including LightX2V and Alibaba PDD Acc.
 - Native `llama.cpp` and CUDA-enabled `llama-cpp-python` support.
 
+## RunPod deployment
+
+**Start here:** [Deploy and start the MiniMax template on RunPod](ComfyUI_MiniMax_deployment.md).
+
+Once the pod is running, use the workflow examples below to choose what you want to create. Follow the [MiniMax tutorial](ComfyUI_tutorial.md) for the steps from opening ComfyUI to running your first workflow.
+
 ## Choose a workflow
 
 | Goal | Input | Recommended workflow | Go to |
@@ -30,8 +36,6 @@ The template provisions the official ComfyUI MiniMax H3 model repacks, VAEs and 
 | Generate a scene from a description | Text prompt | fl2va text-to-video | [Workflow](#text-to-video-t2v) |
 | Build a complete sequence in one graph | Prompt and optional reference media | Director | [Workflow](#director-all-in-one) |
 | Create or improve prompts | Text or reference media | Prompt tools | [Workflows](#prompt-tools) |
-
-Already know which workflow you need? Follow the [MiniMax tutorial](ComfyUI_tutorial.md). For installation and startup instructions, see [RunPod deployment](ComfyUI_MiniMax_deployment.md).
 
 ## Standard workflows
 
