@@ -22,18 +22,19 @@
 - [Scale Image to Total Pixels Advanced](https://github.com/BigStationW/ComfyUi-Scale-Image-to-Total-Pixels-Advanced)
 - [comfyui-obvpm](https://github.com/obvpm/comfyui-obvpm)
 - [ComfyUI-MiniMaxH3-Preview](https://github.com/Brioch/ComfyUI-MiniMaxH3-Preview)
-- [ComfyUI-H3-PowerLoraStack](https://github.com/cicalooo/ComfyUI-H3-PowerLoraStack)
 
-### Downloaders
+### Loaders/linkers
 
 - [comfyui-model-linker](https://github.com/kianxyzw/comfyui-model-linker)
 - [LoRA Manager](https://github.com/willmiao/ComfyUI-Lora-Manager)
+- [ComfyUI-H3-PowerLoraStack](https://github.com/cicalooo/ComfyUI-H3-PowerLoraStack)
 
 ### Video / Upscale
 
 - [Video Helper Suite](https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite)
 - [Frame Interpolation](https://github.com/Fannovel16/ComfyUI-Frame-Interpolation)
 - [VRGameDevGirl](https://github.com/vrgamegirl19/comfyui-vrgamedevgirl)
+- [MMH3-UltimateUpscale](https://github.com/bbaudio-2025/Comfyui-MMH3-UltimateUpscale.git)
 
 ### Segmentation
 
@@ -58,7 +59,6 @@
 
 ### Accelerators
 
-- [ComfyUI-SolAttn_triton](https://github.com/kijai/ComfyUI-SolAttn_triton)
 - [ComfyUI-Spectrum](https://github.com/xmarre/ComfyUI-Spectrum-MiniMax-H3)
 - [FirstBlockCache](https://github.com/duckyshell/ComfyUI-MiniMaxH3-FirstBlockCache)
 - [ComfyUI-sol-attn](https://github.com/Saganaki22/ComfyUI-sol-attn)
@@ -73,7 +73,3 @@
 - [ComfyUI-H3-multishot](https://github.com/jlucasmcrell/ComfyUI-H3-Multishot)
 - [ComfyUI-H3-Motion-Context](https://github.com/NikoDemon80/ComfyUI-H3-Motion-Context)
 - [MiniMax H3 Audio T8](https://github.com/T8mars/comfyui-minimax-h3-audio-T8)
-
-### Upscale
-
-- [MMH3-UltimateUpscale](https://github.com/bbaudio-2025/Comfyui-MMH3-UltimateUpscale.git)
