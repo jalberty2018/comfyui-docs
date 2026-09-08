@@ -7,7 +7,7 @@
 - The date reflects when the related custom nodes were cloned from their upstream repositories.
 - Pinned custom nodes are not updated automatically, because changing those pins can introduce compatibility issues.
 
-## 26082026
+## 08092026
 
 - ComfyUI 0.34.0
 - Added native llama-cpp to image2 with CUDA support

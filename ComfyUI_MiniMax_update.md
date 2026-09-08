@@ -8,13 +8,14 @@
 - This pod is stable but many custom_nodes are experimental and in full development.
 - Tested on L40S, RTX 4090, RTX 5090 and RTX PRO 6000.
 
-## 05092026
+## 08092026
 
 - ComfyUI 0.34.0
 - [ComfyUI-MiniMax-H3-PDD-Acc](https://github.com/Jalen-Brunson/ComfyUI-MiniMax-H3-PDD-Acc)
 - [MMH3-UltimateUpscale](https://github.com/bbaudio-2025/Comfyui-MMH3-UltimateUpscale.git)
 - Fixed Multi-shot audio crash.
-- Removed custom_nodes using irriversible patching for stability.
+- Removed custom_nodes using irriversible patching
+- Security updates
 
 ## 25082026
 
