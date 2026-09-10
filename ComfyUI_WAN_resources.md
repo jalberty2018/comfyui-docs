@@ -1,5 +1,9 @@
 # 📚 WAN 2.x Resources
 
+## ComfyUI
+
+- [docs](https://docs.comfy.org/)
+
 ## 📚 Websites and tutorials
 
 - [WAN Video Homepage](https://wan.video/)

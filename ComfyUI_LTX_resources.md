@@ -1,5 +1,9 @@
 # 📚 LTX 2.x Resources
 
+## ComfyUI
+
+- [docs](https://docs.comfy.org/)
+
 ## LTX 2.5
 
 ### Official models, code, and research

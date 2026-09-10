@@ -11,6 +11,7 @@ The example screenshots in the overview page document successful runs with these
 | ERNIE-Image     | RTX A4500 | 20 GB    | 50 GB   |
 | Krea-2  bf16   | RTX 3090 |  24 GB    | 65  GB   |
 | Krea-2  fp8   | RTX A4500 |  20 GB    | 65  GB   |
+| SenseNova U1.5 BF16 | RTX 6000 Ada | 33GB | 50 GB |
 | FLUX.2 Klein    | RTX A4500    | 20 GB    | 50 GB   |
 | FLUX.2 Dev bf16 | RTX 6000 Ada | 44 GB    | 80 GB   |
 | FLUX.2 Dev fp8  | RTX 3090    | 24 GB    | 50 GB   |
@@ -28,6 +29,7 @@ The example screenshots in the overview page document successful runs with these
 | ERNIE | 50 GB (`/workspace`)       |
 | Krea-2 bf16 | 60 GB (`/workspace`)       |
 | Krea-2 fp8 | 50 GB (`/workspace`)       |
+| SenseNova U1.5 BF16 | 80 GB (tested container volume) |
 | FLUX bf16 | 90 GB (`/workspace`)       |
 | FLUX fp8 | 75 GB (`/workspace`)       |
 | JoyAI-image-edit bf16 | 70 GB (`/workspace`)       |

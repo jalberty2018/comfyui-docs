@@ -72,15 +72,15 @@ Open **Logs** or **Connect** after deployment. Use these checkpoints to distingu
 | Phase | Healthy indication | When to investigate | Recommended action |
 | --- | --- | --- | --- |
 | Docker download starts | Activity begins within 1 minute | No download activity after 1 minute | Try another region |
-| Docker extraction starts | Extraction begins within 3 minutes | Download continues without extraction after 3 minutes | Redeploy in another region |
-| Container download and extraction | Completes in approximately 4–8 minutes | Progress is stalled or unusually slow | Compare with another pod or region |
-| Copy ComfyUI to `/workspace` | Completes in 0–110 seconds | Stalls or exceeds 120 seconds | Compare storage performance with another pod |
+| Docker extraction starts | Extraction begins within 3 minutes | Download continues without extraction after 3 minutes or stalls at around 33% | Redeploy in another region |
+| Container download and extraction | Completes in approximately 4–6 minutes | Progress is stalled or unusually slow | Compare with another pod or region |
+| Copy ComfyUI to `/workspace` | Completes in 0–120 seconds | Stalls or exceeds 130 seconds | Compare storage performance with another pod |
 | Model download | Sustained speed above 200 MB/s is acceptable | A model download fails | Let startup finish, then restart the pod |
 | Startup complete | The final ready message appears | No final message after preceding steps complete | Review the container logs |
 
 ### Docker download and extraction
 
-RunPod first downloads and extracts the container. This normally takes approximately **4–8 minutes**, depending on the region. The extraction phase ends with a completion message in the system logs.
+RunPod first downloads and extracts the container. This normally takes approximately **4–6 minutes**, depending on the region. The extraction phase ends with a completion message in the system logs.
 
 <details>
 <summary><strong>View a normal Docker download and extraction</strong></summary>

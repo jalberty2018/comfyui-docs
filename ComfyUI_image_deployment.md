@@ -8,6 +8,7 @@ Use this page to choose an image-generation or image-editing template, deploy it
 
 - Start with **Z-Image Turbo and Base** for straightforward text-to-image generation on a tested 20 GB VRAM configuration.
 - Choose **Krea-2 Base and Turbo** for identity, composition and broader image workflows.
+- Choose **SenseNova U1.5** for text-to-image and image-to-image workflows tested on RTX 6000 Ada and L40S.
 - Choose **Qwen-Image-Edit 2511** when an existing image is your main input.
 - Choose **FLUX.2 Klein** for control or reference-image workflows, after checking the 9B license requirements.
 
@@ -24,6 +25,7 @@ Use this page to choose an image-generation or image-editing template, deploy it
 | Template | Best suited to | RunPod |
 | --- | --- | --- |
 | **Krea-2 Base and Turbo** | Text-to-image, identity transfer, composition and image-editing workflows | [**Deploy Krea-2 →**](https://console.runpod.io/deploy?template=e2hlyrm22l&ref=se4tkc5o) |
+| **SenseNova U1.5** | Text-to-image and image-to-image with the Final BF16 checkpoint and optional distilled 8-step LoRA | [**Deploy SenseNova U1.5 →**](https://console.runpod.io/hub/template/5o6lkmpk4p?ref=se4tkc5o) |
 | **Z-Image Turbo and Base** | General and fast text-to-image generation | [**Deploy Z-Image →**](https://console.runpod.io/deploy?template=ia5t70hfak&ref=se4tkc5o) |
 | **ERNIE-Image Base and Turbo** | ERNIE text-to-image workflows | [**Deploy ERNIE-Image →**](https://console.runpod.io/deploy?template=g8ow1s1s0a&ref=se4tkc5o) |
 | **FLUX.2 Dev** | High-quality generation and multiple-angle workflows | [**Deploy FLUX.2 Dev →**](https://console.runpod.io/deploy?template=8nl523gts5&ref=se4tkc5o) |
@@ -53,6 +55,19 @@ These are tested minimum configurations. Larger images, batches and additional c
 
 See [image-model hardware requirements](ComfyUI_image_hardware.md) for the complete tested list.
 
+### SenseNova U1.5 tested configuration
+
+SenseNova U1.5 Final BF16 has been tested for both text-to-image (t2i) and image-to-image (i2i):
+
+| Tested GPU | RAM use | Container volume |
+| --- | ---: | ---: |
+| RTX 6000 Ada | 50 GB | 80 GB |
+| L40S | 50 GB | 80 GB |
+
+These are tested configurations, not established minimum requirements. Actual memory use depends on resolution, workflow and offloading. Allow additional RAM headroom for larger workloads.
+
+The template provisions the BF16 checkpoint, optional distilled 8-step LoRA and example workflows automatically. Wait for `Provisioning done, ready to create AI content` in the container logs, then load a supplied t2i or i2i workflow in ComfyUI.
+
 ### Storage checklist
 
 | Model family | Minimum persistent volume at `/workspace` |
@@ -68,6 +83,7 @@ Keep at least **15 GB** of pod storage in addition to the persistent volume. Do 
 ### Optional credentials
 
 - Set `PASSWORD` if you want a fixed Code-Server password.
+- For SenseNova U1.5, if `PASSWORD` is not set, a password is automatically generated and shown in the container logs.
 - Add `HF_TOKEN` when a gated Hugging Face model or an additional private model requires it.
 - Add `CIVITAI_TOKEN` only when downloading resources from CivitAI.
 

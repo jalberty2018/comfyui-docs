@@ -2,7 +2,7 @@
 
 # Image inference with ComfyUI
 
-Run **image generation and image editing models** in ComfyUI on RunPod. The templates provision the models, LoRAs, custom nodes and example workflows needed for Z-Image, ERNIE-Image, FLUX.2, FLUX.2 Klein, Qwen-Image, JoyCaption, Krea-2 and Qwen-Image-Edit.
+Run **image generation and image editing models** in ComfyUI on RunPod. The templates provision the models, LoRAs, custom nodes and example workflows needed for Z-Image, ERNIE-Image, FLUX.2, FLUX.2 Klein, Qwen-Image, JoyCaption, Krea-2, SenseNova U1.5 and Qwen-Image-Edit.
 
 ## What to expect
 
@@ -42,6 +42,7 @@ Once the pod is running, use the workflow examples below to choose what you want
 | --- | --- | --- | --- |
 | Preserve or transfer a subject's identity | Source and target images | Krea-2 identity workflows | [Workflows](#krea-2-identity-workflows) |
 | Generate an image from a description | Text prompt | Krea-2 text-to-image | [Workflows](#krea-2-text-to-image-workflows) |
+| Generate or edit images with SenseNova U1.5 | Text prompt, optionally with an input image | SenseNova U1.5 text-to-image and image-to-image | [Workflows](#sensenova-u15-workflows) |
 | Guide generation with a control or reference image | Prompt and control image | FLUX.2 Klein control | [Workflows](#flux2-klein-control-workflows) |
 | Create several views of the same subject | Image and angle instructions | Multiple-angle workflows | [Workflows](#multiple-angle-workflows) |
 | Generate images with ZIB-ZIT | Text prompt | ZIB-ZIT | [Workflow](#zib-zit) |
@@ -116,6 +117,18 @@ Choose a workflow based on how you want to build and condition the prompt.
 <summary><strong>View the Krea-2 artist-friendly workflow</strong></summary>
 
 <img loading="lazy" src="../images/ai-generated-krea2-vlm-artist.jpg" alt="Krea-2 text-to-image workflow with artist-friendly conditioning" style="width: 100%; height: auto;">
+
+</details>
+
+### SenseNova U1.5 workflows
+
+Use SenseNova U1.5 for text-to-image generation or image-to-image editing with the Final BF16 checkpoint and optional distilled 8-step LoRA.
+
+<a id="example-workflow-sensenova-u15"></a>
+<details>
+<summary><strong>View the SenseNova U1.5 workflow</strong></summary>
+
+<img loading="lazy" src="../images/ai-generated-sensenova-i2v.jpg" alt="SenseNova U1.5 image workflow in ComfyUI" style="width: 100%; height: auto;">
 
 </details>
 
@@ -198,6 +211,7 @@ These screenshots show the workflows running with different models, precisions a
 | Qwen-Image-Edit | fp8 or bf16 | RTX A5000, A40 | Two precision examples |
 | FLUX.2 Dev | bf16 or fp8 | L40S, RTX A5000 | The fp8 A5000 example is slower |
 | Krea-2 turbo | fp8 or bf16 | RTX A5000, RTX 4090 | Three configuration examples |
+| SenseNova U1.5 | bf16 | L40S | L40S example; t2i and i2i also tested on RTX 6000 Ada |
 
 <a id="example-running-z-image-on-an-rtx-a4500"></a>
 <a id="example-running-z-image-on-an-rtx-a5000"></a>
@@ -211,6 +225,7 @@ These screenshots show the workflows running with different models, precisions a
 <a id="example-running-krea-2-turbo-fp8-on-an-rtx-a5000"></a>
 <a id="example-running-krea-2-turbo-bf16-on-an-rtx-a5000"></a>
 <a id="example-running-krea-2-turbo-bf16-on-an-rtx-4090"></a>
+<a id="example-running-sensenova-u15-bf16-on-an-l40s"></a>
 
 <details>
 <summary><strong>View the hardware comparison screenshots</strong></summary>
@@ -250,6 +265,9 @@ These screenshots show the workflows running with different models, precisions a
 
 <p><strong>Krea-2 turbo bf16 on an RTX 4090</strong></p>
 <img loading="lazy" src="../images/runpod_RTX490_krea2-bf16.jpg" alt="Krea-2 turbo bf16 running on an RTX 4090" style="width: 100%; height: auto;">
+
+<p><strong>SenseNova U1.5 bf16 on an L40S</strong></p>
+<img loading="lazy" src="../images/runpod_L40S_SenseNova.jpg" alt="SenseNova U1.5 bf16 running on an L40S" style="width: 100%; height: auto;">
 
 </details>
 

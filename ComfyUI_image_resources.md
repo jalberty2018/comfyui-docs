@@ -1,5 +1,9 @@
 # 📚 Image Resources
 
+## ComfyUI
+
+- [docs](https://docs.comfy.org/)
+
 ## Z-Image Turbo
 
 - [Website](https://tongyi-mai.github.io/Z-Image-blog/)
@@ -62,3 +66,9 @@
 ## Krea-2
 
 - [ComfyUI](https://comfyui.org/en/krea-2-open-source-models-are-now)
+
+## SenseNova U1.5
+
+- [Native ComfyUI implementation: PR #15922](https://github.com/Comfy-Org/ComfyUI/pull/15922)
+- [Original model](https://huggingface.co/sensenova/SenseNova-U1.5-8B-MoT)
+- [ComfyUI checkpoint and converted LoRA](https://huggingface.co/t8star/SenseNova-U1.5-Comfy)
