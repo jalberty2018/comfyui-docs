@@ -1,10 +1,11 @@
 # Deploy MiniMax H3 on RunPod
 
-Use this page to choose a MiniMax H3 template, deploy it on a suitable NVIDIA GPU and open ComfyUI. All four templates generate video with audio; the main choices are the workflow type and the prompt enhancer.
+Use this page to choose a MiniMax H3 template, deploy it on a suitable NVIDIA GPU and open ComfyUI. All four templates generate video with audio; the main choices are the workflow type and whether to include Qwen-VL prompt enhancement.
 
 ## Quick recommendation
 
-If you are unsure which template to use, start with **MiniMax H3 FL2VA + Qwen**. FL2VA supports text-to-video, image-to-video and first/last-frame-to-video, while Qwen provides the faster prompt-enhancement option.
+- If you are unsure which template to use, start with **MiniMax H3 FL2VA + Qwen-VL**. FL2VA supports text-to-video, image-to-video and first/last-frame-to-video, while Qwen-VL provides optional local prompt enhancement.
+- Select an **L40S** if you are unsure about which **GPU** to use.
 
 1. Check the [tested hardware profiles](#before-you-deploy).
 2. Choose a [template](#choose-a-template).
@@ -25,16 +26,15 @@ Choose **FL2VA** for general video generation or **Ref2VA** when reference media
 
 <a id="two-prompt-enhancement-options-are-available"></a>
 
-### Choose a prompt enhancer
+### Optional Qwen-VL prompt enhancement
 
 The enhancer expands your input prompt before generation. It is optional and does not replace the MiniMax H3 inference model.
 
 | Enhancer | How it works | Choose it when |
 | --- | --- | --- |
-| **Qwen** | Uses a separate Qwen model with llama.cpp | You want faster prompt expansion and do not mind loading an additional model |
-| **Tail** | Uses the MiniMax H3 text encoder | You prefer the native MiniMax prompt-enhancement path and accept slower prompt expansion |
+| **Qwen-VL** | Uses a separate Qwen-VL model with llama.cpp | You want local prompt expansion and do not mind loading an additional model |
 
-The speed difference applies to **prompt enhancement**. Your chosen workflow, resolution, duration and GPU have the larger effect on video-generation time.
+Choose a base template if you write prompts yourself. Qwen-VL is the only prompt-enhancement variant offered by these templates. Your chosen workflow, resolution, duration and GPU have the larger effect on video-generation time.
 
 <a id="links-to-the-templates"></a>
 
@@ -42,10 +42,10 @@ The speed difference applies to **prompt enhancement**. Your chosen workflow, re
 
 | Template | Recommended use | RunPod |
 | --- | --- | --- |
-| **FL2VA + Qwen** | Best starting point for most users | [**Deploy FL2VA + Qwen →**](https://console.runpod.io/hub/template/a1nkufhzxq?ref=se4tkc5o) |
-| **FL2VA + Tail** | General generation with the native MiniMax enhancer | [**Deploy FL2VA + Tail →**](https://console.runpod.io/deploy?template=v7b5g03csk&ref=se4tkc5o) |
-| **Ref2VA + Qwen** | Reference-guided generation with faster prompt expansion | [**Deploy Ref2VA + Qwen →**](https://console.runpod.io/hub/template/pcsqepl6kt?ref=se4tkc5o) |
-| **Ref2VA + Tail** | Reference-guided generation with the native MiniMax enhancer | [**Deploy Ref2VA + Tail →**](https://console.runpod.io/deploy?template=6qtfx7lxgc&ref=se4tkc5o) |
+| **FL2VA + Qwen-VL** | Best starting point for most users | [**Deploy FL2VA + Qwen-VL →**](https://console.runpod.io/hub/template/a1nkufhzxq?ref=se4tkc5o) |
+| **FL2VA base** | General generation with manually written prompts | [**Deploy FL2VA base →**](https://console.runpod.io/deploy?template=v7b5g03csk&ref=se4tkc5o) |
+| **Ref2VA + Qwen-VL** | Reference-guided generation with Qwen-VL prompt enhancement | [**Deploy Ref2VA + Qwen-VL →**](https://console.runpod.io/hub/template/pcsqepl6kt?ref=se4tkc5o) |
+| **Ref2VA base** | Reference-guided generation with manually written prompts | [**Deploy Ref2VA base →**](https://console.runpod.io/deploy?template=6qtfx7lxgc&ref=se4tkc5o) |
 
 ## Before you deploy
 

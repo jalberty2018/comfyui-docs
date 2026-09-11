@@ -38,14 +38,32 @@ Once the pod is running, use the workflow examples below to choose what you want
 
 ## Choose a workflow
 
-| Goal | Input | Recommended workflow | Go to |
-| --- | --- | --- | --- |
-| Animate a subject or preserve its appearance | Reference image | Ref2va enhanced | [Workflow](#reference-to-video-ref2va) |
-| Continue a scene across several shots | Reference image and motion context | Ref2va multi-shot | [Workflow](#multi-shot-reference-to-video) |
-| Animate a still image | Image and prompt | fl2va image-to-video | [Workflow](#image-to-video-i2v) |
-| Generate a scene from a description | Text prompt | fl2va text-to-video | [Workflow](#text-to-video-t2v) |
-| Build a complete sequence in one graph | Prompt and optional reference media | Director | [Workflow](#director-all-in-one) |
-| Create or improve prompts | Text or reference media | Prompt tools | [Workflows](#prompt-tools) |
+Start with the generation task, then choose a standard, Turbo, LightX2V or PDD Acc variant. The JSON filenames below identify the workflows in `pod/minimax`; the guide links lead to the examples further down this page. Availability on your pod depends on the selected template and provisioned models.
+
+### Video generation
+
+| Goal and input | Workflow JSON | Guide |
+| --- | --- | --- |
+| Generate video from a text prompt | [Standard T2V] `t2v-pod.json`, [Turbo T2V] `turbo-t2v-pod.json`, [LightX2V T2V] `lightx2v-t2v-pod.json`, [PDD Acc T2V] `PDD-Acc-t2v-pod.json` | [Text-to-video](#text-to-video-t2v) |
+| Animate an image or use first/last frames with a prompt | [Standard FL2V] `fl2v-pod.json`, [Turbo FL2V] `turbo-fl2v-pod.json`, [LightX2V FL2V] `lightx2v-fl2v-pod.json`, [PDD Acc FL2V] `PDD-Acc-fl2v-pod.json` | [Image-to-video](#image-to-video-i2v) |
+| Guide generation with reference images, video or audio | [Standard R2V] `r2v-pod.json`, [LightX2V R2V] `lightx2v-r2v-pod.json`, [PDD Acc R2V] `PDD-Acc-r2v-pod.json` | [Reference-to-video](#reference-to-video-ref2va) |
+| Continue a reference-guided scene across several shots | [LightX2V multi-shot] `lightx2v-r2v-multi-shot.json` | [Multi-shot](#multi-shot-reference-to-video) |
+| Generate connected shots with context pinning | [LightX2V context pin] `lightx2v-r2v-multi-shot-context-pin.json`, [PDD Acc context pin] `PDD-Acc-r2v-multi-shot-context-pin.json` | [Multi-shot](#multi-shot-reference-to-video) |
+| Use a warm-up stage for reference-guided generation | [PDD Acc R2V warm-up] `PDD-Acc-r2v-warmup-pod.json` | [Advanced reference workflow](#advanced-reference-workflow) |
+| Manage generation stages in one graph | [Director] `director-pod.json` | [Director](#director-all-in-one) |
+
+### Prompt generation and assisted workflows
+
+Choose Qwen-VL for local prompt generation and enhancement. The integrated variants combine it with video generation; the prompt-builder variants provide tools for composing prompts and organizing reference media.
+
+| Goal | Workflow JSON | Guide |
+| --- | --- | --- |
+| Generate a prompt with Qwen-VL before running a video workflow | [FL2V prompt generator] `prompt-generator-qwenvl-fl2v-pod.json`, [R2V prompt generator] `prompt-generator-qwenvl-r2v-pod.json` | [Qwen-VL prompt enhancer](#prompt-generator-using-qwen38-27b-uncensored-with-llama-cpp) |
+| Enhance a prompt with Qwen-VL and generate image/first-last-frame video | [LightX2V FL2V + Qwen-VL] `lightx2v-fl2v-prompt-generator-qwenvl-pod.json`, [PDD Acc FL2V + Qwen-VL] `PDD-Acc-fl2v-prompt-generator-qwenvl-pod.json` | [Prompt tools](#prompt-tools) |
+| Enhance a prompt with Qwen-VL and generate reference-guided video | [LightX2V R2V + Qwen-VL] `lightx2v-r2v-prompt-generator-qwenvl-pod.json`, [PDD Acc R2V + Qwen-VL] `PDD-Acc-r2v-prompt-generator-qwenvl-pod.json` | [Prompt tools](#prompt-tools) |
+| Compose prompts and organize reference media before generation | [LightX2V R2V prompt builder] `lightx2v-r2v-prompt-builder-pod.json`, [PDD Acc R2V prompt builder] `PDD-Acc-r2v-prompt-builder-pod.json` | [Fantastic prompt builder](#fantastic-prompt-builder-media-manager) |
+
+See also the [video and sound preview](#video-sound-preview) example for checking output before export.
 
 ## Standard workflows
 
@@ -69,7 +87,7 @@ Use the enhanced Ref2va workflow to generate video and audio from a reference im
 
 ### Multi-shot reference-to-video
 
-Use motion context to create three connected 10-second shots from one reference image.
+Use the LightX2V multi-shot workflow for connected shots, or choose a LightX2V or PDD Acc context-pin variant. The example below shows three connected 10-second shots from one reference image; actual duration depends on workflow settings and hardware.
 
 <details>
 <summary><strong>View the multi-shot workflow</strong></summary>
@@ -140,13 +158,14 @@ Choose a prompt workflow based on the model and interface you want to use.
 
 | Tool | Best suited for |
 | --- | --- |
-| Heretic MiniMax-H2 Qwen-VL with generation tail | Generating prompts from text and visual input |
 | Qwen3.8-27B-Uncensored with `llama.cpp` | Local prompt generation and enhancement |
 | Fantastic prompt builder and media manager | Building prompts while organizing reference media |
 
 <a id="prompt-generator-using-uncensored-heretic-minimax-h2-qwen-vl-with-generation-tail"></a>
 <details>
-<summary><strong>View the Heretic MiniMax-H2 Qwen-VL prompt generator</strong></summary>
+<summary><strong>View the optional Heretic MiniMax-H2 Qwen-VL generation-tail workflow</strong></summary>
+
+[Workflow JSON] `prompt-generator-tail-pod.json`
 
 <img loading="lazy" src="../images/ai-generated-MiniMax-prompt-generator.jpg" alt="MiniMax-H2 Qwen-VL prompt generator workflow" style="width: 100%; height: auto;">
 

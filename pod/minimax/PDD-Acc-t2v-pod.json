@@ -1,144 +1,36 @@
 {
   "id": "e3f2b845-8f2c-4b5a-9caf-eac1029d3e7e",
   "revision": 0,
-  "last_node_id": 185,
-  "last_link_id": 328,
+  "last_node_id": 186,
+  "last_link_id": 330,
   "nodes": [
-    {
-      "id": 148,
-      "type": "SetNode",
-      "pos": [
-        -1247.0351088627692,
-        4047.021455395801
-      ],
-      "size": [
-        210,
-        60
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 20,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "link": 276
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": null
-        }
-      ],
-      "title": "Set_CLIP",
-      "properties": {
-        "Node name for S&R": "SetNode",
-        "aux_id": "kijai/ComfyUI-KJNodes",
-        "previousName": "CLIP"
-      },
-      "widgets_values": [
-        "CLIP"
-      ],
-      "widgets_values_named": {
-        "Constant": "CLIP"
-      },
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
-      "id": 149,
-      "type": "SetNode",
-      "pos": [
-        -1246.584375571172,
-        4226.8056403384835
-      ],
-      "size": [
-        210,
-        60
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 15,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "link": 277
-        }
-      ],
-      "outputs": [
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": null
-        }
-      ],
-      "title": "Set_VAE_VIDEO",
-      "properties": {
-        "Node name for S&R": "SetNode",
-        "aux_id": "kijai/ComfyUI-KJNodes",
-        "previousName": "VAE_VIDEO"
-      },
-      "widgets_values": [
-        "VAE_VIDEO"
-      ],
-      "widgets_values_named": {
-        "Constant": "VAE_VIDEO"
-      },
-      "color": "#322",
-      "bgcolor": "#533"
-    },
-    {
-      "id": 150,
-      "type": "SetNode",
-      "pos": [
-        -1239.5019847841243,
-        4351.344800263797
-      ],
-      "size": [
-        210,
-        60
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 16,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "link": 278
-        }
-      ],
-      "outputs": [
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": null
-        }
-      ],
-      "title": "Set_VAE_AUDIO",
-      "properties": {
-        "Node name for S&R": "SetNode",
-        "aux_id": "kijai/ComfyUI-KJNodes",
-        "previousName": "VAE_AUDIO"
-      },
-      "widgets_values": [
-        "VAE_AUDIO"
-      ],
-      "widgets_values_named": {
-        "Constant": "VAE_AUDIO"
-      },
-      "color": "#322",
-      "bgcolor": "#533"
-    },
+{
+  "id": 186,
+  "type": "MarkdownNote",
+  "pos": [
+    -2405.348646111502,
+    3785.936477956446
+  ],
+  "size": [
+    600,
+    520
+  ],
+  "flags": {},
+  "order": 0,
+  "mode": 0,
+  "inputs": [],
+  "outputs": [],
+  "title": "Guide: Purpose and use",
+  "properties": {},
+  "widgets_values": [
+    "# Text-to-video - PDD Acc\n\n## Purpose\nGenerate video and native audio from a written scene description.\n\n## Use\n1. Write the scene, subjects, motion and desired audio in the prompt.\n2. Set output size, duration and seed.\n3. Run the workflow and review the video and audio.\n\nWorkflow: PDD-Acc-t2v-pod.json"
+  ],
+  "widgets_values_named": {
+    "text": "# Text-to-video - PDD Acc\n\n## Purpose\nGenerate video and native audio from a written scene description.\n\n## Use\n1. Write the scene, subjects, motion and desired audio in the prompt.\n2. Set output size, duration and seed.\n3. Run the workflow and review the video and audio.\n\nWorkflow: PDD-Acc-t2v-pod.json"
+  },
+  "color": "#234",
+  "bgcolor": "#345"
+},
     {
       "id": 151,
       "type": "GetNode",
@@ -220,144 +112,18 @@
       "bgcolor": "#533"
     },
     {
-      "id": 121,
-      "type": "VAELoader",
-      "pos": [
-        -1723.6966106914479,
-        4192.24812356143
-      ],
-      "size": [
-        447.868299893968,
-        58
-      ],
-      "flags": {},
-      "order": 2,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [
-            277
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VAELoader",
-        "models": [
-          {
-            "name": "minimax_h3_video_vae_fp16.safetensors",
-            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_video_vae_fp16.safetensors",
-            "directory": "vae"
-          }
-        ]
-      },
-      "widgets_values": [
-        "minimax_h3_video_vae_fp16.safetensors"
-      ],
-      "widgets_values_named": {
-        "vae_name": "minimax_h3_video_vae_fp16.safetensors"
-      },
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
-      "id": 122,
-      "type": "VAELoader",
-      "pos": [
-        -1726.229987902454,
-        4320.072896977309
-      ],
-      "size": [
-        450.9357435456915,
-        58
-      ],
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [
-            278
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VAELoader",
-        "models": [
-          {
-            "name": "minimax_h3_audio_vae_fp32.safetensors",
-            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_audio_vae_fp32.safetensors",
-            "directory": "vae"
-          }
-        ]
-      },
-      "widgets_values": [
-        "minimax_h3_audio_vae_fp32.safetensors"
-      ],
-      "widgets_values_named": {
-        "vae_name": "minimax_h3_audio_vae_fp32.safetensors"
-      },
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
-      "id": 181,
-      "type": "GetNode",
-      "pos": [
-        -180.48034321594815,
-        4505.361016500244
-      ],
-      "size": [
-        210,
-        60
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 4,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [
-            318
-          ]
-        }
-      ],
-      "title": "Get_VAE_AUDIO",
-      "properties": {
-        "Node name for S&R": "GetNode",
-        "aux_id": "kijai/ComfyUI-KJNodes"
-      },
-      "widgets_values": [
-        "VAE_AUDIO"
-      ],
-      "widgets_values_named": {
-        "Constant": "VAE_AUDIO"
-      },
-      "color": "#322",
-      "bgcolor": "#533"
-    },
-    {
       "id": 127,
       "type": "BasicGuider",
       "pos": [
-        -345.45109863669813,
-        4553.156846810234
+        -348.32577623440864,
+        3840.2801705590828
       ],
       "size": [
         276.9283589387021,
         46
       ],
       "flags": {},
-      "order": 26,
+      "order": 23,
       "mode": 0,
       "inputs": [
         {
@@ -390,15 +156,15 @@
       "id": 130,
       "type": "RandomNoise",
       "pos": [
-        -343.0204555062412,
-        4647.478554661029
+        -345.8951331039517,
+        3934.6018784098765
       ],
       "size": [
         250.6223181430803,
         92.76906526514813
       ],
       "flags": {},
-      "order": 5,
+      "order": 2,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -425,185 +191,6 @@
       "bgcolor": "#3f5159"
     },
     {
-      "id": 180,
-      "type": "MiniMaxH3AudioPreviewCS",
-      "pos": [
-        -324.78522591928333,
-        5288.3552813303895
-      ],
-      "size": [
-        363.0216864930803,
-        270.7947938868483
-      ],
-      "flags": {},
-      "order": 22,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 327
-        },
-        {
-          "name": "audio_vae",
-          "type": "VAE",
-          "link": 318
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            319
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "MiniMaxH3AudioPreviewCS"
-      },
-      "widgets_values": [
-        0,
-        50,
-        1,
-        15
-      ],
-      "widgets_values_named": {
-        "window_seconds": 0,
-        "start_at_percent": 50,
-        "every_n_steps": 1,
-        "max_preview_overhead": 15
-      },
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
-      "id": 154,
-      "type": "GetNode",
-      "pos": [
-        17.043916435520465,
-        4506.821149344385
-      ],
-      "size": [
-        210,
-        60
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 6,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [
-            282
-          ]
-        }
-      ],
-      "title": "Get_VAE_VIDEO",
-      "properties": {
-        "Node name for S&R": "GetNode",
-        "aux_id": "kijai/ComfyUI-KJNodes"
-      },
-      "widgets_values": [
-        "VAE_VIDEO"
-      ],
-      "widgets_values_named": {
-        "Constant": "VAE_VIDEO"
-      },
-      "color": "#322",
-      "bgcolor": "#533"
-    },
-    {
-      "id": 153,
-      "type": "GetNode",
-      "pos": [
-        196.37629958946067,
-        4509.439637267688
-      ],
-      "size": [
-        210,
-        60
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 7,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [
-            281
-          ]
-        }
-      ],
-      "title": "Get_VAE_AUDIO",
-      "properties": {
-        "Node name for S&R": "GetNode",
-        "aux_id": "kijai/ComfyUI-KJNodes"
-      },
-      "widgets_values": [
-        "VAE_AUDIO"
-      ],
-      "widgets_values_named": {
-        "Constant": "VAE_AUDIO"
-      },
-      "color": "#322",
-      "bgcolor": "#533"
-    },
-    {
-      "id": 92,
-      "type": "SaveVideo",
-      "pos": [
-        768.3816877926749,
-        4455.047802011407
-      ],
-      "size": [
-        1030,
-        106
-      ],
-      "flags": {},
-      "order": 34,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "video",
-          "type": "VIDEO",
-          "link": 243
-        }
-      ],
-      "outputs": [
-        {
-          "name": "video",
-          "type": "VIDEO",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "SaveVideo"
-      },
-      "widgets_values": [
-        "video/MiniMax_H3",
-        "auto",
-        "auto",
-        "auto"
-      ],
-      "widgets_values_named": {
-        "filename_prefix": "video/MiniMax_H3",
-        "format": "auto",
-        "format.codec": "auto",
-        "codec": "auto"
-      },
-      "color": "#222",
-      "bgcolor": "#000"
-    },
-    {
       "id": 133,
       "type": "ComfyMathExpression",
       "pos": [
@@ -617,7 +204,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 17,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
@@ -627,7 +214,6 @@
           "link": 248
         },
         {
-          "label": "b",
           "name": "values.b",
           "shape": 7,
           "type": "FLOAT,INT,BOOLEAN",
@@ -676,7 +262,7 @@
         70
       ],
       "flags": {},
-      "order": 8,
+      "order": 3,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -702,45 +288,18 @@
       "bgcolor": "#335"
     },
     {
-      "id": 118,
-      "type": "MarkdownNote",
-      "pos": [
-        -1595.715030172423,
-        5036.49494942939
-      ],
-      "size": [
-        300,
-        520
-      ],
-      "flags": {},
-      "order": 9,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "title": "Note: Size Settings Reference",
-      "properties": {},
-      "widgets_values": [
-        "| megapixels | Aspect | Output (multiple=32) |\n|---|---|---|\n| 0.2 | 16:9 | 608 x 352 |\n| 0.3 | 16:9 | 736 x 416 |\n| 0.4 | 16:9 | 864 x 480 |\n| 0.5 | 16:9 | 960 x 544 |\n| 0.6 | 16:9 | 1056 x 608 |\n| 0.7 | 16:9 | 1152 x 640 |\n| 0.8 | 16:9 | 1216 x 672 |\n| 0.9 | 16:9 | 1280 x 736 |\n| 0.98 | 16:9 | 1344 x 768 |\n| 1.0 | 16:9 | 1376 x 768 |\n| 1.2 | 16:9 | 1504 x 832 |\n| 1.5 | 16:9 | 1664 x 928 |\n| 1.8 | 16:9 | 1824 x 1024 |\n| 2.0 | 16:9 | 1920 x 1088 |\n"
-      ],
-      "widgets_values_named": {
-        "text": "| megapixels | Aspect | Output (multiple=32) |\n|---|---|---|\n| 0.2 | 16:9 | 608 x 352 |\n| 0.3 | 16:9 | 736 x 416 |\n| 0.4 | 16:9 | 864 x 480 |\n| 0.5 | 16:9 | 960 x 544 |\n| 0.6 | 16:9 | 1056 x 608 |\n| 0.7 | 16:9 | 1152 x 640 |\n| 0.8 | 16:9 | 1216 x 672 |\n| 0.9 | 16:9 | 1280 x 736 |\n| 0.98 | 16:9 | 1344 x 768 |\n| 1.0 | 16:9 | 1376 x 768 |\n| 1.2 | 16:9 | 1504 x 832 |\n| 1.5 | 16:9 | 1664 x 928 |\n| 1.8 | 16:9 | 1824 x 1024 |\n| 2.0 | 16:9 | 1920 x 1088 |\n"
-      },
-      "color": "#222",
-      "bgcolor": "#000"
-    },
-    {
       "id": 157,
       "type": "PathchSageAttentionKJ",
       "pos": [
-        -1380.7810081668024,
-        3786.5619294362996
+        -1375.0318722784916,
+        3789.4364425536774
       ],
       "size": [
         224.23999328613309,
         82
       ],
       "flags": {},
-      "order": 19,
+      "order": 16,
       "mode": 0,
       "inputs": [
         {
@@ -776,15 +335,15 @@
       "id": 141,
       "type": "MiniMaxH3SigmaShift",
       "pos": [
-        -1126.770950462315,
-        3783.193150925092
+        -1121.0218145740043,
+        3786.06766404247
       ],
       "size": [
         240.9599731445312,
         82
       ],
       "flags": {},
-      "order": 23,
+      "order": 22,
       "mode": 0,
       "inputs": [
         {
@@ -820,15 +379,15 @@
       "id": 170,
       "type": "MiniMaxH3ScheduledSolAttentionPatch",
       "pos": [
-        -845.9181844307254,
-        3794.360617299007
+        -840.1690485424149,
+        3797.235130416385
       ],
       "size": [
         382.6548828125,
         342
       ],
       "flags": {},
-      "order": 25,
+      "order": 24,
       "mode": 0,
       "inputs": [
         {
@@ -889,8 +448,8 @@
       "id": 146,
       "type": "SetNode",
       "pos": [
-        -753.4877814903003,
-        4277.504422004087
+        -747.7386456019898,
+        4280.3789351214655
       ],
       "size": [
         210,
@@ -931,163 +490,11 @@
       "bgcolor": "#335"
     },
     {
-      "id": 163,
-      "type": "Lora Loader (LoraManager)",
-      "pos": [
-        -1014.1673047539788,
-        4207.730128589716
-      ],
-      "size": [
-        550.0952338952154,
-        585.8718694029803
-      ],
-      "flags": {},
-      "order": 27,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 325
-        },
-        {
-          "name": "clip",
-          "shape": 7,
-          "type": "CLIP",
-          "link": null
-        },
-        {
-          "name": "lora_stack",
-          "shape": 7,
-          "type": "LORA_STACK",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            293
-          ]
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": null
-        },
-        {
-          "name": "trigger_words",
-          "type": "STRING",
-          "links": null
-        },
-        {
-          "name": "loaded_loras",
-          "type": "STRING",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "Lora Loader (LoraManager)",
-        "__lm_widget_ids": [
-          "__lm_autocomplete_meta_text",
-          "text",
-          "loras"
-        ]
-      },
-      "widgets_values": [
-        {
-          "version": 1,
-          "textWidgetName": "text"
-        },
-        "",
-        []
-      ],
-      "widgets_values_named": {
-        "__lm_autocomplete_meta_text": {
-          "version": 1,
-          "textWidgetName": "text"
-        },
-        "text": "",
-        "loras": []
-      },
-      "color": "#323",
-      "bgcolor": "#535"
-    },
-    {
-      "id": 183,
-      "type": "ModelPreviewOverrideKJ",
-      "pos": [
-        80.83132656043593,
-        4901.031347905152
-      ],
-      "size": [
-        568.1474423901889,
-        660.7650894509816
-      ],
-      "flags": {},
-      "order": 24,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 319
-        },
-        {
-          "name": "vae",
-          "shape": 7,
-          "type": "VAE",
-          "link": null
-        },
-        {
-          "name": "preview_frames",
-          "type": "INT",
-          "widget": {
-            "name": "preview_frames"
-          },
-          "link": 321
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            320
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ModelPreviewOverrideKJ"
-      },
-      "widgets_values": [
-        1024,
-        80,
-        true,
-        1,
-        12,
-        "taeh3.safetensors",
-        ""
-      ],
-      "widgets_values_named": {
-        "max_resolution": 1024,
-        "jpeg_quality": 80,
-        "suppress_default_preview": true,
-        "preview_frames": 1,
-        "preview_fps": 12,
-        "tiny_vae": "taeh3.safetensors",
-        "preview": ""
-      },
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
       "id": 135,
       "type": "SamplerCustomAdvanced",
       "pos": [
-        -317.9778372557827,
-        5235.011731729341
+        -320.8525148534932,
+        4522.135055478187
       ],
       "size": [
         381.3766333625467,
@@ -1096,7 +503,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 28,
+      "order": 25,
       "mode": 0,
       "inputs": [
         {
@@ -1147,47 +554,11 @@
       "bgcolor": "#000"
     },
     {
-      "id": 178,
-      "type": "KSamplerSelect",
-      "pos": [
-        -340.16404138587876,
-        5113.515666167838
-      ],
-      "size": [
-        270,
-        58
-      ],
-      "flags": {},
-      "order": 10,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "SAMPLER",
-          "type": "SAMPLER",
-          "links": [
-            315
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "KSamplerSelect"
-      },
-      "widgets_values": [
-        "euler"
-      ],
-      "widgets_values_named": {
-        "sampler_name": "euler"
-      },
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
       "id": 147,
       "type": "GetNode",
       "pos": [
-        -348.6160678247426,
-        4507.844016024415
+        -351.4907454224531,
+        3794.967339773263
       ],
       "size": [
         210,
@@ -1196,7 +567,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 11,
+      "order": 4,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1223,202 +594,18 @@
       "bgcolor": "#335"
     },
     {
-      "id": 179,
-      "type": "FastFilmGrain",
-      "pos": [
-        405.3927982429744,
-        4560.811853408036
-      ],
-      "size": [
-        270,
-        106
-      ],
-      "flags": {},
-      "order": 32,
-      "mode": 4,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 313
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            314
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "FastFilmGrain"
-      },
-      "widgets_values": [
-        0.02,
-        0.5,
-        4
-      ],
-      "widgets_values_named": {
-        "grain_intensity": 0.02,
-        "saturation_mix": 0.5,
-        "batch_size": 4
-      },
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
-      "id": 131,
-      "type": "CreateVideo",
-      "pos": [
-        397.63802107821715,
-        4712.952076489666
-      ],
-      "size": [
-        270,
-        126
-      ],
-      "flags": {},
-      "order": 33,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 314
-        },
-        {
-          "name": "audio",
-          "shape": 7,
-          "type": "AUDIO",
-          "link": 240
-        }
-      ],
-      "outputs": [
-        {
-          "name": "VIDEO",
-          "type": "VIDEO",
-          "links": [
-            243
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CreateVideo"
-      },
-      "widgets_values": [
-        24,
-        8,
-        "sRGB"
-      ],
-      "widgets_values_named": {
-        "fps": 24,
-        "bit_depth": 8,
-        "color_space": "sRGB"
-      },
-      "color": "#2a363b",
-      "bgcolor": "#3f5159"
-    },
-    {
-      "id": 123,
-      "type": "VAEDecodeAudio",
-      "pos": [
-        130.1904935260271,
-        4736.01281498101
-      ],
-      "size": [
-        230,
-        60
-      ],
-      "flags": {
-        "collapsed": false
-      },
-      "order": 31,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "samples",
-          "type": "LATENT",
-          "link": 250
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 281
-        }
-      ],
-      "outputs": [
-        {
-          "name": "AUDIO",
-          "type": "AUDIO",
-          "links": [
-            240
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VAEDecodeAudio"
-      },
-      "color": "#2a363b",
-      "bgcolor": "#3f5159"
-    },
-    {
-      "id": 124,
-      "type": "VAEDecode",
-      "pos": [
-        140.34133575173362,
-        4565.614125817566
-      ],
-      "size": [
-        230,
-        60
-      ],
-      "flags": {
-        "collapsed": false
-      },
-      "order": 30,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "samples",
-          "type": "LATENT",
-          "link": 249
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 282
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            313
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VAEDecode"
-      },
-      "color": "#2a363b",
-      "bgcolor": "#3f5159"
-    },
-    {
       "id": 139,
       "type": "DiffusionModelLoaderKJ",
       "pos": [
-        -1730.5175425443229,
-        3783.0619648390684
+        -1724.768406656012,
+        3785.936477956446
       ],
       "size": [
         312.095703125,
         178
       ],
       "flags": {},
-      "order": 12,
+      "order": 5,
       "mode": 0,
       "inputs": [
         {
@@ -1460,65 +647,18 @@
       "bgcolor": "#653"
     },
     {
-      "id": 129,
-      "type": "CLIPLoader",
-      "pos": [
-        -1725.2281014604628,
-        4017.5632649420872
-      ],
-      "size": [
-        436.9742503927346,
-        106
-      ],
-      "flags": {},
-      "order": 13,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            276
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPLoader",
-        "models": [
-          {
-            "name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
-            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/text_encoders/qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
-            "directory": "text_encoders"
-          }
-        ]
-      },
-      "widgets_values": [
-        "qwen3vl_32b_heretic_minimax_h3_nvfp4.safetensors",
-        "minimax",
-        "default"
-      ],
-      "widgets_values_named": {
-        "clip_name": "qwen3vl_32b_heretic_minimax_h3_nvfp4.safetensors",
-        "type": "minimax",
-        "device": "default"
-      },
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
       "id": 185,
       "type": "MiniMaxH3PDDAccApply",
       "pos": [
-        -342.0097880575368,
-        4799.023848049866
+        -344.8844656552473,
+        4086.14717179871
       ],
       "size": [
         332.6158203125,
         266
       ],
       "flags": {},
-      "order": 18,
+      "order": 15,
       "mode": 0,
       "inputs": [
         {
@@ -1538,7 +678,7 @@
           "name": "model",
           "type": "MODEL",
           "links": [
-            327
+            329
           ]
         },
         {
@@ -1592,7 +732,7 @@
         550
       ],
       "flags": {},
-      "order": 21,
+      "order": 20,
       "mode": 0,
       "inputs": [
         {
@@ -1685,10 +825,10 @@
       ],
       "size": [
         270,
-        126
+        150
       ],
       "flags": {},
-      "order": 14,
+      "order": 6,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1722,6 +862,806 @@
       },
       "color": "#232",
       "bgcolor": "#353"
+    },
+    {
+      "id": 163,
+      "type": "Lora Loader (LoraManager)",
+      "pos": [
+        -1052.2278205693112,
+        4210.604641707094
+      ],
+      "size": [
+        550.0952338952154,
+        585.8718694029803
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 325
+        },
+        {
+          "name": "clip",
+          "shape": 7,
+          "type": "CLIP",
+          "link": null
+        },
+        {
+          "name": "lora_stack",
+          "shape": 7,
+          "type": "LORA_STACK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            293
+          ]
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": null
+        },
+        {
+          "name": "trigger_words",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "loaded_loras",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Lora Loader (LoraManager)",
+        "__lm_widget_ids": [
+          "__lm_autocomplete_meta_text",
+          "text",
+          "loras"
+        ]
+      },
+      "widgets_values": [
+        {
+          "version": 1,
+          "textWidgetName": "text"
+        },
+        "",
+        []
+      ],
+      "widgets_values_named": {
+        "__lm_autocomplete_meta_text": {
+          "version": 1,
+          "textWidgetName": "text"
+        },
+        "text": "",
+        "loras": []
+      },
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 154,
+      "type": "GetNode",
+      "pos": [
+        -164.18067237571708,
+        3792.6034659323695
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            282
+          ]
+        }
+      ],
+      "title": "Get_VAE_VIDEO",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": [
+        "VAE_VIDEO"
+      ],
+      "widgets_values_named": {
+        "Constant": "VAE_VIDEO"
+      },
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 153,
+      "type": "GetNode",
+      "pos": [
+        36.60731381010079,
+        3800.585931344932
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            281,
+            330
+          ]
+        }
+      ],
+      "title": "Get_VAE_AUDIO",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": [
+        "VAE_AUDIO"
+      ],
+      "widgets_values_named": {
+        "Constant": "VAE_AUDIO"
+      },
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 124,
+      "type": "VAEDecode",
+      "pos": [
+        79.80462909174108,
+        3859.442331908149
+      ],
+      "size": [
+        230,
+        60
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 249
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 282
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            313
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 123,
+      "type": "VAEDecodeAudio",
+      "pos": [
+        79.04068352949594,
+        4007.0443085704687
+      ],
+      "size": [
+        230,
+        60
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 250
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 281
+        }
+      ],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            240
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecodeAudio"
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 183,
+      "type": "ModelPreviewOverrideKJ",
+      "pos": [
+        -328.3591595614344,
+        4593.129588114233
+      ],
+      "size": [
+        998.6009705763374,
+        922.2555007786796
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 329
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "name": "audio_vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": 330
+        },
+        {
+          "name": "preview_frames",
+          "type": "INT",
+          "widget": {
+            "name": "preview_frames"
+          },
+          "link": 321
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            320
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ModelPreviewOverrideKJ"
+      },
+      "widgets_values": [
+        1024,
+        80,
+        true,
+        1,
+        12,
+        "taeh3.safetensors",
+        ""
+      ],
+      "widgets_values_named": {
+        "max_resolution": 1024,
+        "jpeg_quality": 80,
+        "suppress_default_preview": true,
+        "preview_frames": 1,
+        "preview_fps": 12,
+        "tiny_vae": "taeh3.safetensors",
+        "preview": ""
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 178,
+      "type": "KSamplerSelect",
+      "pos": [
+        -333.65192462851326,
+        4410.025835425953
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "SAMPLER",
+          "type": "SAMPLER",
+          "links": [
+            315
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSamplerSelect"
+      },
+      "widgets_values": [
+        "euler"
+      ],
+      "widgets_values_named": {
+        "sampler_name": "euler"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 179,
+      "type": "FastFilmGrain",
+      "pos": [
+        80.6838705503296,
+        4164.40565437933
+      ],
+      "size": [
+        270,
+        106
+      ],
+      "flags": {},
+      "order": 30,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 313
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            314
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FastFilmGrain"
+      },
+      "widgets_values": [
+        0.02,
+        0.5,
+        4
+      ],
+      "widgets_values_named": {
+        "grain_intensity": 0.02,
+        "saturation_mix": 0.5,
+        "batch_size": 4
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 131,
+      "type": "CreateVideo",
+      "pos": [
+        72.92888876880173,
+        4352.75225233717
+      ],
+      "size": [
+        270,
+        126
+      ],
+      "flags": {},
+      "order": 31,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 314
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 240
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            243
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CreateVideo"
+      },
+      "widgets_values": [
+        24,
+        8,
+        "sRGB"
+      ],
+      "widgets_values_named": {
+        "fps": 24,
+        "bit_depth": 8,
+        "color_space": "sRGB"
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 92,
+      "type": "SaveVideo",
+      "pos": [
+        765.5070101949647,
+        4204.966092854756
+      ],
+      "size": [
+        1030,
+        106
+      ],
+      "flags": {},
+      "order": 32,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 243
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SaveVideo"
+      },
+      "widgets_values": [
+        "video/MiniMax_H3",
+        "auto",
+        "auto",
+        "auto"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "video/MiniMax_H3",
+        "format": "auto",
+        "format.codec": "auto",
+        "codec": "auto"
+      },
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 118,
+      "type": "MarkdownNote",
+      "pos": [
+        -1592.8405718818226,
+        5045.118543608301
+      ],
+      "size": [
+        300,
+        520
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Note: Size Settings Reference",
+      "properties": {},
+      "widgets_values": [
+        "| megapixels | Aspect | Output (multiple=32) |\n|---|---|---|\n| 0.2 | 16:9 | 608 x 352 |\n| 0.3 | 16:9 | 736 x 416 |\n| 0.4 | 16:9 | 864 x 480 |\n| 0.5 | 16:9 | 960 x 544 |\n| 0.6 | 16:9 | 1056 x 608 |\n| 0.7 | 16:9 | 1152 x 640 |\n| 0.8 | 16:9 | 1216 x 672 |\n| 0.9 | 16:9 | 1280 x 736 |\n| 0.98 | 16:9 | 1344 x 768 |\n| 1.0 | 16:9 | 1376 x 768 |\n| 1.2 | 16:9 | 1504 x 832 |\n| 1.5 | 16:9 | 1664 x 928 |\n| 1.8 | 16:9 | 1824 x 1024 |\n| 2.0 | 16:9 | 1920 x 1088 |\n"
+      ],
+      "widgets_values_named": {
+        "text": "| megapixels | Aspect | Output (multiple=32) |\n|---|---|---|\n| 0.2 | 16:9 | 608 x 352 |\n| 0.3 | 16:9 | 736 x 416 |\n| 0.4 | 16:9 | 864 x 480 |\n| 0.5 | 16:9 | 960 x 544 |\n| 0.6 | 16:9 | 1056 x 608 |\n| 0.7 | 16:9 | 1152 x 640 |\n| 0.8 | 16:9 | 1216 x 672 |\n| 0.9 | 16:9 | 1280 x 736 |\n| 0.98 | 16:9 | 1344 x 768 |\n| 1.0 | 16:9 | 1376 x 768 |\n| 1.2 | 16:9 | 1504 x 832 |\n| 1.5 | 16:9 | 1664 x 928 |\n| 1.8 | 16:9 | 1824 x 1024 |\n| 2.0 | 16:9 | 1920 x 1088 |\n"
+      },
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 122,
+      "type": "VAELoader",
+      "pos": [
+        -1725.3486461115021,
+        4378.115082967972
+      ],
+      "size": [
+        450.9357435456915,
+        58
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            278
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader",
+        "models": [
+          {
+            "name": "minimax_h3_audio_vae_fp32.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_audio_vae_fp32.safetensors",
+            "directory": "vae"
+          }
+        ]
+      },
+      "widgets_values": [
+        "minimax_h3_audio_vae_fp32.safetensors"
+      ],
+      "widgets_values_named": {
+        "vae_name": "minimax_h3_audio_vae_fp32.safetensors"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 150,
+      "type": "SetNode",
+      "pos": [
+        -1228.8851166950278,
+        4407.764553279535
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "link": 278
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": null
+        }
+      ],
+      "title": "Set_VAE_AUDIO",
+      "properties": {
+        "Node name for S&R": "SetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes",
+        "previousName": "VAE_AUDIO"
+      },
+      "widgets_values": [
+        "VAE_AUDIO"
+      ],
+      "widgets_values_named": {
+        "Constant": "VAE_AUDIO"
+      },
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 121,
+      "type": "VAELoader",
+      "pos": [
+        -1717.947474803137,
+        4227.574267212808
+      ],
+      "size": [
+        447.868299893968,
+        58
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            277
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader",
+        "models": [
+          {
+            "name": "minimax_h3_video_vae_fp16.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_video_vae_fp16.safetensors",
+            "directory": "vae"
+          }
+        ]
+      },
+      "widgets_values": [
+        "minimax_h3_video_vae_fp16.safetensors"
+      ],
+      "widgets_values_named": {
+        "vae_name": "minimax_h3_video_vae_fp16.safetensors"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 149,
+      "type": "SetNode",
+      "pos": [
+        -1229.4771566166457,
+        4254.018876356366
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "link": 277
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": null
+        }
+      ],
+      "title": "Set_VAE_VIDEO",
+      "properties": {
+        "Node name for S&R": "SetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes",
+        "previousName": "VAE_VIDEO"
+      },
+      "widgets_values": [
+        "VAE_VIDEO"
+      ],
+      "widgets_values_named": {
+        "Constant": "VAE_VIDEO"
+      },
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 129,
+      "type": "CLIPLoader",
+      "pos": [
+        -1719.478965572152,
+        4044.7765009599666
+      ],
+      "size": [
+        436.9742503927346,
+        106
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            276
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPLoader",
+        "models": [
+          {
+            "name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/text_encoders/qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+            "directory": "text_encoders"
+          }
+        ]
+      },
+      "widgets_values": [
+        "qwen3vl_32b_heretic_minimax_h3_nvfp4.safetensors",
+        "minimax",
+        "default"
+      ],
+      "widgets_values_named": {
+        "clip_name": "qwen3vl_32b_heretic_minimax_h3_nvfp4.safetensors",
+        "type": "minimax",
+        "device": "default"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 148,
+      "type": "SetNode",
+      "pos": [
+        -1223.4376009393866,
+        4075.857310078324
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "link": 276
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": null
+        }
+      ],
+      "title": "Set_CLIP",
+      "properties": {
+        "Node name for S&R": "SetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes",
+        "previousName": "CLIP"
+      },
+      "widgets_values": [
+        "CLIP"
+      ],
+      "widgets_values_named": {
+        "Constant": "CLIP"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
     }
   ],
   "links": [
@@ -1910,22 +1850,6 @@
       "SAMPLER"
     ],
     [
-      318,
-      181,
-      0,
-      180,
-      1,
-      "VAE"
-    ],
-    [
-      319,
-      180,
-      0,
-      183,
-      0,
-      "MODEL"
-    ],
-    [
       320,
       183,
       0,
@@ -1938,7 +1862,7 @@
       133,
       1,
       183,
-      2,
+      3,
       "INT"
     ],
     [
@@ -1982,20 +1906,28 @@
       "MODEL"
     ],
     [
-      327,
-      185,
-      0,
-      180,
-      0,
-      "MODEL"
-    ],
-    [
       328,
       185,
       1,
       135,
       3,
       "SIGMAS"
+    ],
+    [
+      329,
+      185,
+      0,
+      183,
+      0,
+      "MODEL"
+    ],
+    [
+      330,
+      153,
+      0,
+      183,
+      2,
+      "VAE"
     ]
   ],
   "groups": [
@@ -2015,8 +1947,8 @@
       "id": 1,
       "title": "Models",
       "bounding": [
-        -1753.696610691446,
-        3712.2481235614414,
+        -1747.9474748031353,
+        3715.122636678819,
         1334.043944231949,
         1113.4616352443027
       ],
@@ -2027,10 +1959,10 @@
       "id": 2,
       "title": "Sampling",
       "bounding": [
-        -374.0434358955888,
-        4426.665875391172,
-        1077.1911947094272,
-        1171.6660738080404
+        -376.9181134932993,
+        3713.7891991400197,
+        1084.0888426355332,
+        1858.4453112717997
       ],
       "color": "#3f789e",
       "flags": {}
@@ -2051,17 +1983,20 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.7218620332638037,
+      "scale": 0.4930414816363663,
       "offset": [
-        1754.865063482217,
-        -4410.617260020586
+        2166.1184935311285,
+        -3442.6743585441595
       ]
     },
-    "frontendVersion": "1.49.6",
+    "frontendVersion": "1.51.10",
     "VHS_latentpreview": true,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
     "VHS_KeepIntermediate": true
   },
-  "version": 0.4
+  "version": 0.4,
+  "seed_widgets": {
+    "130": 0
+  }
 }

@@ -1,36 +1,36 @@
 {
   "id": "5e5babfd-0871-4eaf-96bb-a03b238ee51f",
   "revision": 0,
-  "last_node_id": 15,
+  "last_node_id": 16,
   "last_link_id": 30,
   "nodes": [
-    {
-      "id": 10,
-      "type": "MarkdownNote",
-      "pos": [
-        -1093.1939305295443,
-        -108.37491708540759
-      ],
-      "size": [
-        685.1474917760131,
-        499.0836385316146
-      ],
-      "flags": {},
-      "order": 0,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "title": "RunPod templates and manual provisioning",
-      "properties": {},
-      "widgets_values": [
-        "# RunPod templates\n\nMiniMax H3 FL2VA and Ref2VA each have two RunPod templates:\n\n- **Plus tail:** provisions the H3 generation tail.\n- **Plus QWEN prompt enhancer:** provisions the local Qwen3.8 GGUF prompt enhancer used by this workflow.\n\n## FL2VA\n\n- [Deploy MiniMax H3 FL2VA plus tail](https://console.runpod.io/deploy?template=v7b5g03csk&ref=se4tkc5o)\n- [Deploy MiniMax H3 FL2VA plus prompt enhancer](https://console.runpod.io/hub/template/a1nkufhzxq?ref=se4tkc5o)\n\n## Ref2VA\n\n- [Deploy MiniMax H3 Ref2VA plus tail](https://console.runpod.io/deploy?template=6qtfx7lxgc&ref=se4tkc5o)\n- [Deploy MiniMax H3 Ref2VA plus prompt enhancer](https://console.runpod.io/hub/template/pcsqepl6kt?ref=se4tkc5o)\n\n# Manual Qwen3.8 prompt-enhancer download\n\nThe **plus prompt enhancer** template provisions these files automatically. For manual installation:\n\n```bash\nmkdir -p /workspace/ComfyUI/models/LLM/Qwen3.8\n\nhf download theresa00l/Qwen3.8-27B-Uncensored-FP8-Q4_K_M-GGUF \\\n  qwen3.8-27b-uncensored-fp8-q4_k_m.gguf \\\n  --local-dir /workspace/ComfyUI/models/LLM/Qwen3.8\n\nhf download unsloth/Qwen3.8-27B-GGUF \\\n  mmproj-F16.gguf \\\n  --local-dir /workspace/ComfyUI/models/LLM/Qwen3.8\n```\n\nRestart ComfyUI or refresh the node after downloading.\n"
-      ],
-      "widgets_values_named": {
-        "text": "# RunPod templates\n\nMiniMax H3 FL2VA and Ref2VA each have two RunPod templates:\n\n- **Plus tail:** provisions the H3 generation tail.\n- **Plus QWEN prompt enhancer:** provisions the local Qwen3.8 GGUF prompt enhancer used by this workflow.\n\n## FL2VA\n\n- [Deploy MiniMax H3 FL2VA plus tail](https://console.runpod.io/deploy?template=v7b5g03csk&ref=se4tkc5o)\n- [Deploy MiniMax H3 FL2VA plus prompt enhancer](https://console.runpod.io/hub/template/a1nkufhzxq?ref=se4tkc5o)\n\n## Ref2VA\n\n- [Deploy MiniMax H3 Ref2VA plus tail](https://console.runpod.io/deploy?template=6qtfx7lxgc&ref=se4tkc5o)\n- [Deploy MiniMax H3 Ref2VA plus prompt enhancer](https://console.runpod.io/hub/template/pcsqepl6kt?ref=se4tkc5o)\n\n# Manual Qwen3.8 prompt-enhancer download\n\nThe **plus prompt enhancer** template provisions these files automatically. For manual installation:\n\n```bash\nmkdir -p /workspace/ComfyUI/models/LLM/Qwen3.8\n\nhf download theresa00l/Qwen3.8-27B-Uncensored-FP8-Q4_K_M-GGUF \\\n  qwen3.8-27b-uncensored-fp8-q4_k_m.gguf \\\n  --local-dir /workspace/ComfyUI/models/LLM/Qwen3.8\n\nhf download unsloth/Qwen3.8-27B-GGUF \\\n  mmproj-F16.gguf \\\n  --local-dir /workspace/ComfyUI/models/LLM/Qwen3.8\n```\n\nRestart ComfyUI or refresh the node after downloading.\n"
-      },
-      "color": "#432",
-      "bgcolor": "#653"
-    },
+{
+  "id": 16,
+  "type": "MarkdownNote",
+  "pos": [
+    -1773.1939305295443,
+    -759.817518384789
+  ],
+  "size": [
+    600,
+    520
+  ],
+  "flags": {},
+  "order": 0,
+  "mode": 0,
+  "inputs": [],
+  "outputs": [],
+  "title": "Guide: Purpose and use",
+  "properties": {},
+  "widgets_values": [
+    "# Prompt tools\n\n## Purpose\nUse Qwen-VL to generate a prompt for a separate video-generation workflow.\n\n## Use\n1. Enter your instructions and load optional reference media.\n2. Run the prompt generator and review or edit its text output.\n3. Copy the resulting prompt into the matching video workflow.\n\nWorkflow: prompt-generator-qwenvl-fl2v-pod.json"
+  ],
+  "widgets_values_named": {
+    "text": "# Prompt tools\n\n## Purpose\nUse Qwen-VL to generate a prompt for a separate video-generation workflow.\n\n## Use\n1. Enter your instructions and load optional reference media.\n2. Run the prompt generator and review or edit its text output.\n3. Copy the resulting prompt into the matching video workflow.\n\nWorkflow: prompt-generator-qwenvl-fl2v-pod.json"
+  },
+  "color": "#234",
+  "bgcolor": "#345"
+},
     {
       "id": 9,
       "type": "MiniMaxH3ReferenceSplitter",
@@ -238,7 +238,7 @@
         278.91979427535216
       ],
       "flags": {},
-      "order": 1,
+      "order": 0,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -271,7 +271,7 @@
       ],
       "size": [
         400,
-        534
+        558
       ],
       "flags": {},
       "order": 7,
@@ -285,14 +285,12 @@
           "link": 23
         },
         {
-          "label": "reference_image_1",
           "name": "reference_images.reference_image_1",
           "shape": 7,
           "type": "IMAGE",
           "link": 24
         },
         {
-          "label": "reference_image_2",
           "name": "reference_images.reference_image_2",
           "shape": 7,
           "type": "IMAGE",
@@ -353,7 +351,8 @@
         true,
         "uncensored fidelity",
         3,
-        ""
+        "",
+        "Auto"
       ],
       "widgets_values_named": {
         "prompt": "Describe the video or production task.",
@@ -370,7 +369,8 @@
         "force_unload_model": true,
         "prompt_profile": "uncensored fidelity",
         "shot_count": 3,
-        "additional_system_instructions": ""
+        "additional_system_instructions": "",
+        "h3_model_mode": "Auto"
       },
       "color": "#332922",
       "bgcolor": "#593930"
@@ -387,7 +387,7 @@
         562
       ],
       "flags": {},
-      "order": 2,
+      "order": 1,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -490,7 +490,7 @@
         562
       ],
       "flags": {},
-      "order": 3,
+      "order": 2,
       "mode": 4,
       "inputs": [],
       "outputs": [
@@ -532,7 +532,7 @@
         307.24490977885125
       ],
       "flags": {},
-      "order": 4,
+      "order": 3,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -542,6 +542,33 @@
       ],
       "widgets_values_named": {
         "text": "# Two media loaders\n\n## Input Media Loader\n\n- Loads media from /workspace/ComfyUI/input\n\n## Media Loader\n\n- Uploads media"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 10,
+      "type": "MarkdownNote",
+      "pos": [
+        -1093.1939305295443,
+        -108.37491708540759
+      ],
+      "size": [
+        685.1474917760131,
+        499.0836385316146
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "RunPod templates and manual provisioning",
+      "properties": {},
+      "widgets_values": [
+        "# RunPod templates\n\nMiniMax H3 FL2VA and Ref2VA each have two RunPod templates:\n\n- **Standard:** Manual provision prompt enhancer used by this workflow\n- **Plus QWEN prompt enhancer:** provisions the local Qwen3.8 GGUF prompt enhancer used by this workflow.\n\n## FL2VA\n\n- [Deploy MiniMax H3 FL2VA](https://console.runpod.io/deploy?template=v7b5g03csk&ref=se4tkc5o)\n- [Deploy MiniMax H3 FL2VA plus prompt enhancer](https://console.runpod.io/hub/template/a1nkufhzxq?ref=se4tkc5o)\n\n## Ref2VA\n\n- [Deploy MiniMax H3 Ref2VA](https://console.runpod.io/deploy?template=6qtfx7lxgc&ref=se4tkc5o)\n- [Deploy MiniMax H3 Ref2VA plus prompt enhancer](https://console.runpod.io/hub/template/pcsqepl6kt?ref=se4tkc5o)\n\n# Manual Qwen3.8 prompt-enhancer download\n\nThe **plus prompt enhancer** template provisions these files automatically. For manual installation:\n\n```bash\nmkdir -p /workspace/ComfyUI/models/LLM/Qwen3.8\n\nhf download theresa00l/Qwen3.8-27B-Uncensored-FP8-Q4_K_M-GGUF \\\n  qwen3.8-27b-uncensored-fp8-q4_k_m.gguf \\\n  --local-dir /workspace/ComfyUI/models/LLM/Qwen3.8\n\nhf download unsloth/Qwen3.8-27B-GGUF \\\n  mmproj-F16.gguf \\\n  --local-dir /workspace/ComfyUI/models/LLM/Qwen3.8\n```\n\nRefresh (press r) after downloading.\n"
+      ],
+      "widgets_values_named": {
+        "text": "# RunPod templates\n\nMiniMax H3 FL2VA and Ref2VA each have two RunPod templates:\n\n- **Standard:** Manual provision prompt enhancer used by this workflow\n- **Plus QWEN prompt enhancer:** provisions the local Qwen3.8 GGUF prompt enhancer used by this workflow.\n\n## FL2VA\n\n- [Deploy MiniMax H3 FL2VA](https://console.runpod.io/deploy?template=v7b5g03csk&ref=se4tkc5o)\n- [Deploy MiniMax H3 FL2VA plus prompt enhancer](https://console.runpod.io/hub/template/a1nkufhzxq?ref=se4tkc5o)\n\n## Ref2VA\n\n- [Deploy MiniMax H3 Ref2VA](https://console.runpod.io/deploy?template=6qtfx7lxgc&ref=se4tkc5o)\n- [Deploy MiniMax H3 Ref2VA plus prompt enhancer](https://console.runpod.io/hub/template/pcsqepl6kt?ref=se4tkc5o)\n\n# Manual Qwen3.8 prompt-enhancer download\n\nThe **plus prompt enhancer** template provisions these files automatically. For manual installation:\n\n```bash\nmkdir -p /workspace/ComfyUI/models/LLM/Qwen3.8\n\nhf download theresa00l/Qwen3.8-27B-Uncensored-FP8-Q4_K_M-GGUF \\\n  qwen3.8-27b-uncensored-fp8-q4_k_m.gguf \\\n  --local-dir /workspace/ComfyUI/models/LLM/Qwen3.8\n\nhf download unsloth/Qwen3.8-27B-GGUF \\\n  mmproj-F16.gguf \\\n  --local-dir /workspace/ComfyUI/models/LLM/Qwen3.8\n```\n\nRefresh (press r) after downloading.\n"
       },
       "color": "#432",
       "bgcolor": "#653"
@@ -619,15 +646,18 @@
     "ds": {
       "scale": 0.6924307636609518,
       "offset": [
-        1352.3089958946616,
-        989.9117168151566
+        1750.9048483642105,
+        474.6255809887502
       ]
     },
-    "frontendVersion": "1.49.6",
+    "frontendVersion": "1.51.10",
     "VHS_latentpreview": true,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
     "VHS_KeepIntermediate": true
   },
-  "version": 0.4
+  "version": 0.4,
+  "seed_widgets": {
+    "11": 7
+  }
 }

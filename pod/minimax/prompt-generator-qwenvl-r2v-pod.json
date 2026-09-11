@@ -1,0 +1,859 @@
+{
+  "id": "5e5babfd-0871-4eaf-96bb-a03b238ee51f",
+  "revision": 0,
+  "last_node_id": 16,
+  "last_link_id": 36,
+  "nodes": [
+{
+  "id": 16,
+  "type": "MarkdownNote",
+  "pos": [
+    -1704.7085612482867,
+    -751.967872199203
+  ],
+  "size": [
+    600,
+    520
+  ],
+  "flags": {},
+  "order": 0,
+  "mode": 0,
+  "inputs": [],
+  "outputs": [],
+  "title": "Guide: Purpose and use",
+  "properties": {},
+  "widgets_values": [
+    "# Prompt tools\n\n## Purpose\nUse Qwen-VL to generate a prompt for a separate video-generation workflow.\n\n## Use\n1. Enter your instructions and load optional reference media.\n2. Run the prompt generator and review or edit its text output.\n3. Copy the resulting prompt into the matching video workflow.\n\nWorkflow: prompt-generator-qwenvl-r2v-pod.json"
+  ],
+  "widgets_values_named": {
+    "text": "# Prompt tools\n\n## Purpose\nUse Qwen-VL to generate a prompt for a separate video-generation workflow.\n\n## Use\n1. Enter your instructions and load optional reference media.\n2. Run the prompt generator and review or edit its text output.\n3. Copy the resulting prompt into the matching video workflow.\n\nWorkflow: prompt-generator-qwenvl-r2v-pod.json"
+  },
+  "color": "#234",
+  "bgcolor": "#345"
+},
+    {
+      "id": 6,
+      "type": "MiniMaxH3ReferenceSplitter",
+      "pos": [
+        308.3998478954706,
+        -96.74867036180159
+      ],
+      "size": [
+        245.0123046875,
+        366
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "references",
+          "type": "H3_REFS",
+          "link": 36
+        }
+      ],
+      "outputs": [
+        {
+          "name": "picture_1",
+          "type": "IMAGE",
+          "links": [
+            17
+          ]
+        },
+        {
+          "name": "picture_2",
+          "type": "IMAGE",
+          "links": [
+            18
+          ]
+        },
+        {
+          "name": "picture_3",
+          "type": "IMAGE",
+          "links": [
+            19
+          ]
+        },
+        {
+          "name": "picture_4",
+          "type": "IMAGE",
+          "links": [
+            20
+          ]
+        },
+        {
+          "name": "picture_5",
+          "type": "IMAGE",
+          "links": [
+            21
+          ]
+        },
+        {
+          "name": "picture_6",
+          "type": "IMAGE",
+          "links": [
+            22
+          ]
+        },
+        {
+          "name": "picture_7",
+          "type": "IMAGE",
+          "links": [
+            23
+          ]
+        },
+        {
+          "name": "picture_8",
+          "type": "IMAGE",
+          "links": [
+            24
+          ]
+        },
+        {
+          "name": "picture_9",
+          "type": "IMAGE",
+          "links": [
+            25
+          ]
+        },
+        {
+          "name": "video_1",
+          "type": "IMAGE",
+          "links": [
+            26
+          ]
+        },
+        {
+          "name": "video_2",
+          "type": "IMAGE",
+          "links": [
+            27
+          ]
+        },
+        {
+          "name": "video_3",
+          "type": "IMAGE",
+          "links": [
+            28
+          ]
+        },
+        {
+          "name": "video_audio_1",
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "name": "video_audio_2",
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "name": "video_audio_3",
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "name": "audio_1",
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "name": "audio_2",
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "name": "audio_3",
+          "type": "AUDIO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MiniMaxH3ReferenceSplitter"
+      },
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 5,
+      "type": "MiniMaxH3MediaLoader",
+      "pos": [
+        -375.1304438684536,
+        -98.98241578713262
+      ],
+      "size": [
+        660,
+        562
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "references",
+          "type": "H3_REFS",
+          "links": [
+            34
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MiniMaxH3MediaLoader"
+      },
+      "widgets_values": [
+        "[]",
+        null,
+        null,
+        ""
+      ],
+      "widgets_values_named": {
+        "media_state": "[]",
+        "Open loader…": null,
+        "+ Native-output splitter": null,
+        "mml_panel": ""
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 13,
+      "type": "MiniMaxH3InputMediaLoader",
+      "pos": [
+        -386.2535239934654,
+        -751.967872199203
+      ],
+      "size": [
+        660,
+        562
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "references",
+          "type": "H3_REFS",
+          "links": [
+            35
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MiniMaxH3InputMediaLoader"
+      },
+      "widgets_values": [
+        "[]",
+        null,
+        null,
+        ""
+      ],
+      "widgets_values_named": {
+        "media_state": "[]",
+        "Open loader…": null,
+        "+ Native-output splitter": null,
+        "mml_panel": ""
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 11,
+      "type": "PreviewAny",
+      "pos": [
+        592.9155700520904,
+        -331.93201026799886
+      ],
+      "size": [
+        210,
+        122
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 32
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": [],
+      "widgets_values_named": {},
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 12,
+      "type": "PreviewAny",
+      "pos": [
+        865.4739983169947,
+        -331.93199181545765
+      ],
+      "size": [
+        210,
+        122
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 33
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": [],
+      "widgets_values_named": {},
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 15,
+      "type": "Any Switch (rgthree)",
+      "pos": [
+        331.30055833411876,
+        -722.9190942425906
+      ],
+      "size": [
+        263.72841796875,
+        106
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "any_01",
+          "type": "H3_REFS",
+          "link": 34
+        },
+        {
+          "dir": 3,
+          "name": "any_02",
+          "type": "H3_REFS",
+          "link": 35
+        },
+        {
+          "dir": 3,
+          "name": "any_03",
+          "type": "H3_REFS",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "any_04",
+          "type": "H3_REFS",
+          "link": null
+        },
+        {
+          "name": "any_05",
+          "type": "H3_REFS",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "dir": 4,
+          "label": "H3_REFS",
+          "name": "*",
+          "shape": 3,
+          "type": "H3_REFS",
+          "links": [
+            36
+          ]
+        }
+      ],
+      "properties": {}
+    },
+    {
+      "id": 7,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        -377.02186892553584,
+        521.1251367402255
+      ],
+      "size": [
+        764.497930263995,
+        498.12698892285243
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            30
+          ]
+        }
+      ],
+      "title": "Prompt",
+      "properties": {
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        "Ref2VA, Barbie (Picture 1) and Ken (Picture 2) are tickling elsa (Picture 3) who has her arms up restrained to the ceiling screaming \"I can't handle tickling please stop\" in a room (Picture 4)\n\n"
+      ],
+      "widgets_values_named": {
+        "value": "Ref2VA, Barbie (Picture 1) and Ken (Picture 2) are tickling elsa (Picture 3) who has her arms up restrained to the ceiling screaming \"I can't handle tickling please stop\" in a room (Picture 4)\n\n"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 2,
+      "type": "PreviewAny",
+      "pos": [
+        1154.7179339654522,
+        -94.22235725010421
+      ],
+      "size": [
+        836.5469560447514,
+        763.2573099523864
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 31
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "title": "Final prompt to copy",
+      "properties": {
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": [],
+      "widgets_values_named": {},
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 10,
+      "type": "QwenH3PromptLocal",
+      "pos": [
+        588.4001083412069,
+        -94.39691120235274
+      ],
+      "size": [
+        502.1351127776645,
+        1301.9474432779775
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "reference_image_0",
+          "name": "reference_images.reference_image_0",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 17
+        },
+        {
+          "name": "reference_images.reference_image_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 18
+        },
+        {
+          "name": "reference_images.reference_image_2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 19
+        },
+        {
+          "name": "reference_images.reference_image_3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 20
+        },
+        {
+          "name": "reference_images.reference_image_4",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 21
+        },
+        {
+          "name": "reference_images.reference_image_5",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 22
+        },
+        {
+          "name": "reference_images.reference_image_6",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 23
+        },
+        {
+          "name": "reference_images.reference_image_7",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 24
+        },
+        {
+          "name": "reference_images.reference_image_8",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 25
+        },
+        {
+          "label": "reference_video_0",
+          "name": "reference_videos.reference_video_0",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 26
+        },
+        {
+          "name": "reference_videos.reference_video_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 27
+        },
+        {
+          "name": "reference_videos.reference_video_2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 28
+        },
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 30
+        }
+      ],
+      "outputs": [
+        {
+          "name": "h3_prompt",
+          "type": "STRING",
+          "links": [
+            31
+          ]
+        },
+        {
+          "name": "selected_skill",
+          "type": "STRING",
+          "links": [
+            33
+          ]
+        },
+        {
+          "name": "detected_mode",
+          "type": "STRING",
+          "links": [
+            32
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "QwenH3PromptLocal"
+      },
+      "widgets_values": [
+        "Describe the video or production task.",
+        "h3-prompt-writing",
+        10,
+        "qwen3.8-27b-uncensored-fp8-q4_k_m.gguf",
+        "mmproj-F16.gguf",
+        false,
+        "medium",
+        516561017642497,
+        "randomize",
+        8192,
+        2,
+        true,
+        "uncensored fidelity QWEN",
+        4,
+        "A",
+        "REF2VA"
+      ],
+      "widgets_values_named": {
+        "prompt": "Describe the video or production task.",
+        "skill": "h3-prompt-writing",
+        "duration": 10,
+        "llm_model": "qwen3.8-27b-uncensored-fp8-q4_k_m.gguf",
+        "vision_model": "mmproj-F16.gguf",
+        "think_mode": false,
+        "reasoning_effort": "medium",
+        "seed": 516561017642497,
+        "control_after_generate": "randomize",
+        "max_tokens": 8192,
+        "video_sample_frames_per_sec": 2,
+        "force_unload_model": true,
+        "prompt_profile": "uncensored fidelity QWEN",
+        "shot_count": 4,
+        "additional_system_instructions": "A",
+        "h3_model_mode": "REF2VA"
+      },
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 9,
+      "type": "MarkdownNote",
+      "pos": [
+        -1024.7085612482867,
+        -100.990287439142
+      ],
+      "size": [
+        622.0899908441588,
+        480.051690237922
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "RunPod templates and manual provisioning",
+      "properties": {},
+      "widgets_values": [
+        "# RunPod templates\n\nMiniMax H3 FL2VA and Ref2VA each have two RunPod templates:\n\n- **Standard:** Manual provision prompt enhancer used by this workflow\n- **Plus QWEN prompt enhancer:** provisions the local Qwen3.8 GGUF prompt enhancer used by this workflow.\n\n## FL2VA\n\n- [Deploy MiniMax H3 FL2VA](https://console.runpod.io/deploy?template=v7b5g03csk&ref=se4tkc5o)\n- [Deploy MiniMax H3 FL2VA plus prompt enhancer](https://console.runpod.io/hub/template/a1nkufhzxq?ref=se4tkc5o)\n\n## Ref2VA\n\n- [Deploy MiniMax H3 Ref2VA](https://console.runpod.io/deploy?template=6qtfx7lxgc&ref=se4tkc5o)\n- [Deploy MiniMax H3 Ref2VA plus prompt enhancer](https://console.runpod.io/hub/template/pcsqepl6kt?ref=se4tkc5o)\n\n# Manual Qwen3.8 prompt-enhancer download\n\nThe **plus prompt enhancer** template provisions these files automatically. For manual installation:\n\n```bash\nmkdir -p /workspace/ComfyUI/models/LLM/Qwen3.8\n\nhf download theresa00l/Qwen3.8-27B-Uncensored-FP8-Q4_K_M-GGUF \\\n  qwen3.8-27b-uncensored-fp8-q4_k_m.gguf \\\n  --local-dir /workspace/ComfyUI/models/LLM/Qwen3.8\n\nhf download unsloth/Qwen3.8-27B-GGUF \\\n  mmproj-F16.gguf \\\n  --local-dir /workspace/ComfyUI/models/LLM/Qwen3.8\n```\n\nRefresh (press r) after downloading.\n\n"
+      ],
+      "widgets_values_named": {
+        "text": "# RunPod templates\n\nMiniMax H3 FL2VA and Ref2VA each have two RunPod templates:\n\n- **Standard:** Manual provision prompt enhancer used by this workflow\n- **Plus QWEN prompt enhancer:** provisions the local Qwen3.8 GGUF prompt enhancer used by this workflow.\n\n## FL2VA\n\n- [Deploy MiniMax H3 FL2VA](https://console.runpod.io/deploy?template=v7b5g03csk&ref=se4tkc5o)\n- [Deploy MiniMax H3 FL2VA plus prompt enhancer](https://console.runpod.io/hub/template/a1nkufhzxq?ref=se4tkc5o)\n\n## Ref2VA\n\n- [Deploy MiniMax H3 Ref2VA](https://console.runpod.io/deploy?template=6qtfx7lxgc&ref=se4tkc5o)\n- [Deploy MiniMax H3 Ref2VA plus prompt enhancer](https://console.runpod.io/hub/template/pcsqepl6kt?ref=se4tkc5o)\n\n# Manual Qwen3.8 prompt-enhancer download\n\nThe **plus prompt enhancer** template provisions these files automatically. For manual installation:\n\n```bash\nmkdir -p /workspace/ComfyUI/models/LLM/Qwen3.8\n\nhf download theresa00l/Qwen3.8-27B-Uncensored-FP8-Q4_K_M-GGUF \\\n  qwen3.8-27b-uncensored-fp8-q4_k_m.gguf \\\n  --local-dir /workspace/ComfyUI/models/LLM/Qwen3.8\n\nhf download unsloth/Qwen3.8-27B-GGUF \\\n  mmproj-F16.gguf \\\n  --local-dir /workspace/ComfyUI/models/LLM/Qwen3.8\n```\n\nRefresh (press r) after downloading.\n\n"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 14,
+      "type": "MarkdownNote",
+      "pos": [
+        -737.2833601171251,
+        -637.8828069175718
+      ],
+      "size": [
+        317.9514502621889,
+        177.55063328128068
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "# Two media loaders\n\n## Input Media Loader\n\n- Loads media from /workspace/ComfyUI/input\n\n## Media Loader\n\n- Uploads media"
+      ],
+      "widgets_values_named": {
+        "text": "# Two media loaders\n\n## Input Media Loader\n\n- Loads media from /workspace/ComfyUI/input\n\n## Media Loader\n\n- Uploads media"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    }
+  ],
+  "links": [
+    [
+      17,
+      6,
+      0,
+      10,
+      0,
+      "IMAGE"
+    ],
+    [
+      18,
+      6,
+      1,
+      10,
+      1,
+      "IMAGE"
+    ],
+    [
+      19,
+      6,
+      2,
+      10,
+      2,
+      "IMAGE"
+    ],
+    [
+      20,
+      6,
+      3,
+      10,
+      3,
+      "IMAGE"
+    ],
+    [
+      21,
+      6,
+      4,
+      10,
+      4,
+      "IMAGE"
+    ],
+    [
+      22,
+      6,
+      5,
+      10,
+      5,
+      "IMAGE"
+    ],
+    [
+      23,
+      6,
+      6,
+      10,
+      6,
+      "IMAGE"
+    ],
+    [
+      24,
+      6,
+      7,
+      10,
+      7,
+      "IMAGE"
+    ],
+    [
+      25,
+      6,
+      8,
+      10,
+      8,
+      "IMAGE"
+    ],
+    [
+      26,
+      6,
+      9,
+      10,
+      9,
+      "IMAGE"
+    ],
+    [
+      27,
+      6,
+      10,
+      10,
+      10,
+      "IMAGE"
+    ],
+    [
+      28,
+      6,
+      11,
+      10,
+      11,
+      "IMAGE"
+    ],
+    [
+      30,
+      7,
+      0,
+      10,
+      12,
+      "STRING"
+    ],
+    [
+      31,
+      10,
+      0,
+      2,
+      0,
+      "STRING"
+    ],
+    [
+      32,
+      10,
+      2,
+      11,
+      0,
+      "STRING"
+    ],
+    [
+      33,
+      10,
+      1,
+      12,
+      0,
+      "STRING"
+    ],
+    [
+      34,
+      5,
+      0,
+      15,
+      0,
+      "H3_REFS"
+    ],
+    [
+      35,
+      13,
+      0,
+      15,
+      1,
+      "H3_REFS"
+    ],
+    [
+      36,
+      15,
+      0,
+      6,
+      0,
+      "H3_REFS"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.5928590518784915,
+      "offset": [
+        1529.397061859365,
+        1015.6450818298752
+      ]
+    },
+    "frontendVersion": "1.51.10",
+    "VHS_latentpreview": true,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4,
+  "seed_widgets": {
+    "10": 7
+  }
+}

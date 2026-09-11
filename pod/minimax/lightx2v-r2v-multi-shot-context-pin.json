@@ -1,9 +1,36 @@
 {
   "id": "e3f2b845-8f2c-4b5a-9caf-eac1029d3e7e",
   "revision": 0,
-  "last_node_id": 196,
-  "last_link_id": 352,
+  "last_node_id": 197,
+  "last_link_id": 354,
   "nodes": [
+{
+  "id": 197,
+  "type": "MarkdownNote",
+  "pos": [
+    -4063.01446523614,
+    4229.545110476211
+  ],
+  "size": [
+    600,
+    520
+  ],
+  "flags": {},
+  "order": 0,
+  "mode": 0,
+  "inputs": [],
+  "outputs": [],
+  "title": "Guide: Purpose and use",
+  "properties": {},
+  "widgets_values": [
+    "# Multi-shot - LightX2V\n\n## Purpose\nCreate connected shots with context pinning to carry reference context across the sequence.\n\n## Use\n1. Load the reference media and write the prompts for the shots.\n2. Review the shot count, duration and context settings.\n3. Run the sequence and check continuity between shots.\n\nWorkflow: lightx2v-r2v-multi-shot-context-pin.json"
+  ],
+  "widgets_values_named": {
+    "text": "# Multi-shot - LightX2V\n\n## Purpose\nCreate connected shots with context pinning to carry reference context across the sequence.\n\n## Use\n1. Load the reference media and write the prompts for the shots.\n2. Review the shot count, duration and context settings.\n3. Run the sequence and check continuity between shots.\n\nWorkflow: lightx2v-r2v-multi-shot-context-pin.json"
+  },
+  "color": "#234",
+  "bgcolor": "#345"
+},
     {
       "id": 151,
       "type": "GetNode",
@@ -38,50 +65,11 @@
       "widgets_values": [
         "CLIP"
       ],
+      "widgets_values_named": {
+        "Constant": "CLIP"
+      },
       "color": "#432",
       "bgcolor": "#653"
-    },
-    {
-      "id": 146,
-      "type": "SetNode",
-      "pos": [
-        -2148.03385874343,
-        4697.970430881597
-      ],
-      "size": [
-        210,
-        60
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 29,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "link": 293
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": null
-        }
-      ],
-      "title": "Set_MODEL",
-      "properties": {
-        "Node name for S&R": "SetNode",
-        "aux_id": "kijai/ComfyUI-KJNodes",
-        "previousName": "MODEL"
-      },
-      "widgets_values": [
-        "MODEL"
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
     },
     {
       "id": 122,
@@ -120,6 +108,9 @@
       "widgets_values": [
         "minimax_h3_audio_vae_fp32.safetensors"
       ],
+      "widgets_values_named": {
+        "vae_name": "minimax_h3_audio_vae_fp32.safetensors"
+      },
       "color": "#432",
       "bgcolor": "#653"
     },
@@ -160,6 +151,9 @@
       "widgets_values": [
         "minimax_h3_video_vae_fp16.safetensors"
       ],
+      "widgets_values_named": {
+        "vae_name": "minimax_h3_video_vae_fp16.safetensors"
+      },
       "color": "#432",
       "bgcolor": "#653"
     },
@@ -205,6 +199,14 @@
         "disabled",
         true
       ],
+      "widgets_values_named": {
+        "model_name": "minimax_h3_ref2va_pruned_int8_convrot.safetensors",
+        "weight_dtype": "default",
+        "compute_dtype": "default",
+        "patch_cublaslinear": true,
+        "sage_attention": "disabled",
+        "enable_fp16_accumulation": true
+      },
       "color": "#432",
       "bgcolor": "#653"
     },
@@ -247,6 +249,11 @@
         "minimax",
         "default"
       ],
+      "widgets_values_named": {
+        "clip_name": "qwen3vl_32b_heretic_minimax_h3_nvfp4.safetensors",
+        "type": "minimax",
+        "device": "default"
+      },
       "color": "#432",
       "bgcolor": "#653"
     },
@@ -262,7 +269,7 @@
         82
       ],
       "flags": {},
-      "order": 17,
+      "order": 16,
       "mode": 0,
       "inputs": [
         {
@@ -287,6 +294,10 @@
         "auto",
         false
       ],
+      "widgets_values_named": {
+        "sage_attention": "auto",
+        "allow_compile": false
+      },
       "color": "#2a363b",
       "bgcolor": "#3f5159"
     },
@@ -302,7 +313,7 @@
         82
       ],
       "flags": {},
-      "order": 21,
+      "order": 19,
       "mode": 0,
       "inputs": [
         {
@@ -327,6 +338,10 @@
         12,
         3
       ],
+      "widgets_values_named": {
+        "shift_video": 12,
+        "shift_audio": 3
+      },
       "color": "#323",
       "bgcolor": "#535"
     },
@@ -344,7 +359,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 18,
+      "order": 17,
       "mode": 0,
       "inputs": [
         {
@@ -369,6 +384,9 @@
       "widgets_values": [
         "CLIP"
       ],
+      "widgets_values_named": {
+        "Constant": "CLIP"
+      },
       "color": "#432",
       "bgcolor": "#653"
     },
@@ -386,7 +404,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 16,
+      "order": 15,
       "mode": 0,
       "inputs": [
         {
@@ -411,6 +429,9 @@
       "widgets_values": [
         "VAE_VIDEO"
       ],
+      "widgets_values_named": {
+        "Constant": "VAE_VIDEO"
+      },
       "color": "#322",
       "bgcolor": "#533"
     },
@@ -428,7 +449,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 15,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
@@ -453,84 +474,11 @@
       "widgets_values": [
         "VAE_AUDIO"
       ],
+      "widgets_values_named": {
+        "Constant": "VAE_AUDIO"
+      },
       "color": "#322",
       "bgcolor": "#533"
-    },
-    {
-      "id": 163,
-      "type": "Lora Loader (LoraManager)",
-      "pos": [
-        -2407.5827333511493,
-        4630.038317773196
-      ],
-      "size": [
-        495.1831063236916,
-        441.9128617976894
-      ],
-      "flags": {},
-      "order": 27,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 318
-        },
-        {
-          "name": "clip",
-          "shape": 7,
-          "type": "CLIP",
-          "link": null
-        },
-        {
-          "name": "lora_stack",
-          "shape": 7,
-          "type": "LORA_STACK",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            293
-          ]
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": null
-        },
-        {
-          "name": "trigger_words",
-          "type": "STRING",
-          "links": null
-        },
-        {
-          "name": "loaded_loras",
-          "type": "STRING",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "Lora Loader (LoraManager)",
-        "__lm_widget_ids": [
-          "__lm_autocomplete_meta_text",
-          "text",
-          "loras"
-        ]
-      },
-      "widgets_values": [
-        {
-          "version": 1,
-          "textWidgetName": "text"
-        },
-        "",
-        []
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
     },
     {
       "id": 152,
@@ -566,6 +514,9 @@
       "widgets_values": [
         "VAE_VIDEO"
       ],
+      "widgets_values_named": {
+        "Constant": "VAE_VIDEO"
+      },
       "color": "#322",
       "bgcolor": "#533"
     },
@@ -592,7 +543,7 @@
           "type": "VAE",
           "links": [
             331,
-            333
+            354
           ]
         }
       ],
@@ -604,49 +555,11 @@
       "widgets_values": [
         "VAE_AUDIO"
       ],
+      "widgets_values_named": {
+        "Constant": "VAE_AUDIO"
+      },
       "color": "#322",
       "bgcolor": "#533"
-    },
-    {
-      "id": 191,
-      "type": "LoadImageCrop",
-      "pos": [
-        -3383.01446523614,
-        5207.237721482931
-      ],
-      "size": [
-        490.88897945902977,
-        655.7872789770154
-      ],
-      "flags": {},
-      "order": 7,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "links": [
-            348
-          ]
-        },
-        {
-          "name": "mask",
-          "type": "MASK",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoadImageCrop"
-      },
-      "widgets_values": [
-        "Krea2_turbo_00035_.png",
-        "",
-        0.8,
-        "image"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
     },
     {
       "id": 169,
@@ -657,10 +570,10 @@
       ],
       "size": [
         270,
-        126
+        150
       ],
       "flags": {},
-      "order": 8,
+      "order": 7,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -688,6 +601,11 @@
         0.8,
         32
       ],
+      "widgets_values_named": {
+        "aspect_ratio": "4:3 (Standard)",
+        "megapixels": 0.8,
+        "multiple": 32
+      },
       "color": "#332922",
       "bgcolor": "#593930"
     },
@@ -705,7 +623,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 19,
+      "order": 18,
       "mode": 0,
       "inputs": [
         {
@@ -715,7 +633,6 @@
           "link": 248
         },
         {
-          "label": "b",
           "name": "values.b",
           "shape": 7,
           "type": "FLOAT,INT,BOOLEAN",
@@ -747,7 +664,10 @@
       },
       "widgets_values": [
         "max(5, round(a * 24)) + (5 - (max(5, round(a * 24)) % 17)) % 17"
-      ]
+      ],
+      "widgets_values_named": {
+        "expression": "max(5, round(a * 24)) + (5 - (max(5, round(a * 24)) % 17)) % 17"
+      }
     },
     {
       "id": 134,
@@ -761,7 +681,7 @@
         70
       ],
       "flags": {},
-      "order": 9,
+      "order": 8,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -780,6 +700,9 @@
       "widgets_values": [
         10
       ],
+      "widgets_values_named": {
+        "value": 10
+      },
       "color": "#322",
       "bgcolor": "#533"
     },
@@ -797,7 +720,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 10,
+      "order": 9,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -805,7 +728,7 @@
           "name": "MODEL",
           "type": "MODEL",
           "links": [
-            323
+            353
           ]
         }
       ],
@@ -817,6 +740,9 @@
       "widgets_values": [
         "MODEL"
       ],
+      "widgets_values_named": {
+        "Constant": "MODEL"
+      },
       "color": "#223",
       "bgcolor": "#335"
     },
@@ -832,7 +758,7 @@
         106
       ],
       "flags": {},
-      "order": 30,
+      "order": 28,
       "mode": 0,
       "inputs": [
         {
@@ -854,8 +780,15 @@
       "widgets_values": [
         "video/MiniMax_H3",
         "auto",
+        "auto",
         "auto"
       ],
+      "widgets_values_named": {
+        "filename_prefix": "video/MiniMax_H3",
+        "format": "auto",
+        "format.codec": "auto",
+        "codec": "auto"
+      },
       "color": "#222",
       "bgcolor": "#000"
     },
@@ -871,7 +804,7 @@
         88
       ],
       "flags": {},
-      "order": 11,
+      "order": 10,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -879,6 +812,9 @@
       "widgets_values": [
         "THs context_pin workflow needs more VRAM.\nLower duration or resolution if OOM.\nSettings tested on RTX 5090"
       ],
+      "widgets_values_named": {
+        "text": "THs context_pin workflow needs more VRAM.\nLower duration or resolution if OOM.\nSettings tested on RTX 5090"
+      },
       "color": "#432",
       "bgcolor": "#653"
     },
@@ -894,7 +830,7 @@
         373.94287139338303
       ],
       "flags": {},
-      "order": 12,
+      "order": 11,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -903,154 +839,11 @@
       "widgets_values": [
         "| megapixels | Aspect | Output (multiple=32) |\n|---|---|---|\n| 0.2 | 16:9 | 608 x 352 |\n| 0.3 | 16:9 | 736 x 416 |\n| 0.4 | 16:9 | 864 x 480 |\n| 0.5 | 16:9 | 960 x 544 |\n| 0.6 | 16:9 | 1056 x 608 |\n| 0.7 | 16:9 | 1152 x 640 |\n| 0.8 | 16:9 | 1216 x 672 |\n| 0.9 | 16:9 | 1280 x 736 |\n| 0.98 | 16:9 | 1344 x 768 |\n| 1.0 | 16:9 | 1376 x 768 |\n| 1.2 | 16:9 | 1504 x 832 |\n| 1.5 | 16:9 | 1664 x 928 |\n| 1.8 | 16:9 | 1824 x 1024 |\n| 2.0 | 16:9 | 1920 x 1088 |\n"
       ],
+      "widgets_values_named": {
+        "text": "| megapixels | Aspect | Output (multiple=32) |\n|---|---|---|\n| 0.2 | 16:9 | 608 x 352 |\n| 0.3 | 16:9 | 736 x 416 |\n| 0.4 | 16:9 | 864 x 480 |\n| 0.5 | 16:9 | 960 x 544 |\n| 0.6 | 16:9 | 1056 x 608 |\n| 0.7 | 16:9 | 1152 x 640 |\n| 0.8 | 16:9 | 1216 x 672 |\n| 0.9 | 16:9 | 1280 x 736 |\n| 0.98 | 16:9 | 1344 x 768 |\n| 1.0 | 16:9 | 1376 x 768 |\n| 1.2 | 16:9 | 1504 x 832 |\n| 1.5 | 16:9 | 1664 x 928 |\n| 1.8 | 16:9 | 1824 x 1024 |\n| 2.0 | 16:9 | 1920 x 1088 |\n"
+      },
       "color": "#222",
       "bgcolor": "#000"
-    },
-    {
-      "id": 131,
-      "type": "CreateVideo",
-      "pos": [
-        -653.4539307557038,
-        4767.308674292983
-      ],
-      "size": [
-        270,
-        110
-      ],
-      "flags": {},
-      "order": 28,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 320
-        },
-        {
-          "name": "audio",
-          "shape": 7,
-          "type": "AUDIO",
-          "link": 337
-        }
-      ],
-      "outputs": [
-        {
-          "name": "VIDEO",
-          "type": "VIDEO",
-          "links": [
-            243
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CreateVideo"
-      },
-      "widgets_values": [
-        24,
-        8
-      ],
-      "color": "#2a363b",
-      "bgcolor": "#3f5159"
-    },
-    {
-      "id": 179,
-      "type": "FastFilmGrain",
-      "pos": [
-        -662.3188425491007,
-        4599.068443228471
-      ],
-      "size": [
-        270,
-        106
-      ],
-      "flags": {},
-      "order": 26,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 336
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            320
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "FastFilmGrain"
-      },
-      "widgets_values": [
-        0.01,
-        0.5,
-        4
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
-      "id": 192,
-      "type": "ModelPreviewOverrideKJ",
-      "pos": [
-        -1029.8526151931108,
-        5345.721167428149
-      ],
-      "size": [
-        679.8552253038401,
-        675.3704352827153
-      ],
-      "flags": {},
-      "order": 22,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 349
-        },
-        {
-          "name": "vae",
-          "shape": 7,
-          "type": "VAE",
-          "link": null
-        },
-        {
-          "name": "preview_frames",
-          "type": "INT",
-          "widget": {
-            "name": "preview_frames"
-          },
-          "link": 351
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            350
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ModelPreviewOverrideKJ"
-      },
-      "widgets_values": [
-        1024,
-        80,
-        true,
-        1,
-        12,
-        "taeh3.safetensors",
-        ""
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
     },
     {
       "id": 170,
@@ -1064,7 +857,7 @@
         794.1846126335031
       ],
       "flags": {},
-      "order": 13,
+      "order": 12,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1083,6 +876,9 @@
       "widgets_values": [
         "Two women in their early twenties, both with long brown hair flowing in the breeze, wearing dark sunglasses, walking barefoot along the sandy beach next to the seashore. The woman on the left wears a white spaghetti-strap crop top and light-wash denim cutoff shorts with frayed edges. The woman on the right wears a cream-colored patterned spaghetti-strap crop top with delicate ruching and matching light-wash denim cutoff shorts. Both have tanned skin, natural smiles, and are holding hands loosely as they walk. The environment is a sunny coastal beach with golden sand, gentle waves rolling in with white foam, dunes covered in green grass in the background, and a clear blue sky. The lighting is bright natural daylight with soft shadows. The visual style is cinematic, realistic, with warm tones and shallow depth of field. The camera is at eye level, medium full shot, static, capturing them from the front as they walk toward the camera. The sound of waves crashing and seagulls calling is audible in the background.\n\nThe two women remain exactly as they were at the end of the previous moment. For the first couple of seconds, their hair continues to flutter slightly in the sea breeze, their feet sink gently into the wet sand with each step, and their hands shift slightly in their grip. And only then the woman in the white crop top says, \"This weather is perfect for a beach vacation, don’t you think?\" She finishes speaking, smiles, and continues walking with her head tilted slightly toward her friend, who nods in agreement.\n\n---\n\nThe two women in their early twenties, both with long brown hair flowing in the breeze, wearing dark sunglasses, walking barefoot along the sandy beach next to the seashore. The woman on the left wears a white spaghetti-strap crop top and light-wash denim cutoff shorts with frayed edges. The woman on the right wears a cream-colored patterned spaghetti-strap crop top with delicate ruching and matching light-wash denim cutoff shorts. Both have tanned skin, natural smiles, and are holding hands loosely as they walk. The environment is a sunny coastal beach with golden sand, gentle waves rolling in with white foam, dunes covered in green grass in the background, and a clear blue sky. The lighting is bright natural daylight with soft shadows. The visual style is cinematic, realistic, with warm tones and shallow depth of field. The camera is at eye level, medium full shot, static, capturing them from the front as they walk toward the camera. The sound of waves crashing and seagulls calling is audible in the background.\n\nThe two women remain exactly as they were at the end of the previous moment. For the first couple of seconds, their feet leave small imprints in the damp sand, their shoulders sway naturally with each step, and the woman on the right’s hair catches a gust of wind. And only then the woman in the cream crop top replies, \"Absolutely, I’ve never seen the ocean so calm and clear. It’s like paradise.\" She lowers her gaze briefly to the water, then looks back at her friend, smiling, and continues walking with a relaxed posture.\n\n---\n\nThe two women in their early twenties, both with long brown hair flowing in the breeze, wearing dark sunglasses, walking barefoot along the sandy beach next to the seashore. The woman on the left wears a white spaghetti-strap crop top and light-wash denim cutoff shorts with frayed edges. The woman on the right wears a cream-colored patterned spaghetti-strap crop top with delicate ruching and matching light-wash denim cutoff shorts. Both have tanned skin, natural smiles, and are holding hands loosely as they walk. The environment is a sunny coastal beach with golden sand, gentle waves rolling in with white foam, dunes covered in green grass in the background, and a clear blue sky. The lighting is bright natural daylight with soft shadows. The visual style is cinematic, realistic, with warm tones and shallow depth of field. The camera is at eye level, medium full shot, static, capturing them from the front as they walk toward the camera. The sound of waves crashing and seagulls calling is audible in the background.\n\nThe two women remain exactly as they were at the end of the previous moment. For the first couple of seconds, their hands tighten slightly in their grip, their shadows stretch subtly on the sand, and the woman on the left’s hair brushes her shoulder. And only then the woman in the white crop top says, \"I’m so glad we decided to come here. The air feels so fresh and clean.\" She exhales slowly, turns her head slightly toward the horizon, then returns her gaze to her friend, still smiling, and continues walking with steady steps.\n"
       ],
+      "widgets_values_named": {
+        "value": "Two women in their early twenties, both with long brown hair flowing in the breeze, wearing dark sunglasses, walking barefoot along the sandy beach next to the seashore. The woman on the left wears a white spaghetti-strap crop top and light-wash denim cutoff shorts with frayed edges. The woman on the right wears a cream-colored patterned spaghetti-strap crop top with delicate ruching and matching light-wash denim cutoff shorts. Both have tanned skin, natural smiles, and are holding hands loosely as they walk. The environment is a sunny coastal beach with golden sand, gentle waves rolling in with white foam, dunes covered in green grass in the background, and a clear blue sky. The lighting is bright natural daylight with soft shadows. The visual style is cinematic, realistic, with warm tones and shallow depth of field. The camera is at eye level, medium full shot, static, capturing them from the front as they walk toward the camera. The sound of waves crashing and seagulls calling is audible in the background.\n\nThe two women remain exactly as they were at the end of the previous moment. For the first couple of seconds, their hair continues to flutter slightly in the sea breeze, their feet sink gently into the wet sand with each step, and their hands shift slightly in their grip. And only then the woman in the white crop top says, \"This weather is perfect for a beach vacation, don’t you think?\" She finishes speaking, smiles, and continues walking with her head tilted slightly toward her friend, who nods in agreement.\n\n---\n\nThe two women in their early twenties, both with long brown hair flowing in the breeze, wearing dark sunglasses, walking barefoot along the sandy beach next to the seashore. The woman on the left wears a white spaghetti-strap crop top and light-wash denim cutoff shorts with frayed edges. The woman on the right wears a cream-colored patterned spaghetti-strap crop top with delicate ruching and matching light-wash denim cutoff shorts. Both have tanned skin, natural smiles, and are holding hands loosely as they walk. The environment is a sunny coastal beach with golden sand, gentle waves rolling in with white foam, dunes covered in green grass in the background, and a clear blue sky. The lighting is bright natural daylight with soft shadows. The visual style is cinematic, realistic, with warm tones and shallow depth of field. The camera is at eye level, medium full shot, static, capturing them from the front as they walk toward the camera. The sound of waves crashing and seagulls calling is audible in the background.\n\nThe two women remain exactly as they were at the end of the previous moment. For the first couple of seconds, their feet leave small imprints in the damp sand, their shoulders sway naturally with each step, and the woman on the right’s hair catches a gust of wind. And only then the woman in the cream crop top replies, \"Absolutely, I’ve never seen the ocean so calm and clear. It’s like paradise.\" She lowers her gaze briefly to the water, then looks back at her friend, smiling, and continues walking with a relaxed posture.\n\n---\n\nThe two women in their early twenties, both with long brown hair flowing in the breeze, wearing dark sunglasses, walking barefoot along the sandy beach next to the seashore. The woman on the left wears a white spaghetti-strap crop top and light-wash denim cutoff shorts with frayed edges. The woman on the right wears a cream-colored patterned spaghetti-strap crop top with delicate ruching and matching light-wash denim cutoff shorts. Both have tanned skin, natural smiles, and are holding hands loosely as they walk. The environment is a sunny coastal beach with golden sand, gentle waves rolling in with white foam, dunes covered in green grass in the background, and a clear blue sky. The lighting is bright natural daylight with soft shadows. The visual style is cinematic, realistic, with warm tones and shallow depth of field. The camera is at eye level, medium full shot, static, capturing them from the front as they walk toward the camera. The sound of waves crashing and seagulls calling is audible in the background.\n\nThe two women remain exactly as they were at the end of the previous moment. For the first couple of seconds, their hands tighten slightly in their grip, their shadows stretch subtly on the sand, and the woman on the left’s hair brushes her shoulder. And only then the woman in the white crop top says, \"I’m so glad we decided to come here. The air feels so fresh and clean.\" She exhales slowly, turns her head slightly toward the horizon, then returns her gaze to her friend, still smiling, and continues walking with steady steps.\n"
+      },
       "color": "#232",
       "bgcolor": "#353"
     },
@@ -1098,7 +894,7 @@
         1644.8876082701024
       ],
       "flags": {},
-      "order": 24,
+      "order": 22,
       "mode": 0,
       "inputs": [
         {
@@ -1295,7 +1091,12 @@
           "pin_frames": "22",
           "pin_noise": 0.05,
           "pin_renorm": true,
-          "reference_subjects": ""
+          "reference_subjects": "",
+          "low_ram_master": false,
+          "audio_pin_frames": 0,
+          "pin_noise_audio": false,
+          "audio_tone_control": false,
+          "x0_texture_clamp": 0
         }
       },
       "widgets_values": [
@@ -1336,104 +1137,67 @@
         "22",
         0.05,
         true,
-        ""
+        "",
+        false,
+        0,
+        false,
+        false,
+        0
       ],
+      "widgets_values_named": {
+        "script": "Shot 1 prompt goes here.\n---\nShot 2 prompt goes here.\n---\nShot 3 prompt goes here.",
+        "shot_count": 0,
+        "width": 768,
+        "height": 1344,
+        "frames_per_shot": 243,
+        "seed": 885655043937014,
+        "control_after_generate": "randomize",
+        "steps": 8,
+        "seed_per_shot": true,
+        "memory_frames": 0,
+        "anchor_frames": 1,
+        "sampler_name": "euler",
+        "scheduler": "simple",
+        "bank_pinned": 1,
+        "chain_gain_control": "flatten",
+        "continuity": "context_pin",
+        "bank_clip_frames": 22,
+        "color_level": "off",
+        "join_anchor_noise": 0,
+        "join_blend": true,
+        "handoff_release": 0,
+        "bank_ref_noise": 0,
+        "end_anchor": false,
+        "join_fx": "off",
+        "audio_lock": false,
+        "handoff_taper": 0,
+        "handoff_depth": "block",
+        "self_anchor_voice": false,
+        "reference_image_size": "match",
+        "preview_first_shot": true,
+        "output_scale": 1,
+        "save_every_shot": false,
+        "upscale_model_name": "(none)",
+        "master_normalize": "luma+contrast",
+        "pin_frames": "22",
+        "pin_noise": 0.05,
+        "pin_renorm": true,
+        "reference_subjects": "",
+        "low_ram_master": false,
+        "audio_pin_frames": 0,
+        "pin_noise_audio": false,
+        "audio_tone_control": false,
+        "x0_texture_clamp": 0
+      },
       "color": "#222",
       "bgcolor": "#000"
-    },
-    {
-      "id": 178,
-      "type": "LoraLoaderModelOnly",
-      "pos": [
-        -2715.0038984903695,
-        4629.199458006017
-      ],
-      "size": [
-        270,
-        82
-      ],
-      "flags": {},
-      "order": 25,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 316
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            318
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoraLoaderModelOnly"
-      },
-      "widgets_values": [
-        "minimax_h3_ref2v_turbo_8step_v1.0_768p_comfyui_bf16.safetensors",
-        1
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
-    },
-    {
-      "id": 181,
-      "type": "MiniMaxH3AudioPreviewCS",
-      "pos": [
-        -1020.509425757818,
-        4972.815592089807
-      ],
-      "size": [
-        670.5138328531477,
-        308.9828583520375
-      ],
-      "flags": {},
-      "order": 20,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 323
-        },
-        {
-          "name": "audio_vae",
-          "type": "VAE",
-          "link": 333
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            349
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "MiniMaxH3AudioPreviewCS"
-      },
-      "widgets_values": [
-        0,
-        50,
-        1,
-        15
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
     },
     {
       "id": 177,
       "type": "MiniMaxH3ScheduledSolAttentionPatch",
       "pos": [
-        -2462.2563072049775,
-        4230.040064143693
+        -2530.2022722013703,
+        4230.94604835866
       ],
       "size": [
         322.6548828125,
@@ -1442,7 +1206,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 23,
+      "order": 21,
       "mode": 0,
       "inputs": [
         {
@@ -1482,29 +1246,413 @@
         "exact_kv",
         "0,-1"
       ],
+      "widgets_values_named": {
+        "enabled": true,
+        "tau_start": 1.3,
+        "tau_end": 0.8,
+        "curve": "linear",
+        "min_tokens": 4096,
+        "strict": false,
+        "dense_percent": 0,
+        "thresh_type": "diag",
+        "int8_qk": false,
+        "int8_pv": false,
+        "sink_conditioning": "exact_kv",
+        "dense_blocks": "0,-1"
+      },
       "color": "#233",
       "bgcolor": "#355"
     },
     {
-      "id": 196,
-      "type": "MarkdownNote",
+      "id": 178,
+      "type": "LoraLoaderModelOnly",
       "pos": [
-        -2449.842128742662,
-        4012.0576381083615
+        -3372.7208603909276,
+        4950.810358988946
       ],
       "size": [
-        427.42993212723263,
-        124.19752484265109
+        270,
+        82
       ],
       "flags": {},
-      "order": 14,
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 316
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            318
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoaderModelOnly"
+      },
+      "widgets_values": [
+        "minimax_h3_ref2v_turbo_8step_v1.0_768p_comfyui_bf16.safetensors",
+        1
+      ],
+      "widgets_values_named": {
+        "lora_name": "minimax_h3_ref2v_turbo_8step_v1.0_768p_comfyui_bf16.safetensors",
+        "strength_model": 1
+      },
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 146,
+      "type": "SetNode",
+      "pos": [
+        -2497.7291472194397,
+        4700.688331687843
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "link": 293
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": null
+        }
+      ],
+      "title": "Set_MODEL",
+      "properties": {
+        "Node name for S&R": "SetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes",
+        "previousName": "MODEL"
+      },
+      "widgets_values": [
+        "MODEL"
+      ],
+      "widgets_values_named": {
+        "Constant": "MODEL"
+      },
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 163,
+      "type": "Lora Loader (LoraManager)",
+      "pos": [
+        -2697.485586453974,
+        4640.003712149024
+      ],
+      "size": [
+        495.1831063236916,
+        441.9128617976894
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 318
+        },
+        {
+          "name": "clip",
+          "shape": 7,
+          "type": "CLIP",
+          "link": null
+        },
+        {
+          "name": "lora_stack",
+          "shape": 7,
+          "type": "LORA_STACK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            293
+          ]
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": null
+        },
+        {
+          "name": "trigger_words",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "loaded_loras",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Lora Loader (LoraManager)",
+        "__lm_widget_ids": [
+          "__lm_autocomplete_meta_text",
+          "text",
+          "loras"
+        ]
+      },
+      "widgets_values": [
+        {
+          "version": 1,
+          "textWidgetName": "text"
+        },
+        "",
+        []
+      ],
+      "widgets_values_named": {
+        "__lm_autocomplete_meta_text": {
+          "version": 1,
+          "textWidgetName": "text"
+        },
+        "text": "",
+        "loras": []
+      },
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 191,
+      "type": "LoadImageCrop",
+      "pos": [
+        -3383.01446523614,
+        5207.237721482931
+      ],
+      "size": [
+        490.88897945902977,
+        655.7872789770154
+      ],
+      "flags": {},
+      "order": 13,
       "mode": 0,
       "inputs": [],
-      "outputs": [],
-      "properties": {},
-      "widgets_values": [
-        "# When run stops after first shot\n\n- Reboot de pod and start again.\n- Caused by sol-attention with different parameters in a previous workflow.\n- morton=false en sink_conditioning=off must be off in kajai sol version.\n- This version of sol is much safer to use."
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            348
+          ]
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        }
       ],
+      "properties": {
+        "Node name for S&R": "LoadImageCrop"
+      },
+      "widgets_values": [
+        "example.png",
+        "",
+        0.8,
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "example.png",
+        "crop": "",
+        "max_megapixels": 0.8,
+        "upload": "image"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 131,
+      "type": "CreateVideo",
+      "pos": [
+        -1001.2441486296544,
+        4566.049369626532
+      ],
+      "size": [
+        270,
+        126
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 320
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 337
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            243
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CreateVideo"
+      },
+      "widgets_values": [
+        24,
+        8,
+        "sRGB"
+      ],
+      "widgets_values_named": {
+        "fps": 24,
+        "bit_depth": 8,
+        "color_space": "sRGB"
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 179,
+      "type": "FastFilmGrain",
+      "pos": [
+        -1003.0474367704169,
+        4390.747380217549
+      ],
+      "size": [
+        270,
+        106
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 336
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            320
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FastFilmGrain"
+      },
+      "widgets_values": [
+        0.01,
+        0.5,
+        4
+      ],
+      "widgets_values_named": {
+        "grain_intensity": 0.01,
+        "saturation_mix": 0.5,
+        "batch_size": 4
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 192,
+      "type": "ModelPreviewOverrideKJ",
+      "pos": [
+        -1020.2927314061135,
+        4775.37477517852
+      ],
+      "size": [
+        673.8261533431601,
+        1215.5753197581798
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 353
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "name": "audio_vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": 354
+        },
+        {
+          "name": "preview_frames",
+          "type": "INT",
+          "widget": {
+            "name": "preview_frames"
+          },
+          "link": 351
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            350
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ModelPreviewOverrideKJ",
+        "kjPovPanelH": 283
+      },
+      "widgets_values": [
+        1024,
+        80,
+        true,
+        1,
+        12,
+        "taeh3.safetensors",
+        ""
+      ],
+      "widgets_values_named": {
+        "max_resolution": 1024,
+        "jpeg_quality": 80,
+        "suppress_default_preview": true,
+        "preview_frames": 1,
+        "preview_fps": 12,
+        "tiny_vae": "taeh3.safetensors",
+        "preview": ""
+      },
       "color": "#432",
       "bgcolor": "#653"
     }
@@ -1599,14 +1747,6 @@
       "IMAGE"
     ],
     [
-      323,
-      147,
-      0,
-      181,
-      0,
-      "MODEL"
-    ],
-    [
       326,
       169,
       0,
@@ -1655,14 +1795,6 @@
       "VAE"
     ],
     [
-      333,
-      171,
-      0,
-      181,
-      1,
-      "VAE"
-    ],
-    [
       336,
       183,
       0,
@@ -1695,14 +1827,6 @@
       "IMAGE"
     ],
     [
-      349,
-      181,
-      0,
-      192,
-      0,
-      "MODEL"
-    ],
-    [
       350,
       192,
       0,
@@ -1715,7 +1839,7 @@
       133,
       1,
       192,
-      2,
+      3,
       "INT"
     ],
     [
@@ -1725,6 +1849,22 @@
       177,
       0,
       "MODEL"
+    ],
+    [
+      353,
+      147,
+      0,
+      192,
+      0,
+      "MODEL"
+    ],
+    [
+      354,
+      171,
+      0,
+      192,
+      2,
+      "VAE"
     ]
   ],
   "groups": [
@@ -1734,8 +1874,8 @@
       "bounding": [
         -3401.7107683321333,
         4159.783353175251,
-        1524.3759632828724,
-        941.4074184465371
+        1236.1862131667617,
+        946.2306944143493
       ],
       "color": "#3f789e",
       "flags": {}
@@ -1767,18 +1907,21 @@
   ],
   "config": {},
   "extra": {
-    "frontendVersion": "1.48.7",
+    "frontendVersion": "1.51.10",
     "VHS_latentpreview": true,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
     "VHS_KeepIntermediate": true,
     "ds": {
-      "scale": 0.8830546450136406,
+      "scale": 0.3095052659859878,
       "offset": [
-        3277.9585162005055,
-        -3842.972715187536
+        4010.846998035698,
+        -3759.667641794713
       ]
     }
   },
-  "version": 0.4
+  "version": 0.4,
+  "seed_widgets": {
+    "183": 5
+  }
 }

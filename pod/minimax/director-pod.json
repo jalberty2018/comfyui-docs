@@ -1,9 +1,36 @@
 {
   "id": "072f0863-a8b6-41b7-83b0-cb3e5194b848",
   "revision": 0,
-  "last_node_id": 17,
+  "last_node_id": 18,
   "last_link_id": 23,
   "nodes": [
+{
+  "id": 18,
+  "type": "MarkdownNote",
+  "pos": [
+    -1669.782893911803,
+    4386.238272263489
+  ],
+  "size": [
+    600,
+    520
+  ],
+  "flags": {},
+  "order": 0,
+  "mode": 0,
+  "inputs": [],
+  "outputs": [],
+  "title": "Guide: Purpose and use",
+  "properties": {},
+  "widgets_values": [
+    "# Director\n\n## Purpose\nManage video generation stages in one Director workflow.\n\n## Use\n1. Enter scene instructions and configure the Director controls.\n2. Review the generation stages and output settings.\n3. Run the workflow and inspect the generated sequence and audio.\n\nWorkflow: director-pod.json"
+  ],
+  "widgets_values_named": {
+    "text": "# Director\n\n## Purpose\nManage video generation stages in one Director workflow.\n\n## Use\n1. Enter scene instructions and configure the Director controls.\n2. Review the generation stages and output settings.\n3. Run the workflow and inspect the generated sequence and audio.\n\nWorkflow: director-pod.json"
+  },
+  "color": "#234",
+  "bgcolor": "#345"
+},
     {
       "id": 10,
       "type": "CreateVideo",
@@ -13,7 +40,7 @@
       ],
       "size": [
         270,
-        110
+        126
       ],
       "flags": {},
       "order": 10,
@@ -45,8 +72,14 @@
       },
       "widgets_values": [
         24,
-        8
-      ]
+        8,
+        "sRGB"
+      ],
+      "widgets_values_named": {
+        "fps": 24,
+        "bit_depth": 8,
+        "color_space": "sRGB"
+      }
     },
     {
       "id": 11,
@@ -82,8 +115,15 @@
       "widgets_values": [
         "video/MiniMax_H3",
         "auto",
+        "auto",
         "auto"
-      ]
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "video/MiniMax_H3",
+        "format": "auto",
+        "format.codec": "auto",
+        "codec": "auto"
+      }
     },
     {
       "id": 17,
@@ -129,6 +169,348 @@
         1,
         15
       ],
+      "widgets_values_named": {
+        "window_seconds": 0,
+        "start_at_percent": 50,
+        "every_n_steps": 1,
+        "max_preview_overhead": 15
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 4,
+      "type": "UNETLoader",
+      "pos": [
+        -982.1685764384512,
+        4477.6528033454515
+      ],
+      "size": [
+        434.00311163821766,
+        82
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            14
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UNETLoader",
+        "models": [
+          {
+            "name": "minimax_h3_fl2va_pruned_int8_convrot.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/diffusion_models/minimax_h3_fl2va_pruned_int8_convrot.safetensors",
+            "directory": "diffusion_models"
+          }
+        ]
+      },
+      "widgets_values": [
+        "minimax_h3_fl2va_int8_convrot.safetensors",
+        "default"
+      ],
+      "widgets_values_named": {
+        "unet_name": "minimax_h3_fl2va_int8_convrot.safetensors",
+        "weight_dtype": "default"
+      },
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 3,
+      "type": "CLIPLoader",
+      "pos": [
+        -987.2495167007969,
+        4654.992878767375
+      ],
+      "size": [
+        436.9742503927346,
+        106
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            6
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPLoader",
+        "models": [
+          {
+            "name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/text_encoders/qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+            "directory": "text_encoders"
+          }
+        ]
+      },
+      "widgets_values": [
+        "qwen3vl_32b_h3_ultra_uncensored_heretic_int8_convrot.safetensors",
+        "minimax",
+        "default"
+      ],
+      "widgets_values_named": {
+        "clip_name": "qwen3vl_32b_h3_ultra_uncensored_heretic_int8_convrot.safetensors",
+        "type": "minimax",
+        "device": "default"
+      },
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 2,
+      "type": "VAELoader",
+      "pos": [
+        -987.2495167007969,
+        4844.992878767375
+      ],
+      "size": [
+        447.868299893968,
+        58
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            4
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader",
+        "models": [
+          {
+            "name": "minimax_h3_video_vae_fp16.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_video_vae_fp16.safetensors",
+            "directory": "vae"
+          }
+        ]
+      },
+      "widgets_values": [
+        "minimax_h3_video_vae_fp16.safetensors"
+      ],
+      "widgets_values_named": {
+        "vae_name": "minimax_h3_video_vae_fp16.safetensors"
+      },
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 1,
+      "type": "VAELoader",
+      "pos": [
+        -989.782893911803,
+        4972.817652183255
+      ],
+      "size": [
+        450.9357435456915,
+        58
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            5,
+            22
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader",
+        "models": [
+          {
+            "name": "minimax_h3_audio_vae_fp32.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_audio_vae_fp32.safetensors",
+            "directory": "vae"
+          }
+        ]
+      },
+      "widgets_values": [
+        "minimax_h3_audio_vae_fp32.safetensors"
+      ],
+      "widgets_values_named": {
+        "vae_name": "minimax_h3_audio_vae_fp32.safetensors"
+      },
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 12,
+      "type": "PathchSageAttentionKJ",
+      "pos": [
+        -493.69793480033076,
+        4473.827918225869
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 14
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            23
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PathchSageAttentionKJ"
+      },
+      "widgets_values": [
+        "auto",
+        false
+      ],
+      "widgets_values_named": {
+        "sage_attention": "auto",
+        "allow_compile": false
+      },
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 14,
+      "type": "MiniMaxH3ScheduledSolAttentionPatch",
+      "pos": [
+        -146.49045475824775,
+        4463.973425660423
+      ],
+      "size": [
+        322.6548828125,
+        342
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 23
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            18
+          ]
+        },
+        {
+          "name": "tau_graph",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MiniMaxH3ScheduledSolAttentionPatch"
+      },
+      "widgets_values": [
+        true,
+        1.3,
+        0.8,
+        "linear",
+        4096,
+        false,
+        0,
+        "diag",
+        false,
+        false,
+        "exact_kv",
+        "0,-1"
+      ],
+      "widgets_values_named": {
+        "enabled": true,
+        "tau_start": 1.3,
+        "tau_end": 0.8,
+        "curve": "linear",
+        "min_tokens": 4096,
+        "strict": false,
+        "dense_percent": 0,
+        "thresh_type": "diag",
+        "int8_qk": false,
+        "int8_pv": false,
+        "sink_conditioning": "exact_kv",
+        "dense_blocks": "0,-1"
+      },
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 15,
+      "type": "LoraLoaderModelOnly",
+      "pos": [
+        -799.3004476013093,
+        5125.44108267046
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 18
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            17
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoaderModelOnly"
+      },
+      "widgets_values": [
+        "minimax_h3_fl2v_turbo_8step_v1.0_768p_comfyui_bf16.safetensors",
+        1
+      ],
+      "widgets_values_named": {
+        "lora_name": "minimax_h3_fl2v_turbo_8step_v1.0_768p_comfyui_bf16.safetensors",
+        "strength_model": 1
+      },
       "color": "#432",
       "bgcolor": "#653"
     },
@@ -136,12 +518,12 @@
       "id": 16,
       "type": "Lora Loader (LoraManager)",
       "pos": [
-        -212.87888228538418,
-        4878.3299153144635
+        -448.9532715933302,
+        4907.090149895017
       ],
       "size": [
-        400,
-        346
+        627.6859504132171,
+        384.347070867364
       ],
       "flags": {},
       "order": 7,
@@ -205,6 +587,14 @@
         "",
         []
       ],
+      "widgets_values_named": {
+        "__lm_autocomplete_meta_text": {
+          "version": 1,
+          "textWidgetName": "text"
+        },
+        "text": "",
+        "loras": []
+      },
       "color": "#432",
       "bgcolor": "#653"
     },
@@ -259,6 +649,12 @@
           "name": "refine",
           "shape": 7,
           "type": "MMX_DIR_REFINE",
+          "link": null
+        },
+        {
+          "name": "sigmas",
+          "shape": 7,
+          "type": "SIGMAS",
           "link": null
         }
       ],
@@ -322,319 +718,44 @@
         832,
         1120,
         248,
-        "{\"version\":5,\"editMode\":\"segment\",\"totalFrames\":248,\"frameRate\":24,\"video\":{\"fileName\":\"\",\"videoFile\":\"\",\"subfolder\":\"\",\"type\":\"input\",\"frames\":[],\"frameMap\":[]},\"videoClips\":[],\"global\":{\"taskType\":\"i2v — 图生视频(Image to Video)\",\"prompt\":\"\",\"refs\":[],\"refAudios\":[],\"referenceVideo\":{\"videoFile\":\"\",\"fileName\":\"\",\"type\":\"input\",\"subfolder\":\"\"},\"continuousReference\":false,\"sourceWidth\":1819,\"sourceHeight\":1643,\"refVideos\":[],\"commonEnabled\":false,\"commonCollapsed\":false,\"genImage\":{\"imageFile\":\"\"}},\"output\":{\"mode\":\"fixed\",\"aspectRatio\":\"4:3 (标准)\",\"megapixels\":0.9,\"multiple\":32,\"longEdge\":1120,\"width\":1120,\"height\":832,\"maxExportFrames\":0,\"exportMode\":\"all\",\"audioMode\":\"generate\",\"refImageSize\":\"match\",\"continuityEnabled\":false,\"continuityOverlapFrames\":5},\"runSelectEnabled\":false,\"runSelection\":[],\"segments\":[{\"id\":\"msgblggwwhb3d\",\"start\":0,\"length\":124,\"frameCount\":124,\"durationSec\":5,\"prompt\":\"Disney style, Princess looking at the camera, saying in an exited voice \\\"Hello i am Minimax H3 how can i please you\\\".\",\"negativePrompt\":\"\",\"taskType\":\"\",\"refs\":[],\"refAudios\":[],\"refVideos\":[],\"genImage\":{\"imageFile\":\"11-facts-about-queen-elsa-frozen-1692051586.jpg\",\"fileName\":\"\"},\"continuityFromPrev\":false,\"refImageSize\":\"match\"},{\"id\":\"msgbq89zsprag\",\"start\":124,\"length\":124,\"frameCount\":124,\"durationSec\":5,\"prompt\":\"GIrl  answering to the princess \\\"To make it run much faster on Runpod's RTX 5090\\\"\",\"negativePrompt\":\"\",\"taskType\":\"\",\"refs\":[],\"refAudios\":[],\"refVideos\":[],\"genImage\":{\"imageFile\":\"3e8a4d2254befeadd04a528577ee1cd0.jpg\",\"fileName\":\"\"},\"continuityFromPrev\":true,\"refImageSize\":\"match\"}],\"timelineMode\":\"prompt_batch\",\"width\":1120,\"height\":832,\"refMaxSize\":864,\"gen\":{\"defaultFrameCount\":124},\"liveTaePreview\":true,\"batchDetailMode\":\"solo\",\"batchWorkspaces\":{\"i2v\":{\"selectedIndex\":0,\"editMode\":\"segment\",\"runSelectEnabled\":false,\"runSelection\":[],\"segments\":[{\"id\":\"msgblggwwhb3d\",\"start\":0,\"length\":124,\"frameCount\":124,\"durationSec\":5,\"prompt\":\"Disney style, Princess looking at the camera, saying in an exited voice \\\"Hello i am Minimax H3 how can i please you\\\".\",\"negativePrompt\":\"\",\"taskType\":\"\",\"refs\":[],\"refAudios\":[],\"refVideos\":[],\"genImage\":{\"imageFile\":\"11-facts-about-queen-elsa-frozen-1692051586.jpg\",\"fileName\":\"\"},\"referenceVideo\":{\"videoFile\":\"\",\"fileName\":\"\",\"type\":\"input\",\"subfolder\":\"\"},\"_videoFrameCount\":124,\"previewFps\":24},{\"id\":\"msgbq89zsprag\",\"start\":124,\"length\":124,\"frameCount\":124,\"durationSec\":5,\"prompt\":\"GIrl  answering to the princess \\\"To make it run much faster on Runpod's RTX 5090\\\"\",\"negativePrompt\":\"\",\"taskType\":\"\",\"refs\":[],\"refAudios\":[],\"refVideos\":[],\"genImage\":{\"imageFile\":\"3e8a4d2254befeadd04a528577ee1cd0.jpg\",\"fileName\":\"\"},\"referenceVideo\":{\"videoFile\":\"\",\"fileName\":\"\",\"type\":\"input\",\"subfolder\":\"\"},\"_videoFrameCount\":124,\"previewFps\":24}],\"globalCommon\":{\"commonEnabled\":false,\"commonCollapsed\":false,\"prompt\":\"\",\"refs\":[],\"refAudios\":[],\"refVideos\":[]}}}}",
+        "{\"version\":5,\"editMode\":\"segment\",\"totalFrames\":248,\"frameRate\":24,\"video\":{\"fileName\":\"\",\"videoFile\":\"\",\"subfolder\":\"\",\"type\":\"input\",\"frames\":[],\"frameMap\":[]},\"videoClips\":[],\"global\":{\"taskType\":\"i2v — 图生视频(Image to Video)\",\"prompt\":\"\",\"refs\":[],\"refAudios\":[],\"referenceVideo\":{\"videoFile\":\"\",\"fileName\":\"\",\"type\":\"input\",\"subfolder\":\"\"},\"continuousReference\":false,\"sourceWidth\":1819,\"sourceHeight\":1643,\"refVideos\":[],\"commonEnabled\":false,\"commonCollapsed\":false,\"genImage\":{\"imageFile\":\"\"}},\"output\":{\"mode\":\"fixed\",\"aspectRatio\":\"4:3 (标准)\",\"megapixels\":0.9,\"multiple\":32,\"longEdge\":1120,\"width\":1120,\"height\":832,\"maxExportFrames\":0,\"exportMode\":\"all\",\"audioMode\":\"generate\",\"exportSourceImages\":false,\"refImageSize\":\"match\",\"continuityEnabled\":false,\"continuityOverlapFrames\":5,\"continuityMode\":\"guide\",\"continuityRedraw\":0.65,\"continuityKeepTail\":true},\"runSelectEnabled\":false,\"runSelection\":[],\"segments\":[{\"id\":\"msgblggwwhb3d\",\"start\":0,\"length\":124,\"frameCount\":124,\"durationSec\":5,\"prompt\":\"Disney style, Princess looking at the camera, saying in an exited voice \\\"Hello i am Minimax H3 how can i please you\\\".\",\"negativePrompt\":\"\",\"taskType\":\"\",\"refs\":[],\"refAudios\":[],\"refVideos\":[],\"genImage\":{\"imageFile\":\"11-facts-about-queen-elsa-frozen-1692051586.jpg\",\"fileName\":\"\"},\"startImage\":null,\"endImage\":null,\"continuityFromPrev\":false,\"refImageSize\":\"match\"},{\"id\":\"msgbq89zsprag\",\"start\":124,\"length\":124,\"frameCount\":124,\"durationSec\":5,\"prompt\":\"GIrl  answering to the princess \\\"To make it run much faster on Runpod's RTX 5090\\\"\",\"negativePrompt\":\"\",\"taskType\":\"\",\"refs\":[],\"refAudios\":[],\"refVideos\":[],\"genImage\":{\"imageFile\":\"3e8a4d2254befeadd04a528577ee1cd0.jpg\",\"fileName\":\"\"},\"startImage\":null,\"endImage\":null,\"continuityFromPrev\":true,\"refImageSize\":\"match\"}],\"timelineMode\":\"prompt_batch\",\"width\":1120,\"height\":832,\"refMaxSize\":864,\"gen\":{\"defaultFrameCount\":124},\"liveTaePreview\":true,\"batchDetailMode\":\"solo\",\"batchWorkspaces\":{\"i2v\":{\"selectedIndex\":0,\"editMode\":\"segment\",\"runSelectEnabled\":false,\"runSelection\":[],\"segments\":[{\"id\":\"msgblggwwhb3d\",\"start\":0,\"length\":124,\"frameCount\":124,\"durationSec\":5,\"prompt\":\"Disney style, Princess looking at the camera, saying in an exited voice \\\"Hello i am Minimax H3 how can i please you\\\".\",\"negativePrompt\":\"\",\"taskType\":\"\",\"refs\":[],\"refAudios\":[],\"refVideos\":[],\"genImage\":{\"imageFile\":\"11-facts-about-queen-elsa-frozen-1692051586.jpg\",\"fileName\":\"\"},\"continuityFromPrev\":false,\"refImageSize\":\"match\",\"referenceVideo\":{\"videoFile\":\"\",\"fileName\":\"\",\"type\":\"input\",\"subfolder\":\"\"},\"_videoFrameCount\":124,\"previewFps\":24},{\"id\":\"msgbq89zsprag\",\"start\":124,\"length\":124,\"frameCount\":124,\"durationSec\":5,\"prompt\":\"GIrl  answering to the princess \\\"To make it run much faster on Runpod's RTX 5090\\\"\",\"negativePrompt\":\"\",\"taskType\":\"\",\"refs\":[],\"refAudios\":[],\"refVideos\":[],\"genImage\":{\"imageFile\":\"3e8a4d2254befeadd04a528577ee1cd0.jpg\",\"fileName\":\"\"},\"continuityFromPrev\":true,\"refImageSize\":\"match\",\"referenceVideo\":{\"videoFile\":\"\",\"fileName\":\"\",\"type\":\"input\",\"subfolder\":\"\"},\"_videoFrameCount\":124,\"previewFps\":24}],\"globalCommon\":{\"commonEnabled\":false,\"commonCollapsed\":false,\"prompt\":\"\",\"refs\":[],\"refAudios\":[],\"refVideos\":[]}}}}",
         "Advanced sampling",
         8,
         "euler",
         "simple",
         6,
         3,
-        "Performance",
+        false,
         true,
         false,
         ""
       ],
+      "widgets_values_named": {
+        "task_type": "i2v — 图生视频(Image to Video)",
+        "global_prompt": "",
+        "bd_grp_sample": "Sampling settings",
+        "cfg": 1,
+        "seed": 954909481178911,
+        "control_after_generate": "randomize",
+        "frame_rate": 24,
+        "width": 1120,
+        "height": 832,
+        "ref_max_size": 1120,
+        "total_frames": 248,
+        "timeline_data": "{\"version\":5,\"editMode\":\"segment\",\"totalFrames\":248,\"frameRate\":24,\"video\":{\"fileName\":\"\",\"videoFile\":\"\",\"subfolder\":\"\",\"type\":\"input\",\"frames\":[],\"frameMap\":[]},\"videoClips\":[],\"global\":{\"taskType\":\"i2v — 图生视频(Image to Video)\",\"prompt\":\"\",\"refs\":[],\"refAudios\":[],\"referenceVideo\":{\"videoFile\":\"\",\"fileName\":\"\",\"type\":\"input\",\"subfolder\":\"\"},\"continuousReference\":false,\"sourceWidth\":1819,\"sourceHeight\":1643,\"refVideos\":[],\"commonEnabled\":false,\"commonCollapsed\":false,\"genImage\":{\"imageFile\":\"\"}},\"output\":{\"mode\":\"fixed\",\"aspectRatio\":\"4:3 (标准)\",\"megapixels\":0.9,\"multiple\":32,\"longEdge\":1120,\"width\":1120,\"height\":832,\"maxExportFrames\":0,\"exportMode\":\"all\",\"audioMode\":\"generate\",\"exportSourceImages\":false,\"refImageSize\":\"match\",\"continuityEnabled\":false,\"continuityOverlapFrames\":5,\"continuityMode\":\"guide\",\"continuityRedraw\":0.65,\"continuityKeepTail\":true},\"runSelectEnabled\":false,\"runSelection\":[],\"segments\":[{\"id\":\"msgblggwwhb3d\",\"start\":0,\"length\":124,\"frameCount\":124,\"durationSec\":5,\"prompt\":\"Disney style, Princess looking at the camera, saying in an exited voice \\\"Hello i am Minimax H3 how can i please you\\\".\",\"negativePrompt\":\"\",\"taskType\":\"\",\"refs\":[],\"refAudios\":[],\"refVideos\":[],\"genImage\":{\"imageFile\":\"11-facts-about-queen-elsa-frozen-1692051586.jpg\",\"fileName\":\"\"},\"startImage\":null,\"endImage\":null,\"continuityFromPrev\":false,\"refImageSize\":\"match\"},{\"id\":\"msgbq89zsprag\",\"start\":124,\"length\":124,\"frameCount\":124,\"durationSec\":5,\"prompt\":\"GIrl  answering to the princess \\\"To make it run much faster on Runpod's RTX 5090\\\"\",\"negativePrompt\":\"\",\"taskType\":\"\",\"refs\":[],\"refAudios\":[],\"refVideos\":[],\"genImage\":{\"imageFile\":\"3e8a4d2254befeadd04a528577ee1cd0.jpg\",\"fileName\":\"\"},\"startImage\":null,\"endImage\":null,\"continuityFromPrev\":true,\"refImageSize\":\"match\"}],\"timelineMode\":\"prompt_batch\",\"width\":1120,\"height\":832,\"refMaxSize\":864,\"gen\":{\"defaultFrameCount\":124},\"liveTaePreview\":true,\"batchDetailMode\":\"solo\",\"batchWorkspaces\":{\"i2v\":{\"selectedIndex\":0,\"editMode\":\"segment\",\"runSelectEnabled\":false,\"runSelection\":[],\"segments\":[{\"id\":\"msgblggwwhb3d\",\"start\":0,\"length\":124,\"frameCount\":124,\"durationSec\":5,\"prompt\":\"Disney style, Princess looking at the camera, saying in an exited voice \\\"Hello i am Minimax H3 how can i please you\\\".\",\"negativePrompt\":\"\",\"taskType\":\"\",\"refs\":[],\"refAudios\":[],\"refVideos\":[],\"genImage\":{\"imageFile\":\"11-facts-about-queen-elsa-frozen-1692051586.jpg\",\"fileName\":\"\"},\"continuityFromPrev\":false,\"refImageSize\":\"match\",\"referenceVideo\":{\"videoFile\":\"\",\"fileName\":\"\",\"type\":\"input\",\"subfolder\":\"\"},\"_videoFrameCount\":124,\"previewFps\":24},{\"id\":\"msgbq89zsprag\",\"start\":124,\"length\":124,\"frameCount\":124,\"durationSec\":5,\"prompt\":\"GIrl  answering to the princess \\\"To make it run much faster on Runpod's RTX 5090\\\"\",\"negativePrompt\":\"\",\"taskType\":\"\",\"refs\":[],\"refAudios\":[],\"refVideos\":[],\"genImage\":{\"imageFile\":\"3e8a4d2254befeadd04a528577ee1cd0.jpg\",\"fileName\":\"\"},\"continuityFromPrev\":true,\"refImageSize\":\"match\",\"referenceVideo\":{\"videoFile\":\"\",\"fileName\":\"\",\"type\":\"input\",\"subfolder\":\"\"},\"_videoFrameCount\":124,\"previewFps\":24}],\"globalCommon\":{\"commonEnabled\":false,\"commonCollapsed\":false,\"prompt\":\"\",\"refs\":[],\"refAudios\":[],\"refVideos\":[]}}}}",
+        "bd_grp_advanced": "Advanced sampling",
+        "steps": 8,
+        "sampler": "euler",
+        "scheduler": "simple",
+        "shift_video": 6,
+        "shift_audio": 3,
+        "export_source_images": false,
+        "bd_grp_perf": true,
+        "clear_vram_between_segments": false,
+        "minimax_director_ui": ""
+      },
       "color": "#232",
       "bgcolor": "#353"
-    },
-    {
-      "id": 4,
-      "type": "UNETLoader",
-      "pos": [
-        -1342.8710374919585,
-        4466.867683949839
-      ],
-      "size": [
-        434.00311163821766,
-        82
-      ],
-      "flags": {},
-      "order": 0,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            14
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "UNETLoader",
-        "models": [
-          {
-            "name": "minimax_h3_fl2va_pruned_int8_convrot.safetensors",
-            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/diffusion_models/minimax_h3_fl2va_pruned_int8_convrot.safetensors",
-            "directory": "diffusion_models"
-          }
-        ]
-      },
-      "widgets_values": [
-        "minimax_h3_fl2va_int8_convrot.safetensors",
-        "default"
-      ],
-      "color": "#233",
-      "bgcolor": "#355"
-    },
-    {
-      "id": 3,
-      "type": "CLIPLoader",
-      "pos": [
-        -1347.9519777543042,
-        4644.207759371763
-      ],
-      "size": [
-        436.9742503927346,
-        106
-      ],
-      "flags": {},
-      "order": 1,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            6
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPLoader",
-        "models": [
-          {
-            "name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
-            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/text_encoders/qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
-            "directory": "text_encoders"
-          }
-        ]
-      },
-      "widgets_values": [
-        "qwen3vl_32b_h3_ultra_uncensored_heretic_int8_convrot.safetensors",
-        "minimax",
-        "default"
-      ],
-      "color": "#233",
-      "bgcolor": "#355"
-    },
-    {
-      "id": 2,
-      "type": "VAELoader",
-      "pos": [
-        -1347.9519777543042,
-        4834.207759371763
-      ],
-      "size": [
-        447.868299893968,
-        58
-      ],
-      "flags": {},
-      "order": 2,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [
-            4
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VAELoader",
-        "models": [
-          {
-            "name": "minimax_h3_video_vae_fp16.safetensors",
-            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_video_vae_fp16.safetensors",
-            "directory": "vae"
-          }
-        ]
-      },
-      "widgets_values": [
-        "minimax_h3_video_vae_fp16.safetensors"
-      ],
-      "color": "#233",
-      "bgcolor": "#355"
-    },
-    {
-      "id": 1,
-      "type": "VAELoader",
-      "pos": [
-        -1350.4853549653103,
-        4962.032532787643
-      ],
-      "size": [
-        450.9357435456915,
-        58
-      ],
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [
-            5,
-            22
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VAELoader",
-        "models": [
-          {
-            "name": "minimax_h3_audio_vae_fp32.safetensors",
-            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_audio_vae_fp32.safetensors",
-            "directory": "vae"
-          }
-        ]
-      },
-      "widgets_values": [
-        "minimax_h3_audio_vae_fp32.safetensors"
-      ],
-      "color": "#233",
-      "bgcolor": "#355"
-    },
-    {
-      "id": 15,
-      "type": "LoraLoaderModelOnly",
-      "pos": [
-        -524.8789188560278,
-        4898.95348393601
-      ],
-      "size": [
-        270,
-        82
-      ],
-      "flags": {},
-      "order": 6,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 18
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            17
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoraLoaderModelOnly"
-      },
-      "widgets_values": [
-        "minimax_h3_fl2v_turbo_8step_v1.0_768p_comfyui_bf16.safetensors",
-        1
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
-      "id": 12,
-      "type": "PathchSageAttentionKJ",
-      "pos": [
-        -854.4003958538385,
-        4463.042798830257
-      ],
-      "size": [
-        270,
-        82
-      ],
-      "flags": {},
-      "order": 4,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 14
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            23
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "PathchSageAttentionKJ"
-      },
-      "widgets_values": [
-        "auto",
-        false
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
-      "id": 14,
-      "type": "MiniMaxH3ScheduledSolAttentionPatch",
-      "pos": [
-        -507.19291581175565,
-        4453.188306264811
-      ],
-      "size": [
-        322.6548828125,
-        342
-      ],
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 23
-        }
-      ],
-      "outputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "links": [
-            18
-          ]
-        },
-        {
-          "name": "tau_graph",
-          "type": "IMAGE",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "MiniMaxH3ScheduledSolAttentionPatch"
-      },
-      "widgets_values": [
-        true,
-        1.3,
-        0.8,
-        "linear",
-        4096,
-        false,
-        0,
-        "diag",
-        false,
-        false,
-        "exact_kv",
-        "0,-1"
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
     }
   ],
   "links": [
@@ -748,10 +869,10 @@
       "id": 1,
       "title": "Models",
       "bounding": [
-        -1377.951977754305,
-        4354.207759371763,
-        1593.3743297383492,
-        959.9648798386715
+        -1017.2495167007979,
+        4364.992878767375,
+        1251.8454041185232,
+        961.1632086607842
       ],
       "color": "#3f789e",
       "flags": {}
@@ -784,17 +905,20 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.9774129655172669,
+      "scale": 0.6675862068965692,
       "offset": [
-        871.9102139767825,
-        -4209.320764578664
+        1422.9922521049536,
+        -4351.67122123244
       ]
     },
-    "frontendVersion": "1.48.7",
+    "frontendVersion": "1.51.10",
     "VHS_latentpreview": true,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
     "VHS_KeepIntermediate": true
   },
-  "version": 0.4
+  "version": 0.4,
+  "seed_widgets": {
+    "7": 4
+  }
 }

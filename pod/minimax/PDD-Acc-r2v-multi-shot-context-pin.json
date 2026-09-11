@@ -1,9 +1,36 @@
 {
   "id": "e3f2b845-8f2c-4b5a-9caf-eac1029d3e7e",
   "revision": 0,
-  "last_node_id": 197,
-  "last_link_id": 356,
+  "last_node_id": 198,
+  "last_link_id": 358,
   "nodes": [
+{
+  "id": 198,
+  "type": "MarkdownNote",
+  "pos": [
+    -4063.01446523614,
+    4013.8230776944797
+  ],
+  "size": [
+    600,
+    520
+  ],
+  "flags": {},
+  "order": 0,
+  "mode": 0,
+  "inputs": [],
+  "outputs": [],
+  "title": "Guide: Purpose and use",
+  "properties": {},
+  "widgets_values": [
+    "# Multi-shot - PDD Acc\n\n## Purpose\nCreate connected shots with context pinning to carry reference context across the sequence.\n\n## Use\n1. Load the reference media and write the prompts for the shots.\n2. Review the shot count, duration and context settings.\n3. Run the sequence and check continuity between shots.\n\nWorkflow: PDD-Acc-r2v-multi-shot-context-pin.json"
+  ],
+  "widgets_values_named": {
+    "text": "# Multi-shot - PDD Acc\n\n## Purpose\nCreate connected shots with context pinning to carry reference context across the sequence.\n\n## Use\n1. Load the reference media and write the prompts for the shots.\n2. Review the shot count, duration and context settings.\n3. Run the sequence and check continuity between shots.\n\nWorkflow: PDD-Acc-r2v-multi-shot-context-pin.json"
+  },
+  "color": "#234",
+  "bgcolor": "#345"
+},
     {
       "id": 151,
       "type": "GetNode",
@@ -416,7 +443,7 @@
           "type": "VAE",
           "links": [
             331,
-            333
+            357
           ]
         }
       ],
@@ -458,7 +485,6 @@
           "link": 248
         },
         {
-          "label": "b",
           "name": "values.b",
           "shape": 7,
           "type": "FLOAT,INT,BOOLEAN",
@@ -544,7 +570,7 @@
         106
       ],
       "flags": {},
-      "order": 30,
+      "order": 29,
       "mode": 0,
       "inputs": [
         {
@@ -632,74 +658,6 @@
       "bgcolor": "#000"
     },
     {
-      "id": 192,
-      "type": "ModelPreviewOverrideKJ",
-      "pos": [
-        -1029.8526151931108,
-        5345.721167428149
-      ],
-      "size": [
-        679.8552253038401,
-        675.3704352827153
-      ],
-      "flags": {},
-      "order": 24,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 349
-        },
-        {
-          "name": "vae",
-          "shape": 7,
-          "type": "VAE",
-          "link": null
-        },
-        {
-          "name": "preview_frames",
-          "type": "INT",
-          "widget": {
-            "name": "preview_frames"
-          },
-          "link": 351
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            350
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ModelPreviewOverrideKJ"
-      },
-      "widgets_values": [
-        1024,
-        80,
-        true,
-        1,
-        12,
-        "taeh3.safetensors",
-        ""
-      ],
-      "widgets_values_named": {
-        "max_resolution": 1024,
-        "jpeg_quality": 80,
-        "suppress_default_preview": true,
-        "preview_frames": 1,
-        "preview_fps": 12,
-        "tiny_vae": "taeh3.safetensors",
-        "preview": ""
-      },
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
       "id": 170,
       "type": "PrimitiveStringMultiline",
       "pos": [
@@ -735,59 +693,6 @@
       },
       "color": "#232",
       "bgcolor": "#353"
-    },
-    {
-      "id": 181,
-      "type": "MiniMaxH3AudioPreviewCS",
-      "pos": [
-        -1020.509425757818,
-        4972.815592089807
-      ],
-      "size": [
-        670.5138328531477,
-        308.9828583520375
-      ],
-      "flags": {},
-      "order": 22,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 355
-        },
-        {
-          "name": "audio_vae",
-          "type": "VAE",
-          "link": 333
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            349
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "MiniMaxH3AudioPreviewCS"
-      },
-      "widgets_values": [
-        0,
-        50,
-        1,
-        15
-      ],
-      "widgets_values_named": {
-        "window_seconds": 0,
-        "start_at_percent": 50,
-        "every_n_steps": 1,
-        "max_preview_overhead": 15
-      },
-      "color": "#432",
-      "bgcolor": "#653"
     },
     {
       "id": 139,
@@ -983,7 +888,7 @@
       ],
       "size": [
         387.42556540959106,
-        246.3847127013405
+        266
       ],
       "flags": {},
       "order": 20,
@@ -1006,7 +911,7 @@
           "name": "model",
           "type": "MODEL",
           "links": [
-            355
+            358
           ]
         },
         {
@@ -1032,7 +937,8 @@
         1,
         "error",
         "",
-        true
+        true,
+        "error"
       ],
       "widgets_values_named": {
         "pdd_file": "minimax_h3_ref2va_pdd_acc_8step_comfyui.safetensors",
@@ -1041,7 +947,8 @@
         "head_strength": 1,
         "on_off_grid": "error",
         "partition": "",
-        "enabled": true
+        "enabled": true,
+        "partition_check": "error"
       },
       "color": "#323",
       "bgcolor": "#535"
@@ -1058,7 +965,7 @@
         1644.8876082701024
       ],
       "flags": {},
-      "order": 26,
+      "order": 24,
       "mode": 0,
       "inputs": [
         {
@@ -1368,7 +1275,7 @@
         126
       ],
       "flags": {},
-      "order": 29,
+      "order": 28,
       "mode": 0,
       "inputs": [
         {
@@ -1420,7 +1327,7 @@
         106
       ],
       "flags": {},
-      "order": 28,
+      "order": 26,
       "mode": 0,
       "inputs": [
         {
@@ -1455,11 +1362,85 @@
       "bgcolor": "#653"
     },
     {
+      "id": 196,
+      "type": "MarkdownNote",
+      "pos": [
+        -2128.53326894977,
+        4013.8230776944797
+      ],
+      "size": [
+        427.42993212723263,
+        124.19752484265109
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "# When run stops after first shot\n\n- Reboot de pod and start again.\n- Caused by sol-attention with different parameters in a previous workflow.\n- morton=false en sink_conditioning=off must be off in kajai sol version.\n- This version of sol is much safer to use."
+      ],
+      "widgets_values_named": {
+        "text": "# When run stops after first shot\n\n- Reboot de pod and start again.\n- Caused by sol-attention with different parameters in a previous workflow.\n- morton=false en sink_conditioning=off must be off in kajai sol version.\n- This version of sol is much safer to use."
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 169,
+      "type": "ResolutionSelector",
+      "pos": [
+        -1911.1489195938798,
+        5225.503031942055
+      ],
+      "size": [
+        270,
+        150
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "links": [
+            302,
+            326
+          ]
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": [
+            327
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ResolutionSelector"
+      },
+      "widgets_values": [
+        "4:3 (Standard)",
+        0.9,
+        32
+      ],
+      "widgets_values_named": {
+        "aspect_ratio": "4:3 (Standard)",
+        "megapixels": 0.9,
+        "multiple": 32
+      },
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
       "id": 177,
       "type": "MiniMaxH3ScheduledSolAttentionPatch",
       "pos": [
-        -2026.1944467547116,
-        4233.570976988888
+        -2040.7848008995572,
+        4232.111908179733
       ],
       "size": [
         322.6548828125,
@@ -1610,27 +1591,76 @@
       "bgcolor": "#535"
     },
     {
-      "id": 196,
-      "type": "MarkdownNote",
+      "id": 192,
+      "type": "ModelPreviewOverrideKJ",
       "pos": [
-        -2128.53326894977,
-        4013.8230776944797
+        -1028.3936020417398,
+        5013.061104057225
       ],
       "size": [
-        427.42993212723263,
-        124.19752484265109
+        681.314349770779,
+        1008.0304429958551
       ],
       "flags": {},
-      "order": 12,
+      "order": 22,
       "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "properties": {},
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 358
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "name": "audio_vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": 357
+        },
+        {
+          "name": "preview_frames",
+          "type": "INT",
+          "widget": {
+            "name": "preview_frames"
+          },
+          "link": 351
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            350
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ModelPreviewOverrideKJ",
+        "kjPovPanelH": 200
+      },
       "widgets_values": [
-        "# When run stops after first shot\n\n- Reboot de pod and start again.\n- Caused by sol-attention with different parameters in a previous workflow.\n- morton=false en sink_conditioning=off must be off in kajai sol version.\n- This version of sol is much safer to use."
+        1024,
+        80,
+        true,
+        1,
+        12,
+        "taeh3.safetensors",
+        ""
       ],
       "widgets_values_named": {
-        "text": "# When run stops after first shot\n\n- Reboot de pod and start again.\n- Caused by sol-attention with different parameters in a previous workflow.\n- morton=false en sink_conditioning=off must be off in kajai sol version.\n- This version of sol is much safer to use."
+        "max_resolution": 1024,
+        "jpeg_quality": 80,
+        "suppress_default_preview": true,
+        "preview_frames": 1,
+        "preview_fps": 12,
+        "tiny_vae": "taeh3.safetensors",
+        "preview": ""
       },
       "color": "#432",
       "bgcolor": "#653"
@@ -1647,7 +1677,7 @@
         655.7872789770154
       ],
       "flags": {},
-      "order": 13,
+      "order": 14,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1668,67 +1698,19 @@
         "Node name for S&R": "LoadImageCrop"
       },
       "widgets_values": [
-        "Krea2_turbo_00035_.png",
+        "example.png",
         "",
         0.8,
         "image"
       ],
       "widgets_values_named": {
-        "image": "Krea2_turbo_00035_.png",
+        "image": "example.png",
         "crop": "",
         "max_megapixels": 0.8,
         "upload": "image"
       },
       "color": "#232",
       "bgcolor": "#353"
-    },
-    {
-      "id": 169,
-      "type": "ResolutionSelector",
-      "pos": [
-        -1911.1489195938798,
-        5225.503031942055
-      ],
-      "size": [
-        270,
-        126
-      ],
-      "flags": {},
-      "order": 14,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "width",
-          "type": "INT",
-          "links": [
-            302,
-            326
-          ]
-        },
-        {
-          "name": "height",
-          "type": "INT",
-          "links": [
-            327
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ResolutionSelector"
-      },
-      "widgets_values": [
-        "4:3 (Standard)",
-        0.9,
-        32
-      ],
-      "widgets_values_named": {
-        "aspect_ratio": "4:3 (Standard)",
-        "megapixels": 0.9,
-        "multiple": 32
-      },
-      "color": "#332922",
-      "bgcolor": "#593930"
     }
   ],
   "links": [
@@ -1853,14 +1835,6 @@
       "VAE"
     ],
     [
-      333,
-      171,
-      0,
-      181,
-      1,
-      "VAE"
-    ],
-    [
       336,
       183,
       0,
@@ -1893,14 +1867,6 @@
       "IMAGE"
     ],
     [
-      349,
-      181,
-      0,
-      192,
-      0,
-      "MODEL"
-    ],
-    [
       350,
       192,
       0,
@@ -1913,7 +1879,7 @@
       133,
       1,
       192,
-      2,
+      3,
       "INT"
     ],
     [
@@ -1941,20 +1907,28 @@
       "MODEL"
     ],
     [
-      355,
-      197,
-      0,
-      181,
-      0,
-      "MODEL"
-    ],
-    [
       356,
       197,
       1,
       183,
       11,
       "SIGMAS"
+    ],
+    [
+      357,
+      171,
+      0,
+      192,
+      2,
+      "VAE"
+    ],
+    [
+      358,
+      197,
+      0,
+      192,
+      0,
+      "MODEL"
     ]
   ],
   "groups": [
@@ -1997,18 +1971,21 @@
   ],
   "config": {},
   "extra": {
-    "frontendVersion": "1.49.6",
+    "frontendVersion": "1.51.10",
     "VHS_latentpreview": true,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
     "VHS_KeepIntermediate": true,
     "ds": {
-      "scale": 0.8027769500124017,
+      "scale": 0.6031382043669435,
       "offset": [
-        2738.5036804083247,
-        -5153.737860101755
+        3617.4763075296432,
+        -4402.804395639198
       ]
     }
   },
-  "version": 0.4
+  "version": 0.4,
+  "seed_widgets": {
+    "183": 5
+  }
 }

@@ -72,7 +72,7 @@ Open **Logs** or **Connect** after deployment. Use these checkpoints to distingu
 | Phase | Healthy indication | When to investigate | Recommended action |
 | --- | --- | --- | --- |
 | Docker download starts | Activity begins within 1 minute | No download activity after 1 minute | Try another region |
-| Docker extraction starts | Extraction begins within 3 minutes | Download continues without extraction after 3 minutes or stalls at around 33% | Redeploy in another region |
+| Docker extraction starts | Extraction begins within 3 minutes | Download continues without extraction after 3 minutes or stalls around 33% | Redeploy in another region |
 | Container download and extraction | Completes in approximately 4–6 minutes | Progress is stalled or unusually slow | Compare with another pod or region |
 | Copy ComfyUI to `/workspace` | Completes in 0–120 seconds | Stalls or exceeds 130 seconds | Compare storage performance with another pod |
 | Model download | Sustained speed above 200 MB/s is acceptable | A model download fails | Let startup finish, then restart the pod |

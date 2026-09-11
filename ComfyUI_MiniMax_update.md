@@ -8,9 +8,11 @@
 - This pod is stable but many custom_nodes are experimental and in full development.
 - Tested on L40S, RTX 4090, RTX 5090 and RTX PRO 6000.
 
-## 09092026
+## 11092026
 
 - ComfyUI 0.35.0
+- Updated workflow templates.
+- Tail is an optional download
 
 ## 08092026
 
@@ -28,7 +30,7 @@
 - Updated configuration for RTX PRO 6000 for higher quality.
 - Changed configuration diffusion model LVRAM BACKWELL for lora compatibility.
 - Added local llama-cpp (cli,server) support
-- Split runpod prompt enhancement templates for tail and llma-cpp see deployment for more information
+- Added separate RunPod templates for local Qwen-VL prompt enhancement with llama.cpp; see the deployment guide for more information.
 - Added uncensored profile to_QWEN_H3_prompt modified workflows.
 - Fixed crash mult-shot context pin after first shot in workflows (sol attention)
 - [ComfyUI-H3-Qwen3VL-TextGen](https://github.com/ethanfel/ComfyUI-H3-Qwen3VL-TextGen.git)

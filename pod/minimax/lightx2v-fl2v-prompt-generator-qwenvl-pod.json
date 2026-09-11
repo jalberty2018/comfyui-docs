@@ -1,15 +1,15 @@
 {
   "id": "e3f2b845-8f2c-4b5a-9caf-eac1029d3e7e",
   "revision": 0,
-  "last_node_id": 190,
-  "last_link_id": 330,
+  "last_node_id": 194,
+  "last_link_id": 336,
   "nodes": [
 {
-  "id": 190,
+  "id": 194,
   "type": "MarkdownNote",
   "pos": [
-    -2436.51845407556,
-    3357.9973695625613
+    -3267.1465415153593,
+    3805.366121322733
   ],
   "size": [
     600,
@@ -23,10 +23,10 @@
   "title": "Guide: Purpose and use",
   "properties": {},
   "widgets_values": [
-    "# Image / first-last-frame video - LightX2V\n\n## Purpose\nAnimate an input image, with an optional last frame to guide the ending.\n\n## Use\n1. Load the starting image and, if used, the last frame.\n2. Describe the action, camera motion and desired audio.\n3. Set output size, duration and seed, then run and review the result.\n\nWorkflow: lightx2v-fl2v-pod.json"
+    "# Image / first-last-frame video - LightX2V\n\n## Purpose\nAnimate an input image, with an optional last frame to guide the ending. Qwen-VL provides integrated prompt enhancement.\n\n## Use\n1. Load the relevant input media and enter your scene instructions.\n2. Use the Qwen-VL prompt node and review its generated prompt.\n3. Set video output size and duration, then run the generation workflow.\n\nWorkflow: lightx2v-fl2v-prompt-generator-qwenvl-pod.json"
   ],
   "widgets_values_named": {
-    "text": "# Image / first-last-frame video - LightX2V\n\n## Purpose\nAnimate an input image, with an optional last frame to guide the ending.\n\n## Use\n1. Load the starting image and, if used, the last frame.\n2. Describe the action, camera motion and desired audio.\n3. Set output size, duration and seed, then run and review the result.\n\nWorkflow: lightx2v-fl2v-pod.json"
+    "text": "# Image / first-last-frame video - LightX2V\n\n## Purpose\nAnimate an input image, with an optional last frame to guide the ending. Qwen-VL provides integrated prompt enhancement.\n\n## Use\n1. Load the relevant input media and enter your scene instructions.\n2. Use the Qwen-VL prompt node and review its generated prompt.\n3. Set video output size and duration, then run the generation workflow.\n\nWorkflow: lightx2v-fl2v-prompt-generator-qwenvl-pod.json"
   },
   "color": "#234",
   "bgcolor": "#345"
@@ -35,8 +35,8 @@
       "id": 148,
       "type": "SetNode",
       "pos": [
-        -920.3200071906679,
-        3621.9568601192937
+        -1411.0560806415901,
+        4069.325611879465
       ],
       "size": [
         210,
@@ -45,7 +45,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 24,
+      "order": 26,
       "mode": 0,
       "inputs": [
         {
@@ -80,8 +80,8 @@
       "id": 151,
       "type": "GetNode",
       "pos": [
-        -863.1854012181545,
-        4936.310161028271
+        -852.8962010970104,
+        4934.595250729988
       ],
       "size": [
         210,
@@ -120,8 +120,8 @@
       "id": 152,
       "type": "GetNode",
       "pos": [
-        -719.3064247549597,
-        4938.468995416822
+        -709.0172246338155,
+        4936.754085118539
       ],
       "size": [
         210,
@@ -160,8 +160,8 @@
       "id": 147,
       "type": "GetNode",
       "pos": [
-        -353.1597185015707,
-        4465.61991857252
+        -211.8168600424787,
+        4920.563658026675
       ],
       "size": [
         210,
@@ -201,8 +201,8 @@
       "id": 139,
       "type": "DiffusionModelLoaderKJ",
       "pos": [
-        -1403.8024408722229,
-        3357.9973695625613
+        -1894.5385143231458,
+        3805.366121322733
       ],
       "size": [
         312.095703125,
@@ -254,15 +254,15 @@
       "id": 157,
       "type": "PathchSageAttentionKJ",
       "pos": [
-        -1061.1183440266886,
-        3393.73717761648
+        -1551.8544174776116,
+        3841.1059293766516
       ],
       "size": [
         224.23999328613309,
         82
       ],
       "flags": {},
-      "order": 19,
+      "order": 21,
       "mode": 0,
       "inputs": [
         {
@@ -298,15 +298,15 @@
       "id": 141,
       "type": "MiniMaxH3SigmaShift",
       "pos": [
-        -800.0558487902136,
-        3390.3683991052726
+        -1290.7919222411356,
+        3837.737150865444
       ],
       "size": [
         240.9599731445312,
         82
       ],
       "flags": {},
-      "order": 26,
+      "order": 28,
       "mode": 0,
       "inputs": [
         {
@@ -339,107 +339,11 @@
       "bgcolor": "#535"
     },
     {
-      "id": 132,
-      "type": "MiniMaxH3ImageToVideo",
-      "pos": [
-        -861.9986224982584,
-        4997.955652352659
-      ],
-      "size": [
-        430,
-        550
-      ],
-      "flags": {},
-      "order": 27,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 279
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 280
-        },
-        {
-          "name": "first_frame",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 309
-        },
-        {
-          "name": "last_frame",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 328
-        },
-        {
-          "name": "width",
-          "type": "INT",
-          "widget": {
-            "name": "width"
-          },
-          "link": 285
-        },
-        {
-          "name": "height",
-          "type": "INT",
-          "widget": {
-            "name": "height"
-          },
-          "link": 286
-        },
-        {
-          "name": "length",
-          "type": "INT",
-          "widget": {
-            "name": "length"
-          },
-          "link": 245
-        }
-      ],
-      "outputs": [
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "links": [
-            238
-          ]
-        },
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            236
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "MiniMaxH3ImageToVideo"
-      },
-      "widgets_values": [
-        "For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\n\nintegrated_multimodal_description: [Shot 1]  live-action, static camera, video showing a  young girl sitting in a wooden chair at a beach house with a cocktail in her hand.\n[Shot 2] At 00:02.000, the shot cuts to drinking the cocktail empty\n[Shot 3] At 00:05.000, the shot cuts to says (S1) says in a childish slow voice: <d>[English] I like to drink cocktails, it makes me forgetting the mad hectic world of artificial intelligence. </d>\n[Shot 4] At 00:08.000, the shot cuts to she looks at the see and smiles.\n\noverall_soundscape: Background sound of gulls and the noise of the waves.\n\nnon_diegetic_music: N/A",
-        1344,
-        768,
-        73
-      ],
-      "widgets_values_named": {
-        "prompt": "For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\n\nintegrated_multimodal_description: [Shot 1]  live-action, static camera, video showing a  young girl sitting in a wooden chair at a beach house with a cocktail in her hand.\n[Shot 2] At 00:02.000, the shot cuts to drinking the cocktail empty\n[Shot 3] At 00:05.000, the shot cuts to says (S1) says in a childish slow voice: <d>[English] I like to drink cocktails, it makes me forgetting the mad hectic world of artificial intelligence. </d>\n[Shot 4] At 00:08.000, the shot cuts to she looks at the see and smiles.\n\noverall_soundscape: Background sound of gulls and the noise of the waves.\n\nnon_diegetic_music: N/A",
-        "width": 1344,
-        "height": 768,
-        "length": 73
-      },
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
       "id": 181,
       "type": "GetNode",
       "pos": [
-        -183.80494297762166,
-        4476.546641878388
+        -42.46208451852965,
+        4931.490381332543
       ],
       "size": [
         210,
@@ -478,15 +382,15 @@
       "id": 127,
       "type": "BasicGuider",
       "pos": [
-        -348.7756983983716,
-        4524.342472188378
+        -207.43283993927963,
+        4979.286211642533
       ],
       "size": [
         276.9283589387021,
         46
       ],
       "flags": {},
-      "order": 30,
+      "order": 36,
       "mode": 0,
       "inputs": [
         {
@@ -519,8 +423,8 @@
       "id": 130,
       "type": "RandomNoise",
       "pos": [
-        -346.3450552679147,
-        4618.6641800391735
+        -205.0021968088227,
+        5073.607919493328
       ],
       "size": [
         250.6223181430803,
@@ -557,15 +461,15 @@
       "id": 126,
       "type": "BasicScheduler",
       "pos": [
-        -349.28509120926816,
-        4762.285540099172
+        -207.94223275017617,
+        5217.229279553327
       ],
       "size": [
         298.0045143682428,
         121.69285702008074
       ],
       "flags": {},
-      "order": 18,
+      "order": 20,
       "mode": 0,
       "inputs": [
         {
@@ -603,8 +507,8 @@
       "id": 178,
       "type": "KSamplerSelect",
       "pos": [
-        -340.4804659947641,
-        4936.8371721517515
+        -199.1376075356721,
+        5391.780911605906
       ],
       "size": [
         270,
@@ -639,15 +543,15 @@
       "id": 135,
       "type": "SamplerCustomAdvanced",
       "pos": [
-        -339.15093284567416,
-        5048.806874741685
+        -197.80807438658218,
+        5503.750614195839
       ],
       "size": [
         381.3766333625467,
         154.68197103638886
       ],
       "flags": {},
-      "order": 32,
+      "order": 38,
       "mode": 0,
       "inputs": [
         {
@@ -701,8 +605,8 @@
       "id": 154,
       "type": "GetNode",
       "pos": [
-        13.719316673846947,
-        4478.006774722529
+        155.06217513293893,
+        4932.950514176684
       ],
       "size": [
         210,
@@ -741,8 +645,8 @@
       "id": 153,
       "type": "GetNode",
       "pos": [
-        193.05169982778716,
-        4480.625262645833
+        334.394558286879,
+        4935.569002099987
       ],
       "size": [
         210,
@@ -781,8 +685,8 @@
       "id": 124,
       "type": "VAEDecode",
       "pos": [
-        17.54788615244506,
-        4538.018802110864
+        158.89074461153706,
+        4992.962541565019
       ],
       "size": [
         230,
@@ -791,7 +695,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 34,
+      "order": 39,
       "mode": 0,
       "inputs": [
         {
@@ -824,8 +728,8 @@
       "id": 123,
       "type": "VAEDecodeAudio",
       "pos": [
-        22.025840923840295,
-        4658.4356596919915
+        163.36869938293228,
+        5113.379399146146
       ],
       "size": [
         230,
@@ -834,7 +738,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 35,
+      "order": 40,
       "mode": 0,
       "inputs": [
         {
@@ -867,15 +771,15 @@
       "id": 179,
       "type": "FastFilmGrain",
       "pos": [
-        291.1327980573913,
-        4542.969123037816
+        432.4756565164831,
+        4997.91286249197
       ],
       "size": [
         270,
         106
       ],
       "flags": {},
-      "order": 37,
+      "order": 41,
       "mode": 4,
       "inputs": [
         {
@@ -913,15 +817,15 @@
       "id": 131,
       "type": "CreateVideo",
       "pos": [
-        295.5689020746725,
-        4702.423744617997
+        436.9117605337643,
+        5157.3674840721515
       ],
       "size": [
         270,
         126
       ],
       "flags": {},
-      "order": 38,
+      "order": 42,
       "mode": 0,
       "inputs": [
         {
@@ -962,64 +866,18 @@
       "bgcolor": "#3f5159"
     },
     {
-      "id": 92,
-      "type": "SaveVideo",
-      "pos": [
-        768.3816877926749,
-        4455.047802011407
-      ],
-      "size": [
-        1030,
-        106
-      ],
-      "flags": {},
-      "order": 39,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "video",
-          "type": "VIDEO",
-          "link": 243
-        }
-      ],
-      "outputs": [
-        {
-          "name": "video",
-          "type": "VIDEO",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "SaveVideo"
-      },
-      "widgets_values": [
-        "video/MiniMax_H3",
-        "auto",
-        "auto",
-        "auto"
-      ],
-      "widgets_values_named": {
-        "filename_prefix": "video/MiniMax_H3",
-        "format": "auto",
-        "format.codec": "auto",
-        "codec": "auto"
-      },
-      "color": "#222",
-      "bgcolor": "#000"
-    },
-    {
       "id": 170,
       "type": "MiniMaxH3ScheduledSolAttentionPatch",
       "pos": [
-        -519.1705758216654,
-        3377.279423340983
+        -1009.906649272586,
+        3824.6481751011547
       ],
       "size": [
         382.6548828125,
         342
       ],
       "flags": {},
-      "order": 29,
+      "order": 31,
       "mode": 0,
       "inputs": [
         {
@@ -1080,8 +938,8 @@
       "id": 122,
       "type": "VAELoader",
       "pos": [
-        -1400.8032745708078,
-        3931.0836175732957
+        -1891.5393480217308,
+        4378.452369333467
       ],
       "size": [
         450.9357435456915,
@@ -1123,8 +981,8 @@
       "id": 150,
       "type": "SetNode",
       "pos": [
-        -912.7868831120229,
-        3957.2019674979674
+        -1403.5229565629454,
+        4404.5707192581385
       ],
       "size": [
         210,
@@ -1133,7 +991,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 20,
+      "order": 22,
       "mode": 0,
       "inputs": [
         {
@@ -1168,8 +1026,8 @@
       "id": 149,
       "type": "SetNode",
       "pos": [
-        -918.5807872608868,
-        3822.3556025512926
+        -1409.316860711809,
+        4269.724354311465
       ],
       "size": [
         210,
@@ -1178,7 +1036,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 25,
+      "order": 27,
       "mode": 0,
       "inputs": [
         {
@@ -1213,15 +1071,15 @@
       "id": 177,
       "type": "LoraLoaderModelOnly",
       "pos": [
-        -1229.3059099393683,
-        4089.3465307309234
+        -1720.0419833902913,
+        4536.715282491096
       ],
       "size": [
         270,
         82
       ],
       "flags": {},
-      "order": 31,
+      "order": 33,
       "mode": 0,
       "inputs": [
         {
@@ -1257,8 +1115,8 @@
       "id": 182,
       "type": "MarkdownNote",
       "pos": [
-        -1228.5924734262942,
-        4250.72259236485
+        -1719.3285468772171,
+        4698.091344125023
       ],
       "size": [
         245.8428741137484,
@@ -1283,8 +1141,8 @@
       "id": 146,
       "type": "SetNode",
       "pos": [
-        -446.66658302784543,
-        3862.7469826000734
+        -937.4026564787663,
+        4310.115734360246
       ],
       "size": [
         210,
@@ -1293,7 +1151,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 36,
+      "order": 37,
       "mode": 0,
       "inputs": [
         {
@@ -1328,15 +1186,15 @@
       "id": 163,
       "type": "Lora Loader (LoraManager)",
       "pos": [
-        -698.0734309331764,
-        3779.3135268751917
+        -1188.8095043840979,
+        4226.682278635364
       ],
       "size": [
         550.0952338952154,
         585.8718694029803
       ],
       "flags": {},
-      "order": 33,
+      "order": 35,
       "mode": 0,
       "inputs": [
         {
@@ -1412,8 +1270,8 @@
       "id": 114,
       "type": "LoadImage",
       "pos": [
-        -1405.6968605929358,
-        4514.231619894033
+        -1901.2944887975145,
+        4925.800655059744
       ],
       "size": [
         450,
@@ -1455,8 +1313,8 @@
       "id": 187,
       "type": "LoadImage",
       "pos": [
-        -1427.299516231525,
-        5580.246264056426
+        -1379.8868312441753,
+        4938.475988172954
       ],
       "size": [
         450,
@@ -1464,7 +1322,7 @@
       ],
       "flags": {},
       "order": 12,
-      "mode": 2,
+      "mode": 0,
       "inputs": [],
       "outputs": [
         {
@@ -1495,91 +1353,11 @@
       "bgcolor": "#000"
     },
     {
-      "id": 188,
-      "type": "ImageScaleToTotalPixelsX",
-      "pos": [
-        -1369.6925927082273,
-        6280.092290701797
-      ],
-      "size": [
-        306.5982421875,
-        214
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 22,
-      "mode": 2,
-      "inputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 323
-        },
-        {
-          "name": "width",
-          "shape": 7,
-          "type": "INT",
-          "link": null
-        },
-        {
-          "name": "height",
-          "shape": 7,
-          "type": "INT",
-          "link": null
-        },
-        {
-          "name": "megapixels",
-          "type": "FLOAT",
-          "widget": {
-            "name": "megapixels"
-          },
-          "link": 327
-        }
-      ],
-      "outputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "links": [
-            328
-          ]
-        },
-        {
-          "name": "width",
-          "type": "INT",
-          "links": []
-        },
-        {
-          "name": "height",
-          "type": "INT",
-          "links": []
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ImageScaleToTotalPixelsX"
-      },
-      "widgets_values": [
-        0.9,
-        32,
-        "crop",
-        "lanczos"
-      ],
-      "widgets_values_named": {
-        "megapixels": 0.9,
-        "multiple_of": 32,
-        "resize_mode": "crop",
-        "upscale_method": "lanczos"
-      },
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
       "id": 155,
       "type": "ImageScaleToTotalPixelsX",
       "pos": [
-        -1338.3484310134245,
-        5194.553714199206
+        -1833.9460592180033,
+        5606.122749364917
       ],
       "size": [
         306.5982421875,
@@ -1588,7 +1366,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 21,
+      "order": 23,
       "mode": 0,
       "inputs": [
         {
@@ -1622,7 +1400,8 @@
           "name": "image",
           "type": "IMAGE",
           "links": [
-            309
+            309,
+            335
           ]
         },
         {
@@ -1662,8 +1441,8 @@
       "id": 189,
       "type": "PrimitiveFloat",
       "pos": [
-        -1371.7923703078702,
-        5264.276411878442
+        -1867.389998512449,
+        5675.845447044152
       ],
       "size": [
         270,
@@ -1700,8 +1479,8 @@
       "id": 133,
       "type": "ComfyMathExpression",
       "pos": [
-        -1318.1097154693016,
-        5421.197930542977
+        -1813.7073436738804,
+        5832.766965708687
       ],
       "size": [
         360,
@@ -1710,7 +1489,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 23,
+      "order": 25,
       "mode": 0,
       "inputs": [
         {
@@ -1760,8 +1539,8 @@
       "id": 134,
       "type": "PrimitiveFloat",
       "pos": [
-        -1369.1301684556204,
-        5376.187398069119
+        -1864.7277966601991,
+        5787.756433234829
       ],
       "size": [
         270,
@@ -1794,45 +1573,18 @@
       "bgcolor": "#335"
     },
     {
-      "id": 118,
-      "type": "MarkdownNote",
-      "pos": [
-        -1756.5184540755602,
-        4955.890011942242
-      ],
-      "size": [
-        300,
-        520
-      ],
-      "flags": {},
-      "order": 15,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "title": "Note: Size Settings Reference",
-      "properties": {},
-      "widgets_values": [
-        "| megapixels | Aspect | Output (multiple=32) |\n|---|---|---|\n| 0.2 | 16:9 | 608 x 352 |\n| 0.3 | 16:9 | 736 x 416 |\n| 0.4 | 16:9 | 864 x 480 |\n| 0.5 | 16:9 | 960 x 544 |\n| 0.6 | 16:9 | 1056 x 608 |\n| 0.7 | 16:9 | 1152 x 640 |\n| 0.8 | 16:9 | 1216 x 672 |\n| 0.9 | 16:9 | 1280 x 736 |\n| 0.98 | 16:9 | 1344 x 768 |\n| 1.0 | 16:9 | 1376 x 768 |\n| 1.2 | 16:9 | 1504 x 832 |\n| 1.5 | 16:9 | 1664 x 928 |\n| 1.8 | 16:9 | 1824 x 1024 |\n| 2.0 | 16:9 | 1920 x 1088 |\n"
-      ],
-      "widgets_values_named": {
-        "text": "| megapixels | Aspect | Output (multiple=32) |\n|---|---|---|\n| 0.2 | 16:9 | 608 x 352 |\n| 0.3 | 16:9 | 736 x 416 |\n| 0.4 | 16:9 | 864 x 480 |\n| 0.5 | 16:9 | 960 x 544 |\n| 0.6 | 16:9 | 1056 x 608 |\n| 0.7 | 16:9 | 1152 x 640 |\n| 0.8 | 16:9 | 1216 x 672 |\n| 0.9 | 16:9 | 1280 x 736 |\n| 0.98 | 16:9 | 1344 x 768 |\n| 1.0 | 16:9 | 1376 x 768 |\n| 1.2 | 16:9 | 1504 x 832 |\n| 1.5 | 16:9 | 1664 x 928 |\n| 1.8 | 16:9 | 1824 x 1024 |\n| 2.0 | 16:9 | 1920 x 1088 |\n"
-      },
-      "color": "#222",
-      "bgcolor": "#000"
-    },
-    {
       "id": 183,
       "type": "ModelPreviewOverrideKJ",
       "pos": [
-        87.86432409476309,
-        4934.831444512538
+        229.2071825538549,
+        5389.775183966693
       ],
       "size": [
         568.1474423901889,
         660.7650894509816
       ],
       "flags": {},
-      "order": 28,
+      "order": 30,
       "mode": 0,
       "inputs": [
         {
@@ -1898,15 +1650,15 @@
       "id": 129,
       "type": "CLIPLoader",
       "pos": [
-        -1404.1820166138632,
-        3615.1746018082044
+        -1894.9180900647862,
+        4062.543353568376
       ],
       "size": [
         436.9742503927346,
         106
       ],
       "flags": {},
-      "order": 16,
+      "order": 15,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1945,15 +1697,15 @@
       "id": 121,
       "type": "VAELoader",
       "pos": [
-        -1397.7545321938474,
-        3801.583949144601
+        -1888.4906056447703,
+        4248.952700904773
       ],
       "size": [
         447.868299893968,
         58
       ],
       "flags": {},
-      "order": 17,
+      "order": 16,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1980,6 +1732,474 @@
       ],
       "widgets_values_named": {
         "vae_name": "minimax_h3_video_vae_fp16.safetensors"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 132,
+      "type": "MiniMaxH3ImageToVideo",
+      "pos": [
+        -851.7094223771143,
+        4996.240742054376
+      ],
+      "size": [
+        423.76408149194936,
+        220
+      ],
+      "flags": {},
+      "order": 34,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 279
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 280
+        },
+        {
+          "name": "first_frame",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 309
+        },
+        {
+          "name": "last_frame",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 328
+        },
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 334
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 285
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 286
+        },
+        {
+          "name": "length",
+          "type": "INT",
+          "widget": {
+            "name": "length"
+          },
+          "link": 245
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            238
+          ]
+        },
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            236
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MiniMaxH3ImageToVideo"
+      },
+      "widgets_values": [
+        "For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\n\nintegrated_multimodal_description: [Shot 1]  live-action, static camera, video showing a  young girl sitting in a wooden chair at a beach house with a cocktail in her hand.\n[Shot 2] At 00:02.000, the shot cuts to drinking the cocktail empty\n[Shot 3] At 00:05.000, the shot cuts to says (S1) says in a childish slow voice: <d>[English] I like to drink cocktails, it makes me forgetting the mad hectic world of artificial intelligence. </d>\n[Shot 4] At 00:08.000, the shot cuts to she looks at the see and smiles.\n\noverall_soundscape: Background sound of gulls and the noise of the waves.\n\nnon_diegetic_music: N/A",
+        1344,
+        768,
+        73
+      ],
+      "widgets_values_named": {
+        "prompt": "For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\n\nintegrated_multimodal_description: [Shot 1]  live-action, static camera, video showing a  young girl sitting in a wooden chair at a beach house with a cocktail in her hand.\n[Shot 2] At 00:02.000, the shot cuts to drinking the cocktail empty\n[Shot 3] At 00:05.000, the shot cuts to says (S1) says in a childish slow voice: <d>[English] I like to drink cocktails, it makes me forgetting the mad hectic world of artificial intelligence. </d>\n[Shot 4] At 00:08.000, the shot cuts to she looks at the see and smiles.\n\noverall_soundscape: Background sound of gulls and the noise of the waves.\n\nnon_diegetic_music: N/A",
+        "width": 1344,
+        "height": 768,
+        "length": 73
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 192,
+      "type": "PreviewAny",
+      "pos": [
+        -844.6947540837239,
+        5701.120743349382
+      ],
+      "size": [
+        542.0614414161009,
+        338.6973653080504
+      ],
+      "flags": {},
+      "order": 32,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 333
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            334
+          ]
+        }
+      ],
+      "title": "Final prompt",
+      "properties": {
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": [],
+      "widgets_values_named": {},
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 190,
+      "type": "QwenH3PromptLocal",
+      "pos": [
+        -836.594701655848,
+        6113.3243947639285
+      ],
+      "size": [
+        533.6464039738464,
+        645.9776574671023
+      ],
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "reference_images.reference_image_0",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 335
+        },
+        {
+          "name": "reference_images.reference_image_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 336
+        },
+        {
+          "name": "reference_images.reference_image_2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "reference_videos.reference_video_0",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 331
+        }
+      ],
+      "outputs": [
+        {
+          "name": "h3_prompt",
+          "type": "STRING",
+          "links": [
+            333
+          ]
+        },
+        {
+          "name": "selected_skill",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "detected_mode",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "QwenH3PromptLocal"
+      },
+      "widgets_values": [
+        "Describe the video or production task.",
+        "h3-prompt-writing",
+        10,
+        "qwen3.8-27b-uncensored-fp8-q4_k_m.gguf",
+        "mmproj-F16.gguf",
+        false,
+        "medium",
+        0,
+        "randomize",
+        8192,
+        2,
+        true,
+        "uncensored fidelity QWEN",
+        3,
+        "",
+        "FL2VA"
+      ],
+      "widgets_values_named": {
+        "prompt": "Describe the video or production task.",
+        "skill": "h3-prompt-writing",
+        "duration": 10,
+        "llm_model": "qwen3.8-27b-uncensored-fp8-q4_k_m.gguf",
+        "vision_model": "mmproj-F16.gguf",
+        "think_mode": false,
+        "reasoning_effort": "medium",
+        "seed": 0,
+        "control_after_generate": "randomize",
+        "max_tokens": 8192,
+        "video_sample_frames_per_sec": 2,
+        "force_unload_model": true,
+        "prompt_profile": "uncensored fidelity QWEN",
+        "shot_count": 3,
+        "additional_system_instructions": "",
+        "h3_model_mode": "FL2VA"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 118,
+      "type": "MarkdownNote",
+      "pos": [
+        -2250.401302816132,
+        4889.010063966241
+      ],
+      "size": [
+        300,
+        520
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Note: Size Settings Reference",
+      "properties": {},
+      "widgets_values": [
+        "| megapixels | Aspect | Output (multiple=32) |\n|---|---|---|\n| 0.2 | 16:9 | 608 x 352 |\n| 0.3 | 16:9 | 736 x 416 |\n| 0.4 | 16:9 | 864 x 480 |\n| 0.5 | 16:9 | 960 x 544 |\n| 0.6 | 16:9 | 1056 x 608 |\n| 0.7 | 16:9 | 1152 x 640 |\n| 0.8 | 16:9 | 1216 x 672 |\n| 0.9 | 16:9 | 1280 x 736 |\n| 0.98 | 16:9 | 1344 x 768 |\n| 1.0 | 16:9 | 1376 x 768 |\n| 1.2 | 16:9 | 1504 x 832 |\n| 1.5 | 16:9 | 1664 x 928 |\n| 1.8 | 16:9 | 1824 x 1024 |\n| 2.0 | 16:9 | 1920 x 1088 |\n"
+      ],
+      "widgets_values_named": {
+        "text": "| megapixels | Aspect | Output (multiple=32) |\n|---|---|---|\n| 0.2 | 16:9 | 608 x 352 |\n| 0.3 | 16:9 | 736 x 416 |\n| 0.4 | 16:9 | 864 x 480 |\n| 0.5 | 16:9 | 960 x 544 |\n| 0.6 | 16:9 | 1056 x 608 |\n| 0.7 | 16:9 | 1152 x 640 |\n| 0.8 | 16:9 | 1216 x 672 |\n| 0.9 | 16:9 | 1280 x 736 |\n| 0.98 | 16:9 | 1344 x 768 |\n| 1.0 | 16:9 | 1376 x 768 |\n| 1.2 | 16:9 | 1504 x 832 |\n| 1.5 | 16:9 | 1664 x 928 |\n| 1.8 | 16:9 | 1824 x 1024 |\n| 2.0 | 16:9 | 1920 x 1088 |\n"
+      },
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 191,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        -856.5749353281142,
+        5272.402966481858
+      ],
+      "size": [
+        565.0952080445775,
+        362.13328650805033
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            331
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        "Girl walking on beach"
+      ],
+      "widgets_values_named": {
+        "value": "Girl walking on beach"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 188,
+      "type": "ImageScaleToTotalPixelsX",
+      "pos": [
+        -1301.7374326088004,
+        5615.497081169444
+      ],
+      "size": [
+        306.5982421875,
+        214
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 323
+        },
+        {
+          "name": "width",
+          "shape": 7,
+          "type": "INT",
+          "link": null
+        },
+        {
+          "name": "height",
+          "shape": 7,
+          "type": "INT",
+          "link": null
+        },
+        {
+          "name": "megapixels",
+          "type": "FLOAT",
+          "widget": {
+            "name": "megapixels"
+          },
+          "link": 327
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            328,
+            336
+          ]
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": []
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageScaleToTotalPixelsX"
+      },
+      "widgets_values": [
+        0.9,
+        32,
+        "crop",
+        "lanczos"
+      ],
+      "widgets_values_named": {
+        "megapixels": 0.9,
+        "multiple_of": 32,
+        "resize_mode": "crop",
+        "upscale_method": "lanczos"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 92,
+      "type": "SaveVideo",
+      "pos": [
+        934.700257495201,
+        4936.266089471327
+      ],
+      "size": [
+        1030,
+        106
+      ],
+      "flags": {},
+      "order": 43,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 243
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SaveVideo"
+      },
+      "widgets_values": [
+        "video/MiniMax_H3",
+        "auto",
+        "auto",
+        "auto"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "video/MiniMax_H3",
+        "format": "auto",
+        "format.codec": "auto",
+        "codec": "auto"
+      },
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 193,
+      "type": "MarkdownNote",
+      "pos": [
+        -2587.1465415153593,
+        4345.320434465664
+      ],
+      "size": [
+        624.1562801771461,
+        462.0221664423325
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "# RunPod templates\n\nMiniMax H3 FL2VA and Ref2VA each have two RunPod templates:\n\n- **Standard:** Manual provision prompt enhancer used by this workflow\n- **Plus QWEN prompt enhancer:** provisions the local Qwen3.8 GGUF prompt enhancer used by this workflow.\n\n## FL2VA\n\n- [Deploy MiniMax H3 FL2VA](https://console.runpod.io/deploy?template=v7b5g03csk&ref=se4tkc5o)\n- [Deploy MiniMax H3 FL2VA plus prompt enhancer](https://console.runpod.io/hub/template/a1nkufhzxq?ref=se4tkc5o)\n\n## Ref2VA\n\n- [Deploy MiniMax H3 Ref2VA](https://console.runpod.io/deploy?template=6qtfx7lxgc&ref=se4tkc5o)\n- [Deploy MiniMax H3 Ref2VA plus prompt enhancer](https://console.runpod.io/hub/template/pcsqepl6kt?ref=se4tkc5o)\n\n# Manual Qwen3.8 prompt-enhancer download\n\nThe **plus prompt enhancer** template provisions these files automatically. For manual installation:\n\n```bash\nmkdir -p /workspace/ComfyUI/models/LLM/Qwen3.8\n\nhf download theresa00l/Qwen3.8-27B-Uncensored-FP8-Q4_K_M-GGUF \\\n  qwen3.8-27b-uncensored-fp8-q4_k_m.gguf \\\n  --local-dir /workspace/ComfyUI/models/LLM/Qwen3.8\n\nhf download unsloth/Qwen3.8-27B-GGUF \\\n  mmproj-F16.gguf \\\n  --local-dir /workspace/ComfyUI/models/LLM/Qwen3.8\n```\n\nRefresh (press r) after downloading.\n"
+      ],
+      "widgets_values_named": {
+        "text": "# RunPod templates\n\nMiniMax H3 FL2VA and Ref2VA each have two RunPod templates:\n\n- **Standard:** Manual provision prompt enhancer used by this workflow\n- **Plus QWEN prompt enhancer:** provisions the local Qwen3.8 GGUF prompt enhancer used by this workflow.\n\n## FL2VA\n\n- [Deploy MiniMax H3 FL2VA](https://console.runpod.io/deploy?template=v7b5g03csk&ref=se4tkc5o)\n- [Deploy MiniMax H3 FL2VA plus prompt enhancer](https://console.runpod.io/hub/template/a1nkufhzxq?ref=se4tkc5o)\n\n## Ref2VA\n\n- [Deploy MiniMax H3 Ref2VA](https://console.runpod.io/deploy?template=6qtfx7lxgc&ref=se4tkc5o)\n- [Deploy MiniMax H3 Ref2VA plus prompt enhancer](https://console.runpod.io/hub/template/pcsqepl6kt?ref=se4tkc5o)\n\n# Manual Qwen3.8 prompt-enhancer download\n\nThe **plus prompt enhancer** template provisions these files automatically. For manual installation:\n\n```bash\nmkdir -p /workspace/ComfyUI/models/LLM/Qwen3.8\n\nhf download theresa00l/Qwen3.8-27B-Uncensored-FP8-Q4_K_M-GGUF \\\n  qwen3.8-27b-uncensored-fp8-q4_k_m.gguf \\\n  --local-dir /workspace/ComfyUI/models/LLM/Qwen3.8\n\nhf download unsloth/Qwen3.8-27B-GGUF \\\n  mmproj-F16.gguf \\\n  --local-dir /workspace/ComfyUI/models/LLM/Qwen3.8\n```\n\nRefresh (press r) after downloading.\n"
       },
       "color": "#432",
       "bgcolor": "#653"
@@ -2047,7 +2267,7 @@
       133,
       1,
       132,
-      6,
+      7,
       "INT"
     ],
     [
@@ -2151,7 +2371,7 @@
       155,
       1,
       132,
-      4,
+      5,
       "INT"
     ],
     [
@@ -2159,7 +2379,7 @@
       155,
       2,
       132,
-      5,
+      6,
       "INT"
     ],
     [
@@ -2305,6 +2525,46 @@
       183,
       0,
       "MODEL"
+    ],
+    [
+      331,
+      191,
+      0,
+      190,
+      4,
+      "STRING"
+    ],
+    [
+      333,
+      190,
+      0,
+      192,
+      0,
+      "STRING"
+    ],
+    [
+      334,
+      192,
+      0,
+      132,
+      4,
+      "STRING"
+    ],
+    [
+      335,
+      155,
+      0,
+      190,
+      0,
+      "IMAGE"
+    ],
+    [
+      336,
+      188,
+      0,
+      190,
+      1,
+      "IMAGE"
     ]
   ],
   "groups": [
@@ -2312,8 +2572,8 @@
       "id": 5,
       "title": "FirstImage",
       "bounding": [
-        -1427.5073691083687,
-        4439.562283626479,
+        -1923.1049973129475,
+        4851.13131879219,
         490.51867775490484,
         1034.7353608609656
       ],
@@ -2324,8 +2584,8 @@
       "id": 1,
       "title": "Models",
       "bounding": [
-        -1426.9815090193463,
-        3287.1835282849343,
+        -1917.7175824702692,
+        3734.552280045106,
         1329.0409684310832,
         1098.2847317132973
       ],
@@ -2336,8 +2596,8 @@
       "id": 2,
       "title": "Sampling",
       "bounding": [
-        -377.3680356572623,
-        4397.851500769317,
+        -236.0251771981703,
+        4852.795240223471,
         1072.9394050584265,
         1235.4422698080407
       ],
@@ -2348,10 +2608,10 @@
       "id": 3,
       "title": "Conditioning",
       "bounding": [
-        -890.4567474385644,
-        4850.9098628148195,
-        480,
-        719.8274372951018
+        -880.1675473174203,
+        4849.194952516536,
+        611.9776343556091,
+        1940.6622741620595
       ],
       "color": "#3f789e",
       "flags": {}
@@ -2360,10 +2620,10 @@
       "id": 6,
       "title": "LastImage",
       "bounding": [
-        -1438.8298911986635,
-        5496.712888095266,
-        507.6347008398993,
-        832.9206898500797
+        -1391.4172062113137,
+        4854.942612211794,
+        491.65731694185297,
+        782.7059054787132
       ],
       "color": "#3f789e",
       "flags": {}
@@ -2372,10 +2632,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.5644739300537777,
+      "scale": 0.513158118230707,
       "offset": [
-        1847.5030463104465,
-        -3159.260438940174
+        3372.3077667378084,
+        -3628.9049009670853
       ]
     },
     "frontendVersion": "1.51.10",
@@ -2386,6 +2646,7 @@
   },
   "version": 0.4,
   "seed_widgets": {
-    "130": 0
+    "130": 0,
+    "190": 7
   }
 }
