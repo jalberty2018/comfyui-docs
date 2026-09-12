@@ -202,7 +202,10 @@ Preview generated video and audio inside the workflow before exporting the resul
 
 ## Output examples
 
-The following clips show the output of the standard and advanced workflows.
+- The clips below demonstrate output from the standard and advanced workflows available on the pod.
+- Video and audio are generated directly by the model.
+- Person reference images were generated using [Krea-2](ComfyUI_image.md).
+- Animation reference characters (Elsa, Anna, Ken, Barbie) used for workflow demonstration purpose only.
 
 <a id="ref2va_1"></a>
 
@@ -264,6 +267,18 @@ The following clips show the output of the standard and advanced workflows.
 <div style="text-align: center;">
   <video controls preload="metadata" style="width: 100%; max-width: 720px; height: auto;">
     <source src="/video/Video_minimax_slow.mp4" type="video/mp4">
+  </video>
+</div>
+
+### ref2va + QWEN VL prompt enhancer
+
+- Original prompt: "Person from image 1 kisses person of image 2 on a beach while carressing each other.
+Imtimate scene full of sensuality in a provoking pose".
+- [Final prompt](images/ai-generated-MiniMax-preview.jpg)
+
+<div style="text-align: center;">
+  <video controls preload="metadata" style="width: 100%; max-width: 720px; height: auto;">
+    <source src="/video/qwenvl-prompt-enhancer.mp4" type="video/mp4">
   </video>
 </div>
 
