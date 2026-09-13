@@ -14,7 +14,7 @@
 | Triton    | `3.6.0`               |
 | onnxruntime-gpu | `1.22.0`        |
 | Native llama.cpp | `b10218` |
-| ComfyUI   | `0.34.0`              |
+| ComfyUI   | `0.35.0`              |
 | Code Server | `latest`            |
 
 ## Wheels

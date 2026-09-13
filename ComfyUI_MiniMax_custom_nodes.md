@@ -20,7 +20,7 @@
 - [Resolution Master](https://github.com/Azornes/Comfyui-Resolution-Master)
 - [ComfyUI Essentials](https://github.com/cubiq/ComfyUI_essentials)
 - [Scale Image to Total Pixels Advanced](https://github.com/BigStationW/ComfyUi-Scale-Image-to-Total-Pixels-Advanced)
-- [comfyui-obvpm](https://github.com/obvpm/comfyui-obvpm)
+- [comfyui-obvpm](https://github.com/chanon/comfyui-obvpm)
 - [ComfyUI-MiniMaxH3-Preview](https://github.com/Brioch/ComfyUI-MiniMaxH3-Preview)
 
 ### Loaders/linkers

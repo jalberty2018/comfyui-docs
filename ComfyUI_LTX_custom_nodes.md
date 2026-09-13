@@ -19,7 +19,7 @@
 - [Prompt Relay Encode](https://github.com/kijai/ComfyUI-PromptRelay.git)
 - [10S](https://github.com/TenStrip/10S-Comfy-nodes)
 - [WhatDreamsCost](https://github.com/WhatDreamsCost/WhatDreamsCost-ComfyUI)
-- [comfyui-obvpm](https://github.com/obvpm/comfyui-obvpm)
+- [comfyui-obvpm](https://github.com/chanon/comfyui-obvpm)
 
 ### Downloaders/Linkers
 

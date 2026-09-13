@@ -106,7 +106,9 @@ Use SDPose with Body Ratio Mapper when the transferred movement also needs propo
 
 ## Output examples
 
-The following clips show the output of the standard LTX-2.5 workflows.
+- The following clips show the output of the standard LTX-2.5 workflows.
+- Video and audio are generated directly by the model.
+- Person reference images were generated using [Krea-2](ComfyUI_image.md).
 
 <a id="i2v-ltx25"></a>
 

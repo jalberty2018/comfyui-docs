@@ -9,7 +9,7 @@
 - [KJNodes](https://github.com/kijai/ComfyUI-KJNodes)
 - [StringEssentials](https://github.com/bradsec/ComfyUI_StringEssentials.git)
 - [Easy-Use](https://github.com/yolain/ComfyUI-Easy-Use.git)
-- [comfyui-obvpm](https://github.com/obvpm/comfyui-obvpm)
+- [comfyui-obvpm](https://github.com/chanon/comfyui-obvpm)
 
 ### Downloaders/Linkers
 

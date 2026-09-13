@@ -17,7 +17,7 @@
 
 - ComfyUI 0.34.0
 - Added native llama-cpp to image2 with CUDA support
-- [comfyui-obvpm](https://github.com/obvpm/comfyui-obvpm)
+- [comfyui-obvpm](https://github.com/chanon/comfyui-obvpm)
 - [ComfyUI-CyberKrea-Sampler](https://github.com/cyberdeliaAI/ComfyUI-CyberKrea-Sampler)
 
 ## 12082026 image2
