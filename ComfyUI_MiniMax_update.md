@@ -12,7 +12,8 @@
 
 - ComfyUI 0.35.0
 - Updated workflow templates.
-- Tail is an optional download
+- Tail is an optional download.
+- Switched Blackwell HVRAM diffusion models to standard INT8 ConvRot for better compatibility.
 
 ## 08092026
 

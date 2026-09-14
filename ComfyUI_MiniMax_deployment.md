@@ -56,7 +56,7 @@ MiniMax H3 model files are large and depend on ComfyUI offloading. Check the sel
 | RTX 3090/4090, 24 GB VRAM | 50 GB | Pruned INT8 ConvRot | Lowest-cost compatible option |
 | RTX 5090, 32 GB VRAM | 70 GB | Pruned INT8 ConvRot | Low-VRAM Blackwell option |
 | L40S, 48 GB VRAM | 80 GB | Full INT8 ConvRot | Higher quality and longer video |
-| RTX PRO 6000, 96 GB VRAM | 70 GB | Full MXFP8 | Maximum tested quality and speed |
+| RTX PRO 6000, 96 GB VRAM | 70 GB | Full INT8 ConvRot | Maximum tested quality and speed |
 
 Resolution, duration and concurrent model loading can increase both VRAM and system RAM use. See [MiniMax hardware requirements](ComfyUI_MiniMax_hardware.md) for the tested output limits.
 
