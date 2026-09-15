@@ -1,36 +1,9 @@
 {
   "id": "e3f2b845-8f2c-4b5a-9caf-eac1029d3e7e",
   "revision": 0,
-  "last_node_id": 186,
-  "last_link_id": 330,
+  "last_node_id": 201,
+  "last_link_id": 344,
   "nodes": [
-{
-  "id": 186,
-  "type": "MarkdownNote",
-  "pos": [
-    -2405.348646111502,
-    3785.936477956446
-  ],
-  "size": [
-    600,
-    520
-  ],
-  "flags": {},
-  "order": 0,
-  "mode": 0,
-  "inputs": [],
-  "outputs": [],
-  "title": "Guide: Purpose and use",
-  "properties": {},
-  "widgets_values": [
-    "# Text-to-video - PDD Acc\n\n## Purpose\nGenerate video and native audio from a written scene description.\n\n## Use\n1. Write the scene, subjects, motion and desired audio in the prompt.\n2. Set output size, duration and seed.\n3. Run the workflow and review the video and audio.\n\nWorkflow: PDD-Acc-t2v-pod.json"
-  ],
-  "widgets_values_named": {
-    "text": "# Text-to-video - PDD Acc\n\n## Purpose\nGenerate video and native audio from a written scene description.\n\n## Use\n1. Write the scene, subjects, motion and desired audio in the prompt.\n2. Set output size, duration and seed.\n3. Run the workflow and review the video and audio.\n\nWorkflow: PDD-Acc-t2v-pod.json"
-  },
-  "color": "#234",
-  "bgcolor": "#345"
-},
     {
       "id": 151,
       "type": "GetNode",
@@ -123,7 +96,7 @@
         46
       ],
       "flags": {},
-      "order": 23,
+      "order": 24,
       "mode": 0,
       "inputs": [
         {
@@ -204,7 +177,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 14,
+      "order": 15,
       "mode": 0,
       "inputs": [
         {
@@ -288,208 +261,6 @@
       "bgcolor": "#335"
     },
     {
-      "id": 157,
-      "type": "PathchSageAttentionKJ",
-      "pos": [
-        -1375.0318722784916,
-        3789.4364425536774
-      ],
-      "size": [
-        224.23999328613309,
-        82
-      ],
-      "flags": {},
-      "order": 16,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 287
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            289
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "PathchSageAttentionKJ"
-      },
-      "widgets_values": [
-        "auto",
-        false
-      ],
-      "widgets_values_named": {
-        "sage_attention": "auto",
-        "allow_compile": false
-      },
-      "color": "#2a363b",
-      "bgcolor": "#3f5159"
-    },
-    {
-      "id": 141,
-      "type": "MiniMaxH3SigmaShift",
-      "pos": [
-        -1121.0218145740043,
-        3786.06766404247
-      ],
-      "size": [
-        240.9599731445312,
-        82
-      ],
-      "flags": {},
-      "order": 22,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 289
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            324
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "MiniMaxH3SigmaShift"
-      },
-      "widgets_values": [
-        12,
-        3
-      ],
-      "widgets_values_named": {
-        "shift_video": 12,
-        "shift_audio": 3
-      },
-      "color": "#323",
-      "bgcolor": "#535"
-    },
-    {
-      "id": 170,
-      "type": "MiniMaxH3ScheduledSolAttentionPatch",
-      "pos": [
-        -840.1690485424149,
-        3797.235130416385
-      ],
-      "size": [
-        382.6548828125,
-        342
-      ],
-      "flags": {},
-      "order": 24,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 324
-        }
-      ],
-      "outputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "links": [
-            325
-          ]
-        },
-        {
-          "name": "tau_graph",
-          "type": "IMAGE",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "MiniMaxH3ScheduledSolAttentionPatch"
-      },
-      "widgets_values": [
-        true,
-        1.3,
-        0.8,
-        "linear",
-        4096,
-        false,
-        0,
-        "diag",
-        false,
-        false,
-        "exact_kv",
-        "0,-1"
-      ],
-      "widgets_values_named": {
-        "enabled": true,
-        "tau_start": 1.3,
-        "tau_end": 0.8,
-        "curve": "linear",
-        "min_tokens": 4096,
-        "strict": false,
-        "dense_percent": 0,
-        "thresh_type": "diag",
-        "int8_qk": false,
-        "int8_pv": false,
-        "sink_conditioning": "exact_kv",
-        "dense_blocks": "0,-1"
-      },
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
-      "id": 146,
-      "type": "SetNode",
-      "pos": [
-        -747.7386456019898,
-        4280.3789351214655
-      ],
-      "size": [
-        210,
-        60
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 29,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "link": 293
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": null
-        }
-      ],
-      "title": "Set_MODEL",
-      "properties": {
-        "Node name for S&R": "SetNode",
-        "aux_id": "kijai/ComfyUI-KJNodes",
-        "previousName": "MODEL"
-      },
-      "widgets_values": [
-        "MODEL"
-      ],
-      "widgets_values_named": {
-        "Constant": "MODEL"
-      },
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
       "id": 135,
       "type": "SamplerCustomAdvanced",
       "pos": [
@@ -503,7 +274,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 25,
+      "order": 26,
       "mode": 0,
       "inputs": [
         {
@@ -594,59 +365,6 @@
       "bgcolor": "#335"
     },
     {
-      "id": 139,
-      "type": "DiffusionModelLoaderKJ",
-      "pos": [
-        -1724.768406656012,
-        3785.936477956446
-      ],
-      "size": [
-        312.095703125,
-        178
-      ],
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "extra_state_dict",
-          "shape": 7,
-          "type": "STRING",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            287
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "DiffusionModelLoaderKJ"
-      },
-      "widgets_values": [
-        "minimax_h3_fl2va_pruned_int8_convrot.safetensors",
-        "default",
-        "default",
-        true,
-        "disabled",
-        true
-      ],
-      "widgets_values_named": {
-        "model_name": "minimax_h3_fl2va_pruned_int8_convrot.safetensors",
-        "weight_dtype": "default",
-        "compute_dtype": "default",
-        "patch_cublaslinear": true,
-        "sage_attention": "disabled",
-        "enable_fp16_accumulation": true
-      },
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
       "id": 185,
       "type": "MiniMaxH3PDDAccApply",
       "pos": [
@@ -658,7 +376,7 @@
         266
       ],
       "flags": {},
-      "order": 15,
+      "order": 16,
       "mode": 0,
       "inputs": [
         {
@@ -732,7 +450,7 @@
         550
       ],
       "flags": {},
-      "order": 20,
+      "order": 21,
       "mode": 0,
       "inputs": [
         {
@@ -828,7 +546,7 @@
         150
       ],
       "flags": {},
-      "order": 6,
+      "order": 5,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -864,90 +582,6 @@
       "bgcolor": "#353"
     },
     {
-      "id": 163,
-      "type": "Lora Loader (LoraManager)",
-      "pos": [
-        -1052.2278205693112,
-        4210.604641707094
-      ],
-      "size": [
-        550.0952338952154,
-        585.8718694029803
-      ],
-      "flags": {},
-      "order": 26,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 325
-        },
-        {
-          "name": "clip",
-          "shape": 7,
-          "type": "CLIP",
-          "link": null
-        },
-        {
-          "name": "lora_stack",
-          "shape": 7,
-          "type": "LORA_STACK",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            293
-          ]
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": null
-        },
-        {
-          "name": "trigger_words",
-          "type": "STRING",
-          "links": null
-        },
-        {
-          "name": "loaded_loras",
-          "type": "STRING",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "Lora Loader (LoraManager)",
-        "__lm_widget_ids": [
-          "__lm_autocomplete_meta_text",
-          "text",
-          "loras"
-        ]
-      },
-      "widgets_values": [
-        {
-          "version": 1,
-          "textWidgetName": "text"
-        },
-        "",
-        []
-      ],
-      "widgets_values_named": {
-        "__lm_autocomplete_meta_text": {
-          "version": 1,
-          "textWidgetName": "text"
-        },
-        "text": "",
-        "loras": []
-      },
-      "color": "#323",
-      "bgcolor": "#535"
-    },
-    {
       "id": 154,
       "type": "GetNode",
       "pos": [
@@ -961,7 +595,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 7,
+      "order": 6,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1001,7 +635,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 8,
+      "order": 7,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1042,7 +676,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 27,
+      "order": 28,
       "mode": 0,
       "inputs": [
         {
@@ -1085,7 +719,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 28,
+      "order": 29,
       "mode": 0,
       "inputs": [
         {
@@ -1126,7 +760,7 @@
         922.2555007786796
       ],
       "flags": {},
-      "order": 21,
+      "order": 22,
       "mode": 0,
       "inputs": [
         {
@@ -1200,7 +834,7 @@
         58
       ],
       "flags": {},
-      "order": 9,
+      "order": 8,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1236,7 +870,7 @@
         106
       ],
       "flags": {},
-      "order": 30,
+      "order": 31,
       "mode": 4,
       "inputs": [
         {
@@ -1282,7 +916,7 @@
         126
       ],
       "flags": {},
-      "order": 31,
+      "order": 33,
       "mode": 0,
       "inputs": [
         {
@@ -1334,7 +968,7 @@
         106
       ],
       "flags": {},
-      "order": 32,
+      "order": 35,
       "mode": 0,
       "inputs": [
         {
@@ -1380,7 +1014,7 @@
         520
       ],
       "flags": {},
-      "order": 10,
+      "order": 9,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -1396,14 +1030,61 @@
       "bgcolor": "#000"
     },
     {
-      "id": 122,
-      "type": "VAELoader",
+      "id": 188,
+      "type": "CLIPLoader",
       "pos": [
-        -1725.3486461115021,
-        4378.115082967972
+        -2434.474506122808,
+        4072.759249475466
       ],
       "size": [
-        450.9357435456915,
+        436.9742503927346,
+        106
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            334
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPLoader",
+        "models": [
+          {
+            "name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/text_encoders/qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+            "directory": "text_encoders"
+          }
+        ]
+      },
+      "widgets_values": [
+        "qwen3vl_32b_h3_ultra_uncensored_heretic_int8_convrot.safetensors",
+        "minimax",
+        "default"
+      ],
+      "widgets_values_named": {
+        "clip_name": "qwen3vl_32b_h3_ultra_uncensored_heretic_int8_convrot.safetensors",
+        "type": "minimax",
+        "device": "default"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 189,
+      "type": "VAELoader",
+      "pos": [
+        -2430.8815841792934,
+        4274.474812487712
+      ],
+      "size": [
+        447.868299893968,
         58
       ],
       "flags": {},
@@ -1415,10 +1096,55 @@
           "name": "VAE",
           "type": "VAE",
           "links": [
-            278
+            333
           ]
         }
       ],
+      "title": "Load VAE video",
+      "properties": {
+        "Node name for S&R": "VAELoader",
+        "models": [
+          {
+            "name": "minimax_h3_video_vae_fp16.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_video_vae_fp16.safetensors",
+            "directory": "vae"
+          }
+        ]
+      },
+      "widgets_values": [
+        "minimax_h3_video_vae_fp16.safetensors"
+      ],
+      "widgets_values_named": {
+        "vae_name": "minimax_h3_video_vae_fp16.safetensors"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 190,
+      "type": "VAELoader",
+      "pos": [
+        -2431.095764079753,
+        4451.027234066065
+      ],
+      "size": [
+        450.9357435456915,
+        58
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            332
+          ]
+        }
+      ],
+      "title": "Load VAE audio",
       "properties": {
         "Node name for S&R": "VAELoader",
         "models": [
@@ -1439,26 +1165,26 @@
       "bgcolor": "#653"
     },
     {
-      "id": 150,
+      "id": 191,
       "type": "SetNode",
       "pos": [
-        -1228.8851166950278,
-        4407.764553279535
+        -1920.4035215739705,
+        4478.562973356489
       ],
       "size": [
         210,
-        60
+        34
       ],
       "flags": {
         "collapsed": true
       },
-      "order": 17,
+      "order": 19,
       "mode": 0,
       "inputs": [
         {
           "name": "VAE",
           "type": "VAE",
-          "link": 278
+          "link": 332
         }
       ],
       "outputs": [
@@ -1484,58 +1210,15 @@
       "bgcolor": "#533"
     },
     {
-      "id": 121,
-      "type": "VAELoader",
-      "pos": [
-        -1717.947474803137,
-        4227.574267212808
-      ],
-      "size": [
-        447.868299893968,
-        58
-      ],
-      "flags": {},
-      "order": 12,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [
-            277
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VAELoader",
-        "models": [
-          {
-            "name": "minimax_h3_video_vae_fp16.safetensors",
-            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_video_vae_fp16.safetensors",
-            "directory": "vae"
-          }
-        ]
-      },
-      "widgets_values": [
-        "minimax_h3_video_vae_fp16.safetensors"
-      ],
-      "widgets_values_named": {
-        "vae_name": "minimax_h3_video_vae_fp16.safetensors"
-      },
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
-      "id": 149,
+      "id": 192,
       "type": "SetNode",
       "pos": [
-        -1229.4771566166457,
-        4254.018876356366
+        -1909.1903752463327,
+        4300.20690697728
       ],
       "size": [
         210,
-        60
+        34
       ],
       "flags": {
         "collapsed": true
@@ -1546,7 +1229,7 @@
         {
           "name": "VAE",
           "type": "VAE",
-          "link": 277
+          "link": 333
         }
       ],
       "outputs": [
@@ -1572,73 +1255,26 @@
       "bgcolor": "#533"
     },
     {
-      "id": 129,
-      "type": "CLIPLoader",
-      "pos": [
-        -1719.478965572152,
-        4044.7765009599666
-      ],
-      "size": [
-        436.9742503927346,
-        106
-      ],
-      "flags": {},
-      "order": 13,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            276
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPLoader",
-        "models": [
-          {
-            "name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
-            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/text_encoders/qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
-            "directory": "text_encoders"
-          }
-        ]
-      },
-      "widgets_values": [
-        "qwen3vl_32b_heretic_minimax_h3_nvfp4.safetensors",
-        "minimax",
-        "default"
-      ],
-      "widgets_values_named": {
-        "clip_name": "qwen3vl_32b_heretic_minimax_h3_nvfp4.safetensors",
-        "type": "minimax",
-        "device": "default"
-      },
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
-      "id": 148,
+      "id": 193,
       "type": "SetNode",
       "pos": [
-        -1223.4376009393866,
-        4075.857310078324
+        -1925.1020831761132,
+        4105.051975373804
       ],
       "size": [
         210,
-        60
+        34
       ],
       "flags": {
         "collapsed": true
       },
-      "order": 19,
+      "order": 17,
       "mode": 0,
       "inputs": [
         {
           "name": "CLIP",
           "type": "CLIP",
-          "link": 276
+          "link": 334
         }
       ],
       "outputs": [
@@ -1662,6 +1298,445 @@
       },
       "color": "#432",
       "bgcolor": "#653"
+    },
+    {
+      "id": 194,
+      "type": "MiniMaxH3MemoryEfficientSageAttentionPatch",
+      "pos": [
+        -2062.63967899389,
+        3956.5234004648073
+      ],
+      "size": [
+        320.323828125,
+        26
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 335
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            337
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MiniMaxH3MemoryEfficientSageAttentionPatch"
+      },
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 195,
+      "type": "PathchSageAttentionKJ",
+      "pos": [
+        -2065.553272802637,
+        3810.9335501309324
+      ],
+      "size": [
+        233.92001342773438,
+        82
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 343
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            335
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PathchSageAttentionKJ"
+      },
+      "widgets_values": [
+        "sageattn_qk_int8_pv_fp8_cuda++",
+        false
+      ],
+      "widgets_values_named": {
+        "sage_attention": "sageattn_qk_int8_pv_fp8_cuda++",
+        "allow_compile": false
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 196,
+      "type": "MiniMaxH3SigmaShift",
+      "pos": [
+        -1801.1367668396492,
+        3824.997091405873
+      ],
+      "size": [
+        230.4000000000001,
+        82
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 337
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            338
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MiniMaxH3SigmaShift"
+      },
+      "widgets_values": [
+        12,
+        3
+      ],
+      "widgets_values_named": {
+        "shift_video": 12,
+        "shift_audio": 3
+      },
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 197,
+      "type": "MiniMaxH3MemoryEfficientSolAttentionPatch",
+      "pos": [
+        -1540.667556517389,
+        3812.2715837819305
+      ],
+      "size": [
+        425.04453125,
+        250
+      ],
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 338
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            340
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MiniMaxH3MemoryEfficientSolAttentionPatch"
+      },
+      "widgets_values": [
+        true,
+        1.3,
+        4096,
+        false,
+        "diag",
+        false,
+        false,
+        "exact_kv",
+        ""
+      ],
+      "widgets_values_named": {
+        "enabled": true,
+        "tau": 1.3,
+        "min_tokens": 4096,
+        "strict": false,
+        "thresh_type": "diag",
+        "int8_qk": false,
+        "int8_pv": false,
+        "sink_conditioning": "exact_kv",
+        "dense_blocks": ""
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 199,
+      "type": "MiniMaxH3ChunkFeedForward",
+      "pos": [
+        -1076.4156587388857,
+        3809.437048337306
+      ],
+      "size": [
+        316.38046875,
+        106
+      ],
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 340
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            344
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MiniMaxH3ChunkFeedForward"
+      },
+      "widgets_values": [
+        true,
+        2,
+        8192
+      ],
+      "widgets_values_named": {
+        "enabled": true,
+        "chunks": 2,
+        "min_tokens": 8192
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 200,
+      "type": "Lora Loader (LoraManager)",
+      "pos": [
+        -1072.5008399177882,
+        3990.0538378324936
+      ],
+      "size": [
+        550.0952338952154,
+        585.8718694029803
+      ],
+      "flags": {},
+      "order": 32,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 344
+        },
+        {
+          "name": "clip",
+          "shape": 7,
+          "type": "CLIP",
+          "link": null
+        },
+        {
+          "name": "lora_stack",
+          "shape": 7,
+          "type": "LORA_STACK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            342
+          ]
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": null
+        },
+        {
+          "name": "trigger_words",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "loaded_loras",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Lora Loader (LoraManager)",
+        "__lm_widget_ids": [
+          "__lm_autocomplete_meta_text",
+          "text",
+          "loras"
+        ]
+      },
+      "widgets_values": [
+        {
+          "version": 1,
+          "textWidgetName": "text"
+        },
+        "",
+        []
+      ],
+      "widgets_values_named": {
+        "__lm_autocomplete_meta_text": {
+          "version": 1,
+          "textWidgetName": "text"
+        },
+        "text": "",
+        "loras": []
+      },
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 201,
+      "type": "SetNode",
+      "pos": [
+        -589.7030117025103,
+        3807.4391296943313
+      ],
+      "size": [
+        210,
+        34
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 34,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "link": 342
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": null
+        }
+      ],
+      "title": "Set_MODEL",
+      "properties": {
+        "Node name for S&R": "SetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes",
+        "previousName": "MODEL"
+      },
+      "widgets_values": [
+        "MODEL"
+      ],
+      "widgets_values_named": {
+        "Constant": "MODEL"
+      },
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 139,
+      "type": "DiffusionModelLoaderKJ",
+      "pos": [
+        -2438.2517490055293,
+        3811.4033558973933
+      ],
+      "size": [
+        312.095703125,
+        178
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "extra_state_dict",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            343
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DiffusionModelLoaderKJ"
+      },
+      "widgets_values": [
+        "minimax_h3_fl2va_pruned_int8_convrot.safetensors",
+        "default",
+        "default",
+        true,
+        "disabled",
+        true
+      ],
+      "widgets_values_named": {
+        "model_name": "minimax_h3_fl2va_pruned_int8_convrot.safetensors",
+        "weight_dtype": "default",
+        "compute_dtype": "default",
+        "patch_cublaslinear": true,
+        "sage_attention": "disabled",
+        "enable_fp16_accumulation": true
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 186,
+      "type": "MarkdownNote",
+      "pos": [
+        -3118.5962784451826,
+        3749.91630626488
+      ],
+      "size": [
+        600,
+        520
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Guide: Purpose and use",
+      "properties": {},
+      "widgets_values": [
+        "# Text-to-video - PDD Acc\n\n## Purpose\nGenerate video and native audio from a written scene description.\n\n## Use\n1. Write the scene, subjects, motion and desired audio in the prompt.\n2. Set output size, duration and seed.\n3. Run the workflow and review the video and audio.\n\nWorkflow: PDD-Acc-t2v-pod.json"
+      ],
+      "widgets_values_named": {
+        "text": "# Text-to-video - PDD Acc\n\n## Purpose\nGenerate video and native audio from a written scene description.\n\n## Use\n1. Write the scene, subjects, motion and desired audio in the prompt.\n2. Set output size, duration and seed.\n3. Run the workflow and review the video and audio.\n\nWorkflow: PDD-Acc-t2v-pod.json"
+      },
+      "color": "#234",
+      "bgcolor": "#345"
     }
   ],
   "links": [
@@ -1746,30 +1821,6 @@
       "LATENT"
     ],
     [
-      276,
-      129,
-      0,
-      148,
-      0,
-      "CLIP"
-    ],
-    [
-      277,
-      121,
-      0,
-      149,
-      0,
-      "VAE"
-    ],
-    [
-      278,
-      122,
-      0,
-      150,
-      0,
-      "VAE"
-    ],
-    [
       279,
       151,
       0,
@@ -1800,30 +1851,6 @@
       124,
       1,
       "VAE"
-    ],
-    [
-      287,
-      139,
-      0,
-      157,
-      0,
-      "MODEL"
-    ],
-    [
-      289,
-      157,
-      0,
-      141,
-      0,
-      "MODEL"
-    ],
-    [
-      293,
-      163,
-      0,
-      146,
-      0,
-      "MODEL"
     ],
     [
       313,
@@ -1882,22 +1909,6 @@
       "INT"
     ],
     [
-      324,
-      141,
-      0,
-      170,
-      0,
-      "MODEL"
-    ],
-    [
-      325,
-      170,
-      0,
-      163,
-      0,
-      "MODEL"
-    ],
-    [
       326,
       147,
       0,
@@ -1928,6 +1939,86 @@
       183,
       2,
       "VAE"
+    ],
+    [
+      332,
+      190,
+      0,
+      191,
+      0,
+      "VAE"
+    ],
+    [
+      333,
+      189,
+      0,
+      192,
+      0,
+      "VAE"
+    ],
+    [
+      334,
+      188,
+      0,
+      193,
+      0,
+      "CLIP"
+    ],
+    [
+      335,
+      195,
+      0,
+      194,
+      0,
+      "MODEL"
+    ],
+    [
+      337,
+      194,
+      0,
+      196,
+      0,
+      "MODEL"
+    ],
+    [
+      338,
+      196,
+      0,
+      197,
+      0,
+      "MODEL"
+    ],
+    [
+      340,
+      197,
+      0,
+      199,
+      0,
+      "MODEL"
+    ],
+    [
+      342,
+      200,
+      0,
+      201,
+      0,
+      "MODEL"
+    ],
+    [
+      343,
+      139,
+      0,
+      195,
+      0,
+      "MODEL"
+    ],
+    [
+      344,
+      199,
+      0,
+      200,
+      0,
+      "MODEL"
     ]
   ],
   "groups": [
@@ -1939,18 +2030,6 @@
         5145.224829933213,
         347.70417364557306,
         416.34473784558395
-      ],
-      "color": "#3f789e",
-      "flags": {}
-    },
-    {
-      "id": 1,
-      "title": "Models",
-      "bounding": [
-        -1747.9474748031353,
-        3715.122636678819,
-        1334.043944231949,
-        1113.4616352443027
       ],
       "color": "#3f789e",
       "flags": {}
@@ -1978,15 +2057,27 @@
       ],
       "color": "#3f789e",
       "flags": {}
+    },
+    {
+      "id": 6,
+      "title": "Models",
+      "bounding": [
+        -2472.462292517389,
+        3712.5094076393098,
+        2052.462141594886,
+        889.3833408151927
+      ],
+      "color": "#3f789e",
+      "flags": {}
     }
   ],
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.4930414816363663,
+      "scale": 0.2300074899329067,
       "offset": [
-        2166.1184935311285,
-        -3442.6743585441595
+        4813.89539250273,
+        -2291.4834981841154
       ]
     },
     "frontendVersion": "1.51.10",

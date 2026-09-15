@@ -8,10 +8,10 @@
 - This pod is stable but many custom_nodes are experimental and in full development.
 - Tested on L40S, RTX 4090, RTX 5090 and RTX PRO 6000.
 
-## 11092026
+## 15092026
 
 - ComfyUI 0.35.0
-- Updated workflow templates.
+- Updated workflows.
 - Tail is an optional download.
 - Switched Blackwell HVRAM diffusion models to standard INT8 ConvRot for better compatibility.
 
