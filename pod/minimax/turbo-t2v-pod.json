@@ -2,7 +2,7 @@
   "id": "e3f2b845-8f2c-4b5a-9caf-eac1029d3e7e",
   "revision": 0,
   "last_node_id": 179,
-  "last_link_id": 316,
+  "last_link_id": 317,
   "nodes": [
     {
       "id": 179,
@@ -1304,7 +1304,7 @@
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            297
+            317
           ]
         }
       ],
@@ -1353,104 +1353,6 @@
       ],
       "properties": {
         "Node name for S&R": "VAEDecodeAudio"
-      },
-      "color": "#2a363b",
-      "bgcolor": "#3f5159"
-    },
-    {
-      "id": 168,
-      "type": "FastFilmGrain",
-      "pos": [
-        23.562657925628194,
-        4783.776804746111
-      ],
-      "size": [
-        270,
-        106
-      ],
-      "flags": {},
-      "order": 32,
-      "mode": 4,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 297
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            298
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "FastFilmGrain"
-      },
-      "widgets_values": [
-        0.01,
-        0.5,
-        4
-      ],
-      "widgets_values_named": {
-        "grain_intensity": 0.01,
-        "saturation_mix": 0.5,
-        "batch_size": 4
-      },
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
-      "id": 131,
-      "type": "CreateVideo",
-      "pos": [
-        36.31555396598044,
-        4960.987494724556
-      ],
-      "size": [
-        270,
-        126
-      ],
-      "flags": {},
-      "order": 33,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 298
-        },
-        {
-          "name": "audio",
-          "shape": 7,
-          "type": "AUDIO",
-          "link": 240
-        }
-      ],
-      "outputs": [
-        {
-          "name": "VIDEO",
-          "type": "VIDEO",
-          "links": [
-            243
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CreateVideo"
-      },
-      "widgets_values": [
-        24,
-        8,
-        "sRGB"
-      ],
-      "widgets_values_named": {
-        "fps": 24,
-        "bit_depth": 8,
-        "color_space": "sRGB"
       },
       "color": "#2a363b",
       "bgcolor": "#3f5159"
@@ -1568,7 +1470,7 @@
         106
       ],
       "flags": {},
-      "order": 34,
+      "order": 33,
       "mode": 0,
       "inputs": [
         {
@@ -1673,6 +1575,58 @@
         "tiny_vae": "taeh3.safetensors",
         "preview": ""
       }
+    },
+    {
+      "id": 131,
+      "type": "CreateVideo",
+      "pos": [
+        30.141782745538812,
+        4777.009093514541
+      ],
+      "size": [
+        270,
+        126
+      ],
+      "flags": {},
+      "order": 32,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 317
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 240
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            243
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CreateVideo"
+      },
+      "widgets_values": [
+        24,
+        8,
+        "sRGB"
+      ],
+      "widgets_values_named": {
+        "fps": 24,
+        "bit_depth": 8,
+        "color_space": "sRGB"
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
     }
   ],
   "links": [
@@ -1869,22 +1823,6 @@
       "SAMPLER"
     ],
     [
-      297,
-      124,
-      0,
-      168,
-      0,
-      "IMAGE"
-    ],
-    [
-      298,
-      168,
-      0,
-      131,
-      0,
-      "IMAGE"
-    ],
-    [
       300,
       172,
       0,
@@ -1947,6 +1885,14 @@
       178,
       3,
       "INT"
+    ],
+    [
+      317,
+      124,
+      0,
+      131,
+      0,
+      "IMAGE"
     ]
   ],
   "groups": [
