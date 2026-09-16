@@ -63,3 +63,7 @@
 
 - [ComfyUI-H3-multishot](https://github.com/jlucasmcrell/ComfyUI-H3-Multishot)
 - [ComfyUI-H3-Motion-Context](https://github.com/NikoDemon80/ComfyUI-H3-Motion-Context)
+
+### Flow
+
+- [Power Flow](https://github.com/x3bits/ComfyUI-Power-Flow)
