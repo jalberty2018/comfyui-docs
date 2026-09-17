@@ -2,16 +2,20 @@
 
 ## Release Notes Policy
 
-- A new dated subtitle is added whenever a new stable ComfyUI release is included.
-- The date is updated when custom nodes, provisioning or runtime behavior changes.
-- Pinned custom nodes are not updated automatically because pin changes can introduce compatibility issues.
-- This pod is stable but many custom_nodes are experimental and in full development.
-- Tested on L40S, RTX 4090, RTX 5090 and RTX PRO 6000.
+- A new dated section is added whenever a new stable ComfyUI release is included.
+- The date is updated whenever custom nodes, provisioning, or runtime behavior change.
+- Custom nodes pinned to specific versions are not updated automatically, as version changes may introduce compatibility issues.
+- This pod is stable, but many of its custom nodes are still under active development.
+- Some custom nodes have been adapted specifically for this pod.
+- Tested on L40S, RTX 4090, RTX 5090, and RTX PRO 6000 GPUs.
 
-## 16092026
+## 17092026
 
 - ComfyUI 0.36.0
-- Remove unused custom_nodes
+- Removed unused custom nodes.
+- Added GPU-accelerated video encoding with FFmpeg and NVENC to speed up video creation on slower vCPUs.
+- Forked and customized model_linker.
+- Switched to a different video VAE to reduce memory usage.
 
 ## 15092026
 
