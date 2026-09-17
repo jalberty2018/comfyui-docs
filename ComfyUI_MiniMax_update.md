@@ -13,9 +13,9 @@
 
 - ComfyUI 0.36.0
 - Removed unused custom nodes.
-- Added GPU-accelerated video encoding with FFmpeg and NVENC to speed up video creation on slower vCPUs.
+- Added GPU-accelerated video encoding with FFmpeg and NVENC to speed up video creation on slower vCPUs if runpod host supports nvenc.
 - Forked and customized model_linker.
-- Switched to a different video VAE to reduce memory usage.
+- Added another video VAE to reduce memory usage (does not work with pruned models).
 
 ## 15092026
 
