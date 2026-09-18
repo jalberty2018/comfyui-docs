@@ -12,8 +12,9 @@
 ## 17092026
 
 - ComfyUI 0.36.0
-- Removed unused custom nodes.
+- Removed unused custom nodes and optimised container volume.
 - Added GPU-accelerated video encoding with FFmpeg and NVENC to speed up video creation on slower vCPUs, if runpod host supports it.
+- Updated worklows to use nvenc video encoding.
 - Forked and customized model_linker.
 - Added another video VAE to reduce memory usage (does not work with pruned models).
 - Updated Lora-Manager template.
