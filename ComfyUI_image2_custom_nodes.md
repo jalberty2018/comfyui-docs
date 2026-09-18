@@ -39,10 +39,6 @@
 
 - [ComfyUI-SeedVR2_VideoUpscaler](https://github.com/numz/ComfyUI-SeedVR2_VideoUpscaler)
 
-### Pixel adjustments
-
-- [VRgamedevgirl](https://github.com/vrgamegirl19/comfyui-vrgamedevgirl)
-
 ### Samplers
 
 - [RES4LYF](https://github.com/ClownsharkBatwing/RES4LYF)

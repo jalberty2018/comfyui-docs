@@ -7,6 +7,13 @@
 - The date reflects when the related custom nodes were cloned from their upstream repositories.
 - Pinned custom nodes are not updated automatically, because changing those pins can introduce compatibility issues.
 
+## 18092025
+
+- ComfyUI 0.36.0
+- Removed unused custom nodes.
+- Forked and customized model_linker.
+- Updated Lora-Manager template.
+
 ## 12092025
 
 - ComfyUI 0.35.0

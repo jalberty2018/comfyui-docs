@@ -5,7 +5,7 @@
 - A new dated section is added whenever a new stable ComfyUI release is included.
 - The date is updated whenever custom nodes, provisioning, or runtime behavior change.
 - Custom nodes pinned to specific versions are not updated automatically, as version changes may introduce compatibility issues.
-- This pod is stable, but many of its custom nodes are still under active development.
+- This pod is stable, but many of its custom nodes and models are still under active development.
 - Some custom nodes have been adapted specifically for this pod.
 - Tested on L40S, RTX 4090, RTX 5090, and RTX PRO 6000 GPUs.
 
@@ -13,9 +13,10 @@
 
 - ComfyUI 0.36.0
 - Removed unused custom nodes.
-- Added GPU-accelerated video encoding with FFmpeg and NVENC to speed up video creation on slower vCPUs if runpod host supports nvenc.
+- Added GPU-accelerated video encoding with FFmpeg and NVENC to speed up video creation on slower vCPUs, if runpod host supports it.
 - Forked and customized model_linker.
 - Added another video VAE to reduce memory usage (does not work with pruned models).
+- Updated Lora-Manager template.
 
 ## 15092026
 
