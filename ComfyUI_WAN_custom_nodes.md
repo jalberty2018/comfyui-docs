@@ -23,9 +23,6 @@
 
 - [Video Helper Suite](https://github.com/kosinkadink/ComfyUI-VideoHelperSuite)
 - [Frame Interpolation](https://github.com/Fannovel16/ComfyUI-Frame-Interpolation)
-- [VideoUpscale with Model](https://github.com/ShmuelRonen/ComfyUI-VideoUpscale_WithModel)
-- [SD Upscale](https://github.com/ssitu/ComfyUI_UltimateSDUpscale)
-- [VRgamedevgirl](https://github.com/vrgamegirl19/comfyui-vrgamedevgirl)
 - [PainterVideoUpscale](https://github.com/princepainter/ComfyUI-PainterVideoUpscale)
 
 ### Pose Estimation/ControlNet
@@ -38,7 +35,6 @@
 ### Flow
 
 - [Power Flow](https://github.com/x3bits/ComfyUI-Power-Flow)
-- [Outputlists-combiner](https://github.com/geroldmeisinger/ComfyUI-outputlists-combiner)
 
 ### Segmentation
 
@@ -50,11 +46,9 @@
 ### Sampling
 
 - [RES4LYF](https://github.com/ClownsharkBatwing/RES4LYF)
-- [WanMoeKSampler](https://github.com/stduhpf/ComfyUI-WanMoeKSampler)
 - [TripleKSampler](https://github.com/VraethrDalkr/ComfyUI-TripleKSampler)
 - [WanMoEScheduler](https://github.com/cmeka/ComfyUI-WanMoEScheduler)
 - [PainterSampler](https://github.com/princepainter/Comfyui-PainterSampler)
-- [was_affine](https://github.com/WASasquatch/was_affine)
 
 ### LoRAs
 
@@ -64,10 +58,6 @@
 
 - [Noise](https://github.com/BlenderNeko/ComfyUI_Noise)
 - [LatentUtils](https://github.com/lrzjason/Comfyui-LatentUtils)
-
-### VLM
-
-- [QwenVL-mod](https://github.com/huchukato/ComfyUI-QwenVL-Mod)
 
 ### Model Specific
 

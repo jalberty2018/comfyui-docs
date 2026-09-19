@@ -2,7 +2,7 @@
   "id": "ec7da562-7e21-4dac-a0d2-f4441e1efd3b",
   "revision": 0,
   "last_node_id": 161,
-  "last_link_id": 422,
+  "last_link_id": 424,
   "nodes": [
     {
       "id": 38,
@@ -292,152 +292,6 @@
       },
       "color": "#222",
       "bgcolor": "#000"
-    },
-    {
-      "id": 77,
-      "type": "VHS_SelectEveryNthImage",
-      "pos": [
-        2193.9851327636443,
-        -847.1070154448051
-      ],
-      "size": [
-        274.197265625,
-        104.95491790771484
-      ],
-      "flags": {},
-      "order": 28,
-      "mode": 4,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 157
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            158
-          ]
-        },
-        {
-          "name": "count",
-          "type": "INT",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VHS_SelectEveryNthImage",
-        "cnr_id": "comfyui-videohelpersuite",
-        "aux_id": "Kosinkadink/ComfyUI-VideoHelperSuite",
-        "ver": "330bce6c3c0d47ebdedcc0348d9ab355707b7523"
-      },
-      "widgets_values": {
-        "select_every_nth": 1,
-        "skip_first_images": 4
-      },
-      "widgets_values_named": {
-        "select_every_nth": 1,
-        "skip_first_images": 4
-      },
-      "color": "#233",
-      "bgcolor": "#355"
-    },
-    {
-      "id": 73,
-      "type": "FastUnsharpSharpen",
-      "pos": [
-        1909.7249297395945,
-        -675.8203575968009
-      ],
-      "size": [
-        270,
-        82
-      ],
-      "flags": {},
-      "order": 29,
-      "mode": 4,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 158
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            151
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "FastUnsharpSharpen",
-        "aux_id": "vrgamegirl19/comfyui-vrgamedevgirl",
-        "ver": "0c5580921e6e6ad56f9fc1ecddce3264790a15fb"
-      },
-      "widgets_values": [
-        0.25,
-        false
-      ],
-      "widgets_values_named": {
-        "strength": 0.25,
-        "use_gpu": false
-      },
-      "color": "#233",
-      "bgcolor": "#355"
-    },
-    {
-      "id": 74,
-      "type": "FastFilmGrain",
-      "pos": [
-        2198.7440304717356,
-        -677.8794802055121
-      ],
-      "size": [
-        270,
-        106
-      ],
-      "flags": {},
-      "order": 30,
-      "mode": 4,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 151
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            152
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "FastFilmGrain",
-        "aux_id": "vrgamegirl19/comfyui-vrgamedevgirl",
-        "ver": "0c5580921e6e6ad56f9fc1ecddce3264790a15fb"
-      },
-      "widgets_values": [
-        0.02,
-        0.5,
-        4
-      ],
-      "widgets_values_named": {
-        "grain_intensity": 0.02,
-        "saturation_mix": 0.5,
-        "batch_size": 4
-      },
-      "color": "#2a363b",
-      "bgcolor": "#3f5159"
     },
     {
       "id": 111,
@@ -1333,85 +1187,6 @@
       "bgcolor": "#335"
     },
     {
-      "id": 69,
-      "type": "RIFE VFI",
-      "pos": [
-        1926.8418762187384,
-        -524.0242183804518
-      ],
-      "size": [
-        289.6578063964844,
-        270
-      ],
-      "flags": {
-        "collapsed": false
-      },
-      "order": 31,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "frames",
-          "type": "IMAGE",
-          "link": 152
-        },
-        {
-          "name": "optional_interpolation_states",
-          "shape": 7,
-          "type": "INTERPOLATION_STATES",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "slot_index": 0,
-          "links": [
-            144
-          ]
-        }
-      ],
-      "title": "RIFE VFI",
-      "properties": {
-        "Node name for S&R": "RIFE VFI",
-        "cnr_id": "comfyui-frame-interpolation",
-        "aux_id": "Fannovel16/ComfyUI-Frame-Interpolation",
-        "ver": "c336f7184cb1ac1243381e725fea1ad2c0a10c09",
-        "widget_ue_connectable": {
-          "ckpt_name": true,
-          "clear_cache_after_n_frames": true,
-          "multiplier": true,
-          "fast_mode": true,
-          "ensemble": true,
-          "scale_factor": true
-        }
-      },
-      "widgets_values": [
-        "rife49.pth",
-        16,
-        2,
-        true,
-        true,
-        1,
-        "float32",
-        true,
-        1
-      ],
-      "widgets_values_named": {
-        "ckpt_name": "rife49.pth",
-        "clear_cache_after_n_frames": 16,
-        "multiplier": 2,
-        "fast_mode": true,
-        "ensemble": true,
-        "scale_factor": 1,
-        "dtype": "float32",
-        "torch_compile": true,
-        "batch_size": 1
-      },
-      "color": "#233",
-      "bgcolor": "#355"
-    },
-    {
       "id": 128,
       "type": "DiffusionModelLoaderKJ",
       "pos": [
@@ -1718,112 +1493,6 @@
       "bgcolor": "#353"
     },
     {
-      "id": 70,
-      "type": "VHS_VideoCombine",
-      "pos": [
-        1927.7645381817247,
-        -205.13160563264208
-      ],
-      "size": [
-        571.8024058626652,
-        334
-      ],
-      "flags": {},
-      "order": 32,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 144
-        },
-        {
-          "name": "audio",
-          "shape": 7,
-          "type": "AUDIO",
-          "link": null
-        },
-        {
-          "name": "meta_batch",
-          "shape": 7,
-          "type": "VHS_BatchManager",
-          "link": null
-        },
-        {
-          "name": "vae",
-          "shape": 7,
-          "type": "VAE",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "Filenames",
-          "type": "VHS_FILENAMES",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VHS_VideoCombine",
-        "cnr_id": "comfyui-videohelpersuite",
-        "aux_id": "Kosinkadink/ComfyUI-VideoHelperSuite",
-        "ver": "a7ce59e381934733bfae03b1be029756d6ce936d",
-        "widget_ue_connectable": {}
-      },
-      "widgets_values": {
-        "frame_rate": 38,
-        "loop_count": 0,
-        "filename_prefix": "i2v-MoeKSheduler-Painter",
-        "format": "video/h264-mp4",
-        "pix_fmt": "yuv420p",
-        "crf": 19,
-        "save_metadata": true,
-        "trim_to_audio": false,
-        "pingpong": false,
-        "save_output": true,
-        "videopreview": {
-          "hidden": false,
-          "paused": false,
-          "params": {
-            "filename": "i2v-MoeKSheduler-Painter_00001.mp4",
-            "subfolder": "",
-            "type": "output",
-            "format": "video/h264-mp4",
-            "frame_rate": 18,
-            "workflow": "i2v-MoeKSheduler-Painter_00001.png",
-            "fullpath": "/workspace/ComfyUI/output/i2v-MoeKSheduler-Painter_00001.mp4"
-          }
-        }
-      },
-      "widgets_values_named": {
-        "frame_rate": 38,
-        "loop_count": 0,
-        "filename_prefix": "i2v-MoeKSheduler-Painter",
-        "format": "video/h264-mp4",
-        "pix_fmt": "yuv420p",
-        "crf": 19,
-        "save_metadata": true,
-        "trim_to_audio": false,
-        "pingpong": false,
-        "save_output": true,
-        "videopreview": {
-          "hidden": false,
-          "paused": false,
-          "params": {
-            "filename": "i2v-MoeKSheduler-Painter_00001.mp4",
-            "subfolder": "",
-            "type": "output",
-            "format": "video/h264-mp4",
-            "frame_rate": 18,
-            "workflow": "i2v-MoeKSheduler-Painter_00001.png",
-            "fullpath": "/workspace/ComfyUI/output/i2v-MoeKSheduler-Painter_00001.mp4"
-          }
-        }
-      },
-      "color": "#222",
-      "bgcolor": "#000"
-    },
-    {
       "id": 93,
       "type": "PgLazyPromptMini",
       "pos": [
@@ -1961,6 +1630,243 @@
       },
       "color": "#222",
       "bgcolor": "#000"
+    },
+    {
+      "id": 77,
+      "type": "VHS_SelectEveryNthImage",
+      "pos": [
+        2193.9851327636443,
+        -847.1070154448051
+      ],
+      "size": [
+        274.197265625,
+        104.95491790771484
+      ],
+      "flags": {},
+      "order": 28,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 157
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            424
+          ]
+        },
+        {
+          "name": "count",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_SelectEveryNthImage",
+        "cnr_id": "comfyui-videohelpersuite",
+        "aux_id": "Kosinkadink/ComfyUI-VideoHelperSuite",
+        "ver": "330bce6c3c0d47ebdedcc0348d9ab355707b7523"
+      },
+      "widgets_values": {
+        "select_every_nth": 1,
+        "skip_first_images": 4
+      },
+      "widgets_values_named": {
+        "select_every_nth": 1,
+        "skip_first_images": 4
+      },
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 69,
+      "type": "RIFE VFI",
+      "pos": [
+        1923.985153449198,
+        -670.6716090669577
+      ],
+      "size": [
+        289.6578063964844,
+        270
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 29,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "frames",
+          "type": "IMAGE",
+          "link": 424
+        },
+        {
+          "name": "optional_interpolation_states",
+          "shape": 7,
+          "type": "INTERPOLATION_STATES",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            144
+          ]
+        }
+      ],
+      "title": "RIFE VFI",
+      "properties": {
+        "Node name for S&R": "RIFE VFI",
+        "cnr_id": "comfyui-frame-interpolation",
+        "aux_id": "Fannovel16/ComfyUI-Frame-Interpolation",
+        "ver": "c336f7184cb1ac1243381e725fea1ad2c0a10c09",
+        "widget_ue_connectable": {
+          "ckpt_name": true,
+          "clear_cache_after_n_frames": true,
+          "multiplier": true,
+          "fast_mode": true,
+          "ensemble": true,
+          "scale_factor": true
+        }
+      },
+      "widgets_values": [
+        "rife49.pth",
+        16,
+        2,
+        true,
+        true,
+        1,
+        "float32",
+        true,
+        1
+      ],
+      "widgets_values_named": {
+        "ckpt_name": "rife49.pth",
+        "clear_cache_after_n_frames": 16,
+        "multiplier": 2,
+        "fast_mode": true,
+        "ensemble": true,
+        "scale_factor": 1,
+        "dtype": "float32",
+        "torch_compile": true,
+        "batch_size": 1
+      },
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 70,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        1918.2419836472714,
+        -340.35188728700905
+      ],
+      "size": [
+        571.8024058626652,
+        334
+      ],
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 144
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine",
+        "cnr_id": "comfyui-videohelpersuite",
+        "aux_id": "Kosinkadink/ComfyUI-VideoHelperSuite",
+        "ver": "a7ce59e381934733bfae03b1be029756d6ce936d",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": {
+        "frame_rate": 38,
+        "loop_count": 0,
+        "filename_prefix": "i2v-MoeKSheduler-Painter",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 19,
+        "save_metadata": true,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "i2v-MoeKSheduler-Painter_00001.mp4",
+            "subfolder": "",
+            "type": "output",
+            "format": "video/h264-mp4",
+            "frame_rate": 18,
+            "workflow": "i2v-MoeKSheduler-Painter_00001.png",
+            "fullpath": "/workspace/ComfyUI/output/i2v-MoeKSheduler-Painter_00001.mp4"
+          }
+        }
+      },
+      "widgets_values_named": {
+        "frame_rate": 38,
+        "loop_count": 0,
+        "filename_prefix": "i2v-MoeKSheduler-Painter",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 19,
+        "save_metadata": true,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "i2v-MoeKSheduler-Painter_00001.mp4",
+            "subfolder": "",
+            "type": "output",
+            "format": "video/h264-mp4",
+            "frame_rate": 18,
+            "workflow": "i2v-MoeKSheduler-Painter_00001.png",
+            "fullpath": "/workspace/ComfyUI/output/i2v-MoeKSheduler-Painter_00001.mp4"
+          }
+        }
+      },
+      "color": "#222",
+      "bgcolor": "#000"
     }
   ],
   "links": [
@@ -1981,34 +1887,10 @@
       "IMAGE"
     ],
     [
-      151,
-      73,
-      0,
-      74,
-      0,
-      "IMAGE"
-    ],
-    [
-      152,
-      74,
-      0,
-      69,
-      0,
-      "IMAGE"
-    ],
-    [
       157,
       8,
       0,
       77,
-      0,
-      "IMAGE"
-    ],
-    [
-      158,
-      77,
-      0,
-      73,
       0,
       "IMAGE"
     ],
@@ -2347,6 +2229,14 @@
       131,
       0,
       "MODEL"
+    ],
+    [
+      424,
+      77,
+      0,
+      69,
+      0,
+      "IMAGE"
     ]
   ],
   "groups": [
@@ -2450,13 +2340,13 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.5216426502469504,
+      "scale": 0.8401107046492166,
       "offset": [
-        1663.9541334182663,
-        533.9791399318627
+        -996.1903101509458,
+        976.2930090178837
       ]
     },
-    "frontendVersion": "1.51.10",
+    "frontendVersion": "1.52.7",
     "reroutes": [
       {
         "id": 2,

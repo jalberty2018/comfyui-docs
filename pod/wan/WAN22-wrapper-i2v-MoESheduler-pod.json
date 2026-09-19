@@ -2,7 +2,7 @@
   "id": "ea297b81-830d-4ba3-868b-7de7242199c3",
   "revision": 0,
   "last_node_id": 180,
-  "last_link_id": 316,
+  "last_link_id": 319,
   "nodes": [
     {
       "id": 116,
@@ -46,6 +46,17 @@
         false,
         false
       ],
+      "widgets_values_named": {
+        "backend": "inductor",
+        "fullgraph": false,
+        "mode": "default",
+        "dynamic": false,
+        "dynamo_cache_size_limit": 64,
+        "compile_transformer_blocks_only": true,
+        "dynamo_recompile_limit": 128,
+        "force_parameter_static_shapes": false,
+        "allow_unmerged_lora_compile": false
+      },
       "color": "#223",
       "bgcolor": "#335"
     },
@@ -137,6 +148,14 @@
         "sageattn",
         "default"
       ],
+      "widgets_values_named": {
+        "model": "wan2.2_i2v_A14b_high_noise_lightx2v.safetensors",
+        "base_precision": "fp16_fast",
+        "quantization": "disabled",
+        "load_device": "offload_device",
+        "attention_mode": "sageattn",
+        "rms_norm_function": "default"
+      },
       "color": "#323",
       "bgcolor": "#535"
     },
@@ -228,6 +247,14 @@
         "sageattn",
         "default"
       ],
+      "widgets_values_named": {
+        "model": "wan2.2_i2v_A14b_low_noise_lightx2v.safetensors",
+        "base_precision": "fp16_fast",
+        "quantization": "disabled",
+        "load_device": "offload_device",
+        "attention_mode": "sageattn",
+        "rms_norm_function": "default"
+      },
       "color": "#232",
       "bgcolor": "#353"
     },
@@ -264,6 +291,10 @@
         "wan2.2_i2v_A14b_high_noise_lightx2v.safetensors",
         "default"
       ],
+      "widgets_values_named": {
+        "unet_name": "wan2.2_i2v_A14b_high_noise_lightx2v.safetensors",
+        "weight_dtype": "default"
+      },
       "color": "#233",
       "bgcolor": "#355"
     },
@@ -311,6 +342,12 @@
         false,
         false
       ],
+      "widgets_values_named": {
+        "model_name": "Wan2_1_VAE_fp32.safetensors",
+        "precision": "fp32",
+        "use_cpu_cache": false,
+        "verbose": false
+      },
       "color": "#233",
       "bgcolor": "#355"
     },
@@ -346,6 +383,9 @@
       "widgets_values": [
         "wan21NSFWClipVisionH_v10.safetensors"
       ],
+      "widgets_values_named": {
+        "clip_name": "wan21NSFWClipVisionH_v10.safetensors"
+      },
       "color": "#2a363b",
       "bgcolor": "#3f5159"
     },
@@ -392,6 +432,13 @@
         16,
         16
       ],
+      "widgets_values_named": {
+        "measurement": "Pixels",
+        "left": 104,
+        "right": 104,
+        "top": 16,
+        "bottom": 16
+      },
       "color": "#332922",
       "bgcolor": "#593930"
     },
@@ -457,6 +504,15 @@
         0,
         0.5
       ],
+      "widgets_values_named": {
+        "strength_1": 1,
+        "strength_2": 0.5,
+        "crop": "center",
+        "combine_embeds": "average",
+        "force_offload": true,
+        "tiles": 0,
+        "ratio": 0.5
+      },
       "color": "#233",
       "bgcolor": "#355"
     },
@@ -499,6 +555,10 @@
         "ZIT_00109_.png",
         "image"
       ],
+      "widgets_values_named": {
+        "image": "ZIT_00109_.png",
+        "upload": "image"
+      },
       "color": "#222",
       "bgcolor": "#000"
     },
@@ -566,7 +626,6 @@
         "cnr_id": "rgthree-comfy",
         "ver": "42e73c3c48e8268129a6a1ea6d9766913bfc5435"
       },
-      "widgets_values": [],
       "color": "#432",
       "bgcolor": "#653"
     },
@@ -634,7 +693,6 @@
         "cnr_id": "rgthree-comfy",
         "ver": "42e73c3c48e8268129a6a1ea6d9766913bfc5435"
       },
-      "widgets_values": [],
       "color": "#432",
       "bgcolor": "#653"
     },
@@ -682,6 +740,13 @@
         16,
         16
       ],
+      "widgets_values_named": {
+        "measurement": "Pixels",
+        "left": 104,
+        "right": 104,
+        "top": 16,
+        "bottom": 16
+      },
       "color": "#332922",
       "bgcolor": "#593930"
     },
@@ -701,6 +766,7 @@
       "mode": 4,
       "inputs": [
         {
+          "label": "input_image",
           "name": "input_image",
           "shape": 7,
           "type": "IMAGE",
@@ -771,12 +837,20 @@
         "targetMegapixels": 2,
         "rescaleMode": "resolution",
         "rescaleValue": 1.998520162579474,
+        "preserveScalingRatio": false,
         "autoDetect": false,
+        "autoDetectSource": "backend",
+        "autoDetectWidth": 0,
+        "autoDetectHeight": 0,
+        "autoDetectPresetsJSON": "{\"__resolutionMasterConfigVersion\":1,\"__resolutionMasterProfile\":{\"strategy\":\"wan_pixel_range\",\"options\":{\"min_pixels\":182080,\"max_pixels\":1195560,\"multiple\":16}},\"__resolutionMasterPresets\":{\"1:1 Square-1024 (T2I)\":{\"width\":1024,\"height\":1024,\"isCustom\":false,\"isHidden\":false},\"16:9 Landscape-1280\":{\"width\":1280,\"height\":720,\"isCustom\":false,\"isHidden\":false},\"16:9 Landscape-832\":{\"width\":832,\"height\":480,\"isCustom\":false,\"isHidden\":false},\"1:1 Square-512\":{\"width\":512,\"height\":512,\"isCustom\":false,\"isHidden\":false},\"1:1 Square-768\":{\"width\":768,\"height\":768,\"isCustom\":false,\"isHidden\":false},\"1:1 Square-720\":{\"width\":720,\"height\":720,\"isCustom\":false,\"isHidden\":false},\"2:3 Portrait\":{\"width\":588,\"height\":882,\"isCustom\":false,\"isHidden\":false},\"3:4 Portrait\":{\"width\":624,\"height\":832,\"isCustom\":false,\"isHidden\":false},\"9:21 Portrait\":{\"width\":549,\"height\":1280,\"isCustom\":false,\"isHidden\":false},\"3:2 Landscape\":{\"width\":1080,\"height\":720,\"isCustom\":false,\"isHidden\":false},\"4:3 Landscape\":{\"width\":960,\"height\":720,\"isCustom\":false,\"isHidden\":false},\"21:9 Landscape\":{\"width\":1680,\"height\":720,\"isCustom\":false,\"isHidden\":false}}}",
         "autoFitOnChange": false,
         "autoResizeOnChange": false,
+        "autoSnapOnChange": false,
+        "smartFit": false,
         "selectedCategory": "WAN",
         "selectedPreset": "3:4 Portrait",
         "useCustomCalc": false,
+        "showCalcInfo": false,
         "manual_slider_min_w": 64,
         "manual_slider_max_w": 2048,
         "manual_slider_step_w": 64,
@@ -787,11 +861,15 @@
         "section_scaling_collapsed": true,
         "section_autoDetect_collapsed": true,
         "section_presets_collapsed": false,
+        "section_extraControls_collapsed": false,
+        "preferred_compact_height": null,
+        "preferred_expanded_height": 475,
         "dropdown_resolution_expanded": false,
         "dropdown_category_expanded": false,
         "dropdown_preset_expanded": false,
         "preset_selector_mode": "visual",
         "customPresetsJSON": "",
+        "aux_id": "Azornes/Comfyui-Resolution-Master",
         "cnr_id": "Comfyui-Resolution-Master",
         "ver": "764da5344aef45110fbd6e1cd4bf6b4edebb7257"
       },
@@ -803,8 +881,48 @@
         false,
         "resolution",
         1.998520162579474,
+        1,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        "WAN",
+        64,
+        1,
+        1080,
+        2,
+        "{\"__resolutionMasterConfigVersion\":1,\"__resolutionMasterProfile\":{\"strategy\":\"wan_pixel_range\",\"options\":{\"min_pixels\":182080,\"max_pixels\":1195560,\"multiple\":16}},\"__resolutionMasterPresets\":{\"1:1 Square-1024 (T2I)\":{\"width\":1024,\"height\":1024,\"isCustom\":false,\"isHidden\":false},\"16:9 Landscape-1280\":{\"width\":1280,\"height\":720,\"isCustom\":false,\"isHidden\":false},\"16:9 Landscape-832\":{\"width\":832,\"height\":480,\"isCustom\":false,\"isHidden\":false},\"1:1 Square-512\":{\"width\":512,\"height\":512,\"isCustom\":false,\"isHidden\":false},\"1:1 Square-768\":{\"width\":768,\"height\":768,\"isCustom\":false,\"isHidden\":false},\"1:1 Square-720\":{\"width\":720,\"height\":720,\"isCustom\":false,\"isHidden\":false},\"2:3 Portrait\":{\"width\":588,\"height\":882,\"isCustom\":false,\"isHidden\":false},\"3:4 Portrait\":{\"width\":624,\"height\":832,\"isCustom\":false,\"isHidden\":false},\"9:21 Portrait\":{\"width\":549,\"height\":1280,\"isCustom\":false,\"isHidden\":false},\"3:2 Landscape\":{\"width\":1080,\"height\":720,\"isCustom\":false,\"isHidden\":false},\"4:3 Landscape\":{\"width\":960,\"height\":720,\"isCustom\":false,\"isHidden\":false},\"21:9 Landscape\":{\"width\":1680,\"height\":720,\"isCustom\":false,\"isHidden\":false}}}",
+        "resolution",
+        1.998520162579474,
         1
       ],
+      "widgets_values_named": {
+        "mode": "Manual",
+        "latent_type": "latent_4x8",
+        "width": 624,
+        "height": 832,
+        "auto_detect": false,
+        "auto_detect_source": "resolution",
+        "auto_detect_width": 1.998520162579474,
+        "auto_detect_height": 1,
+        "auto_fit_on_change": false,
+        "auto_resize_on_change": false,
+        "auto_snap_on_change": false,
+        "smart_fit": false,
+        "use_custom_calc": false,
+        "preserve_scaling_ratio": false,
+        "selected_category": "WAN",
+        "snap_value": 64,
+        "upscale_value": 1,
+        "target_resolution": 1080,
+        "target_megapixels": 2,
+        "auto_detect_presets_json": "{\"__resolutionMasterConfigVersion\":1,\"__resolutionMasterProfile\":{\"strategy\":\"wan_pixel_range\",\"options\":{\"min_pixels\":182080,\"max_pixels\":1195560,\"multiple\":16}},\"__resolutionMasterPresets\":{\"1:1 Square-1024 (T2I)\":{\"width\":1024,\"height\":1024,\"isCustom\":false,\"isHidden\":false},\"16:9 Landscape-1280\":{\"width\":1280,\"height\":720,\"isCustom\":false,\"isHidden\":false},\"16:9 Landscape-832\":{\"width\":832,\"height\":480,\"isCustom\":false,\"isHidden\":false},\"1:1 Square-512\":{\"width\":512,\"height\":512,\"isCustom\":false,\"isHidden\":false},\"1:1 Square-768\":{\"width\":768,\"height\":768,\"isCustom\":false,\"isHidden\":false},\"1:1 Square-720\":{\"width\":720,\"height\":720,\"isCustom\":false,\"isHidden\":false},\"2:3 Portrait\":{\"width\":588,\"height\":882,\"isCustom\":false,\"isHidden\":false},\"3:4 Portrait\":{\"width\":624,\"height\":832,\"isCustom\":false,\"isHidden\":false},\"9:21 Portrait\":{\"width\":549,\"height\":1280,\"isCustom\":false,\"isHidden\":false},\"3:2 Landscape\":{\"width\":1080,\"height\":720,\"isCustom\":false,\"isHidden\":false},\"4:3 Landscape\":{\"width\":960,\"height\":720,\"isCustom\":false,\"isHidden\":false},\"21:9 Landscape\":{\"width\":1680,\"height\":720,\"isCustom\":false,\"isHidden\":false}}}",
+        "rescale_mode": "resolution",
+        "rescale_value": 1.998520162579474,
+        "batch_size": 1
+      },
       "color": "#432",
       "bgcolor": "#653"
     },
@@ -834,7 +952,7 @@
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            247
+            319
           ]
         },
         {
@@ -853,138 +971,12 @@
         "select_every_nth": 1,
         "skip_first_images": 2
       },
+      "widgets_values_named": {
+        "select_every_nth": 1,
+        "skip_first_images": 2
+      },
       "color": "#233",
       "bgcolor": "#355"
-    },
-    {
-      "id": 143,
-      "type": "FastUnsharpSharpen",
-      "pos": [
-        -1399.6978183755405,
-        44.89213916345822
-      ],
-      "size": [
-        270,
-        82
-      ],
-      "flags": {},
-      "order": 36,
-      "mode": 4,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 247
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            248
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "FastUnsharpSharpen",
-        "aux_id": "vrgamegirl19/comfyui-vrgamedevgirl",
-        "ver": "0c5580921e6e6ad56f9fc1ecddce3264790a15fb"
-      },
-      "widgets_values": [
-        0.25,
-        false
-      ],
-      "color": "#233",
-      "bgcolor": "#355"
-    },
-    {
-      "id": 144,
-      "type": "FastFilmGrain",
-      "pos": [
-        -1104.1468001799597,
-        -125.70055023022884
-      ],
-      "size": [
-        270,
-        106
-      ],
-      "flags": {},
-      "order": 37,
-      "mode": 4,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 248
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            296
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "FastFilmGrain",
-        "aux_id": "vrgamegirl19/comfyui-vrgamedevgirl",
-        "ver": "0c5580921e6e6ad56f9fc1ecddce3264790a15fb"
-      },
-      "widgets_values": [
-        0.015,
-        0.5,
-        4
-      ],
-      "color": "#2a363b",
-      "bgcolor": "#3f5159"
-    },
-    {
-      "id": 172,
-      "type": "ColorMatchToReference",
-      "pos": [
-        -1420.7228492683532,
-        167.81873863097056
-      ],
-      "size": [
-        287.9,
-        102
-      ],
-      "flags": {},
-      "order": 38,
-      "mode": 4,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 296
-        },
-        {
-          "name": "reference_image",
-          "type": "IMAGE",
-          "link": 298
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            297
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ColorMatchToReference",
-        "aux_id": "vrgamegirl19/comfyui-vrgamedevgirl",
-        "ver": "80d994e4296a352b76982cf548845c274a42eaf2"
-      },
-      "widgets_values": [
-        1,
-        4
-      ]
     },
     {
       "id": 149,
@@ -1032,6 +1024,22 @@
         0.95,
         1
       ],
+      "widgets_values_named": {
+        "video_attention_split_steps": "",
+        "cfg_zero_star": false,
+        "use_zero_init": false,
+        "zero_star_steps": 0,
+        "use_fresca": false,
+        "fresca_scale_low": 1,
+        "fresca_scale_high": 1.25,
+        "fresca_freq_cutoff": 20,
+        "use_tcfg": false,
+        "raag_alpha": 0,
+        "bidirectional_sampling": false,
+        "temporal_score_rescaling": false,
+        "tsr_k": 0.95,
+        "tsr_sigma": 1
+      },
       "color": "#2a363b",
       "bgcolor": "#3f5159"
     },
@@ -1070,6 +1078,11 @@
         0,
         1
       ],
+      "widgets_values_named": {
+        "weight": 1.75,
+        "start_percent": 0,
+        "end_percent": 1
+      },
       "color": "#223",
       "bgcolor": "#335"
     },
@@ -1167,7 +1180,11 @@
       "widgets_values": [
         0,
         "comfy"
-      ]
+      ],
+      "widgets_values_named": {
+        "riflex_freq_index": 0,
+        "rope_function": "comfy"
+      }
     },
     {
       "id": 155,
@@ -1247,6 +1264,14 @@
         0.01,
         1
       ],
+      "widgets_values_named": {
+        "scheduler": "simple",
+        "steps_high": 4,
+        "steps_low": 4,
+        "boundary": 0.9,
+        "interval": 0.01,
+        "denoise": 1
+      },
       "color": "#233",
       "bgcolor": "#355"
     },
@@ -1283,6 +1308,9 @@
       "widgets_values": [
         "9.0"
       ],
+      "widgets_values_named": {
+        "output": "9.0"
+      },
       "color": "#233",
       "bgcolor": "#355"
     },
@@ -1334,6 +1362,12 @@
         0.25,
         true
       ],
+      "widgets_values_named": {
+        "nag_scale": 11,
+        "nag_tau": 2.5,
+        "nag_alpha": 0.25,
+        "inplace": true
+      },
       "color": "#223",
       "bgcolor": "#335"
     },
@@ -1388,6 +1422,14 @@
         128,
         "default"
       ],
+      "widgets_values_named": {
+        "enable_vae_tiling": false,
+        "tile_x": 272,
+        "tile_y": 272,
+        "tile_stride_x": 144,
+        "tile_stride_y": 128,
+        "normalization": "default"
+      },
       "color": "#2a363b",
       "bgcolor": "#3f5159"
     },
@@ -1434,7 +1476,6 @@
         "aux_id": "kijai/ComfyUI-WanVideoWrapper",
         "ver": "d74cfc54e8ae065d7f32b36634be770bae525f5c"
       },
-      "widgets_values": [],
       "color": "#323",
       "bgcolor": "#535"
     },
@@ -1481,7 +1522,6 @@
         "aux_id": "kijai/ComfyUI-WanVideoWrapper",
         "ver": "d74cfc54e8ae065d7f32b36634be770bae525f5c"
       },
-      "widgets_values": [],
       "color": "#232",
       "bgcolor": "#353"
     },
@@ -1535,6 +1575,12 @@
         false,
         false
       ],
+      "widgets_values_named": {
+        "lora": "wan2.2_i2v_A14b_high_noise_lora_rank64_lightx2v_4step_1022.safetensors",
+        "strength": 1,
+        "low_mem_load": false,
+        "merge_loras": false
+      },
       "color": "#323",
       "bgcolor": "#535"
     },
@@ -1588,6 +1634,12 @@
         false,
         false
       ],
+      "widgets_values_named": {
+        "lora": "wan2.2_i2v_A14b_low_noise_lora_rank64_lightx2v_4step_1022.safetensors",
+        "strength": 1,
+        "low_mem_load": false,
+        "merge_loras": false
+      },
       "color": "#232",
       "bgcolor": "#353"
     },
@@ -1610,6 +1662,18 @@
           "name": "image",
           "type": "IMAGE",
           "link": 278
+        },
+        {
+          "name": "width",
+          "shape": 7,
+          "type": "INT",
+          "link": null
+        },
+        {
+          "name": "height",
+          "shape": 7,
+          "type": "INT",
+          "link": null
         }
       ],
       "outputs": [
@@ -1617,8 +1681,7 @@
           "name": "image",
           "type": "IMAGE",
           "links": [
-            280,
-            298
+            280
           ]
         },
         {
@@ -1647,6 +1710,12 @@
         "crop",
         "lanczos"
       ],
+      "widgets_values_named": {
+        "megapixels": 1.1,
+        "multiple_of": 16,
+        "resize_mode": "crop",
+        "upscale_method": "lanczos"
+      },
       "color": "#332922",
       "bgcolor": "#593930"
     },
@@ -1723,6 +1792,13 @@
         true,
         false
       ],
+      "widgets_values_named": {
+        "cfg": 1,
+        "seed": 1,
+        "control_after_generate": "fixed",
+        "force_offload": true,
+        "add_noise_to_samples": false
+      },
       "color": "#232",
       "bgcolor": "#353"
     },
@@ -1833,6 +1909,18 @@
         true,
         false
       ],
+      "widgets_values_named": {
+        "motion_amplitude": 1.2,
+        "width": 832,
+        "height": 480,
+        "num_frames": 81,
+        "noise_aug_strength": 0,
+        "start_latent_strength": 1,
+        "end_latent_strength": 1,
+        "force_offload": true,
+        "fun_or_fl2v_model": true,
+        "tiled_vae": false
+      },
       "color": "#233",
       "bgcolor": "#355"
     },
@@ -1894,6 +1982,15 @@
         true,
         "gpu"
       ],
+      "widgets_values_named": {
+        "model_name": "wan21UMT5XxlFP32_fp32.safetensors",
+        "precision": "fp32",
+        "positive_prompt": "Girl dancing on beach",
+        "negative_prompt": "Cartoonish, animated, unrealistic, unrealistic colors, unrealistic movements, beauty filter, plastic skin, soft focus, low resolution, blurry textures, smoothed skin, washed out details, poor lighting, artificial appearance cartoon, plastic skin, static, blurred details, subtitles, still image, censored, grayscale, low quality, worst quality, jpeg, ugly, weird, deformed, bad anatomy, wrong body proportions, disfigured, incomplete, unsharp, obese, undetailed , extra hands, fused fingers, deformed hands, extra arms, disembodied arms",
+        "quantization": "disabled",
+        "use_disk_cache": true,
+        "device": "gpu"
+      },
       "color": "#222",
       "bgcolor": "#000"
     },
@@ -1939,6 +2036,14 @@
         -1,
         false
       ],
+      "widgets_values_named": {
+        "scheduler": "dpm++_sde",
+        "steps": 1,
+        "shift": 1,
+        "start_step": 0,
+        "end_step": -1,
+        "enhance_hf": false
+      },
       "color": "#232",
       "bgcolor": "#353"
     },
@@ -1984,6 +2089,14 @@
         -1,
         false
       ],
+      "widgets_values_named": {
+        "scheduler": "dpm++_sde",
+        "steps": 1,
+        "shift": 1,
+        "start_step": 0,
+        "end_step": -1,
+        "enhance_hf": false
+      },
       "color": "#323",
       "bgcolor": "#535"
     },
@@ -2036,14 +2149,35 @@
       ],
       "title": "High noise Lora",
       "properties": {
-        "Node name for S&R": "WanVideo Lora Select (LoraManager)"
+        "Node name for S&R": "WanVideo Lora Select (LoraManager)",
+        "__lm_widget_ids": [
+          "low_mem_load",
+          "merge_loras",
+          "__lm_autocomplete_meta_text",
+          "text",
+          "loras"
+        ]
       },
       "widgets_values": [
         false,
         true,
+        {
+          "version": 1,
+          "textWidgetName": "text"
+        },
         "",
         []
       ],
+      "widgets_values_named": {
+        "low_mem_load": false,
+        "merge_loras": true,
+        "__lm_autocomplete_meta_text": {
+          "version": 1,
+          "textWidgetName": "text"
+        },
+        "text": "",
+        "loras": []
+      },
       "color": "#323",
       "bgcolor": "#535"
     },
@@ -2096,14 +2230,35 @@
       ],
       "title": "Low  noise Lora",
       "properties": {
-        "Node name for S&R": "WanVideo Lora Select (LoraManager)"
+        "Node name for S&R": "WanVideo Lora Select (LoraManager)",
+        "__lm_widget_ids": [
+          "low_mem_load",
+          "merge_loras",
+          "__lm_autocomplete_meta_text",
+          "text",
+          "loras"
+        ]
       },
       "widgets_values": [
         false,
         true,
+        {
+          "version": 1,
+          "textWidgetName": "text"
+        },
         "",
         []
       ],
+      "widgets_values_named": {
+        "low_mem_load": false,
+        "merge_loras": true,
+        "__lm_autocomplete_meta_text": {
+          "version": 1,
+          "textWidgetName": "text"
+        },
+        "text": "",
+        "loras": []
+      },
       "color": "#232",
       "bgcolor": "#353"
     },
@@ -2146,6 +2301,10 @@
         "girl_on_beach_image_pod.png",
         "image"
       ],
+      "widgets_values_named": {
+        "image": "girl_on_beach_image_pod.png",
+        "upload": "image"
+      },
       "color": "#222",
       "bgcolor": "#000"
     },
@@ -2222,6 +2381,13 @@
         true,
         false
       ],
+      "widgets_values_named": {
+        "cfg": 1,
+        "seed": 1023557933619079,
+        "control_after_generate": "randomize",
+        "force_offload": true,
+        "add_noise_to_samples": false
+      },
       "color": "#323",
       "bgcolor": "#535"
     },
@@ -2265,6 +2431,15 @@
         0,
         false
       ],
+      "widgets_values_named": {
+        "blocks_to_swap": 5,
+        "offload_img_emb": false,
+        "offload_txt_emb": false,
+        "use_non_blocking": false,
+        "vace_blocks_to_swap": 0,
+        "prefetch_blocks": 0,
+        "block_swap_debug": false
+      },
       "color": "#2a363b",
       "bgcolor": "#3f5159"
     },
@@ -2272,8 +2447,8 @@
       "id": 145,
       "type": "RIFE VFI",
       "pos": [
-        -1101.1081983179895,
-        164.5123542563803
+        -1102.6311323669902,
+        -132.4416606640429
       ],
       "size": [
         289.6578063964844,
@@ -2282,13 +2457,13 @@
       "flags": {
         "collapsed": false
       },
-      "order": 39,
+      "order": 36,
       "mode": 0,
       "inputs": [
         {
           "name": "frames",
           "type": "IMAGE",
-          "link": 297
+          "link": 319
         },
         {
           "name": "optional_interpolation_states",
@@ -2333,6 +2508,17 @@
         true,
         1
       ],
+      "widgets_values_named": {
+        "ckpt_name": "rife49.pth",
+        "clear_cache_after_n_frames": 16,
+        "multiplier": 2,
+        "fast_mode": true,
+        "ensemble": true,
+        "scale_factor": 1,
+        "dtype": "float32",
+        "torch_compile": true,
+        "batch_size": 1
+      },
       "color": "#233",
       "bgcolor": "#355"
     },
@@ -2340,15 +2526,15 @@
       "id": 146,
       "type": "VHS_VideoCombine",
       "pos": [
-        -1412.0314915846636,
-        507.65976494646986
+        -1387.6660571868786,
+        204.6145366560452
       ],
       "size": [
         482.9180517169257,
         334
       ],
       "flags": {},
-      "order": 40,
+      "order": 37,
       "mode": 0,
       "inputs": [
         {
@@ -2390,6 +2576,31 @@
         "widget_ue_connectable": {}
       },
       "widgets_values": {
+        "frame_rate": 32,
+        "loop_count": 0,
+        "filename_prefix": "WAN-i2v-wrapper-painter",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 19,
+        "save_metadata": true,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "FINAL-i2v-loop-wrapper_00001.mp4",
+            "subfolder": "",
+            "type": "output",
+            "format": "video/h264-mp4",
+            "frame_rate": 18,
+            "workflow": "FINAL-i2v-loop-wrapper_00001.png",
+            "fullpath": "/workspace/ComfyUI/output/FINAL-i2v-loop-wrapper_00001.mp4"
+          }
+        }
+      },
+      "widgets_values_named": {
         "frame_rate": 32,
         "loop_count": 0,
         "filename_prefix": "WAN-i2v-wrapper-painter",
@@ -2506,22 +2717,6 @@
       51,
       1,
       "WANVIDLORA"
-    ],
-    [
-      247,
-      142,
-      0,
-      143,
-      0,
-      "IMAGE"
-    ],
-    [
-      248,
-      143,
-      0,
-      144,
-      0,
-      "IMAGE"
     ],
     [
       250,
@@ -2676,30 +2871,6 @@
       "INT"
     ],
     [
-      296,
-      144,
-      0,
-      172,
-      0,
-      "IMAGE"
-    ],
-    [
-      297,
-      172,
-      0,
-      145,
-      0,
-      "IMAGE"
-    ],
-    [
-      298,
-      167,
-      0,
-      172,
-      1,
-      "IMAGE"
-    ],
-    [
       299,
       175,
       0,
@@ -2842,6 +3013,14 @@
       11,
       2,
       "WANVIDLORA"
+    ],
+    [
+      319,
+      142,
+      0,
+      145,
+      0,
+      "IMAGE"
     ]
   ],
   "groups": [
@@ -2855,7 +3034,6 @@
         1849.7000393640476
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -2868,7 +3046,6 @@
         551.0556067306329
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -2881,7 +3058,6 @@
         769.9718263735184
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -2894,7 +3070,6 @@
         426.2262043081448
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -2907,7 +3082,6 @@
         918.5971348252676
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -2920,7 +3094,6 @@
         1856.3438579439603
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -2933,7 +3106,6 @@
         1238.2170823604934
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -2946,7 +3118,6 @@
         491.6666354713598
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -2959,7 +3130,6 @@
         1247.3467022120644
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -2972,7 +3142,6 @@
         1121.9537378945686
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     }
   ],
@@ -2981,11 +3150,11 @@
     "ds": {
       "scale": 0.5253338637021102,
       "offset": [
-        3647.4487617733025,
-        -159.40331063269556
+        3091.611759486356,
+        588.3116472891971
       ]
     },
-    "frontendVersion": "1.41.18",
+    "frontendVersion": "1.52.7",
     "reroutes": [
       {
         "id": 4,
@@ -3034,5 +3203,9 @@
       }
     ]
   },
-  "version": 0.4
+  "version": 0.4,
+  "seed_widgets": {
+    "173": 1,
+    "177": 1
+  }
 }

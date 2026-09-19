@@ -7,6 +7,15 @@
 - The date reflects when the related custom nodes were cloned from their upstream repositories.
 - Pinned custom nodes are not updated automatically, because changing those pins can introduce compatibility issues.
 
+## 19092026
+
+- ComfyUI 0.36.0
+- Removed unused custom nodes.
+- Lowered pod size by excluding unused media in custom_nodes
+- Added GPU-accelerated video encoding with FFmpeg and NVENC to speed up video creation on slower vCPUs, if runpod host supports it.
+- Forked and customized model_linker.
+- Updated Lora-Manager template.
+
 ## 130920026
 
 - ComfyUI 0.35.0
