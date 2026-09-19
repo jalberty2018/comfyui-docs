@@ -15,6 +15,7 @@
 - Added GPU-accelerated video encoding with FFmpeg and NVENC to speed up video creation on slower vCPUs, if runpod host supports it.
 - Forked and customized model_linker.
 - Updated Lora-Manager template.
+- Updated workflows animate
 
 ## 130920026
 
