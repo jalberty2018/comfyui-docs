@@ -30,7 +30,6 @@
 
 - [Video Helper Suite](https://github.com/kosinkadink/ComfyUI-VideoHelperSuite)
 - [Frame Interpolation](https://github.com/Fannovel16/ComfyUI-Frame-Interpolation)
-- [VRgamedevgirl](https://github.com/vrgamegirl19/comfyui-vrgamedevgirl)
 
 ### Pose Estimation/ControlNet
 
@@ -41,25 +40,17 @@
 ### Flow
 
 - [Power Flow](https://github.com/x3bits/ComfyUI-Power-Flow)
-- [Outputlists-combiner](https://github.com/geroldmeisinger/ComfyUI-outputlists-combiner)
 
 ### Segmentation
 
 - [Segment anything 2](https://github.com/kijai/ComfyUI-segment-anything-2)
 - [RMBG](https://github.com/1038lab/ComfyUI-RMBG)
-- [SecNodes](https://github.com/9nate-drake/Comfyui-SecNodes)
 - [SAM3](https://github.com/PozzettiAndrea/ComfyUI-SAM3)
 
 ### Model Specific
 
 - [LTX](https://github.com/Lightricks/ComfyUI-LTXVideo)
 - [PainterLTXV2](https://github.com/princepainter/ComfyUI-PainterLTXV2)
-- [Iamccs-nodes](https://github.com/IAMCCS/IAMCCS-nodes.git)
-
-### Sampling
-
-- [RES4LYF](https://github.com/ClownsharkBatwing/RES4LYF)
-- [was_affine](https://github.com/WASasquatch/was_affine)
 
 ### Audio
 

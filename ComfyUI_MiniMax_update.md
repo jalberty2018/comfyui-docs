@@ -12,7 +12,8 @@
 ## 17092026
 
 - ComfyUI 0.36.0
-- Removed unused custom nodes and optimised container volume.
+- Removed unused custom nodes.
+- Lowered pod size by excluding unused media in custom_nodes
 - Added GPU-accelerated video encoding with FFmpeg and NVENC to speed up video creation on slower vCPUs, if runpod host supports it.
 - Updated worklows to use nvenc video encoding.
 - Forked and customized model_linker.
