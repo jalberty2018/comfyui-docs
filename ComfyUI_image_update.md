@@ -1,0 +1,222 @@
+# run-comfyui-image
+
+## Release Notes Policy
+
+- A new dated subtitle is added whenever a new stable ComfyUI release is included.
+- The date is updated later when custom nodes are added, removed, or changed, or when code improvements and bug fixes are applied.
+- The date reflects when the related custom nodes were cloned from their upstream repositories.
+- Pinned custom nodes are not updated automatically, because changing those pins can introduce compatibility issues.
+- Tested on a wide range of GPU's including RTX 3090,4090,5090, L40S, L4 , PRO 6000 MiG 24/48 Gb.
+
+## 24092026
+
+- ComfyUI 0.37.1
+- Pytorch 2.12.1 CUDA 13.0 build
+- Added Runpod templates with workflows for QWEN Image 2.1 with/without heretic prompt enhancer.
+- [ComfyUI-QwenImageRefPack](https://github.com/Hearmeman24/ComfyUI-QwenImageRefPack)
+- Updated llama-cpp to `b11115`
+
+## Container CUDA upgrade notice
+
+- run-comfyui-image2 requires CUDA 13.x (due to breaking changes in "comfy-kitchen" and no support for CUDA 12.x on modern GPU's by ComfyUI).
+- If you need due GPU shortage a lower cuda version change runpod container template tag to run-comfyui-image2:18092026.
+- run-comfyui-image will be pinned on ComfyUI 0.36.0, custom nodes with still be maintained.
+
+## 18092026 image and image2
+
+- ComfyUI 0.36.0
+- Removed unused custom nodes.
+- Forked and customized model_linker.
+- Updated Lora-Manager template.
+- Lowered pod size by excluding unused media in custom_nodes.
+- Last version compatible with cuda 12.x and higher.
+
+## 12092026
+
+- ComfyUI 0.35.0
+- Added SenseNova U1.5 to image2
+- Updated image
+
+## 08092026
+
+- ComfyUI 0.34.0
+- Added native llama-cpp to image2 with CUDA support
+- [comfyui-obvpm](https://github.com/chanon/comfyui-obvpm)
+- [ComfyUI-CyberKrea-Sampler](https://github.com/cyberdeliaAI/ComfyUI-CyberKrea-Sampler)
+
+## 12082026 image2
+
+- ComfyUI 0.32.0
+
+## 11082026
+
+- ComfyUI 0.31.0
+- [krea2-anypaint](https://github.com/alexw5702-afk/krea2-anypaint)
+- [Krea-Moodboard](https://github.com/Andro-Meta/ComfyUI-Krea-Moodboards)
+- [Krea2-NAG](https://github.com/iljung1106/ComfyUI-Krea2-NAG)
+
+## Split
+
+Krea-2 has been moved to image2 to reduce the number of custom nodes in image and ensure compatibility with future models. Both images will continue to be updated as long as ComfyUI supports their respective PyTorch/Cuda versions.
+
+## 05082026 image
+
+- ComfyUI 0.30.0
+- [comfyui-model-linker](https://github.com/kianxyzw/comfyui-model-linker)
+
+## 01082026
+
+- ComfyUI 0.29.0
+- Fixed logic error with hf download watchdog.
+- Updated deployment tutorial.
+
+## 20072026
+
+- ComfyUI 0.28.0
+- Fixed Flux-Klein text_encoder download.
+- Updated hf download logic trying to prevent xet stalls.
+- [one-node-flux-2-klein](https://github.com/yanokusnir-ai/one-node-flux-2-klein)
+- [Krea2edit](https://github.com/lbouaraba/comfyui-krea2edit)
+- [krea2-negpip](https://github.com/blue-pen5805/ComfyUI-krea2-negpip)
+- [Krea2-Projector-Tuner](https://github.com/BlackSnowSkill/ComfyUI-Krea2-Projector-Tuner)
+- [Krea2-attention-tweak.git](https://github.com/Extraltodeus/ComfyUI-Krea2-attention-tweak)
+- [Krea2-Ostris-Edit](https://github.com/ostris/ComfyUI-Krea2-Ostris-Edit)
+
+## 09072026
+
+- ComfyUI 0.27.0
+- [krea-reference](https://github.com/kgilper/krea-reference)
+- [KreaReason](https://github.com/shootthesound/ComfyUI-KreaReason)
+- [Krea2-StyleTransfer](https://github.com/jieg9341-lab/ComfyUI-Krea2-StyleTransfer)
+
+## 30062026
+
+- ComfyUI 0.26.0
+- Added Krea-2 t2v uncensored workflow.
+- [krea2-conditioning](https://github.com/huwhitememes/comfyui-krea2-conditioning)
+- [Krea2TextEncoder](https://github.com/ethanfel/ComfyUI-Krea2TextEncoder)
+- [Conditioning-Rebalance](https://github.com/nova452/ComfyUI-Conditioning-Rebalance)
+- [Krea2T-Enhancer](https://github.com/capitan01R/ComfyUI-Krea2T-Enhancer)
+
+## 19062026
+
+- ComfyUI 0.25.0
+- [KleinTiledUpscaler](https://github.com/Gavr728/ComfyUI_KleinTiledUpscale)
+- [JoyCaption](https://github.com/fpgaminer/joycaption_comfyui)
+- Fixed typos, white space breaks, documentation with Codex.
+- Made moves and hf downloads more verbose.
+- Fixed Flux-Klein download.
+
+## 06062026
+
+- ComfyUI 0.24.0
+- [Untwisting-RoPE](https://github.com/BigStationW/ComfyUi-Untwisting-RoPE)
+- [TextEncodeEditAdvanced](https://github.com/BigStationW/ComfyUi-TextEncodeEditAdvanced)
+- Removed VLM as prompt enhance works better with a separate pod (textgen for example).
+- Removed ComfyUI-SecNodes as SAM3 is more powerful.
+
+## 01062026
+
+- ComfyUI 0.23.0
+- [Flux2KontextConditioner](https://github.com/KursatAs/ComfyUI-Flux2KontextConditioner.git)
+
+## 25052026
+
+- ComfyUI 0.22.0
+- [KleinRefGrid](https://github.com/xb1n0ry/ComfyUI-KleinRefGrid)
+- [ReferenceLatentPlus](https://github.com/shootthesound/comfyui-ReferenceLatentPlus)
+- [Inpaint-CropAndStitch](https://github.com/lquesada/ComfyUI-Inpaint-CropAndStitch)
+
+## 15052026
+
+- ComfyUI 0.21.1
+- [Easy-Use](https://github.com/yolain/ComfyUI-Easy-Use.git)
+- [S2Guidance](https://github.com/orpheus-gaze/ComfyUI-S2Guidance.git)
+
+## 09052026
+
+- ComfyUI 0.20.1
+- Updated Civitai downloader script and environment variables
+- [NKD-Klein-Tools](https://github.com/Nekodificador/ComfyUI-NKD-Klein-Tools.git)
+
+## 27042026
+
+- ComfyUI 0.19.3
+- [DiversityBoost](https://github.com/facok/ComfyUI-DiversityBoost)
+- [Flux2Klein-Conditioning-Toolkit](https://github.com/xmarre/ComfyUI-Flux2Klein-Conditioning-Toolkit)
+- [Iamccs-nodes](https://github.com/IAMCCS/IAMCCS-nodes.git)
+
+## 16042026
+
+- ComfyUI 0.19.1
+- ERNIE image support
+
+## 15042026
+
+- ComfyUI 0.19.0
+- Updated ZIB-ZIT workflows, QWEN workflow.
+- Z-Image CLIP text encoder changed to abliturated
+- [Lora Optimizer](https://github.com/ethanfel/ComfyUI-LoRA-Optimizer)
+
+## 24032026
+
+- ComfyUI 0.18.1
+- [QwenMultiAngle](https://github.com/jtydhr88/ComfyUI-qwenmultiangle)
+
+## 06032026
+
+- ComfyUI 0.16.3
+
+## 26022026
+
+- ComfyUI 0.15.0
+- [EasyLoRAMerger](https://github.com/Terpentinas/EasyLoRAMerger)
+
+## 22022026
+
+- ComfyUI 0.14.0
+- [QwenVL-mod](https://github.com/huchukato/ComfyUI-QwenVL-Mod)
+- [ZImageTurboHQNodes](https://github.com/marduk191/ComfyUI-ZImageTurboHQNodes)
+- QWEN image controlnet.
+
+## 11022026
+
+- ComfyUI 0.13.0
+- [CameraAngleSelector](https://github.com/NickPittas/ComfyUI_CameraAngleSelector)
+
+## 04022026
+
+- ComfyUI 0.12.0
+- [ComfyUI-ReferenceChain](https://github.com/remingtonspaz/ComfyUI-ReferenceChain)
+- [comfyui-meancache-z](https://github.com/facok/comfyui-meancache-z)
+- [ComfyUI-CapitanZiT-Scheduler](https://github.com/capitan01R/ComfyUI-CapitanZiT-Scheduler)
+
+## 01022026
+
+- ComfyUI 0.11.0
+- Updated custom_nodes for Flux-Klein edit, updated QWEN EDIT template and workflows
+- Z-Image Base.
+
+## 25012026
+
+- ComfyUI 0.10.0
+- Added configuration for loading workflows and models depending on the available VRAM.
+- [Arthemy_Live-Tuner-ZIT-ComfyUI](https://github.com/aledelpho/Arthemy_Live-Tuner-ZIT-ComfyUI)
+- [Flux2ImageReference](https://github.com/naku-yh/ComfyUI_Flux2ImageReference)
+- [ZImagePowerNodes](https://github.com/martin-rizzo/ComfyUI-ZImagePowerNodes.git)
+- [Flux2Klein-Enhancer](https://github.com/capitan01R/ComfyUI-Flux2Klein-Enhancer)
+
+## 20012026
+
+- ComfyUI 0.9.2
+
+## 14012026
+
+- ComfyUI 0.9.1
+- Added environment variable MEDIA[1-50] to download files to /workspace/ComfyUI/input for test/tutorial purpose.
+
+## 11012026
+
+- ComfyUI 0.8.0
+- Added environment variable "CIVITAI_MODEL_UNET_URL" for download.
+- Fixed civitai downloader reloading models after restarting pod. 

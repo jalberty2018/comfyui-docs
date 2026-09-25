@@ -1,0 +1,74 @@
+# 📚 Image Resources
+
+## ComfyUI
+
+- [docs](https://docs.comfy.org/)
+
+## Z-Image Turbo
+
+- [Website](https://tongyi-mai.github.io/Z-Image-blog/)
+- [Project](https://z-image-turbo.ai)
+- [GitHub](https://github.com/Tongyi-MAI/Z-Image)
+- [Hugging Face](https://huggingface.co/Tongyi-MAI/Z-Image-Turbo/blob/main/README.md)
+- [Examples](https://comfyanonymous.github.io/ComfyUI_examples/z_image/)
+- [Fun ControlNet](https://vantagewithai.com/z-image-turbo-fun-controlnet-complete-guide-to-pose-guided-ai-image-generation-using-comfyui/)
+
+## Z-Image
+
+- [Blog ComfyUI](https://blog.comfy.org/p/z-image-day-0-support-in-comfyui)
+
+## FLUX.2 Dev
+
+- [Website](https://bfl.ai)
+- [GitHub](https://github.com/black-forest-labs/flux2)
+- [Hugging Face](https://huggingface.co/black-forest-labs/FLUX.2-dev)
+- [Examples](https://comfyanonymous.github.io/ComfyUI_examples/flux2/)
+
+## Hunyuan Image 2.1
+
+- [GitHub](https://github.com/Tencent-Hunyuan/HunyuanImage-2.1)
+- [Hugging Face](https://huggingface.co/tencent/HunyuanImage-2.1)
+- [Examples](https://comfyanonymous.github.io/ComfyUI_examples/hunyuan_image/)
+
+## FLUX.1 Dev SRPO
+
+- [Website](https://tencent.github.io/srpo-project-page/)
+
+## FLUX.1 Dev Kontext
+
+- [Tutorial](https://docs.comfy.org/tutorials/flux/flux-1-kontext-dev)
+- [Examples](https://comfyanonymous.github.io/ComfyUI_examples/flux/#flux-kontext-image-editing-model)
+
+## FLUX Klein
+
+- [ComfyUI](https://docs.comfy.org/tutorials/flux/flux-2-klein)
+
+## ByteDance USO
+
+- [Website](https://bytedance.github.io/USO/)
+- [GitHub](https://github.com/bytedance/USO)
+- [Tutorial](https://docs.comfy.org/tutorials/flux/flux-1-uso)
+- [Hugging Face](https://huggingface.co/bytedance-research/USO)
+
+## Qwen-Image-Edit
+
+- [Hugging Face](https://huggingface.co/Qwen/Qwen-Image-Edit-2511)
+
+## Qwen-Image
+
+- [ComfyUI](https://docs.comfy.org/tutorials/image/qwen/qwen-image-2512)
+
+## Baidu ERNIE-Image
+
+- [ComfyUI](https://comfyui.org/en/ernie-image-day-0-support)
+- [Official](https://ernie.baidu.com/blog/posts/ernie-image/)
+
+## Krea-2
+
+- [ComfyUI](https://comfyui.org/en/krea-2-open-source-models-are-now)
+
+## SenseNova U1.5
+
+- [Native ComfyUI implementation: PR #15922](https://github.com/Comfy-Org/ComfyUI/pull/15922)
+- [Original model](https://huggingface.co/sensenova/SenseNova-U1.5-8B-MoT)
+- [ComfyUI checkpoint and converted LoRA](https://huggingface.co/t8star/SenseNova-U1.5-Comfy)

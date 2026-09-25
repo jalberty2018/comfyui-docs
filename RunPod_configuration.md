@@ -1,0 +1,150 @@
+# ⚙️ Environment Variables
+
+## ComfyUI move to workspace configuration
+
+| Variable                  | Description                                                                    | Default |
+|---------------------------|--------------------------------------------------------------------------------|---------|
+| `MOVE_STATUS_INTERVAL`    | Seconds between progress updates while moving ComfyUI to the pod volume     | 5       |
+| `MOVE_STALL_TIMEOUT`      | Stop the move after this many seconds without a change in copied directory size | 300     |
+
+## ComfyUI Configuration
+
+- `VRAM_THRESHOLD_BLACKWELL` is supported by the MiniMax, Image2, and LTX pods.
+  Image and WAN use `VRAM_THRESHOLD` for both standard and Blackwell model selection.
+
+| Variable                  | Description                                                                    | Default |
+|---------------------------|--------------------------------------------------------------------------------|---------|
+| `COMFYUI_EXTRA_ARGUMENTS` | Additional arguments for the ComfyUI CLI                                       |         |
+| `VRAM_THRESHOLD`          | VRAM threshold in GB for selecting the standard high- or low-VRAM model set | Image: 38 GB; Image2/LTX/MiniMax/WAN: 36 GB |
+| `VRAM_THRESHOLD_BLACKWELL` | VRAM threshold in GB for selecting Blackwell-specific high- or low-VRAM models | Image2/LTX/MiniMax: 40 GB |
+| `COMFYUI_START_MAX_TRIES` | Number of tries to wait until ComfyUI is online; depends on vCPU speed          | 60      |
+| `HAS_GPU_BLACKWELL`       | Automatically exported as `1` when a Blackwell GPU is detected; otherwise `0`  | `0`     |
+
+## Authentication Tokens
+
+| Token Source   | Variable         |
+|----------------|------------------|
+| Code Server    | `PASSWORD`       |
+| Hugging Face   | `HF_TOKEN`       |
+| CivitAI        | `CIVITAI_TOKEN`  |
+
+## Hugging Face Hub model-transfer configuration
+
+| Variable              | Description                                                                                               | Default |
+|-----------------------|-----------------------------------------------------------------------------------------------------------|---------|
+| `HF_DOWNLOAD_STALL_TIMEOUT` | Stall watchdog for `hf download` in seconds. | `300`   |
+| `HF_DOWNLOAD_KILL_AFTER` | Kill grace period `hf download` in seconds. | `30`   |
+
+## Hugging Face ComfyUI model configuration
+
+Choose the prefix that matches when the model should be downloaded:
+
+| Condition | Prefix |
+|-----------|--------|
+| Every GPU, independent of VRAM | `HF_MODEL_` |
+| Every Blackwell GPU, independent of VRAM | `HF_MODEL_BLACKWELL_` |
+| More VRAM than `VRAM_THRESHOLD` | `HF_MODEL_HVRAM_` |
+| VRAM equal to or below `VRAM_THRESHOLD` | `HF_MODEL_LVRAM_` |
+| Blackwell with more VRAM than `VRAM_THRESHOLD_BLACKWELL` | `HF_MODEL_HVRAM_BLACKWELL_` |
+| Blackwell with VRAM equal to or below `VRAM_THRESHOLD_BLACKWELL` | `HF_MODEL_LVRAM_BLACKWELL_` |
+
+```text
+HF_MODEL_HVRAM_BLACKWELL_DIFFUSION_MODELS1=org/high-vram-model
+HF_MODEL_HVRAM_BLACKWELL_DIFFUSION_MODELS_FILENAME1=high-vram-model.safetensors
+
+HF_MODEL_LVRAM_BLACKWELL_DIFFUSION_MODELS1=org/low-vram-model
+HF_MODEL_LVRAM_BLACKWELL_DIFFUSION_MODELS_FILENAME1=low-vram-model.safetensors
+```
+
+Always configure both the model and filename variable. Selection is evaluated per model type. If no complete matching Blackwell pair exists, the corresponding standard high- or low-VRAM pair is used automatically.
+
+| Model Type      | Model                                | Safetensors/GGUF                              |
+|-----------------|--------------------------------------|-----------------------------------------------|
+| Diffusion Model | `HF_MODEL_DIFFUSION_MODELS[1-20]`    | `HF_MODEL_DIFFUSION_MODELS_FILENAME[1-20]`    |
+| Checkpoints     | `HF_MODEL_CHECKPOINTS[1-20]`         | `HF_MODEL_CHECKPOINTS_FILENAME[1-20]`         |
+| Text Encoders   | `HF_MODEL_TEXT_ENCODERS[1-20]`       | `HF_MODEL_TEXT_ENCODERS_FILENAME[1-20]`       |
+| CLIP Vision     | `HF_MODEL_CLIP_VISION[1-20]`         | `HF_MODEL_CLIP_VISION_FILENAME[1-20]`         |
+| Audio Encoders  | `HF_MODEL_AUDIO_ENCODERS[1-20]`      | `HF_MODEL_AUDIO_ENCODERS_FILENAME[1-20]`      |
+| Model Patches   | `HF_MODEL_PATCHES[1-20]`             | `HF_MODEL_PATCHES_FILENAME[1-20]`             |
+| VAE             | `HF_MODEL_VAE[1-20]`                 | `HF_MODEL_VAE_FILENAME[1-20]`                 |
+| Upscalers       | `HF_MODEL_UPSCALER[1-20]`            | `HF_MODEL_UPSCALER_PTH[1-20]`                 |
+| Latent Upscale  | `HF_MODEL_LATENT_UPSCALE[1-20]`      | `HF_MODEL_LATENT_UPSCALE_FILENAME[1-20]`      |
+| LoRAs           | `HF_MODEL_LORA[1-20]`                | `HF_MODEL_LORA_FILENAME[1-20]`                |
+| VAE TAESD       | `HF_MODEL_VAE_APPROX[1-20]`          | `HF_MODEL_VAE_APPROX_FILENAME[1-20]`          |
+| ControlNet      | `HF_MODEL_CONTROLNET[1-20]`          | `HF_MODEL_CONTROLNET_FILENAME[1-20]`          |
+
+## Hugging Face model configuration
+
+### GPU and VRAM selection (all pods)
+
+MiniMax, Image, Image2, LTX and WAN2 support all six prefixes from the ComfyUI model configuration above
+for downloads to a custom directory. Append the suffixes below to the chosen
+prefix; use the same prefix and index for every variable in a download.
+
+| Type | Model suffix | Filename suffix | Include suffix | Exclude suffix | Directory suffix |
+|------|--------------|-----------------|----------------|----------------|------------------|
+| File | `FILE[1-20]` | `FILE_FILENAME[1-20]` | `FILE_INCLUDE[1-20]` | `FILE_EXCLUDE[1-20]` | `FILE_DIR[1-20]` |
+| Dir | `FULL[1-20]` | | `FULL_INCLUDE[1-20]` | `FULL_EXCLUDE[1-20]` | `FULL_DIR[1-20]` |
+
+```text
+HF_MODEL_HVRAM_FILE1=org/high-vram-model
+HF_MODEL_HVRAM_FILE_FILENAME1=model.safetensors
+HF_MODEL_HVRAM_FILE_DIR1=models/custom
+
+HF_MODEL_HVRAM_BLACKWELL_FILE1=org/blackwell-model
+HF_MODEL_HVRAM_BLACKWELL_FILE_FILENAME1=model.safetensors
+HF_MODEL_HVRAM_BLACKWELL_FILE_DIR1=models/custom
+
+HF_MODEL_FULL1=org/full-model
+HF_MODEL_FULL_DIR1=models/custom/full-model
+HF_MODEL_FULL_INCLUDE1=*.safetensors
+HF_MODEL_FULL_EXCLUDE1=optimizer*
+```
+
+Selection and Blackwell fallback are evaluated separately for `FILE` and `FULL`.
+A configured file requires a model and filename; a full model requires a model.
+A matching Blackwell group replaces the corresponding standard group as a whole.
+The selected VRAM group and the selected VRAM-independent group are both downloaded.
+Directories are relative to `/workspace/ComfyUI/`; include/exclude patterns are optional.
+
+### Existing variable names (all pods)
+
+The names below remain supported. All pods use them as the VRAM-independent
+fallback when no matching new VRAM-independent group is configured for that type.
+
+| Type | Model                   | Safetensors/GGUF          | Include pattern                  | Exclude pattern                  | `/workspace/ComfyUI/<Directory>` |
+|------|-------------------------|---------------------------|----------------------------------|----------------------------------|----------------------------------|
+| File | `HF_MODEL[1-20]`        | `HF_MODEL_FILENAME[1-20]` | `HF_MODEL_INCLUDE[1-20]`         | `HF_MODEL_EXCLUDE[1-20]`         | `HF_MODEL_DIR[1-20]`             |
+| Dir  | `HF_FULL_MODEL[1-20]`   |                           | `HF_FULL_MODEL_INCLUDE[1-20]`    | `HF_FULL_MODEL_EXCLUDE[1-20]`    | `HF_FULL_MODEL_DIR[1-20]`        |
+
+## CivitAI LoRA download configuration
+
+| Variable                         | Description                      |
+|----------------------------------|----------------------------------|
+| `CIVITAI_COM_MODEL_LORA_ID[1-50]`   | Version ID for LoRA (AIR) |
+| `CIVITAI_COM_MODEL_UNET_ID[1-50]`   | Version ID for UNET (AIR) |
+| `CIVITAI_RED_MODEL_LORA_ID[1-50]`   | Version ID for LoRA (AIR) |
+| `CIVITAI_RED_MODEL_UNET_ID[1-50]`   | Version ID for UNET (AIR) |
+
+## Workflow download configuration
+
+- Use `WORKFLOW_LVRAM` and `WORKFLOW_HVRAM` instead of `WORKFLOW` to select
+  workflows according to `VRAM_THRESHOLD`.
+
+| Variable         | Description                      |
+|------------------|----------------------------------|
+| `WORKFLOW[1-50]` | Download link (compressed or plain) |
+
+## Media download Configuration
+
+| Variable         | Description                      |
+|------------------|----------------------------------|
+| `MEDIA[1-50]` | Download link |
+
+## 🌐 Available Network Services
+
+| Service       | Port   | Access Type |
+|---------------|--------|-------------|
+| ComfyUI       | `8188` | Web         |
+| Code Server   | `9000` | Web         |
+| SSH/SCP       | `22`   | Terminal    |
