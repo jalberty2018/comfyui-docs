@@ -6,14 +6,16 @@
 - The date is updated whenever custom nodes, provisioning, or runtime behavior change.
 - This pod is stable, but many of its custom nodes are changing with every version.
 - Some custom nodes have been adapted specifically for this pod or pinned to increase the stability.
-- Tested on L40S, RTX PRO 6000, PRO 6000 MiG 48Gb, RTX 5090, (RTX 4090).
+- Tested on L40S, RTX 6000 Ada, RTX PRO 6000, PRO 6000 MiG 48Gb, RTX 5090, (RTX 4090).
 
-## 24092026
+## 25092026
 
 - ComfyUI 0.37.1
 - Pytorch 2.12.1 CUDA 13.0 build
 - llama-cpp b11115
 - [comfyui-obvpm-timeline](https://github.com/chanon/comfyui-obvpm-timeline)
+- Solved VRAM detection on PRO 6000 MiG.
+- Solved Hyperflow model detection.
 
 ## Container CUDA upgrade notice
 
