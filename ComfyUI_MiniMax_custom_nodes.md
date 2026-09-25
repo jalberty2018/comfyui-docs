@@ -23,6 +23,7 @@
 - [Scale Image to Total Pixels Advanced](https://github.com/BigStationW/ComfyUi-Scale-Image-to-Total-Pixels-Advanced)
 - [comfyui-obvpm](https://github.com/chanon/comfyui-obvpm)
 - [ComfyUI-MiniMaxH3-Preview](https://github.com/Brioch/ComfyUI-MiniMaxH3-Preview)
+- [ComfyUI-QwenImageRefPack](https://github.com/Hearmeman24/ComfyUI-QwenImageRefPack)
 
 ### Loaders/linkers
 
