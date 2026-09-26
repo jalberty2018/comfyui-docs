@@ -2,7 +2,7 @@
   "id": "e3f2b845-8f2c-4b5a-9caf-eac1029d3e7e",
   "revision": 0,
   "last_node_id": 219,
-  "last_link_id": 379,
+  "last_link_id": 364,
   "nodes": [
     {
       "id": 151,
@@ -137,7 +137,7 @@
         46
       ],
       "flags": {},
-      "order": 32,
+      "order": 33,
       "mode": 0,
       "inputs": [
         {
@@ -167,31 +167,108 @@
       "bgcolor": "#3f5159"
     },
     {
-      "id": 118,
-      "type": "MarkdownNote",
+      "id": 132,
+      "type": "MiniMaxH3ImageToVideo",
       "pos": [
-        -2250.401302816132,
-        4889.010063966241
+        -851.7094223771143,
+        4996.240742054376
       ],
       "size": [
-        300,
-        520
+        423.76408149194936,
+        220
       ],
       "flags": {},
-      "order": 3,
+      "order": 31,
       "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "title": "Note: Size Settings Reference",
-      "properties": {},
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 279
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 280
+        },
+        {
+          "name": "first_frame",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 359
+        },
+        {
+          "name": "last_frame",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 360
+        },
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 334
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 361
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 362
+        },
+        {
+          "name": "length",
+          "type": "INT",
+          "widget": {
+            "name": "length"
+          },
+          "link": 245
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            238
+          ]
+        },
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            236
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MiniMaxH3ImageToVideo"
+      },
       "widgets_values": [
-        "| megapixels | Aspect | Output (multiple=32) |\n|---|---|---|\n| 0.2 | 16:9 | 608 x 352 |\n| 0.3 | 16:9 | 736 x 416 |\n| 0.4 | 16:9 | 864 x 480 |\n| 0.5 | 16:9 | 960 x 544 |\n| 0.6 | 16:9 | 1056 x 608 |\n| 0.7 | 16:9 | 1152 x 640 |\n| 0.8 | 16:9 | 1216 x 672 |\n| 0.9 | 16:9 | 1280 x 736 |\n| 0.98 | 16:9 | 1344 x 768 |\n| 1.0 | 16:9 | 1376 x 768 |\n| 1.2 | 16:9 | 1504 x 832 |\n| 1.5 | 16:9 | 1664 x 928 |\n| 1.8 | 16:9 | 1824 x 1024 |\n| 2.0 | 16:9 | 1920 x 1088 |\n"
+        "For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\n\nintegrated_multimodal_description: [Shot 1]  live-action, static camera, video showing a  young girl sitting in a wooden chair at a beach house with a cocktail in her hand.\n[Shot 2] At 00:02.000, the shot cuts to drinking the cocktail empty\n[Shot 3] At 00:05.000, the shot cuts to says (S1) says in a childish slow voice: <d>[English] I like to drink cocktails, it makes me forgetting the mad hectic world of artificial intelligence. </d>\n[Shot 4] At 00:08.000, the shot cuts to she looks at the see and smiles.\n\noverall_soundscape: Background sound of gulls and the noise of the waves.\n\nnon_diegetic_music: N/A",
+        1344,
+        768,
+        73
       ],
       "widgets_values_named": {
-        "text": "| megapixels | Aspect | Output (multiple=32) |\n|---|---|---|\n| 0.2 | 16:9 | 608 x 352 |\n| 0.3 | 16:9 | 736 x 416 |\n| 0.4 | 16:9 | 864 x 480 |\n| 0.5 | 16:9 | 960 x 544 |\n| 0.6 | 16:9 | 1056 x 608 |\n| 0.7 | 16:9 | 1152 x 640 |\n| 0.8 | 16:9 | 1216 x 672 |\n| 0.9 | 16:9 | 1280 x 736 |\n| 0.98 | 16:9 | 1344 x 768 |\n| 1.0 | 16:9 | 1376 x 768 |\n| 1.2 | 16:9 | 1504 x 832 |\n| 1.5 | 16:9 | 1664 x 928 |\n| 1.8 | 16:9 | 1824 x 1024 |\n| 2.0 | 16:9 | 1920 x 1088 |\n"
+        "prompt": "For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\n\nintegrated_multimodal_description: [Shot 1]  live-action, static camera, video showing a  young girl sitting in a wooden chair at a beach house with a cocktail in her hand.\n[Shot 2] At 00:02.000, the shot cuts to drinking the cocktail empty\n[Shot 3] At 00:05.000, the shot cuts to says (S1) says in a childish slow voice: <d>[English] I like to drink cocktails, it makes me forgetting the mad hectic world of artificial intelligence. </d>\n[Shot 4] At 00:08.000, the shot cuts to she looks at the see and smiles.\n\noverall_soundscape: Background sound of gulls and the noise of the waves.\n\nnon_diegetic_music: N/A",
+        "width": 1344,
+        "height": 768,
+        "length": 73
       },
-      "color": "#222",
-      "bgcolor": "#000"
+      "color": "#232",
+      "bgcolor": "#353"
     },
     {
       "id": 193,
@@ -205,7 +282,7 @@
         462.0221664423325
       ],
       "flags": {},
-      "order": 4,
+      "order": 3,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -231,7 +308,7 @@
         178
       ],
       "flags": {},
-      "order": 5,
+      "order": 4,
       "mode": 0,
       "inputs": [
         {
@@ -284,7 +361,7 @@
         106
       ],
       "flags": {},
-      "order": 6,
+      "order": 5,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -331,7 +408,7 @@
         58
       ],
       "flags": {},
-      "order": 7,
+      "order": 6,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -375,7 +452,7 @@
         58
       ],
       "flags": {},
-      "order": 8,
+      "order": 7,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -421,7 +498,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 22,
+      "order": 23,
       "mode": 0,
       "inputs": [
         {
@@ -466,7 +543,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 21,
+      "order": 22,
       "mode": 0,
       "inputs": [
         {
@@ -511,7 +588,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 20,
+      "order": 21,
       "mode": 0,
       "inputs": [
         {
@@ -556,7 +633,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 26,
+      "order": 27,
       "mode": 0,
       "inputs": [
         {
@@ -592,7 +669,7 @@
         82
       ],
       "flags": {},
-      "order": 19,
+      "order": 20,
       "mode": 0,
       "inputs": [
         {
@@ -636,7 +713,7 @@
         82
       ],
       "flags": {},
-      "order": 29,
+      "order": 30,
       "mode": 0,
       "inputs": [
         {
@@ -680,7 +757,7 @@
         250
       ],
       "flags": {},
-      "order": 31,
+      "order": 32,
       "mode": 0,
       "inputs": [
         {
@@ -738,7 +815,7 @@
         106
       ],
       "flags": {},
-      "order": 33,
+      "order": 34,
       "mode": 0,
       "inputs": [
         {
@@ -786,7 +863,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 40,
+      "order": 41,
       "mode": 0,
       "inputs": [
         {
@@ -831,7 +908,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 9,
+      "order": 8,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -871,7 +948,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 10,
+      "order": 9,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -912,7 +989,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 23,
+      "order": 24,
       "mode": 0,
       "inputs": [
         {
@@ -975,7 +1052,7 @@
         106
       ],
       "flags": {},
-      "order": 42,
+      "order": 43,
       "mode": 0,
       "inputs": [
         {
@@ -1023,7 +1100,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 36,
+      "order": 37,
       "mode": 0,
       "inputs": [
         {
@@ -1066,7 +1143,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 37,
+      "order": 38,
       "mode": 0,
       "inputs": [
         {
@@ -1107,7 +1184,7 @@
         92.76906526514813
       ],
       "flags": {},
-      "order": 11,
+      "order": 10,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1123,11 +1200,11 @@
         "Node name for S&R": "RandomNoise"
       },
       "widgets_values": [
-        691959154716245,
+        554899156621863,
         "randomize"
       ],
       "widgets_values_named": {
-        "noise_seed": 691959154716245,
+        "noise_seed": 554899156621863,
         "control_after_generate": "randomize"
       },
       "color": "#2a363b",
@@ -1145,7 +1222,7 @@
         121.69285702008074
       ],
       "flags": {},
-      "order": 18,
+      "order": 19,
       "mode": 0,
       "inputs": [
         {
@@ -1191,7 +1268,7 @@
         58
       ],
       "flags": {},
-      "order": 12,
+      "order": 11,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1229,7 +1306,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 34,
+      "order": 35,
       "mode": 0,
       "inputs": [
         {
@@ -1291,7 +1368,7 @@
         815.2452302764814
       ],
       "flags": {},
-      "order": 27,
+      "order": 28,
       "mode": 0,
       "inputs": [
         {
@@ -1365,7 +1442,7 @@
         520
       ],
       "flags": {},
-      "order": 13,
+      "order": 12,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -1392,7 +1469,7 @@
         174
       ],
       "flags": {},
-      "order": 41,
+      "order": 42,
       "mode": 0,
       "inputs": [
         {
@@ -1461,7 +1538,7 @@
         82
       ],
       "flags": {},
-      "order": 14,
+      "order": 13,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1501,7 +1578,7 @@
         270
       ],
       "flags": {},
-      "order": 39,
+      "order": 40,
       "mode": 4,
       "inputs": [
         {
@@ -1573,7 +1650,7 @@
         82
       ],
       "flags": {},
-      "order": 35,
+      "order": 36,
       "mode": 0,
       "inputs": [
         {
@@ -1617,7 +1694,7 @@
         585.8718694029803
       ],
       "flags": {},
-      "order": 38,
+      "order": 39,
       "mode": 0,
       "inputs": [
         {
@@ -1690,41 +1767,100 @@
       "bgcolor": "#535"
     },
     {
-      "id": 192,
-      "type": "PreviewAny",
+      "id": 133,
+      "type": "ComfyMathExpression",
       "pos": [
-        -849.3716037595724,
-        5852.34120220341
+        -735.8235421930693,
+        5329.758728873838
       ],
       "size": [
-        584.578905416101,
-        572.5434443399263
+        360,
+        160
       ],
-      "flags": {},
-      "order": 28,
+      "flags": {
+        "collapsed": true
+      },
+      "order": 25,
       "mode": 0,
       "inputs": [
         {
-          "name": "source",
-          "type": "*",
-          "link": 333
+          "label": "a",
+          "name": "values.a",
+          "type": "FLOAT,INT,BOOLEAN",
+          "link": 248
+        },
+        {
+          "name": "values.b",
+          "shape": 7,
+          "type": "FLOAT,INT,BOOLEAN",
+          "link": null
         }
       ],
       "outputs": [
         {
-          "name": "STRING",
-          "type": "STRING",
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": []
+        },
+        {
+          "name": "INT",
+          "type": "INT",
           "links": [
-            334
+            245,
+            321
+          ]
+        },
+        {
+          "name": "BOOL",
+          "type": "BOOLEAN",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ComfyMathExpression"
+      },
+      "widgets_values": [
+        "max(5, round(a * 24)) + (5 - (max(5, round(a * 24)) % 17)) % 17"
+      ],
+      "widgets_values_named": {
+        "expression": "max(5, round(a * 24)) + (5 - (max(5, round(a * 24)) % 17)) % 17"
+      }
+    },
+    {
+      "id": 134,
+      "type": "PrimitiveFloat",
+      "pos": [
+        -782.3882910471659,
+        5295.43169857962
+      ],
+      "size": [
+        270,
+        70
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            248,
+            337
           ]
         }
       ],
-      "title": "Final prompt",
+      "title": "Float (duration)",
       "properties": {
-        "Node name for S&R": "PreviewAny"
+        "Node name for S&R": "PrimitiveFloat"
       },
-      "widgets_values": [],
-      "widgets_values_named": {},
+      "widgets_values": [
+        10
+      ],
+      "widgets_values_named": {
+        "value": 10
+      },
       "color": "#223",
       "bgcolor": "#335"
     },
@@ -1732,8 +1868,8 @@
       "id": 191,
       "type": "PrimitiveStringMultiline",
       "pos": [
-        -848.7800669281141,
-        5431.4182045307
+        -842.0533729311069,
+        5433.754661692548
       ],
       "size": [
         565.0952080445775,
@@ -1765,220 +1901,110 @@
       "bgcolor": "#353"
     },
     {
-      "id": 132,
-      "type": "MiniMaxH3ImageToVideo",
+      "id": 192,
+      "type": "PreviewAny",
       "pos": [
-        -843.9145539771142,
-        5011.830478854379
+        -839.8542743186028,
+        5872.153613518195
       ],
       "size": [
-        423.76408149194936,
-        220
+        584.578905416101,
+        572.5434443399263
       ],
       "flags": {},
-      "order": 30,
+      "order": 29,
       "mode": 0,
       "inputs": [
         {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 279
-        },
+          "name": "source",
+          "type": "*",
+          "link": 333
+        }
+      ],
+      "outputs": [
         {
-          "name": "vae",
-          "type": "VAE",
-          "link": 280
-        },
-        {
-          "name": "first_frame",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 374
-        },
-        {
-          "name": "last_frame",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 375
-        },
-        {
-          "name": "prompt",
+          "name": "STRING",
           "type": "STRING",
-          "widget": {
-            "name": "prompt"
-          },
-          "link": 334
-        },
-        {
-          "name": "width",
-          "type": "INT",
-          "widget": {
-            "name": "width"
-          },
-          "link": 376
-        },
-        {
-          "name": "height",
-          "type": "INT",
-          "widget": {
-            "name": "height"
-          },
-          "link": 377
-        },
-        {
-          "name": "length",
-          "type": "INT",
-          "widget": {
-            "name": "length"
-          },
-          "link": 368
-        }
-      ],
-      "outputs": [
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
           "links": [
-            238
-          ]
-        },
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            236
+            334
           ]
         }
       ],
+      "title": "Final prompt",
       "properties": {
-        "Node name for S&R": "MiniMaxH3ImageToVideo"
+        "Node name for S&R": "PreviewAny"
       },
-      "widgets_values": [
-        "For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\n\nintegrated_multimodal_description: [Shot 1]  live-action, static camera, video showing a  young girl sitting in a wooden chair at a beach house with a cocktail in her hand.\n[Shot 2] At 00:02.000, the shot cuts to drinking the cocktail empty\n[Shot 3] At 00:05.000, the shot cuts to says (S1) says in a childish slow voice: <d>[English] I like to drink cocktails, it makes me forgetting the mad hectic world of artificial intelligence. </d>\n[Shot 4] At 00:08.000, the shot cuts to she looks at the see and smiles.\n\noverall_soundscape: Background sound of gulls and the noise of the waves.\n\nnon_diegetic_music: N/A",
-        1344,
-        768,
-        73
-      ],
-      "widgets_values_named": {
-        "prompt": "For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\n\nintegrated_multimodal_description: [Shot 1]  live-action, static camera, video showing a  young girl sitting in a wooden chair at a beach house with a cocktail in her hand.\n[Shot 2] At 00:02.000, the shot cuts to drinking the cocktail empty\n[Shot 3] At 00:05.000, the shot cuts to says (S1) says in a childish slow voice: <d>[English] I like to drink cocktails, it makes me forgetting the mad hectic world of artificial intelligence. </d>\n[Shot 4] At 00:08.000, the shot cuts to she looks at the see and smiles.\n\noverall_soundscape: Background sound of gulls and the noise of the waves.\n\nnon_diegetic_music: N/A",
-        "width": 1344,
-        "height": 768,
-        "length": 73
-      },
-      "color": "#232",
-      "bgcolor": "#353"
+      "widgets_values": [],
+      "widgets_values_named": {},
+      "color": "#223",
+      "bgcolor": "#335"
     },
     {
-      "id": 133,
-      "type": "ComfyMathExpression",
+      "id": 218,
+      "type": "MarkdownNote",
       "pos": [
-        -840.6283444606211,
-        5305.208573861517
+        -1904.2175211345984,
+        5579.632795882566
       ],
       "size": [
-        360,
-        160
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 24,
-      "mode": 0,
-      "inputs": [
-        {
-          "label": "a",
-          "name": "values.a",
-          "type": "FLOAT,INT,BOOLEAN",
-          "link": 248
-        },
-        {
-          "name": "values.b",
-          "shape": 7,
-          "type": "FLOAT,INT,BOOLEAN",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "FLOAT",
-          "type": "FLOAT",
-          "links": []
-        },
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": [
-            321,
-            368
-          ]
-        },
-        {
-          "name": "BOOL",
-          "type": "BOOLEAN",
-          "links": []
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ComfyMathExpression"
-      },
-      "widgets_values": [
-        "max(5, round(a * 24)) + (5 - (max(5, round(a * 24)) % 17)) % 17"
-      ],
-      "widgets_values_named": {
-        "expression": "max(5, round(a * 24)) + (5 - (max(5, round(a * 24)) % 17)) % 17"
-      }
-    },
-    {
-      "id": 134,
-      "type": "PrimitiveFloat",
-      "pos": [
-        -843.2858243998552,
-        5289.01008159404
-      ],
-      "size": [
-        270,
-        70
+        383.7667503489988,
+        271.17009282550043
       ],
       "flags": {},
       "order": 16,
       "mode": 0,
       "inputs": [],
-      "outputs": [
-        {
-          "name": "FLOAT",
-          "type": "FLOAT",
-          "links": [
-            248,
-            337
-          ]
-        }
-      ],
-      "title": "Float (duration)",
-      "properties": {
-        "Node name for S&R": "PrimitiveFloat"
-      },
+      "outputs": [],
+      "properties": {},
       "widgets_values": [
-        10
+        "# H3 model mode !!!\n\n- 1 image : I2VA\n- 2 images: FL2VA\n\n\n- Auto: In prompt I2VA or FL2VA"
       ],
       "widgets_values_named": {
-        "value": 10
+        "text": "# H3 model mode !!!\n\n- 1 image : I2VA\n- 2 images: FL2VA\n\n\n- Auto: In prompt I2VA or FL2VA"
       },
-      "color": "#223",
-      "bgcolor": "#335"
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 118,
+      "type": "MarkdownNote",
+      "pos": [
+        -1738.4797083186913,
+        4904.601643483936
+      ],
+      "size": [
+        300,
+        520
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Note: Size Settings Reference",
+      "properties": {},
+      "widgets_values": [
+        "| megapixels | Aspect | Output (multiple=32) |\n|---|---|---|\n| 0.2 | 16:9 | 608 x 352 |\n| 0.3 | 16:9 | 736 x 416 |\n| 0.4 | 16:9 | 864 x 480 |\n| 0.5 | 16:9 | 960 x 544 |\n| 0.6 | 16:9 | 1056 x 608 |\n| 0.7 | 16:9 | 1152 x 640 |\n| 0.8 | 16:9 | 1216 x 672 |\n| 0.9 | 16:9 | 1280 x 736 |\n| 0.98 | 16:9 | 1344 x 768 |\n| 1.0 | 16:9 | 1376 x 768 |\n| 1.2 | 16:9 | 1504 x 832 |\n| 1.5 | 16:9 | 1664 x 928 |\n| 1.8 | 16:9 | 1824 x 1024 |\n| 2.0 | 16:9 | 1920 x 1088 |\n"
+      ],
+      "widgets_values_named": {
+        "text": "| megapixels | Aspect | Output (multiple=32) |\n|---|---|---|\n| 0.2 | 16:9 | 608 x 352 |\n| 0.3 | 16:9 | 736 x 416 |\n| 0.4 | 16:9 | 864 x 480 |\n| 0.5 | 16:9 | 960 x 544 |\n| 0.6 | 16:9 | 1056 x 608 |\n| 0.7 | 16:9 | 1152 x 640 |\n| 0.8 | 16:9 | 1216 x 672 |\n| 0.9 | 16:9 | 1280 x 736 |\n| 0.98 | 16:9 | 1344 x 768 |\n| 1.0 | 16:9 | 1376 x 768 |\n| 1.2 | 16:9 | 1504 x 832 |\n| 1.5 | 16:9 | 1664 x 928 |\n| 1.8 | 16:9 | 1824 x 1024 |\n| 2.0 | 16:9 | 1920 x 1088 |\n"
+      },
+      "color": "#222",
+      "bgcolor": "#000"
     },
     {
       "id": 219,
       "type": "QwenImageUploadFirstLastReferencePack",
       "pos": [
-        -1398.9740297198364,
-        4967.861684088678
+        -1364.8340567278346,
+        4954.402884631595
       ],
       "size": [
         420,
         484
       ],
       "flags": {},
-      "order": 17,
+      "order": 18,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1986,30 +2012,30 @@
           "name": "First image",
           "type": "IMAGE",
           "links": [
-            374,
-            378
+            359,
+            363
           ]
         },
         {
           "name": "Last image",
           "type": "IMAGE",
           "links": [
-            375,
-            379
+            360,
+            364
           ]
         },
         {
           "name": "first_width",
           "type": "INT",
           "links": [
-            376
+            361
           ]
         },
         {
           "name": "first_height",
           "type": "INT",
           "links": [
-            377
+            362
           ]
         },
         {
@@ -2027,7 +2053,7 @@
         "Node name for S&R": "QwenImageUploadFirstLastReferencePack"
       },
       "widgets_values": [
-        "{\"references\":[]}",
+        "{\"references\":[{\"kind\":\"image\",\"file\":\"Snapshot 23-09-2026 20_18 (3).png\"}]}",
         0.9,
         32,
         "crop",
@@ -2037,7 +2063,7 @@
         ""
       ],
       "widgets_values_named": {
-        "references_json": "{\"references\":[]}",
+        "references_json": "{\"references\":[{\"kind\":\"image\",\"file\":\"Snapshot 23-09-2026 20_18 (3).png\"}]}",
         "megapixels": 0.9,
         "multiple_of": 32,
         "resize_mode": "crop",
@@ -2053,28 +2079,28 @@
       "id": 190,
       "type": "QwenH3PromptLocal",
       "pos": [
-        -1568.8101881091736,
-        5669.704162124756
+        -1463.7014556186925,
+        5622.785583227736
       ],
       "size": [
-        567.1450906120299,
+        533.6464039738464,
         538
       ],
       "flags": {},
-      "order": 25,
+      "order": 26,
       "mode": 0,
       "inputs": [
         {
           "name": "reference_images.reference_image_0",
           "shape": 7,
           "type": "IMAGE",
-          "link": 378
+          "link": 363
         },
         {
           "name": "reference_images.reference_image_1",
           "shape": 7,
           "type": "IMAGE",
-          "link": 379
+          "link": 364
         },
         {
           "name": "reference_images.reference_image_2",
@@ -2135,7 +2161,7 @@
         "mmproj-F16.gguf",
         false,
         "medium",
-        867140582438673,
+        1003528680331103,
         "randomize",
         8192,
         2,
@@ -2153,7 +2179,7 @@
         "vision_model": "mmproj-F16.gguf",
         "think_mode": false,
         "reasoning_effort": "medium",
-        "seed": 867140582438673,
+        "seed": 1003528680331103,
         "control_after_generate": "randomize",
         "max_tokens": 8192,
         "video_sample_frames_per_sec": 2,
@@ -2207,6 +2233,14 @@
       127,
       1,
       "CONDITIONING"
+    ],
+    [
+      245,
+      133,
+      1,
+      132,
+      7,
+      "INT"
     ],
     [
       248,
@@ -2489,15 +2523,7 @@
       "AUDIO"
     ],
     [
-      368,
-      133,
-      1,
-      132,
-      7,
-      "INT"
-    ],
-    [
-      374,
+      359,
       219,
       0,
       132,
@@ -2505,7 +2531,7 @@
       "IMAGE"
     ],
     [
-      375,
+      360,
       219,
       1,
       132,
@@ -2513,7 +2539,7 @@
       "IMAGE"
     ],
     [
-      376,
+      361,
       219,
       2,
       132,
@@ -2521,7 +2547,7 @@
       "INT"
     ],
     [
-      377,
+      362,
       219,
       3,
       132,
@@ -2529,7 +2555,7 @@
       "INT"
     ],
     [
-      378,
+      363,
       219,
       0,
       190,
@@ -2537,7 +2563,7 @@
       "IMAGE"
     ],
     [
-      379,
+      364,
       219,
       1,
       190,
@@ -2564,8 +2590,20 @@
       "bounding": [
         -880.1675473174203,
         4849.194952516536,
-        648.9678366858093,
-        2302.202397628508
+        635.1762827284078,
+        1641.912780503454
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 6,
+      "title": "First an (Last) image",
+      "bounding": [
+        -1391.4172062113137,
+        4854.942612211794,
+        483.3003596638489,
+        651.3831498927439
       ],
       "color": "#3f789e",
       "flags": {}
@@ -2596,24 +2634,12 @@
     },
     {
       "id": 9,
-      "title": "First / (Last) Image",
-      "bounding": [
-        -1438.9099773878122,
-        4850.326999632874,
-        495.3582141403042,
-        650.0774687420253
-      ],
-      "color": "#3f789e",
-      "flags": {}
-    },
-    {
-      "id": 10,
       "title": "Prompt generator",
       "bounding": [
-        -1657.7489354467584,
-        5551.202315189839,
-        711.8594709429901,
-        708.0854924502246
+        -1489.4880508732613,
+        5546.5653302250985,
+        574.5590004244063,
+        699.6046559358583
       ],
       "color": "#3f789e",
       "flags": {}
@@ -2622,10 +2648,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.5833601138989848,
+      "scale": 0.599931376513869,
       "offset": [
-        2160.7705879426385,
-        -4912.198054972261
+        1936.856051061945,
+        -5046.7987013829625
       ]
     },
     "frontendVersion": "1.52.7",
