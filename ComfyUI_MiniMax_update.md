@@ -8,7 +8,7 @@
 - Some custom nodes have been adapted specifically for this pod or pinned to increase the stability.
 - Tested on L40S, RTX 6000 Ada, RTX PRO 6000, PRO 6000 MiG 48Gb, RTX 5090, (RTX 4090).
 
-## 25092026
+## 26092026
 
 - ComfyUI 0.37.1
 - Pytorch 2.12.1 CUDA 13.0 build
@@ -16,6 +16,7 @@
 - [comfyui-obvpm-timeline](https://github.com/chanon/comfyui-obvpm-timeline)
 - Solved VRAM detection on PRO 6000 MiG.
 - Solved Hyperflow model detection.
+- Added First Last image manager with tools and updated workflows.
 
 ## Container CUDA upgrade notice
 
