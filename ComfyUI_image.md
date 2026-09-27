@@ -174,13 +174,13 @@ The public template without prompt enhancement includes the two base workflows. 
 
 </details>
 
-</details>
-
 <a id="example-i2i-workflow-qwen-image-21-with-prompt-enhancer-detail"></a>
 <details>
 <summary><strong>View the Qwen-Image 2.1 image-edit prompt enhancer custom node</strong></summary>
 
 <img loading="lazy" src="../images/ai-generated-qwen-image-21-i2i-prompt-enhancer-node.jpg" alt="Qwen-Image 2.1 prompt enhancer custom node" style="width: 100%; height: auto;">
+
+</details>
 
 ## Advanced workflows and tools
 
