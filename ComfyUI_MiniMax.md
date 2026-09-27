@@ -23,7 +23,7 @@ The approach is aligned with the open-model discussion in Eric Hartford's [Uncen
 - Automatic model provisioning through environment variables.
 - Model downloads selected for the available VRAM and GPU architecture (Ada Lovelace or Blackwell).
 - GPU-accelerated video encoding with FFmpeg and NVENC to speed up video creation on slower vCPUs in available on host (auto check).
-- CUDA 12.8 runtime with compiled attention acceleration.
+- CUDA 13.0 runtime with compiled attention acceleration.
 - Authentication for ComfyUI, Code Server, Hugging Face and CivitAI.
 - Uncensored Heretic Qwen-VL text encoders for inference and prompt enhancement.
 - LoRA Manager, installed custom nodes and accelerators.
