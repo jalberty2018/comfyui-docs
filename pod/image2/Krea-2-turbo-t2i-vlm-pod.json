@@ -1,8 +1,8 @@
 {
   "id": "08988737-a544-4ab1-99fb-22d67b7c36e3",
   "revision": 0,
-  "last_node_id": 108,
-  "last_link_id": 177,
+  "last_node_id": 110,
+  "last_link_id": 188,
   "nodes": [
     {
       "id": 76,
@@ -38,6 +38,9 @@
       "widgets_values": [
         "MODEL"
       ],
+      "widgets_values_named": {
+        "Constant": "MODEL"
+      },
       "color": "#223",
       "bgcolor": "#335"
     },
@@ -75,6 +78,9 @@
       "widgets_values": [
         "VAE"
       ],
+      "widgets_values_named": {
+        "Constant": "VAE"
+      },
       "color": "#322",
       "bgcolor": "#533"
     },
@@ -115,6 +121,9 @@
       "widgets_values": [
         "MODEL"
       ],
+      "widgets_values_named": {
+        "Constant": "MODEL"
+      },
       "color": "#223",
       "bgcolor": "#335"
     },
@@ -161,46 +170,8 @@
         "cnr_id": "comfy-core",
         "ver": "0.25.0"
       },
-      "widgets_values": [],
       "color": "#233",
       "bgcolor": "#355"
-    },
-    {
-      "id": 80,
-      "type": "GetNode",
-      "pos": [
-        1426.491291456867,
-        -1475.7207723016352
-      ],
-      "size": [
-        210,
-        60
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 2,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            133
-          ]
-        }
-      ],
-      "title": "Get_CLIP",
-      "properties": {
-        "Node name for S&R": "GetNode",
-        "aux_id": "kijai/ComfyUI-KJNodes"
-      },
-      "widgets_values": [
-        "CLIP"
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
     },
     {
       "id": 78,
@@ -241,6 +212,9 @@
       "widgets_values": [
         "CLIP"
       ],
+      "widgets_values_named": {
+        "Constant": "CLIP"
+      },
       "color": "#432",
       "bgcolor": "#653"
     },
@@ -283,6 +257,9 @@
       "widgets_values": [
         "VAE"
       ],
+      "widgets_values_named": {
+        "Constant": "VAE"
+      },
       "color": "#322",
       "bgcolor": "#533"
     },
@@ -290,8 +267,8 @@
       "id": 52,
       "type": "EmptyLatentImage",
       "pos": [
-        486.9609485959771,
-        -1828.853735875806
+        363.01907768877953,
+        -2462.183195410854
       ],
       "size": [
         320,
@@ -300,7 +277,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 14,
+      "order": 13,
       "mode": 0,
       "inputs": [
         {
@@ -339,14 +316,19 @@
         1024,
         1024,
         1
-      ]
+      ],
+      "widgets_values_named": {
+        "width": 1024,
+        "height": 1024,
+        "batch_size": 1
+      }
     },
     {
       "id": 89,
       "type": "SetNode",
       "pos": [
-        480.5144794247413,
-        -1761.5895368188847
+        356.57260851754376,
+        -2394.9189963539325
       ],
       "size": [
         210,
@@ -355,7 +337,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 18,
+      "order": 16,
       "mode": 0,
       "inputs": [
         {
@@ -380,6 +362,9 @@
       "widgets_values": [
         "EMPTY_LATENT"
       ],
+      "widgets_values_named": {
+        "Constant": "EMPTY_LATENT"
+      },
       "color": "#323",
       "bgcolor": "#535"
     },
@@ -395,7 +380,7 @@
         543.7852819190293
       ],
       "flags": {},
-      "order": 3,
+      "order": 2,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -416,6 +401,9 @@
       "widgets_values": [
         "You are an expert visual analyst for text-to-image conditioning.\n\nYour task is to convert the user's request and any provided image into a single highly descriptive image-generation prompt that preserves every visible detail useful for image synthesis.\n\nInternally analyze the image before answering:\n\n• Identify every visible characteristic of each person.\n• Describe identity-related features as precisely as possible.\n• Describe body proportions, anatomy, pose, clothing, hairstyle, facial features, expression, lighting, camera, and environment.\n• Preserve all existing visual relationships.\n• Infer only information that is visually well supported.\n• Ignore information that cannot be reliably observed.\n\nOutput a single continuous prompt paragraph only.\n\nFollow these rules strictly:\n\n1. Person First\nAlways begin by describing the main person before describing the environment.\n\nInclude whenever visible:\n\n- approximate age\n- gender presentation\n- ethnicity or skin tone if visually apparent\n- height impression\n- body build\n- body proportions\n- posture\n- pose\n- head orientation\n- gaze direction\n- facial expression\n\n2. Identity Preservation\n\nDescribe stable identity characteristics with maximum precision, including:\n\n- face shape\n- forehead\n- eyebrows\n- eye shape\n- eye color\n- eyelashes\n- nose shape\n- lips\n- jawline\n- chin\n- ears\n- cheekbones\n- skin texture\n- freckles\n- moles\n- scars\n- wrinkles\n- makeup\n- facial hair\n\nDo not exaggerate or invent details.\n\n3. Hair\n\nDescribe completely:\n\n- color\n- length\n- style\n- texture\n- bangs\n- parting\n- tied or loose\n- curls\n- highlights\n- flyaway hair\n\n4. Clothing\n\nDescribe every visible clothing item separately.\n\nInclude:\n\n- garment type\n- color\n- material\n- texture\n- pattern\n- fit\n- sleeves\n- neckline\n- buttons\n- zippers\n- logos\n- folds\n- wrinkles\n- transparency\n- accessories\n\n5. Hands and Feet\n\nDescribe:\n\n- hand positions\n- finger placement\n- visible fingernails\n- footwear\n- bare feet\n- socks\n\n6. Body Details\n\nDescribe visible anatomy without adding information that cannot be seen.\n\nInclude:\n\n- shoulders\n- arms\n- elbows\n- wrists\n- hands\n- torso\n- waist\n- hips\n- legs\n- knees\n- calves\n- ankles\n\nMention visible muscle tone, body fat distribution, veins, skin pores, body hair, or other natural skin details only when clearly visible.\n\n7. Pose\n\nDescribe precisely:\n\n- body orientation\n- weight distribution\n- arm positions\n- leg positions\n- interaction with objects\n- sitting, standing, walking, kneeling, lying, etc.\n\n8. Camera\n\nDescribe:\n\n- framing\n- crop\n- camera distance\n- viewing angle\n- perspective\n- focal length impression\n- depth of field\n\n9. Lighting\n\nDescribe:\n\n- light source\n- direction\n- softness\n- shadows\n- reflections\n- exposure\n- contrast\n- color temperature\n\n10. Environment\n\nDescribe only visible elements:\n\n- location\n- background\n- furniture\n- vegetation\n- weather\n- architecture\n- floor\n- walls\n- objects\n\nNever invent unseen scenery.\n\n11. Photographic Characteristics\n\nWhen applicable describe:\n\n- realism\n- lens characteristics\n- focus\n- sharpness\n- bokeh\n- motion blur\n- film grain\n- image noise\n\n12. Preserve Intent\n\nPreserve all subjects, poses, relationships, composition, colors, clothing, and requested edits exactly.\n\n13. Do Not Invent\n\nNever add people, objects, accessories, clothing, backgrounds, poses, or actions that are not supported by the image or explicitly requested.\n\n14. Clear Prompt\n\nProduce one continuous paragraph.\n\nDo not use bullet lists.\n\nDo not explain your reasoning.\n\nDo not use markdown.\n\nOutput only the final prompt."
       ],
+      "widgets_values_named": {
+        "value": "You are an expert visual analyst for text-to-image conditioning.\n\nYour task is to convert the user's request and any provided image into a single highly descriptive image-generation prompt that preserves every visible detail useful for image synthesis.\n\nInternally analyze the image before answering:\n\n• Identify every visible characteristic of each person.\n• Describe identity-related features as precisely as possible.\n• Describe body proportions, anatomy, pose, clothing, hairstyle, facial features, expression, lighting, camera, and environment.\n• Preserve all existing visual relationships.\n• Infer only information that is visually well supported.\n• Ignore information that cannot be reliably observed.\n\nOutput a single continuous prompt paragraph only.\n\nFollow these rules strictly:\n\n1. Person First\nAlways begin by describing the main person before describing the environment.\n\nInclude whenever visible:\n\n- approximate age\n- gender presentation\n- ethnicity or skin tone if visually apparent\n- height impression\n- body build\n- body proportions\n- posture\n- pose\n- head orientation\n- gaze direction\n- facial expression\n\n2. Identity Preservation\n\nDescribe stable identity characteristics with maximum precision, including:\n\n- face shape\n- forehead\n- eyebrows\n- eye shape\n- eye color\n- eyelashes\n- nose shape\n- lips\n- jawline\n- chin\n- ears\n- cheekbones\n- skin texture\n- freckles\n- moles\n- scars\n- wrinkles\n- makeup\n- facial hair\n\nDo not exaggerate or invent details.\n\n3. Hair\n\nDescribe completely:\n\n- color\n- length\n- style\n- texture\n- bangs\n- parting\n- tied or loose\n- curls\n- highlights\n- flyaway hair\n\n4. Clothing\n\nDescribe every visible clothing item separately.\n\nInclude:\n\n- garment type\n- color\n- material\n- texture\n- pattern\n- fit\n- sleeves\n- neckline\n- buttons\n- zippers\n- logos\n- folds\n- wrinkles\n- transparency\n- accessories\n\n5. Hands and Feet\n\nDescribe:\n\n- hand positions\n- finger placement\n- visible fingernails\n- footwear\n- bare feet\n- socks\n\n6. Body Details\n\nDescribe visible anatomy without adding information that cannot be seen.\n\nInclude:\n\n- shoulders\n- arms\n- elbows\n- wrists\n- hands\n- torso\n- waist\n- hips\n- legs\n- knees\n- calves\n- ankles\n\nMention visible muscle tone, body fat distribution, veins, skin pores, body hair, or other natural skin details only when clearly visible.\n\n7. Pose\n\nDescribe precisely:\n\n- body orientation\n- weight distribution\n- arm positions\n- leg positions\n- interaction with objects\n- sitting, standing, walking, kneeling, lying, etc.\n\n8. Camera\n\nDescribe:\n\n- framing\n- crop\n- camera distance\n- viewing angle\n- perspective\n- focal length impression\n- depth of field\n\n9. Lighting\n\nDescribe:\n\n- light source\n- direction\n- softness\n- shadows\n- reflections\n- exposure\n- contrast\n- color temperature\n\n10. Environment\n\nDescribe only visible elements:\n\n- location\n- background\n- furniture\n- vegetation\n- weather\n- architecture\n- floor\n- walls\n- objects\n\nNever invent unseen scenery.\n\n11. Photographic Characteristics\n\nWhen applicable describe:\n\n- realism\n- lens characteristics\n- focus\n- sharpness\n- bokeh\n- motion blur\n- film grain\n- image noise\n\n12. Preserve Intent\n\nPreserve all subjects, poses, relationships, composition, colors, clothing, and requested edits exactly.\n\n13. Do Not Invent\n\nNever add people, objects, accessories, clothing, backgrounds, poses, or actions that are not supported by the image or explicitly requested.\n\n14. Clear Prompt\n\nProduce one continuous paragraph.\n\nDo not use bullet lists.\n\nDo not explain your reasoning.\n\nDo not use markdown.\n\nOutput only the final prompt."
+      },
       "color": "#232",
       "bgcolor": "#353"
     },
@@ -431,7 +419,7 @@
         170
       ],
       "flags": {},
-      "order": 4,
+      "order": 3,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -460,6 +448,11 @@
         "krea2",
         "default"
       ],
+      "widgets_values_named": {
+        "clip_name": "qwen3-vl-4b-instruct-abliterated.safetensors",
+        "type": "krea2",
+        "device": "default"
+      },
       "color": "#233",
       "bgcolor": "#355"
     },
@@ -502,6 +495,12 @@
         2,
         false
       ],
+      "widgets_values_named": {
+        "enabled": true,
+        "strength": 1,
+        "text_scale": 2,
+        "debug": false
+      },
       "color": "#323",
       "bgcolor": "#535"
     },
@@ -580,6 +579,14 @@
         "",
         []
       ],
+      "widgets_values_named": {
+        "__lm_autocomplete_meta_text": {
+          "version": 1,
+          "textWidgetName": "text"
+        },
+        "text": "",
+        "loras": []
+      },
       "color": "#323",
       "bgcolor": "#535"
     },
@@ -595,7 +602,7 @@
         58
       ],
       "flags": {},
-      "order": 5,
+      "order": 4,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -622,178 +629,11 @@
       "widgets_values": [
         "krea2RealVae_v10.safetensors"
       ],
+      "widgets_values_named": {
+        "vae_name": "krea2RealVae_v10.safetensors"
+      },
       "color": "#223",
       "bgcolor": "#335"
-    },
-    {
-      "id": 107,
-      "type": "krea2-conditioning",
-      "pos": [
-        1227.3002273821844,
-        -1822.9232459728594
-      ],
-      "size": [
-        306.0513671875,
-        130
-      ],
-      "flags": {},
-      "order": 17,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "conditioning",
-          "type": "CONDITIONING",
-          "link": 170
-        }
-      ],
-      "outputs": [
-        {
-          "name": "conditioning",
-          "type": "CONDITIONING",
-          "links": [
-            173
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "krea2-conditioning"
-      },
-      "widgets_values": [
-        "detail",
-        "1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 2.5, 5.0, 1.1, 4.0, 1.0",
-        1,
-        true
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 91,
-      "type": "TextEncodeKrea2",
-      "pos": [
-        1215.5615752268457,
-        -1636.4591225313538
-      ],
-      "size": [
-        560.9237137363198,
-        673.1299698415992
-      ],
-      "flags": {},
-      "order": 13,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 133
-        },
-        {
-          "name": "system_prompt",
-          "shape": 7,
-          "type": "STRING",
-          "link": 138
-        },
-        {
-          "name": "image1",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 148
-        },
-        {
-          "name": "mask1",
-          "shape": 7,
-          "type": "MASK",
-          "link": null
-        },
-        {
-          "name": "image2",
-          "type": "IMAGE",
-          "link": 154
-        },
-        {
-          "name": "mask2",
-          "type": "MASK",
-          "link": null
-        },
-        {
-          "name": "image3",
-          "type": "IMAGE",
-          "link": null
-        },
-        {
-          "name": "mask3",
-          "type": "MASK",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            136,
-            170
-          ]
-        },
-        {
-          "name": "vlm_prompt",
-          "type": "STRING",
-          "links": []
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "TextEncodeKrea2"
-      },
-      "widgets_values": [
-        "Barbie kipnaped by a man in black on a dark beach at night",
-        1,
-        0,
-        "before prompt",
-        false
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 58,
-      "type": "ConditioningZeroOut",
-      "pos": [
-        1576.1278454042342,
-        -1727.1651221779364
-      ],
-      "size": [
-        230,
-        30
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 16,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "conditioning",
-          "type": "CONDITIONING",
-          "link": 136
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            172
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ConditioningZeroOut",
-        "cnr_id": "comfy-core",
-        "ver": "0.25.0"
-      },
-      "widgets_values": [],
-      "color": "#323",
-      "bgcolor": "#535"
     },
     {
       "id": 90,
@@ -809,7 +649,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 6,
+      "order": 5,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -829,6 +669,9 @@
       "widgets_values": [
         "EMPTY_LATENT"
       ],
+      "widgets_values_named": {
+        "Constant": "EMPTY_LATENT"
+      },
       "color": "#323",
       "bgcolor": "#535"
     },
@@ -868,6 +711,9 @@
       "widgets_values": [
         "Krea2_turbo"
       ],
+      "widgets_values_named": {
+        "filename_prefix": "Krea2_turbo"
+      },
       "color": "#222",
       "bgcolor": "#000"
     },
@@ -920,7 +766,7 @@
         "Node name for S&R": "KSampler"
       },
       "widgets_values": [
-        335974820803744,
+        1117800441331207,
         "randomize",
         12,
         1,
@@ -928,6 +774,15 @@
         "sgm_uniform",
         1
       ],
+      "widgets_values_named": {
+        "seed": 1117800441331207,
+        "control_after_generate": "randomize",
+        "steps": 12,
+        "cfg": 1,
+        "sampler_name": "er_sde",
+        "scheduler": "sgm_uniform",
+        "denoise": 1
+      },
       "color": "#222",
       "bgcolor": "#000"
     },
@@ -943,7 +798,7 @@
         138.93934287959428
       ],
       "flags": {},
-      "order": 7,
+      "order": 6,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -971,6 +826,10 @@
         "krea2_raw_bf16.safetensors",
         "default"
       ],
+      "widgets_values_named": {
+        "unet_name": "krea2_raw_bf16.safetensors",
+        "weight_dtype": "default"
+      },
       "color": "#323",
       "bgcolor": "#535"
     },
@@ -1011,100 +870,26 @@
         "krea2_turbo_lora_rank_64_bf16.safetensors",
         0.6
       ],
+      "widgets_values_named": {
+        "lora_name": "krea2_turbo_lora_rank_64_bf16.safetensors",
+        "strength_model": 0.6
+      },
       "color": "#323",
       "bgcolor": "#535"
-    },
-    {
-      "id": 92,
-      "type": "LoadImage",
-      "pos": [
-        809.9655501253867,
-        -1849.1134945897625
-      ],
-      "size": [
-        361.4471483897106,
-        414.325119920499
-      ],
-      "flags": {},
-      "order": 8,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            148
-          ]
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoadImage"
-      },
-      "widgets_values": [
-        "0a5550b0a64da1ca45329ab7321ff095.jpg",
-        "image"
-      ],
-      "color": "#233",
-      "bgcolor": "#355"
-    },
-    {
-      "id": 98,
-      "type": "LoadImage",
-      "pos": [
-        812.1936799179213,
-        -1373.341450777364
-      ],
-      "size": [
-        352.13053998935834,
-        419.53824899534595
-      ],
-      "flags": {},
-      "order": 9,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            154
-          ]
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoadImage"
-      },
-      "widgets_values": [
-        "0ef2974cb21b4bb992647fc088f72029xl.jpg",
-        "image"
-      ],
-      "color": "#233",
-      "bgcolor": "#355"
     },
     {
       "id": 87,
       "type": "ResolutionMaster",
       "pos": [
-        407.0329230718222,
-        -1859.7464208478166
+        283.09105216462444,
+        -2493.0758803828644
       ],
       "size": [
         330,
         475
       ],
       "flags": {},
-      "order": 10,
+      "order": 7,
       "mode": 0,
       "inputs": [
         {
@@ -1237,8 +1022,482 @@
         1,
         1
       ],
+      "widgets_values_named": {
+        "mode": "Manual",
+        "latent_type": "latent_4x8",
+        "width": 1344,
+        "height": 1776,
+        "auto_detect": false,
+        "auto_detect_source": "backend",
+        "auto_detect_width": 0,
+        "auto_detect_height": 0,
+        "auto_fit_on_change": false,
+        "auto_resize_on_change": false,
+        "auto_snap_on_change": false,
+        "smart_fit": false,
+        "use_custom_calc": false,
+        "preserve_scaling_ratio": false,
+        "selected_category": "Krea 2 Turbo",
+        "snap_value": 16,
+        "upscale_value": 1,
+        "target_resolution": 1080,
+        "target_megapixels": 2,
+        "auto_detect_presets_json": "{\"__resolutionMasterConfigVersion\":1,\"__resolutionMasterProfile\":{\"strategy\":\"closest_preset\",\"options\":{}},\"__resolutionMasterPresets\":{\"1:1 Square (1024)\":{\"width\":1024,\"height\":1024,\"isCustom\":false,\"isHidden\":false},\"4:3 Landscape (1024)\":{\"width\":1184,\"height\":896,\"isCustom\":false,\"isHidden\":false},\"3:2 Landscape (1024)\":{\"width\":1248,\"height\":832,\"isCustom\":false,\"isHidden\":false},\"16:9 Widescreen (1024)\":{\"width\":1376,\"height\":768,\"isCustom\":false,\"isHidden\":false},\"2.35:1 Cinematic (1024)\":{\"width\":1568,\"height\":672,\"isCustom\":false,\"isHidden\":false},\"4:5 Portrait (1024)\":{\"width\":928,\"height\":1152,\"isCustom\":false,\"isHidden\":false},\"3:4 Portrait (1024)\":{\"width\":896,\"height\":1184,\"isCustom\":false,\"isHidden\":false},\"2:3 Portrait (1024)\":{\"width\":832,\"height\":1248,\"isCustom\":false,\"isHidden\":false},\"9:16 Portrait (1024)\":{\"width\":768,\"height\":1376,\"isCustom\":false,\"isHidden\":false},\"1:1 Square (1536)\":{\"width\":1536,\"height\":1536,\"isCustom\":false,\"isHidden\":false},\"4:3 Landscape (1536)\":{\"width\":1776,\"height\":1344,\"isCustom\":false,\"isHidden\":false},\"3:2 Landscape (1536)\":{\"width\":1872,\"height\":1248,\"isCustom\":false,\"isHidden\":false},\"16:9 Widescreen (1536)\":{\"width\":2064,\"height\":1152,\"isCustom\":false,\"isHidden\":false},\"2.35:1 Cinematic (1536)\":{\"width\":2352,\"height\":1008,\"isCustom\":false,\"isHidden\":false},\"4:5 Portrait (1536)\":{\"width\":1392,\"height\":1728,\"isCustom\":false,\"isHidden\":false},\"3:4 Portrait (1536)\":{\"width\":1344,\"height\":1776,\"isCustom\":false,\"isHidden\":false},\"2:3 Portrait (1536)\":{\"width\":1248,\"height\":1872,\"isCustom\":false,\"isHidden\":false},\"9:16 Portrait (1536)\":{\"width\":1152,\"height\":2064,\"isCustom\":false,\"isHidden\":false},\"1:1 Square (2048)\":{\"width\":2048,\"height\":2048,\"isCustom\":false,\"isHidden\":false},\"4:3 Landscape (2048)\":{\"width\":2368,\"height\":1792,\"isCustom\":false,\"isHidden\":false},\"3:2 Landscape (2048)\":{\"width\":2496,\"height\":1664,\"isCustom\":false,\"isHidden\":false},\"16:9 Widescreen (2048)\":{\"width\":2752,\"height\":1536,\"isCustom\":false,\"isHidden\":false},\"2.35:1 Cinematic (2048)\":{\"width\":3136,\"height\":1344,\"isCustom\":false,\"isHidden\":false},\"4:5 Portrait (2048)\":{\"width\":1856,\"height\":2304,\"isCustom\":false,\"isHidden\":false},\"3:4 Portrait (2048)\":{\"width\":1792,\"height\":2368,\"isCustom\":false,\"isHidden\":false},\"2:3 Portrait (2048)\":{\"width\":1664,\"height\":2496,\"isCustom\":false,\"isHidden\":false},\"9:16 Portrait (2048)\":{\"width\":1536,\"height\":2752,\"isCustom\":false,\"isHidden\":false}}}",
+        "rescale_mode": "manual",
+        "rescale_value": 1,
+        "batch_size": 1
+      },
       "color": "#432",
       "bgcolor": "#653"
+    },
+    {
+      "id": 80,
+      "type": "GetNode",
+      "pos": [
+        1303.9113985769932,
+        -1478.4447283562824
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            133
+          ]
+        }
+      ],
+      "title": "Get_CLIP",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": [
+        "CLIP"
+      ],
+      "widgets_values_named": {
+        "Constant": "CLIP"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 91,
+      "type": "TextEncodeKrea2",
+      "pos": [
+        1198.287502261721,
+        -1833.9540390734644
+      ],
+      "size": [
+        560.9237137363198,
+        673.1299698415992
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 133
+        },
+        {
+          "name": "system_prompt",
+          "shape": 7,
+          "type": "STRING",
+          "link": 138
+        },
+        {
+          "name": "image1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 178
+        },
+        {
+          "name": "mask1",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        },
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 188
+        },
+        {
+          "name": "image2",
+          "type": "IMAGE",
+          "link": 179
+        },
+        {
+          "name": "mask2",
+          "type": "MASK",
+          "link": null
+        },
+        {
+          "name": "image3",
+          "type": "IMAGE",
+          "link": 180
+        },
+        {
+          "name": "mask3",
+          "type": "MASK",
+          "link": null
+        },
+        {
+          "name": "image4",
+          "type": "IMAGE",
+          "link": 181
+        },
+        {
+          "name": "mask4",
+          "type": "MASK",
+          "link": null
+        },
+        {
+          "name": "image5",
+          "type": "IMAGE",
+          "link": 182
+        },
+        {
+          "name": "mask5",
+          "type": "MASK",
+          "link": null
+        },
+        {
+          "name": "image6",
+          "type": "IMAGE",
+          "link": 183
+        },
+        {
+          "name": "mask6",
+          "type": "MASK",
+          "link": null
+        },
+        {
+          "name": "image7",
+          "type": "IMAGE",
+          "link": 184
+        },
+        {
+          "name": "mask7",
+          "type": "MASK",
+          "link": null
+        },
+        {
+          "name": "image8",
+          "type": "IMAGE",
+          "link": 185
+        },
+        {
+          "name": "mask8",
+          "type": "MASK",
+          "link": null
+        },
+        {
+          "name": "image9",
+          "type": "IMAGE",
+          "link": 186
+        },
+        {
+          "name": "mask9",
+          "type": "MASK",
+          "link": null
+        },
+        {
+          "name": "image10",
+          "type": "IMAGE",
+          "link": 187
+        },
+        {
+          "name": "mask10",
+          "type": "MASK",
+          "link": null
+        },
+        {
+          "name": "image11",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "mask11",
+          "type": "MASK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            136,
+            170
+          ]
+        },
+        {
+          "name": "vlm_prompt",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "TextEncodeKrea2"
+      },
+      "widgets_values": [
+        "",
+        1,
+        0,
+        "before prompt",
+        false
+      ],
+      "widgets_values_named": {
+        "prompt": "",
+        "vision_megapixels": 1,
+        "mask_padding": 0,
+        "vision_position": "before prompt",
+        "print_prompt": false
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 110,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        309.76475202766045,
+        -1198.0810753270985
+      ],
+      "size": [
+        788.8501485462231,
+        233.76859675997412
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            188
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        "Girl an boy kissing each other on a busy street."
+      ],
+      "widgets_values_named": {
+        "value": "Girl an boy kissing each other on a busy street."
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 58,
+      "type": "ConditioningZeroOut",
+      "pos": [
+        1216.293065354447,
+        -1094.4405245550524
+      ],
+      "size": [
+        230,
+        30
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 136
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            172
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ConditioningZeroOut",
+        "cnr_id": "comfy-core",
+        "ver": "0.25.0"
+      },
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 107,
+      "type": "krea2-conditioning",
+      "pos": [
+        1201.8611374360817,
+        -1094.9867174953745
+      ],
+      "size": [
+        306.0513671875,
+        130
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 170
+        }
+      ],
+      "outputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "links": [
+            173
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "krea2-conditioning"
+      },
+      "widgets_values": [
+        "detail",
+        "1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 2.5, 5.0, 1.1, 4.0, 1.0",
+        1,
+        true
+      ],
+      "widgets_values_named": {
+        "preset": "detail",
+        "per_layer_weights": "1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 2.5, 5.0, 1.1, 4.0, 1.0",
+        "multiplier": 1,
+        "renormalize": true
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 109,
+      "type": "QwenImageReferencePack",
+      "pos": [
+        300.487253114119,
+        -1836.6640400388753
+      ],
+      "size": [
+        800,
+        581
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "image_1",
+          "type": "IMAGE",
+          "links": [
+            178
+          ]
+        },
+        {
+          "name": "image_2",
+          "type": "IMAGE",
+          "links": [
+            179
+          ]
+        },
+        {
+          "name": "image_3",
+          "type": "IMAGE",
+          "links": [
+            180
+          ]
+        },
+        {
+          "name": "image_4",
+          "type": "IMAGE",
+          "links": [
+            181
+          ]
+        },
+        {
+          "name": "image_5",
+          "type": "IMAGE",
+          "links": [
+            182
+          ]
+        },
+        {
+          "name": "image_6",
+          "type": "IMAGE",
+          "links": [
+            183
+          ]
+        },
+        {
+          "name": "image_7",
+          "type": "IMAGE",
+          "links": [
+            184
+          ]
+        },
+        {
+          "name": "image_8",
+          "type": "IMAGE",
+          "links": [
+            185
+          ]
+        },
+        {
+          "name": "image_9",
+          "type": "IMAGE",
+          "links": [
+            186
+          ]
+        },
+        {
+          "name": "image_10",
+          "type": "IMAGE",
+          "links": [
+            187
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "QwenImageReferencePack"
+      },
+      "widgets_values": [
+        "{\"references\":[]}",
+        2048,
+        ""
+      ],
+      "widgets_values_named": {
+        "references_json": "{\"references\":[]}",
+        "max_reference_edge": 2048,
+        "mmrp_block": ""
+      },
+      "color": "#232",
+      "bgcolor": "#353"
     }
   ],
   "links": [
@@ -1321,22 +1580,6 @@
       91,
       1,
       "STRING"
-    ],
-    [
-      148,
-      92,
-      0,
-      91,
-      2,
-      "IMAGE"
-    ],
-    [
-      154,
-      98,
-      0,
-      91,
-      4,
-      "IMAGE"
     ],
     [
       162,
@@ -1425,6 +1668,94 @@
       108,
       0,
       "MODEL"
+    ],
+    [
+      178,
+      109,
+      0,
+      91,
+      2,
+      "IMAGE"
+    ],
+    [
+      179,
+      109,
+      1,
+      91,
+      5,
+      "IMAGE"
+    ],
+    [
+      180,
+      109,
+      2,
+      91,
+      7,
+      "IMAGE"
+    ],
+    [
+      181,
+      109,
+      3,
+      91,
+      9,
+      "IMAGE"
+    ],
+    [
+      182,
+      109,
+      4,
+      91,
+      11,
+      "IMAGE"
+    ],
+    [
+      183,
+      109,
+      5,
+      91,
+      13,
+      "IMAGE"
+    ],
+    [
+      184,
+      109,
+      6,
+      91,
+      15,
+      "IMAGE"
+    ],
+    [
+      185,
+      109,
+      7,
+      91,
+      17,
+      "IMAGE"
+    ],
+    [
+      186,
+      109,
+      8,
+      91,
+      19,
+      "IMAGE"
+    ],
+    [
+      187,
+      109,
+      9,
+      91,
+      21,
+      "IMAGE"
+    ],
+    [
+      188,
+      110,
+      0,
+      91,
+      4,
+      "STRING"
     ]
   ],
   "groups": [
@@ -1444,10 +1775,10 @@
       "id": 11,
       "title": "Conditioning",
       "bounding": [
-        786.4560551991987,
-        -1937.3620866469032,
-        994.1780271725327,
-        1015.6258652830284
+        271.6204635388231,
+        -1923.7420985491394,
+        1503.5654988990875,
+        976.127775104798
       ],
       "color": "#3f789e",
       "flags": {}
@@ -1468,8 +1799,8 @@
       "id": 13,
       "title": "Resolution",
       "bounding": [
-        384.0465022482948,
-        -1932.5358043291628,
+        260.1046313410969,
+        -2565.8652638642106,
         380.2503207221074,
         578.8044543044793
       ],
@@ -1492,17 +1823,20 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.30141472344749587,
+      "scale": 0.5339745688853696,
       "offset": [
-        757.6993745365181,
-        2946.9863922063096
+        39.50614877488357,
+        2065.1031582833666
       ]
     },
-    "frontendVersion": "1.48.7",
+    "frontendVersion": "1.52.7",
     "VHS_latentpreview": true,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
     "VHS_KeepIntermediate": true
   },
-  "version": 0.4
+  "version": 0.4,
+  "seed_widgets": {
+    "108": 0
+  }
 }

@@ -45,51 +45,13 @@
         "krea2",
         "default"
       ],
+      "widgets_values_named": {
+        "clip_name": "qwen3-vl-4b-instruct-abliterated.safetensors",
+        "type": "krea2",
+        "device": "default"
+      },
       "color": "#332922",
       "bgcolor": "#593930"
-    },
-    {
-      "id": 55,
-      "type": "UNETLoader",
-      "pos": [
-        1033.6166352988878,
-        -2601.034085391683
-      ],
-      "size": [
-        393.12186986859206,
-        135.62473996270455
-      ],
-      "flags": {},
-      "order": 1,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            142
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "UNETLoader",
-        "cnr_id": "comfy-core",
-        "ver": "0.25.0",
-        "models": [
-          {
-            "name": "krea2_turbo_fp8_scaled.safetensors",
-            "url": "https://huggingface.co/Comfy-Org/Krea-2/resolve/main/diffusion_models/krea2_turbo_fp8_scaled.safetensors",
-            "directory": "diffusion_models"
-          }
-        ]
-      },
-      "widgets_values": [
-        "diffusion_models/krea2_raw_bf16.safetensors",
-        "default"
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
     },
     {
       "id": 75,
@@ -105,7 +67,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 28,
+      "order": 30,
       "mode": 0,
       "inputs": [
         {
@@ -130,6 +92,9 @@
       "widgets_values": [
         "MODEL"
       ],
+      "widgets_values_named": {
+        "Constant": "MODEL"
+      },
       "color": "#223",
       "bgcolor": "#335"
     },
@@ -147,7 +112,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 29,
+      "order": 31,
       "mode": 0,
       "inputs": [
         {
@@ -172,6 +137,9 @@
       "widgets_values": [
         "CLIP"
       ],
+      "widgets_values_named": {
+        "Constant": "CLIP"
+      },
       "color": "#432",
       "bgcolor": "#653"
     },
@@ -189,7 +157,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 14,
+      "order": 13,
       "mode": 0,
       "inputs": [
         {
@@ -214,6 +182,9 @@
       "widgets_values": [
         "VAE"
       ],
+      "widgets_values_named": {
+        "Constant": "VAE"
+      },
       "color": "#322",
       "bgcolor": "#533"
     },
@@ -229,7 +200,7 @@
         137.1340338738794
       ],
       "flags": {},
-      "order": 2,
+      "order": 1,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -256,6 +227,9 @@
       "widgets_values": [
         "krea2RealVae_v10.safetensors"
       ],
+      "widgets_values_named": {
+        "vae_name": "krea2RealVae_v10.safetensors"
+      },
       "color": "#223",
       "bgcolor": "#335"
     },
@@ -273,7 +247,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 3,
+      "order": 2,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -293,6 +267,9 @@
       "widgets_values": [
         "scaled_image"
       ],
+      "widgets_values_named": {
+        "Constant": "scaled_image"
+      },
       "color": "#2a363b",
       "bgcolor": "#3f5159"
     },
@@ -310,7 +287,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 4,
+      "order": 3,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -330,6 +307,9 @@
       "widgets_values": [
         "VAE"
       ],
+      "widgets_values_named": {
+        "Constant": "VAE"
+      },
       "color": "#322",
       "bgcolor": "#533"
     },
@@ -345,7 +325,7 @@
         1213.766850626647
       ],
       "flags": {},
-      "order": 30,
+      "order": 28,
       "mode": 0,
       "inputs": [
         {
@@ -387,6 +367,24 @@
           }
         ]
       ],
+      "widgets_values_named": {
+        "rgthree_comparer": {
+          "images": [
+            {
+              "name": "A",
+              "selected": true,
+              "url": "/api/view?filename=rgthree.compare._temp_qvlip_00033_.png&type=temp&subfolder=&rand=0.8772881077946927",
+              "img": {}
+            },
+            {
+              "name": "B",
+              "selected": true,
+              "url": "/api/view?filename=rgthree.compare._temp_qvlip_00034_.png&type=temp&subfolder=&rand=0.5145539406535181",
+              "img": {}
+            }
+          ]
+        }
+      },
       "color": "#222",
       "bgcolor": "#000"
     },
@@ -404,7 +402,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 27,
+      "order": 26,
       "mode": 0,
       "inputs": [
         {
@@ -434,7 +432,6 @@
         "cnr_id": "comfy-core",
         "ver": "0.25.0"
       },
-      "widgets_values": [],
       "color": "#233",
       "bgcolor": "#355"
     },
@@ -452,7 +449,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 19,
+      "order": 18,
       "mode": 0,
       "inputs": [
         {
@@ -476,47 +473,10 @@
       },
       "widgets_values": [
         "Filename"
-      ]
-    },
-    {
-      "id": 98,
-      "type": "LoraLoaderModelOnly",
-      "pos": [
-        1034.7933289396963,
-        -2422.881723467595
       ],
-      "size": [
-        268.871418356669,
-        98.92896143943312
-      ],
-      "flags": {},
-      "order": 13,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 142
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            253
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoraLoaderModelOnly"
-      },
-      "widgets_values": [
-        "loras/krea2_turbo_lora_rank_64_bf16.safetensors",
-        1
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
+      "widgets_values_named": {
+        "Constant": "Filename"
+      }
     },
     {
       "id": 96,
@@ -530,7 +490,7 @@
         130
       ],
       "flags": {},
-      "order": 24,
+      "order": 25,
       "mode": 0,
       "inputs": [
         {
@@ -557,6 +517,12 @@
         2,
         false
       ],
+      "widgets_values_named": {
+        "enabled": true,
+        "strength": 2,
+        "text_scale": 2,
+        "debug": false
+      },
       "color": "#323",
       "bgcolor": "#535"
     },
@@ -572,7 +538,7 @@
         397.6517816755313
       ],
       "flags": {},
-      "order": 26,
+      "order": 27,
       "mode": 0,
       "inputs": [
         {
@@ -645,6 +611,24 @@
           }
         ]
       ],
+      "widgets_values_named": {
+        "__lm_autocomplete_meta_text": {
+          "version": 1,
+          "textWidgetName": "text"
+        },
+        "text": "<lora:Krea2_Anything2RealCharacters-V1:1.00>",
+        "loras": [
+          {
+            "name": "Krea2_Anything2RealCharacters-V1",
+            "strength": 1,
+            "active": true,
+            "expanded": false,
+            "clipStrength": 1,
+            "selected": false,
+            "locked": false
+          }
+        ]
+      },
       "color": "#323",
       "bgcolor": "#535"
     },
@@ -662,7 +646,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 5,
+      "order": 4,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -682,6 +666,9 @@
       "widgets_values": [
         "MODEL"
       ],
+      "widgets_values_named": {
+        "Constant": "MODEL"
+      },
       "color": "#223",
       "bgcolor": "#335"
     },
@@ -699,7 +686,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 6,
+      "order": 5,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -719,6 +706,9 @@
       "widgets_values": [
         "VAE"
       ],
+      "widgets_values_named": {
+        "Constant": "VAE"
+      },
       "color": "#322",
       "bgcolor": "#533"
     },
@@ -736,7 +726,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 15,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
@@ -761,8 +751,7 @@
       ],
       "properties": {
         "Node name for S&R": "VAEEncode"
-      },
-      "widgets_values": []
+      }
     },
     {
       "id": 153,
@@ -778,7 +767,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 7,
+      "order": 6,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -798,6 +787,9 @@
       "widgets_values": [
         "scaled_image"
       ],
+      "widgets_values_named": {
+        "Constant": "scaled_image"
+      },
       "color": "#2a363b",
       "bgcolor": "#3f5159"
     },
@@ -815,7 +807,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 8,
+      "order": 7,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -836,6 +828,9 @@
       "widgets_values": [
         "scaled_image"
       ],
+      "widgets_values_named": {
+        "Constant": "scaled_image"
+      },
       "color": "#2a363b",
       "bgcolor": "#3f5159"
     },
@@ -853,7 +848,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 9,
+      "order": 8,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -874,6 +869,9 @@
       "widgets_values": [
         "CLIP"
       ],
+      "widgets_values_named": {
+        "Constant": "CLIP"
+      },
       "color": "#432",
       "bgcolor": "#653"
     },
@@ -891,7 +889,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 10,
+      "order": 9,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -912,6 +910,9 @@
       "widgets_values": [
         "VAE"
       ],
+      "widgets_values_named": {
+        "Constant": "VAE"
+      },
       "color": "#322",
       "bgcolor": "#533"
     },
@@ -927,7 +928,7 @@
         58
       ],
       "flags": {},
-      "order": 21,
+      "order": 20,
       "mode": 0,
       "inputs": [
         {
@@ -951,6 +952,9 @@
       "widgets_values": [
         "index_timestep_zero"
       ],
+      "widgets_values_named": {
+        "reference_latents_method": "index_timestep_zero"
+      },
       "color": "#232",
       "bgcolor": "#353"
     },
@@ -968,7 +972,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 17,
+      "order": 16,
       "mode": 0,
       "inputs": [
         {
@@ -1016,6 +1020,9 @@
       "widgets_values": [
         ""
       ],
+      "widgets_values_named": {
+        "prompt": ""
+      },
       "color": "#323",
       "bgcolor": "#535"
     },
@@ -1031,7 +1038,7 @@
         58
       ],
       "flags": {},
-      "order": 22,
+      "order": 21,
       "mode": 0,
       "inputs": [
         {
@@ -1055,6 +1062,9 @@
       "widgets_values": [
         "index_timestep_zero"
       ],
+      "widgets_values_named": {
+        "reference_latents_method": "index_timestep_zero"
+      },
       "color": "#323",
       "bgcolor": "#535"
     },
@@ -1070,7 +1080,7 @@
         270
       ],
       "flags": {},
-      "order": 31,
+      "order": 29,
       "mode": 0,
       "inputs": [
         {
@@ -1091,7 +1101,10 @@
       },
       "widgets_values": [
         "Krea2-Ostris-edit"
-      ]
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "Krea2-Ostris-edit"
+      }
     },
     {
       "id": 125,
@@ -1107,7 +1120,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 23,
+      "order": 22,
       "mode": 0,
       "inputs": [
         {
@@ -1132,6 +1145,9 @@
       "widgets_values": [
         "scaled_image"
       ],
+      "widgets_values_named": {
+        "Constant": "scaled_image"
+      },
       "color": "#2a363b",
       "bgcolor": "#3f5159"
     },
@@ -1147,7 +1163,7 @@
         214
       ],
       "flags": {},
-      "order": 18,
+      "order": 17,
       "mode": 0,
       "inputs": [
         {
@@ -1196,6 +1212,12 @@
         "crop",
         "lanczos"
       ],
+      "widgets_values_named": {
+        "megapixels": 1.6,
+        "multiple_of": 8,
+        "resize_mode": "crop",
+        "upscale_method": "lanczos"
+      },
       "color": "#232",
       "bgcolor": "#353"
     },
@@ -1211,7 +1233,7 @@
         447.751521963944
       ],
       "flags": {},
-      "order": 11,
+      "order": 10,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1242,6 +1264,10 @@
         "3e8a4d2254befeadd04a528577ee1cd0.jpg",
         "image"
       ],
+      "widgets_values_named": {
+        "image": "3e8a4d2254befeadd04a528577ee1cd0.jpg",
+        "upload": "image"
+      },
       "color": "#232",
       "bgcolor": "#353"
     },
@@ -1257,7 +1283,7 @@
         58
       ],
       "flags": {},
-      "order": 20,
+      "order": 23,
       "mode": 0,
       "inputs": [
         {
@@ -1281,6 +1307,9 @@
       "widgets_values": [
         true
       ],
+      "widgets_values_named": {
+        "kv_cache": true
+      },
       "color": "#432",
       "bgcolor": "#653"
     },
@@ -1296,7 +1325,7 @@
         380.531454135476
       ],
       "flags": {},
-      "order": 16,
+      "order": 15,
       "mode": 0,
       "inputs": [
         {
@@ -1344,6 +1373,9 @@
       "widgets_values": [
         "transform the image to realistic photograph.\nRealistic skin texture and anatomy.\nRealistic lightning accentuating the subject."
       ],
+      "widgets_values_named": {
+        "prompt": "transform the image to realistic photograph.\nRealistic skin texture and anatomy.\nRealistic lightning accentuating the subject."
+      },
       "color": "#232",
       "bgcolor": "#353"
     },
@@ -1359,7 +1391,7 @@
         940.4372664142436
       ],
       "flags": {},
-      "order": 25,
+      "order": 24,
       "mode": 0,
       "inputs": [
         {
@@ -1404,6 +1436,15 @@
         "sgm_uniform",
         1
       ],
+      "widgets_values_named": {
+        "seed": 44,
+        "control_after_generate": "fixed",
+        "steps": 10,
+        "cfg": 1,
+        "sampler_name": "res_2m",
+        "scheduler": "sgm_uniform",
+        "denoise": 1
+      },
       "color": "#222",
       "bgcolor": "#000"
     },
@@ -1419,7 +1460,7 @@
         425.3616638183594
       ],
       "flags": {},
-      "order": 12,
+      "order": 11,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -1430,8 +1471,102 @@
       "widgets_values": [
         "```\n欢迎进入我的主页\nQQ交流1群：1058747239\nQQ交流2群：1072010342\n可定制工作流和模型和远程部署！\n\n```\n---\n\n### 公众号直达：[AIGC特异点](https://mp.weixin.qq.com/s/HPH9c0lymUxKDipVcw7PCQ)👈\n### B站直达：[AIGC特异点](https://space.bilibili.com/49766729?spm_id_from=333.1007.0.0 )👈\n### 闲鱼店铺直达：[AI服务](https://www.goofish.com/personal?spm=a21ybx.home.nav.1.4c053da6H5SqxH)👈\n### runninghub主页：[AIGC特异点](https://www.runninghub.cn/?inviteCode=sdhs0trb)👈\n### LIBLIBAI主页：[模型Lora](https://www.liblib.art/userpage/4230c933675a4170a1c9e7b4273325d5/publish )👈\n### Youtube主页：[AIGC-Singularity](https://www.youtube.com/@AIGC-Singularity)👈\n### civitai：[AIGC_Singularity](https://civitai.green/user/AIGC_Singularity)👈\n### 飞群：https://t.me/+iX6ZHABDUes5Y2Qx"
       ],
+      "widgets_values_named": {
+        "text": "```\n欢迎进入我的主页\nQQ交流1群：1058747239\nQQ交流2群：1072010342\n可定制工作流和模型和远程部署！\n\n```\n---\n\n### 公众号直达：[AIGC特异点](https://mp.weixin.qq.com/s/HPH9c0lymUxKDipVcw7PCQ)👈\n### B站直达：[AIGC特异点](https://space.bilibili.com/49766729?spm_id_from=333.1007.0.0 )👈\n### 闲鱼店铺直达：[AI服务](https://www.goofish.com/personal?spm=a21ybx.home.nav.1.4c053da6H5SqxH)👈\n### runninghub主页：[AIGC特异点](https://www.runninghub.cn/?inviteCode=sdhs0trb)👈\n### LIBLIBAI主页：[模型Lora](https://www.liblib.art/userpage/4230c933675a4170a1c9e7b4273325d5/publish )👈\n### Youtube主页：[AIGC-Singularity](https://www.youtube.com/@AIGC-Singularity)👈\n### civitai：[AIGC_Singularity](https://civitai.green/user/AIGC_Singularity)👈\n### 飞群：https://t.me/+iX6ZHABDUes5Y2Qx"
+      },
       "color": "#322",
       "bgcolor": "#533"
+    },
+    {
+      "id": 55,
+      "type": "UNETLoader",
+      "pos": [
+        1033.6166352988878,
+        -2601.034085391683
+      ],
+      "size": [
+        393.12186986859206,
+        135.62473996270455
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            142
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UNETLoader",
+        "cnr_id": "comfy-core",
+        "ver": "0.25.0",
+        "models": [
+          {
+            "name": "krea2_turbo_fp8_scaled.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/Krea-2/resolve/main/diffusion_models/krea2_turbo_fp8_scaled.safetensors",
+            "directory": "diffusion_models"
+          }
+        ]
+      },
+      "widgets_values": [
+        "krea2_raw_bf16.safetensors",
+        "default"
+      ],
+      "widgets_values_named": {
+        "unet_name": "krea2_raw_bf16.safetensors",
+        "weight_dtype": "default"
+      },
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 98,
+      "type": "LoraLoaderModelOnly",
+      "pos": [
+        1034.7933289396963,
+        -2422.881723467595
+      ],
+      "size": [
+        268.871418356669,
+        98.92896143943312
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 142
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            253
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoaderModelOnly"
+      },
+      "widgets_values": [
+        "krea2_turbo_lora_rank_64_bf16.safetensors",
+        1
+      ],
+      "widgets_values_named": {
+        "lora_name": "krea2_turbo_lora_rank_64_bf16.safetensors",
+        "strength_model": 1
+      },
+      "color": "#323",
+      "bgcolor": "#535"
     }
   ],
   "links": [
@@ -1741,17 +1876,20 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.30294195777782207,
+      "scale": 0.5366801576628366,
       "offset": [
-        -223.42055941830188,
-        3051.7211913181654
+        172.9689285011404,
+        2924.3614418645093
       ]
     },
-    "frontendVersion": "1.45.21",
+    "frontendVersion": "1.52.7",
     "VHS_latentpreview": true,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
     "VHS_KeepIntermediate": true
   },
-  "version": 0.4
+  "version": 0.4,
+  "seed_widgets": {
+    "104": 0
+  }
 }

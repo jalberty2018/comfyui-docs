@@ -15,6 +15,7 @@
 - Added Runpod templates with workflows for QWEN Image 2.1 with/without heretic prompt enhancer.
 - [ComfyUI-QwenImageRefPack](https://github.com/Hearmeman24/ComfyUI-QwenImageRefPack)
 - Updated llama-cpp to `b11115`
+- Updated Krea-2 workflows.
 
 ## Container CUDA upgrade notice
 
