@@ -8,12 +8,13 @@
 - Some custom nodes have been adapted specifically for this pod or pinned to increase the stability.
 - Tested on L40S, RTX 6000 Ada, RTX PRO 6000, PRO 6000 MiG 48Gb, RTX 5090, (RTX 4090).
 
-## 26092026
+## 29092026
 
 - ComfyUI 0.37.1
 - Pytorch 2.12.1 CUDA 13.0 build
 - llama-cpp b11115
 - [comfyui-obvpm-timeline](https://github.com/chanon/comfyui-obvpm-timeline)
+- [Comfyui_Minimax_h3_latent_Upscaler](https://github.com/LBH-123-AI/Comfyui_Minimax_h3_latent_Upscaler)
 - Solved VRAM detection on PRO 6000 MiG.
 - Solved Hyperflow model detection.
 - Added First Last image manager with tools and updated workflows.
@@ -26,7 +27,7 @@
 ## 21092026
 
 - ComfyUI 0.37.0
-- Last tested version running on CUDA 12.8
+- Last tested version running on pytorch 2.10 CUDA 12.8
 
 ## 20092026
 
@@ -55,7 +56,6 @@
 
 - ComfyUI 0.34.0
 - [ComfyUI-MiniMax-H3-PDD-Acc](https://github.com/Jalen-Brunson/ComfyUI-MiniMax-H3-PDD-Acc)
-- [MMH3-UltimateUpscale](https://github.com/bbaudio-2025/Comfyui-MMH3-UltimateUpscale)
 - Fixed Multi-shot audio crash.
 - Removed custom_nodes using irriversible patching
 - Security updates

@@ -35,7 +35,7 @@
 
 - [Video Helper Suite](https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite)
 - [Frame Interpolation](https://github.com/Fannovel16/ComfyUI-Frame-Interpolation)
-- [MMH3-UltimateUpscale](https://github.com/bbaudio-2025/Comfyui-MMH3-UltimateUpscale.git)
+- [Comfyui_Minimax_h3_latent_Upscaler](https://github.com/LBH-123-AI/Comfyui_Minimax_h3_latent_Upscaler)
 
 ### Segmentation
 

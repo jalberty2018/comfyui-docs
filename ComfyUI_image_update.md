@@ -8,7 +8,7 @@
 - Pinned custom nodes are not updated automatically, because changing those pins can introduce compatibility issues.
 - Tested on a wide range of GPU's including RTX 3090,4090,5090, L40S, L4 , PRO 6000 MiG 24/48 Gb.
 
-## 24092026
+## 29092026
 
 - ComfyUI 0.37.1
 - Pytorch 2.12.1 CUDA 13.0 build
