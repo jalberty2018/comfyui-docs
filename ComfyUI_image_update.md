@@ -11,6 +11,7 @@
 ## 30092026
 
 - ComfyUI 0.38.0
+- Fixed Krea-2 prompt enhancer.
 
 ## 29092026
 
