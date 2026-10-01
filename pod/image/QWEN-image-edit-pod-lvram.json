@@ -1,8 +1,8 @@
 {
   "id": "ad18abd3-bdee-4f80-8fae-d15d4f845b9d",
   "revision": 0,
-  "last_node_id": 125,
-  "last_link_id": 301,
+  "last_node_id": 126,
+  "last_link_id": 311,
   "nodes": [
     {
       "id": 67,
@@ -13,10 +13,10 @@
       ],
       "size": [
         270,
-        68.33333333333334
+        82
       ],
       "flags": {},
-      "order": 11,
+      "order": 9,
       "mode": 0,
       "inputs": [
         {
@@ -47,8 +47,13 @@
         "secondTabWidth": 65
       },
       "widgets_values": [
-        3.1
+        3.1,
+        "flow"
       ],
+      "widgets_values_named": {
+        "shift": 3.1,
+        "sampling": "flow"
+      },
       "color": "#232",
       "bgcolor": "#353"
     },
@@ -100,6 +105,10 @@
         "split_files/diffusion_models/qwen_image_edit_2511_fp8mixed.safetensors",
         "default"
       ],
+      "widgets_values_named": {
+        "unet_name": "split_files/diffusion_models/qwen_image_edit_2511_fp8mixed.safetensors",
+        "weight_dtype": "default"
+      },
       "color": "#223",
       "bgcolor": "#335"
     },
@@ -115,7 +124,7 @@
         58
       ],
       "flags": {},
-      "order": 9,
+      "order": 7,
       "mode": 0,
       "inputs": [
         {
@@ -139,6 +148,9 @@
       "widgets_values": [
         false
       ],
+      "widgets_values_named": {
+        "enable_fp16_accumulation": false
+      },
       "color": "#223",
       "bgcolor": "#335"
     },
@@ -190,6 +202,11 @@
         "qwen_image",
         "default"
       ],
+      "widgets_values_named": {
+        "clip_name": "split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors",
+        "type": "qwen_image",
+        "device": "default"
+      },
       "color": "#223",
       "bgcolor": "#335"
     },
@@ -241,6 +258,9 @@
       "widgets_values": [
         "split_files/vae/qwen_image_vae.safetensors"
       ],
+      "widgets_values_named": {
+        "vae_name": "split_files/vae/qwen_image_vae.safetensors"
+      },
       "color": "#223",
       "bgcolor": "#335"
     },
@@ -265,104 +285,9 @@
       "widgets_values": [
         "You can test and find the best setting by yourself. The following table is for reference.\n|   | Qwen | Comfy | lightning LoRA |\n|--------|---------|------------|---------------------------|\n| Steps  | 40      | 20         | 4                         |\n| CFG    | 4.0     | 4.0       | 1.0                       |\n\nBy default, we use 20 steps as we just don't want it to take too long. Try 40 if you want a better result, but it will take longer."
       ],
-      "color": "#222",
-      "bgcolor": "#000"
-    },
-    {
-      "id": 87,
-      "type": "LoadImage",
-      "pos": [
-        -1392.0644716026552,
-        300.7939190796488
-      ],
-      "size": [
-        301.7014598091042,
-        416.6107451858379
-      ],
-      "flags": {},
-      "order": 4,
-      "mode": 4,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            264
-          ]
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": null
-        }
-      ],
-      "title": "Image 3",
-      "properties": {
-        "Node name for S&R": "LoadImage",
-        "cnr_id": "comfy-core",
-        "ver": "0.5.1",
-        "enableTabs": false,
-        "tabWidth": 65,
-        "tabXOffset": 10,
-        "hasSecondTab": false,
-        "secondTabText": "Send Back",
-        "secondTabOffset": 80,
-        "secondTabWidth": 65
+      "widgets_values_named": {
+        "text": "You can test and find the best setting by yourself. The following table is for reference.\n|   | Qwen | Comfy | lightning LoRA |\n|--------|---------|------------|---------------------------|\n| Steps  | 40      | 20         | 4                         |\n| CFG    | 4.0     | 4.0       | 1.0                       |\n\nBy default, we use 20 steps as we just don't want it to take too long. Try 40 if you want a better result, but it will take longer."
       },
-      "widgets_values": [
-        "Snapshot 02-02-2026 14_14 (3).png",
-        "image"
-      ],
-      "color": "#222",
-      "bgcolor": "#000"
-    },
-    {
-      "id": 83,
-      "type": "LoadImage",
-      "pos": [
-        -1064.8101477151931,
-        305.68563186204756
-      ],
-      "size": [
-        295.12395087806624,
-        404.77102837726375
-      ],
-      "flags": {},
-      "order": 5,
-      "mode": 4,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            262
-          ]
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": null
-        }
-      ],
-      "title": "Image 2",
-      "properties": {
-        "Node name for S&R": "LoadImage",
-        "cnr_id": "comfy-core",
-        "ver": "0.5.1",
-        "enableTabs": false,
-        "tabWidth": 65,
-        "tabXOffset": 10,
-        "hasSecondTab": false,
-        "secondTabText": "Send Back",
-        "secondTabOffset": 80,
-        "secondTabWidth": 65
-      },
-      "widgets_values": [
-        "Snapshot 02-02-2026 14_14 (2).png",
-        "image"
-      ],
       "color": "#222",
       "bgcolor": "#000"
     },
@@ -375,10 +300,10 @@
       ],
       "size": [
         270,
-        68.33333333333334
+        82
       ],
       "flags": {},
-      "order": 13,
+      "order": 11,
       "mode": 0,
       "inputs": [
         {
@@ -409,50 +334,15 @@
         "secondTabWidth": 65
       },
       "widgets_values": [
-        1
+        1,
+        false
       ],
+      "widgets_values_named": {
+        "strength": 1,
+        "pre_cfg": false
+      },
       "color": "#232",
       "bgcolor": "#353"
-    },
-    {
-      "id": 9,
-      "type": "SaveImage",
-      "pos": [
-        716.1542143049845,
-        -358.34933797122204
-      ],
-      "size": [
-        448.46861563790026,
-        402.57498249134386
-      ],
-      "flags": {},
-      "order": 16,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 9
-        }
-      ],
-      "outputs": [],
-      "properties": {
-        "Node name for S&R": "SaveImage",
-        "cnr_id": "comfy-core",
-        "ver": "0.5.1",
-        "enableTabs": false,
-        "tabWidth": 65,
-        "tabXOffset": 10,
-        "hasSecondTab": false,
-        "secondTabText": "Send Back",
-        "secondTabOffset": 80,
-        "secondTabWidth": 65
-      },
-      "widgets_values": [
-        "QWEN-EDIT-LVRAM"
-      ],
-      "color": "#222",
-      "bgcolor": "#000"
     },
     {
       "id": 8,
@@ -468,7 +358,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 15,
+      "order": 13,
       "mode": 0,
       "inputs": [
         {
@@ -488,8 +378,7 @@
           "type": "IMAGE",
           "slot_index": 0,
           "links": [
-            9,
-            296
+            9
           ]
         }
       ],
@@ -504,8 +393,7 @@
         "secondTabText": "Send Back",
         "secondTabOffset": 80,
         "secondTabWidth": 65
-      },
-      "widgets_values": []
+      }
     },
     {
       "id": 74,
@@ -519,7 +407,7 @@
         96.66666666666667
       ],
       "flags": {},
-      "order": 8,
+      "order": 6,
       "mode": 4,
       "inputs": [
         {
@@ -560,6 +448,10 @@
         "Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors",
         1
       ],
+      "widgets_values_named": {
+        "lora_name": "Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors",
+        "strength_model": 1
+      },
       "color": "#223",
       "bgcolor": "#335"
     },
@@ -575,7 +467,7 @@
         560
       ],
       "flags": {},
-      "order": 14,
+      "order": 12,
       "mode": 0,
       "inputs": [
         {
@@ -629,6 +521,15 @@
         "simple",
         1
       ],
+      "widgets_values_named": {
+        "seed": 957837015987140,
+        "control_after_generate": "randomize",
+        "steps": 20,
+        "cfg": 4,
+        "sampler_name": "euler",
+        "scheduler": "simple",
+        "denoise": 1
+      },
       "color": "#222",
       "bgcolor": "#000"
     },
@@ -636,18 +537,19 @@
       "id": 88,
       "type": "ResolutionMaster",
       "pos": [
-        -1827.4349351165358,
-        125.52184704066163
+        -1674.9224981041807,
+        199.4672478961988
       ],
       "size": [
         330,
         475
       ],
       "flags": {},
-      "order": 6,
+      "order": 4,
       "mode": 0,
       "inputs": [
         {
+          "label": "input_image",
           "name": "input_image",
           "shape": 7,
           "type": "IMAGE",
@@ -717,12 +619,21 @@
         "targetMegapixels": 2,
         "rescaleMode": "resolution",
         "rescaleValue": 1.6237976320958225,
+        "preserveScalingRatio": false,
+        "preserveScalingSnap": false,
         "autoDetect": false,
+        "autoDetectSource": "backend",
+        "autoDetectWidth": 0,
+        "autoDetectHeight": 0,
+        "autoDetectPresetsJSON": "{\"__resolutionMasterConfigVersion\":1,\"__resolutionMasterProfile\":{\"strategy\":\"pixel_range\",\"options\":{\"min_pixels\":589824,\"max_pixels\":4194304}},\"__resolutionMasterPresets\":{\"1:1 Square (Default)\":{\"width\":1328,\"height\":1328,\"isCustom\":false,\"isHidden\":false},\"16:9 Landscape\":{\"width\":1664,\"height\":928,\"isCustom\":false,\"isHidden\":false},\"9:16 Portrait\":{\"width\":928,\"height\":1664,\"isCustom\":false,\"isHidden\":false},\"4:3 Landscape\":{\"width\":1472,\"height\":1104,\"isCustom\":false,\"isHidden\":false},\"3:4 Portrait (Official)\":{\"width\":1104,\"height\":1472,\"isCustom\":false,\"isHidden\":false},\"3:2 Landscape\":{\"width\":1584,\"height\":1056,\"isCustom\":false,\"isHidden\":false},\"2:3 Portrait\":{\"width\":1056,\"height\":1584,\"isCustom\":false,\"isHidden\":false},\"1:1 Square-1024\":{\"width\":1024,\"height\":1024,\"isCustom\":false,\"isHidden\":false},\"3:4 Portrait\":{\"width\":768,\"height\":1024,\"isCustom\":false,\"isHidden\":false}}}",
         "autoFitOnChange": false,
         "autoResizeOnChange": false,
+        "autoSnapOnChange": false,
+        "smartFit": false,
         "selectedCategory": "Qwen-Image",
         "selectedPreset": "3:4 Portrait",
         "useCustomCalc": false,
+        "showCalcInfo": false,
         "manual_slider_min_w": 64,
         "manual_slider_max_w": 2048,
         "manual_slider_step_w": 64,
@@ -733,11 +644,15 @@
         "section_scaling_collapsed": true,
         "section_autoDetect_collapsed": true,
         "section_presets_collapsed": false,
+        "section_extraControls_collapsed": false,
+        "preferred_compact_height": null,
+        "preferred_expanded_height": 475,
         "dropdown_resolution_expanded": false,
         "dropdown_category_expanded": false,
         "dropdown_preset_expanded": false,
         "preset_selector_mode": "visual",
-        "customPresetsJSON": ""
+        "customPresetsJSON": "",
+        "aux_id": "Azornes/Comfyui-Resolution-Master"
       },
       "widgets_values": [
         "Manual",
@@ -747,60 +662,52 @@
         false,
         "resolution",
         1.6237976320958225,
-        1
+        1,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        "Qwen-Image",
+        64,
+        1,
+        1080,
+        2,
+        "{\"__resolutionMasterConfigVersion\":1,\"__resolutionMasterProfile\":{\"strategy\":\"pixel_range\",\"options\":{\"min_pixels\":589824,\"max_pixels\":4194304}},\"__resolutionMasterPresets\":{\"1:1 Square (Default)\":{\"width\":1328,\"height\":1328,\"isCustom\":false,\"isHidden\":false},\"16:9 Landscape\":{\"width\":1664,\"height\":928,\"isCustom\":false,\"isHidden\":false},\"9:16 Portrait\":{\"width\":928,\"height\":1664,\"isCustom\":false,\"isHidden\":false},\"4:3 Landscape\":{\"width\":1472,\"height\":1104,\"isCustom\":false,\"isHidden\":false},\"3:4 Portrait (Official)\":{\"width\":1104,\"height\":1472,\"isCustom\":false,\"isHidden\":false},\"3:2 Landscape\":{\"width\":1584,\"height\":1056,\"isCustom\":false,\"isHidden\":false},\"2:3 Portrait\":{\"width\":1056,\"height\":1584,\"isCustom\":false,\"isHidden\":false},\"1:1 Square-1024\":{\"width\":1024,\"height\":1024,\"isCustom\":false,\"isHidden\":false},\"3:4 Portrait\":{\"width\":768,\"height\":1024,\"isCustom\":false,\"isHidden\":false}}}",
+        "resolution",
+        1.6237976320958225,
+        1,
+        false
       ],
+      "widgets_values_named": {
+        "mode": "Manual",
+        "latent_type": "latent_4x8",
+        "width": 768,
+        "height": 1024,
+        "auto_detect": false,
+        "auto_detect_source": "resolution",
+        "auto_detect_width": 1.6237976320958225,
+        "auto_detect_height": 1,
+        "auto_fit_on_change": false,
+        "auto_resize_on_change": false,
+        "auto_snap_on_change": false,
+        "smart_fit": false,
+        "use_custom_calc": false,
+        "preserve_scaling_ratio": false,
+        "selected_category": "Qwen-Image",
+        "snap_value": 64,
+        "upscale_value": 1,
+        "target_resolution": 1080,
+        "target_megapixels": 2,
+        "auto_detect_presets_json": "{\"__resolutionMasterConfigVersion\":1,\"__resolutionMasterProfile\":{\"strategy\":\"pixel_range\",\"options\":{\"min_pixels\":589824,\"max_pixels\":4194304}},\"__resolutionMasterPresets\":{\"1:1 Square (Default)\":{\"width\":1328,\"height\":1328,\"isCustom\":false,\"isHidden\":false},\"16:9 Landscape\":{\"width\":1664,\"height\":928,\"isCustom\":false,\"isHidden\":false},\"9:16 Portrait\":{\"width\":928,\"height\":1664,\"isCustom\":false,\"isHidden\":false},\"4:3 Landscape\":{\"width\":1472,\"height\":1104,\"isCustom\":false,\"isHidden\":false},\"3:4 Portrait (Official)\":{\"width\":1104,\"height\":1472,\"isCustom\":false,\"isHidden\":false},\"3:2 Landscape\":{\"width\":1584,\"height\":1056,\"isCustom\":false,\"isHidden\":false},\"2:3 Portrait\":{\"width\":1056,\"height\":1584,\"isCustom\":false,\"isHidden\":false},\"1:1 Square-1024\":{\"width\":1024,\"height\":1024,\"isCustom\":false,\"isHidden\":false},\"3:4 Portrait\":{\"width\":768,\"height\":1024,\"isCustom\":false,\"isHidden\":false}}}",
+        "rescale_mode": "resolution",
+        "rescale_value": 1.6237976320958225,
+        "batch_size": 1,
+        "preserve_scaling_snap": false
+      },
       "color": "#432",
       "bgcolor": "#653"
-    },
-    {
-      "id": 41,
-      "type": "LoadImage",
-      "pos": [
-        -733.714267002269,
-        312.40433467357866
-      ],
-      "size": [
-        325.5201457140864,
-        404.7847951149806
-      ],
-      "flags": {},
-      "order": 7,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            265,
-            267
-          ]
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": null
-        }
-      ],
-      "title": "Image 1",
-      "properties": {
-        "Node name for S&R": "LoadImage",
-        "cnr_id": "comfy-core",
-        "ver": "0.5.1",
-        "enableTabs": false,
-        "tabWidth": 65,
-        "tabXOffset": 10,
-        "hasSecondTab": false,
-        "secondTabText": "Send Back",
-        "secondTabOffset": 80,
-        "secondTabWidth": 65
-      },
-      "widgets_values": [
-        "Snapshot 08-02-2026 18_13 (1).png",
-        "image"
-      ],
-      "color": "#222",
-      "bgcolor": "#000"
     },
     {
       "id": 103,
@@ -814,7 +721,7 @@
         362
       ],
       "flags": {},
-      "order": 10,
+      "order": 8,
       "mode": 0,
       "inputs": [
         {
@@ -862,63 +769,31 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "Lora Loader (LoraManager)"
+        "Node name for S&R": "Lora Loader (LoraManager)",
+        "__lm_widget_ids": [
+          "__lm_autocomplete_meta_text",
+          "text",
+          "loras"
+        ]
       },
       "widgets_values": [
+        {
+          "version": 1,
+          "textWidgetName": "text"
+        },
         "",
         []
       ],
+      "widgets_values_named": {
+        "__lm_autocomplete_meta_text": {
+          "version": 1,
+          "textWidgetName": "text"
+        },
+        "text": "",
+        "loras": []
+      },
       "color": "#232",
       "bgcolor": "#353"
-    },
-    {
-      "id": 101,
-      "type": "Image Comparer (rgthree)",
-      "pos": [
-        713.8560051338067,
-        129.62166652508648
-      ],
-      "size": [
-        733.1726705000689,
-        824.3239776083295
-      ],
-      "flags": {},
-      "order": 17,
-      "mode": 0,
-      "inputs": [
-        {
-          "dir": 3,
-          "name": "image_a",
-          "type": "IMAGE",
-          "link": 267
-        },
-        {
-          "dir": 3,
-          "name": "image_b",
-          "type": "IMAGE",
-          "link": 296
-        }
-      ],
-      "outputs": [],
-      "properties": {
-        "comparer_mode": "Slide"
-      },
-      "widgets_values": [
-        [
-          {
-            "name": "A",
-            "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_udaxi_00055_.png&type=temp&subfolder=&rand=0.9078144666459886"
-          },
-          {
-            "name": "B",
-            "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_udaxi_00056_.png&type=temp&subfolder=&rand=0.47900531171189575"
-          }
-        ]
-      ],
-      "color": "#222",
-      "bgcolor": "#000"
     },
     {
       "id": 98,
@@ -932,7 +807,7 @@
         672.5577485944967
       ],
       "flags": {},
-      "order": 12,
+      "order": 10,
       "mode": 0,
       "inputs": [
         {
@@ -956,61 +831,61 @@
           "name": "image1",
           "shape": 7,
           "type": "IMAGE",
-          "link": 265
+          "link": 302
         },
         {
           "name": "image2",
           "shape": 7,
           "type": "IMAGE",
-          "link": 262
+          "link": 303
         },
         {
           "name": "image3",
           "shape": 7,
           "type": "IMAGE",
-          "link": 264
+          "link": 304
         },
         {
           "name": "image4",
           "shape": 7,
           "type": "IMAGE",
-          "link": null
+          "link": 305
         },
         {
           "name": "image5",
           "shape": 7,
           "type": "IMAGE",
-          "link": null
+          "link": 306
         },
         {
           "name": "image6",
           "shape": 7,
           "type": "IMAGE",
-          "link": null
+          "link": 307
         },
         {
           "name": "image7",
           "shape": 7,
           "type": "IMAGE",
-          "link": null
+          "link": 308
         },
         {
           "name": "image8",
           "shape": 7,
           "type": "IMAGE",
-          "link": null
+          "link": 309
         },
         {
           "name": "image9",
           "shape": 7,
           "type": "IMAGE",
-          "link": null
+          "link": 310
         },
         {
           "name": "image10",
           "shape": 7,
           "type": "IMAGE",
-          "link": null
+          "link": 311
         },
         {
           "name": "width",
@@ -1064,6 +939,165 @@
         1024,
         1024
       ],
+      "widgets_values_named": {
+        "prompt": "Make photorealistic digital photo, make photo 8k quality, add background detail, make photo have realistic detailed skin, unblur and upscale",
+        "mode": "1_image",
+        "batch_size": 1,
+        "width": 1024,
+        "height": 1024
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 9,
+      "type": "SaveImage",
+      "pos": [
+        716.1542143049845,
+        -358.34933797122204
+      ],
+      "size": [
+        610.2242057197464,
+        961.7870360593522
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 9
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SaveImage",
+        "cnr_id": "comfy-core",
+        "ver": "0.5.1",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65
+      },
+      "widgets_values": [
+        "QWEN-EDIT-LVRAM"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "QWEN-EDIT-LVRAM"
+      },
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 126,
+      "type": "QwenImageReferencePack",
+      "pos": [
+        -1253.3033497946253,
+        213.93806462044228
+      ],
+      "size": [
+        800,
+        581
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "image_1",
+          "type": "IMAGE",
+          "links": [
+            302
+          ]
+        },
+        {
+          "name": "image_2",
+          "type": "IMAGE",
+          "links": [
+            303
+          ]
+        },
+        {
+          "name": "image_3",
+          "type": "IMAGE",
+          "links": [
+            304
+          ]
+        },
+        {
+          "name": "image_4",
+          "type": "IMAGE",
+          "links": [
+            305
+          ]
+        },
+        {
+          "name": "image_5",
+          "type": "IMAGE",
+          "links": [
+            306
+          ]
+        },
+        {
+          "name": "image_6",
+          "type": "IMAGE",
+          "links": [
+            307
+          ]
+        },
+        {
+          "name": "image_7",
+          "type": "IMAGE",
+          "links": [
+            308
+          ]
+        },
+        {
+          "name": "image_8",
+          "type": "IMAGE",
+          "links": [
+            309
+          ]
+        },
+        {
+          "name": "image_9",
+          "type": "IMAGE",
+          "links": [
+            310
+          ]
+        },
+        {
+          "name": "image_10",
+          "type": "IMAGE",
+          "links": [
+            311
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "QwenImageReferencePack"
+      },
+      "widgets_values": [
+        "{\"references\":[]}",
+        7616,
+        ""
+      ],
+      "widgets_values_named": {
+        "references_json": "{\"references\":[]}",
+        "max_reference_edge": 7616,
+        "mmrp_block": ""
+      },
       "color": "#232",
       "bgcolor": "#353"
     }
@@ -1150,38 +1184,6 @@
       "MODEL"
     ],
     [
-      262,
-      83,
-      0,
-      98,
-      4,
-      "IMAGE"
-    ],
-    [
-      264,
-      87,
-      0,
-      98,
-      5,
-      "IMAGE"
-    ],
-    [
-      265,
-      41,
-      0,
-      98,
-      3,
-      "IMAGE"
-    ],
-    [
-      267,
-      41,
-      0,
-      101,
-      0,
-      "IMAGE"
-    ],
-    [
       272,
       61,
       0,
@@ -1222,14 +1224,6 @@
       "MODEL"
     ],
     [
-      296,
-      8,
-      0,
-      101,
-      1,
-      "IMAGE"
-    ],
-    [
       299,
       65,
       0,
@@ -1244,6 +1238,86 @@
       65,
       0,
       "MODEL"
+    ],
+    [
+      302,
+      126,
+      0,
+      98,
+      3,
+      "IMAGE"
+    ],
+    [
+      303,
+      126,
+      1,
+      98,
+      4,
+      "IMAGE"
+    ],
+    [
+      304,
+      126,
+      2,
+      98,
+      5,
+      "IMAGE"
+    ],
+    [
+      305,
+      126,
+      3,
+      98,
+      6,
+      "IMAGE"
+    ],
+    [
+      306,
+      126,
+      4,
+      98,
+      7,
+      "IMAGE"
+    ],
+    [
+      307,
+      126,
+      5,
+      98,
+      8,
+      "IMAGE"
+    ],
+    [
+      308,
+      126,
+      6,
+      98,
+      9,
+      "IMAGE"
+    ],
+    [
+      309,
+      126,
+      7,
+      98,
+      10,
+      "IMAGE"
+    ],
+    [
+      310,
+      126,
+      8,
+      98,
+      11,
+      "IMAGE"
+    ],
+    [
+      311,
+      126,
+      9,
+      98,
+      12,
+      "IMAGE"
     ]
   ],
   "groups": [
@@ -1257,7 +1331,6 @@
         447.10687145008063
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -1270,33 +1343,30 @@
         1183.623512715716
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
       "id": 3,
-      "title": "Load Image 1-3",
+      "title": "Load Image",
       "bounding": [
-        -1416.2766710590731,
-        209.584729806591,
-        1042.2282566703802,
-        528.6244247336844
+        -1276.0885164947533,
+        141.80147017507116,
+        855.8243367586006,
+        674.9747205220214
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
       "id": 4,
       "title": "Size",
       "bounding": [
-        -1853.922160354475,
-        11.9615099417505,
+        -1701.4097233421198,
+        85.90691079728776,
         402.9645504150325,
         726.884847034657
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -1309,20 +1379,19 @@
         1377.7521829100265
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     }
   ],
   "config": {},
   "extra": {
     "ds": {
-      "scale": 1.224486930830522,
+      "scale": 0.5193019910934579,
       "offset": [
-        654.0860353127237,
-        -9.129927247175374
+        2134.75499156901,
+        621.0155211934683
       ]
     },
-    "frontendVersion": "1.38.13",
+    "frontendVersion": "1.52.7",
     "workflowRendererVersion": "LG",
     "groupNodes": {},
     "VHS_latentpreview": true,
@@ -1330,5 +1399,8 @@
     "VHS_MetadataImage": true,
     "VHS_KeepIntermediate": true
   },
-  "version": 0.4
+  "version": 0.4,
+  "seed_widgets": {
+    "65": 0
+  }
 }
