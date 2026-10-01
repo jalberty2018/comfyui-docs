@@ -18,6 +18,7 @@
 - Updated customs nodes.
 - Updated Flux-Klein SAM3 workflows.
 - Lowered volume of pod.
+- Updated qwen edit workflows.
 
 ## 29092026
 

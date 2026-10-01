@@ -11,6 +11,7 @@
 - [PG Nodes](https://github.com/GizmoR13/PG-Nodes)
 - [Easy-Use](https://github.com/yolain/ComfyUI-Easy-Use.git)
 - [comfyui-obvpm](https://github.com/chanon/comfyui-obvpm)
+- [ComfyUI-QwenImageRefPack](https://github.com/Hearmeman24/ComfyUI-QwenImageRefPack)
 
 ### Downloaders/Linkers
 
