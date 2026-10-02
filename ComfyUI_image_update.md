@@ -8,7 +8,7 @@
 - Pinned custom nodes are not updated automatically, because changing those pins can introduce compatibility issues.
 - Tested on a wide range of GPU's including RTX 3090,4090,5090, L40S, L4 , PRO 6000 MiG 24/48 Gb.
 
-## 01102026 image2
+## 02102026 image2
 
 - ComfyUI 0.38.0
 - Fixed Krea-2 prompt enhancer.

@@ -1,0 +1,1755 @@
+{
+  "id": "e3f2b845-8f2c-4b5a-9caf-eac1029d3e7e",
+  "revision": 0,
+  "last_node_id": 242,
+  "last_link_id": 465,
+  "nodes": [
+    {
+      "id": 222,
+      "type": "UNETLoader",
+      "pos": [
+        -2091.1830169615587,
+        4148.065883084942
+      ],
+      "size": [
+        446.49341639683223,
+        129.47025643721005
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            415
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UNETLoader",
+        "cnr_id": "comfy-core",
+        "ver": "0.34.0",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "minimax_h3_ref2va_int8_convrot.safetensors",
+        "default"
+      ],
+      "widgets_values_named": {
+        "unet_name": "minimax_h3_ref2va_int8_convrot.safetensors",
+        "weight_dtype": "default"
+      },
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 223,
+      "type": "CLIPLoader",
+      "pos": [
+        -2083.5995180137247,
+        4334.348931337685
+      ],
+      "size": [
+        436.9742503927346,
+        106
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            412
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPLoader",
+        "models": [
+          {
+            "name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/text_encoders/qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+            "directory": "text_encoders"
+          }
+        ]
+      },
+      "widgets_values": [
+        "qwen3vl_32b_h3_ultra_uncensored_heretic_int8_convrot.safetensors",
+        "minimax",
+        "default"
+      ],
+      "widgets_values_named": {
+        "clip_name": "qwen3vl_32b_h3_ultra_uncensored_heretic_int8_convrot.safetensors",
+        "type": "minimax",
+        "device": "default"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 224,
+      "type": "VAELoader",
+      "pos": [
+        -2090.598520092948,
+        4526.397401792266
+      ],
+      "size": [
+        447.868299893968,
+        58
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            413
+          ]
+        }
+      ],
+      "title": "Load VAE video",
+      "properties": {
+        "Node name for S&R": "VAELoader",
+        "models": [
+          {
+            "name": "minimax_h3_video_vae_fp16.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_video_vae_fp16.safetensors",
+            "directory": "vae"
+          }
+        ]
+      },
+      "widgets_values": [
+        "minimax_h3_video_vae_fp16.safetensors"
+      ],
+      "widgets_values_named": {
+        "vae_name": "minimax_h3_video_vae_fp16.safetensors"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 225,
+      "type": "VAELoader",
+      "pos": [
+        -2089.9589079943225,
+        4684.947595621658
+      ],
+      "size": [
+        450.9357435456915,
+        58
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            414
+          ]
+        }
+      ],
+      "title": "Load VAE audio",
+      "properties": {
+        "Node name for S&R": "VAELoader",
+        "models": [
+          {
+            "name": "minimax_h3_audio_vae_fp32.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_audio_vae_fp32.safetensors",
+            "directory": "vae"
+          }
+        ]
+      },
+      "widgets_values": [
+        "minimax_h3_audio_vae_fp32.safetensors"
+      ],
+      "widgets_values_named": {
+        "vae_name": "minimax_h3_audio_vae_fp32.safetensors"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 226,
+      "type": "SetNode",
+      "pos": [
+        -1767.1303069034407,
+        4485.174011673806
+      ],
+      "size": [
+        210,
+        34
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "link": 412
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": null
+        }
+      ],
+      "title": "Set_CLIP",
+      "properties": {
+        "Node name for S&R": "SetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes",
+        "previousName": "CLIP"
+      },
+      "widgets_values": [
+        "CLIP"
+      ],
+      "widgets_values_named": {
+        "Constant": "CLIP"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 227,
+      "type": "SetNode",
+      "pos": [
+        -1790.3818431308223,
+        4640.085151718622
+      ],
+      "size": [
+        210,
+        34
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "link": 413
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": null
+        }
+      ],
+      "title": "Set_VAE_VIDEO",
+      "properties": {
+        "Node name for S&R": "SetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes",
+        "previousName": "VAE_VIDEO"
+      },
+      "widgets_values": [
+        "VAE_VIDEO"
+      ],
+      "widgets_values_named": {
+        "Constant": "VAE_VIDEO"
+      },
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 228,
+      "type": "SetNode",
+      "pos": [
+        -1798.5004743039885,
+        4804.675272362617
+      ],
+      "size": [
+        210,
+        34
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "link": 414
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": null
+        }
+      ],
+      "title": "Set_VAE_AUDIO",
+      "properties": {
+        "Node name for S&R": "SetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes",
+        "previousName": "VAE_AUDIO"
+      },
+      "widgets_values": [
+        "VAE_AUDIO"
+      ],
+      "widgets_values_named": {
+        "Constant": "VAE_AUDIO"
+      },
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 229,
+      "type": "ModelAttentionBackend",
+      "pos": [
+        -1597.3952692378336,
+        4147.099487087663
+      ],
+      "size": [
+        397.49128359598365,
+        58
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 415
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            416
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ModelAttentionBackend",
+        "cnr_id": "comfy-core",
+        "ver": "0.34.0",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "comfy kitchen attention"
+      ],
+      "widgets_values_named": {
+        "attention": "comfy kitchen attention"
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 230,
+      "type": "BlockSparseAttention",
+      "pos": [
+        -1594.0324745408614,
+        4253.2272217747795
+      ],
+      "size": [
+        397.7193538707518,
+        250
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 416
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            417
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BlockSparseAttention",
+        "cnr_id": "comfy-core",
+        "ver": "0.35.0",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "sol-attn",
+        1,
+        0.16,
+        1,
+        "0,1",
+        0,
+        0,
+        "off",
+        false
+      ],
+      "widgets_values_named": {
+        "selection": "sol-attn",
+        "selection.tau": 1,
+        "start_percent": 0.16,
+        "end_percent": 1,
+        "dense_blocks": "0,1",
+        "min_tokens": 0,
+        "extra_tokens": 0,
+        "sink_conditioning": "off",
+        "verbose": false
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 231,
+      "type": "MiniMaxChunkFeedForward",
+      "pos": [
+        -1594.472494965454,
+        4555.769162804856
+      ],
+      "size": [
+        412.72927843663877,
+        82
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 417
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            462
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MiniMaxChunkFeedForward",
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "1.5.0",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        2,
+        4096
+      ],
+      "widgets_values_named": {
+        "chunks": 2,
+        "seq_threshold": 4096
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 218,
+      "type": "CreateVideoExternalFFmpegNVENC",
+      "pos": [
+        439.8491741859171,
+        4351.122813756745
+      ],
+      "size": [
+        374.103125,
+        174
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 406
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 451
+        },
+        {
+          "name": "fps",
+          "type": "FLOAT",
+          "widget": {
+            "name": "fps"
+          },
+          "link": 407
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": [
+            409
+          ]
+        },
+        {
+          "name": "report",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CreateVideoExternalFFmpegNVENC"
+      },
+      "widgets_values": [
+        30,
+        "auto",
+        20,
+        "p4",
+        ""
+      ],
+      "widgets_values_named": {
+        "fps": 30,
+        "encoder": "auto",
+        "quality": 20,
+        "nvenc_preset": "p4",
+        "ffmpeg_path": ""
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 219,
+      "type": "RIFE VFI",
+      "pos": [
+        14.579335573552497,
+        4370.175745470937
+      ],
+      "size": [
+        321.8046875,
+        270
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "frames",
+          "type": "IMAGE",
+          "link": 450
+        },
+        {
+          "name": "optional_interpolation_states",
+          "shape": 7,
+          "type": "INTERPOLATION_STATES",
+          "link": null
+        },
+        {
+          "name": "multiplier",
+          "type": "INT",
+          "widget": {
+            "name": "multiplier"
+          },
+          "link": 408
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            406
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RIFE VFI"
+      },
+      "widgets_values": [
+        "rife49.pth",
+        10,
+        2,
+        true,
+        true,
+        1,
+        "float32",
+        true,
+        1
+      ],
+      "widgets_values_named": {
+        "ckpt_name": "rife49.pth",
+        "clear_cache_after_n_frames": 10,
+        "multiplier": 2,
+        "fast_mode": true,
+        "ensemble": true,
+        "scale_factor": 1,
+        "dtype": "float32",
+        "torch_compile": true,
+        "batch_size": 1
+      },
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 216,
+      "type": "SimpleCalculatorKJ",
+      "pos": [
+        475.99310062581435,
+        4621.025713715049
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "variables.a",
+          "shape": 7,
+          "type": "INT,FLOAT,BOOLEAN",
+          "link": 405
+        },
+        {
+          "name": "variables.b",
+          "shape": 7,
+          "type": "INT,FLOAT,BOOLEAN",
+          "link": 452
+        },
+        {
+          "name": "variables.c",
+          "shape": 7,
+          "type": "INT,FLOAT,BOOLEAN",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            407
+          ]
+        },
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "BOOLEAN",
+          "type": "BOOLEAN",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SimpleCalculatorKJ"
+      },
+      "widgets_values": [
+        "a * b"
+      ],
+      "widgets_values_named": {
+        "expression": "a * b"
+      }
+    },
+    {
+      "id": 217,
+      "type": "PrimitiveInt",
+      "pos": [
+        444.8769665800285,
+        4582.597912531846
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            405,
+            408
+          ]
+        }
+      ],
+      "title": "Frame multiplyer",
+      "properties": {
+        "Node name for S&R": "PrimitiveInt"
+      },
+      "widgets_values": [
+        1,
+        "fixed"
+      ],
+      "widgets_values_named": {
+        "value": 1,
+        "fixed": "fixed"
+      },
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 220,
+      "type": "SaveVideo",
+      "pos": [
+        -10.155041272905354,
+        4725.575904861359
+      ],
+      "size": [
+        871.2602070074156,
+        1270.8502786638287
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 409
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SaveVideo"
+      },
+      "widgets_values": [
+        "video/MiniMax_H3",
+        "auto",
+        "auto",
+        "auto"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "video/MiniMax_H3",
+        "format": "auto",
+        "format.codec": "auto",
+        "codec": "auto"
+      },
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 133,
+      "type": "ComfyMathExpression",
+      "pos": [
+        -1614.5194878391383,
+        5089.604471208691
+      ],
+      "size": [
+        360,
+        160
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "a",
+          "name": "values.a",
+          "type": "FLOAT,INT,BOOLEAN",
+          "link": 248
+        },
+        {
+          "name": "values.b",
+          "shape": 7,
+          "type": "FLOAT,INT,BOOLEAN",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": []
+        },
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            346
+          ]
+        },
+        {
+          "name": "BOOL",
+          "type": "BOOLEAN",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ComfyMathExpression"
+      },
+      "widgets_values": [
+        "max(5, round(a * 24)) + (5 - (max(5, round(a * 24)) % 17)) % 17"
+      ],
+      "widgets_values_named": {
+        "expression": "max(5, round(a * 24)) + (5 - (max(5, round(a * 24)) % 17)) % 17"
+      }
+    },
+    {
+      "id": 134,
+      "type": "PrimitiveFloat",
+      "pos": [
+        -1701.4196311652083,
+        5050.267261473087
+      ],
+      "size": [
+        270,
+        70
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            248
+          ]
+        }
+      ],
+      "title": "Group preview duraion",
+      "properties": {
+        "Node name for S&R": "PrimitiveFloat"
+      },
+      "widgets_values": [
+        10
+      ],
+      "widgets_values_named": {
+        "value": 10
+      },
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 186,
+      "type": "ModelPreviewOverrideKJ",
+      "pos": [
+        -1693.7426391842764,
+        5171.786956519755
+      ],
+      "size": [
+        491.09943704392003,
+        867.8007269671607
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 422
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "name": "audio_vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": 463
+        },
+        {
+          "name": "preview_frames",
+          "type": "INT",
+          "widget": {
+            "name": "preview_frames"
+          },
+          "link": 346
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            464
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ModelPreviewOverrideKJ",
+        "kjPovPanelH": 198
+      },
+      "widgets_values": [
+        512,
+        80,
+        true,
+        1,
+        12,
+        "taeh3.safetensors",
+        ""
+      ],
+      "widgets_values_named": {
+        "max_resolution": 512,
+        "jpeg_quality": 80,
+        "suppress_default_preview": true,
+        "preview_frames": 1,
+        "preview_fps": 12,
+        "tiny_vae": "taeh3.safetensors",
+        "preview": ""
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 236,
+      "type": "MiniMaxH3Director",
+      "pos": [
+        -1104.419282491554,
+        4120.270335762183
+      ],
+      "size": [
+        1004,
+        2523.6538117249147
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 465
+        },
+        {
+          "name": "video_vae",
+          "type": "VAE",
+          "link": 444
+        },
+        {
+          "name": "audio_vae",
+          "type": "VAE",
+          "link": 445
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 446
+        },
+        {
+          "name": "i2v_groups",
+          "shape": 7,
+          "type": "MMX_DIR_GROUP",
+          "link": null
+        },
+        {
+          "name": "r2v_groups",
+          "shape": 7,
+          "type": "MMX_DIR_GROUP",
+          "link": null
+        },
+        {
+          "name": "semantic_bridge",
+          "shape": 7,
+          "type": "MMX_DIR_SEMANTIC_BRIDGE",
+          "link": null
+        },
+        {
+          "name": "selflift",
+          "shape": 7,
+          "type": "MMX_DIR_SELFLIFT",
+          "link": null
+        },
+        {
+          "name": "refine",
+          "shape": 7,
+          "type": "MMX_DIR_REFINE",
+          "link": null
+        },
+        {
+          "name": "face_refine",
+          "shape": 7,
+          "type": "MMX_DIR_FACE_REFINE",
+          "link": null
+        },
+        {
+          "name": "sigmas",
+          "shape": 7,
+          "type": "SIGMAS",
+          "link": 449
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            450
+          ]
+        },
+        {
+          "name": "audio",
+          "shape": 6,
+          "type": "AUDIO",
+          "links": [
+            451
+          ]
+        },
+        {
+          "name": "fps",
+          "type": "FLOAT",
+          "links": [
+            452
+          ]
+        },
+        {
+          "name": "frame_count",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "source_images",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "report",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "images_pre_refine",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "images_pre_face_refine",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MiniMaxH3Director"
+      },
+      "widgets_values": [
+        "r2v — 参考主体生视频(Reference to Video)",
+        "subject_definitions:\n<Subject 1> is the young girl in <Picture 1>, with curly brown hair, wearing a blue denim jacket over a patterned brown shirt, light blue jeans, and a brown belt.\n<Picture 1> is the visual reference for <Subject 1>'s appearance and initial pose.",
+        "Sampling settings",
+        1,
+        12605080140014,
+        "randomize",
+        24,
+        832,
+        1120,
+        1120,
+        486,
+        "{\"version\":5,\"editMode\":\"segment\",\"totalFrames\":486,\"frameRate\":24,\"video\":{\"fileName\":\"\",\"videoFile\":\"\",\"subfolder\":\"\",\"type\":\"input\",\"frames\":[],\"frameMap\":[],\"sourceFrameCount\":124,\"deletedSourceRanges\":[]},\"videoClips\":[],\"global\":{\"taskType\":\"r2v — 参考主体生视频(Reference to Video)\",\"prompt\":\"subject_definitions:\\n<Subject 1> is the young girl in <Picture 1>, with curly brown hair, wearing a blue denim jacket over a patterned brown shirt, light blue jeans, and a brown belt.\\n<Picture 1> is the visual reference for <Subject 1>'s appearance and initial pose.\",\"refs\":[{\"index\":0,\"imageFile\":\"QWEN-EDIT-LVRAM_00001_.png\",\"fileName\":\"\",\"type\":\"input\",\"subfolder\":\"\"}],\"refAudios\":[],\"referenceVideo\":{\"videoFile\":\"\",\"fileName\":\"\",\"type\":\"input\",\"subfolder\":\"\"},\"continuousReference\":false,\"commonEnabled\":true,\"commonCollapsed\":false,\"refVideos\":[],\"genImage\":{\"imageFile\":\"\"}},\"output\":{\"mode\":\"fixed\",\"aspectRatio\":\"3:4 (竖版标准)\",\"megapixels\":0.9,\"multiple\":32,\"longEdge\":1120,\"width\":832,\"height\":1120,\"maxExportFrames\":0,\"exportMode\":\"all\",\"audioMode\":\"generate\",\"exportSourceImages\":false,\"exportPreFaceRefine\":false,\"refImageSize\":\"match\",\"continuityEnabled\":true,\"continuityOverlapFrames\":22,\"continuityMode\":\"guide\",\"continuityRedraw\":0.1,\"continuityKeepTail\":true},\"runSelectEnabled\":false,\"runSelection\":[],\"liveTaePreview\":false,\"batchDetailMode\":\"solo\",\"segments\":[{\"id\":\"murb4p2vcwocf\",\"start\":0,\"length\":243,\"frameCount\":243,\"durationSec\":10,\"prompt\":\"summary:\\n[reference generation] The target video features <Subject 1> dancing in a studio environment with an orange background. The video captures her energetic movements and joyful expression over a 10-second duration, utilizing <Picture 1> to define her visual identity and starting composition.\\n\\nretention_analysis:\\n<Subject 1> (appears in [Shot 1]): fully_preserved - the girl's curly hair, denim jacket, patterned shirt, jeans, and belt are retained throughout the dance sequence.\\n<Picture 1> ([Shot 1] reference): fully_preserved - the visual identity of the subject is strictly maintained from the reference image.\\n\\ndetailed_description:\\nThe target video uses a vibrant, high-energy commercial style with saturated colors and bright studio lighting.\\n[Shot 1] The scene opens in a seamless studio environment with a solid orange background. <Subject 1>, the young girl with curly brown hair, wearing a blue denim jacket over a patterned brown shirt, light blue jeans, and a brown belt, stands centered in the frame. She begins from a pose similar to <Picture 1> with her right arm raised high and left arm extended outward. As the video progresses, she transitions into a dynamic dance routine, swinging her arms rhythmically and shifting her weight from one foot to the other. Her facial expression remains joyful and animated, with a wide smile throughout the performance. The camera maintains a stable medium-full shot, capturing her full body movements and upper body details clearly.\\n[Shot 2] At 00:05.000, the camera slowly pushes in to a medium shot of <Subject 1>. She continues her dance with more pronounced arm gestures, crossing her arms in front of her chest before extending them outward again. Her hair bounces naturally with her movements, emphasizing the energy of the performance. The lighting remains consistent and bright, highlighting the texture of her denim jacket and the details of her clothing.\\n\\noverall_soundscape:\\nSoft studio room tone continues throughout the video, accompanied by subtle fabric rustling sounds as the girl moves and dances.\\n\\nnon_diegetic_music:\\nA upbeat, rhythmic pop track with a moderate tempo, featuring bright synthesizer chords and a steady drum beat that synchronizes with the girl's dance movements, building in energy towards the end of the clip.\",\"negativePrompt\":\"\",\"taskType\":\"\",\"refs\":[],\"refAudios\":[],\"refVideos\":[],\"genImage\":{\"imageFile\":\"\",\"fileName\":\"\"},\"startImage\":null,\"endImage\":null,\"continuityFromPrev\":false,\"refImageSize\":\"match\",\"loras\":[]},{\"id\":\"murbo9i19cddu\",\"start\":243,\"length\":243,\"frameCount\":243,\"durationSec\":10,\"prompt\":\"summary:\\n[reference generation] The target video shows <Subject 1> transitioning from an energetic dance pose to a seated position on the floor. The sequence captures the cessation of movement and the settling of the character against a solid orange background.\\n\\nretention_analysis:\\n<Subject 1> (appears in [Shot 1]): fully_preserved - The subject's curly hair, denim jacket, brown top, jeans, belt, and facial features are maintained exactly as depicted in <Picture 1>.\\n\\ndetailed_description:\\nThe target video uses a clean, studio-lit aesthetic with a high-contrast orange background.\\n[Shot 1] A medium full shot captures <Subject 1>, the young girl with curly brown hair, wearing a blue denim jacket and light blue jeans. She begins in a dynamic dance pose with arms raised, mirroring the energy of <Picture 1>. Her movements are rhythmic but decelerate rapidly as she lowers her center of gravity. The camera remains static at eye level, keeping her centered against the solid orange backdrop. As the dance concludes, she bends her knees and lowers herself smoothly to the floor, her arms dropping naturally to her sides. She settles into a cross-legged sitting position on the ground. Her expression shifts from high-energy focus to a relaxed, contented smile as she looks directly at the camera. The denim fabric of her jacket creases naturally with the movement, and the brown belt remains securely fastened around her waist.\\n\\noverall_soundscape:\\nThe sound of rhythmic, soft footfalls on a smooth studio floor transitions into the distinct sound of denim fabric shifting and settling as the subject sits down.\\n\\nnon_diegetic_music:\\nA playful, upbeat electronic track with a moderate tempo features bright synth arpeggios and a light drum pattern. The music begins with high energy to match the dance movements but gradually decreases in volume and complexity during the final two seconds, resolving into a gentle, static chord that supports the subject's relaxed seated state.\",\"negativePrompt\":\"\",\"taskType\":\"\",\"refs\":[],\"refAudios\":[],\"refVideos\":[],\"genImage\":{\"imageFile\":\"\",\"fileName\":\"\"},\"startImage\":null,\"endImage\":null,\"continuityFromPrev\":true,\"refImageSize\":\"match\",\"loras\":[]}],\"timelineMode\":\"prompt_batch\",\"width\":832,\"height\":1120,\"refMaxSize\":1120,\"batchWorkspaces\":{\"t2v\":{\"selectedIndex\":0,\"editMode\":\"segment\",\"runSelectEnabled\":false,\"runSelection\":[],\"segments\":[{\"id\":\"mur62prdp4hnf\",\"start\":0,\"length\":124,\"frameCount\":124,\"durationSec\":5,\"prompt\":\"\",\"negativePrompt\":\"\",\"taskType\":\"\",\"refs\":[],\"refAudios\":[],\"refVideos\":[{\"index\":0,\"videoFile\":\"\",\"fileName\":\"\",\"type\":\"input\",\"subfolder\":\"\",\"pairedAudioFile\":\"\",\"previewImageFile\":\"\",\"previewImageUrl\":\"\",\"linked\":true},{\"index\":1,\"videoFile\":\"\",\"fileName\":\"\",\"type\":\"input\",\"subfolder\":\"\",\"pairedAudioFile\":\"\",\"previewImageFile\":\"\",\"previewImageUrl\":\"\",\"linked\":true},{\"index\":2,\"videoFile\":\"\",\"fileName\":\"\",\"type\":\"input\",\"subfolder\":\"\",\"pairedAudioFile\":\"\",\"previewImageFile\":\"\",\"previewImageUrl\":\"\",\"linked\":true}],\"genImage\":{\"imageFile\":\"\",\"fileName\":\"\"},\"previewFps\":24,\"frameRate\":24,\"externalNodeId\":\"235\",\"imageFile\":\"\",\"refImageSize\":\"match\",\"loras\":[],\"_videoFrameCount\":124}],\"globalCommon\":{\"commonEnabled\":false,\"commonCollapsed\":false,\"prompt\":\"\",\"refs\":[],\"refAudios\":[],\"refVideos\":[]}},\"r2v\":{\"selectedIndex\":1,\"editMode\":\"segment\",\"runSelectEnabled\":false,\"runSelection\":[],\"segments\":[{\"id\":\"murb4p2vcwocf\",\"start\":0,\"length\":243,\"frameCount\":243,\"durationSec\":10,\"prompt\":\"summary:\\n[reference generation] The target video features <Subject 1> dancing in a studio environment with an orange background. The video captures her energetic movements and joyful expression over a 10-second duration, utilizing <Picture 1> to define her visual identity and starting composition.\\n\\nretention_analysis:\\n<Subject 1> (appears in [Shot 1]): fully_preserved - the girl's curly hair, denim jacket, patterned shirt, jeans, and belt are retained throughout the dance sequence.\\n<Picture 1> ([Shot 1] reference): fully_preserved - the visual identity of the subject is strictly maintained from the reference image.\\n\\ndetailed_description:\\nThe target video uses a vibrant, high-energy commercial style with saturated colors and bright studio lighting.\\n[Shot 1] The scene opens in a seamless studio environment with a solid orange background. <Subject 1>, the young girl with curly brown hair, wearing a blue denim jacket over a patterned brown shirt, light blue jeans, and a brown belt, stands centered in the frame. She begins from a pose similar to <Picture 1> with her right arm raised high and left arm extended outward. As the video progresses, she transitions into a dynamic dance routine, swinging her arms rhythmically and shifting her weight from one foot to the other. Her facial expression remains joyful and animated, with a wide smile throughout the performance. The camera maintains a stable medium-full shot, capturing her full body movements and upper body details clearly.\\n[Shot 2] At 00:05.000, the camera slowly pushes in to a medium shot of <Subject 1>. She continues her dance with more pronounced arm gestures, crossing her arms in front of her chest before extending them outward again. Her hair bounces naturally with her movements, emphasizing the energy of the performance. The lighting remains consistent and bright, highlighting the texture of her denim jacket and the details of her clothing.\\n\\noverall_soundscape:\\nSoft studio room tone continues throughout the video, accompanied by subtle fabric rustling sounds as the girl moves and dances.\\n\\nnon_diegetic_music:\\nA upbeat, rhythmic pop track with a moderate tempo, featuring bright synthesizer chords and a steady drum beat that synchronizes with the girl's dance movements, building in energy towards the end of the clip.\",\"negativePrompt\":\"\",\"taskType\":\"\",\"refs\":[],\"refAudios\":[],\"refVideos\":[],\"genImage\":{\"imageFile\":\"\",\"fileName\":\"\"},\"continuityFromPrev\":false,\"refImageSize\":\"match\",\"loras\":[],\"referenceVideo\":{\"videoFile\":\"\",\"fileName\":\"\",\"type\":\"input\",\"subfolder\":\"\"},\"_videoFrameCount\":243,\"previewFps\":24},{\"id\":\"murbo9i19cddu\",\"start\":243,\"length\":243,\"frameCount\":243,\"durationSec\":10,\"prompt\":\"summary:\\n[reference generation] The target video shows <Subject 1> transitioning from an energetic dance pose to a seated position on the floor. The sequence captures the cessation of movement and the settling of the character against a solid orange background.\\n\\nretention_analysis:\\n<Subject 1> (appears in [Shot 1]): fully_preserved - The subject's curly hair, denim jacket, brown top, jeans, belt, and facial features are maintained exactly as depicted in <Picture 1>.\\n\\ndetailed_description:\\nThe target video uses a clean, studio-lit aesthetic with a high-contrast orange background.\\n[Shot 1] A medium full shot captures <Subject 1>, the young girl with curly brown hair, wearing a blue denim jacket and light blue jeans. She begins in a dynamic dance pose with arms raised, mirroring the energy of <Picture 1>. Her movements are rhythmic but decelerate rapidly as she lowers her center of gravity. The camera remains static at eye level, keeping her centered against the solid orange backdrop. As the dance concludes, she bends her knees and lowers herself smoothly to the floor, her arms dropping naturally to her sides. She settles into a cross-legged sitting position on the ground. Her expression shifts from high-energy focus to a relaxed, contented smile as she looks directly at the camera. The denim fabric of her jacket creases naturally with the movement, and the brown belt remains securely fastened around her waist.\\n\\noverall_soundscape:\\nThe sound of rhythmic, soft footfalls on a smooth studio floor transitions into the distinct sound of denim fabric shifting and settling as the subject sits down.\\n\\nnon_diegetic_music:\\nA playful, upbeat electronic track with a moderate tempo features bright synth arpeggios and a light drum pattern. The music begins with high energy to match the dance movements but gradually decreases in volume and complexity during the final two seconds, resolving into a gentle, static chord that supports the subject's relaxed seated state.\",\"negativePrompt\":\"\",\"taskType\":\"\",\"refs\":[],\"refAudios\":[],\"refVideos\":[],\"genImage\":{\"imageFile\":\"\",\"fileName\":\"\"},\"continuityFromPrev\":true,\"refImageSize\":\"match\",\"loras\":[],\"referenceVideo\":{\"videoFile\":\"\",\"fileName\":\"\",\"type\":\"input\",\"subfolder\":\"\"},\"_videoFrameCount\":243,\"previewFps\":24}],\"globalCommon\":{\"commonEnabled\":true,\"commonCollapsed\":false,\"prompt\":\"subject_definitions:\\n<Subject 1> is the young girl in <Picture 1>, with curly brown hair, wearing a blue denim jacket over a patterned brown shirt, light blue jeans, and a brown belt.\\n<Picture 1> is the visual reference for <Subject 1>'s appearance and initial pose.\",\"refs\":[{\"index\":0,\"imageFile\":\"QWEN-EDIT-LVRAM_00001_.png\",\"fileName\":\"\",\"type\":\"input\",\"subfolder\":\"\"}],\"refAudios\":[],\"refVideos\":[]}}},\"gen\":{\"defaultFrameCount\":124}}",
+        "Advanced sampling",
+        25,
+        "euler",
+        "simple",
+        12,
+        3,
+        false,
+        false,
+        "Performance",
+        true,
+        false,
+        false,
+        "raw",
+        ""
+      ],
+      "widgets_values_named": {
+        "task_type": "r2v — 参考主体生视频(Reference to Video)",
+        "global_prompt": "subject_definitions:\n<Subject 1> is the young girl in <Picture 1>, with curly brown hair, wearing a blue denim jacket over a patterned brown shirt, light blue jeans, and a brown belt.\n<Picture 1> is the visual reference for <Subject 1>'s appearance and initial pose.",
+        "bd_grp_sample": "Sampling settings",
+        "cfg": 1,
+        "seed": 12605080140014,
+        "control_after_generate": "randomize",
+        "frame_rate": 24,
+        "width": 832,
+        "height": 1120,
+        "ref_max_size": 1120,
+        "total_frames": 486,
+        "timeline_data": "{\"version\":5,\"editMode\":\"segment\",\"totalFrames\":486,\"frameRate\":24,\"video\":{\"fileName\":\"\",\"videoFile\":\"\",\"subfolder\":\"\",\"type\":\"input\",\"frames\":[],\"frameMap\":[],\"sourceFrameCount\":124,\"deletedSourceRanges\":[]},\"videoClips\":[],\"global\":{\"taskType\":\"r2v — 参考主体生视频(Reference to Video)\",\"prompt\":\"subject_definitions:\\n<Subject 1> is the young girl in <Picture 1>, with curly brown hair, wearing a blue denim jacket over a patterned brown shirt, light blue jeans, and a brown belt.\\n<Picture 1> is the visual reference for <Subject 1>'s appearance and initial pose.\",\"refs\":[{\"index\":0,\"imageFile\":\"QWEN-EDIT-LVRAM_00001_.png\",\"fileName\":\"\",\"type\":\"input\",\"subfolder\":\"\"}],\"refAudios\":[],\"referenceVideo\":{\"videoFile\":\"\",\"fileName\":\"\",\"type\":\"input\",\"subfolder\":\"\"},\"continuousReference\":false,\"commonEnabled\":true,\"commonCollapsed\":false,\"refVideos\":[],\"genImage\":{\"imageFile\":\"\"}},\"output\":{\"mode\":\"fixed\",\"aspectRatio\":\"3:4 (竖版标准)\",\"megapixels\":0.9,\"multiple\":32,\"longEdge\":1120,\"width\":832,\"height\":1120,\"maxExportFrames\":0,\"exportMode\":\"all\",\"audioMode\":\"generate\",\"exportSourceImages\":false,\"exportPreFaceRefine\":false,\"refImageSize\":\"match\",\"continuityEnabled\":true,\"continuityOverlapFrames\":22,\"continuityMode\":\"guide\",\"continuityRedraw\":0.1,\"continuityKeepTail\":true},\"runSelectEnabled\":false,\"runSelection\":[],\"liveTaePreview\":false,\"batchDetailMode\":\"solo\",\"segments\":[{\"id\":\"murb4p2vcwocf\",\"start\":0,\"length\":243,\"frameCount\":243,\"durationSec\":10,\"prompt\":\"summary:\\n[reference generation] The target video features <Subject 1> dancing in a studio environment with an orange background. The video captures her energetic movements and joyful expression over a 10-second duration, utilizing <Picture 1> to define her visual identity and starting composition.\\n\\nretention_analysis:\\n<Subject 1> (appears in [Shot 1]): fully_preserved - the girl's curly hair, denim jacket, patterned shirt, jeans, and belt are retained throughout the dance sequence.\\n<Picture 1> ([Shot 1] reference): fully_preserved - the visual identity of the subject is strictly maintained from the reference image.\\n\\ndetailed_description:\\nThe target video uses a vibrant, high-energy commercial style with saturated colors and bright studio lighting.\\n[Shot 1] The scene opens in a seamless studio environment with a solid orange background. <Subject 1>, the young girl with curly brown hair, wearing a blue denim jacket over a patterned brown shirt, light blue jeans, and a brown belt, stands centered in the frame. She begins from a pose similar to <Picture 1> with her right arm raised high and left arm extended outward. As the video progresses, she transitions into a dynamic dance routine, swinging her arms rhythmically and shifting her weight from one foot to the other. Her facial expression remains joyful and animated, with a wide smile throughout the performance. The camera maintains a stable medium-full shot, capturing her full body movements and upper body details clearly.\\n[Shot 2] At 00:05.000, the camera slowly pushes in to a medium shot of <Subject 1>. She continues her dance with more pronounced arm gestures, crossing her arms in front of her chest before extending them outward again. Her hair bounces naturally with her movements, emphasizing the energy of the performance. The lighting remains consistent and bright, highlighting the texture of her denim jacket and the details of her clothing.\\n\\noverall_soundscape:\\nSoft studio room tone continues throughout the video, accompanied by subtle fabric rustling sounds as the girl moves and dances.\\n\\nnon_diegetic_music:\\nA upbeat, rhythmic pop track with a moderate tempo, featuring bright synthesizer chords and a steady drum beat that synchronizes with the girl's dance movements, building in energy towards the end of the clip.\",\"negativePrompt\":\"\",\"taskType\":\"\",\"refs\":[],\"refAudios\":[],\"refVideos\":[],\"genImage\":{\"imageFile\":\"\",\"fileName\":\"\"},\"startImage\":null,\"endImage\":null,\"continuityFromPrev\":false,\"refImageSize\":\"match\",\"loras\":[]},{\"id\":\"murbo9i19cddu\",\"start\":243,\"length\":243,\"frameCount\":243,\"durationSec\":10,\"prompt\":\"summary:\\n[reference generation] The target video shows <Subject 1> transitioning from an energetic dance pose to a seated position on the floor. The sequence captures the cessation of movement and the settling of the character against a solid orange background.\\n\\nretention_analysis:\\n<Subject 1> (appears in [Shot 1]): fully_preserved - The subject's curly hair, denim jacket, brown top, jeans, belt, and facial features are maintained exactly as depicted in <Picture 1>.\\n\\ndetailed_description:\\nThe target video uses a clean, studio-lit aesthetic with a high-contrast orange background.\\n[Shot 1] A medium full shot captures <Subject 1>, the young girl with curly brown hair, wearing a blue denim jacket and light blue jeans. She begins in a dynamic dance pose with arms raised, mirroring the energy of <Picture 1>. Her movements are rhythmic but decelerate rapidly as she lowers her center of gravity. The camera remains static at eye level, keeping her centered against the solid orange backdrop. As the dance concludes, she bends her knees and lowers herself smoothly to the floor, her arms dropping naturally to her sides. She settles into a cross-legged sitting position on the ground. Her expression shifts from high-energy focus to a relaxed, contented smile as she looks directly at the camera. The denim fabric of her jacket creases naturally with the movement, and the brown belt remains securely fastened around her waist.\\n\\noverall_soundscape:\\nThe sound of rhythmic, soft footfalls on a smooth studio floor transitions into the distinct sound of denim fabric shifting and settling as the subject sits down.\\n\\nnon_diegetic_music:\\nA playful, upbeat electronic track with a moderate tempo features bright synth arpeggios and a light drum pattern. The music begins with high energy to match the dance movements but gradually decreases in volume and complexity during the final two seconds, resolving into a gentle, static chord that supports the subject's relaxed seated state.\",\"negativePrompt\":\"\",\"taskType\":\"\",\"refs\":[],\"refAudios\":[],\"refVideos\":[],\"genImage\":{\"imageFile\":\"\",\"fileName\":\"\"},\"startImage\":null,\"endImage\":null,\"continuityFromPrev\":true,\"refImageSize\":\"match\",\"loras\":[]}],\"timelineMode\":\"prompt_batch\",\"width\":832,\"height\":1120,\"refMaxSize\":1120,\"batchWorkspaces\":{\"t2v\":{\"selectedIndex\":0,\"editMode\":\"segment\",\"runSelectEnabled\":false,\"runSelection\":[],\"segments\":[{\"id\":\"mur62prdp4hnf\",\"start\":0,\"length\":124,\"frameCount\":124,\"durationSec\":5,\"prompt\":\"\",\"negativePrompt\":\"\",\"taskType\":\"\",\"refs\":[],\"refAudios\":[],\"refVideos\":[{\"index\":0,\"videoFile\":\"\",\"fileName\":\"\",\"type\":\"input\",\"subfolder\":\"\",\"pairedAudioFile\":\"\",\"previewImageFile\":\"\",\"previewImageUrl\":\"\",\"linked\":true},{\"index\":1,\"videoFile\":\"\",\"fileName\":\"\",\"type\":\"input\",\"subfolder\":\"\",\"pairedAudioFile\":\"\",\"previewImageFile\":\"\",\"previewImageUrl\":\"\",\"linked\":true},{\"index\":2,\"videoFile\":\"\",\"fileName\":\"\",\"type\":\"input\",\"subfolder\":\"\",\"pairedAudioFile\":\"\",\"previewImageFile\":\"\",\"previewImageUrl\":\"\",\"linked\":true}],\"genImage\":{\"imageFile\":\"\",\"fileName\":\"\"},\"previewFps\":24,\"frameRate\":24,\"externalNodeId\":\"235\",\"imageFile\":\"\",\"refImageSize\":\"match\",\"loras\":[],\"_videoFrameCount\":124}],\"globalCommon\":{\"commonEnabled\":false,\"commonCollapsed\":false,\"prompt\":\"\",\"refs\":[],\"refAudios\":[],\"refVideos\":[]}},\"r2v\":{\"selectedIndex\":1,\"editMode\":\"segment\",\"runSelectEnabled\":false,\"runSelection\":[],\"segments\":[{\"id\":\"murb4p2vcwocf\",\"start\":0,\"length\":243,\"frameCount\":243,\"durationSec\":10,\"prompt\":\"summary:\\n[reference generation] The target video features <Subject 1> dancing in a studio environment with an orange background. The video captures her energetic movements and joyful expression over a 10-second duration, utilizing <Picture 1> to define her visual identity and starting composition.\\n\\nretention_analysis:\\n<Subject 1> (appears in [Shot 1]): fully_preserved - the girl's curly hair, denim jacket, patterned shirt, jeans, and belt are retained throughout the dance sequence.\\n<Picture 1> ([Shot 1] reference): fully_preserved - the visual identity of the subject is strictly maintained from the reference image.\\n\\ndetailed_description:\\nThe target video uses a vibrant, high-energy commercial style with saturated colors and bright studio lighting.\\n[Shot 1] The scene opens in a seamless studio environment with a solid orange background. <Subject 1>, the young girl with curly brown hair, wearing a blue denim jacket over a patterned brown shirt, light blue jeans, and a brown belt, stands centered in the frame. She begins from a pose similar to <Picture 1> with her right arm raised high and left arm extended outward. As the video progresses, she transitions into a dynamic dance routine, swinging her arms rhythmically and shifting her weight from one foot to the other. Her facial expression remains joyful and animated, with a wide smile throughout the performance. The camera maintains a stable medium-full shot, capturing her full body movements and upper body details clearly.\\n[Shot 2] At 00:05.000, the camera slowly pushes in to a medium shot of <Subject 1>. She continues her dance with more pronounced arm gestures, crossing her arms in front of her chest before extending them outward again. Her hair bounces naturally with her movements, emphasizing the energy of the performance. The lighting remains consistent and bright, highlighting the texture of her denim jacket and the details of her clothing.\\n\\noverall_soundscape:\\nSoft studio room tone continues throughout the video, accompanied by subtle fabric rustling sounds as the girl moves and dances.\\n\\nnon_diegetic_music:\\nA upbeat, rhythmic pop track with a moderate tempo, featuring bright synthesizer chords and a steady drum beat that synchronizes with the girl's dance movements, building in energy towards the end of the clip.\",\"negativePrompt\":\"\",\"taskType\":\"\",\"refs\":[],\"refAudios\":[],\"refVideos\":[],\"genImage\":{\"imageFile\":\"\",\"fileName\":\"\"},\"continuityFromPrev\":false,\"refImageSize\":\"match\",\"loras\":[],\"referenceVideo\":{\"videoFile\":\"\",\"fileName\":\"\",\"type\":\"input\",\"subfolder\":\"\"},\"_videoFrameCount\":243,\"previewFps\":24},{\"id\":\"murbo9i19cddu\",\"start\":243,\"length\":243,\"frameCount\":243,\"durationSec\":10,\"prompt\":\"summary:\\n[reference generation] The target video shows <Subject 1> transitioning from an energetic dance pose to a seated position on the floor. The sequence captures the cessation of movement and the settling of the character against a solid orange background.\\n\\nretention_analysis:\\n<Subject 1> (appears in [Shot 1]): fully_preserved - The subject's curly hair, denim jacket, brown top, jeans, belt, and facial features are maintained exactly as depicted in <Picture 1>.\\n\\ndetailed_description:\\nThe target video uses a clean, studio-lit aesthetic with a high-contrast orange background.\\n[Shot 1] A medium full shot captures <Subject 1>, the young girl with curly brown hair, wearing a blue denim jacket and light blue jeans. She begins in a dynamic dance pose with arms raised, mirroring the energy of <Picture 1>. Her movements are rhythmic but decelerate rapidly as she lowers her center of gravity. The camera remains static at eye level, keeping her centered against the solid orange backdrop. As the dance concludes, she bends her knees and lowers herself smoothly to the floor, her arms dropping naturally to her sides. She settles into a cross-legged sitting position on the ground. Her expression shifts from high-energy focus to a relaxed, contented smile as she looks directly at the camera. The denim fabric of her jacket creases naturally with the movement, and the brown belt remains securely fastened around her waist.\\n\\noverall_soundscape:\\nThe sound of rhythmic, soft footfalls on a smooth studio floor transitions into the distinct sound of denim fabric shifting and settling as the subject sits down.\\n\\nnon_diegetic_music:\\nA playful, upbeat electronic track with a moderate tempo features bright synth arpeggios and a light drum pattern. The music begins with high energy to match the dance movements but gradually decreases in volume and complexity during the final two seconds, resolving into a gentle, static chord that supports the subject's relaxed seated state.\",\"negativePrompt\":\"\",\"taskType\":\"\",\"refs\":[],\"refAudios\":[],\"refVideos\":[],\"genImage\":{\"imageFile\":\"\",\"fileName\":\"\"},\"continuityFromPrev\":true,\"refImageSize\":\"match\",\"loras\":[],\"referenceVideo\":{\"videoFile\":\"\",\"fileName\":\"\",\"type\":\"input\",\"subfolder\":\"\"},\"_videoFrameCount\":243,\"previewFps\":24}],\"globalCommon\":{\"commonEnabled\":true,\"commonCollapsed\":false,\"prompt\":\"subject_definitions:\\n<Subject 1> is the young girl in <Picture 1>, with curly brown hair, wearing a blue denim jacket over a patterned brown shirt, light blue jeans, and a brown belt.\\n<Picture 1> is the visual reference for <Subject 1>'s appearance and initial pose.\",\"refs\":[{\"index\":0,\"imageFile\":\"QWEN-EDIT-LVRAM_00001_.png\",\"fileName\":\"\",\"type\":\"input\",\"subfolder\":\"\"}],\"refAudios\":[],\"refVideos\":[]}}},\"gen\":{\"defaultFrameCount\":124}}",
+        "bd_grp_advanced": "Advanced sampling",
+        "steps": 25,
+        "sampler": "euler",
+        "scheduler": "simple",
+        "shift_video": 12,
+        "shift_audio": 3,
+        "export_source_images": false,
+        "export_pre_face_refine": false,
+        "bd_grp_perf": "Performance",
+        "clear_vram_between_segments": true,
+        "clear_vram_before_refine": false,
+        "clear_vram_before_face_refine": false,
+        "cache_frames_codec": "raw",
+        "minimax_director_ui": ""
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 234,
+      "type": "ApplyHyperFlow",
+      "pos": [
+        -1591.3024146576754,
+        4695.133172224935
+      ],
+      "size": [
+        409.6634593514765,
+        222
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 462
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            422
+          ]
+        },
+        {
+          "name": "sigmas",
+          "type": "SIGMAS",
+          "links": [
+            449
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ApplyHyperFlow"
+      },
+      "widgets_values": [
+        "custom_node_hyperflow_8step_v1.0_comfyui.safetensors",
+        1,
+        "bypass",
+        "auto",
+        false,
+        false,
+        false
+      ],
+      "widgets_values_named": {
+        "hyperflow_file": "custom_node_hyperflow_8step_v1.0_comfyui.safetensors",
+        "strength": 1,
+        "lora_mode": "bypass",
+        "variant": "auto",
+        "download_if_missing": false,
+        "verbose": false,
+        "experimental_curve_refit": false
+      },
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 151,
+      "type": "GetNode",
+      "pos": [
+        -1106.5170656072905,
+        4056.794506105412
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            446
+          ]
+        }
+      ],
+      "title": "Get_CLIP",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": [
+        "CLIP"
+      ],
+      "widgets_values_named": {
+        "Constant": "CLIP"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 154,
+      "type": "GetNode",
+      "pos": [
+        -962.3791066776091,
+        4052.8398237491624
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            444
+          ]
+        }
+      ],
+      "title": "Get_VAE_VIDEO",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": [
+        "VAE_VIDEO"
+      ],
+      "widgets_values_named": {
+        "Constant": "VAE_VIDEO"
+      },
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 153,
+      "type": "GetNode",
+      "pos": [
+        -780.2911475988517,
+        4048.953775911488
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            445
+          ]
+        }
+      ],
+      "title": "Get_VAE_AUDIO",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": [
+        "VAE_AUDIO"
+      ],
+      "widgets_values_named": {
+        "Constant": "VAE_AUDIO"
+      },
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 118,
+      "type": "MarkdownNote",
+      "pos": [
+        -2043.7142266535714,
+        5005.690565791737
+      ],
+      "size": [
+        300,
+        520
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Note: Size Settings Reference",
+      "properties": {},
+      "widgets_values": [
+        "| megapixels | Aspect | Output (multiple=32) |\n|---|---|---|\n| 0.2 | 16:9 | 608 x 352 |\n| 0.3 | 16:9 | 736 x 416 |\n| 0.4 | 16:9 | 864 x 480 |\n| 0.5 | 16:9 | 960 x 544 |\n| 0.6 | 16:9 | 1056 x 608 |\n| 0.7 | 16:9 | 1152 x 640 |\n| 0.8 | 16:9 | 1216 x 672 |\n| 0.9 | 16:9 | 1280 x 736 |\n| 0.98 | 16:9 | 1344 x 768 |\n| 1.0 | 16:9 | 1376 x 768 |\n| 1.2 | 16:9 | 1504 x 832 |\n| 1.5 | 16:9 | 1664 x 928 |\n| 1.8 | 16:9 | 1824 x 1024 |\n| 2.0 | 16:9 | 1920 x 1088 |\n"
+      ],
+      "widgets_values_named": {
+        "text": "| megapixels | Aspect | Output (multiple=32) |\n|---|---|---|\n| 0.2 | 16:9 | 608 x 352 |\n| 0.3 | 16:9 | 736 x 416 |\n| 0.4 | 16:9 | 864 x 480 |\n| 0.5 | 16:9 | 960 x 544 |\n| 0.6 | 16:9 | 1056 x 608 |\n| 0.7 | 16:9 | 1152 x 640 |\n| 0.8 | 16:9 | 1216 x 672 |\n| 0.9 | 16:9 | 1280 x 736 |\n| 0.98 | 16:9 | 1344 x 768 |\n| 1.0 | 16:9 | 1376 x 768 |\n| 1.2 | 16:9 | 1504 x 832 |\n| 1.5 | 16:9 | 1664 x 928 |\n| 1.8 | 16:9 | 1824 x 1024 |\n| 2.0 | 16:9 | 1920 x 1088 |\n"
+      },
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 240,
+      "type": "GetNode",
+      "pos": [
+        -1656.4882877965265,
+        5198.476574355119
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 10,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            463
+          ]
+        }
+      ],
+      "title": "Get_VAE_AUDIO",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": [
+        "VAE_AUDIO"
+      ],
+      "widgets_values_named": {
+        "Constant": "VAE_AUDIO"
+      },
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 241,
+      "type": "SetNode",
+      "pos": [
+        -1456.7895762959163,
+        5197.935569503045
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "link": 464
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": null
+        }
+      ],
+      "title": "Set_MODEL",
+      "properties": {
+        "Node name for S&R": "SetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes",
+        "previousName": "MODEL"
+      },
+      "widgets_values": [
+        "MODEL"
+      ],
+      "widgets_values_named": {
+        "Constant": "MODEL"
+      },
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 242,
+      "type": "GetNode",
+      "pos": [
+        -590.9788400553623,
+        4059.486870111678
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 11,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            465
+          ]
+        }
+      ],
+      "title": "Get_MODEL",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": [
+        "MODEL"
+      ],
+      "widgets_values_named": {
+        "Constant": "MODEL"
+      },
+      "color": "#223",
+      "bgcolor": "#335"
+    }
+  ],
+  "links": [
+    [
+      406,
+      219,
+      0,
+      218,
+      0,
+      "IMAGE"
+    ],
+    [
+      407,
+      216,
+      0,
+      218,
+      2,
+      "FLOAT"
+    ],
+    [
+      412,
+      223,
+      0,
+      226,
+      0,
+      "CLIP"
+    ],
+    [
+      413,
+      224,
+      0,
+      227,
+      0,
+      "VAE"
+    ],
+    [
+      414,
+      225,
+      0,
+      228,
+      0,
+      "VAE"
+    ],
+    [
+      415,
+      222,
+      0,
+      229,
+      0,
+      "MODEL"
+    ],
+    [
+      417,
+      230,
+      0,
+      231,
+      0,
+      "MODEL"
+    ],
+    [
+      422,
+      234,
+      0,
+      186,
+      0,
+      "MODEL"
+    ],
+    [
+      444,
+      154,
+      0,
+      236,
+      1,
+      "VAE"
+    ],
+    [
+      445,
+      153,
+      0,
+      236,
+      2,
+      "VAE"
+    ],
+    [
+      446,
+      151,
+      0,
+      236,
+      3,
+      "CLIP"
+    ],
+    [
+      449,
+      234,
+      1,
+      236,
+      10,
+      "SIGMAS"
+    ],
+    [
+      450,
+      236,
+      0,
+      219,
+      0,
+      "IMAGE"
+    ],
+    [
+      451,
+      236,
+      1,
+      218,
+      1,
+      "AUDIO"
+    ],
+    [
+      408,
+      217,
+      0,
+      219,
+      2,
+      "INT"
+    ],
+    [
+      346,
+      133,
+      1,
+      186,
+      3,
+      "INT"
+    ],
+    [
+      462,
+      231,
+      0,
+      234,
+      0,
+      "MODEL"
+    ],
+    [
+      463,
+      240,
+      0,
+      186,
+      2,
+      "VAE"
+    ],
+    [
+      464,
+      186,
+      0,
+      241,
+      0,
+      "MODEL"
+    ],
+    [
+      465,
+      242,
+      0,
+      236,
+      0,
+      "MODEL"
+    ],
+    [
+      416,
+      229,
+      0,
+      230,
+      0,
+      "MODEL"
+    ],
+    [
+      405,
+      217,
+      0,
+      216,
+      0,
+      "INT"
+    ],
+    [
+      452,
+      236,
+      2,
+      216,
+      1,
+      "FLOAT"
+    ],
+    [
+      409,
+      218,
+      0,
+      220,
+      0,
+      "VIDEO"
+    ],
+    [
+      248,
+      134,
+      0,
+      133,
+      0,
+      "FLOAT"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 8,
+      "title": "create video",
+      "bounding": [
+        -45.5960006431461,
+        4275.099718750665,
+        934.4946686546862,
+        1768.8877890122758
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 9,
+      "title": "Models",
+      "bounding": [
+        -2115.437434067803,
+        4036.8277716666453,
+        958.0310900537982,
+        912.3838333671797
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 10,
+      "title": "Director",
+      "bounding": [
+        -1139.4878207870174,
+        3967.274603544814,
+        1057.8428915106092,
+        3001.038476619584
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 11,
+      "title": "Preview",
+      "bounding": [
+        -1717.7794544767487,
+        4972.955722551292,
+        554.0092506780102,
+        1100.1405127274784
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "frontendVersion": "1.53.6",
+    "VHS_latentpreview": true,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true,
+    "ds": {
+      "scale": 0.6504202167735984,
+      "offset": [
+        2601.727280509583,
+        -4425.076244665176
+      ]
+    }
+  },
+  "extensions": {
+    "seed_widgets": {
+      "236": 4
+    }
+  },
+  "version": 0.4,
+  "seed_widgets": {
+    "236": 4
+  }
+}
