@@ -8,11 +8,12 @@
 - Some custom nodes have been adapted specifically for this pod or pinned to increase the stability.
 - Tested on L40S, RTX 6000 Ada, RTX PRO 6000, PRO 6000 MiG 48Gb, RTX 5090, (RTX 4090).
 
-## 02102026
+## 03102026
 
 - ComfyUI 0.38.0
 - Adjusted Fantastic prompt build to auto download sam3 if not available for masking video's.
 - Adjusted H3 latent upscaler to auto download the model.
+- Fixed crash in Director when using "segment continuity", now using extenal Motion Context.
 
 ## 29092026
 
