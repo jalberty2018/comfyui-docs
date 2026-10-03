@@ -133,23 +133,21 @@ Use the enhanced fl2va text-to-video workflow to generate video and native audio
 
 Use Director to manage generation stages in a single workflow.
 
+#### 2 shot workflow
+
 <details>
-<summary><strong>View the Director workflow</strong></summary>
+<summary><strong>View the Director workflow shots</strong></summary>
 
 <img loading="lazy" src="../images/ai-generated-MiniMax-director.jpg" alt="MiniMax H3 Director all-in-one workflow" style="width: 100%; height: auto;">
 
 </details>
 
-<a id="advanced-ref-workflow-with-2-samplers-warmup-and-pdd-acc-turbo-lora"></a>
-
-### Advanced reference workflow
-
-This workflow combines two samplers, a warm-up stage and the PDD Acc turbo LoRA.
+### Motion continuity workflow
 
 <details>
-<summary><strong>View the advanced reference workflow</strong></summary>
+<summary><strong>View the Director workflow continuity</strong></summary>
 
-<img loading="lazy" src="../images/ai-generated-MiniMax-uncensored.jpg" alt="Advanced MiniMax H3 reference workflow with two samplers" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/ai-generated-MiniMax-director2.jpg" alt="MiniMax H3 Director all-in-one workflow continuity" style="width: 100%; height: auto;">
 
 </details>
 
@@ -247,6 +245,15 @@ Preview generated video and audio inside the workflow before exporting the resul
 <div style="text-align: center;">
   <video controls preload="metadata" style="width: 100%; max-width: 720px; height: auto;">
     <source src="/video/Video_minimax_multi-shot.mp4" type="video/mp4">
+  </video>
+</div>
+
+<a id="director-continuation"></a>
+**Director motion continuation**
+
+<div style="text-align: center;">
+  <video controls preload="metadata" style="width: 100%; max-width: 500px; height: auto;">
+    <source src="/video/Video_director_motion_continuity.mp4" type="video/mp4">
   </video>
 </div>
 

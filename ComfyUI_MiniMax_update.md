@@ -10,10 +10,11 @@
 
 ## 03102026
 
-- ComfyUI 0.38.0
-- Adjusted Fantastic prompt build to auto download sam3 if not available for masking video's.
-- Adjusted H3 latent upscaler to auto download the model.
-- Fixed crash in Director when using "segment continuity", now using extenal Motion Context.
+- Updated ComfyUI to version 0.38.0.
+- Updated Fantastic Prompt Builder to automatically download SAM3 when needed for video masking.
+- Updated the H3 Latent Upscaler to automatically download its model.
+- Fixed a crash in Director when using "segment continuity" by switching to external Motion Context.
+- Removed the PDD-Acc workflows for Ref2VA, as Hyperflow delivers better results.
 
 ## 29092026
 
