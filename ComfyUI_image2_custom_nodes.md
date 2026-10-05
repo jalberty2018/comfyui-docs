@@ -20,6 +20,7 @@
 ### Utilities
 
 - [GGUF](https://github.com/city96/ComfyUI-GGUF)
+- [ComfyUI-Omnichar](https://github.com/omnichar/ComfyUI-Omnichar)
 
 ### Resolution choosers
 
@@ -67,6 +68,7 @@
 #### Qwen
 
 - [Comfyui-QwenEditUtils](https://github.com/lrzjason/Comfyui-QwenEditUtils)
+- [ComfyUI-qwen_img_2_1_enhancer](https://github.com/capitan01R/ComfyUI-qwen_img_2_1_enhancer)
 
 #### Krea
 

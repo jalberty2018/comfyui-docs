@@ -22,6 +22,7 @@
 
 - [GGUF](https://github.com/city96/ComfyUI-GGUF)
 - [LoRA Optimizer](https://github.com/ethanfel/ComfyUI-LoRA-Optimizer)
+- [ComfyUI-Omnichar](https://github.com/omnichar/ComfyUI-Omnichar)
 
 ### Resolution choosers
 

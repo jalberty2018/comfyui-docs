@@ -320,9 +320,13 @@ These examples illustrate the quality, speed and generation limits of several GP
 <details>
 <summary><strong>View the hardware comparison screenshots</strong></summary>
 
-<p><strong>L40S — good quality</strong></p>
+<p><strong>L40S — good quality, stable</strong></p>
 
 <img loading="lazy" src="../images/runpod_L40S_MiniMax.jpg" alt="MiniMax H3 output from a pod running on an L40S" style="width: 100%; height: auto;">
+
+<p><strong>RTX 6000 Ada — good quality acceptable speed</strong></p>
+
+<img loading="lazy" src="../images/runpod_RTX6000Ada_MiniMax.jpg" alt="MiniMax H3 output from a pod running on an RTX 6000 Ada" style="width: 100%; height: auto;">
 
 <p><strong>RTX 5090 — fast, with resolution and duration restrictions</strong></p>
 

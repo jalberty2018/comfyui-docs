@@ -8,13 +8,16 @@
 - Some custom nodes have been adapted specifically for this pod or pinned to increase the stability.
 - Tested on L40S, RTX 6000 Ada, RTX PRO 6000, PRO 6000 MiG 48Gb, RTX 5090, (RTX 4090).
 
-## 03102026
+## 05102026
 
 - Updated ComfyUI to version 0.38.0.
 - Updated Fantastic Prompt Builder to automatically download SAM3 when needed for video masking.
 - Updated the H3 Latent Upscaler to automatically download its model.
 - Fixed a crash in Director when using "segment continuity" by switching to external Motion Context.
 - Removed the PDD-Acc workflows for Ref2VA, as Hyperflow delivers better results.
+- [ComfyUI-Omnichar](https://github.com/omnichar/ComfyUI-Omnichar)
+- Updated QwenImageRefPack with an extra omnichar load and edit node.
+- Updated Omnichar adding uploading and downloading char files, extending slots to 9 images.
 
 ## 29092026
 

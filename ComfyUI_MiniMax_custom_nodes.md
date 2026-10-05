@@ -24,6 +24,7 @@
 - [comfyui-obvpm](https://github.com/chanon/comfyui-obvpm)
 - [ComfyUI-MiniMaxH3-Preview](https://github.com/Brioch/ComfyUI-MiniMaxH3-Preview)
 - [ComfyUI-QwenImageRefPack](https://github.com/Hearmeman24/ComfyUI-QwenImageRefPack)
+- [ComfyUI-Omnichar](https://github.com/omnichar/ComfyUI-Omnichar)
 
 ### Loaders/linkers
 
