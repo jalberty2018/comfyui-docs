@@ -5,9 +5,8 @@
 Run **image generation and image editing models** in ComfyUI on RunPod. The templates provision the models, LoRAs, custom nodes and example workflows needed for:
 
 - Z-Image
-- ERNIE-Image
-- FLUX.2 
-- FLUX.2 Klein
+- FLUX.2 Dev
+- FLUX.2 Klein 9B
 - JoyCaption
 - Krea-2
 - SenseNova U1.5
