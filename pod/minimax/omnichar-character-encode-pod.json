@@ -1,0 +1,499 @@
+{
+  "id": "e4327370-4382-4371-b7c2-c8e22dad4ad0",
+  "revision": 0,
+  "last_node_id": 15,
+  "last_link_id": 28,
+  "nodes": [
+    {
+      "id": 14,
+      "type": "OmnicharLocalInputImagesReferencesManager",
+      "pos": [
+        -765.3695883674006,
+        6615.938759153391
+      ],
+      "size": [
+        520,
+        840
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "face",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "face_2",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "face_3",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "body",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "body_2",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "body_3",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "cloths",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "cloths_2",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "cloths_3",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "OmnicharLocalInputImagesReferencesManager"
+      },
+      "widgets_values": [
+        "",
+        2048,
+        ""
+      ],
+      "widgets_values_named": {
+        "references_json": "",
+        "max_reference_edge": 2048,
+        "omnichar_references": ""
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 6,
+      "type": "OmnicharEncodeCharacter",
+      "pos": [
+        -223.1707935451019,
+        5714.7833579877115
+      ],
+      "size": [
+        400,
+        316
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "face",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 17
+        },
+        {
+          "name": "face_2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 18
+        },
+        {
+          "name": "face_3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 19
+        },
+        {
+          "name": "body",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 20
+        },
+        {
+          "name": "body_2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 21
+        },
+        {
+          "name": "body_3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 22
+        },
+        {
+          "name": "cloths",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 23
+        },
+        {
+          "name": "cloths_2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 24
+        },
+        {
+          "name": "cloths_3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 25
+        },
+        {
+          "name": "voice",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 28
+        }
+      ],
+      "outputs": [
+        {
+          "name": "char",
+          "type": "CHARACTER",
+          "links": [
+            6
+          ]
+        },
+        {
+          "name": "filename",
+          "type": "STRING",
+          "links": [
+            27
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "OmnicharEncodeCharacter",
+        "aux_id": "omnichar/ComfyUI-Omnichar",
+        "ver": "cc0c1e3d5ff91e2a4ec7c5a95341fbca2c7cc8d2"
+      },
+      "widgets_values": [
+        "character",
+        "An animation character combined with real",
+        0
+      ],
+      "widgets_values_named": {
+        "name": "character",
+        "description": "An animation character combined with real",
+        "resolution": 0
+      },
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 8,
+      "type": "OmnicharSaveCharacterExternal",
+      "pos": [
+        203.156252809378,
+        5712.144614235761
+      ],
+      "size": [
+        298.59630833498466,
+        92.14011070575089
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "char",
+          "type": "CHARACTER",
+          "link": 6
+        },
+        {
+          "name": "filename",
+          "type": "STRING",
+          "widget": {
+            "name": "filename"
+          },
+          "link": 27
+        }
+      ],
+      "outputs": [
+        {
+          "name": "filename",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "OmnicharSaveCharacterExternal"
+      },
+      "widgets_values": [
+        null,
+        null
+      ],
+      "widgets_values_named": {
+        "filename": null,
+        "run workflow to prepare download": null
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 11,
+      "type": "OmnicharImagesReferencesManager",
+      "pos": [
+        -765.8607104191623,
+        5715.186469864208
+      ],
+      "size": [
+        520,
+        840
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "face",
+          "type": "IMAGE",
+          "links": [
+            17
+          ]
+        },
+        {
+          "name": "face_2",
+          "type": "IMAGE",
+          "links": [
+            18
+          ]
+        },
+        {
+          "name": "face_3",
+          "type": "IMAGE",
+          "links": [
+            19
+          ]
+        },
+        {
+          "name": "body",
+          "type": "IMAGE",
+          "links": [
+            20
+          ]
+        },
+        {
+          "name": "body_2",
+          "type": "IMAGE",
+          "links": [
+            21
+          ]
+        },
+        {
+          "name": "body_3",
+          "type": "IMAGE",
+          "links": [
+            22
+          ]
+        },
+        {
+          "name": "cloths",
+          "type": "IMAGE",
+          "links": [
+            23
+          ]
+        },
+        {
+          "name": "cloths_2",
+          "type": "IMAGE",
+          "links": [
+            24
+          ]
+        },
+        {
+          "name": "cloths_3",
+          "type": "IMAGE",
+          "links": [
+            25
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "OmnicharImagesReferencesManager"
+      },
+      "widgets_values": [
+        "{\"version\":1,\"slots\":{}}",
+        2048,
+        ""
+      ],
+      "widgets_values_named": {
+        "references_json": "{\"version\":1,\"slots\":{}}",
+        "max_reference_edge": 2048,
+        "omnichar_references": ""
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 15,
+      "type": "LoadAudio",
+      "pos": [
+        -217.84177100254269,
+        6093.722352748842
+      ],
+      "size": [
+        282.798828125,
+        136
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            28
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadAudio"
+      },
+      "widgets_values": [
+        null,
+        ""
+      ],
+      "widgets_values_named": {
+        "audio": null,
+        "upload": ""
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    }
+  ],
+  "links": [
+    [
+      6,
+      6,
+      0,
+      8,
+      0,
+      "CHARACTER"
+    ],
+    [
+      17,
+      11,
+      0,
+      6,
+      0,
+      "IMAGE"
+    ],
+    [
+      18,
+      11,
+      1,
+      6,
+      1,
+      "IMAGE"
+    ],
+    [
+      19,
+      11,
+      2,
+      6,
+      2,
+      "IMAGE"
+    ],
+    [
+      20,
+      11,
+      3,
+      6,
+      3,
+      "IMAGE"
+    ],
+    [
+      21,
+      11,
+      4,
+      6,
+      4,
+      "IMAGE"
+    ],
+    [
+      22,
+      11,
+      5,
+      6,
+      5,
+      "IMAGE"
+    ],
+    [
+      23,
+      11,
+      6,
+      6,
+      6,
+      "IMAGE"
+    ],
+    [
+      24,
+      11,
+      7,
+      6,
+      7,
+      "IMAGE"
+    ],
+    [
+      25,
+      11,
+      8,
+      6,
+      8,
+      "IMAGE"
+    ],
+    [
+      27,
+      6,
+      1,
+      8,
+      1,
+      "STRING"
+    ],
+    [
+      28,
+      15,
+      0,
+      6,
+      9,
+      "AUDIO"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.7889449272148031,
+      "offset": [
+        1300.355231219447,
+        -5502.186173879886
+      ]
+    },
+    "frontendVersion": "1.53.10",
+    "VHS_latentpreview": true,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "extensions": {
+    "seed_widgets": {}
+  },
+  "version": 0.4,
+  "seed_widgets": {}
+}
