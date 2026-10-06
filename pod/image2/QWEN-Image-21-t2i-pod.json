@@ -1,8 +1,8 @@
 {
   "id": "f2f469df-3f03-44c3-9462-afe1a8b142f4",
   "revision": 0,
-  "last_node_id": 511,
-  "last_link_id": 794,
+  "last_node_id": 512,
+  "last_link_id": 801,
   "nodes": [
     {
       "id": 504,
@@ -26,7 +26,7 @@
           "name": "VAE",
           "type": "VAE",
           "links": [
-            781
+            800
           ]
         }
       ],
@@ -150,7 +150,7 @@
           "name": "CLIP",
           "type": "CLIP",
           "links": [
-            784
+            799
           ]
         }
       ],
@@ -172,8 +172,8 @@
       "id": 482,
       "type": "EmptyLatentImage",
       "pos": [
-        811.7765492834669,
-        2739.5042825673054
+        710.5765828528027,
+        2708.704282567305
       ],
       "size": [
         300,
@@ -207,7 +207,7 @@
           "name": "LATENT",
           "type": "LATENT",
           "links": [
-            792
+            801
           ]
         }
       ],
@@ -316,14 +316,16 @@
       "id": 13,
       "type": "ResolutionSelector",
       "pos": [
-        713.9062053728197,
-        2658.880798597807
+        699.8261852312179,
+        2664.1608523087443
       ],
       "size": [
         300,
         190
       ],
-      "flags": {},
+      "flags": {
+        "collapsed": false
+      },
       "order": 5,
       "mode": 0,
       "showAdvanced": true,
@@ -348,12 +350,12 @@
         "Node name for S&R": "ResolutionSelector"
       },
       "widgets_values": [
-        "4:3 (Standard)",
+        "3:4 (Portrait Standard)",
         2,
         32
       ],
       "widgets_values_named": {
-        "aspect_ratio": "4:3 (Standard)",
+        "aspect_ratio": "3:4 (Portrait Standard)",
         "megapixels": 2,
         "multiple": 32
       },
@@ -625,84 +627,6 @@
       "bgcolor": "#535"
     },
     {
-      "id": 487,
-      "type": "TextEncodeQwenImage21",
-      "pos": [
-        1145.5636386625574,
-        2339.8312817753713
-      ],
-      "size": [
-        311.8743886655434,
-        513.7901851971624
-      ],
-      "flags": {},
-      "order": 13,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 784
-        },
-        {
-          "name": "images.image_1",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": null
-        },
-        {
-          "name": "vae",
-          "shape": 7,
-          "type": "VAE",
-          "link": 781
-        },
-        {
-          "name": "prompt",
-          "type": "STRING",
-          "widget": {
-            "name": "prompt"
-          },
-          "link": 794
-        }
-      ],
-      "outputs": [
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "links": [
-            741
-          ]
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "links": [
-            742
-          ]
-        },
-        {
-          "name": "latent",
-          "type": "LATENT",
-          "links": []
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "TextEncodeQwenImage21"
-      },
-      "widgets_values": [
-        "Composed scene , put both girls in the same scene in disney land, holding each other",
-        "",
-        1024
-      ],
-      "widgets_values_named": {
-        "prompt": "Composed scene , put both girls in the same scene in disney land, holding each other",
-        "negative_prompt": "",
-        "resolution": 1024
-      },
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
       "id": 484,
       "type": "KSampler",
       "pos": [
@@ -725,17 +649,17 @@
         {
           "name": "positive",
           "type": "CONDITIONING",
-          "link": 741
+          "link": 795
         },
         {
           "name": "negative",
           "type": "CONDITIONING",
-          "link": 742
+          "link": 796
         },
         {
           "name": "latent_image",
           "type": "LATENT",
-          "link": 792
+          "link": 801
         }
       ],
       "outputs": [
@@ -751,7 +675,7 @@
         "Node name for S&R": "KSampler"
       },
       "widgets_values": [
-        528927536781549,
+        1050640621063259,
         "randomize",
         25,
         1,
@@ -760,7 +684,7 @@
         1
       ],
       "widgets_values_named": {
-        "seed": 528927536781549,
+        "seed": 1050640621063259,
         "control_after_generate": "randomize",
         "steps": 25,
         "cfg": 1,
@@ -879,7 +803,7 @@
           "name": "STRING",
           "type": "STRING",
           "links": [
-            794
+            798
           ]
         }
       ],
@@ -888,10 +812,10 @@
         "Node name for S&R": "PrimitiveStringMultiline"
       },
       "widgets_values": [
-        "put two happy  girls in the same scene in disney land, holding each other"
+        "put two happy (complete undressed girls in a provoking pose:2) in the same scene in disney land, showing their body for a viral social media hyper realistic photograph."
       ],
       "widgets_values_named": {
-        "value": "put two happy  girls in the same scene in disney land, holding each other"
+        "value": "put two happy (complete undressed girls in a provoking pose:2) in the same scene in disney land, showing their body for a viral social media hyper realistic photograph."
       },
       "color": "#232",
       "bgcolor": "#353"
@@ -941,17 +865,92 @@
       },
       "color": "#222",
       "bgcolor": "#000"
+    },
+    {
+      "id": 512,
+      "type": "QwenImage21ConditioningPhraseEncoder",
+      "pos": [
+        1117.1388742134118,
+        2336.8294100541916
+      ],
+      "size": [
+        365.9264324951173,
+        533.7272162475588
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 799
+        },
+        {
+          "name": "images.image_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": 800
+        },
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 798
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            795
+          ]
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": [
+            796
+          ]
+        },
+        {
+          "name": "latent",
+          "type": "LATENT",
+          "links": []
+        },
+        {
+          "name": "phrase_report",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "QwenImage21ConditioningPhraseEncoder"
+      },
+      "widgets_values": [
+        "",
+        "",
+        1024
+      ],
+      "widgets_values_named": {
+        "prompt": "",
+        "negative_prompt": "",
+        "resolution": 1024
+      },
+      "color": "#432",
+      "bgcolor": "#653"
     }
   ],
   "links": [
-    [
-      735,
-      483,
-      0,
-      461,
-      0,
-      "IMAGE"
-    ],
     [
       736,
       484,
@@ -967,22 +966,6 @@
       484,
       0,
       "MODEL"
-    ],
-    [
-      741,
-      487,
-      0,
-      484,
-      1,
-      "CONDITIONING"
-    ],
-    [
-      742,
-      487,
-      1,
-      484,
-      2,
-      "CONDITIONING"
     ],
     [
       744,
@@ -1009,14 +992,6 @@
       "VAE"
     ],
     [
-      781,
-      504,
-      0,
-      487,
-      2,
-      "VAE"
-    ],
-    [
       782,
       505,
       0,
@@ -1033,28 +1008,12 @@
       "VAE"
     ],
     [
-      784,
-      507,
-      0,
-      487,
-      0,
-      "CLIP"
-    ],
-    [
       787,
       479,
       0,
       510,
       0,
       "MODEL"
-    ],
-    [
-      788,
-      480,
-      0,
-      510,
-      1,
-      "CLIP"
     ],
     [
       789,
@@ -1073,20 +1032,68 @@
       "MODEL"
     ],
     [
-      792,
+      795,
+      512,
+      0,
+      484,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      796,
+      512,
+      1,
+      484,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      798,
+      497,
+      0,
+      512,
+      3,
+      "STRING"
+    ],
+    [
+      799,
+      507,
+      0,
+      512,
+      0,
+      "CLIP"
+    ],
+    [
+      800,
+      504,
+      0,
+      512,
+      2,
+      "VAE"
+    ],
+    [
+      735,
+      483,
+      0,
+      461,
+      0,
+      "IMAGE"
+    ],
+    [
+      788,
+      480,
+      0,
+      510,
+      1,
+      "CLIP"
+    ],
+    [
+      801,
       482,
       0,
       484,
       3,
       "LATENT"
-    ],
-    [
-      794,
-      497,
-      0,
-      487,
-      3,
-      "STRING"
     ]
   ],
   "groups": [
@@ -1142,17 +1149,22 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.5131581182307067,
+      "scale": 0.6830134553650709,
       "offset": [
-        -104.89912946043832,
-        -1423.5990078506538
+        208.3469855945906,
+        -1723.4279341120744
       ]
     },
-    "frontendVersion": "1.52.7",
+    "frontendVersion": "1.53.10",
     "VHS_latentpreview": true,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
     "VHS_KeepIntermediate": true
+  },
+  "extensions": {
+    "seed_widgets": {
+      "484": 0
+    }
   },
   "version": 0.4,
   "seed_widgets": {
