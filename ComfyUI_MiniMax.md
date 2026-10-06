@@ -201,12 +201,25 @@ Preview generated video and audio inside the workflow before exporting the resul
 
 ### GPU accelerated video encoding with nvenc
 
-10 times faster encoding when runpod host supports option, successful tested on RTX 6000 PRO and L40S
+10 times faster encoding when runpod host supports option, successful tested on RTX 6000 PRO, L40S, RTX 6000 MiG and RTX 6000 Ada.
 
 <details>
 <summary><strong>Custom node in workflow</strong></summary>
 
 <img loading="lazy" src="../images/NVENC-Encoding.jpg" alt="NVENC-encoding workflow" style="width: 100%; height: auto;">
+
+</details>
+
+### OmniChar character creator
+
+- Used as character encoder to pack 9 images + voice.
+- Extra node to download character file.
+- Extra node to upload character file in workflow.
+
+<details>
+<summary><strong>Character creator  workflow</strong></summary>
+
+<img loading="lazy" src="../images/omnichar-generate.jpg" alt="char creator workflow" style="width: 100%; height: auto;">
 
 </details>
 

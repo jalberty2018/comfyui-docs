@@ -166,6 +166,14 @@ The public template without prompt enhancement includes the two base workflows. 
 
 </details>
 
+<a id="example-t2i-workflow-qwen-image-21-phrase-weights"></a>
+<details>
+<summary><strong>View the Qwen-Image 2.1 text-to-image phrase weights workflow</strong></summary>
+
+<img loading="lazy" src="../images/ai-generated-qwen-image-21-t2i-phrase.jpg" alt="Qwen-Image 2.1 text-to-image workflow with phrase weights" style="width: 100%; height: auto;">
+
+</details>
+
 <a id="example-i2i-workflow-qwen-image-21-with-prompt-enhancer"></a>
 <details>
 <summary><strong>View the Qwen-Image 2.1 image-edit prompt enhancer workflow</strong></summary>
@@ -201,6 +209,14 @@ Use FLUX.2 Klein when generation needs to follow a control, target or reference 
 <summary><strong>View the FLUX.2 Klein RefControl workflow</strong></summary>
 
 <img loading="lazy" src="../images/ai-generated-FLUX-KLEIN-2.jpg" alt="FLUX.2 Klein RefControl image generation workflow" style="width: 100%; height: auto;">
+
+</details>
+
+<a id="example-workflow-flux-klein-composition"></a>
+<details>
+<summary><strong>View the FLUX.2 Klein multiple image composition workflow</strong></summary>
+
+<img loading="lazy" src="../images/ai-generated-FLUX-KLEIN-3.jpg" alt="FLUX.2 Klein multiple images composition workflow" style="width: 100%; height: auto;">
 
 </details>
 
