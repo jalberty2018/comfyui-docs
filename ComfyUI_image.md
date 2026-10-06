@@ -190,9 +190,15 @@ The public template without prompt enhancement includes the two base workflows. 
 
 </details>
 
-## Advanced workflows and tools
+### FLUX.2 Klein workflows
 
-### FLUX.2 Klein control workflows
+<a id="example-workflow-flux-klein-composition"></a>
+<details>
+<summary><strong>View the FLUX.2 Klein multiple image composition workflow</strong></summary>
+
+<img loading="lazy" src="../images/ai-generated-FLUX-KLEIN-3.jpg" alt="FLUX.2 Klein multiple images composition workflow" style="width: 100%; height: auto;">
+
+</details>
 
 Use FLUX.2 Klein when generation needs to follow a control, target or reference image.
 
@@ -209,14 +215,6 @@ Use FLUX.2 Klein when generation needs to follow a control, target or reference 
 <summary><strong>View the FLUX.2 Klein RefControl workflow</strong></summary>
 
 <img loading="lazy" src="../images/ai-generated-FLUX-KLEIN-2.jpg" alt="FLUX.2 Klein RefControl image generation workflow" style="width: 100%; height: auto;">
-
-</details>
-
-<a id="example-workflow-flux-klein-composition"></a>
-<details>
-<summary><strong>View the FLUX.2 Klein multiple image composition workflow</strong></summary>
-
-<img loading="lazy" src="../images/ai-generated-FLUX-KLEIN-3.jpg" alt="FLUX.2 Klein multiple images composition workflow" style="width: 100%; height: auto;">
 
 </details>
 
