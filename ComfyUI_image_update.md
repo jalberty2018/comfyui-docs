@@ -15,8 +15,8 @@
 - [ComfyUI-Omnichar](https://github.com/omnichar/ComfyUI-Omnichar)
 - Updated QwenImageRefPack with an extra omnichar load and edit node.
 - Updated Omnichar adding uploading and downloading char files, extending slots to 9 images.
-- Updated prompt enhance Qwen Image 2.1 to use multiple models.
-- Updated workflows Qwen Image 2.1 to use Phase weights.
+- Updated prompt enhancer Qwen Image 2.1 to use multiple models.
+- Updated workflows Qwen Image 2.1 to use Phrase weights.
 
 ## 06102026 image
 

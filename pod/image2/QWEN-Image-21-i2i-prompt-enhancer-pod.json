@@ -1,7 +1,7 @@
 {
   "id": "54bb395d-3e60-4c94-b525-85523901575b",
   "revision": 0,
-  "last_node_id": 518,
+  "last_node_id": 519,
   "last_link_id": 867,
   "nodes": [
     {
@@ -56,7 +56,7 @@
         90
       ],
       "flags": {},
-      "order": 12,
+      "order": 13,
       "mode": 0,
       "inputs": [
         {
@@ -142,7 +142,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 13,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
@@ -379,7 +379,7 @@
         80
       ],
       "flags": {},
-      "order": 22,
+      "order": 23,
       "mode": 0,
       "inputs": [
         {
@@ -429,7 +429,7 @@
         780.7243192424799
       ],
       "flags": {},
-      "order": 16,
+      "order": 17,
       "mode": 0,
       "inputs": [
         {
@@ -568,7 +568,7 @@
         690.700172205894
       ],
       "flags": {},
-      "order": 20,
+      "order": 21,
       "mode": 0,
       "inputs": [
         {
@@ -607,7 +607,7 @@
         624.7939220296594
       ],
       "flags": {},
-      "order": 23,
+      "order": 24,
       "mode": 0,
       "inputs": [
         {
@@ -678,7 +678,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 15,
+      "order": 16,
       "mode": 0,
       "inputs": [
         {
@@ -766,7 +766,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 18,
+      "order": 19,
       "mode": 0,
       "inputs": [
         {
@@ -811,7 +811,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 17,
+      "order": 18,
       "mode": 0,
       "inputs": [
         {
@@ -854,7 +854,7 @@
         484.6192316154288
       ],
       "flags": {},
-      "order": 14,
+      "order": 15,
       "mode": 0,
       "inputs": [
         {
@@ -1004,7 +1004,7 @@
         60
       ],
       "flags": {},
-      "order": 24,
+      "order": 25,
       "mode": 0,
       "inputs": [
         {
@@ -1085,7 +1085,7 @@
         1015.8012684038058
       ],
       "flags": {},
-      "order": 25,
+      "order": 26,
       "mode": 0,
       "inputs": [
         {
@@ -1251,10 +1251,10 @@
       ],
       "size": [
         346.66575283314955,
-        406
+        446
       ],
       "flags": {},
-      "order": 21,
+      "order": 22,
       "mode": 0,
       "inputs": [
         {
@@ -1269,16 +1269,18 @@
           "link": 855
         },
         {
-          "name": "images.image_2",
+          "name": "vae",
           "shape": 7,
-          "type": "IMAGE",
-          "link": 858
+          "type": "VAE",
+          "link": 848
         },
         {
-          "name": "images.image_3",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 859
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 867
         },
         {
           "name": "images.image_4",
@@ -1329,18 +1331,22 @@
           "link": null
         },
         {
-          "name": "vae",
+          "name": "images.image_12",
           "shape": 7,
-          "type": "VAE",
-          "link": 848
+          "type": "IMAGE",
+          "link": null
         },
         {
-          "name": "prompt",
-          "type": "STRING",
-          "widget": {
-            "name": "prompt"
-          },
-          "link": 867
+          "name": "images.image_2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 858
+        },
+        {
+          "name": "images.image_3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 859
         }
       ],
       "outputs": [
@@ -1438,7 +1444,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 19,
+      "order": 20,
       "mode": 0,
       "inputs": [
         {
@@ -1480,6 +1486,32 @@
         "string_b": "",
         "delimiter": ","
       }
+    },
+    {
+      "id": 519,
+      "type": "MarkdownNote",
+      "pos": [
+        473.2746731101912,
+        3950.233886588718
+      ],
+      "size": [
+        461.1907608329011,
+        132.297516963597
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "You can choose between 2 models\n\n- The prompt enhancer (heretic) shipped with qwen image 2.1 for I2I with mmproj\n- A real uncensored qwen vl model with mmproj\n\nBoth work in i2i but de output is not the same.\nDon't forget to change the mmproj"
+      ],
+      "widgets_values_named": {
+        "text": "You can choose between 2 models\n\n- The prompt enhancer (heretic) shipped with qwen image 2.1 for I2I with mmproj\n- A real uncensored qwen vl model with mmproj\n\nBoth work in i2i but de output is not the same.\nDon't forget to change the mmproj"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
     }
   ],
   "links": [
@@ -1668,22 +1700,6 @@
       "STRING"
     ],
     [
-      735,
-      483,
-      0,
-      461,
-      0,
-      "IMAGE"
-    ],
-    [
-      788,
-      480,
-      0,
-      510,
-      1,
-      "CLIP"
-    ],
-    [
       849,
       516,
       0,
@@ -1732,6 +1748,22 @@
       "STRING"
     ],
     [
+      735,
+      483,
+      0,
+      461,
+      0,
+      "IMAGE"
+    ],
+    [
+      788,
+      480,
+      0,
+      510,
+      1,
+      "CLIP"
+    ],
+    [
       847,
       507,
       0,
@@ -1748,20 +1780,20 @@
       "IMAGE"
     ],
     [
-      858,
-      511,
-      1,
+      848,
+      504,
+      0,
       516,
       2,
-      "IMAGE"
+      "VAE"
     ],
     [
-      859,
-      511,
-      2,
+      867,
+      493,
+      0,
       516,
       3,
-      "IMAGE"
+      "STRING"
     ],
     [
       860,
@@ -1820,20 +1852,20 @@
       "IMAGE"
     ],
     [
-      848,
-      504,
-      0,
-      516,
-      12,
-      "VAE"
-    ],
-    [
-      867,
-      493,
-      0,
+      858,
+      511,
+      1,
       516,
       13,
-      "STRING"
+      "IMAGE"
+    ],
+    [
+      859,
+      511,
+      2,
+      516,
+      14,
+      "IMAGE"
     ]
   ],
   "groups": [
@@ -1901,10 +1933,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.5578416813989402,
+      "scale": 0.6749884344927177,
       "offset": [
-        628.3483547755342,
-        -2275.3104832121107
+        500.8913477826789,
+        -3330.445651605325
       ]
     },
     "frontendVersion": "1.53.10",

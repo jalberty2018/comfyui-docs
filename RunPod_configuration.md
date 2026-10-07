@@ -107,16 +107,6 @@ A matching Blackwell group replaces the corresponding standard group as a whole.
 The selected VRAM group and the selected VRAM-independent group are both downloaded.
 Directories are relative to `/workspace/ComfyUI/`; include/exclude patterns are optional.
 
-### Existing variable names (all pods)
-
-The names below remain supported. All pods use them as the VRAM-independent
-fallback when no matching new VRAM-independent group is configured for that type.
-
-| Type | Model                   | Safetensors/GGUF          | Include pattern                  | Exclude pattern                  | `/workspace/ComfyUI/<Directory>` |
-|------|-------------------------|---------------------------|----------------------------------|----------------------------------|----------------------------------|
-| File | `HF_MODEL[1-20]`        | `HF_MODEL_FILENAME[1-20]` | `HF_MODEL_INCLUDE[1-20]`         | `HF_MODEL_EXCLUDE[1-20]`         | `HF_MODEL_DIR[1-20]`             |
-| Dir  | `HF_FULL_MODEL[1-20]`   |                           | `HF_FULL_MODEL_INCLUDE[1-20]`    | `HF_FULL_MODEL_EXCLUDE[1-20]`    | `HF_FULL_MODEL_DIR[1-20]`        |
-
 ## CivitAI LoRA download configuration
 
 | Variable                         | Description                      |
