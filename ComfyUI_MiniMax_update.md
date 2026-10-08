@@ -8,9 +8,11 @@
 - Some custom nodes have been adapted specifically for this pod or pinned to increase the stability.
 - Tested on L40S, RTX 6000 Ada, RTX PRO 6000, PRO 6000 MiG 48Gb, RTX 5090, (RTX 4090).
 
-## 06102026
+## 08102026
 
 - Updated ComfyUI to version 0.39.0.
+- Updated omnichar to show a preview image when loading a character.
+- Updated workflows added latent upscaler (wip)
 
 ## 05102026
 

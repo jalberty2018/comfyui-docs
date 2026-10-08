@@ -1,8 +1,8 @@
 {
   "id": "e4327370-4382-4371-b7c2-c8e22dad4ad0",
   "revision": 0,
-  "last_node_id": 14,
-  "last_link_id": 27,
+  "last_node_id": 16,
+  "last_link_id": 28,
   "nodes": [
     {
       "id": 14,
@@ -90,11 +90,11 @@
         5714.7833579877115
       ],
       "size": [
-        400,
-        296
+        420.08500421672,
+        438.58742905391864
       ],
       "flags": {},
-      "order": 2,
+      "order": 4,
       "mode": 0,
       "inputs": [
         {
@@ -150,6 +150,12 @@
           "shape": 7,
           "type": "IMAGE",
           "link": 25
+        },
+        {
+          "name": "voice",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 28
         }
       ],
       "outputs": [
@@ -175,13 +181,13 @@
       },
       "widgets_values": [
         "character",
-        "An animation character combined with real",
-        512
+        "\n- ",
+        0
       ],
       "widgets_values_named": {
         "name": "character",
-        "description": "An animation character combined with real",
-        "resolution": 512
+        "description": "\n- ",
+        "resolution": 0
       },
       "color": "#233",
       "bgcolor": "#355"
@@ -198,7 +204,7 @@
         92.14011070575089
       ],
       "flags": {},
-      "order": 3,
+      "order": 5,
       "mode": 0,
       "inputs": [
         {
@@ -331,6 +337,71 @@
       },
       "color": "#232",
       "bgcolor": "#353"
+    },
+    {
+      "id": 15,
+      "type": "LoadAudio",
+      "pos": [
+        -211.06506065125708,
+        6219.64657739188
+      ],
+      "size": [
+        282.798828125,
+        136
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            28
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadAudio"
+      },
+      "widgets_values": [
+        null,
+        ""
+      ],
+      "widgets_values_named": {
+        "audio": null,
+        "upload": ""
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 16,
+      "type": "MarkdownNote",
+      "pos": [
+        -761.6547699678448,
+        5547.985867329903
+      ],
+      "size": [
+        608.4738108728139,
+        115.77072492615025
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Usage",
+      "properties": {},
+      "widgets_values": [
+        "# Workflow creates a char file with maximum 9 image + voice\n\n- It can be used for reference identity.\n- Does not need a GPU or model.\n- Makes it easier and faster to load assets.\n- Can be archived with the output video's workflow."
+      ],
+      "widgets_values_named": {
+        "text": "# Workflow creates a char file with maximum 9 image + voice\n\n- It can be used for reference identity.\n- Does not need a GPU or model.\n- Makes it easier and faster to load assets.\n- Can be archived with the output video's workflow."
+      },
+      "color": "#432",
+      "bgcolor": "#653"
     }
   ],
   "links": [
@@ -421,23 +492,34 @@
       8,
       1,
       "STRING"
+    ],
+    [
+      28,
+      15,
+      0,
+      6,
+      9,
+      "AUDIO"
     ]
   ],
   "groups": [],
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.7889449272148031,
+      "scale": 1.1550942679351939,
       "offset": [
-        861.2879523833442,
-        -5553.900910787747
+        995.780904000767,
+        -5396.684698626996
       ]
     },
-    "frontendVersion": "1.52.7",
+    "frontendVersion": "1.53.10",
     "VHS_latentpreview": true,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
     "VHS_KeepIntermediate": true
+  },
+  "extensions": {
+    "seed_widgets": {}
   },
   "version": 0.4,
   "seed_widgets": {}
