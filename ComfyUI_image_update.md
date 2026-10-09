@@ -8,7 +8,7 @@
 - Pinned custom nodes are not updated automatically, because changing those pins can introduce compatibility issues.
 - Tested on a wide range of GPU's including RTX 3090,4090,5090, L40S, L4 , PRO 6000 MiG 24/48 Gb.
 
-## 07102026
+## 09102026
 
 - Updated ComfyUI to version 0.39.0.
 - [ComfyUI-qwen_img_2_1_enhancer](https://github.com/capitan01R/ComfyUI-qwen_img_2_1_enhancer)
@@ -17,6 +17,8 @@
 - Updated Omnichar adding uploading and downloading char files, extending slots to 9 images.
 - Updated prompt enhancer Qwen Image 2.1 to use multiple models.
 - Updated workflows Qwen Image 2.1 to use Phrase weights.
+- [ComfyUI-EditUtils](https://github.com/lrzjason/ComfyUI-EditUtils)
+- [ComfyUI-qwenmultiangle](https://github.com/jtydhr88/ComfyUI-qwenmultiangle) updated for Qwen Image 2.1
 
 ## 06102026 image
 

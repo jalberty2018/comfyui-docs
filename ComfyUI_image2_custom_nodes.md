@@ -11,6 +11,7 @@
 - [Easy-Use](https://github.com/yolain/ComfyUI-Easy-Use.git)
 - [comfyui-obvpm](https://github.com/chanon/comfyui-obvpm)
 - [ComfyUI-QwenImageRefPack](https://github.com/Hearmeman24/ComfyUI-QwenImageRefPack)
+- [ComfyUI-EditUtils](https://github.com/lrzjason/ComfyUI-EditUtils)
 
 ### Downloaders/Linkers
 
@@ -67,8 +68,8 @@
 
 #### Qwen
 
-- [Comfyui-QwenEditUtils](https://github.com/lrzjason/Comfyui-QwenEditUtils)
 - [ComfyUI-qwen_img_2_1_enhancer](https://github.com/capitan01R/ComfyUI-qwen_img_2_1_enhancer)
+- [ComfyUI-qwenmultiangle](https://github.com/jtydhr88/ComfyUI-qwenmultiangle)
 
 #### Krea
 
