@@ -7,7 +7,6 @@
 - This pod is stable, but many of its custom nodes are changing with every version.
 - Some custom nodes have been adapted specifically for this pod or pinned to increase the stability.
 - Tested on L40S, RTX 6000 Ada, RTX PRO 6000, PRO 6000 MiG 48Gb, RTX 5090, (RTX 4090).
-- Most advanced workflows run on hyperflow for ref2va
 
 ## 10102026
 
@@ -16,6 +15,7 @@
 - Updated workflows added latent upscaler.
 - [ComfyUI-MiniMaxH3Mod](https://github.com/Luisacaotica/ComfyUI-MiniMaxH3Mod).
 - Updated Fantastic-prompt-builder to upload/download refmods.
+- Lowered container volume.
 
 ## 05102026
 
@@ -24,15 +24,15 @@
 - Updated the H3 Latent Upscaler to automatically download its model.
 - Fixed a crash in Director when using "segment continuity" by switching to external Motion Context.
 - Removed the PDD-Acc workflows for Ref2VA, as Hyperflow delivers better results.
-- [ComfyUI-Omnichar](https://github.com/omnichar/ComfyUI-Omnichar)
+- [ComfyUI-Omnichar](https://github.com/omnichar/ComfyUI-Omnichar).
 - Updated QwenImageRefPack with an extra omnichar load and edit node.
 - Updated Omnichar adding uploading and downloading char files, extending slots to 9 images.
 
 ## 29092026
 
 - ComfyUI 0.37.1
-- Pytorch 2.12.1 CUDA 13.0 build
-- llama-cpp b11115
+- Pytorch 2.12.1 CUDA 13.0 build.
+- llama-cpp b11115.
 - [comfyui-obvpm-timeline](https://github.com/chanon/comfyui-obvpm-timeline)
 - [Comfyui_Minimax_h3_latent_Upscaler](https://github.com/LBH-123-AI/Comfyui_Minimax_h3_latent_Upscaler)
 - Solved VRAM detection on PRO 6000 MiG.
