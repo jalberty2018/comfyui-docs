@@ -154,6 +154,7 @@ Use Qwen-Image 2.1 for text-to-image generation and image editing, with optional
 | `i2i` | Editing an image with text instructions |
 | `t2i-prompt-enhancer` | Expanding a prompt before image generation |
 | `i2i-prompt-enhancer` | Enhancing instructions before image editing |
+| `i2i-prompt-multiple-angle` | Recreate a photograph from another viewpoint |
 
 The public template without prompt enhancement includes the two base workflows. The public template with prompt enhancement and the private template include all four workflows.
 
@@ -186,6 +187,14 @@ The public template without prompt enhancement includes the two base workflows. 
 <summary><strong>View the Qwen-Image 2.1 image-edit prompt enhancer custom node</strong></summary>
 
 <img loading="lazy" src="../images/ai-generated-qwen-image-21-i2i-prompt-enhancer-node.jpg" alt="Qwen-Image 2.1 prompt enhancer custom node" style="width: 100%; height: auto;">
+
+</details>
+
+<a id="example-i2i-workflow-qwen-image-21-multiple-angle"></a>
+<details>
+<summary><strong>View the Qwen-Image 2.1 mutiple angle workflow</strong></summary>
+
+<img loading="lazy" src="../images/ai-generated-qwen-image-21-i2i-multiple-angle.jpg" alt="Qwen-Image 2.1 multiple angle" style="width: 100%; height: auto;">
 
 </details>
 
