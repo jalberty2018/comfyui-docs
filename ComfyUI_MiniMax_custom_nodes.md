@@ -24,7 +24,6 @@
 - [comfyui-obvpm](https://github.com/chanon/comfyui-obvpm)
 - [ComfyUI-MiniMaxH3-Preview](https://github.com/Brioch/ComfyUI-MiniMaxH3-Preview)
 - [ComfyUI-QwenImageRefPack](https://github.com/Hearmeman24/ComfyUI-QwenImageRefPack)
-- [ComfyUI-Omnichar](https://github.com/omnichar/ComfyUI-Omnichar)
 
 ### Loaders/linkers
 
@@ -42,9 +41,11 @@
 
 - [RMBG](https://github.com/1038lab/ComfyUI-RMBG)
 
-### Manual prompt builders
+### Prompt builders and Ref loaders
 
 - [ComfyUI-Fantastic-MiniMaxH3-PromptBuilder](https://github.com/Adudeguyman/ComfyUI-Fantastic-MiniMaxH3-PromptBuilder)
+- [ComfyUI-MiniMaxH3Mod](https://github.com/Luisacaotica/ComfyUI-MiniMaxH3Mod)
+- [ComfyUI-Omnichar](https://github.com/omnichar/ComfyUI-Omnichar)
 
 ### Prompt VLM generators
 
