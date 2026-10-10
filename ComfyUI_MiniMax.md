@@ -78,9 +78,9 @@ Use the enhanced Ref2va workflow to generate video and audio from a reference im
 <details>
 <summary><strong>View the enhanced Ref2va workflow</strong></summary>
 
-<img loading="lazy" src="../images/ai-generated-MiniMax.jpg" alt="Enhanced MiniMax H3 Ref2va workflow" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/workflow-example-MiniMax.jpg" alt="Enhanced MiniMax H3 Ref2va workflow" style="width: 100%; height: auto;">
 
-<img loading="lazy" src="../images/ai-generated-Ref2VA.jpg" alt="Detailed MiniMax H3 Ref2va workflow" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/workflow-example-Ref2VA.jpg" alt="Detailed MiniMax H3 Ref2va workflow" style="width: 100%; height: auto;">
 
 </details>
 
@@ -93,7 +93,7 @@ Use the LightX2V multi-shot workflow for connected shots, or choose a LightX2V o
 <details>
 <summary><strong>View the multi-shot workflow</strong></summary>
 
-<img loading="lazy" src="../images/ai-generated-MiniMax-multi-shot.jpg" alt="MiniMax H3 multi-shot reference-to-video workflow" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/workflow-example-MiniMax-multi-shot.jpg" alt="MiniMax H3 multi-shot reference-to-video workflow" style="width: 100%; height: auto;">
 
 </details>
 
@@ -107,7 +107,7 @@ Use the enhanced fl2va image-to-video workflow with or without a turbo LoRA.
 <details>
 <summary><strong>View the image-to-video workflow</strong></summary>
 
-<img loading="lazy" src="../images/ai-generated-MiniMax-i2v.jpg" alt="MiniMax H3 image-to-video workflow" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/workflow-example-MiniMax-i2v.jpg" alt="MiniMax H3 image-to-video workflow" style="width: 100%; height: auto;">
 
 </details>
 
@@ -120,7 +120,7 @@ Use the enhanced fl2va text-to-video workflow to generate video and native audio
 <details>
 <summary><strong>View the text-to-video workflow</strong></summary>
 
-<img loading="lazy" src="../images/ai-generated-MiniMax-t2v.jpg" alt="MiniMax H3 text-to-video workflow" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/workflow-example-MiniMax-t2v.jpg" alt="MiniMax H3 text-to-video workflow" style="width: 100%; height: auto;">
 
 </details>
 
@@ -138,7 +138,7 @@ Use Director to manage generation stages in a single workflow.
 <details>
 <summary><strong>View the Director workflow shots</strong></summary>
 
-<img loading="lazy" src="../images/ai-generated-MiniMax-director.jpg" alt="MiniMax H3 Director all-in-one workflow" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/workflow-example-MiniMax-director.jpg" alt="MiniMax H3 Director all-in-one workflow" style="width: 100%; height: auto;">
 
 </details>
 
@@ -147,7 +147,7 @@ Use Director to manage generation stages in a single workflow.
 <details>
 <summary><strong>View the Director workflow continuity</strong></summary>
 
-<img loading="lazy" src="../images/ai-generated-MiniMax-director2.jpg" alt="MiniMax H3 Director all-in-one workflow continuity" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/workflow-example-MiniMax-director2.jpg" alt="MiniMax H3 Director all-in-one workflow continuity" style="width: 100%; height: auto;">
 
 </details>
 
@@ -166,7 +166,7 @@ Choose a prompt workflow based on the model and interface you want to use.
 
 [Workflow JSON] `prompt-generator-tail-pod.json`
 
-<img loading="lazy" src="../images/ai-generated-MiniMax-prompt-generator.jpg" alt="MiniMax-H2 Qwen-VL prompt generator workflow" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/workflow-example-MiniMax-prompt-generator.jpg" alt="MiniMax-H2 Qwen-VL prompt generator workflow" style="width: 100%; height: auto;">
 
 </details>
 
@@ -174,7 +174,7 @@ Choose a prompt workflow based on the model and interface you want to use.
 <details>
 <summary><strong>View the Qwen3.8-27B prompt enhancer</strong></summary>
 
-<img loading="lazy" src="../images/ai-generated-MiniMax-prompt-enhancer.jpg" alt="Qwen3.8-27B prompt enhancer workflow using llama.cpp" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/workflow-example-MiniMax-prompt-enhancer.jpg" alt="Qwen3.8-27B prompt enhancer workflow using llama.cpp" style="width: 100%; height: auto;">
 
 </details>
 
@@ -182,7 +182,7 @@ Choose a prompt workflow based on the model and interface you want to use.
 <details>
 <summary><strong>View the fantastic prompt builder and media manager</strong></summary>
 
-<img loading="lazy" src="../images/ai-generated-MiniMax-prompt-creator.jpg" alt="MiniMax H3 prompt builder and media manager workflow" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/workflow-example-MiniMax-prompt-creator.jpg" alt="MiniMax H3 prompt builder and media manager workflow" style="width: 100%; height: auto;">
 
 </details>
 
@@ -195,7 +195,7 @@ Preview generated video and audio inside the workflow before exporting the resul
 <details>
 <summary><strong>View the video and sound preview workflow</strong></summary>
 
-<img loading="lazy" src="../images/ai-generated-MiniMax-preview.jpg" alt="MiniMax H3 video and sound preview workflow" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/workflow-example-MiniMax-preview.jpg" alt="MiniMax H3 video and sound preview workflow" style="width: 100%; height: auto;">
 
 </details>
 
@@ -306,7 +306,7 @@ Preview generated video and audio inside the workflow before exporting the resul
 
 - Original prompt: "Person from image 1 kisses person of image 2 on a beach while carressing each other.
 Imtimate scene full of sensuality in a provoking pose".
-- [Final prompt](images/ai-generated-MiniMax-preview.jpg)
+- [Final prompt](images/workflow-example-MiniMax-preview.jpg)
 
 <div style="text-align: center;">
   <video controls preload="metadata" style="width: 100%; max-width: 720px; height: auto;">

@@ -59,7 +59,7 @@ Select the output size and frame count, enter a prompt and configure offloading 
 <details>
 <summary><strong>View the LTX-2.5 image-to-video workflow</strong></summary>
 
-<img loading="lazy" src="../images/ai-generated-i2v-LTX25.jpg" alt="LTX-2.5 image-to-video workflow with frame, size, prompt and offload controls" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/workflow-example-i2v-LTX25.jpg" alt="LTX-2.5 image-to-video workflow with frame, size, prompt and offload controls" style="width: 100%; height: auto;">
 
 </details>
 
@@ -72,7 +72,7 @@ Generate video and audio from a text description with controls for size, duratio
 <details>
 <summary><strong>View the LTX-2.5 text-to-video workflow</strong></summary>
 
-<img loading="lazy" src="../images/ai-generated-t2v-LTX25.jpg" alt="LTX-2.5 text-to-video workflow with frame, size, prompt and offload controls" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/workflow-example-t2v-LTX25.jpg" alt="LTX-2.5 text-to-video workflow with frame, size, prompt and offload controls" style="width: 100%; height: auto;">
 
 </details>
 
@@ -87,7 +87,7 @@ Use DWPose guidance to transfer movement from a source video to the generated su
 <details>
 <summary><strong>View the LTX-2.3 DWPose transfer workflow</strong></summary>
 
-<img loading="lazy" src="../images/ai-generated-LTX-vi2v.jpg" alt="LTX-2.3 video-to-video pose-transfer workflow using DWPose" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/workflow-example-LTX-vi2v.jpg" alt="LTX-2.3 video-to-video pose-transfer workflow using DWPose" style="width: 100%; height: auto;">
 
 </details>
 
@@ -100,7 +100,7 @@ Use SDPose with Body Ratio Mapper when the transferred movement also needs propo
 <details>
 <summary><strong>View the LTX-2.3 SDPose transfer workflow</strong></summary>
 
-<img loading="lazy" src="../images/ai-generated-LTX-vi2v-sdpose.jpg" alt="LTX-2.3 video-to-video pose-transfer workflow using SDPose and Body Ratio Mapper" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/workflow-example-LTX-vi2v-sdpose.jpg" alt="LTX-2.3 video-to-video pose-transfer workflow using SDPose and Body Ratio Mapper" style="width: 100%; height: auto;">
 
 </details>
 

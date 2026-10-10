@@ -70,7 +70,7 @@ Use these image-to-image workflows to transfer, edit or compose identities while
 <details>
 <summary><strong>View the Krea-2 identity transfer workflow</strong></summary>
 
-<img loading="lazy" src="../images/ai-generated-krea2-identity.jpg" alt="Krea-2 identity transfer workflow" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/workflow-example-krea2-identity.jpg" alt="Krea-2 identity transfer workflow" style="width: 100%; height: auto;">
 
 </details>
 
@@ -78,7 +78,7 @@ Use these image-to-image workflows to transfer, edit or compose identities while
 <details>
 <summary><strong>View the Krea-2 identity edit loop</strong></summary>
 
-<img loading="lazy" src="../images/ai-generated-krea2-edit.jpg" alt="Krea-2 identity edit loop workflow" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/workflow-example-krea2-edit.jpg" alt="Krea-2 identity edit loop workflow" style="width: 100%; height: auto;">
 
 </details>
 
@@ -86,7 +86,7 @@ Use these image-to-image workflows to transfer, edit or compose identities while
 <details>
 <summary><strong>View the Krea-2 identity composition workflow</strong></summary>
 
-<img loading="lazy" src="../images/ai-generated-krea2-composition.jpg" alt="Krea-2 identity composition workflow" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/workflow-example-krea2-composition.jpg" alt="Krea-2 identity composition workflow" style="width: 100%; height: auto;">
 
 </details>
 
@@ -94,7 +94,7 @@ Use these image-to-image workflows to transfer, edit or compose identities while
 <details>
 <summary><strong>View the Krea-2 Ostris edit workflow</strong></summary>
 
-<img loading="lazy" src="../images/ai-generated-krea2-ostris-edit.jpg" alt="Krea-2 Ostris image editing workflow" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/workflow-example-krea2-ostris-edit.jpg" alt="Krea-2 Ostris image editing workflow" style="width: 100%; height: auto;">
 
 </details>
 
@@ -112,7 +112,7 @@ Choose a workflow based on how you want to build and condition the prompt.
 <details>
 <summary><strong>View the Krea-2 prompt enhancer workflow</strong></summary>
 
-<img loading="lazy" src="../images/ai-generated-krea2.jpg" alt="Krea-2 text-to-image workflow with prompt enhancer" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/workflow-example-krea2.jpg" alt="Krea-2 text-to-image workflow with prompt enhancer" style="width: 100%; height: auto;">
 
 </details>
 
@@ -120,7 +120,7 @@ Choose a workflow based on how you want to build and condition the prompt.
 <details>
 <summary><strong>View the Krea-2 image-conditioning workflow</strong></summary>
 
-<img loading="lazy" src="../images/ai-generated-krea2-vlm.jpg" alt="Krea-2 text-to-image workflow with image conditioning and no VAE encoding" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/workflow-example-krea2-vlm.jpg" alt="Krea-2 text-to-image workflow with image conditioning and no VAE encoding" style="width: 100%; height: auto;">
 
 </details>
 
@@ -128,7 +128,7 @@ Choose a workflow based on how you want to build and condition the prompt.
 <details>
 <summary><strong>View the Krea-2 artist-friendly workflow</strong></summary>
 
-<img loading="lazy" src="../images/ai-generated-krea2-vlm-artist.jpg" alt="Krea-2 text-to-image workflow with artist-friendly conditioning" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/workflow-example-krea2-vlm-artist.jpg" alt="Krea-2 text-to-image workflow with artist-friendly conditioning" style="width: 100%; height: auto;">
 
 </details>
 
@@ -140,7 +140,7 @@ Use SenseNova U1.5 for text-to-image generation or image-to-image editing with t
 <details>
 <summary><strong>View the SenseNova U1.5 workflow</strong></summary>
 
-<img loading="lazy" src="../images/ai-generated-sensenova-i2v.jpg" alt="SenseNova U1.5 image workflow in ComfyUI" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/workflow-example-sensenova-i2v.jpg" alt="SenseNova U1.5 image workflow in ComfyUI" style="width: 100%; height: auto;">
 
 </details>
 
@@ -154,7 +154,6 @@ Use Qwen-Image 2.1 for text-to-image generation and image editing, with optional
 | `i2i` | Editing an image with text instructions |
 | `t2i-prompt-enhancer` | Expanding a prompt before image generation |
 | `i2i-prompt-enhancer` | Enhancing instructions before image editing |
-| `i2i-prompt-multiple-angle` | Recreate a photograph from another viewpoint |
 
 The public template without prompt enhancement includes the two base workflows. The public template with prompt enhancement and the private template include all four workflows.
 
@@ -162,7 +161,7 @@ The public template without prompt enhancement includes the two base workflows. 
 <details>
 <summary><strong>View the Qwen-Image 2.1 text-to-image prompt enhancer workflow</strong></summary>
 
-<img loading="lazy" src="../images/ai-generated-qwen-image-21-t2i-prompt-enhancer.jpg" alt="Qwen-Image 2.1 text-to-image workflow with prompt enhancer" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/workflow-example-qwen-image-21-t2i-prompt-enhancer.jpg" alt="Qwen-Image 2.1 text-to-image workflow with prompt enhancer" style="width: 100%; height: auto;">
 
 </details>
 
@@ -170,7 +169,7 @@ The public template without prompt enhancement includes the two base workflows. 
 <details>
 <summary><strong>View the Qwen-Image 2.1 text-to-image phrase weights workflow</strong></summary>
 
-<img loading="lazy" src="../images/ai-generated-qwen-image-21-t2i-phrase.jpg" alt="Qwen-Image 2.1 text-to-image workflow with phrase weights" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/workflow-example-qwen-image-21-t2i-phrase.jpg" alt="Qwen-Image 2.1 text-to-image workflow with phrase weights" style="width: 100%; height: auto;">
 
 </details>
 
@@ -178,7 +177,7 @@ The public template without prompt enhancement includes the two base workflows. 
 <details>
 <summary><strong>View the Qwen-Image 2.1 image-edit prompt enhancer workflow</strong></summary>
 
-<img loading="lazy" src="../images/ai-generated-qwen-image-21-i2i-prompt-enhancer.jpg" alt="Qwen-Image 2.1 image-edit workflow with prompt enhancer" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/workflow-example-qwen-image-21-i2i-prompt-enhancer.jpg" alt="Qwen-Image 2.1 image-edit workflow with prompt enhancer" style="width: 100%; height: auto;">
 
 </details>
 
@@ -186,15 +185,7 @@ The public template without prompt enhancement includes the two base workflows. 
 <details>
 <summary><strong>View the Qwen-Image 2.1 image-edit prompt enhancer custom node</strong></summary>
 
-<img loading="lazy" src="../images/ai-generated-qwen-image-21-i2i-prompt-enhancer-node.jpg" alt="Qwen-Image 2.1 prompt enhancer custom node" style="width: 100%; height: auto;">
-
-</details>
-
-<a id="example-i2i-workflow-qwen-image-21-multiple-angle"></a>
-<details>
-<summary><strong>View the Qwen-Image 2.1 mutiple angle workflow</strong></summary>
-
-<img loading="lazy" src="../images/ai-generated-qwen-image-21-i2i-multiple-angle.jpg" alt="Qwen-Image 2.1 multiple angle" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/workflow-example-qwen-image-21-i2i-prompt-enhancer-node.jpg" alt="Qwen-Image 2.1 prompt enhancer custom node" style="width: 100%; height: auto;">
 
 </details>
 
@@ -204,7 +195,7 @@ The public template without prompt enhancement includes the two base workflows. 
 <details>
 <summary><strong>View the FLUX.2 Klein multiple image composition workflow</strong></summary>
 
-<img loading="lazy" src="../images/ai-generated-FLUX-KLEIN-3.jpg" alt="FLUX.2 Klein multiple images composition workflow" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/workflow-example-FLUX-KLEIN-3.jpg" alt="FLUX.2 Klein multiple images composition workflow" style="width: 100%; height: auto;">
 
 </details>
 
@@ -214,7 +205,7 @@ Use FLUX.2 Klein when generation needs to follow a control, target or reference 
 <details>
 <summary><strong>View the FLUX.2 Klein control and target workflow</strong></summary>
 
-<img loading="lazy" src="../images/ai-generated-FLUX-KLEIN.jpg" alt="FLUX.2 Klein control and target image generation workflow" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/workflow-example-FLUX-KLEIN.jpg" alt="FLUX.2 Klein control and target image generation workflow" style="width: 100%; height: auto;">
 
 </details>
 
@@ -222,19 +213,27 @@ Use FLUX.2 Klein when generation needs to follow a control, target or reference 
 <details>
 <summary><strong>View the FLUX.2 Klein RefControl workflow</strong></summary>
 
-<img loading="lazy" src="../images/ai-generated-FLUX-KLEIN-2.jpg" alt="FLUX.2 Klein RefControl image generation workflow" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/workflow-example-FLUX-KLEIN-2.jpg" alt="FLUX.2 Klein RefControl image generation workflow" style="width: 100%; height: auto;">
 
 </details>
 
 ### Multiple-angle workflows
 
-Generate several viewing angles with Qwen-Image-Edit or FLUX.2 Dev.
+Generate several viewing angles with Qwen Image 2.1 , Qwen-Image-Edit or FLUX.2 Dev.
+
+<a id="example-i2i-workflow-qwen-image-21-multiple-angles"></a>
+<details>
+<summary><strong>View the Qwen-Image 2.1 mutiple angle workflow</strong></summary>
+
+<img loading="lazy" src="../images/workflow-example-qwen-image-21-i2i-multiple-angle.jpg" alt="Qwen-Image 2.1 multiple angle" style="width: 100%; height: auto;">
+
+</details>
 
 <a id="example-workflow-qwen-image-edit-multiple-angles"></a>
 <details>
 <summary><strong>View the Qwen-Image-Edit multiple-angle workflow</strong></summary>
 
-<img loading="lazy" src="../images/ai-generated-QWEN-EDIT-CAMERA.jpg" alt="Qwen-Image-Edit workflow for multiple camera angles" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/workflow-example-QWEN-EDIT-CAMERA.jpg" alt="Qwen-Image-Edit workflow for multiple camera angles" style="width: 100%; height: auto;">
 
 </details>
 
@@ -242,7 +241,7 @@ Generate several viewing angles with Qwen-Image-Edit or FLUX.2 Dev.
 <details>
 <summary><strong>View the FLUX.2 Dev multiple-angle workflow</strong></summary>
 
-<img loading="lazy" src="../images/ai-generated-FLUX2-CAMERA.jpg" alt="FLUX.2 Dev workflow for multiple camera angles" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/workflow-example-FLUX2-CAMERA.jpg" alt="FLUX.2 Dev workflow for multiple camera angles" style="width: 100%; height: auto;">
 
 </details>
 
@@ -255,7 +254,7 @@ Use the ZIB-ZIT workflow for text-to-image generation with the Z-Image model fam
 <details>
 <summary><strong>View the ZIB-ZIT workflow</strong></summary>
 
-<img loading="lazy" src="../images/ai-generated-ZIB-ZIT.jpg" alt="ZIB-ZIT image generation workflow" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/workflow-example-ZIB-ZIT.jpg" alt="ZIB-ZIT image generation workflow" style="width: 100%; height: auto;">
 
 </details>
 

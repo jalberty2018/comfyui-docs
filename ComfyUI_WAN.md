@@ -57,7 +57,7 @@ Use this workflow to animate a still image and extend the result into a longer v
 <details>
 <summary><strong>View the WAN 2.2 image-to-video workflow</strong></summary>
 
-<img loading="lazy" src="../images/ai-generated-WAN.jpg" alt="WAN 2.2 image-to-video workflow for longer video generation" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/workflow-example-WAN.jpg" alt="WAN 2.2 image-to-video workflow for longer video generation" style="width: 100%; height: auto;">
 
 </details>
 
@@ -72,7 +72,7 @@ Use SCAIL-2 to apply movement from a source video to an image while generating a
 <details>
 <summary><strong>View the SCAIL-2 motion-transfer workflow</strong></summary>
 
-<img loading="lazy" src="../images/ai-generated-scail2.jpg" alt="SCAIL-2 image-to-video workflow for long-video motion transfer" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/workflow-example-scail2.jpg" alt="SCAIL-2 image-to-video workflow for long-video motion transfer" style="width: 100%; height: auto;">
 
 </details>
 

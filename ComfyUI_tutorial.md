@@ -73,7 +73,7 @@ The exact workflows depend on whether you deployed the Image, MiniMax, WAN or LT
 <img loading="lazy" src="../images/workflow_LTX.jpg" alt="Selecting an included LTX workflow in ComfyUI" style="width: 100%; max-width: 800px; height: auto;">
 
 <p><strong>MiniMax workflow</strong></p>
-<img loading="lazy" src="../images/ai-generated-MiniMax.jpg" alt="Included MiniMax workflow in ComfyUI" style="width: 100%; max-width: 800px; height: auto;">
+<img loading="lazy" src="../images/workflow-example-MiniMax.jpg" alt="Included MiniMax workflow in ComfyUI" style="width: 100%; max-width: 800px; height: auto;">
 
 </details>
 
