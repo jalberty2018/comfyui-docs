@@ -16,7 +16,7 @@
 - Updated QwenImageRefPack with an extra omnichar load and edit node.
 - Updated Omnichar adding uploading and downloading char files, extending slots to 9 images.
 - Updated prompt enhancer Qwen Image 2.1 to use multiple models.
-- Updated workflows Qwen Image 2.1 to use Phrase weights.
+- Updated workflows Qwen Image 2.1 for turbo lora and phrase weight.
 - [ComfyUI-EditUtils](https://github.com/lrzjason/ComfyUI-EditUtils)
 - [ComfyUI-qwenmultiangle](https://github.com/jtydhr88/ComfyUI-qwenmultiangle) updated for Qwen Image 2.1
 

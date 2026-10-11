@@ -14,7 +14,7 @@
 - Updated omnichar previewing image when a char is uploaded.
 - Updated workflows added latent upscaler.
 - [ComfyUI-MiniMaxH3Mod](https://github.com/Luisacaotica/ComfyUI-MiniMaxH3Mod).
-- Updated Fantastic-prompt-builder to upload/download refmods.
+- Updated Fantastic-prompt-builder to upload/download refmods in zip format.
 - Lowered container volume.
 
 ## 05102026
