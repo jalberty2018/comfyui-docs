@@ -148,6 +148,18 @@ Use SenseNova U1.5 for text-to-image generation or image-to-image editing with t
 
 Use Qwen-Image 2.1 for text-to-image generation and image editing, with optional prompt enhancement.
 
+#### Example images
+
+**t2i prompt enhancement phrase weight adjusted turbo lora**
+
+<img loading="lazy" src="../images/Image_Qwen21_heroin_addict.jpg" alt="t2v prompt enhancement phrase weight adjusted" style="width: 70%; height: auto;">
+
+**i2i prompt enhancement turbo lora**
+
+<img loading="lazy" src="../images/Image_Qwen21_girl_to_heaven.jpg" alt="i2i prompt enhancement turbo lora" style="width: 50%; height: auto;">
+
+#### Workflows included
+
 | Workflow | Best suited for |
 | --- | --- |
 | `t2i` | Generating an image from a text prompt |

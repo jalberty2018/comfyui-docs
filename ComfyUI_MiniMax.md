@@ -252,6 +252,15 @@ Preview generated video and audio inside the workflow before exporting the resul
   </video>
 </div>
 
+<a id="hyperflow"></a>
+**Hyperflow reference-to-video**
+
+<div style="text-align: center;">
+  <video controls preload="metadata" style="width: 100%; max-width: 720px; height: auto;">
+    <source src="/video/Video_girl_heaven.mp4" type="video/mp4">
+  </video>
+</div>
+
 <a id="multi-shot-continuation"></a>
 **Multi-shot continuation**
 
