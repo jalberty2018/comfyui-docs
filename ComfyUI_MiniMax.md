@@ -28,8 +28,9 @@ The approach is aligned with the open-model discussion in Eric Hartford's [Uncen
 - Uncensored Heretic Qwen-VL text encoders for inference and prompt enhancement.
 - LoRA Manager, installed custom nodes and accelerators.
 - Ready-to-use example workflows.
-- 8-step turbo LoRAs, including LightX2V, Alibaba PDD Acc and Hyperflow.
+- 8-step turbo LoRAs, including LightX2V and Hyperflow.
 - Native `llama.cpp` and CUDA-enabled `llama-cpp-python` support.
+- Upload/download omichar and Refmod files.
 
 ## RunPod deployment
 
@@ -45,26 +46,116 @@ Start with the generation task, then choose a standard, Turbo, LightX2V, PDD Acc
 
 | Goal and input | Workflow JSON | Guide |
 | --- | --- | --- |
-| Generate video from a text prompt | [Standard T2V] `t2v-pod.json`, [Turbo T2V] `turbo-t2v-pod.json`, [LightX2V T2V] `lightx2v-t2v-pod.json`, [PDD Acc T2V] `PDD-Acc-t2v-pod.json`, [Hyperflow T2V] `Hyperflow-t2v-pod.json` | [Text-to-video](#text-to-video-t2v) |
-| Animate an image or use first/last frames with a prompt | [Standard FL2V] `fl2v-pod.json`, [Turbo FL2V] `turbo-fl2v-pod.json`, [LightX2V FL2V] `lightx2v-fl2v-pod.json`, [PDD Acc FL2V] `PDD-Acc-fl2v-pod.json`, [Hyperflow FL2V] `Hyperflow-fl2v-pod.json` | [Image-to-video](#image-to-video-i2v) |
-| Guide generation with reference images, video or audio | [Standard R2V] `r2v-pod.json`, [LightX2V R2V] `lightx2v-r2v-pod.json`, [PDD Acc R2V] `PDD-Acc-r2v-pod.json`, [Hyperflow R2V] `Hyperflow-r2v-pod.json` | [Reference-to-video](#reference-to-video-ref2va) |
+| Generate video from a text prompt | [Standard T2V] `t2v-pod.json`, [Turbo T2V] `turbo-t2v-pod.json`, [LightX2V T2V] `lightx2v-t2v-pod.json`, [Hyperflow T2V] `Hyperflow-t2v-pod.json` | [Text-to-video](#text-to-video-t2v) |
+| Animate an image or use first/last frames with a prompt | [Standard FL2V] `fl2v-pod.json`, [Turbo FL2V] `turbo-fl2v-pod.json`, [LightX2V FL2V] `lightx2v-fl2v-pod.json`, [Hyperflow FL2V] `Hyperflow-fl2v-pod.json` | [Image-to-video](#image-to-video-i2v) |
+| Guide generation with reference images, video or audio | [Standard R2V] `r2v-pod.json`, [LightX2V R2V] `lightx2v-r2v-pod.json`, [Hyperflow R2V] `Hyperflow-r2v-pod.json` | [Reference-to-video](#reference-to-video-ref2va) |
 | Continue a reference-guided scene across several shots | [LightX2V multi-shot] `lightx2v-r2v-multi-shot.json` | [Multi-shot](#multi-shot-reference-to-video) |
-| Generate connected shots with context pinning | [LightX2V context pin] `lightx2v-r2v-multi-shot-context-pin.json`, [PDD Acc context pin] `PDD-Acc-r2v-multi-shot-context-pin.json`, [Hyperflow context pin] `Hyperflow-r2v-multi-shot-context-pin.json` | [Multi-shot](#multi-shot-reference-to-video) |
-| Use a warm-up stage for reference-guided generation | [PDD Acc R2V warm-up] `PDD-Acc-r2v-warmup-pod.json` | [Advanced reference workflow](#advanced-reference-workflow) |
+| Generate connected shots with context pinning | [LightX2V context pin] `lightx2v-r2v-multi-shot-context-pin.json`, [Hyperflow context pin] `Hyperflow-r2v-multi-shot-context-pin.json` | [Multi-shot](#multi-shot-reference-to-video) |
 | Manage generation stages in one graph | [Director] `director-pod.json` | [Director](#director-all-in-one) |
 
 ### Prompt generation and assisted workflows
 
 Choose Qwen-VL for local prompt generation and enhancement. The integrated variants combine it with video generation; the prompt-builder variants provide tools for composing prompts and organizing reference media.
 
-| Goal | Workflow JSON | Guide |
-| --- | --- | --- |
-| Generate a prompt with Qwen-VL before running a video workflow | [FL2V prompt generator] `prompt-generator-qwenvl-fl2v-pod.json`, [R2V prompt generator] `prompt-generator-qwenvl-r2v-pod.json` | [Qwen-VL prompt enhancer](#prompt-generator-using-qwen38-27b-uncensored-with-llama-cpp) |
-| Enhance a prompt with Qwen-VL and generate image/first-last-frame video | [LightX2V FL2V + Qwen-VL] `lightx2v-fl2v-prompt-generator-qwenvl-pod.json`, [PDD Acc FL2V + Qwen-VL] `PDD-Acc-fl2v-prompt-generator-qwenvl-pod.json` | [Prompt tools](#prompt-tools) |
-| Enhance a prompt with Qwen-VL and generate reference-guided video | [LightX2V R2V + Qwen-VL] `lightx2v-r2v-prompt-generator-qwenvl-pod.json`, [PDD Acc R2V + Qwen-VL] `PDD-Acc-r2v-prompt-generator-qwenvl-pod.json`, [Hyperflow R2V + Qwen-VL] `Hyperflow-r2v-prompt-generator-qwenvl-pod.json` | [Prompt tools](#prompt-tools) |
-| Compose prompts and organize reference media before generation | [LightX2V R2V prompt builder] `lightx2v-r2v-prompt-builder-pod.json`, [PDD Acc R2V prompt builder] `PDD-Acc-r2v-prompt-builder-pod.json`, [Hyperflow R2V prompt builder] `Hyperflow-r2v-prompt-builder-pod.json` | [Fantastic prompt builder](#fantastic-prompt-builder-media-manager) |
+## Output examples
 
-See also the [video and sound preview](#video-sound-preview) example for checking output before export.
+- The clips below demonstrate output from the standard and advanced workflows available on the pod.
+- Video and audio are generated directly by the model.
+- Person reference images were generated using [Krea-2 or Qwen Image 2.1](ComfyUI_image.md).
+- Animation reference characters (Elsa, Anna, Ken, Barbie) used for workflow demonstration purpose only.
+
+<a id="ref2va_1"></a>
+
+### Ref2va examples
+
+<a id="standard"></a>
+**Standard reference-to-video**
+
+<div style="text-align: center;">
+  <video controls preload="metadata" style="width: 100%; max-width: 720px; height: auto;">
+    <source src="/video/Video_tickling_princess.mp4" type="video/mp4">
+  </video>
+</div>
+
+<a id="enhanced"></a>
+**Enhanced reference-to-video**
+
+<div style="text-align: center;">
+  <video controls preload="metadata" style="width: 100%; max-width: 720px; height: auto;">
+    <source src="/video/Video_girls_in_love.mp4" type="video/mp4">
+  </video>
+</div>
+
+<a id="hyperflow"></a>
+**Hyperflow reference-to-video**
+
+<div style="text-align: center;">
+  <video controls preload="metadata" style="width: 50%; max-width: 720px; height: auto;">
+    <source src="/video/Video_girl_heaven.mp4" type="video/mp4">
+  </video>
+</div>
+
+<a id="multi-shot-continuation"></a>
+**Multi-shot continuation**
+
+<div style="text-align: center;">
+  <video controls preload="metadata" style="width: 100%; max-width: 720px; height: auto;">
+    <source src="/video/Video_minimax_multi-shot.mp4" type="video/mp4">
+  </video>
+</div>
+
+<a id="director-continuation"></a>
+**Director motion continuation**
+
+<div style="text-align: center;">
+  <video controls preload="metadata" style="width: 100%; max-width: 500px; height: auto;">
+    <source src="/video/Video_director_motion_continuity.mp4" type="video/mp4">
+  </video>
+</div>
+
+<a id="fl2va_1"></a>
+
+### fl2va examples
+
+<a id="i2v"></a>
+**Image-to-video**
+
+<div style="text-align: center;">
+  <video controls preload="metadata" style="width: 100%; max-width: 720px; height: auto;">
+    <source src="/video/Video_girl_drinking_cocktail.mp4" type="video/mp4">
+  </video>
+</div>
+
+<a id="t2v"></a>
+**Text-to-video**
+
+<div style="text-align: center;">
+  <video controls preload="metadata" style="width: 100%; max-width: 720px; height: auto;">
+    <source src="/video/Video_girl_walking_on_beach.mp4" type="video/mp4">
+  </video>
+</div>
+
+<a id="example-video-with-director"></a>
+
+### Director example
+
+<div style="text-align: center;">
+  <video controls preload="metadata" style="width: 100%; max-width: 720px; height: auto;">
+    <source src="/video/Video_minimax_slow.mp4" type="video/mp4">
+  </video>
+</div>
+
+### ref2va + QWEN VL prompt enhancer
+
+- Original prompt: "Person from image 1 kisses person of image 2 on a beach while carressing each other.
+Imtimate scene full of sensuality in a provoking pose".
+- [Final prompt](images/workflow-example-MiniMax-preview.jpg)
+
+<div style="text-align: center;">
+  <video controls preload="metadata" style="width: 100%; max-width: 720px; height: auto;">
+    <source src="/video/qwenvl-prompt-enhancer.mp4" type="video/mp4">
+  </video>
+</div>
 
 ## Standard workflows
 
@@ -210,11 +301,71 @@ Preview generated video and audio inside the workflow before exporting the resul
 
 </details>
 
-### OmniChar character creator
+### MiniMax H3: Omnichar vs. RefMod
 
-- Used as character encoder to pack 9 images + voice.
-- Extra node to download character file.
-- Extra node to upload character file in workflow.
+Both ComfyUI extensions provide reusable references to improve character consistency in MiniMax H3. However, they differ significantly in how references are prepared, stored, and processed.
+
+**The main difference:** Omnichar offers a simpler, character-oriented workflow that can be assisted by a **VLM (Vision Language Model)**, while RefMod provides a more advanced approach based on pre-encoded latent references, with optional **LLM (Large Language Model)** assistance for prompt generation.
+
+#### Feature Comparison
+
+| Feature | Omnichar | MiniMax H3 RefMod |
+|---|---|---|
+| **GitHub** | [ComfyUI-Omnichar](https://github.com/omnichar/ComfyUI-Omnichar) | [ComfyUI-MiniMaxH3Mod](https://github.com/Luisacaotica/ComfyUI-MiniMaxH3Mod) |
+| **Primary purpose** | Create reusable characters with consistent identity, appearance, clothing, and voice. | Create reusable, pre-encoded image, video, and audio references for MiniMax H3. |
+| **AI assistance** | **VLM:** Can analyze reference images and help generate character descriptions. | **LLM:** Can generate structured prompts using stored reference mappings. |
+| **VLM/LLM required?** | No. Character descriptions can also be entered manually. | No. Prompts can be written manually without an LLM. |
+| **Preparation** | Select face, body, and clothing reference images and provide a character description. | Encode images, video, or audio into latent references using the corresponding H3 VAE. |
+| **Workflow** | Create character → Save `.char` → Load character → Generate. | Extract references → Save `.safetensors` → Load RefMods → Apply conditioning → Generate. |
+| **File format** | `.char` | `.safetensors` |
+| **Stored content** | Reference images, locked character description, optional voice, and potentially a trained LoRA. | Full or compressed latent image, video, and audio references with metadata. |
+| **Reference compression** | Stores character reference images; processing is performed by the target workflow. | Supports Full Reference and Compressed Reference modes with configurable token budgets. |
+| **Prompt handling** | Decode Character prepares the character description and numbered references. | H3 RefMod Text Encode supports numbered references such as `<Picture 1>`, `<Video 1>`, and `<Audio 1>`. |
+| **Main nodes** | Encode Character, Save Character, Load Character, Decode Character, Character References Split. | Create H3 RefMod, Create H3 RefMod Master, Load H3 RefMods, Apply H3 RefMod, H3 RefMod Text Encode. |
+| **Multiple characters** | Multiple character files and reference sets can be used within a workflow. | Multiple independent RefMods can be combined with individual reference strengths. |
+| **Reference control** | Primarily reference selection, ordering, roles, and image count. | Advanced control over extraction, resolution, masks, tokens, strength, copies, and step curves. |
+| **Video and motion references** | Primarily focused on character consistency rather than storing motion latents. | Explicitly supports extracting and storing temporal video references. |
+| **Audio references** | Optional voice sample included in the character file for MiniMax H3. | Audio references encoded with the H3 audio VAE; reliable speaker identity transfer is not yet validated. |
+| **LoRA support** | Can include a trained LoRA and apply it through Apply Character LoRA. | Does not train LoRAs; uses stored latent references instead of trained model weights. |
+| **Other AI models** | Supports workflows for other architectures, including FLUX.2 and Krea 2. | Specifically designed for MiniMax H3. |
+| **Ease of use** | **Easy:** Create, save, select, and reuse a character. | **Advanced:** Requires more configuration of reference extraction and conditioning. |
+| **Main advantage** | A single portable character file that can be reused across supported workflows and models. | Fine-grained control over the reference information supplied to MiniMax H3. |
+| **Main limitation** | Character consistency still depends on reference quality and the generation model. | Compression may discard details, while larger reference token budgets increase processing costs. |
+
+#### Which Method Should You Choose?
+
+**Omnichar — Recommended for ease of use**
+
+Omnichar is particularly suitable for users who want to create and reuse consistent characters without complex configuration. A VLM can simplify the preparation of character descriptions by analyzing reference images.
+
+The resulting `.char` file can be reused across different supported generation models and workflows. This makes Omnichar a convenient solution for character-based image and video generation.
+
+**RefMod — Recommended for advanced MiniMax H3 workflows**
+
+RefMod is designed for users who need greater control over how reference information is encoded and applied.
+
+An LLM can assist in generating prompts that reference stored images, video, and audio using the correct numbering and mapping.
+
+Because reference extraction is performed in advance, the resulting latent files can be reused without repeatedly encoding the original source material.
+
+RefMod also provides extensive controls for reference strengths, compression, token budgets, masks, and conditioning behavior.
+
+#### Important Technical Distinction
+
+Although Omnichar can be used with a **VLM** and RefMod with an **LLM**, neither AI component is mandatory.
+
+The fundamental architectural difference is:
+
+- **Omnichar** stores reusable character information, including source reference images and descriptions, in a portable `.char` file.
+- **RefMod** stores pre-extracted MiniMax H3 latent references in `.safetensors` files, which can be loaded directly into the H3 reference-conditioning pipeline.
+
+RefMod's experimental `H3 RefMod Text Encode` also supports presenting visual references to the H3 vision/text encoder, so its functionality is not limited to text-only LLM prompting.
+
+#### References
+
+- [ComfyUI-Omnichar — GitHub](https://github.com/omnichar/ComfyUI-Omnichar)
+- [Omnichar Studio — GitHub](https://github.com/omnichar/OmniChar)
+- [ComfyUI-MiniMaxH3Mod — GitHub](https://github.com/Luisacaotica/ComfyUI-MiniMaxH3Mod)
 
 <details>
 <summary><strong>Character creator  workflow</strong></summary>
@@ -222,106 +373,6 @@ Preview generated video and audio inside the workflow before exporting the resul
 <img loading="lazy" src="../images/omnichar-generate.jpg" alt="char creator workflow" style="width: 100%; height: auto;">
 
 </details>
-
-## Output examples
-
-- The clips below demonstrate output from the standard and advanced workflows available on the pod.
-- Video and audio are generated directly by the model.
-- Person reference images were generated using [Krea-2](ComfyUI_image.md).
-- Animation reference characters (Elsa, Anna, Ken, Barbie) used for workflow demonstration purpose only.
-
-<a id="ref2va_1"></a>
-
-### Ref2va examples
-
-<a id="standard"></a>
-**Standard reference-to-video**
-
-<div style="text-align: center;">
-  <video controls preload="metadata" style="width: 100%; max-width: 720px; height: auto;">
-    <source src="/video/Video_tickling_princess.mp4" type="video/mp4">
-  </video>
-</div>
-
-<a id="enhanced"></a>
-**Enhanced reference-to-video**
-
-<div style="text-align: center;">
-  <video controls preload="metadata" style="width: 100%; max-width: 720px; height: auto;">
-    <source src="/video/Video_girls_in_love.mp4" type="video/mp4">
-  </video>
-</div>
-
-<a id="hyperflow"></a>
-**Hyperflow reference-to-video**
-
-<div style="text-align: center;">
-  <video controls preload="metadata" style="width: 50%; max-width: 720px; height: auto;">
-    <source src="/video/Video_girl_heaven.mp4" type="video/mp4">
-  </video>
-</div>
-
-<a id="multi-shot-continuation"></a>
-**Multi-shot continuation**
-
-<div style="text-align: center;">
-  <video controls preload="metadata" style="width: 100%; max-width: 720px; height: auto;">
-    <source src="/video/Video_minimax_multi-shot.mp4" type="video/mp4">
-  </video>
-</div>
-
-<a id="director-continuation"></a>
-**Director motion continuation**
-
-<div style="text-align: center;">
-  <video controls preload="metadata" style="width: 100%; max-width: 500px; height: auto;">
-    <source src="/video/Video_director_motion_continuity.mp4" type="video/mp4">
-  </video>
-</div>
-
-<a id="fl2va_1"></a>
-
-### fl2va examples
-
-<a id="i2v"></a>
-**Image-to-video**
-
-<div style="text-align: center;">
-  <video controls preload="metadata" style="width: 100%; max-width: 720px; height: auto;">
-    <source src="/video/Video_girl_drinking_cocktail.mp4" type="video/mp4">
-  </video>
-</div>
-
-<a id="t2v"></a>
-**Text-to-video**
-
-<div style="text-align: center;">
-  <video controls preload="metadata" style="width: 100%; max-width: 720px; height: auto;">
-    <source src="/video/Video_girl_walking_on_beach.mp4" type="video/mp4">
-  </video>
-</div>
-
-<a id="example-video-with-director"></a>
-
-### Director example
-
-<div style="text-align: center;">
-  <video controls preload="metadata" style="width: 100%; max-width: 720px; height: auto;">
-    <source src="/video/Video_minimax_slow.mp4" type="video/mp4">
-  </video>
-</div>
-
-### ref2va + QWEN VL prompt enhancer
-
-- Original prompt: "Person from image 1 kisses person of image 2 on a beach while carressing each other.
-Imtimate scene full of sensuality in a provoking pose".
-- [Final prompt](images/workflow-example-MiniMax-preview.jpg)
-
-<div style="text-align: center;">
-  <video controls preload="metadata" style="width: 100%; max-width: 720px; height: auto;">
-    <source src="/video/qwenvl-prompt-enhancer.mp4" type="video/mp4">
-  </video>
-</div>
 
 ## Hardware output comparison
 
