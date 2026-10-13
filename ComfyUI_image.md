@@ -60,9 +60,19 @@ Once the pod is running, use the workflow examples below to choose what you want
 | Generate images with ZIB-ZIT | Text prompt | ZIB-ZIT | [Workflow](#zib-zit) |
 | Describe or caption an image | Image | JoyCaption | [Workflow](#joycaption) |
 
-## Standard workflows
+## Krea-2
 
-### Krea-2 identity workflows
+### Example images
+
+**t2i ostris controlnet**
+
+<img loading="lazy" src="../images/Image_Krea2_controlnet.jpg" alt="t2i ostris controlnet" style="width: 80%; height: auto;">
+
+**t2i Qwen text/image conditioning**
+
+<img loading="lazy" src="../images/Image_Krea2_boy_barbie.jpg" alt="t2i conditioning" style="width: 80%; height: auto;">
+
+### Identity workflows
 
 Use these image-to-image workflows to transfer, edit or compose identities while retaining control over the target image.
 
@@ -98,7 +108,7 @@ Use these image-to-image workflows to transfer, edit or compose identities while
 
 </details>
 
-### Krea-2 text-to-image workflows
+### text-to-image workflows
 
 Choose a workflow based on how you want to build and condition the prompt.
 
@@ -132,7 +142,15 @@ Choose a workflow based on how you want to build and condition the prompt.
 
 </details>
 
-### SenseNova U1.5 workflows
+<a id="example-t2i-workflow-krea-2-controlner"></a>
+<details>
+<summary><strong>View the Krea-2 ostrid controlnet with 3D pose workflow</strong></summary>
+
+<img loading="lazy" src="../images/workflow-example-qwen-image-21-i2i-controlnet.jpg" alt="Krea-2 text-to-image workflow controlnet" style="width: 100%; height: auto;">
+
+</details>
+
+### SenseNova U1.5
 
 Use SenseNova U1.5 for text-to-image generation or image-to-image editing with the Final BF16 checkpoint and optional distilled 8-step LoRA.
 
@@ -144,7 +162,7 @@ Use SenseNova U1.5 for text-to-image generation or image-to-image editing with t
 
 </details>
 
-### Qwen-Image 2.1 workflows
+### Qwen-Image 2.1
 
 Use Qwen-Image 2.1 for text-to-image generation and image editing, with optional prompt enhancement.
 
@@ -158,6 +176,10 @@ Use Qwen-Image 2.1 for text-to-image generation and image editing, with optional
 
 <img loading="lazy" src="../images/Image_Qwen21_girl_to_heaven.jpg" alt="i2i prompt enhancement turbo lora" style="width: 50%; height: auto;">
 
+**i2i controlnet , pose created with 3D pose custom node**
+
+<img loading="lazy" src="../images/Image_Qwen21_controlnet.jpg" alt="i2i controlner" style="width: 80%; height: auto;">
+
 #### Workflows included
 
 | Workflow | Best suited for |
@@ -166,8 +188,7 @@ Use Qwen-Image 2.1 for text-to-image generation and image editing, with optional
 | `i2i` | Editing an image with text instructions |
 | `t2i-prompt-enhancer` | Expanding a prompt before image generation |
 | `i2i-prompt-enhancer` | Enhancing instructions before image editing |
-
-The public template without prompt enhancement includes the two base workflows. The public template with prompt enhancement and the private template include all four workflows.
+| `i2i-controlnet` | Modify the pose of a reference inmage with 3D pose |
 
 <a id="example-t2i-workflow-qwen-image-21-with-prompt-enhancer"></a>
 <details>
@@ -200,6 +221,12 @@ The public template without prompt enhancement includes the two base workflows. 
 <img loading="lazy" src="../images/workflow-example-qwen-image-21-i2i-prompt-enhancer-node.jpg" alt="Qwen-Image 2.1 prompt enhancer custom node" style="width: 100%; height: auto;">
 
 </details>
+
+<a id="example-i2i-workflow-qwen-image-21-controlnet"></a>
+<details>
+<summary><strong>View the Qwen-Image 2.1 controlnet workflow with 3D poser</strong></summary>
+
+<img loading="lazy" src="../images/workflow-example-qwen-image-21-i2i-controlnet.jpg" alt="Qwen-Image 2.1 prompt enhancer custom node" style="width: 100%; height: auto;">
 
 ### FLUX.2 Klein workflows
 
