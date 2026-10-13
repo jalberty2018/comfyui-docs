@@ -66,11 +66,11 @@ Once the pod is running, use the workflow examples below to choose what you want
 
 **t2i ostris controlnet**
 
-<img loading="lazy" src="../images/Image_Krea2_controlnet.jpg" alt="t2i ostris controlnet" style="width: 80%; height: auto;">
+<img loading="lazy" src="../images/Image_Krea2_controlnet.jpg" alt="t2i ostris controlnet" style="width: 60%; height: auto;">
 
 **t2i Qwen text/image conditioning**
 
-<img loading="lazy" src="../images/Image_Krea2_boy_barbie.jpg" alt="t2i conditioning" style="width: 80%; height: auto;">
+<img loading="lazy" src="../images/Image_Krea2_boy_barbie.jpg" alt="t2i conditioning" style="width: 60%; height: auto;">
 
 ### Identity workflows
 
@@ -142,11 +142,11 @@ Choose a workflow based on how you want to build and condition the prompt.
 
 </details>
 
-<a id="example-t2i-workflow-krea-2-controlner"></a>
+<a id="example-t2i-workflow-krea-2-controlnet"></a>
 <details>
 <summary><strong>View the Krea-2 ostrid controlnet with 3D pose workflow</strong></summary>
 
-<img loading="lazy" src="../images/workflow-example-qwen-image-21-i2i-controlnet.jpg" alt="Krea-2 text-to-image workflow controlnet" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/workflow-example-krea2-controlnet.jpg" alt="Krea-2 text-to-image workflow controlnet" style="width: 100%; height: auto;">
 
 </details>
 
