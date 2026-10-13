@@ -56,6 +56,11 @@
 - [RMBG](https://github.com/1038lab/ComfyUI-RMBG)
 - [SAM3](https://github.com/PozzettiAndrea/ComfyUI-SAM3)
 
+### OpenPose
+
+- [comfyui_controlnet_aux](https://github.com/Fannovel16/comfyui_controlnet_aux)
+- [comfyui-poser](https://github.com/roborg/comfyui-poser)
+
 ### Reference image
 
 - [LanPaint](https://github.com/scraed/LanPaint)

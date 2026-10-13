@@ -8,7 +8,7 @@
 - Pinned custom nodes are not updated automatically, because changing those pins can introduce compatibility issues.
 - Tested on a wide range of GPU's including RTX 3090,4090,5090, L40S, L4 , PRO 6000 MiG 24/48 Gb.
 
-## 09102026
+## 13102026
 
 - Updated ComfyUI to version 0.39.0.
 - [ComfyUI-qwen_img_2_1_enhancer](https://github.com/capitan01R/ComfyUI-qwen_img_2_1_enhancer)
@@ -19,6 +19,8 @@
 - Updated workflows Qwen Image 2.1 for turbo lora and phrase weight.
 - [ComfyUI-EditUtils](https://github.com/lrzjason/ComfyUI-EditUtils)
 - [ComfyUI-qwenmultiangle](https://github.com/jtydhr88/ComfyUI-qwenmultiangle) updated for Qwen Image 2.1
+- [comfyui_controlnet_aux](https://github.com/Fannovel16/comfyui_controlnet_aux)
+- [comfyui-poser](https://github.com/roborg/comfyui-poser)
 
 ## 06102026 image
 
