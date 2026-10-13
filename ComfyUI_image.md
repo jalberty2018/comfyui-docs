@@ -228,6 +228,8 @@ Use Qwen-Image 2.1 for text-to-image generation and image editing, with optional
 
 <img loading="lazy" src="../images/workflow-example-qwen-image-21-i2i-controlnet.jpg" alt="Qwen-Image 2.1 prompt enhancer custom node" style="width: 100%; height: auto;">
 
+</details>
+
 ### FLUX.2 Klein workflows
 
 <a id="example-workflow-flux-klein-composition"></a>
