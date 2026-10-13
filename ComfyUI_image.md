@@ -72,6 +72,10 @@ Once the pod is running, use the workflow examples below to choose what you want
 
 <img loading="lazy" src="../images/Image_Krea2_boy_barbie.jpg" alt="t2i conditioning" style="width: 60%; height: auto;">
 
+**i2i identity edit**
+
+<img loading="lazy" src="../images/Image_Krea2_girl_cocktail.jpg" alt="t2i edentity edit" style="width: 60%; height: auto;">
+
 ### Identity workflows
 
 Use these image-to-image workflows to transfer, edit or compose identities while retaining control over the target image.
@@ -144,8 +148,8 @@ Choose a workflow based on how you want to build and condition the prompt.
 
 <a id="example-t2i-workflow-krea-2-controlnet"></a>
 <details>
-<summary><strong>View the Krea-2 ostrid controlnet with 3D pose workflow</strong></summary>
-
+<summary><strong>View the Krea-2 ostris controlnet with 3D pose workflow</strong></summary>
+s
 <img loading="lazy" src="../images/workflow-example-krea2-controlnet.jpg" alt="Krea-2 text-to-image workflow controlnet" style="width: 100%; height: auto;">
 
 </details>
