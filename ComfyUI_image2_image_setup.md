@@ -25,6 +25,7 @@
 | sageattention  |  `2.2.0`   |
 | torch_generic_nms | `0.1` |
 | llama-cpp-python | `0.3.35` |
+| nvidia-vfx | `0.2.0.0` |
 
 ## Optimised
 
