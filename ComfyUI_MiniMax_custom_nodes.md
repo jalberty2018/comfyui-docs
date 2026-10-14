@@ -31,7 +31,7 @@
 - [LoRA Manager](https://github.com/willmiao/ComfyUI-Lora-Manager)
 - [ComfyUI-H3-PowerLoraStack](https://github.com/cicalooo/ComfyUI-H3-PowerLoraStack)
 
-### Video / Upscale
+### Video / Upscale / VFI / HDR
 
 - [Video Helper Suite](https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite)
 - [Frame Interpolation](https://github.com/Fannovel16/ComfyUI-Frame-Interpolation)

@@ -33,10 +33,11 @@
 - [Image Saver](https://github.com/alexopus/ComfyUI-Image-Saver)
 - [Comfyui-save-image-enhanced](https://github.com/KY-2000/comfyui-save-image-enhanced)
 
-### Pixel scaler
+### Pixel scaler / HDR
 
 - [PixelConstrainedScaler](https://github.com/neonr-0/ComfyUI-PixelConstrainedScaler)
 - [ComfyUi-Scale-Image-to-Total-Pixels-Advanced](https://github.com/BigStationW/ComfyUi-Scale-Image-to-Total-Pixels-Advanced)
+- [ComfyUI_Nvidia_VFX_Nodes](https://github.com/Comfy-Org/ComfyUI_Nvidia_VFX_Nodes)
 
 ### Pixel upscaler
 

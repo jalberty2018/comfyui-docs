@@ -11,7 +11,7 @@
 ## 14102026
 
 - Updated ComfyUI to version 0.40.0.
-- [ComfyUI_Nvidia_VFX_Nodes](https://github.com/Comfy-Org/ComfyUI_Nvidia_VFX_Nodes)
+- [ComfyUI_Nvidia_VFX_Nodes](https://github.com/Comfy-Org/ComfyUI_Nvidia_VFX_Nodes) as shown on [ComfyUI](https://comfy.org/nvidia-vfx/)
 
 ## 11102026
 
