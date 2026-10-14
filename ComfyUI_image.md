@@ -66,7 +66,7 @@ Once the pod is running, use the workflow examples below to choose what you want
 
 **t2i ostris controlnet**
 
-<img loading="lazy" src="../images/Image_Krea2_controlnet.jpg" alt="t2i ostris controlnet" style="width: 60%; height: auto;">
+<img loading="lazy" src="../images/Image_Krea2_controlnet.jpg" alt="t2i ostris controlnet" style="width: 100%; height: auto;">
 
 **t2i Qwen text/image conditioning**
 
@@ -174,7 +174,7 @@ Use Qwen-Image 2.1 for text-to-image generation and image editing, with optional
 
 **t2i prompt enhancement phrase weight adjusted turbo lora**
 
-<img loading="lazy" src="../images/Image_Qwen21_heroin_addict.jpg" alt="t2v prompt enhancement phrase weight adjusted" style="width: 60%; height: auto;">
+<img loading="lazy" src="../images/Image_Qwen21_heroin_addict.jpg" alt="t2v prompt enhancement phrase weight adjusted" style="width: 50%; height: auto;">
 
 **i2i prompt enhancement turbo lora**
 
@@ -182,7 +182,7 @@ Use Qwen-Image 2.1 for text-to-image generation and image editing, with optional
 
 **i2i controlnet , pose created with 3D pose custom node**
 
-<img loading="lazy" src="../images/Image_Qwen21_controlnet.jpg" alt="i2i controlner" style="width: 60%; height: auto;">
+<img loading="lazy" src="../images/Image_Qwen21_controlnet.jpg" alt="i2i controlner" style="width: 100%; height: auto;">
 
 #### Workflows included
 
