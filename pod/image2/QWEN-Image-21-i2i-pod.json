@@ -1,8 +1,8 @@
 {
   "id": "54bb395d-3e60-4c94-b525-85523901575b",
   "revision": 0,
-  "last_node_id": 513,
-  "last_link_id": 823,
+  "last_node_id": 514,
+  "last_link_id": 825,
   "nodes": [
     {
       "id": 484,
@@ -53,7 +53,7 @@
         "Node name for S&R": "KSampler"
       },
       "widgets_values": [
-        10210807725723,
+        80604791489851,
         "randomize",
         25,
         1,
@@ -62,7 +62,7 @@
         1
       ],
       "widgets_values_named": {
-        "seed": 10210807725723,
+        "seed": 80604791489851,
         "control_after_generate": "randomize",
         "steps": 25,
         "cfg": 1,
@@ -843,7 +843,7 @@
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            735
+            824
           ]
         }
       ],
@@ -905,13 +905,13 @@
         547.3014898414754
       ],
       "flags": {},
-      "order": 22,
+      "order": 23,
       "mode": 0,
       "inputs": [
         {
           "name": "images",
           "type": "IMAGE",
-          "link": 735
+          "link": 825
         }
       ],
       "outputs": [
@@ -1133,18 +1133,6 @@
           "link": 813
         },
         {
-          "name": "images.image_6",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 819
-        },
-        {
-          "name": "images.image_7",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 820
-        },
-        {
           "name": "images.image_8",
           "shape": 7,
           "type": "IMAGE",
@@ -1191,6 +1179,18 @@
           "shape": 7,
           "type": "IMAGE",
           "link": 818
+        },
+        {
+          "name": "images.image_6",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 819
+        },
+        {
+          "name": "images.image_7",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 820
         }
       ],
       "outputs": [
@@ -1236,6 +1236,54 @@
       },
       "color": "#432",
       "bgcolor": "#653"
+    },
+    {
+      "id": 514,
+      "type": "RTXVideoSuperResolution",
+      "pos": [
+        2178.881941937387,
+        2173.3766333681974
+      ],
+      "size": [
+        285.81015625,
+        154
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 824
+        }
+      ],
+      "outputs": [
+        {
+          "name": "upscaled_images",
+          "type": "IMAGE",
+          "links": [
+            825
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RTXVideoSuperResolution"
+      },
+      "widgets_values": [
+        "scale by multiplier",
+        2,
+        "ULTRA",
+        1,
+        "8-bit RGB"
+      ],
+      "widgets_values_named": {
+        "resize_type": "scale by multiplier",
+        "resize_type.scale": 2,
+        "quality": "ULTRA",
+        "strength": 1,
+        "image_encoding": "8-bit RGB"
+      }
     }
   ],
   "links": [
@@ -1360,12 +1408,12 @@
       "LATENT"
     ],
     [
-      735,
-      483,
+      823,
+      480,
       0,
-      461,
+      502,
       0,
-      "IMAGE"
+      "CLIP"
     ],
     [
       808,
@@ -1400,27 +1448,11 @@
       "STRING"
     ],
     [
-      819,
-      511,
-      6,
-      513,
-      4,
-      "IMAGE"
-    ],
-    [
-      820,
-      511,
-      7,
-      513,
-      5,
-      "IMAGE"
-    ],
-    [
       821,
       511,
       8,
       513,
-      6,
+      4,
       "IMAGE"
     ],
     [
@@ -1428,7 +1460,7 @@
       511,
       9,
       513,
-      7,
+      5,
       "IMAGE"
     ],
     [
@@ -1436,7 +1468,7 @@
       511,
       2,
       513,
-      10,
+      8,
       "IMAGE"
     ],
     [
@@ -1444,7 +1476,7 @@
       511,
       3,
       513,
-      11,
+      9,
       "IMAGE"
     ],
     [
@@ -1452,7 +1484,7 @@
       511,
       4,
       513,
-      12,
+      10,
       "IMAGE"
     ],
     [
@@ -1460,16 +1492,40 @@
       511,
       5,
       513,
+      11,
+      "IMAGE"
+    ],
+    [
+      819,
+      511,
+      6,
+      513,
+      12,
+      "IMAGE"
+    ],
+    [
+      820,
+      511,
+      7,
+      513,
       13,
       "IMAGE"
     ],
     [
-      823,
-      480,
+      824,
+      483,
       0,
-      502,
+      514,
       0,
-      "CLIP"
+      "IMAGE"
+    ],
+    [
+      825,
+      514,
+      0,
+      461,
+      0,
+      "IMAGE"
     ]
   ],
   "groups": [
@@ -1527,11 +1583,11 @@
     "ds": {
       "scale": 0.8572756564909555,
       "offset": [
-        11.184788738698941,
-        -1430.3568757925743
+        -2.8130781396132156,
+        -2295.422873814563
       ]
     },
-    "frontendVersion": "1.53.10",
+    "frontendVersion": "1.55.17",
     "VHS_latentpreview": true,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
