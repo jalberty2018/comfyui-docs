@@ -1,8 +1,8 @@
 {
   "id": "f2f469df-3f03-44c3-9462-afe1a8b142f4",
   "revision": 0,
-  "last_node_id": 520,
-  "last_link_id": 814,
+  "last_node_id": 521,
+  "last_link_id": 817,
   "nodes": [
     {
       "id": 504,
@@ -702,8 +702,8 @@
       "id": 493,
       "type": "PreviewAny",
       "pos": [
-        790.9323396547028,
-        2980.1471236130146
+        795.6173881654449,
+        3028.169675102273
       ],
       "size": [
         660.6089925970036,
@@ -884,7 +884,7 @@
           "name": "STRING",
           "type": "STRING",
           "links": [
-            811
+            816
           ]
         }
       ],
@@ -988,8 +988,8 @@
       "id": 516,
       "type": "StringConcatenate",
       "pos": [
-        1117.3054261463753,
-        2787.0071614843255
+        952.1549640186903,
+        2980.268406165113
       ],
       "size": [
         400,
@@ -1007,7 +1007,7 @@
           "widget": {
             "name": "string_a"
           },
-          "link": 812
+          "link": 817
         },
         {
           "name": "string_b",
@@ -1079,15 +1079,63 @@
       "bgcolor": "#3f5159"
     },
     {
-      "id": 519,
-      "type": "ComfyUI_Image_Prompt_llama-cpp",
+      "id": 520,
+      "type": "RTXVideoSuperResolution",
       "pos": [
-        371.80013201846026,
-        2974.1779875551283
+        2257.151531373016,
+        1933.0551529009747
       ],
       "size": [
-        389.45855148925784,
-        691.4151999999999
+        285.81015625,
+        154
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 813
+        }
+      ],
+      "outputs": [
+        {
+          "name": "upscaled_images",
+          "type": "IMAGE",
+          "links": [
+            814
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RTXVideoSuperResolution"
+      },
+      "widgets_values": [
+        "scale by multiplier",
+        2,
+        "ULTRA",
+        1,
+        "8-bit RGB"
+      ],
+      "widgets_values_named": {
+        "resize_type": "scale by multiplier",
+        "resize_type.scale": 2,
+        "quality": "ULTRA",
+        "strength": 1,
+        "image_encoding": "8-bit RGB"
+      }
+    },
+    {
+      "id": 521,
+      "type": "ComfyUI_Image_Prompt_llama-cpp",
+      "pos": [
+        356.374020264007,
+        3011.7452709650915
+      ],
+      "size": [
+        400,
+        562
       ],
       "flags": {},
       "order": 15,
@@ -1159,15 +1207,15 @@
           "widget": {
             "name": "prompt"
           },
-          "link": 811
+          "link": 816
         }
       ],
       "outputs": [
         {
-          "name": "h3_prompt",
+          "name": "enhanced_prompt",
           "type": "STRING",
           "links": [
-            812
+            817
           ]
         },
         {
@@ -1177,6 +1225,11 @@
         },
         {
           "name": "detected_mode",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "system_prompt",
           "type": "STRING",
           "links": null
         }
@@ -1191,11 +1244,10 @@
         "",
         false,
         "medium",
-        284657319501306,
+        0,
         "randomize",
         8192,
         true,
-        "uncensored fidelity QWEN",
         "",
         "T2I"
       ],
@@ -1206,64 +1258,15 @@
         "mmproj": "",
         "think_mode": false,
         "reasoning_effort": "medium",
-        "seed": 284657319501306,
+        "seed": 0,
         "control_after_generate": "randomize",
         "max_tokens": 8192,
         "force_unload_model": true,
-        "prompt_profile": "uncensored fidelity QWEN",
         "additional_system_instructions": "",
         "mode": "T2I"
       },
       "color": "#233",
       "bgcolor": "#355"
-    },
-    {
-      "id": 520,
-      "type": "RTXVideoSuperResolution",
-      "pos": [
-        2257.151531373016,
-        1933.0551529009747
-      ],
-      "size": [
-        285.81015625,
-        154
-      ],
-      "flags": {},
-      "order": 22,
-      "mode": 4,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 813
-        }
-      ],
-      "outputs": [
-        {
-          "name": "upscaled_images",
-          "type": "IMAGE",
-          "links": [
-            814
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "RTXVideoSuperResolution"
-      },
-      "widgets_values": [
-        "scale by multiplier",
-        2,
-        "ULTRA",
-        1,
-        "8-bit RGB"
-      ],
-      "widgets_values_named": {
-        "resize_type": "scale by multiplier",
-        "resize_type.scale": 2,
-        "quality": "ULTRA",
-        "strength": 1,
-        "image_encoding": "8-bit RGB"
-      }
     }
   ],
   "links": [
@@ -1412,20 +1415,12 @@
       "CLIP"
     ],
     [
-      811,
-      497,
+      814,
+      520,
       0,
-      519,
-      10,
-      "STRING"
-    ],
-    [
-      812,
-      519,
+      461,
       0,
-      516,
-      0,
-      "STRING"
+      "IMAGE"
     ],
     [
       813,
@@ -1436,12 +1431,20 @@
       "IMAGE"
     ],
     [
-      814,
-      520,
+      816,
+      497,
       0,
-      461,
+      521,
+      10,
+      "STRING"
+    ],
+    [
+      817,
+      521,
       0,
-      "IMAGE"
+      516,
+      0,
+      "STRING"
     ]
   ],
   "groups": [
@@ -1509,10 +1512,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.6830134553650706,
+      "scale": 0.9090909090909092,
       "offset": [
-        -654.761468774749,
-        -1504.263875858585
+        271.6718127148135,
+        -2798.3323529864238
       ]
     },
     "frontendVersion": "1.55.17",
@@ -1524,12 +1527,12 @@
   "extensions": {
     "seed_widgets": {
       "484": 0,
-      "512": 6
+      "519": 6
     }
   },
   "version": 0.4,
   "seed_widgets": {
     "484": 0,
-    "519": 6
+    "521": 6
   }
 }

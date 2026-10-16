@@ -1,8 +1,8 @@
 {
   "id": "54bb395d-3e60-4c94-b525-85523901575b",
   "revision": 0,
-  "last_node_id": 525,
-  "last_link_id": 904,
+  "last_node_id": 526,
+  "last_link_id": 917,
   "nodes": [
     {
       "id": 504,
@@ -807,7 +807,7 @@
           "name": "STRING",
           "type": "STRING",
           "links": [
-            880
+            906
           ]
         }
       ],
@@ -960,7 +960,7 @@
       ],
       "size": [
         346.66575283314955,
-        406
+        446
       ],
       "flags": {},
       "order": 22,
@@ -978,16 +978,18 @@
           "link": 884
         },
         {
-          "name": "images.image_2",
+          "name": "vae",
           "shape": 7,
-          "type": "IMAGE",
-          "link": 885
+          "type": "VAE",
+          "link": 848
         },
         {
-          "name": "images.image_3",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 886
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 867
         },
         {
           "name": "images.image_4",
@@ -1038,18 +1040,22 @@
           "link": null
         },
         {
-          "name": "vae",
+          "name": "images.image_12",
           "shape": 7,
-          "type": "VAE",
-          "link": 848
+          "type": "IMAGE",
+          "link": null
         },
         {
-          "name": "prompt",
-          "type": "STRING",
-          "widget": {
-            "name": "prompt"
-          },
-          "link": 867
+          "name": "images.image_2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 885
+        },
+        {
+          "name": "images.image_3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 886
         }
       ],
       "outputs": [
@@ -1104,8 +1110,8 @@
         3278.3625613590116
       ],
       "size": [
-        348.4905584847879,
-        119.83213691212268
+        515.3674321625579,
+        121.13589279389998
       ],
       "flags": {},
       "order": 9,
@@ -1137,8 +1143,8 @@
       "id": 518,
       "type": "StringConcatenate",
       "pos": [
-        -54.57210764217493,
-        3312.7980788678187
+        155.32776520341562,
+        3320.620464958878
       ],
       "size": [
         400,
@@ -1156,7 +1162,7 @@
           "widget": {
             "name": "string_a"
           },
-          "link": 869
+          "link": 907
         },
         {
           "name": "string_b",
@@ -1188,146 +1194,9 @@
         "string_a": "",
         "string_b": "",
         "delimiter": ","
-      }
-    },
-    {
-      "id": 520,
-      "type": "ComfyUI_Image_Prompt_llama-cpp",
-      "pos": [
-        -233.0166390632931,
-        3479.3871830930966
-      ],
-      "size": [
-        579.3314810302595,
-        728.529401364035
-      ],
-      "flags": {},
-      "order": 19,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "reference_image_1",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 895
-        },
-        {
-          "name": "reference_image_2",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 896
-        },
-        {
-          "name": "reference_image_3",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 897
-        },
-        {
-          "name": "reference_image_4",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 898
-        },
-        {
-          "name": "reference_image_5",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 899
-        },
-        {
-          "name": "reference_image_6",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 900
-        },
-        {
-          "name": "reference_image_7",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 901
-        },
-        {
-          "name": "reference_image_8",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 902
-        },
-        {
-          "name": "reference_image_9",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 903
-        },
-        {
-          "name": "reference_image_10",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 904
-        },
-        {
-          "name": "prompt",
-          "type": "STRING",
-          "widget": {
-            "name": "prompt"
-          },
-          "link": 880
-        }
-      ],
-      "outputs": [
-        {
-          "name": "h3_prompt",
-          "type": "STRING",
-          "links": [
-            869
-          ]
-        },
-        {
-          "name": "selected_skill",
-          "type": "STRING",
-          "links": null
-        },
-        {
-          "name": "detected_mode",
-          "type": "STRING",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ComfyUI_Image_Prompt_llama-cpp"
       },
-      "widgets_values": [
-        "Describe the image or the desired edit.",
-        "qwen-image-prompt",
-        "Qwen-Image-2.1-PE-I2I-Heretic-GGUF/pe_i2i_heretic-Q8_0.gguf",
-        "Qwen-Image-2.1-PE-I2I-Heretic-GGUF/pe_i2i_heretic.mmproj-bf16.gguf",
-        false,
-        "medium",
-        724361766250390,
-        "randomize",
-        8192,
-        true,
-        "uncensored fidelity QWEN",
-        "",
-        "I2I"
-      ],
-      "widgets_values_named": {
-        "prompt": "Describe the image or the desired edit.",
-        "skill": "qwen-image-prompt",
-        "model": "Qwen-Image-2.1-PE-I2I-Heretic-GGUF/pe_i2i_heretic-Q8_0.gguf",
-        "mmproj": "Qwen-Image-2.1-PE-I2I-Heretic-GGUF/pe_i2i_heretic.mmproj-bf16.gguf",
-        "think_mode": false,
-        "reasoning_effort": "medium",
-        "seed": 724361766250390,
-        "control_after_generate": "randomize",
-        "max_tokens": 8192,
-        "force_unload_model": true,
-        "prompt_profile": "uncensored fidelity QWEN",
-        "additional_system_instructions": "",
-        "mode": "I2I"
-      },
-      "color": "#233",
-      "bgcolor": "#355"
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
     },
     {
       "id": 521,
@@ -1341,7 +1210,7 @@
         154
       ],
       "flags": {},
-      "order": 24,
+      "order": 26,
       "mode": 4,
       "inputs": [
         {
@@ -1394,6 +1263,7 @@
       "inputs": [],
       "outputs": [
         {
+          "label": "references",
           "name": "references",
           "type": "IMAGE_REFERENCES",
           "links": [
@@ -1402,6 +1272,7 @@
           ]
         },
         {
+          "label": "masks",
           "name": "masks",
           "type": "IMAGE_MASKS",
           "links": null
@@ -1548,70 +1419,70 @@
           "name": "image_1",
           "type": "IMAGE",
           "links": [
-            895
+            908
           ]
         },
         {
           "name": "image_2",
           "type": "IMAGE",
           "links": [
-            896
+            909
           ]
         },
         {
           "name": "image_3",
           "type": "IMAGE",
           "links": [
-            897
+            910
           ]
         },
         {
           "name": "image_4",
           "type": "IMAGE",
           "links": [
-            898
+            911
           ]
         },
         {
           "name": "image_5",
           "type": "IMAGE",
           "links": [
-            899
+            912
           ]
         },
         {
           "name": "image_6",
           "type": "IMAGE",
           "links": [
-            900
+            913
           ]
         },
         {
           "name": "image_7",
           "type": "IMAGE",
           "links": [
-            901
+            914
           ]
         },
         {
           "name": "image_8",
           "type": "IMAGE",
           "links": [
-            902
+            915
           ]
         },
         {
           "name": "image_9",
           "type": "IMAGE",
           "links": [
-            903
+            916
           ]
         },
         {
           "name": "image_10",
           "type": "IMAGE",
           "links": [
-            904
+            917
           ]
         }
       ],
@@ -1620,6 +1491,148 @@
       },
       "color": "#233",
       "bgcolor": "#355"
+    },
+    {
+      "id": 526,
+      "type": "ComfyUI_Image_Prompt_llama-cpp",
+      "pos": [
+        -199.9709124314992,
+        3482.930004230871
+      ],
+      "size": [
+        400,
+        562
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "reference_image_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 908
+        },
+        {
+          "name": "reference_image_2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 909
+        },
+        {
+          "name": "reference_image_3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 910
+        },
+        {
+          "name": "reference_image_4",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 911
+        },
+        {
+          "name": "reference_image_5",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 912
+        },
+        {
+          "name": "reference_image_6",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 913
+        },
+        {
+          "name": "reference_image_7",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 914
+        },
+        {
+          "name": "reference_image_8",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 915
+        },
+        {
+          "name": "reference_image_9",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 916
+        },
+        {
+          "name": "reference_image_10",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 917
+        },
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 906
+        }
+      ],
+      "outputs": [
+        {
+          "name": "enhanced_prompt",
+          "type": "STRING",
+          "links": [
+            907
+          ]
+        },
+        {
+          "name": "selected_skill",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "detected_mode",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "system_prompt",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ComfyUI_Image_Prompt_llama-cpp"
+      },
+      "widgets_values": [
+        "Describe the image or the desired edit.",
+        "qwen-image-prompt",
+        "Qwen-Image-2.1-PE-I2I-Heretic-GGUF/pe_i2i_heretic-Q8_0.gguf",
+        "Qwen-Image-2.1-PE-I2I-Heretic-GGUF/pe_i2i_heretic.mmproj-bf16.gguf",
+        false,
+        "medium",
+        0,
+        "randomize",
+        8192,
+        true,
+        "",
+        "I2I"
+      ],
+      "widgets_values_named": {
+        "prompt": "Describe the image or the desired edit.",
+        "skill": "qwen-image-prompt",
+        "model": "Qwen-Image-2.1-PE-I2I-Heretic-GGUF/pe_i2i_heretic-Q8_0.gguf",
+        "mmproj": "Qwen-Image-2.1-PE-I2I-Heretic-GGUF/pe_i2i_heretic.mmproj-bf16.gguf",
+        "think_mode": false,
+        "reasoning_effort": "medium",
+        "seed": 0,
+        "control_after_generate": "randomize",
+        "max_tokens": 8192,
+        "force_unload_model": true,
+        "additional_system_instructions": "",
+        "mode": "I2I"
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
     }
   ],
   "links": [
@@ -1760,28 +1773,20 @@
       "CLIP"
     ],
     [
-      869,
-      520,
+      883,
+      523,
       0,
-      518,
+      524,
       0,
-      "STRING"
+      "IMAGE_REFERENCES"
     ],
     [
-      880,
-      497,
+      894,
+      523,
       0,
-      520,
-      10,
-      "STRING"
-    ],
-    [
-      881,
-      483,
+      525,
       0,
-      521,
-      0,
-      "IMAGE"
+      "IMAGE_REFERENCES"
     ],
     [
       882,
@@ -1792,12 +1797,12 @@
       "IMAGE"
     ],
     [
-      883,
-      523,
+      881,
+      483,
       0,
-      524,
+      521,
       0,
-      "IMAGE_REFERENCES"
+      "IMAGE"
     ],
     [
       847,
@@ -1816,20 +1821,20 @@
       "IMAGE"
     ],
     [
-      885,
-      524,
-      1,
+      848,
+      504,
+      0,
       516,
       2,
-      "IMAGE"
+      "VAE"
     ],
     [
-      886,
-      524,
-      2,
+      867,
+      493,
+      0,
       516,
       3,
-      "IMAGE"
+      "STRING"
     ],
     [
       887,
@@ -1888,106 +1893,114 @@
       "IMAGE"
     ],
     [
-      848,
-      504,
-      0,
-      516,
-      12,
-      "VAE"
-    ],
-    [
-      867,
-      493,
-      0,
+      885,
+      524,
+      1,
       516,
       13,
+      "IMAGE"
+    ],
+    [
+      886,
+      524,
+      2,
+      516,
+      14,
+      "IMAGE"
+    ],
+    [
+      906,
+      497,
+      0,
+      526,
+      10,
       "STRING"
     ],
     [
-      894,
-      523,
+      907,
+      526,
       0,
-      525,
+      518,
       0,
-      "IMAGE_REFERENCES"
+      "STRING"
     ],
     [
-      895,
+      908,
       525,
       0,
-      520,
+      526,
       0,
       "IMAGE"
     ],
     [
-      896,
+      909,
       525,
       1,
-      520,
+      526,
       1,
       "IMAGE"
     ],
     [
-      897,
+      910,
       525,
       2,
-      520,
+      526,
       2,
       "IMAGE"
     ],
     [
-      898,
+      911,
       525,
       3,
-      520,
+      526,
       3,
       "IMAGE"
     ],
     [
-      899,
+      912,
       525,
       4,
-      520,
+      526,
       4,
       "IMAGE"
     ],
     [
-      900,
+      913,
       525,
       5,
-      520,
+      526,
       5,
       "IMAGE"
     ],
     [
-      901,
+      914,
       525,
       6,
-      520,
+      526,
       6,
       "IMAGE"
     ],
     [
-      902,
+      915,
       525,
       7,
-      520,
+      526,
       7,
       "IMAGE"
     ],
     [
-      903,
+      916,
       525,
       8,
-      520,
+      526,
       8,
       "IMAGE"
     ],
     [
-      904,
+      917,
       525,
       9,
-      520,
+      526,
       9,
       "IMAGE"
     ]
@@ -2057,10 +2070,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.6136258495388343,
+      "scale": 0.7424872779419895,
       "offset": [
-        1072.5880123857762,
-        -1527.3106636815774
+        1209.0189705374207,
+        -2857.386689897615
       ]
     },
     "frontendVersion": "1.55.17",
@@ -2078,6 +2091,6 @@
   "version": 0.4,
   "seed_widgets": {
     "484": 0,
-    "520": 6
+    "526": 6
   }
 }
