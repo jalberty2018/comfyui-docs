@@ -10,9 +10,10 @@
 
 ## 161O2O26
 
-- Updated ComfyUI to version 0.40.0.
+- Updated ComfyUI to version 0.41.2
 - Renamed ComfyUI-QwenImageRefPack to ComfyUI-ImageRefPack, updated workflows.
 - Updated rgthree-comfy.
+- Updated Krea-2 and Qwen Image 2.1 prompt enhancer.
 
 ## 15102026
 
