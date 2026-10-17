@@ -8,12 +8,13 @@
 - Pinned custom nodes are not updated automatically, because changing those pins can introduce compatibility issues.
 - Tested on a wide range of GPU's including RTX 3090,4090,5090, L40S, L4 , PRO 6000 MiG 24/48 Gb.
 
-## 161O2O26
+## 171O2O26
 
 - Updated ComfyUI to version 0.41.2
 - Renamed ComfyUI-QwenImageRefPack to ComfyUI-ImageRefPack, updated workflows.
 - Updated rgthree-comfy.
 - Updated Krea-2 and Qwen Image 2.1 prompt enhancer.
+- Updated Krea-2 Reference Edit to v2.0
 
 ## 15102026
 

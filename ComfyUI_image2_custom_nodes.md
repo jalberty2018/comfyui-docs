@@ -70,6 +70,10 @@
 
 - [JoyCaption](https://github.com/fpgaminer/joycaption_comfyui)
 
+### VLM
+
+- [ComfyUI_Image_Prompt_llama-cpp](https://github.com/jalberty2018/ComfyUI_Image_Prompt_llama-cpp)
+
 ### Model Specific
 
 #### Qwen
@@ -85,7 +89,7 @@
 - [Krea2T-Enhancer](https://github.com/capitan01R/ComfyUI-Krea2T-Enhancer)
 - [krea-reference](https://github.com/kgilper/krea-reference)
 - [Krea2-StyleTransfer](https://github.com/jieg9341-lab/ComfyUI-Krea2-StyleTransfer)
-- [Krea2edit](https://github.com/lbouaraba/comfyui-krea2edit)
+- [Comfyui-Krea2edit](https://github.com/lbouaraba/comfyui-krea2edit)
 - [krea2-negpip](https://github.com/blue-pen5805/ComfyUI-krea2-negpip)
 - [Krea2-Projector-Tuner](https://github.com/BlackSnowSkill/ComfyUI-Krea2-Projector-Tuner)
 - [Krea2-attention-tweak.git](https://github.com/Extraltodeus/ComfyUI-Krea2-attention-tweak)
