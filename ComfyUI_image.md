@@ -72,9 +72,19 @@ Once the pod is running, use the workflow examples below to choose what you want
 
 <img loading="lazy" src="../images/Image_Krea2_boy_barbie.jpg" alt="t2i conditioning" style="width: 60%; height: auto;">
 
-**i2i identity edit**
+**Krea 2 Identity Edit V1**
 
 <img loading="lazy" src="../images/Image_Krea2_girl_cocktail.jpg" alt="t2i edentity edit" style="width: 60%; height: auto;">
+
+**Krea 2 Identity Edit V2**
+
+<img loading="lazy" src="../images/Image_krea2_identity_edit.jpg" alt="identitity edit v2" style="width: 60%; height: auto;">
+
+**Krea 2 General Edit V2**
+
+<img loading="lazy" src="../images/Image_krea2_general_edit.jpg" alt="general edit v2" style="width: 60%; height: auto;">
+
+<img loading="lazy" src="../images/image_krea2_general_compose.jpg" alt="compose edit v2" style="width: 60%; height: auto;">
 
 ### Identity workflows
 
