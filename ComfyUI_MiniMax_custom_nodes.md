@@ -8,6 +8,8 @@
 - [Login](https://github.com/liusida/ComfyUI-Login)
 - [KJNodes](https://github.com/kijai/ComfyUI-KJNodes)
 - [Easy-Use](https://github.com/yolain/ComfyUI-Easy-Use)
+- [comfyui-obvpm](https://github.com/chanon/comfyui-obvpm)
+- [ComfyUI-ImageRefPack](https://github.com/jalberty2018/ComfyUI-ImageRefPack.git)
 
 ### Timeline/AIO
 
@@ -21,9 +23,7 @@
 - [ComfyMath](https://github.com/evanspearman/ComfyMath)
 - [ComfyUI Essentials](https://github.com/cubiq/ComfyUI_essentials)
 - [Scale Image to Total Pixels Advanced](https://github.com/BigStationW/ComfyUi-Scale-Image-to-Total-Pixels-Advanced)
-- [comfyui-obvpm](https://github.com/chanon/comfyui-obvpm)
 - [ComfyUI-MiniMaxH3-Preview](https://github.com/Brioch/ComfyUI-MiniMaxH3-Preview)
-- [ComfyUI-QwenImageRefPack](https://github.com/Hearmeman24/ComfyUI-QwenImageRefPack)
 
 ### Loaders/linkers
 
