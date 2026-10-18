@@ -1,8 +1,8 @@
 {
   "id": "e3f2b845-8f2c-4b5a-9caf-eac1029d3e7e",
   "revision": 0,
-  "last_node_id": 233,
-  "last_link_id": 398,
+  "last_node_id": 235,
+  "last_link_id": 403,
   "nodes": [
     {
       "id": 151,
@@ -153,11 +153,11 @@
         "Node name for S&R": "RandomNoise"
       },
       "widgets_values": [
-        374851475096485,
+        318071259580541,
         "randomize"
       ],
       "widgets_values_named": {
-        "noise_seed": 374851475096485,
+        "noise_seed": 318071259580541,
         "control_after_generate": "randomize"
       },
       "color": "#2a363b",
@@ -593,12 +593,12 @@
       },
       "widgets_values": [
         "4:3 (Standard)",
-        0.9,
+        0.8,
         32
       ],
       "widgets_values_named": {
         "aspect_ratio": "4:3 (Standard)",
-        "megapixels": 0.9,
+        "megapixels": 0.8,
         "multiple": 32
       },
       "color": "#332922",
@@ -854,7 +854,7 @@
         "Node name for S&R": "DiffusionModelLoaderKJ"
       },
       "widgets_values": [
-        "minimax_h3_ref2va_pruned_int8_convrot.safetensors",
+        "minimax_h3_ref2va_int8_convrot.safetensors",
         "default",
         "default",
         true,
@@ -862,7 +862,7 @@
         true
       ],
       "widgets_values_named": {
-        "model_name": "minimax_h3_ref2va_pruned_int8_convrot.safetensors",
+        "model_name": "minimax_h3_ref2va_int8_convrot.safetensors",
         "weight_dtype": "default",
         "compute_dtype": "default",
         "patch_cublaslinear": true,
@@ -1330,8 +1330,8 @@
       "id": 201,
       "type": "LoraLoaderModelOnly",
       "pos": [
-        -2072.080867397954,
-        4373.904330741672
+        -2074.938322632919,
+        4375.809373568269
       ],
       "size": [
         400.3456997440228,
@@ -1879,8 +1879,8 @@
       "id": 211,
       "type": "GetNode",
       "pos": [
-        -770.441340676612,
-        4114.380448798577
+        -910.0362409763484,
+        4128.186592820259
       ],
       "size": [
         210,
@@ -1890,7 +1890,7 @@
         "collapsed": true
       },
       "order": 17,
-      "mode": 0,
+      "mode": 2,
       "inputs": [],
       "outputs": [
         {
@@ -1919,8 +1919,8 @@
       "id": 212,
       "type": "KSamplerSelect",
       "pos": [
-        -760.441340676612,
-        4164.380448798578
+        -900.0362409763484,
+        4178.18659282026
       ],
       "size": [
         210,
@@ -1928,7 +1928,7 @@
       ],
       "flags": {},
       "order": 18,
-      "mode": 0,
+      "mode": 2,
       "inputs": [],
       "outputs": [
         {
@@ -1955,8 +1955,8 @@
       "id": 213,
       "type": "LTXVSeparateAVLatent",
       "pos": [
-        -760.441340676612,
-        4284.38044879858
+        -900.0362409763484,
+        4298.1865928202615
       ],
       "size": [
         286.836067965115,
@@ -1966,7 +1966,7 @@
         "collapsed": true
       },
       "order": 46,
-      "mode": 0,
+      "mode": 2,
       "inputs": [
         {
           "label": "av_latent",
@@ -2017,8 +2017,8 @@
       "id": 214,
       "type": "MinimaxH3LatentUpscaler3D",
       "pos": [
-        -770.441340676612,
-        4334.380448798581
+        -910.0362409763484,
+        4348.186592820262
       ],
       "size": [
         319.566015625,
@@ -2026,7 +2026,7 @@
       ],
       "flags": {},
       "order": 48,
-      "mode": 0,
+      "mode": 2,
       "inputs": [
         {
           "name": "latent",
@@ -2049,7 +2049,7 @@
       "widgets_values": [
         "minimax_h3_latent_upscaler_3d_conv_v1_fp16.safetensors",
         "megapixels",
-        2,
+        0.4,
         32,
         true,
         true,
@@ -2059,7 +2059,7 @@
       "widgets_values_named": {
         "model_name": "minimax_h3_latent_upscaler_3d_conv_v1_fp16.safetensors",
         "mode": "megapixels",
-        "mode.megapixels": 2,
+        "mode.megapixels": 0.4,
         "align": 32,
         "enable_temporal_chunking": true,
         "force_unload": true,
@@ -2073,8 +2073,8 @@
       "id": 215,
       "type": "LTXVConcatAVLatent",
       "pos": [
-        -760.441340676612,
-        4604.380448798581
+        -900.0362409763484,
+        4618.186592820262
       ],
       "size": [
         286.8360679651149,
@@ -2084,7 +2084,7 @@
         "collapsed": true
       },
       "order": 50,
-      "mode": 0,
+      "mode": 2,
       "inputs": [
         {
           "label": "video_latent",
@@ -2133,8 +2133,8 @@
       "id": 216,
       "type": "BasicGuider",
       "pos": [
-        -510.441340676612,
-        4174.380448798578
+        -650.0362409763484,
+        4188.18659282026
       ],
       "size": [
         270,
@@ -2142,7 +2142,7 @@
       ],
       "flags": {},
       "order": 35,
-      "mode": 0,
+      "mode": 2,
       "inputs": [
         {
           "name": "model",
@@ -2181,8 +2181,8 @@
       "id": 217,
       "type": "GetNode",
       "pos": [
-        -590.1569282775521,
-        4111.987067176834
+        -729.7518285772885,
+        4125.793211198516
       ],
       "size": [
         210,
@@ -2192,7 +2192,7 @@
         "collapsed": true
       },
       "order": 19,
-      "mode": 0,
+      "mode": 2,
       "inputs": [],
       "outputs": [
         {
@@ -2221,8 +2221,8 @@
       "id": 218,
       "type": "RandomNoise",
       "pos": [
-        -390.44134067661184,
-        4114.380448798577
+        -530.0362409763478,
+        4128.186592820259
       ],
       "size": [
         270,
@@ -2232,7 +2232,7 @@
         "collapsed": true
       },
       "order": 20,
-      "mode": 0,
+      "mode": 2,
       "inputs": [],
       "outputs": [
         {
@@ -2247,11 +2247,11 @@
         "Node name for S&R": "RandomNoise"
       },
       "widgets_values": [
-        11329063587352,
+        857793175005115,
         "randomize"
       ],
       "widgets_values_named": {
-        "noise_seed": 11329063587352,
+        "noise_seed": 857793175005115,
         "control_after_generate": "randomize"
       },
       "color": "#232",
@@ -2261,8 +2261,8 @@
       "id": 219,
       "type": "ManualSigmas",
       "pos": [
-        -430.4413406766118,
-        4314.380448798581
+        -570.0362409763478,
+        4328.186592820262
       ],
       "size": [
         257.9701176117253,
@@ -2270,7 +2270,7 @@
       ],
       "flags": {},
       "order": 21,
-      "mode": 0,
+      "mode": 2,
       "inputs": [
         {
           "label": "sigmas",
@@ -2323,8 +2323,8 @@
       "id": 220,
       "type": "ManualSigmas",
       "pos": [
-        -430.4413406766118,
-        4434.380448798581
+        -570.0362409763478,
+        4448.186592820262
       ],
       "size": [
         266.579898552601,
@@ -2332,7 +2332,7 @@
       ],
       "flags": {},
       "order": 22,
-      "mode": 0,
+      "mode": 2,
       "inputs": [
         {
           "label": "sigmas",
@@ -2383,8 +2383,8 @@
       "id": 221,
       "type": "ManualSigmas",
       "pos": [
-        -430.4413406766118,
-        4544.380448798581
+        -570.0362409763478,
+        4558.186592820262
       ],
       "size": [
         266.579898552601,
@@ -2392,7 +2392,7 @@
       ],
       "flags": {},
       "order": 23,
-      "mode": 0,
+      "mode": 2,
       "inputs": [
         {
           "label": "sigmas",
@@ -2443,8 +2443,8 @@
       "id": 222,
       "type": "Any Switch (rgthree)",
       "pos": [
-        -100.44134067661187,
-        4604.380448798581
+        79.22104153413576,
+        4521.608256469733
       ],
       "size": [
         263.72841796875,
@@ -2508,8 +2508,8 @@
       "id": 223,
       "type": "SamplerCustomAdvanced",
       "pos": [
-        -140.44134067661182,
-        4124.380448798577
+        -280.0362409763478,
+        4138.186592820259
       ],
       "size": [
         227.37737312888112,
@@ -2517,7 +2517,7 @@
       ],
       "flags": {},
       "order": 52,
-      "mode": 0,
+      "mode": 2,
       "inputs": [
         {
           "name": "noise",
@@ -2576,7 +2576,7 @@
       "id": 224,
       "type": "GetNode",
       "pos": [
-        149.55865932338855,
+        65.18810103901453,
         4414.380448798581
       ],
       "size": [
@@ -2616,7 +2616,7 @@
       "id": 225,
       "type": "GetNode",
       "pos": [
-        319.55865932338816,
+        235.18810103901413,
         4414.380448798581
       ],
       "size": [
@@ -2656,15 +2656,15 @@
       "id": 226,
       "type": "VAEDecode",
       "pos": [
-        159.5586593233886,
-        4464.380448798581
+        83.57004966519307,
+        4463.332795149376
       ],
       "size": [
         230,
         60
       ],
       "flags": {
-        "collapsed": false
+        "collapsed": true
       },
       "order": 54,
       "mode": 0,
@@ -2684,7 +2684,9 @@
         {
           "name": "IMAGE",
           "type": "IMAGE",
-          "links": []
+          "links": [
+            401
+          ]
         }
       ],
       "properties": {
@@ -2697,7 +2699,7 @@
       "id": 227,
       "type": "VAEDecodeAudio",
       "pos": [
-        159.5586593233886,
+        75.18810103901458,
         4584.380448798581
       ],
       "size": [
@@ -2756,7 +2758,8 @@
           "name": "INT",
           "type": "INT",
           "links": [
-            391
+            391,
+            402
           ]
         }
       ],
@@ -2794,7 +2797,9 @@
         {
           "name": "FLOAT",
           "type": "FLOAT",
-          "links": []
+          "links": [
+            403
+          ]
         }
       ],
       "title": "Resolution multiplyer",
@@ -2802,10 +2807,10 @@
         "Node name for S&R": "PrimitiveFloat"
       },
       "widgets_values": [
-        1.5
+        1.2
       ],
       "widgets_values_named": {
-        "value": 1.5
+        "value": 1.2
       },
       "color": "#2a363b",
       "bgcolor": "#3f5159"
@@ -2814,8 +2819,8 @@
       "id": 230,
       "type": "SimpleCalculatorKJ",
       "pos": [
-        414.9053265221506,
-        4804.282872752229
+        405.47556437286966,
+        4832.572079263125
       ],
       "size": [
         400,
@@ -2889,13 +2894,13 @@
         222
       ],
       "flags": {},
-      "order": 56,
+      "order": 58,
       "mode": 0,
       "inputs": [
         {
           "name": "images",
           "type": "IMAGE",
-          "link": null
+          "link": 400
         },
         {
           "name": "audio",
@@ -2931,7 +2936,7 @@
       },
       "widgets_values": [
         30,
-        "h264_nvenc",
+        "auto",
         20,
         "p4",
         "",
@@ -2940,7 +2945,7 @@
       ],
       "widgets_values_named": {
         "fps": 30,
-        "encoder": "h264_nvenc",
+        "encoder": "auto",
         "quality": 20,
         "nvenc_preset": "p4",
         "ffmpeg_path": "",
@@ -2958,11 +2963,11 @@
         5053.845942199879
       ],
       "size": [
-        871.2602070074156,
-        1270.8502786638287
+        791.4917259891911,
+        945.6400565099207
       ],
       "flags": {},
-      "order": 57,
+      "order": 59,
       "mode": 0,
       "inputs": [
         {
@@ -3004,7 +3009,7 @@
         5053.530957069813
       ],
       "size": [
-        210,
+        223.53515625,
         60
       ],
       "flags": {
@@ -3042,6 +3047,124 @@
       },
       "color": "#332922",
       "bgcolor": "#593930"
+    },
+    {
+      "id": 234,
+      "type": "RTXVideoFrameGeneration",
+      "pos": [
+        482.3435501357887,
+        4403.445480650985
+      ],
+      "size": [
+        356,
+        178
+      ],
+      "flags": {},
+      "order": 57,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 399
+        },
+        {
+          "name": "generation_type.multiplier",
+          "type": "INT",
+          "widget": {
+            "name": "generation_type.multiplier"
+          },
+          "link": 402
+        }
+      ],
+      "outputs": [
+        {
+          "name": "interpolated_images",
+          "type": "IMAGE",
+          "links": [
+            400
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RTXVideoFrameGeneration"
+      },
+      "widgets_values": [
+        "frame rate multiplier",
+        2,
+        "MEDIUM",
+        true,
+        false,
+        "8-bit RGB"
+      ],
+      "widgets_values_named": {
+        "generation_type": "frame rate multiplier",
+        "generation_type.multiplier": 2,
+        "mode": "MEDIUM",
+        "automatic_shot_change_detection": true,
+        "shot_change": false,
+        "image_encoding": "8-bit RGB"
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 235,
+      "type": "RTXVideoSuperResolution",
+      "pos": [
+        507.96705162365606,
+        4172.39774706483
+      ],
+      "size": [
+        285.81015625,
+        154
+      ],
+      "flags": {},
+      "order": 56,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 401
+        },
+        {
+          "name": "resize_type.scale",
+          "type": "FLOAT",
+          "widget": {
+            "name": "resize_type.scale"
+          },
+          "link": 403
+        }
+      ],
+      "outputs": [
+        {
+          "name": "upscaled_images",
+          "type": "IMAGE",
+          "links": [
+            399
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RTXVideoSuperResolution"
+      },
+      "widgets_values": [
+        "scale by multiplier",
+        2,
+        "ULTRA",
+        1,
+        "8-bit RGB"
+      ],
+      "widgets_values_named": {
+        "resize_type": "scale by multiplier",
+        "resize_type.scale": 2,
+        "quality": "ULTRA",
+        "strength": 1,
+        "image_encoding": "8-bit RGB"
+      },
+      "color": "#233",
+      "bgcolor": "#355"
     }
   ],
   "links": [
@@ -3206,12 +3329,188 @@
       "MODEL"
     ],
     [
+      374,
+      183,
+      0,
+      184,
+      0,
+      "H3_REFS"
+    ],
+    [
+      377,
+      214,
+      0,
+      215,
+      0,
+      "LATENT"
+    ],
+    [
+      378,
+      213,
+      1,
+      215,
+      1,
+      "LATENT"
+    ],
+    [
+      379,
+      211,
+      0,
+      216,
+      0,
+      "MODEL"
+    ],
+    [
+      380,
+      217,
+      0,
+      216,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      382,
+      218,
+      0,
+      223,
+      0,
+      "NOISE"
+    ],
+    [
+      383,
+      216,
+      0,
+      223,
+      1,
+      "GUIDER"
+    ],
+    [
+      384,
+      212,
+      0,
+      223,
+      2,
+      "SAMPLER"
+    ],
+    [
+      385,
+      219,
+      0,
+      223,
+      3,
+      "SIGMAS"
+    ],
+    [
+      386,
+      215,
+      0,
+      223,
+      4,
+      "LATENT"
+    ],
+    [
+      387,
+      222,
+      0,
+      226,
+      0,
+      "LATENT"
+    ],
+    [
+      388,
+      225,
+      0,
+      226,
+      1,
+      "VAE"
+    ],
+    [
+      389,
+      222,
+      0,
+      227,
+      0,
+      "LATENT"
+    ],
+    [
+      390,
+      224,
+      0,
+      227,
+      1,
+      "VAE"
+    ],
+    [
+      392,
+      227,
+      0,
+      231,
+      1,
+      "AUDIO"
+    ],
+    [
+      393,
+      230,
+      0,
+      231,
+      2,
+      "FLOAT"
+    ],
+    [
+      395,
+      135,
+      0,
+      213,
+      0,
+      "LATENT"
+    ],
+    [
+      397,
+      168,
+      0,
+      233,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      398,
+      233,
+      0,
+      127,
+      1,
+      "CONDITIONING"
+    ],
+    [
       248,
       134,
       0,
       133,
       0,
       "FLOAT"
+    ],
+    [
+      376,
+      213,
+      0,
+      214,
+      0,
+      "LATENT"
+    ],
+    [
+      391,
+      228,
+      0,
+      230,
+      0,
+      "INT"
+    ],
+    [
+      394,
+      231,
+      0,
+      232,
+      0,
+      "VIDEO"
     ],
     [
       297,
@@ -3422,166 +3721,6 @@
       "INT"
     ],
     [
-      374,
-      183,
-      0,
-      184,
-      0,
-      "H3_REFS"
-    ],
-    [
-      376,
-      213,
-      0,
-      214,
-      0,
-      "LATENT"
-    ],
-    [
-      377,
-      214,
-      0,
-      215,
-      0,
-      "LATENT"
-    ],
-    [
-      378,
-      213,
-      1,
-      215,
-      1,
-      "LATENT"
-    ],
-    [
-      379,
-      211,
-      0,
-      216,
-      0,
-      "MODEL"
-    ],
-    [
-      380,
-      217,
-      0,
-      216,
-      1,
-      "CONDITIONING"
-    ],
-    [
-      382,
-      218,
-      0,
-      223,
-      0,
-      "NOISE"
-    ],
-    [
-      383,
-      216,
-      0,
-      223,
-      1,
-      "GUIDER"
-    ],
-    [
-      384,
-      212,
-      0,
-      223,
-      2,
-      "SAMPLER"
-    ],
-    [
-      385,
-      219,
-      0,
-      223,
-      3,
-      "SIGMAS"
-    ],
-    [
-      386,
-      215,
-      0,
-      223,
-      4,
-      "LATENT"
-    ],
-    [
-      387,
-      222,
-      0,
-      226,
-      0,
-      "LATENT"
-    ],
-    [
-      388,
-      225,
-      0,
-      226,
-      1,
-      "VAE"
-    ],
-    [
-      389,
-      222,
-      0,
-      227,
-      0,
-      "LATENT"
-    ],
-    [
-      390,
-      224,
-      0,
-      227,
-      1,
-      "VAE"
-    ],
-    [
-      391,
-      228,
-      0,
-      230,
-      0,
-      "INT"
-    ],
-    [
-      392,
-      227,
-      0,
-      231,
-      1,
-      "AUDIO"
-    ],
-    [
-      393,
-      230,
-      0,
-      231,
-      2,
-      "FLOAT"
-    ],
-    [
-      394,
-      231,
-      0,
-      232,
-      0,
-      "VIDEO"
-    ],
-    [
-      395,
-      135,
-      0,
-      213,
-      0,
-      "LATENT"
-    ],
-    [
       381,
       223,
       0,
@@ -3598,20 +3737,44 @@
       "LATENT"
     ],
     [
-      397,
-      168,
+      399,
+      235,
       0,
-      233,
+      234,
       0,
-      "CONDITIONING"
+      "IMAGE"
     ],
     [
-      398,
-      233,
+      400,
+      234,
       0,
-      127,
+      231,
+      0,
+      "IMAGE"
+    ],
+    [
+      401,
+      226,
+      0,
+      235,
+      0,
+      "IMAGE"
+    ],
+    [
+      402,
+      228,
+      0,
+      234,
       1,
-      "CONDITIONING"
+      "INT"
+    ],
+    [
+      403,
+      229,
+      0,
+      235,
+      1,
+      "FLOAT"
     ]
   ],
   "groups": [
@@ -3667,8 +3830,8 @@
       "id": 8,
       "title": "H3 Latent Upscaler",
       "bounding": [
-        -790.4413406766121,
-        4034.3804487985763,
+        -930.0362409763485,
+        4048.18659282026,
         892.1082609610921,
         592.8572892676502
       ],
@@ -3679,22 +3842,10 @@
       "id": 9,
       "title": "Latent to video audio",
       "bounding": [
-        139.55865932338844,
+        55.18810103901441,
         4334.380448798581,
         351.8786169618161,
         291.73697435701706
-      ],
-      "color": "#3f789e",
-      "flags": {}
-    },
-    {
-      "id": 10,
-      "title": "RTX",
-      "bounding": [
-        519.5586593233884,
-        4124.380448798577,
-        423.0378138752436,
-        509.4262382161696
       ],
       "color": "#3f789e",
       "flags": {}
@@ -3705,8 +3856,20 @@
       "bounding": [
         59.200858615636996,
         4668.970131788315,
-        973.7743763452431,
-        1690.2205639827216
+        897.073868813994,
+        1394.1567336513544
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 12,
+      "title": "RTX",
+      "bounding": [
+        456.5732837009431,
+        4098.130501598897,
+        414.90205058695443,
+        532.6492582610163
       ],
       "color": "#3f789e",
       "flags": {}
@@ -3720,16 +3883,17 @@
     "VHS_MetadataImage": true,
     "VHS_KeepIntermediate": true,
     "ds": {
-      "scale": 0.6310258114039331,
+      "scale": 0.6941283925443277,
       "offset": [
-        1742.5420539348945,
-        -3854.989841134034
+        3443.9418071513037,
+        -4458.535872413233
       ]
     }
   },
   "extensions": {
     "seed_widgets": {
-      "130": 0
+      "130": 0,
+      "218": 0
     }
   },
   "version": 0.4,
