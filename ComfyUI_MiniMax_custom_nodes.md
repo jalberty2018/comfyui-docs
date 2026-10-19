@@ -37,6 +37,7 @@
 - [Frame Interpolation](https://github.com/Fannovel16/ComfyUI-Frame-Interpolation)
 - [Comfyui_Minimax_h3_latent_Upscaler](https://github.com/LBH-123-AI/Comfyui_Minimax_h3_latent_Upscaler)
 - [ComfyUI_Nvidia_VFX_Nodes](https://github.com/Comfy-Org/ComfyUI_Nvidia_VFX_Nodes)
+- [ComfyUI-CreateVideo-FFmpeg](https://github.com/jalberty2018/ComfyUI-CreateVideo-FFmpeg)
 
 ### Segmentation
 
