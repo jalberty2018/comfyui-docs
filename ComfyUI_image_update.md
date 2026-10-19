@@ -14,6 +14,7 @@
 - Added flux-3-klein support.
 - Added MOSS-image support.
 - Added flux-3 prompt enhancer skills.
+- [ComfyUI-NKD-Klein-Tools](https://github.com/Nekodificador/ComfyUI-NKD-Klein-Tools)
 
 ## 171O2O26
 
