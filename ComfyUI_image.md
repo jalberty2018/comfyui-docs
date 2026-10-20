@@ -8,6 +8,7 @@ Run **image generation and image editing models** in ComfyUI on RunPod. The temp
 - Z-Image
 - FLUX.2 Dev
 - FLUX.2 Klein 9B
+- FLUX 3 Image klein
 - JoyCaption
 - Krea-2
 - SenseNova U1.5
@@ -48,19 +49,6 @@ The approach is aligned with the open-model discussion in Eric Hartford's [Uncen
 
 Once the pod is running, use the workflow examples below to choose what you want to create. Follow the [ComfyUI tutorial](ComfyUI_tutorial.md) for the steps from opening ComfyUI to running your first workflow.
 
-## Choose a workflow
-
-| Goal | Input | Recommended workflow | Go to |
-| --- | --- | --- | --- |
-| Preserve or transfer a subject's identity | Source and target images | Krea-2 identity workflows | [Workflows](#krea-2-identity-workflows) |
-| Generate an image from a description | Text prompt | Krea-2 text-to-image | [Workflows](#krea-2-text-to-image-workflows) |
-| Generate or edit images with SenseNova U1.5 | Text prompt, optionally with an input image | SenseNova U1.5 text-to-image and image-to-image | [Workflows](#sensenova-u15-workflows) |
-| Generate or edit images with Qwen-Image 2.1 | Text prompt, optionally with reference images | Qwen-Image 2.1 text-to-image and image-to-image, with optional prompt enhancement | [Workflows](#qwen-image-21-workflows) |
-| Guide generation with a control or reference image | Prompt and control image | FLUX.2 Klein control | [Workflows](#flux2-klein-control-workflows) |
-| Create several views of the same subject | Image and angle instructions | Multiple-angle workflows | [Workflows](#multiple-angle-workflows) |
-| Generate images with ZIB-ZIT | Text prompt | ZIB-ZIT | [Workflow](#zib-zit) |
-| Describe or caption an image | Image | JoyCaption | [Workflow](#joycaption) |
-
 ## MOSS-Image
 
 ### Example images
@@ -72,6 +60,18 @@ Once the pod is running, use the workflow examples below to choose what you want
 **ComfyUI t2i with vlm reference image**
 
 <img loading="lazy" src="../images/Image_MOSS_vlm_reference.jpg" alt="t2i vlm" style="width: 60%; height: auto;">
+
+## Flux 3 image klein
+
+### Example images
+
+**t2v with prompt expander (VLM)**
+
+<img loading="lazy" src="../images/Image_Flux_3_klein_t2v.jpg" alt="t2i" style="width: 40%; height: auto;">
+
+**ComfyUI t2i with vlm reference image**
+
+<img loading="lazy" src="../images/comfyui-docs/images/Image_Flux_3_klein_composition.jpg" alt="i2I" style="width: 60%; height: auto;">
 
 ## Krea-2
 

@@ -11,10 +11,9 @@ Use this page to choose an LTX template, deploy it on a suitable NVIDIA GPU and 
 
 1. Choose a [template](#choose-a-template).
 2. Check its [hardware and storage requirements](#before-you-deploy).
-3. Complete the [LTX-2.5 model-access step](#ltx-25-model-access) when using gated official files.
-4. Open the RunPod link and configure the pod.
-5. Wait until the container log reports that the pod is ready.
-6. Open **Connect → HTTP Services → ComfyUI (port 8188)**.
+3. Open the RunPod link and configure the pod.
+4. Wait until the container log reports that the pod is ready.
+5. Open **Connect → HTTP Services → ComfyUI (port 8188)**.
 
 <a id="template"></a>
 

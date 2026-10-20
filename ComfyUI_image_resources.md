@@ -4,6 +4,11 @@
 
 - [docs](https://docs.comfy.org/)
 
+## Flux 3 Image Klein
+
+- [Official ComfyUI guide](https://docs.comfy.org/tutorials/flux/flux-3-klein)
+- [Official ComfyUI model files](https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy)
+
 ## MOSS-Image
 
 - [Official ComfyUI guide](https://docs.comfy.org/tutorials/image/moss-image/moss-image)
