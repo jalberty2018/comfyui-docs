@@ -67,11 +67,11 @@ Once the pod is running, use the workflow examples below to choose what you want
 
 **ComfyUI t2i with prompt enhancer**
 
-<img loading="lazy" src="../images/Image-MOSS-t2i.jpg" alt="t2i" style="width: 70%; height: auto;">
+<img loading="lazy" src="../images/Image-MOSS-t2i.jpg" alt="t2i" style="width: 40%; height: auto;">
 
 **ComfyUI t2i with vlm reference image**
 
-<img loading="lazy" src="../images/Image_MOSS_vlm_reference.jpg" alt="t2i vlm" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/Image_MOSS_vlm_reference.jpg" alt="t2i vlm" style="width: 60%; height: auto;">
 
 ## Krea-2
 
