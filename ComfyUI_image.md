@@ -71,7 +71,7 @@ Once the pod is running, use the workflow examples below to choose what you want
 
 **ComfyUI t2i with vlm reference image**
 
-<img loading="lazy" src="../images/comfyui-docs/images/Image_Flux_3_klein_composition.jpg" alt="i2I" style="width: 60%; height: auto;">
+<img loading="lazy" src="../images/Image_Flux_3_klein_composition.jpg" alt="i2I" style="width: 60%; height: auto;">
 
 ## Krea-2
 
