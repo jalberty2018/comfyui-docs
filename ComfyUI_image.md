@@ -4,6 +4,7 @@
 
 Run **image generation and image editing models** in ComfyUI on RunPod. The templates provision the models, LoRAs, custom nodes and example workflows needed for:
 
+- MOSS-image
 - Z-Image
 - FLUX.2 Dev
 - FLUX.2 Klein 9B
@@ -59,6 +60,18 @@ Once the pod is running, use the workflow examples below to choose what you want
 | Create several views of the same subject | Image and angle instructions | Multiple-angle workflows | [Workflows](#multiple-angle-workflows) |
 | Generate images with ZIB-ZIT | Text prompt | ZIB-ZIT | [Workflow](#zib-zit) |
 | Describe or caption an image | Image | JoyCaption | [Workflow](#joycaption) |
+
+## MOSS-Image
+
+### Example images
+
+**ComfyUI t2i with prompt enhancer**
+
+<img loading="lazy" src="../images/Image-MOSS-t2i.jpg" alt="t2i" style="width: 70%; height: auto;">
+
+**ComfyUI t2i with vlm reference image**
+
+<img loading="lazy" src="../images/Image_MOSS_vlm_reference.jpg" alt="t2i vlm" style="width: 100%; height: auto;">
 
 ## Krea-2
 

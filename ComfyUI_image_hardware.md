@@ -5,12 +5,13 @@ The example screenshots in the overview page document successful runs with these
 
 ## Image Models
 
-| Model           | Working GPU          | Min VRAM | Min RAM |
+| Model           | Possible GPU          | Min VRAM | Min RAM |
 |-----------------|---------------------|----------|---------|
 | Z-Image Turbo   | RTX 3090, RTX A5000 | 20 GB    | 50 GB   |
 | ERNIE-Image     | RTX A4500 | 20 GB    | 50 GB   |
-| Krea-2  bf16   | RTX 3090 |  24 GB    | 65  GB   |
-| Krea-2  fp8   | RTX A4500 |  20 GB    | 65  GB   |
+| Krea-2 bf16   | RTX 3090 |  24 GB    | 65  GB   |
+| MOSS-Image   | RTX 3090/4090 | 20 GB    | 50 GB   |
+| Krea-2 fp8   | RTX A4500 |  20 GB    | 65  GB   |
 | SenseNova U1.5 BF16 | RTX 6000 Ada | 33GB | 50 GB |
 | FLUX.2 Klein    | RTX A4500    | 20 GB    | 50 GB   |
 | FLUX.2 Dev bf16 | RTX 6000 Ada | 44 GB    | 80 GB   |
@@ -27,6 +28,7 @@ The example screenshots in the overview page document successful runs with these
 | Model | Minimum                    |
 |-------|----------------------------|
 | Z-Image | 50 GB (`/workspace`)       |
+| MOSS-Image | 55 GB (`/workspace`)       |
 | ERNIE | 50 GB (`/workspace`)       |
 | Krea-2 bf16 | 60 GB (`/workspace`)       |
 | Krea-2 fp8 | 50 GB (`/workspace`)       |

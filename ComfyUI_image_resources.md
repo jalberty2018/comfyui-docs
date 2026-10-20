@@ -4,6 +4,12 @@
 
 - [docs](https://docs.comfy.org/)
 
+## MOSS-Image
+
+- [Official ComfyUI guide](https://docs.comfy.org/tutorials/image/moss-image/moss-image)
+- [ComfyUI model files](https://huggingface.co/Comfy-Org/MOSS-Image)
+- [Original project](https://github.com/OpenMOSS/MOSS-Image)
+
 ## Z-Image Turbo
 
 - [Website](https://tongyi-mai.github.io/Z-Image-blog/)
