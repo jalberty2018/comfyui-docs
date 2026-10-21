@@ -8,6 +8,11 @@
 - Some custom nodes have been adapted specifically for this pod or pinned to increase the stability.
 - Tested on L40S, RTX 6000 Ada, RTX PRO 6000, PRO 6000 MiG 48Gb, RTX 5090, (RTX 4090).
 
+## 21102026
+
+- Updated ComfyUI to version 0.42.1.
+- Custom node ComfyUI-CreateVideo-FFmpeg update adding preview output and save video node with preview switch.
+
 ## 18102026
 
 - Updated ComfyUI to version 0.41.2.
