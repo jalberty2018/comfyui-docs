@@ -7,11 +7,16 @@
 - The date reflects when the related custom nodes were cloned from their upstream repositories.
 - Pinned custom nodes are not updated automatically, because changing those pins can introduce compatibility issues.
 
+## 21102026 maintenance update
+
+- ComfyUI 0.36.0 frozen until major update of ltx.
+- Update custom nodes.
+- Custom node ComfyUI-CreateVideo-FFmpeg updated, option disable metadata, option preview.
+
 ## 19092026
 
-- ComfyUI 0.36.0
-- Removed unused custom nodes.
-- Lowered pod size by excluding unused media in custom_nodes
+- ComfyUI 0.36.0.
+- Lowered pod size by excluding unused media in custom_nodes.
 - Added GPU-accelerated video encoding with FFmpeg and NVENC to speed up video creation on slower vCPUs, if runpod host supports it.
 - Updated worklows to use nvenc video encoding.
 - Forked and customized model_linker.

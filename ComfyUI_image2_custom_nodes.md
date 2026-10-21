@@ -98,7 +98,7 @@
 - [Krea-Moodboard](https://github.com/Andro-Meta/ComfyUI-Krea-Moodboards)
 - [Krea2-NAG](https://github.com/iljung1106/ComfyUI-Krea2-NAG)
 
-#### Flux-3-Klein
+#### Flux
 
 - [ComfyUI-NKD-Klein-Tools](https://github.com/Nekodificador/ComfyUI-NKD-Klein-Tools)
 
