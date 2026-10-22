@@ -1,0 +1,942 @@
+{
+  "id": "e8f30439-267f-45de-b260-db0d114b2c85",
+  "revision": 0,
+  "last_node_id": 49,
+  "last_link_id": 98,
+  "nodes": [
+    {
+      "id": 9,
+      "type": "SaveImage",
+      "pos": [
+        1563.8121382227464,
+        -1144.8167716073253
+      ],
+      "size": [
+        570,
+        700
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 73
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "moss_image_t2i"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "moss_image_t2i"
+      },
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 19,
+      "type": "ResolutionSelector",
+      "pos": [
+        137.617561566659,
+        -255.66226239652343
+      ],
+      "size": [
+        280,
+        190
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "showAdvanced": true,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "links": [
+            78
+          ]
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": [
+            79
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ResolutionSelector"
+      },
+      "widgets_values": [
+        "3:4 (Portrait Standard)",
+        2,
+        16
+      ],
+      "widgets_values_named": {
+        "aspect_ratio": "3:4 (Portrait Standard)",
+        "megapixels": 2,
+        "multiple": 16
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 23,
+      "type": "MarkdownNote",
+      "pos": [
+        -825.513268370078,
+        -1218.2782225779079
+      ],
+      "size": [
+        567.5200134277343,
+        827.7600067138675
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "## MOSS-Image capabilities and limits\n\nSources: [USERGUIDE](https://github.com/OpenMOSS/MOSS-Image/blob/main/USERGUIDE.md), README, HF Base/SFT cards; cross-checked against community benchmark notes.\n\n### Resolution\n\n| Item | Official |\n|------|----------|\n| Recommended total pixels | **1M, 1.5M, or 2M** |\n| Extrapolation range | **0.25M (512×512) to 4M (~2K)** |\n| Aspect ratio | Arbitrary; width/height must be positive multiples of **16** |\n| This template default | 1024×1024 (~1M) |\n\n### Strengths\n\n- ~**5B** single-stream DiT (Muon); FLUX.2 small VAE; Qwen-family text encoder.\n- Strong bilingual English and Chinese text rendering and auto layout; JSON Layout control for text/objects; long prompts (~**4K** tokens); anime and photorealistic.\n- **SFT** clearer text grouping/layouts; **Base** has no post-training / CFG distillation (better for community LoRAs).\n- Inputs: natural language, tag sequences, JSON layout (layout is experimental). Prefer English (most training data); Chinese supported.\n\n### Limits / notes\n\n- Auto line breaks may not match intent — use `\\n` or real newlines for precise text.\n- Turning off SLG looks more realistic but can collapse details; official negative-branch skip layer **22** (24/26 also help). kijai notes SLG can overblow anime styles.\n- Recommended negative prompt: `nsfw, worst quality, bad anatomy, watermark, jpeg artifact`\n- If VRAM is tight, lower resolution or use Sequential / CPU offload.\n- When training LoRA yourself, **freeze the text encoder**.\n- License: Apache 2.0.\n\n---\n\n## Sampling settings vs. official defaults\n\n| Setting | This template | OpenMOSS official |\n|---------|---------------|-------------------|\n| Steps | 25 | 50 |\n| CFG | 2.5 | 3 |\n| Sampler | er_sde | Euler |\n| Scheduler | simple | default |\n| Denoise | 1 | 1 |\n| Shift | 5 (model default) | 5 (same) |\n\nThis template follows the faster settings from kijai's ComfyUI MOSS-Image PR [#17095](https://github.com/comfyanonymous/ComfyUI/pull/17095). That is a speed trade-off, not a bug. For results closer to the official ones, try 50 steps and CFG 3.\n\n### Community notes\n\n- **Skip layer guidance:** can overblow anime styles; no alternative values were suggested (template keeps official layer 22). You can check the detail settings inside the subgraph\n- **Shift:** adjust with ModelSamplingAuraFlow or ModelSamplingFlux — ModelSamplingSD3 uses a completely different scale. You can enter the subgraph to adjust it\n- **SFT banding:** experimental LoRA at about −0.5 strength: [moss_image_sft_lora_blocks_21_to_49…](https://huggingface.co/Kijai/MOSS-image_experimental/blob/main/loras/moss_image_sft_lora_blocks_21_to_49_rank_512_bf16.safetensors)\n"
+      ],
+      "widgets_values_named": {
+        "text": "## MOSS-Image capabilities and limits\n\nSources: [USERGUIDE](https://github.com/OpenMOSS/MOSS-Image/blob/main/USERGUIDE.md), README, HF Base/SFT cards; cross-checked against community benchmark notes.\n\n### Resolution\n\n| Item | Official |\n|------|----------|\n| Recommended total pixels | **1M, 1.5M, or 2M** |\n| Extrapolation range | **0.25M (512×512) to 4M (~2K)** |\n| Aspect ratio | Arbitrary; width/height must be positive multiples of **16** |\n| This template default | 1024×1024 (~1M) |\n\n### Strengths\n\n- ~**5B** single-stream DiT (Muon); FLUX.2 small VAE; Qwen-family text encoder.\n- Strong bilingual English and Chinese text rendering and auto layout; JSON Layout control for text/objects; long prompts (~**4K** tokens); anime and photorealistic.\n- **SFT** clearer text grouping/layouts; **Base** has no post-training / CFG distillation (better for community LoRAs).\n- Inputs: natural language, tag sequences, JSON layout (layout is experimental). Prefer English (most training data); Chinese supported.\n\n### Limits / notes\n\n- Auto line breaks may not match intent — use `\\n` or real newlines for precise text.\n- Turning off SLG looks more realistic but can collapse details; official negative-branch skip layer **22** (24/26 also help). kijai notes SLG can overblow anime styles.\n- Recommended negative prompt: `nsfw, worst quality, bad anatomy, watermark, jpeg artifact`\n- If VRAM is tight, lower resolution or use Sequential / CPU offload.\n- When training LoRA yourself, **freeze the text encoder**.\n- License: Apache 2.0.\n\n---\n\n## Sampling settings vs. official defaults\n\n| Setting | This template | OpenMOSS official |\n|---------|---------------|-------------------|\n| Steps | 25 | 50 |\n| CFG | 2.5 | 3 |\n| Sampler | er_sde | Euler |\n| Scheduler | simple | default |\n| Denoise | 1 | 1 |\n| Shift | 5 (model default) | 5 (same) |\n\nThis template follows the faster settings from kijai's ComfyUI MOSS-Image PR [#17095](https://github.com/comfyanonymous/ComfyUI/pull/17095). That is a speed trade-off, not a bug. For results closer to the official ones, try 50 steps and CFG 3.\n\n### Community notes\n\n- **Skip layer guidance:** can overblow anime styles; no alternative values were suggested (template keeps official layer 22). You can check the detail settings inside the subgraph\n- **Shift:** adjust with ModelSamplingAuraFlow or ModelSamplingFlux — ModelSamplingSD3 uses a completely different scale. You can enter the subgraph to adjust it\n- **SFT banding:** experimental LoRA at about −0.5 strength: [moss_image_sft_lora_blocks_21_to_49…](https://huggingface.co/Kijai/MOSS-image_experimental/blob/main/loras/moss_image_sft_lora_blocks_21_to_49_rank_512_bf16.safetensors)\n"
+      },
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 26,
+      "type": "LoadImageCrop (obvpm)",
+      "pos": [
+        -231.47071612517433,
+        -907.5261385580931
+      ],
+      "size": [
+        285.86484375,
+        462
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            88
+          ]
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        },
+        {
+          "name": "filename",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImageCrop (obvpm)"
+      },
+      "widgets_values": [
+        "example.png",
+        "",
+        0,
+        "free",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "example.png",
+        "crop": "",
+        "max_megapixels": 0,
+        "aspect": "free",
+        "upload": "image"
+      },
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 30,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        619.4733183831813,
+        -812.1899749031683
+      ],
+      "size": [
+        540.3359704589843,
+        275.1600000000001
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            96
+          ]
+        }
+      ],
+      "title": "Postive prompt",
+      "properties": {
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        "Girl sitting on an (red:5) bicycle. "
+      ],
+      "widgets_values_named": {
+        "value": "Girl sitting on an (red:5) bicycle. "
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 33,
+      "type": "UNETLoader",
+      "pos": [
+        139.67584342163008,
+        -1255.0967160765713
+      ],
+      "size": [
+        350,
+        90
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "slot_index": 0,
+          "links": [
+            64,
+            77
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UNETLoader",
+        "models": [
+          {
+            "name": "moss_image_sft_int8_convrot.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/MOSS-Image/resolve/main/diffusion_models/moss_image_sft_int8_convrot.safetensors",
+            "directory": "diffusion_models"
+          }
+        ]
+      },
+      "widgets_values": [
+        "moss_image_sft_int8_convrot.safetensors",
+        "default"
+      ],
+      "widgets_values_named": {
+        "unet_name": "moss_image_sft_int8_convrot.safetensors",
+        "weight_dtype": "default"
+      },
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 35,
+      "type": "CLIPLoader",
+      "pos": [
+        134.6510305961296,
+        -722.8271247574788
+      ],
+      "size": [
+        350,
+        140
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "showAdvanced": false,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "slot_index": 0,
+          "links": [
+            89
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPLoader",
+        "models": [
+          {
+            "name": "qwen3.5_9b_w4a8_gptq.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/MOSS-Image/resolve/main/text_encoders/qwen3.5_9b_w4a8_gptq.safetensors",
+            "directory": "text_encoders"
+          }
+        ]
+      },
+      "widgets_values": [
+        "qwen3.5_9b_int8_convrot.safetensors",
+        "moss_image",
+        "default"
+      ],
+      "widgets_values_named": {
+        "clip_name": "qwen3.5_9b_int8_convrot.safetensors",
+        "type": "moss_image",
+        "device": "default"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 36,
+      "type": "KSampler",
+      "pos": [
+        1232.13661408203,
+        -1263.7062904631666
+      ],
+      "size": [
+        290,
+        474
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 75
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 91
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 92
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 74
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            71
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        601527119753076,
+        "randomize",
+        25,
+        2.5,
+        "er_sde",
+        "simple",
+        1
+      ],
+      "widgets_values_named": {
+        "seed": 601527119753076,
+        "control_after_generate": "randomize",
+        "steps": 25,
+        "cfg": 2.5,
+        "sampler_name": "er_sde",
+        "scheduler": "simple",
+        "denoise": 1
+      },
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 37,
+      "type": "VAELoader",
+      "pos": [
+        139.67584342163008,
+        -525.0967160765707
+      ],
+      "size": [
+        350,
+        60
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "slot_index": 0,
+          "links": [
+            72
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader",
+        "models": [
+          {
+            "name": "flux2-vae_small.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/MOSS-Image/resolve/main/vae/flux2-vae_small.safetensors",
+            "directory": "vae"
+          }
+        ]
+      },
+      "widgets_values": [
+        "flux2-vae.safetensors"
+      ],
+      "widgets_values_named": {
+        "vae_name": "flux2-vae.safetensors"
+      },
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 40,
+      "type": "EmptyFlux2LatentImage",
+      "pos": [
+        155.41666779296804,
+        -307.2263038909016
+      ],
+      "size": [
+        300,
+        120
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 78
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 79
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            74
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptyFlux2LatentImage"
+      },
+      "widgets_values": [
+        1024,
+        1024,
+        1
+      ],
+      "widgets_values_named": {
+        "width": 1024,
+        "height": 1024,
+        "batch_size": 1
+      },
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 42,
+      "type": "VAEDecode",
+      "pos": [
+        1555.416667792968,
+        -1267.2263038909016
+      ],
+      "size": [
+        230,
+        70
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 71
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 72
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            73
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 43,
+      "type": "SkipLayerGuidanceDiTSimple",
+      "pos": [
+        124.54506320495537,
+        -933.1823317981278
+      ],
+      "size": [
+        363.84239187622074,
+        130
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "showAdvanced": true,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 64
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            76
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SkipLayerGuidanceDiTSimple"
+      },
+      "widgets_values": [
+        "",
+        "22",
+        0,
+        0.5
+      ],
+      "widgets_values_named": {
+        "double_layers": "",
+        "single_layers": "22",
+        "start_percent": 0,
+        "end_percent": 0.5
+      },
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 44,
+      "type": "ComfySwitchNode",
+      "pos": [
+        140.28885551452558,
+        -1091.6406248503747
+      ],
+      "size": [
+        270,
+        110
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "on_false",
+          "shape": 7,
+          "type": "MODEL",
+          "link": 77
+        },
+        {
+          "name": "on_true",
+          "shape": 7,
+          "type": "MODEL",
+          "link": 76
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "MODEL",
+          "links": [
+            75
+          ]
+        }
+      ],
+      "title": "Skip Layer guidance",
+      "properties": {
+        "Node name for S&R": "ComfySwitchNode"
+      },
+      "widgets_values": [
+        false
+      ],
+      "widgets_values_named": {
+        "switch": false
+      },
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 47,
+      "type": "TextEncodeMOSSImageVision",
+      "pos": [
+        617.9541275285528,
+        -1247.9147954822895
+      ],
+      "size": [
+        536.8471887658698,
+        377.5162920190432
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 89
+        },
+        {
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 88
+        },
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 96
+        },
+        {
+          "name": "negative_prompt",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "negative_prompt"
+          },
+          "link": 98
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            91
+          ]
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": [
+            92
+          ]
+        },
+        {
+          "name": "phrase_report",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "TextEncodeMOSSImageVision"
+      },
+      "widgets_values": [
+        "",
+        "",
+        1,
+        1,
+        "",
+        false,
+        true
+      ],
+      "widgets_values_named": {
+        "prompt": "",
+        "negative_prompt": "",
+        "image_weight": 1,
+        "vision_megapixels": 1,
+        "system_prompt": "",
+        "print_prompt": false,
+        "phrase_weighting": true
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 49,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        622.9187710517443,
+        -458.3642674048402
+      ],
+      "size": [
+        536.487911376953,
+        235.81604431152334
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            98
+          ]
+        }
+      ],
+      "title": "Negative prompt",
+      "properties": {
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        ""
+      ],
+      "widgets_values_named": {
+        "value": ""
+      },
+      "color": "#323",
+      "bgcolor": "#535"
+    }
+  ],
+  "links": [
+    [
+      64,
+      33,
+      0,
+      43,
+      0,
+      "MODEL"
+    ],
+    [
+      71,
+      36,
+      0,
+      42,
+      0,
+      "LATENT"
+    ],
+    [
+      72,
+      37,
+      0,
+      42,
+      1,
+      "VAE"
+    ],
+    [
+      73,
+      42,
+      0,
+      9,
+      0,
+      "IMAGE"
+    ],
+    [
+      74,
+      40,
+      0,
+      36,
+      3,
+      "LATENT"
+    ],
+    [
+      75,
+      44,
+      0,
+      36,
+      0,
+      "MODEL"
+    ],
+    [
+      76,
+      43,
+      0,
+      44,
+      1,
+      "MODEL"
+    ],
+    [
+      77,
+      33,
+      0,
+      44,
+      0,
+      "MODEL"
+    ],
+    [
+      78,
+      19,
+      0,
+      40,
+      0,
+      "INT"
+    ],
+    [
+      79,
+      19,
+      1,
+      40,
+      1,
+      "INT"
+    ],
+    [
+      88,
+      26,
+      0,
+      47,
+      1,
+      "IMAGE"
+    ],
+    [
+      89,
+      35,
+      0,
+      47,
+      0,
+      "CLIP"
+    ],
+    [
+      91,
+      47,
+      0,
+      36,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      92,
+      47,
+      1,
+      36,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      96,
+      30,
+      0,
+      47,
+      2,
+      "STRING"
+    ],
+    [
+      98,
+      49,
+      0,
+      47,
+      3,
+      "STRING"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 6,
+      "title": "Models",
+      "bounding": [
+        79.67584342163012,
+        -1325.0967160765713,
+        460,
+        880
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 7,
+      "title": "Prompt",
+      "bounding": [
+        575.416667792968,
+        -1327.2263038909016,
+        633.8788621276855,
+        1136.5103378723145
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 8,
+      "title": "Image Size",
+      "bounding": [
+        75.41666779296804,
+        -417.2263038909016,
+        457.42312502136247,
+        387.61178331909196
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.6209213230591556,
+      "offset": [
+        1136.73708162151,
+        1580.3676528285994
+      ]
+    },
+    "frontendVersion": "1.55.18",
+    "VHS_latentpreview": true,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "extensions": {
+    "seed_widgets": {
+      "36": 0
+    }
+  },
+  "version": 0.4,
+  "seed_widgets": {
+    "36": 0
+  }
+}

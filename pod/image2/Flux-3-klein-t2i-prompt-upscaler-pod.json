@@ -1,15 +1,15 @@
 {
   "id": "0ae2b50b-b07a-4465-bb7c-d8fe58e8e0ac",
   "revision": 0,
-  "last_node_id": 81,
-  "last_link_id": 146,
+  "last_node_id": 85,
+  "last_link_id": 158,
   "nodes": [
     {
       "id": 1,
       "type": "UNETLoader",
       "pos": [
-        -927.2344051873263,
-        -856.7308878489011
+        -1142.2414672218679,
+        -618.1424277855349
       ],
       "size": [
         440,
@@ -54,8 +54,8 @@
       "id": 2,
       "type": "CLIPLoader",
       "pos": [
-        -927.2344051873263,
-        -696.7308878489015
+        -1134.6122444599139,
+        -442.88386584803817
       ],
       "size": [
         440,
@@ -102,8 +102,8 @@
       "id": 3,
       "type": "VAELoader",
       "pos": [
-        -925.6294195197094,
-        -513.6092604107199
+        -1139.11053222963,
+        -242.9777853545331
       ],
       "size": [
         450,
@@ -143,71 +143,18 @@
       "bgcolor": "#653"
     },
     {
-      "id": 4,
-      "type": "CLIPTextEncode",
-      "pos": [
-        592.8925142748958,
-        56.485278803139174
-      ],
-      "size": [
-        210,
-        88
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 17,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 136
-        },
-        {
-          "name": "text",
-          "type": "STRING",
-          "widget": {
-            "name": "text"
-          },
-          "link": 119
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "slot_index": 0,
-          "links": [
-            44,
-            145
-          ]
-        }
-      ],
-      "title": "Positive Prompt",
-      "properties": {
-        "Node name for S&R": "CLIPTextEncode"
-      },
-      "widgets_values": [
-        ""
-      ],
-      "widgets_values_named": {
-        "text": ""
-      }
-    },
-    {
       "id": 7,
       "type": "KSampler",
       "pos": [
-        840.0435805233009,
-        88.09790313840551
+        852.5278796382689,
+        132.48645753963194
       ],
       "size": [
         392.53000291396927,
         625.0601395683907
       ],
       "flags": {},
-      "order": 19,
+      "order": 20,
       "mode": 0,
       "inputs": [
         {
@@ -218,7 +165,7 @@
         {
           "name": "positive",
           "type": "CONDITIONING",
-          "link": 145
+          "link": 157
         },
         {
           "name": "negative",
@@ -245,8 +192,8 @@
         "Node name for S&R": "KSampler"
       },
       "widgets_values": [
-        1006151756500561,
-        "randomize",
+        630552773154930,
+        "fixed",
         16,
         1,
         "euler",
@@ -254,8 +201,8 @@
         1
       ],
       "widgets_values_named": {
-        "seed": 1006151756500561,
-        "control_after_generate": "randomize",
+        "seed": 630552773154930,
+        "control_after_generate": "fixed",
         "steps": 16,
         "cfg": 1,
         "sampler_name": "euler",
@@ -279,7 +226,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 20,
+      "order": 21,
       "mode": 0,
       "inputs": [
         {
@@ -321,7 +268,7 @@
         950.8294217367193
       ],
       "flags": {},
-      "order": 21,
+      "order": 22,
       "mode": 0,
       "inputs": [
         {
@@ -353,8 +300,8 @@
       "id": 32,
       "type": "ConditioningZeroOut",
       "pos": [
-        557.6881574834741,
-        117.512597841065
+        562.4253407165795,
+        56.87663800058066
       ],
       "size": [
         210,
@@ -363,13 +310,13 @@
       "flags": {
         "collapsed": true
       },
-      "order": 18,
+      "order": 19,
       "mode": 0,
       "inputs": [
         {
           "name": "conditioning",
           "type": "CONDITIONING",
-          "link": 44
+          "link": 152
         }
       ],
       "outputs": [
@@ -389,8 +336,8 @@
       "id": 44,
       "type": "EmptyFlux2LatentImage",
       "pos": [
-        -1122.9119838329416,
-        378.58124187011515
+        -1124.2991046611526,
+        599.1368401327684
       ],
       "size": [
         270,
@@ -446,8 +393,8 @@
       "id": 61,
       "type": "ComfyUI_Image_Prompt_llama-cpp",
       "pos": [
-        -612.4530405975719,
-        385.95965723330977
+        -631.2542024692588,
+        815.1001744311618
       ],
       "size": [
         770.471414745005,
@@ -531,7 +478,7 @@
           "name": "enhanced_prompt",
           "type": "STRING",
           "links": [
-            117
+            158
           ]
         },
         {
@@ -560,7 +507,7 @@
         "",
         false,
         "medium",
-        770027608049389,
+        898358364130628,
         "randomize",
         8192,
         true,
@@ -574,7 +521,7 @@
         "mmproj": "",
         "think_mode": false,
         "reasoning_effort": "medium",
-        "seed": 770027608049389,
+        "seed": 898358364130628,
         "control_after_generate": "randomize",
         "max_tokens": 8192,
         "force_unload_model": true,
@@ -588,12 +535,12 @@
       "id": 66,
       "type": "PreviewAny",
       "pos": [
-        259.5575056699693,
-        178.3197285391944
+        259.07591988253444,
+        266.6268176947159
       ],
       "size": [
-        503.58487286322065,
-        531.4771897620241
+        506.3591145196424,
+        449.63579093116084
       ],
       "flags": {},
       "order": 15,
@@ -602,7 +549,7 @@
         {
           "name": "source",
           "type": "*",
-          "link": 117
+          "link": 158
         }
       ],
       "outputs": [
@@ -610,7 +557,7 @@
           "name": "STRING",
           "type": "STRING",
           "links": [
-            119
+            149
           ]
         }
       ],
@@ -627,8 +574,8 @@
       "id": 67,
       "type": "PrimitiveStringMultiline",
       "pos": [
-        -647.9867119983493,
-        -126.37121444280088
+        -657.3930174094864,
+        74.93191561344958
       ],
       "size": [
         808.6774748808341,
@@ -652,10 +599,10 @@
         "Node name for S&R": "PrimitiveStringMultiline"
       },
       "widgets_values": [
-        "Girl standing against a tree in a forest meditating, sunrays create a pattern of light and shadow accentuating the tranquility of the forest, photorealistic, hyper realism."
+        "girl riding on a red bicycle"
       ],
       "widgets_values_named": {
-        "value": "Girl standing against a tree in a forest meditating, sunrays create a pattern of light and shadow accentuating the tranquility of the forest, photorealistic, hyper realism."
+        "value": "girl riding on a red bicycle"
       },
       "color": "#232",
       "bgcolor": "#353"
@@ -664,8 +611,8 @@
       "id": 68,
       "type": "ResolutionMaster",
       "pos": [
-        -1123.21269239384,
-        -150.5421876458464
+        -1124.599813222051,
+        70.01341061680702
       ],
       "size": [
         330,
@@ -840,8 +787,8 @@
       "id": 72,
       "type": "SetNode",
       "pos": [
-        44.29803621325078,
-        -826.4231935975752
+        -170.70902582129173,
+        -587.8347335342089
       ],
       "size": [
         210,
@@ -885,8 +832,8 @@
       "id": 73,
       "type": "Lora Loader (LoraManager)",
       "pos": [
-        -422.81263762742464,
-        -856.5471902465105
+        -637.8196996619665,
+        -617.9587301831442
       ],
       "size": [
         410.31760257435394,
@@ -971,8 +918,8 @@
       "id": 74,
       "type": "SetNode",
       "pos": [
-        53.46943286434901,
-        -761.0785667970474
+        -161.5376291701935,
+        -522.4901067336812
       ],
       "size": [
         210,
@@ -1016,8 +963,8 @@
       "id": 75,
       "type": "GetNode",
       "pos": [
-        263.01724235946665,
-        57.52737899089296
+        265.31000405898857,
+        48.35615726630005
       ],
       "size": [
         210,
@@ -1034,7 +981,7 @@
           "name": "CLIP",
           "type": "CLIP",
           "links": [
-            136
+            147
           ]
         }
       ],
@@ -1056,8 +1003,8 @@
       "id": 76,
       "type": "SetNode",
       "pos": [
-        -607.5438539940195,
-        -379.3280149835946
+        -816.4474679708447,
+        -81.23114008127227
       ],
       "size": [
         210,
@@ -1101,8 +1048,8 @@
       "id": 78,
       "type": "SetNode",
       "pos": [
-        -923.6147557285823,
-        380.5638922460366
+        -925.0018765567931,
+        601.1194905086898
       ],
       "size": [
         210,
@@ -1146,8 +1093,8 @@
       "id": 79,
       "type": "GetNode",
       "pos": [
-        971.4836324069386,
-        18.27447649737709
+        983.9679315219066,
+        62.66303089860347
       ],
       "size": [
         210,
@@ -1186,8 +1133,8 @@
       "id": 80,
       "type": "GetNode",
       "pos": [
-        833.9163560970736,
-        26.299295506395893
+        846.4006552120417,
+        70.6878499076223
       ],
       "size": [
         210,
@@ -1261,6 +1208,112 @@
       },
       "color": "#322",
       "bgcolor": "#533"
+    },
+    {
+      "id": 82,
+      "type": "Flux3KleinPhraseWeights",
+      "pos": [
+        273.29216177696657,
+        101.6385076576796
+      ],
+      "size": [
+        413.87141994317903,
+        108
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 147
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": 150
+        }
+      ],
+      "outputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "links": [
+            152,
+            157
+          ]
+        },
+        {
+          "name": "phrase_report",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Flux3KleinPhraseWeights"
+      },
+      "widgets_values": [
+        "A (red bicycle:1.3) beside a blue wall."
+      ],
+      "widgets_values_named": {
+        "text": "A (red bicycle:1.3) beside a blue wall."
+      },
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 83,
+      "type": "StringConcatenate",
+      "pos": [
+        -650.8457833781747,
+        550.5702125546981
+      ],
+      "size": [
+        794.7049396713179,
+        166
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string_a",
+          "type": "STRING",
+          "widget": {
+            "name": "string_a"
+          },
+          "link": 149
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            150
+          ]
+        }
+      ],
+      "title": "Phrase weight",
+      "properties": {
+        "Node name for S&R": "StringConcatenate"
+      },
+      "widgets_values": [
+        "",
+        "(red bicycle:10)",
+        ","
+      ],
+      "widgets_values_named": {
+        "string_a": "",
+        "string_b": "(red bicycle:10)",
+        "delimiter": ","
+      },
+      "color": "#233",
+      "bgcolor": "#355"
     }
   ],
   "links": [
@@ -1279,30 +1332,6 @@
       9,
       0,
       "IMAGE"
-    ],
-    [
-      44,
-      4,
-      0,
-      32,
-      0,
-      "CONDITIONING"
-    ],
-    [
-      117,
-      61,
-      0,
-      66,
-      0,
-      "STRING"
-    ],
-    [
-      119,
-      66,
-      0,
-      4,
-      1,
-      "STRING"
     ],
     [
       120,
@@ -1353,14 +1382,6 @@
       "CLIP"
     ],
     [
-      136,
-      75,
-      0,
-      4,
-      0,
-      "CLIP"
-    ],
-    [
       138,
       3,
       0,
@@ -1401,20 +1422,60 @@
       "VAE"
     ],
     [
-      145,
-      4,
-      0,
-      7,
-      1,
-      "CONDITIONING"
-    ],
-    [
       146,
       32,
       0,
       7,
       2,
       "CONDITIONING"
+    ],
+    [
+      147,
+      75,
+      0,
+      82,
+      0,
+      "CLIP"
+    ],
+    [
+      149,
+      66,
+      0,
+      83,
+      0,
+      "STRING"
+    ],
+    [
+      150,
+      83,
+      0,
+      82,
+      1,
+      "STRING"
+    ],
+    [
+      152,
+      82,
+      0,
+      32,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      157,
+      82,
+      0,
+      7,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      158,
+      61,
+      0,
+      66,
+      0,
+      "STRING"
     ],
     [
       134,
@@ -1430,8 +1491,8 @@
       "id": 1,
       "title": "Models",
       "bounding": [
-        -947.2344051873263,
-        -956.7308878489005,
+        -1162.2414672218677,
+        -718.1424277855342,
         1135.4223454946023,
         671.9055279828716
       ],
@@ -1454,8 +1515,8 @@
       "id": 3,
       "title": "Sampling",
       "bounding": [
-        798.9560931924871,
-        -66.48861438610075,
+        811.4403923074551,
+        -22.100059984874356,
         472.28941874367206,
         815.274066026097
       ],
@@ -1466,8 +1527,8 @@
       "id": 8,
       "title": "Size",
       "bounding": [
-        -1164.232487774416,
-        -236.7545827018354,
+        -1165.619608602627,
+        -16.198984439181952,
         468.0590525527899,
         644.5668498941865
       ],
@@ -1478,10 +1539,10 @@
       "id": 9,
       "title": "Prompt",
       "bounding": [
-        -662.536007522936,
-        -219.75627781990696,
-        867.0360527349553,
-        1287.6822301280597
+        -671.9423129340731,
+        -18.453147763656492,
+        874.9424912564868,
+        1501.109339311988
       ],
       "color": "#3f789e",
       "flags": {}
@@ -1490,10 +1551,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.4333023174147461,
+      "scale": 0.5242958040718454,
       "offset": [
-        1764.7570453197948,
-        875.3573007258509
+        1446.417602780315,
+        748.7613396782525
       ]
     },
     "frontendVersion": "1.55.18",

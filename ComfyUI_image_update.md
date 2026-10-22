@@ -8,14 +8,15 @@
 - Pinned custom nodes are not updated automatically, because changing those pins can introduce compatibility issues.
 - Tested on a wide range of GPU's including RTX 3090,4090,5090, L40S, L4 , PRO 6000 MiG 24/48 Gb.
 
-## 201O2O26
+## 221O2O26
 
-- Updated ComfyUI to version 0.42.1
-- Added flux-3-klein support.
+- Updated ComfyUI to version 0.42.1.
+- Added Flux 3 Image klein support.
 - Added MOSS-image support.
-- Added flux-3 prompt enhancer skills.
+- Added flux 3 Image klein VLM prompt enhancer skills.
 - [ComfyUI-NKD-Klein-Tools](https://github.com/Nekodificador/ComfyUI-NKD-Klein-Tools)
 - [ComfyUI-MOSS-Image-Ostris-Edit](https://github.com/ostris/ComfyUI-MOSS-Image-Ostris-Edit)
+- [ComfyUI-MOSSImageTextEncoder](https://github.com/ThetaCursed/ComfyUI-MOSSImageTextEncoder)
 
 ## 171O2O26
 

@@ -1,8 +1,8 @@
 {
   "id": "0ae2b50b-b07a-4465-bb7c-d8fe58e8e0ac",
   "revision": 0,
-  "last_node_id": 82,
-  "last_link_id": 148,
+  "last_node_id": 85,
+  "last_link_id": 158,
   "nodes": [
     {
       "id": 1,
@@ -143,71 +143,18 @@
       "bgcolor": "#653"
     },
     {
-      "id": 4,
-      "type": "CLIPTextEncode",
-      "pos": [
-        410.2940862376316,
-        54.59372634863903
-      ],
-      "size": [
-        210,
-        88
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 22,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 136
-        },
-        {
-          "name": "text",
-          "type": "STRING",
-          "widget": {
-            "name": "text"
-          },
-          "link": 119
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "slot_index": 0,
-          "links": [
-            20,
-            44
-          ]
-        }
-      ],
-      "title": "Positive Prompt",
-      "properties": {
-        "Node name for S&R": "CLIPTextEncode"
-      },
-      "widgets_values": [
-        ""
-      ],
-      "widgets_values_named": {
-        "text": ""
-      }
-    },
-    {
       "id": 7,
       "type": "KSampler",
       "pos": [
-        858.4651703442543,
-        130.75432737681638
+        882.0465419154444,
+        139.07715817661673
       ],
       "size": [
         392.53000291396927,
         625.0601395683907
       ],
       "flags": {},
-      "order": 26,
+      "order": 27,
       "mode": 0,
       "inputs": [
         {
@@ -218,7 +165,7 @@
         {
           "name": "positive",
           "type": "CONDITIONING",
-          "link": 22
+          "link": 154
         },
         {
           "name": "negative",
@@ -245,7 +192,7 @@
         "Node name for S&R": "KSampler"
       },
       "widgets_values": [
-        294534166159796,
+        697841487680431,
         "randomize",
         16,
         1,
@@ -254,7 +201,7 @@
         1
       ],
       "widgets_values_named": {
-        "seed": 294534166159796,
+        "seed": 697841487680431,
         "control_after_generate": "randomize",
         "steps": 16,
         "cfg": 1,
@@ -269,8 +216,8 @@
       "id": 8,
       "type": "VAEDecode",
       "pos": [
-        1366.371193339058,
-        -96.30092517742773
+        1347.9260776349702,
+        -120.77515092536527
       ],
       "size": [
         210,
@@ -279,7 +226,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 27,
+      "order": 28,
       "mode": 0,
       "inputs": [
         {
@@ -313,15 +260,15 @@
       "id": 9,
       "type": "SaveImage",
       "pos": [
-        1349.9714173968634,
-        -0.7250324988799806
+        1345.545453559105,
+        6.084438480587741
       ],
       "size": [
         881.9513320688438,
         1491.999425349832
       ],
       "flags": {},
-      "order": 28,
+      "order": 29,
       "mode": 0,
       "inputs": [
         {
@@ -382,21 +329,21 @@
       "id": 17,
       "type": "ReferenceMultiLatent",
       "pos": [
-        842.0872213163365,
-        -541.8978269120224
+        511.6951613075974,
+        -478.8458699746013
       ],
       "size": [
         280,
         382
       ],
       "flags": {},
-      "order": 24,
+      "order": 25,
       "mode": 0,
       "inputs": [
         {
           "name": "positive",
           "type": "CONDITIONING",
-          "link": 20
+          "link": 155
         },
         {
           "name": "negative",
@@ -421,6 +368,24 @@
           "shape": 7,
           "type": "IMAGE",
           "link": 93
+        },
+        {
+          "name": "images.image6",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 98
+        },
+        {
+          "name": "images.image7",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 99
+        },
+        {
+          "name": "images.image8",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 100
         },
         {
           "name": "images.image9",
@@ -463,24 +428,6 @@
           "shape": 7,
           "type": "IMAGE",
           "link": 97
-        },
-        {
-          "name": "images.image6",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 98
-        },
-        {
-          "name": "images.image7",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 99
-        },
-        {
-          "name": "images.image8",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 100
         }
       ],
       "outputs": [
@@ -488,7 +435,7 @@
           "name": "positive",
           "type": "CONDITIONING",
           "links": [
-            22
+            154
           ]
         },
         {
@@ -524,8 +471,8 @@
       "id": 32,
       "type": "ConditioningZeroOut",
       "pos": [
-        417.0824104076615,
-        104.01953168309578
+        571.8116753830653,
+        142.3550460727385
       ],
       "size": [
         210,
@@ -534,13 +481,13 @@
       "flags": {
         "collapsed": true
       },
-      "order": 23,
+      "order": 24,
       "mode": 0,
       "inputs": [
         {
           "name": "conditioning",
           "type": "CONDITIONING",
-          "link": 44
+          "link": 152
         }
       ],
       "outputs": [
@@ -554,7 +501,9 @@
       ],
       "properties": {
         "Node name for S&R": "ConditioningZeroOut"
-      }
+      },
+      "color": "#323",
+      "bgcolor": "#535"
     },
     {
       "id": 44,
@@ -570,7 +519,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 16,
+      "order": 17,
       "mode": 4,
       "inputs": [
         {
@@ -665,8 +614,8 @@
       "id": 60,
       "type": "LSReferenceSpitter",
       "pos": [
-        585.0659980849805,
-        -509.4745772291865
+        281.1558167536089,
+        -456.51094013642336
       ],
       "size": [
         174.0142578125,
@@ -764,15 +713,15 @@
       "id": 61,
       "type": "ComfyUI_Image_Prompt_llama-cpp",
       "pos": [
-        -323.54921549255755,
-        777.1336572987473
+        -328.4123497729205,
+        1009.1712996652236
       ],
       "size": [
         493.04301588142243,
         641.7922006404315
       ],
       "flags": {},
-      "order": 19,
+      "order": 20,
       "mode": 0,
       "inputs": [
         {
@@ -848,9 +797,7 @@
         {
           "name": "enhanced_prompt",
           "type": "STRING",
-          "links": [
-            117
-          ]
+          "links": []
         },
         {
           "name": "selected_skill",
@@ -878,7 +825,7 @@
         "Flux-VLM-Heretic/mmproj-flux3-klein-te-heretic-dhq-f16.gguf",
         false,
         "medium",
-        236648317270309,
+        1037529894998833,
         "randomize",
         8192,
         true,
@@ -892,7 +839,7 @@
         "mmproj": "Flux-VLM-Heretic/mmproj-flux3-klein-te-heretic-dhq-f16.gguf",
         "think_mode": false,
         "reasoning_effort": "medium",
-        "seed": 236648317270309,
+        "seed": 1037529894998833,
         "control_after_generate": "randomize",
         "max_tokens": 8192,
         "force_unload_model": true,
@@ -906,8 +853,8 @@
       "id": 62,
       "type": "LSReferenceSpitter",
       "pos": [
-        -577.3633073230313,
-        775.9516930649652
+        -605.4197687854924,
+        1003.0356118867755
       ],
       "size": [
         174.0142578125,
@@ -1005,21 +952,21 @@
       "id": 66,
       "type": "PreviewAny",
       "pos": [
-        256.2789237863572,
-        181.47235284369927
+        270.02413600552705,
+        277.68966578025766
       ],
       "size": [
         504.97188786089623,
         585.5757487065297
       ],
       "flags": {},
-      "order": 21,
+      "order": 16,
       "mode": 0,
       "inputs": [
         {
           "name": "source",
           "type": "*",
-          "link": 117
+          "link": 158
         }
       ],
       "outputs": [
@@ -1027,7 +974,7 @@
           "name": "STRING",
           "type": "STRING",
           "links": [
-            119
+            149
           ]
         }
       ],
@@ -1044,8 +991,8 @@
       "id": 67,
       "type": "PrimitiveStringMultiline",
       "pos": [
-        -657.6966636263601,
-        409.0655741978064
+        -643.0544871908271,
+        407.34302125423346
       ],
       "size": [
         829.4846047956028,
@@ -1060,7 +1007,8 @@
           "name": "STRING",
           "type": "STRING",
           "links": [
-            120
+            120,
+            158
           ]
         }
       ],
@@ -1069,10 +1017,10 @@
         "Node name for S&R": "PrimitiveStringMultiline"
       },
       "widgets_values": [
-        "Create a scene where the girl in image 1 sittng on a lying tree, holding the ape from image 2, with both her hands, the background is a rain forest jungle. photorealistic."
+        "Girl riding on a red bicycle."
       ],
       "widgets_values_named": {
-        "value": "Create a scene where the girl in image 1 sittng on a lying tree, holding the ape from image 2, with both her hands, the background is a rain forest jungle. photorealistic."
+        "value": "Girl riding on a red bicycle."
       },
       "color": "#232",
       "bgcolor": "#353"
@@ -1267,7 +1215,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 17,
+      "order": 18,
       "mode": 0,
       "inputs": [
         {
@@ -1398,7 +1346,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 18,
+      "order": 19,
       "mode": 0,
       "inputs": [
         {
@@ -1433,8 +1381,8 @@
       "id": 75,
       "type": "GetNode",
       "pos": [
-        259.23413745046645,
-        44.91699722436649
+        266.8003472684667,
+        48.70015023815547
       ],
       "size": [
         210,
@@ -1451,7 +1399,7 @@
           "name": "CLIP",
           "type": "CLIP",
           "links": [
-            136
+            153
           ]
         }
       ],
@@ -1518,8 +1466,8 @@
       "id": 77,
       "type": "GetNode",
       "pos": [
-        579.2732129975753,
-        -575.9669604388442
+        289.2344323674674,
+        -523.0033233460808
       ],
       "size": [
         210,
@@ -1568,7 +1516,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 20,
+      "order": 22,
       "mode": 4,
       "inputs": [
         {
@@ -1603,8 +1551,8 @@
       "id": 79,
       "type": "GetNode",
       "pos": [
-        703.3056366250172,
-        -581.052174990254
+        413.2668559949091,
+        -528.0885378974906
       ],
       "size": [
         210,
@@ -1643,8 +1591,8 @@
       "id": 80,
       "type": "GetNode",
       "pos": [
-        852.337945918027,
-        68.9557197448068
+        875.9193174892172,
+        77.27855054460716
       ],
       "size": [
         210,
@@ -1683,8 +1631,8 @@
       "id": 81,
       "type": "GetNode",
       "pos": [
-        1367.7690449792549,
-        -155.59530164069855
+        1347.2277634861605,
+        -190.19316422990929
       ],
       "size": [
         210,
@@ -1723,8 +1671,8 @@
       "id": 82,
       "type": "Any Switch (rgthree)",
       "pos": [
-        927.5307162647695,
-        -113.39001923310224
+        621.098400854346,
+        -51.599009073235045
       ],
       "size": [
         263.72841796875,
@@ -1733,7 +1681,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 25,
+      "order": 26,
       "mode": 0,
       "inputs": [
         {
@@ -1761,6 +1709,7 @@
           "link": null
         },
         {
+          "dir": 3,
           "name": "any_05",
           "type": "LATENT",
           "link": null
@@ -1779,6 +1728,112 @@
         }
       ],
       "properties": {}
+    },
+    {
+      "id": 83,
+      "type": "Flux3KleinPhraseWeights",
+      "pos": [
+        278.88203448543413,
+        114.75301735875962
+      ],
+      "size": [
+        241.66953125,
+        108
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 153
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": 150
+        }
+      ],
+      "outputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "links": [
+            152,
+            155
+          ]
+        },
+        {
+          "name": "phrase_report",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Flux3KleinPhraseWeights"
+      },
+      "widgets_values": [
+        "A (red bicycle:1.3) beside a blue wall."
+      ],
+      "widgets_values_named": {
+        "text": "A (red bicycle:1.3) beside a blue wall."
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 84,
+      "type": "StringConcatenate",
+      "pos": [
+        -639.5320974714634,
+        759.6480197907766
+      ],
+      "size": [
+        813.6205123211093,
+        166
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string_a",
+          "type": "STRING",
+          "widget": {
+            "name": "string_a"
+          },
+          "link": 149
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            150
+          ]
+        }
+      ],
+      "title": "Phrase weight",
+      "properties": {
+        "Node name for S&R": "StringConcatenate"
+      },
+      "widgets_values": [
+        "",
+        "(red bicycle:5)",
+        ","
+      ],
+      "widgets_values_named": {
+        "string_a": "",
+        "string_b": "(red bicycle:5)",
+        "delimiter": ","
+      },
+      "color": "#233",
+      "bgcolor": "#355"
     }
   ],
   "links": [
@@ -1799,27 +1854,11 @@
       "IMAGE"
     ],
     [
-      22,
-      17,
-      0,
-      7,
-      1,
-      "CONDITIONING"
-    ],
-    [
       23,
       17,
       1,
       7,
       2,
-      "CONDITIONING"
-    ],
-    [
-      44,
-      4,
-      0,
-      32,
-      0,
       "CONDITIONING"
     ],
     [
@@ -1919,22 +1958,6 @@
       "IMAGE_REFERENCES"
     ],
     [
-      117,
-      61,
-      0,
-      66,
-      0,
-      "STRING"
-    ],
-    [
-      119,
-      66,
-      0,
-      4,
-      1,
-      "STRING"
-    ],
-    [
       120,
       67,
       0,
@@ -1983,14 +2006,6 @@
       "CLIP"
     ],
     [
-      136,
-      75,
-      0,
-      4,
-      0,
-      "CLIP"
-    ],
-    [
       138,
       3,
       0,
@@ -2031,8 +2046,64 @@
       "LATENT"
     ],
     [
-      20,
-      4,
+      149,
+      66,
+      0,
+      84,
+      0,
+      "STRING"
+    ],
+    [
+      150,
+      84,
+      0,
+      83,
+      1,
+      "STRING"
+    ],
+    [
+      152,
+      83,
+      0,
+      32,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      153,
+      75,
+      0,
+      83,
+      0,
+      "CLIP"
+    ],
+    [
+      154,
+      17,
+      0,
+      7,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      158,
+      67,
+      0,
+      66,
+      0,
+      "STRING"
+    ],
+    [
+      134,
+      2,
+      0,
+      73,
+      1,
+      "CLIP"
+    ],
+    [
+      155,
+      83,
       0,
       17,
       0,
@@ -2071,51 +2142,11 @@
       "IMAGE"
     ],
     [
-      101,
-      60,
-      9,
-      17,
-      5,
-      "IMAGE"
-    ],
-    [
-      94,
-      60,
-      2,
-      17,
-      8,
-      "IMAGE"
-    ],
-    [
-      95,
-      60,
-      3,
-      17,
-      9,
-      "IMAGE"
-    ],
-    [
-      96,
-      60,
-      4,
-      17,
-      10,
-      "IMAGE"
-    ],
-    [
-      97,
-      60,
-      5,
-      17,
-      11,
-      "IMAGE"
-    ],
-    [
       98,
       60,
       6,
       17,
-      12,
+      5,
       "IMAGE"
     ],
     [
@@ -2123,7 +2154,7 @@
       60,
       7,
       17,
-      13,
+      6,
       "IMAGE"
     ],
     [
@@ -2131,16 +2162,48 @@
       60,
       8,
       17,
-      14,
+      7,
       "IMAGE"
     ],
     [
-      134,
+      101,
+      60,
+      9,
+      17,
+      8,
+      "IMAGE"
+    ],
+    [
+      94,
+      60,
       2,
-      0,
-      73,
-      1,
-      "CLIP"
+      17,
+      11,
+      "IMAGE"
+    ],
+    [
+      95,
+      60,
+      3,
+      17,
+      12,
+      "IMAGE"
+    ],
+    [
+      96,
+      60,
+      4,
+      17,
+      13,
+      "IMAGE"
+    ],
+    [
+      97,
+      60,
+      5,
+      17,
+      14,
+      "IMAGE"
     ],
     [
       146,
@@ -2176,10 +2239,10 @@
       "id": 2,
       "title": "Prompt",
       "bounding": [
-        241.92736005085268,
-        -29.070036047720556,
-        534.1983771456455,
-        827.8155975949325
+        249.49356986885306,
+        -25.28688303393155,
+        558.19986969662,
+        912.7447955971735
       ],
       "color": "#3f789e",
       "flags": {}
@@ -2188,8 +2251,8 @@
       "id": 3,
       "title": "Sampling",
       "bounding": [
-        817.3776830134404,
-        -23.832190147689847,
+        840.9590545846306,
+        -15.509359347889491,
         472.28941874367206,
         815.274066026097
       ],
@@ -2200,8 +2263,8 @@
       "id": 4,
       "title": "Plug more reference images here",
       "bounding": [
-        545.8787068871862,
-        -658.1243901353574,
+        255.83992625707825,
+        -605.160753042594,
         589.8605627889021,
         557.2657374733476
       ],
@@ -2238,8 +2301,8 @@
       "bounding": [
         -672.2459591509468,
         315.6805108207004,
-        872.5846418783342,
-        1128.1609007814995
+        883.9341009197012,
+        1419.4607965559226
       ],
       "color": "#3f789e",
       "flags": {}
@@ -2248,10 +2311,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.5767253844790253,
+      "scale": 0.5242958040718431,
       "offset": [
-        1469.2958513599112,
-        547.7713276161351
+        1580.5705345422489,
+        1399.074897187159
       ]
     },
     "frontendVersion": "1.55.18",

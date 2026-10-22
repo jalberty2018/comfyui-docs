@@ -102,6 +102,16 @@
 
 - [ComfyUI-NKD-Klein-Tools](https://github.com/Nekodificador/ComfyUI-NKD-Klein-Tools)
 
+#### MOSS
+
+- [ComfyUI-MOSSImageTextEncoder](https://github.com/jalberty2018/ComfyUI-MOSSImageTextEncoder)
+- [ComfyUI-MOSS-Image-Ostris-Edit](https://github.com/ostris/ComfyUI-MOSS-Image-Ostris-Edit)
+
+#### Experimental text phase conditioning for flux and moss
+
+- [ComfyUI-Phrase-Weight-Conditioning](https://github.com/jalberty2018/ComfyUI-Phrase-Weight-Conditioning)
+
+
 ## 🧩 All possible Custom Nodes
 
 - [Full List](https://comfyui.rozenlaan.site)
