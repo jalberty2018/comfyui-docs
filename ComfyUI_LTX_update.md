@@ -7,11 +7,17 @@
 - The date reflects when the related custom nodes were cloned from their upstream repositories.
 - Pinned custom nodes are not updated automatically, because changing those pins can introduce compatibility issues.
 
-## 21102026 maintenance update
+## 23102026 
 
-- ComfyUI 0.36.0 frozen until major update of ltx.
+- ComfyUI 0.42.1.
+- RTX VFX support.
+
+## 21102026 
+
+- ComfyUI 0.36.0
 - Update custom nodes.
 - Custom node ComfyUI-CreateVideo-FFmpeg updated, option disable metadata, option preview.
+- Last version working on CUDA 12.x
 
 ## 19092026
 
