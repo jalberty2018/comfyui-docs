@@ -1,8 +1,8 @@
 {
   "id": "e3f2b845-8f2c-4b5a-9caf-eac1029d3e7e",
   "revision": 0,
-  "last_node_id": 257,
-  "last_link_id": 428,
+  "last_node_id": 258,
+  "last_link_id": 429,
   "nodes": [
     {
       "id": 151,
@@ -962,7 +962,7 @@
         "kjPovPanelH": 191
       },
       "widgets_values": [
-        512,
+        256,
         80,
         true,
         1,
@@ -971,7 +971,7 @@
         ""
       ],
       "widgets_values_named": {
-        "max_resolution": 512,
+        "max_resolution": 256,
         "jpeg_quality": 80,
         "suppress_default_preview": true,
         "preview_frames": 1,
@@ -1444,8 +1444,8 @@
       "id": 246,
       "type": "GetNode",
       "pos": [
-        644.3876683579746,
-        4312.661528294651
+        636.4741459663268,
+        4641.07150004496
       ],
       "size": [
         210,
@@ -1484,8 +1484,8 @@
       "id": 247,
       "type": "GetNode",
       "pos": [
-        814.3876683579746,
-        4312.661528294651
+        806.4741459663268,
+        4641.07150004496
       ],
       "size": [
         210,
@@ -1524,8 +1524,8 @@
       "id": 248,
       "type": "VAEDecode",
       "pos": [
-        673.710666132869,
-        4404.280183692627
+        665.7971437412212,
+        4732.690155442936
       ],
       "size": [
         230,
@@ -1567,8 +1567,8 @@
       "id": 249,
       "type": "VAEDecodeAudio",
       "pos": [
-        654.3876683579746,
-        4482.66152829465
+        646.4741459663268,
+        4811.071500044959
       ],
       "size": [
         230,
@@ -1610,8 +1610,8 @@
       "id": 250,
       "type": "PrimitiveInt",
       "pos": [
-        645.8097874229942,
-        4648.849433792017
+        1063.2463200622724,
+        4696.330322867842
       ],
       "size": [
         270,
@@ -1650,8 +1650,8 @@
       "id": 251,
       "type": "PrimitiveFloat",
       "pos": [
-        655.9930771606331,
-        4802.502034488928
+        1051.6675364262933,
+        4889.5503845851035
       ],
       "size": [
         270,
@@ -1687,8 +1687,8 @@
       "id": 252,
       "type": "SimpleCalculatorKJ",
       "pos": [
-        971.1564546217568,
-        4678.751857745667
+        1083.9235072167273,
+        4833.064921764025
       ],
       "size": [
         400,
@@ -1754,12 +1754,12 @@
       "id": 253,
       "type": "CreateVideoExternalFFmpegNVENC",
       "pos": [
-        1176.3093141872985,
-        4649.453012498277
+        665.8891575874554,
+        5082.716514451906
       ],
       "size": [
         374.103125,
-        222
+        314
       ],
       "flags": {},
       "order": 38,
@@ -1790,13 +1790,18 @@
           "name": "video",
           "type": "VIDEO",
           "links": [
-            409
+            429
           ]
         },
         {
           "name": "report",
           "type": "STRING",
           "links": []
+        },
+        {
+          "name": "preview_video",
+          "type": "VIDEO",
+          "links": null
         }
       ],
       "properties": {
@@ -1809,7 +1814,10 @@
         "p4",
         "",
         "auto",
-        "sRGB"
+        "sRGB",
+        false,
+        50,
+        false
       ],
       "widgets_values_named": {
         "fps": 30,
@@ -1818,56 +1826,13 @@
         "nvenc_preset": "p4",
         "ffmpeg_path": "",
         "bit_depth": "auto",
-        "color_space": "sRGB"
+        "color_space": "sRGB",
+        "preview": false,
+        "preview_percent": 50,
+        "disable_metadata": false
       },
       "color": "#432",
       "bgcolor": "#653"
-    },
-    {
-      "id": 254,
-      "type": "SaveVideo",
-      "pos": [
-        662.6091415228424,
-        4928.314927193315
-      ],
-      "size": [
-        871.2602070074156,
-        2385.058043394466
-      ],
-      "flags": {},
-      "order": 39,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "video",
-          "type": "VIDEO",
-          "link": 409
-        }
-      ],
-      "outputs": [
-        {
-          "name": "video",
-          "type": "VIDEO",
-          "links": []
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "SaveVideo"
-      },
-      "widgets_values": [
-        "video/MiniMax_H3",
-        "auto",
-        "auto",
-        "auto"
-      ],
-      "widgets_values_named": {
-        "filename_prefix": "video/MiniMax_H3",
-        "format": "auto",
-        "format.codec": "auto",
-        "codec": "auto"
-      },
-      "color": "#222",
-      "bgcolor": "#000"
     },
     {
       "id": 255,
@@ -1920,8 +1885,8 @@
       "id": 256,
       "type": "RTXVideoFrameGeneration",
       "pos": [
-        1080.6896617346638,
-        4311.873486938239
+        1064.862466013482,
+        4412.770463485328
       ],
       "size": [
         356,
@@ -1980,8 +1945,8 @@
       "id": 257,
       "type": "RTXVideoSuperResolution",
       "pos": [
-        1110.5023621195492,
-        4096.655379154792
+        1072.9130930247493,
+        4165.8984170731765
       ],
       "size": [
         285.81015625,
@@ -2033,6 +1998,57 @@
       },
       "color": "#323",
       "bgcolor": "#535"
+    },
+    {
+      "id": 258,
+      "type": "SaveVideoPreviewSwitch",
+      "pos": [
+        1157.488740960048,
+        5089.1365692535865
+      ],
+      "size": [
+        409.9270951022346,
+        751.9227723272761
+      ],
+      "flags": {},
+      "order": 39,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 429
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": null
+        },
+        {
+          "name": "saved_path",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SaveVideoPreviewSwitch"
+      },
+      "widgets_values": [
+        "video/ComfyUI",
+        "auto",
+        "auto",
+        false
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "video/ComfyUI",
+        "format": "auto",
+        "codec": "auto",
+        "hide_preview": false
+      },
+      "color": "#222",
+      "bgcolor": "#000"
     }
   ],
   "links": [
@@ -2277,46 +2293,6 @@
       "STRING"
     ],
     [
-      361,
-      218,
-      0,
-      219,
-      0,
-      "MODEL"
-    ],
-    [
-      248,
-      134,
-      0,
-      133,
-      0,
-      "FLOAT"
-    ],
-    [
-      406,
-      250,
-      0,
-      252,
-      0,
-      "INT"
-    ],
-    [
-      409,
-      253,
-      0,
-      254,
-      0,
-      "VIDEO"
-    ],
-    [
-      321,
-      133,
-      1,
-      183,
-      3,
-      "INT"
-    ],
-    [
       422,
       135,
       0,
@@ -2371,6 +2347,46 @@
       257,
       1,
       "FLOAT"
+    ],
+    [
+      361,
+      218,
+      0,
+      219,
+      0,
+      "MODEL"
+    ],
+    [
+      248,
+      134,
+      0,
+      133,
+      0,
+      "FLOAT"
+    ],
+    [
+      406,
+      250,
+      0,
+      252,
+      0,
+      "INT"
+    ],
+    [
+      321,
+      133,
+      1,
+      183,
+      3,
+      "INT"
+    ],
+    [
+      429,
+      253,
+      0,
+      258,
+      0,
+      "VIDEO"
     ]
   ],
   "groups": [
@@ -2426,22 +2442,10 @@
       "id": 13,
       "title": "Latent to video audio",
       "bounding": [
-        634.3876683579746,
-        4232.661528294652,
+        626.4741459663268,
+        4561.071500044961,
         351.8786169618161,
         291.73697435701706
-      ],
-      "color": "#3f789e",
-      "flags": {}
-    },
-    {
-      "id": 15,
-      "title": "create video",
-      "bounding": [
-        615.4519867152429,
-        4543.439116781752,
-        973.7743763452431,
-        1690.2205639827216
       ],
       "color": "#3f789e",
       "flags": {}
@@ -2450,10 +2454,10 @@
       "id": 16,
       "title": "RTX",
       "bounding": [
-        1051.4755755401918,
-        4002.7116546327247,
-        398.1131574825738,
-        509.8808948869005
+        1013.8863064453919,
+        4071.954692551109,
+        481.2047652501644,
+        925.3392356006234
       ],
       "color": "#3f789e",
       "flags": {}
@@ -2462,13 +2466,13 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.2075071202437676,
+      "scale": 0.6512462345446973,
       "offset": [
-        3004.2769104643917,
-        -3623.5522245791763
+        487.29448654620467,
+        -4716.83363047339
       ]
     },
-    "frontendVersion": "1.55.17",
+    "frontendVersion": "1.55.18",
     "VHS_latentpreview": true,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
@@ -2476,8 +2480,7 @@
   },
   "extensions": {
     "seed_widgets": {
-      "130": 0,
-      "240": 0
+      "130": 0
     }
   },
   "version": 0.4,

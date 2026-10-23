@@ -1,8 +1,8 @@
 {
   "id": "e3f2b845-8f2c-4b5a-9caf-eac1029d3e7e",
   "revision": 0,
-  "last_node_id": 254,
-  "last_link_id": 428,
+  "last_node_id": 255,
+  "last_link_id": 429,
   "nodes": [
     {
       "id": 151,
@@ -1836,7 +1836,7 @@
         "kjPovPanelH": 182
       },
       "widgets_values": [
-        512,
+        256,
         80,
         true,
         1,
@@ -1845,7 +1845,7 @@
         ""
       ],
       "widgets_values_named": {
-        "max_resolution": 512,
+        "max_resolution": 256,
         "jpeg_quality": 80,
         "suppress_default_preview": true,
         "preview_frames": 1,
@@ -2597,7 +2597,6 @@
           "link": null
         },
         {
-          "dir": 3,
           "name": "any_05",
           "type": "LATENT",
           "link": null
@@ -2858,8 +2857,8 @@
       "id": 248,
       "type": "PrimitiveInt",
       "pos": [
-        -54.992648017317165,
-        4800.591405257442
+        372.6558275649816,
+        4374.08333019231
       ],
       "size": [
         270,
@@ -2898,8 +2897,8 @@
       "id": 249,
       "type": "PrimitiveFloat",
       "pos": [
-        -44.80935827967825,
-        4954.244005954352
+        385.1199618396149,
+        4561.60562396169
       ],
       "size": [
         270,
@@ -2935,8 +2934,8 @@
       "id": 250,
       "type": "SimpleCalculatorKJ",
       "pos": [
-        270.3540191814446,
-        4830.493829211091
+        376.41081049998115,
+        4497.498161526995
       ],
       "size": [
         400,
@@ -3002,12 +3001,12 @@
       "id": 251,
       "type": "CreateVideoExternalFFmpegNVENC",
       "pos": [
-        475.50687874698673,
-        4801.194983963701
+        -52.496450822008164,
+        4736.192393749849
       ],
       "size": [
         374.103125,
-        222
+        314
       ],
       "flags": {},
       "order": 58,
@@ -3038,13 +3037,18 @@
           "name": "video",
           "type": "VIDEO",
           "links": [
-            420
+            429
           ]
         },
         {
           "name": "report",
           "type": "STRING",
           "links": []
+        },
+        {
+          "name": "preview_video",
+          "type": "VIDEO",
+          "links": null
         }
       ],
       "properties": {
@@ -3052,77 +3056,37 @@
       },
       "widgets_values": [
         30,
-        "h264_nvenc",
+        "auto",
         20,
         "p4",
         "",
         "auto",
-        "sRGB"
+        "sRGB",
+        false,
+        50,
+        false
       ],
       "widgets_values_named": {
         "fps": 30,
-        "encoder": "h264_nvenc",
+        "encoder": "auto",
         "quality": 20,
         "nvenc_preset": "p4",
         "ffmpeg_path": "",
         "bit_depth": "auto",
-        "color_space": "sRGB"
+        "color_space": "sRGB",
+        "preview": false,
+        "preview_percent": 50,
+        "disable_metadata": false
       },
       "color": "#432",
       "bgcolor": "#653"
     },
     {
-      "id": 252,
-      "type": "SaveVideo",
-      "pos": [
-        -38.193293917469106,
-        5080.05689865874
-      ],
-      "size": [
-        871.2602070074156,
-        1270.8502786638287
-      ],
-      "flags": {},
-      "order": 59,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "video",
-          "type": "VIDEO",
-          "link": 420
-        }
-      ],
-      "outputs": [
-        {
-          "name": "video",
-          "type": "VIDEO",
-          "links": []
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "SaveVideo"
-      },
-      "widgets_values": [
-        "video/MiniMax_H3",
-        "auto",
-        "auto",
-        "auto"
-      ],
-      "widgets_values_named": {
-        "filename_prefix": "video/MiniMax_H3",
-        "format": "auto",
-        "format.codec": "auto",
-        "codec": "auto"
-      },
-      "color": "#222",
-      "bgcolor": "#000"
-    },
-    {
       "id": 253,
       "type": "RTXVideoFrameGeneration",
       "pos": [
-        400.4357274708633,
-        4421.850074209624
+        383.3296109567128,
+        4109.381572331862
       ],
       "size": [
         356,
@@ -3181,8 +3145,8 @@
       "id": 254,
       "type": "RTXVideoSuperResolution",
       "pos": [
-        390.4357274708633,
-        4191.850074209624
+        409.82225349539414,
+        3877.1007712975293
       ],
       "size": [
         285.81015625,
@@ -3234,6 +3198,57 @@
       },
       "color": "#233",
       "bgcolor": "#355"
+    },
+    {
+      "id": 255,
+      "type": "SaveVideoPreviewSwitch",
+      "pos": [
+        393.2726225088149,
+        4731.461225911812
+      ],
+      "size": [
+        591.7476493589087,
+        728.1808653189964
+      ],
+      "flags": {},
+      "order": 59,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 429
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": null
+        },
+        {
+          "name": "saved_path",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SaveVideoPreviewSwitch"
+      },
+      "widgets_values": [
+        "video/ComfyUI",
+        "auto",
+        "auto",
+        false
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "video/ComfyUI",
+        "format": "auto",
+        "codec": "auto",
+        "hide_preview": false
+      },
+      "color": "#222",
+      "bgcolor": "#000"
     }
   ],
   "links": [
@@ -3566,6 +3581,46 @@
       "LATENT"
     ],
     [
+      424,
+      254,
+      0,
+      253,
+      0,
+      "IMAGE"
+    ],
+    [
+      425,
+      246,
+      0,
+      254,
+      0,
+      "IMAGE"
+    ],
+    [
+      426,
+      253,
+      0,
+      251,
+      0,
+      "IMAGE"
+    ],
+    [
+      427,
+      248,
+      0,
+      253,
+      1,
+      "INT"
+    ],
+    [
+      428,
+      249,
+      0,
+      254,
+      1,
+      "FLOAT"
+    ],
+    [
       248,
       134,
       0,
@@ -3588,14 +3643,6 @@
       250,
       0,
       "INT"
-    ],
-    [
-      420,
-      251,
-      0,
-      252,
-      0,
-      "VIDEO"
     ],
     [
       297,
@@ -3822,44 +3869,12 @@
       "LATENT"
     ],
     [
-      424,
-      254,
-      0,
-      253,
-      0,
-      "IMAGE"
-    ],
-    [
-      425,
-      246,
-      0,
-      254,
-      0,
-      "IMAGE"
-    ],
-    [
-      426,
-      253,
-      0,
+      429,
       251,
       0,
-      "IMAGE"
-    ],
-    [
-      427,
-      248,
+      255,
       0,
-      253,
-      1,
-      "INT"
-    ],
-    [
-      428,
-      249,
-      0,
-      254,
-      1,
-      "FLOAT"
+      "VIDEO"
     ]
   ],
   "groups": [
@@ -3936,25 +3951,13 @@
       "flags": {}
     },
     {
-      "id": 14,
-      "title": "create video",
-      "bounding": [
-        -85.35044872506843,
-        4695.181088247176,
-        973.7743763452431,
-        1690.2205639827216
-      ],
-      "color": "#3f789e",
-      "flags": {}
-    },
-    {
       "id": 15,
       "title": "RTX",
       "bounding": [
-        374.66546103601775,
-        4116.53509515754,
-        414.90205058695443,
-        532.6492582610163
+        357.5593445218673,
+        3797.2241901767793,
+        417.1827211133032,
+        857.6622528329303
       ],
       "color": "#3f789e",
       "flags": {}
@@ -3962,16 +3965,16 @@
   ],
   "config": {},
   "extra": {
-    "frontendVersion": "1.55.17",
+    "frontendVersion": "1.55.18",
     "VHS_latentpreview": true,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
     "VHS_KeepIntermediate": true,
     "ds": {
-      "scale": 0.4355828902840753,
+      "scale": 0.7015106006314065,
       "offset": [
-        3057.4187843343966,
-        -4306.097890234689
+        524.8053681829806,
+        -3688.8324619814407
       ]
     }
   },
