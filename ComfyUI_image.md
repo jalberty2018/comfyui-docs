@@ -11,9 +11,9 @@ Run **image generation and image editing models** in ComfyUI on RunPod. The temp
 - FLUX 3 Image klein
 - JoyCaption
 - Krea-2
-- SenseNova U1.5
 - Qwen-Image/Edit
 - Qwen-Image 2.1
+- SenseNova U1.5
 
 ## What to expect
 
@@ -57,9 +57,9 @@ Once the pod is running, use the workflow examples below to choose what you want
 
 <img loading="lazy" src="../images/Image-MOSS-t2i.jpg" alt="t2i" style="width: 40%; height: auto;">
 
-**ComfyUI t2i with vlm reference image**
+**ComfyUI i2i native editing**
 
-<img loading="lazy" src="../images/Image_MOSS_vlm_reference.jpg" alt="t2i vlm" style="width: 60%; height: auto;">
+<img loading="lazy" src="../images/Image_MOSS_i2i_native.jpg" alt="Moss i2i" style="width: 60%; height: auto;">
 
 ## Flux 3 image klein
 
@@ -72,6 +72,16 @@ Once the pod is running, use the workflow examples below to choose what you want
 **ComfyUI i2i with two reference images and prompt expander (vlm)**
 
 <img loading="lazy" src="../images/Image_Flux_3_klein_composition.jpg" alt="i2I" style="width: 40%; height: auto;">
+
+### Workflows
+
+<a id="example-i2i-workflow-moss"></a>
+<details>
+<summary><strong>View the MOSS-Image i2i workflow</strong></summary>
+
+<img loading="lazy" src="../images/workflow-example-MOSS-i2i.jpg" alt="MOSS i2i" style="width: 80%; height: auto;">
+
+</details>
 
 ## Krea-2
 
@@ -177,18 +187,6 @@ s
 
 </details>
 
-### SenseNova U1.5
-
-Use SenseNova U1.5 for text-to-image generation or image-to-image editing with the Final BF16 checkpoint and optional distilled 8-step LoRA.
-
-<a id="example-workflow-sensenova-u15"></a>
-<details>
-<summary><strong>View the SenseNova U1.5 workflow</strong></summary>
-
-<img loading="lazy" src="../images/workflow-example-sensenova-i2v.jpg" alt="SenseNova U1.5 image workflow in ComfyUI" style="width: 100%; height: auto;">
-
-</details>
-
 ### Qwen-Image 2.1
 
 Use Qwen-Image 2.1 for text-to-image generation and image editing, with optional prompt enhancement.
@@ -254,6 +252,18 @@ Use Qwen-Image 2.1 for text-to-image generation and image editing, with optional
 <summary><strong>View the Qwen-Image 2.1 controlnet workflow with 3D poser</strong></summary>
 
 <img loading="lazy" src="../images/workflow-example-qwen-image-21-i2i-controlnet.jpg" alt="Qwen-Image 2.1 prompt enhancer custom node" style="width: 100%; height: auto;">
+
+</details>
+
+### SenseNova U1.5
+
+Use SenseNova U1.5 for text-to-image generation or image-to-image editing with the Final BF16 checkpoint and optional distilled 8-step LoRA.
+
+<a id="example-workflow-sensenova-u15"></a>
+<details>
+<summary><strong>View the SenseNova U1.5 workflow</strong></summary>
+
+<img loading="lazy" src="../images/workflow-example-sensenova-i2v.jpg" alt="SenseNova U1.5 image workflow in ComfyUI" style="width: 100%; height: auto;">
 
 </details>
 
