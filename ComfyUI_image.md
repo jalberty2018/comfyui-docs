@@ -61,6 +61,16 @@ Once the pod is running, use the workflow examples below to choose what you want
 
 <img loading="lazy" src="../images/Image_MOSS_i2i_native.jpg" alt="Moss i2i" style="width: 60%; height: auto;">
 
+### Workflows
+
+<a id="example-i2i-workflow-moss"></a>
+<details>
+<summary><strong>View the MOSS-Image i2i workflow</strong></summary>
+
+<img loading="lazy" src="../images/workflow-example-MOSS-i2i.jpg" alt="MOSS i2i" style="width: 80%; height: auto;">
+
+</details>
+
 ## Flux 3 image klein
 
 ### Example images
@@ -72,16 +82,6 @@ Once the pod is running, use the workflow examples below to choose what you want
 **ComfyUI i2i with two reference images and prompt expander (vlm)**
 
 <img loading="lazy" src="../images/Image_Flux_3_klein_composition.jpg" alt="i2I" style="width: 40%; height: auto;">
-
-### Workflows
-
-<a id="example-i2i-workflow-moss"></a>
-<details>
-<summary><strong>View the MOSS-Image i2i workflow</strong></summary>
-
-<img loading="lazy" src="../images/workflow-example-MOSS-i2i.jpg" alt="MOSS i2i" style="width: 80%; height: auto;">
-
-</details>
 
 ## Krea-2
 
