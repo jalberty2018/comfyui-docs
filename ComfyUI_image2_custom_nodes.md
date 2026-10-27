@@ -106,11 +106,11 @@
 
 - [ComfyUI-MOSSImageTextEncoder](https://github.com/jalberty2018/ComfyUI-MOSSImageTextEncoder)
 - [ComfyUI-MOSS-Image-Ostris-Edit](https://github.com/ostris/ComfyUI-MOSS-Image-Ostris-Edit)
+- [ComfyUI-Moss-Image-Edit-Native](https://github.com/PedroMarinhoDev/ComfyUI-Moss-Image-Edit-Native)
 
 #### Experimental text phase conditioning for flux and moss
 
 - [ComfyUI-Phrase-Weight-Conditioning](https://github.com/jalberty2018/ComfyUI-Phrase-Weight-Conditioning)
-
 
 ## 🧩 All possible Custom Nodes
 
