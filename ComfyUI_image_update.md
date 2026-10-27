@@ -12,6 +12,8 @@
 
 - Updated ComfyUI to version 0.43.0.
 - [ComfyUI-Moss-Image-Edit-Native](https://github.com/PedroMarinhoDev/ComfyUI-Moss-Image-Edit-Native)
+- Moss native edit workflow.
+- Fibo 2.0 provisioning.
 
 ## 221O2O26
 
