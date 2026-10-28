@@ -203,7 +203,9 @@ Use Qwen-Image 2.1 for text-to-image generation and image editing, with optional
 
 **i2i controlnet , pose created with 3D pose custom node**
 
-<img loading="lazy" src="../images/Image_Qwen21_controlnet.jpg" alt="i2i controlner" style="width: 100%; height: auto;">
+<img loading="lazy" src="../images/Image_Qwen21_controlnet.jpg" alt="i2i controlner" style="width: 90%; height: auto;">
+
+<img loading="lazy" src="../images/Image_Qwen21_controlnet2.jpg" alt="i2i controlner" style="width: 80%; height: auto;">
 
 #### Workflows included
 
