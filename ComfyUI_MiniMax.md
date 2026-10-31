@@ -140,7 +140,7 @@ Choose Qwen-VL for local prompt generation and enhancement. The integrated varia
 
 <div style="text-align: center;">
   <video controls preload="metadata" style="width: 100%; max-width: 720px; height: auto;">
-    <source src="/video/Video_winter.mp4" type="video/mp4">
+    <source src="/video/VIdeo_winter.mp4" type="video/mp4">
   </video>
 </div>
 
