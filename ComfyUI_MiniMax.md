@@ -136,7 +136,6 @@ Choose Qwen-VL for local prompt generation and enhancement. The integrated varia
 </div>
 
 <a id="example-video-with-director"></a>
-
 **Text-to-video + QWEN VL prompt enhancer + Pika-H3-Flex 6 steps + VFX RTX modules for 48 fps**
 
 <div style="text-align: center;">
@@ -146,7 +145,6 @@ Choose Qwen-VL for local prompt generation and enhancement. The integrated varia
 </div>
 
 <a id="example-video-winter"></a>
-
 ### Director example
 
 <div style="text-align: center;">
