@@ -12,7 +12,8 @@
 
 - Updated ComfyUI to version 0.43.0.
 - Added HDR NVENC to ComfyUI-CreateVideo-FFmpeg.
-- Replaced lightx2v with Pika-h3-flex for ref2va.
+- Replaced lightx2v with Pika-H3-Flex for ref2va.
+- Added Pika-H3-Flex to fl2va.
 - Replaced video vae with convrot version.
 
 ## 21102026
