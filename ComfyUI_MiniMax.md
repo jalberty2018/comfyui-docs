@@ -60,7 +60,7 @@ Choose Qwen-VL for local prompt generation and enhancement. The integrated varia
 ## Output examples
 
 - The clips below demonstrate output from the standard and advanced workflows available on the pod.
-- Video and audio are generated directly by the model.
+- Video and audio are generated directly by the model no additional lora's were used.
 - Person reference images were generated using [Krea-2 or Qwen Image 2.1](ComfyUI_image.md).
 - Animation reference characters (Elsa, Anna, Ken, Barbie) used for workflow demonstration purpose only.
 
@@ -78,7 +78,7 @@ Choose Qwen-VL for local prompt generation and enhancement. The integrated varia
 </div>
 
 <a id="enhanced"></a>
-**Enhanced reference-to-video**
+**Reference-to-video + QWEN VL prompt enhancer**
 
 <div style="text-align: center;">
   <video controls preload="metadata" style="width: 100%; max-width: 720px; height: auto;">
@@ -87,7 +87,7 @@ Choose Qwen-VL for local prompt generation and enhancement. The integrated varia
 </div>
 
 <a id="hyperflow"></a>
-**Hyperflow reference-to-video**
+**Hyperflow 8 steps reference-to-video +  QWEN VL prompt enhancer**
 
 <div style="text-align: center;">
   <video controls preload="metadata" style="width: 50%; max-width: 720px; height: auto;">
@@ -118,7 +118,7 @@ Choose Qwen-VL for local prompt generation and enhancement. The integrated varia
 ### fl2va examples
 
 <a id="i2v"></a>
-**Image-to-video**
+**Image-to-video + lightx2v 8 steps**
 
 <div style="text-align: center;">
   <video controls preload="metadata" style="width: 100%; max-width: 720px; height: auto;">
@@ -127,7 +127,7 @@ Choose Qwen-VL for local prompt generation and enhancement. The integrated varia
 </div>
 
 <a id="t2v"></a>
-**Text-to-video**
+**Text-to-video + lightx2v 8 steps**
 
 <div style="text-align: center;">
   <video controls preload="metadata" style="width: 100%; max-width: 720px; height: auto;">
@@ -136,6 +136,16 @@ Choose Qwen-VL for local prompt generation and enhancement. The integrated varia
 </div>
 
 <a id="example-video-with-director"></a>
+
+**Text-to-video + QWEN VL prompt enhancer + Pika-H3-Flex 6 steps + VFX RTX upscale.
+
+<div style="text-align: center;">
+  <video controls preload="metadata" style="width: 100%; max-width: 720px; height: auto;">
+    <source src="/video/Video_winter.mp4" type="video/mp4">
+  </video>
+</div>
+
+<a id="example-video-winter"></a>
 
 ### Director example
 
