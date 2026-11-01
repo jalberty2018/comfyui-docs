@@ -165,6 +165,18 @@ Imtimate scene full of sensuality in a provoking pose".
   </video>
 </div>
 
+### ref2va Character-sheet-designer
+
+<img loading="lazy" src="../assets/images/Image_character_sheet.jpg" alt="ref2va character sheet designer" style="width: 80%; height: auto;">
+
+### ref2va Pikaflex + QWEN VL prompt enhancer + image from the character-sheet designer
+
+<div style="text-align: center;">
+  <video controls preload="metadata" style="width: 90%; max-width: 720px; height: auto;">
+    <source src="../assets/video/Video_halloween.mp4" type="video/mp4">
+  </video>
+</div>
+
 ## Standard workflows
 
 <a id="ref2va"></a>
@@ -247,6 +259,15 @@ Use Director to manage generation stages in a single workflow.
 <summary><strong>View the Director workflow continuity</strong></summary>
 
 <img loading="lazy" src="../assets/workflows/workflow-example-MiniMax-director2.jpg" alt="MiniMax H3 Director all-in-one workflow continuity" style="width: 100%; height: auto;">
+
+</details>
+
+### Ref2va Character sheet designer
+
+<details>
+<summary><strong>View the character sheet designer workflow</strong></summary>
+
+<img loading="lazy" src="../assets/workflows/workflow-example-MiniMax-character-sheet-creator.jpg" alt="MiniMax character sheet designer worfklow" style="width: 100%; height: auto;">
 
 </details>
 
