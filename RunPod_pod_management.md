@@ -4,7 +4,7 @@
 
 - To restart ComfyUI, restart the pod from the RunPod console (no information loss).
 
-![Restart_pod](../assets/manual/restart_pod.jpg){ width="300" }
+![Restart_pod](assets/manual/restart_pod.jpg){ width="300" }
 
 ## 🧩 Stop and restart a pod
 

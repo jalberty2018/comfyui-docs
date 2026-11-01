@@ -157,7 +157,7 @@ Choose Qwen-VL for local prompt generation and enhancement. The integrated varia
 
 - Original prompt: "Person from image 1 kisses person of image 2 on a beach while carressing each other.
 Imtimate scene full of sensuality in a provoking pose".
-- [Final prompt](../assets/workflows/workflow-example-MiniMax-preview.jpg)
+- [Final prompt](assets/workflows/workflow-example-MiniMax-preview.jpg)
 
 <div style="text-align: center;">
   <video controls preload="metadata" style="width: 100%; max-width: 720px; height: auto;">

@@ -145,7 +145,7 @@ Model download speeds depend on both network and storage performance. A speed ab
 
 The pod is ready when the final startup message appears in the container log.
 
-![Final container log message confirming that the pod is ready](../assets/manual/final_log.jpg)
+![Final container log message confirming that the pod is ready](assets/manual/final_log.jpg)
 
 ## Examples of healthy pods
 

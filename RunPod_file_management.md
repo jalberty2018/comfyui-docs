@@ -6,7 +6,7 @@
 
 ### Free dropbox
 
-![Cloud sync](../assets/manual/cloud-sync.jpg){ width="400" }
+![Cloud sync](assets/manual/cloud-sync.jpg){ width="400" }
 
 - Reliable and fast upload and download for large files.
 - Go to [Dropbox developers](https://www.dropbox.com/developers)
