@@ -8,13 +8,14 @@
 - Some custom nodes have been adapted specifically for this pod or pinned to increase the stability.
 - Tested on L40S, RTX 6000 Ada, RTX PRO 6000, PRO 6000 MiG 48Gb, RTX 5090, (RTX 4090).
 
-## 27102026
+## 01112026
 
 - Updated ComfyUI to version 0.43.0.
 - Added HDR NVENC to ComfyUI-CreateVideo-FFmpeg.
 - Replaced lightx2v with Pika-H3-Flex for ref2va.
 - Added Pika-H3-Flex to fl2va.
 - Replaced video vae with convrot version.
+- [H3-Character-Sheet-Designer](https://github.com/ukr8b3g-cmyk/H3-Character-Sheet-Designer)
 
 ## 21102026
 

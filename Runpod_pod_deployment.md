@@ -22,16 +22,16 @@ A compatible GPU is preconfigured in each RunPod template and marked with an ast
 <a id="wan-templates"></a>
 <a id="ltx-templates"></a>
 
-| Workload | Use it for | Templates | Hardware guidance |
-| --- | --- | --- | --- |
-| Image | Image generation and editing | [View image templates](ComfyUI_image_deployment.md) | [Compatible GPUs](ComfyUI_image_hardware.md) |
-| MiniMax H3 | Video and native-audio generation | [View MiniMax templates](ComfyUI_MiniMax_deployment.md) | [Compatible GPUs](ComfyUI_MiniMax_hardware.md) |
-| WAN | Video generation and motion transfer | [View WAN templates](ComfyUI_WAN_deployment.md) | [Compatible GPUs](ComfyUI_WAN_hardware.md) |
-| LTX | Video and audio generation | [View LTX templates](ComfyUI_LTX_deployment.md) | [Compatible GPUs](ComfyUI_LTX_hardware.md) |
+| Workload | Use it for | Templates |
+| --- | --- | --- |
+| Image | Image generation and editing | [View image templates](ComfyUI_image_deployment.md) |
+| MiniMax H3 | Video and native-audio generation | [View MiniMax templates](ComfyUI_MiniMax_deployment.md) |
+| WAN | Video generation and motion transfer | [View WAN templates](ComfyUI_WAN_deployment.md) |
+| LTX | Video and audio generation | [View LTX templates](ComfyUI_LTX_deployment.md) |
 
 ## Deploy the pod
 
-The screenshot shows RunPod's **New Pod** deployment page with the early-access interface enabled.
+The screenshot shows RunPod's **New Pod** deployment.
 
 1. Choose an available **GPU**, preferably one marked with an asterisk (*).
 2. Set a suitable minimum amount of **system RAM** in the filters or use the default settings.
@@ -40,7 +40,7 @@ The screenshot shows RunPod's **New Pod** deployment page with the early-access 
 5. Click **Deploy Pod**.
 
 <details>
-<summary><strong>View the New Pod deployment page</strong></summary>
+<summary><strong>Pod deployment page</strong></summary>
 
 <img loading="lazy" src="../assets/manual/runpod_deploy_01.jpg" alt="RunPod New Pod deployment page" style="width: 100%; height: auto;">
 
