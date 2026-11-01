@@ -42,7 +42,7 @@ The screenshot shows RunPod's **New Pod** deployment page with the early-access 
 <details>
 <summary><strong>View the New Pod deployment page</strong></summary>
 
-<img loading="lazy" src="assets/manual/runpod_deploy_01.jpg" alt="RunPod New Pod deployment page" style="width: 100%; height: auto;">
+<img loading="lazy" src="../assets/manual/runpod_deploy_01.jpg" alt="RunPod New Pod deployment page" style="width: 100%; height: auto;">
 
 </details>
 
@@ -58,7 +58,7 @@ For example, 60 GB of system RAM is a reasonable selection for image generation 
 <details>
 <summary><strong>View the RAM filter</strong></summary>
 
-<img loading="lazy" src="assets/manual/filter_ram.jpg" alt="RunPod filter for minimum system RAM" style="width: 100%; height: auto;">
+<img loading="lazy" src="../assets/manual/filter_ram.jpg" alt="RunPod filter for minimum system RAM" style="width: 100%; height: auto;">
 
 </details>
 
@@ -71,14 +71,14 @@ For example, 60 GB of system RAM is a reasonable selection for image generation 
 <details>
 <summary><strong>View the Volume selection screen</strong></summary>
 
-<img loading="lazy" src="assets/manual/runpod_deploy_02.jpg" alt="RunPod volume selection" style="width: 100%; height: auto;">
+<img loading="lazy" src="../assets/manual/runpod_deploy_02.jpg" alt="RunPod volume selection" style="width: 100%; height: auto;">
 
 </details>
 
 <details>
 <summary><strong>View the Volume selection screen</strong></summary>
 
-<img loading="lazy" src="assets/manual/runpod_deploy_03.jpg" alt="RunPod Volume selection" style="width: 100%; height: auto;">
+<img loading="lazy" src="../assets/manual/runpod_deploy_03.jpg" alt="RunPod Volume selection" style="width: 100%; height: auto;">
 
 </details>
 
@@ -106,10 +106,10 @@ RunPod first downloads and extracts the container. This normally takes approxima
 <summary><strong>View a normal Docker download and extraction</strong></summary>
 
 <p><strong>Download starts</strong></p>
-<img loading="lazy" src="assets/manual/downloading.jpg" alt="RunPod system log showing the container download starting" style="width: 100%; height: auto;">
+<img loading="lazy" src="../assets/manual/downloading.jpg" alt="RunPod system log showing the container download starting" style="width: 100%; height: auto;">
 
 <p><strong>Download and extraction complete</strong></p>
-<img loading="lazy" src="assets/manual/download_end.jpg" alt="RunPod system log showing completed container extraction" style="width: 100%; height: auto;">
+<img loading="lazy" src="../assets/manual/download_end.jpg" alt="RunPod system log showing completed container extraction" style="width: 100%; height: auto;">
 
 </details>
 
@@ -120,7 +120,7 @@ After extraction, the container starts and copies ComfyUI to `/workspace`. This 
 <details>
 <summary><strong>View normal container startup</strong></summary>
 
-<img loading="lazy" src="assets/manual/runpod_deploy_startscript.jpg" alt="RunPod container log showing the startup script" style="width: 100%; height: auto;">
+<img loading="lazy" src="../assets/manual/runpod_deploy_startscript.jpg" alt="RunPod container log showing the startup script" style="width: 100%; height: auto;">
 
 </details>
 
@@ -133,9 +133,9 @@ Model download speeds depend on both network and storage performance. A speed ab
 <details>
 <summary><strong>View normal model downloads</strong></summary>
 
-<img loading="lazy" src="assets/manual/runpod_deploy_hf_download.jpg" alt="Container log showing a model download from the Hugging Face Hub" style="width: 100%; height: auto;">
+<img loading="lazy" src="../assets/manual/runpod_deploy_hf_download.jpg" alt="Container log showing a model download from the Hugging Face Hub" style="width: 100%; height: auto;">
 
-<img loading="lazy" src="assets/manual/runpod_deploy_hf_download2.jpg" alt="Container log showing additional model download progress" style="width: 100%; height: auto;">
+<img loading="lazy" src="../assets/manual/runpod_deploy_hf_download2.jpg" alt="Container log showing additional model download progress" style="width: 100%; height: auto;">
 
 </details>
 
@@ -145,7 +145,7 @@ Model download speeds depend on both network and storage performance. A speed ab
 
 The pod is ready when the final startup message appears in the container log.
 
-![Final container log message confirming that the pod is ready](assets/manual/final_log.jpg)
+![Final container log message confirming that the pod is ready](../assets/manual/final_log.jpg)
 
 ## Examples of healthy pods
 
@@ -154,11 +154,11 @@ These examples show pod configurations after a successful deployment. Hardware a
 <details>
 <summary><strong>View successful pod examples</strong></summary>
 
-<img loading="lazy" src="assets/manual/runpod_ready.jpg" alt="Successfully deployed RunPod pod with an RTX 3090" style="width: 100%; height: auto;">
+<img loading="lazy" src="../assets/manual/runpod_ready.jpg" alt="Successfully deployed RunPod pod with an RTX 3090" style="width: 100%; height: auto;">
 
-<img loading="lazy" src="assets/manual/runpod_ready_RTX6000PRO.jpg" alt="Successfully deployed RunPod pod with an RTX PRO 6000" style="width: 100%; height: auto;">
+<img loading="lazy" src="../assets/manual/runpod_ready_RTX6000PRO.jpg" alt="Successfully deployed RunPod pod with an RTX PRO 6000" style="width: 100%; height: auto;">
 
-<img loading="lazy" src="assets/manual/runpod_ready_L40S.jpg" alt="Successfully deployed RunPod pod with an L40S" style="width: 100%; height: auto;">
+<img loading="lazy" src="../assets/manual/runpod_ready_L40S.jpg" alt="Successfully deployed RunPod pod with an L40S" style="width: 100%; height: auto;">
 
 </details>
 
@@ -176,8 +176,8 @@ Use this section when a startup checkpoint is missed. The normal deployment path
 <details>
 <summary><strong>View the CUDA filter</strong></summary>
 
-<img loading="lazy" src="assets/manual/filter_cuda.jpg" alt="RunPod filter selection" style="width: 100%; height: auto;">
-<img loading="lazy" src="assets/manual/filter_cuda2.jpg" alt="RunPod filter set to CUDA 13.0" style="width: 100%; height: auto;">
+<img loading="lazy" src="../assets/manual/filter_cuda.jpg" alt="RunPod filter selection" style="width: 100%; height: auto;">
+<img loading="lazy" src="../assets/manual/filter_cuda2.jpg" alt="RunPod filter set to CUDA 13.0" style="width: 100%; height: auto;">
 
 </details>
 
@@ -190,7 +190,7 @@ If the image does not begin downloading within **1 minute**, redeploy the pod in
 <details>
 <summary><strong>View an example with no download activity</strong></summary>
 
-<img loading="lazy" src="assets/manual/runpod_deploy_docker_download_stall.jpg" alt="Underperforming RunPod pod with no container download activity" style="width: 100%; height: auto;">
+<img loading="lazy" src="../assets/manual/runpod_deploy_docker_download_stall.jpg" alt="Underperforming RunPod pod with no container download activity" style="width: 100%; height: auto;">
 
 </details>
 
@@ -203,7 +203,7 @@ If the download continues without extraction after **3 minutes**, redeploy the p
 <details>
 <summary><strong>View a slow download without extraction</strong></summary>
 
-<img loading="lazy" src="assets/manual/runpod_deploy_docker_download_slow.jpg" alt="Underperforming RunPod pod downloading slowly without extraction" style="width: 100%; height: auto;">
+<img loading="lazy" src="../assets/manual/runpod_deploy_docker_download_slow.jpg" alt="Underperforming RunPod pod downloading slowly without extraction" style="width: 100%; height: auto;">
 
 </details>
 
@@ -220,15 +220,15 @@ The time required to copy ComfyUI to `/workspace` is a useful indicator of stora
 <summary><strong>Compare excellent, acceptable and poor copy performance</strong></summary>
 
 <p><strong>Excellent performance</strong></p>
-<img loading="lazy" src="assets/manual/runpod_deploy_comfyuionworkspace_perfect.jpg" alt="Excellent ComfyUI workspace copy performance" style="width: 100%; height: auto;">
+<img loading="lazy" src="../assets/manual/runpod_deploy_comfyuionworkspace_perfect.jpg" alt="Excellent ComfyUI workspace copy performance" style="width: 100%; height: auto;">
 
-<img loading="lazy" src="assets/manual/runpod_deploy_comfyuionworkspace.jpg" alt="Good ComfyUI workspace copy performance" style="width: 100%; height: auto;">
+<img loading="lazy" src="../assets/manual/runpod_deploy_comfyuionworkspace.jpg" alt="Good ComfyUI workspace copy performance" style="width: 100%; height: auto;">
 
 <p><strong>Acceptable performance</strong></p>
-<img loading="lazy" src="assets/manual/runpod_deploy_comfyuionworkspace_medium.jpg" alt="Acceptable ComfyUI workspace copy performance" style="width: 100%; height: auto;">
+<img loading="lazy" src="../assets/manual/runpod_deploy_comfyuionworkspace_medium.jpg" alt="Acceptable ComfyUI workspace copy performance" style="width: 100%; height: auto;">
 
 <p><strong>Poor performance</strong></p>
-<img loading="lazy" src="assets/manual/runpod_deploy_comfyuionworkspace_slow.jpg" alt="Poor ComfyUI workspace copy performance" style="width: 100%; height: auto;">
+<img loading="lazy" src="../assets/manual/runpod_deploy_comfyuionworkspace_slow.jpg" alt="Poor ComfyUI workspace copy performance" style="width: 100%; height: auto;">
 
 </details>
 

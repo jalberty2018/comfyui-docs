@@ -59,7 +59,7 @@ Select the output size and frame count, enter a prompt and configure offloading 
 <details>
 <summary><strong>View the LTX-2.5 image-to-video workflow</strong></summary>
 
-<img loading="lazy" src="assets/workflows/workflow-example-i2v-LTX25.jpg" alt="LTX-2.5 image-to-video workflow with frame, size, prompt and offload controls" style="width: 100%; height: auto;">
+<img loading="lazy" src="../assets/workflows/workflow-example-i2v-LTX25.jpg" alt="LTX-2.5 image-to-video workflow with frame, size, prompt and offload controls" style="width: 100%; height: auto;">
 
 </details>
 
@@ -72,7 +72,7 @@ Generate video and audio from a text description with controls for size, duratio
 <details>
 <summary><strong>View the LTX-2.5 text-to-video workflow</strong></summary>
 
-<img loading="lazy" src="assets/workflows/workflow-example-t2v-LTX25.jpg" alt="LTX-2.5 text-to-video workflow with frame, size, prompt and offload controls" style="width: 100%; height: auto;">
+<img loading="lazy" src="../assets/workflows/workflow-example-t2v-LTX25.jpg" alt="LTX-2.5 text-to-video workflow with frame, size, prompt and offload controls" style="width: 100%; height: auto;">
 
 </details>
 
@@ -87,7 +87,7 @@ Use DWPose guidance to transfer movement from a source video to the generated su
 <details>
 <summary><strong>View the LTX-2.3 DWPose transfer workflow</strong></summary>
 
-<img loading="lazy" src="assets/workflows/workflow-example-LTX-vi2v.jpg" alt="LTX-2.3 video-to-video pose-transfer workflow using DWPose" style="width: 100%; height: auto;">
+<img loading="lazy" src="../assets/workflows/workflow-example-LTX-vi2v.jpg" alt="LTX-2.3 video-to-video pose-transfer workflow using DWPose" style="width: 100%; height: auto;">
 
 </details>
 
@@ -100,7 +100,7 @@ Use SDPose with Body Ratio Mapper when the transferred movement also needs propo
 <details>
 <summary><strong>View the LTX-2.3 SDPose transfer workflow</strong></summary>
 
-<img loading="lazy" src="assets/workflows/workflow-example-LTX-vi2v-sdpose.jpg" alt="LTX-2.3 video-to-video pose-transfer workflow using SDPose and Body Ratio Mapper" style="width: 100%; height: auto;">
+<img loading="lazy" src="../assets/workflows/workflow-example-LTX-vi2v-sdpose.jpg" alt="LTX-2.3 video-to-video pose-transfer workflow using SDPose and Body Ratio Mapper" style="width: 100%; height: auto;">
 
 </details>
 
@@ -116,7 +116,7 @@ Use SDPose with Body Ratio Mapper when the transferred movement also needs propo
 
 <div style="text-align: center;">
   <video controls preload="metadata" style="width: 100%; max-width: 720px; height: auto;">
-    <source src="assets/video/Video_girl_drinking_cocktail_LTX25.mp4" type="video/mp4">
+    <source src="../assets/video/Video_girl_drinking_cocktail_LTX25.mp4" type="video/mp4">
   </video>
 </div>
 
@@ -126,7 +126,7 @@ Use SDPose with Body Ratio Mapper when the transferred movement also needs propo
 
 <div style="text-align: center;">
   <video controls preload="metadata" style="width: 100%; max-width: 720px; height: auto;">
-    <source src="assets/video/Video_girl_walking_on_beach_LTX25.mp4" type="video/mp4">
+    <source src="../assets/video/Video_girl_walking_on_beach_LTX25.mp4" type="video/mp4">
   </video>
 </div>
 
@@ -152,19 +152,19 @@ These screenshots show LTX-2.5 and LTX-2.3 running with different model precisio
 <summary><strong>View the hardware comparison screenshots</strong></summary>
 
 <p><strong>LTX-2.5 on an L40S with INT8 ConvRot</strong></p>
-<img loading="lazy" src="assets/runpod/runpod_L40S_LTX25.jpeg" alt="LTX-2.5 running on an L40S with the INT8 ConvRot profile" style="width: 100%; height: auto;">
+<img loading="lazy" src="../assets/runpod/runpod_L40S_LTX25.jpeg" alt="LTX-2.5 running on an L40S with the INT8 ConvRot profile" style="width: 100%; height: auto;">
 
 <p><strong>LTX-2.3 on an L40S with BF16</strong></p>
-<img loading="lazy" src="assets/runpod/runpod_L40S_LTX.jpeg" alt="LTX-2.3 running on an L40S with BF16 precision" style="width: 100%; height: auto;">
+<img loading="lazy" src="../assets/runpod/runpod_L40S_LTX.jpeg" alt="LTX-2.3 running on an L40S with BF16 precision" style="width: 100%; height: auto;">
 
 <p><strong>LTX-2.3 on an RTX 6000 Ada with BF16</strong></p>
-<img loading="lazy" src="assets/runpod/runpod_6000Ada_LTX.jpeg" alt="LTX-2.3 running on an RTX 6000 Ada with BF16 precision" style="width: 100%; height: auto;">
+<img loading="lazy" src="../assets/runpod/runpod_6000Ada_LTX.jpeg" alt="LTX-2.3 running on an RTX 6000 Ada with BF16 precision" style="width: 100%; height: auto;">
 
 <p><strong>LTX-2.3 on an RTX A5000 with FP8</strong></p>
-<img loading="lazy" src="assets/runpod/runpod_A5000_LTX.jpeg" alt="LTX-2.3 running on an RTX A5000 with FP8 precision" style="width: 100%; height: auto;">
+<img loading="lazy" src="../assets/runpod/runpod_A5000_LTX.jpeg" alt="LTX-2.3 running on an RTX A5000 with FP8 precision" style="width: 100%; height: auto;">
 
 <p><strong>LTX-2.3 on an RTX 4090 with FP8</strong></p>
-<img loading="lazy" src="assets/runpod/runpod_RTX4090_LTX.jpeg" alt="LTX-2.3 running on an RTX 4090 with FP8 precision" style="width: 100%; height: auto;">
+<img loading="lazy" src="../assets/runpod/runpod_RTX4090_LTX.jpeg" alt="LTX-2.3 running on an RTX 4090 with FP8 precision" style="width: 100%; height: auto;">
 
 </details>
 

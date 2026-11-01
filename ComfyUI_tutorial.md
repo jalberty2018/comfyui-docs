@@ -47,7 +47,7 @@ If you have not deployed a pod yet, follow [Starting a Pod](Runpod_pod_deploymen
 <details>
 <summary><strong>View the RunPod HTTP Services panel</strong></summary>
 
-<img loading="lazy" src="assets/manual/services.jpg" alt="RunPod Connect panel with the available HTTP services" style="width: 100%; height: auto;">
+<img loading="lazy" src="../assets/manual/services.jpg" alt="RunPod Connect panel with the available HTTP services" style="width: 100%; height: auto;">
 
 </details>
 
@@ -70,10 +70,10 @@ The exact workflows depend on whether you deployed the Image, MiniMax, WAN or LT
 <summary><strong>View example workflow selections</strong></summary>
 
 <p><strong>LTX workflow</strong></p>
-<img loading="lazy" src="assets/manual/workflow_LTX.jpg" alt="Selecting an included LTX workflow in ComfyUI" style="width: 100%; max-width: 800px; height: auto;">
+<img loading="lazy" src="../assets/manual/workflow_LTX.jpg" alt="Selecting an included LTX workflow in ComfyUI" style="width: 100%; max-width: 800px; height: auto;">
 
 <p><strong>MiniMax workflow</strong></p>
-<img loading="lazy" src="assets/workflows/workflow-example-MiniMax.jpg" alt="Included MiniMax workflow in ComfyUI" style="width: 100%; max-width: 800px; height: auto;">
+<img loading="lazy" src="../assets/workflows/workflow-example-MiniMax.jpg" alt="Included MiniMax workflow in ComfyUI" style="width: 100%; max-width: 800px; height: auto;">
 
 </details>
 
@@ -95,7 +95,7 @@ The Web Terminal is suitable for quick commands and troubleshooting. Use SSH ins
 <details>
 <summary><strong>View the Web Terminal</strong></summary>
 
-<img loading="lazy" src="assets/manual/web-console.jpg" alt="RunPod Web Terminal open in the browser" style="width: 100%; height: auto;">
+<img loading="lazy" src="../assets/manual/web-console.jpg" alt="RunPod Web Terminal open in the browser" style="width: 100%; height: auto;">
 
 </details>
 
@@ -123,9 +123,9 @@ Copy the password from the configuration file and enter it on the Code-Server lo
 <details>
 <summary><strong>View Code-Server login and pod information</strong></summary>
 
-<img loading="lazy" src="assets/manual/code-server.jpg" alt="Code-Server password login page" style="width: 100%; max-width: 800px; height: auto;">
+<img loading="lazy" src="../assets/manual/code-server.jpg" alt="Code-Server password login page" style="width: 100%; max-width: 800px; height: auto;">
 
-<img loading="lazy" src="assets/manual/code-server_info_pod.jpg" alt="Pod information available through Code-Server" style="width: 100%; height: auto;">
+<img loading="lazy" src="../assets/manual/code-server_info_pod.jpg" alt="Pod information available through Code-Server" style="width: 100%; height: auto;">
 
 </details>
 
@@ -189,9 +189,9 @@ If `CIVITAI_TOKEN` was not configured before deployment, open **Preferences** in
 <details>
 <summary><strong>View the LoRA Manager controls</strong></summary>
 
-<img loading="lazy" src="assets/manual/top_bar_comfyui.jpg" alt="LoRA Manager button in the ComfyUI top bar" style="width: 100%; max-width: 600px; height: auto;">
+<img loading="lazy" src="../assets/manual/top_bar_comfyui.jpg" alt="LoRA Manager button in the ComfyUI top bar" style="width: 100%; max-width: 600px; height: auto;">
 
-<img loading="lazy" src="assets/manual/top_bar.jpg" alt="Refresh, fetch and download controls in LoRA Manager" style="width: 100%; height: auto;">
+<img loading="lazy" src="../assets/manual/top_bar.jpg" alt="Refresh, fetch and download controls in LoRA Manager" style="width: 100%; height: auto;">
 
 </details>
 
@@ -208,9 +208,9 @@ For `run-comfyui-image`, `run-comfyui-ltx` and `run-comfyui-minimax`:
 <details>
 <summary><strong>View the LoRA insertion controls</strong></summary>
 
-<img loading="lazy" src="assets/manual/send_lora.jpg" alt="Sending an image LoRA from LoRA Manager to ComfyUI" style="width: 100%; height: auto;">
+<img loading="lazy" src="../assets/manual/send_lora.jpg" alt="Sending an image LoRA from LoRA Manager to ComfyUI" style="width: 100%; height: auto;">
 
-<img loading="lazy" src="assets/manual/lora_loader.jpg" alt="LoRA Loader node managed by LoRA Manager" style="width: 100%; max-width: 600px; height: auto;">
+<img loading="lazy" src="../assets/manual/lora_loader.jpg" alt="LoRA Loader node managed by LoRA Manager" style="width: 100%; max-width: 600px; height: auto;">
 
 </details>
 
@@ -225,7 +225,7 @@ For `run-comfyui-image`, `run-comfyui-ltx` and `run-comfyui-minimax`:
 <details>
 <summary><strong>View the WAN LoRA controls</strong></summary>
 
-<img loading="lazy" src="assets/manual/wan-load-lora.jpg" alt="Sending WAN high-noise and low-noise LoRAs to ComfyUI" style="width: 100%; max-width: 600px; height: auto;">
+<img loading="lazy" src="../assets/manual/wan-load-lora.jpg" alt="Sending WAN high-noise and low-noise LoRAs to ComfyUI" style="width: 100%; max-width: 600px; height: auto;">
 
 </details>
 
@@ -242,11 +242,11 @@ Model Linker tries to match models referenced by a workflow with the pod's provi
 <details>
 <summary><strong>View an example of linking workflow models</strong></summary>
 
-<img loading="lazy" src="assets/manual/model-linker-1.jpg" alt="Model Linker workflow model discovery" style="width: 100%; max-width: 800px; height: auto;">
+<img loading="lazy" src="../assets/manual/model-linker-1.jpg" alt="Model Linker workflow model discovery" style="width: 100%; max-width: 800px; height: auto;">
 
-<img loading="lazy" src="assets/manual/model-linker-2.jpg" alt="Model Linker model selection" style="width: 100%; max-width: 800px; height: auto;">
+<img loading="lazy" src="../assets/manual/model-linker-2.jpg" alt="Model Linker model selection" style="width: 100%; max-width: 800px; height: auto;">
 
-<img loading="lazy" src="assets/manual/model-linker-3.jpg" alt="Model Linker provisioning result" style="width: 100%; max-width: 800px; height: auto;">
+<img loading="lazy" src="../assets/manual/model-linker-3.jpg" alt="Model Linker provisioning result" style="width: 100%; max-width: 800px; height: auto;">
 
 </details>
 
@@ -271,7 +271,7 @@ civitai_red 2893442 /workspace/ComfyUI/models/loras/
 <details>
 <summary><strong>View where to find a CivitAI version ID</strong></summary>
 
-<img loading="lazy" src="assets/manual/civitai_air.jpg" alt="CivitAI model page showing a version identifier" style="width: 100%; max-width: 600px; height: auto;">
+<img loading="lazy" src="../assets/manual/civitai_air.jpg" alt="CivitAI model page showing a version identifier" style="width: 100%; max-width: 600px; height: auto;">
 
 </details>
 
@@ -298,7 +298,7 @@ Refresh ComfyUI by pressing **R** after the download completes.
 <details>
 <summary><strong>View the ComfyUI refresh control</strong></summary>
 
-<img loading="lazy" src="assets/manual/refresh_nodes.jpg" alt="Refreshing models and nodes in ComfyUI" style="width: 100%; max-width: 600px; height: auto;">
+<img loading="lazy" src="../assets/manual/refresh_nodes.jpg" alt="Refreshing models and nodes in ComfyUI" style="width: 100%; max-width: 600px; height: auto;">
 
 </details>
 
@@ -311,7 +311,7 @@ Use the Web Terminal or Code-Server and follow the documentation stored inside t
 <details>
 <summary><strong>View manual provisioning in Code-Server</strong></summary>
 
-<img loading="lazy" src="assets/manual/codeserver_manual_provisioning.jpg" alt="Manual model provisioning documentation in Code-Server" style="width: 100%; height: auto;">
+<img loading="lazy" src="../assets/manual/codeserver_manual_provisioning.jpg" alt="Manual model provisioning documentation in Code-Server" style="width: 100%; height: auto;">
 
 </details>
 
@@ -345,7 +345,7 @@ Open ComfyUI Manager from the ComfyUI top bar or menu to manage custom nodes and
 <details>
 <summary><strong>View the ComfyUI Manager control</strong></summary>
 
-<img loading="lazy" src="assets/manual/manage_extensions.jpg" alt="Manage extensions button in ComfyUI" style="width: 100%; max-width: 600px; height: auto;">
+<img loading="lazy" src="../assets/manual/manage_extensions.jpg" alt="Manage extensions button in ComfyUI" style="width: 100%; max-width: 600px; height: auto;">
 
 </details>
 
@@ -380,7 +380,7 @@ Replace `<pod-id>` with the ID displayed in the RunPod console.
 <details>
 <summary><strong>View an unauthorized browser response</strong></summary>
 
-<img loading="lazy" src="assets/manual/edge_rights_denied.jpg" alt="Browser response when a RunPod proxy service is not authorized or ready" style="width: 100%; max-width: 600px; height: auto;">
+<img loading="lazy" src="../assets/manual/edge_rights_denied.jpg" alt="Browser response when a RunPod proxy service is not authorized or ready" style="width: 100%; max-width: 600px; height: auto;">
 
 </details>
 
