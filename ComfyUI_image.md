@@ -55,11 +55,11 @@ Once the pod is running, use the workflow examples below to choose what you want
 
 **ComfyUI t2i with prompt enhancer**
 
-<img loading="lazy" src="../images/Image-MOSS-t2i.jpg" alt="t2i" style="width: 40%; height: auto;">
+<img loading="lazy" src="assets/images/Image-MOSS-t2i.jpg" alt="t2i" style="width: 40%; height: auto;">
 
 **ComfyUI i2i native editing**
 
-<img loading="lazy" src="../images/Image_MOSS_i2i_native.jpg" alt="Moss i2i" style="width: 60%; height: auto;">
+<img loading="lazy" src="assets/images/Image_MOSS_i2i_native.jpg" alt="Moss i2i" style="width: 60%; height: auto;">
 
 ### Workflows
 
@@ -67,7 +67,7 @@ Once the pod is running, use the workflow examples below to choose what you want
 <details>
 <summary><strong>View the MOSS-Image i2i workflow</strong></summary>
 
-<img loading="lazy" src="../images/workflow-example-MOSS-i2i.jpg" alt="MOSS i2i" style="width: 80%; height: auto;">
+<img loading="lazy" src="assets/workflows/workflow-example-MOSS-i2i.jpg" alt="MOSS i2i" style="width: 80%; height: auto;">
 
 </details>
 
@@ -77,11 +77,11 @@ Once the pod is running, use the workflow examples below to choose what you want
 
 **t2v with prompt expander (VLM)**
 
-<img loading="lazy" src="../images/Image_Flux_3_klein_t2v.jpg" alt="t2i" style="width: 40%; height: auto;">
+<img loading="lazy" src="assets/images/Image_Flux_3_klein_t2v.jpg" alt="t2i" style="width: 40%; height: auto;">
 
 **ComfyUI i2i with two reference images and prompt expander (vlm)**
 
-<img loading="lazy" src="../images/Image_Flux_3_klein_composition.jpg" alt="i2I" style="width: 40%; height: auto;">
+<img loading="lazy" src="assets/images/Image_Flux_3_klein_composition.jpg" alt="i2I" style="width: 40%; height: auto;">
 
 ## Krea-2
 
@@ -89,25 +89,25 @@ Once the pod is running, use the workflow examples below to choose what you want
 
 **t2i ostris controlnet**
 
-<img loading="lazy" src="../images/Image_Krea2_controlnet.jpg" alt="t2i ostris controlnet" style="width: 100%; height: auto;">
+<img loading="lazy" src="assets/images/Image_Krea2_controlnet.jpg" alt="t2i ostris controlnet" style="width: 100%; height: auto;">
 
 **t2i Qwen text/image conditioning**
 
-<img loading="lazy" src="../images/Image_Krea2_boy_barbie.jpg" alt="t2i conditioning" style="width: 60%; height: auto;">
+<img loading="lazy" src="assets/images/Image_Krea2_boy_barbie.jpg" alt="t2i conditioning" style="width: 60%; height: auto;">
 
 **Krea 2 Identity Edit V1**
 
-<img loading="lazy" src="../images/Image_Krea2_girl_cocktail.jpg" alt="t2i edentity edit" style="width: 60%; height: auto;">
+<img loading="lazy" src="assets/images/Image_Krea2_girl_cocktail.jpg" alt="t2i edentity edit" style="width: 60%; height: auto;">
 
 **Krea 2 Identity Edit V2**
 
-<img loading="lazy" src="../images/Image_krea2_identity_edit.jpg" alt="identitity edit v2" style="width: 60%; height: auto;">
+<img loading="lazy" src="assets/images/Image_krea2_identity_edit.jpg" alt="identitity edit v2" style="width: 60%; height: auto;">
 
 **Krea 2 General Edit V2**
 
-<img loading="lazy" src="../images/Image_krea2_general_edit.jpg" alt="general edit v2" style="width: 60%; height: auto;">
+<img loading="lazy" src="assets/images/Image_krea2_general_edit.jpg" alt="general edit v2" style="width: 60%; height: auto;">
 
-<img loading="lazy" src="../images/image_krea2_general_compose.jpg" alt="compose edit v2" style="width: 60%; height: auto;">
+<img loading="lazy" src="assets/images/image_krea2_general_compose.jpg" alt="compose edit v2" style="width: 60%; height: auto;">
 
 ### Identity workflows
 
@@ -117,7 +117,7 @@ Use these image-to-image workflows to transfer, edit or compose identities while
 <details>
 <summary><strong>View the Krea-2 identity transfer workflow</strong></summary>
 
-<img loading="lazy" src="../images/workflow-example-krea2-identity.jpg" alt="Krea-2 identity transfer workflow" style="width: 100%; height: auto;">
+<img loading="lazy" src="assets/workflows/workflow-example-krea2-identity.jpg" alt="Krea-2 identity transfer workflow" style="width: 100%; height: auto;">
 
 </details>
 
@@ -125,7 +125,7 @@ Use these image-to-image workflows to transfer, edit or compose identities while
 <details>
 <summary><strong>View the Krea-2 identity edit loop</strong></summary>
 
-<img loading="lazy" src="../images/workflow-example-krea2-edit.jpg" alt="Krea-2 identity edit loop workflow" style="width: 100%; height: auto;">
+<img loading="lazy" src="assets/workflows/workflow-example-krea2-edit.jpg" alt="Krea-2 identity edit loop workflow" style="width: 100%; height: auto;">
 
 </details>
 
@@ -133,7 +133,7 @@ Use these image-to-image workflows to transfer, edit or compose identities while
 <details>
 <summary><strong>View the Krea-2 identity composition workflow</strong></summary>
 
-<img loading="lazy" src="../images/workflow-example-krea2-composition.jpg" alt="Krea-2 identity composition workflow" style="width: 100%; height: auto;">
+<img loading="lazy" src="assets/workflows/workflow-example-krea2-composition.jpg" alt="Krea-2 identity composition workflow" style="width: 100%; height: auto;">
 
 </details>
 
@@ -141,7 +141,7 @@ Use these image-to-image workflows to transfer, edit or compose identities while
 <details>
 <summary><strong>View the Krea-2 Ostris edit workflow</strong></summary>
 
-<img loading="lazy" src="../images/workflow-example-krea2-ostris-edit.jpg" alt="Krea-2 Ostris image editing workflow" style="width: 100%; height: auto;">
+<img loading="lazy" src="assets/workflows/workflow-example-krea2-ostris-edit.jpg" alt="Krea-2 Ostris image editing workflow" style="width: 100%; height: auto;">
 
 </details>
 
@@ -159,7 +159,7 @@ Choose a workflow based on how you want to build and condition the prompt.
 <details>
 <summary><strong>View the Krea-2 prompt enhancer workflow</strong></summary>
 
-<img loading="lazy" src="../images/workflow-example-krea2.jpg" alt="Krea-2 text-to-image workflow with prompt enhancer" style="width: 100%; height: auto;">
+<img loading="lazy" src="assets/workflows/workflow-example-krea2.jpg" alt="Krea-2 text-to-image workflow with prompt enhancer" style="width: 100%; height: auto;">
 
 </details>
 
@@ -167,7 +167,7 @@ Choose a workflow based on how you want to build and condition the prompt.
 <details>
 <summary><strong>View the Krea-2 image-conditioning workflow</strong></summary>
 
-<img loading="lazy" src="../images/workflow-example-krea2-vlm.jpg" alt="Krea-2 text-to-image workflow with image conditioning and no VAE encoding" style="width: 100%; height: auto;">
+<img loading="lazy" src="assets/workflows/workflow-example-krea2-vlm.jpg" alt="Krea-2 text-to-image workflow with image conditioning and no VAE encoding" style="width: 100%; height: auto;">
 
 </details>
 
@@ -175,7 +175,7 @@ Choose a workflow based on how you want to build and condition the prompt.
 <details>
 <summary><strong>View the Krea-2 artist-friendly workflow</strong></summary>
 
-<img loading="lazy" src="../images/workflow-example-krea2-vlm-artist.jpg" alt="Krea-2 text-to-image workflow with artist-friendly conditioning" style="width: 100%; height: auto;">
+<img loading="lazy" src="assets/workflows/workflow-example-krea2-vlm-artist.jpg" alt="Krea-2 text-to-image workflow with artist-friendly conditioning" style="width: 100%; height: auto;">
 
 </details>
 
@@ -183,7 +183,7 @@ Choose a workflow based on how you want to build and condition the prompt.
 <details>
 <summary><strong>View the Krea-2 ostris controlnet with 3D pose workflow</strong></summary>
 s
-<img loading="lazy" src="../images/workflow-example-krea2-controlnet.jpg" alt="Krea-2 text-to-image workflow controlnet" style="width: 100%; height: auto;">
+<img loading="lazy" src="assets/workflows/workflow-example-krea2-controlnet.jpg" alt="Krea-2 text-to-image workflow controlnet" style="width: 100%; height: auto;">
 
 </details>
 
@@ -195,17 +195,17 @@ Use Qwen-Image 2.1 for text-to-image generation and image editing, with optional
 
 **t2i prompt enhancement phrase weight adjusted turbo lora**
 
-<img loading="lazy" src="../images/Image_Qwen21_heroin_addict.jpg" alt="t2v prompt enhancement phrase weight adjusted" style="width: 50%; height: auto;">
+<img loading="lazy" src="assets/images/Image_Qwen21_heroin_addict.jpg" alt="t2v prompt enhancement phrase weight adjusted" style="width: 50%; height: auto;">
 
 **i2i prompt enhancement turbo lora**
 
-<img loading="lazy" src="../images/Image_Qwen21_girl_to_heaven.jpg" alt="i2i prompt enhancement turbo lora" style="width: 30%; height: auto;">
+<img loading="lazy" src="assets/images/Image_Qwen21_girl_to_heaven.jpg" alt="i2i prompt enhancement turbo lora" style="width: 30%; height: auto;">
 
 **i2i controlnet , pose created with 3D pose custom node**
 
-<img loading="lazy" src="../images/Image_Qwen21_controlnet.jpg" alt="i2i controlner" style="width: 90%; height: auto;">
+<img loading="lazy" src="assets/images/Image_Qwen21_controlnet.jpg" alt="i2i controlner" style="width: 90%; height: auto;">
 
-<img loading="lazy" src="../images/Image_Qwen21_controlnet2.jpg" alt="i2i controlner" style="width: 50%; height: auto;">
+<img loading="lazy" src="assets/images/Image_Qwen21_controlnet2.jpg" alt="i2i controlner" style="width: 50%; height: auto;">
 
 #### Workflows included
 
@@ -221,7 +221,7 @@ Use Qwen-Image 2.1 for text-to-image generation and image editing, with optional
 <details>
 <summary><strong>View the Qwen-Image 2.1 text-to-image prompt enhancer workflow</strong></summary>
 
-<img loading="lazy" src="../images/workflow-example-qwen-image-21-t2i-prompt-enhancer.jpg" alt="Qwen-Image 2.1 text-to-image workflow with prompt enhancer" style="width: 100%; height: auto;">
+<img loading="lazy" src="assets/workflows/workflow-example-qwen-image-21-t2i-prompt-enhancer.jpg" alt="Qwen-Image 2.1 text-to-image workflow with prompt enhancer" style="width: 100%; height: auto;">
 
 </details>
 
@@ -229,7 +229,7 @@ Use Qwen-Image 2.1 for text-to-image generation and image editing, with optional
 <details>
 <summary><strong>View the Qwen-Image 2.1 text-to-image phrase weights workflow</strong></summary>
 
-<img loading="lazy" src="../images/workflow-example-qwen-image-21-t2i-phrase.jpg" alt="Qwen-Image 2.1 text-to-image workflow with phrase weights" style="width: 100%; height: auto;">
+<img loading="lazy" src="assets/workflows/workflow-example-qwen-image-21-t2i-phrase.jpg" alt="Qwen-Image 2.1 text-to-image workflow with phrase weights" style="width: 100%; height: auto;">
 
 </details>
 
@@ -237,7 +237,7 @@ Use Qwen-Image 2.1 for text-to-image generation and image editing, with optional
 <details>
 <summary><strong>View the Qwen-Image 2.1 image-edit prompt enhancer workflow</strong></summary>
 
-<img loading="lazy" src="../images/workflow-example-qwen-image-21-i2i-prompt-enhancer.jpg" alt="Qwen-Image 2.1 image-edit workflow with prompt enhancer" style="width: 100%; height: auto;">
+<img loading="lazy" src="assets/workflows/workflow-example-qwen-image-21-i2i-prompt-enhancer.jpg" alt="Qwen-Image 2.1 image-edit workflow with prompt enhancer" style="width: 100%; height: auto;">
 
 </details>
 
@@ -245,7 +245,7 @@ Use Qwen-Image 2.1 for text-to-image generation and image editing, with optional
 <details>
 <summary><strong>View the Qwen-Image 2.1 image-edit prompt enhancer custom node</strong></summary>
 
-<img loading="lazy" src="../images/workflow-example-qwen-image-21-i2i-prompt-enhancer-node.jpg" alt="Qwen-Image 2.1 prompt enhancer custom node" style="width: 100%; height: auto;">
+<img loading="lazy" src="assets/workflows/workflow-example-qwen-image-21-i2i-prompt-enhancer-node.jpg" alt="Qwen-Image 2.1 prompt enhancer custom node" style="width: 100%; height: auto;">
 
 </details>
 
@@ -253,7 +253,7 @@ Use Qwen-Image 2.1 for text-to-image generation and image editing, with optional
 <details>
 <summary><strong>View the Qwen-Image 2.1 controlnet workflow with 3D poser</strong></summary>
 
-<img loading="lazy" src="../images/workflow-example-qwen-image-21-i2i-controlnet.jpg" alt="Qwen-Image 2.1 prompt enhancer custom node" style="width: 100%; height: auto;">
+<img loading="lazy" src="assets/workflows/workflow-example-qwen-image-21-i2i-controlnet.jpg" alt="Qwen-Image 2.1 prompt enhancer custom node" style="width: 100%; height: auto;">
 
 </details>
 
@@ -265,7 +265,7 @@ Use SenseNova U1.5 for text-to-image generation or image-to-image editing with t
 <details>
 <summary><strong>View the SenseNova U1.5 workflow</strong></summary>
 
-<img loading="lazy" src="../images/workflow-example-sensenova-i2v.jpg" alt="SenseNova U1.5 image workflow in ComfyUI" style="width: 100%; height: auto;">
+<img loading="lazy" src="assets/workflows/workflow-example-sensenova-i2v.jpg" alt="SenseNova U1.5 image workflow in ComfyUI" style="width: 100%; height: auto;">
 
 </details>
 
@@ -275,7 +275,7 @@ Use SenseNova U1.5 for text-to-image generation or image-to-image editing with t
 <details>
 <summary><strong>View the FLUX.2 Klein multiple image composition workflow</strong></summary>
 
-<img loading="lazy" src="../images/workflow-example-FLUX-KLEIN-3.jpg" alt="FLUX.2 Klein multiple images composition workflow" style="width: 100%; height: auto;">
+<img loading="lazy" src="assets/workflows/workflow-example-FLUX-KLEIN-3.jpg" alt="FLUX.2 Klein multiple images composition workflow" style="width: 100%; height: auto;">
 
 </details>
 
@@ -285,7 +285,7 @@ Use FLUX.2 Klein when generation needs to follow a control, target or reference 
 <details>
 <summary><strong>View the FLUX.2 Klein control and target workflow</strong></summary>
 
-<img loading="lazy" src="../images/workflow-example-FLUX-KLEIN.jpg" alt="FLUX.2 Klein control and target image generation workflow" style="width: 100%; height: auto;">
+<img loading="lazy" src="assets/workflows/workflow-example-FLUX-KLEIN.jpg" alt="FLUX.2 Klein control and target image generation workflow" style="width: 100%; height: auto;">
 
 </details>
 
@@ -293,7 +293,7 @@ Use FLUX.2 Klein when generation needs to follow a control, target or reference 
 <details>
 <summary><strong>View the FLUX.2 Klein RefControl workflow</strong></summary>
 
-<img loading="lazy" src="../images/workflow-example-FLUX-KLEIN-2.jpg" alt="FLUX.2 Klein RefControl image generation workflow" style="width: 100%; height: auto;">
+<img loading="lazy" src="assets/workflows/workflow-example-FLUX-KLEIN-2.jpg" alt="FLUX.2 Klein RefControl image generation workflow" style="width: 100%; height: auto;">
 
 </details>
 
@@ -305,7 +305,7 @@ Generate several viewing angles with Qwen Image 2.1 , Qwen-Image-Edit or FLUX.2 
 <details>
 <summary><strong>View the Qwen-Image 2.1 mutiple angle workflow</strong></summary>
 
-<img loading="lazy" src="../images/workflow-example-qwen-image-21-i2i-multiple-angle.jpg" alt="Qwen-Image 2.1 multiple angle" style="width: 100%; height: auto;">
+<img loading="lazy" src="assets/workflows/workflow-example-qwen-image-21-i2i-multiple-angle.jpg" alt="Qwen-Image 2.1 multiple angle" style="width: 100%; height: auto;">
 
 </details>
 
@@ -313,7 +313,7 @@ Generate several viewing angles with Qwen Image 2.1 , Qwen-Image-Edit or FLUX.2 
 <details>
 <summary><strong>View the Qwen-Image-Edit multiple-angle workflow</strong></summary>
 
-<img loading="lazy" src="../images/workflow-example-QWEN-EDIT-CAMERA.jpg" alt="Qwen-Image-Edit workflow for multiple camera angles" style="width: 100%; height: auto;">
+<img loading="lazy" src="assets/workflows/workflow-example-QWEN-EDIT-CAMERA.jpg" alt="Qwen-Image-Edit workflow for multiple camera angles" style="width: 100%; height: auto;">
 
 </details>
 
@@ -321,7 +321,7 @@ Generate several viewing angles with Qwen Image 2.1 , Qwen-Image-Edit or FLUX.2 
 <details>
 <summary><strong>View the FLUX.2 Dev multiple-angle workflow</strong></summary>
 
-<img loading="lazy" src="../images/workflow-example-FLUX2-CAMERA.jpg" alt="FLUX.2 Dev workflow for multiple camera angles" style="width: 100%; height: auto;">
+<img loading="lazy" src="assets/workflows/workflow-example-FLUX2-CAMERA.jpg" alt="FLUX.2 Dev workflow for multiple camera angles" style="width: 100%; height: auto;">
 
 </details>
 
@@ -334,7 +334,7 @@ Use the ZIB-ZIT workflow for text-to-image generation with the Z-Image model fam
 <details>
 <summary><strong>View the ZIB-ZIT workflow</strong></summary>
 
-<img loading="lazy" src="../images/workflow-example-ZIB-ZIT.jpg" alt="ZIB-ZIT image generation workflow" style="width: 100%; height: auto;">
+<img loading="lazy" src="assets/workflows/workflow-example-ZIB-ZIT.jpg" alt="ZIB-ZIT image generation workflow" style="width: 100%; height: auto;">
 
 </details>
 
@@ -347,7 +347,7 @@ Use JoyCaption to analyze an image and generate a detailed description or prompt
 <details>
 <summary><strong>View the JoyCaption workflow</strong></summary>
 
-<img loading="lazy" src="../images/joycaption-workflow.jpg" alt="JoyCaption image captioning workflow" style="width: 100%; height: auto;">
+<img loading="lazy" src="assets/workflows/joycaption-workflow.jpg" alt="JoyCaption image captioning workflow" style="width: 100%; height: auto;">
 
 </details>
 
@@ -385,52 +385,52 @@ These screenshots show the workflows running with different models, precisions a
 <summary><strong>View the hardware comparison screenshots</strong></summary>
 
 <p><strong>Z-Image on an RTX A4500</strong></p>
-<img loading="lazy" src="../images/runpod_A4500_ZIB_ZIT.jpg" alt="Z-Image running on an RTX A4500" style="width: 100%; height: auto;">
+<img loading="lazy" src="assets/runpod/runpod_A4500_ZIB_ZIT.jpg" alt="Z-Image running on an RTX A4500" style="width: 100%; height: auto;">
 
 <p><strong>Z-Image on an RTX A5000</strong></p>
-<img loading="lazy" src="../images/runpod_A5000_ZIB_ZIT.jpg" alt="Z-Image running on an RTX A5000" style="width: 100%; height: auto;">
+<img loading="lazy" src="assets/runpod/runpod_A5000_ZIB_ZIT.jpg" alt="Z-Image running on an RTX A5000" style="width: 100%; height: auto;">
 
 <p><strong>Z-Image on an RTX 4000 Ada</strong></p>
-<img loading="lazy" src="../images/runpod_4000ADA_ZIB_ZIT.jpg" alt="Z-Image running on an RTX 4000 Ada" style="width: 100%; height: auto;">
+<img loading="lazy" src="assets/runpod/runpod_4000ADA_ZIB_ZIT.jpg" alt="Z-Image running on an RTX 4000 Ada" style="width: 100%; height: auto;">
 
 <p><strong>Z-Image on an RTX 3090</strong></p>
-<img loading="lazy" src="../images/runpod_3090_ZIB_ZIT.jpg" alt="Z-Image running on an RTX 3090" style="width: 100%; height: auto;">
+<img loading="lazy" src="assets/runpod/runpod_3090_ZIB_ZIT.jpg" alt="Z-Image running on an RTX 3090" style="width: 100%; height: auto;">
 
 <p><strong>FLUX.2 Klein 9B on an RTX A4500</strong></p>
-<img loading="lazy" src="../images/runpod_FLUX_KLEIN.jpg" alt="FLUX.2 Klein 9B running on an RTX A4500" style="width: 100%; height: auto;">
+<img loading="lazy" src="assets/runpod/runpod_FLUX_KLEIN.jpg" alt="FLUX.2 Klein 9B running on an RTX A4500" style="width: 100%; height: auto;">
 
 <p><strong>Qwen-Image-Edit fp8 on an RTX A5000</strong></p>
-<img loading="lazy" src="../images/runpod_A5000_QWEN-EDIT.jpg" alt="Qwen-Image-Edit fp8 running on an RTX A5000" style="width: 100%; height: auto;">
+<img loading="lazy" src="assets/runpod/runpod_A5000_QWEN-EDIT.jpg" alt="Qwen-Image-Edit fp8 running on an RTX A5000" style="width: 100%; height: auto;">
 
 <p><strong>Qwen-Image-Edit bf16 on an A40</strong></p>
-<img loading="lazy" src="../images/runpod_A40_QWEN-EDIT.jpg" alt="Qwen-Image-Edit bf16 running on an A40" style="width: 100%; height: auto;">
+<img loading="lazy" src="assets/runpod/runpod_A40_QWEN-EDIT.jpg" alt="Qwen-Image-Edit bf16 running on an A40" style="width: 100%; height: auto;">
 
 <p><strong>FLUX.2 Dev bf16 on an L40S</strong></p>
-<img loading="lazy" src="../images/runpod_L40S_FLUX_2.jpg" alt="FLUX.2 Dev bf16 running on an L40S" style="width: 100%; height: auto;">
+<img loading="lazy" src="assets/runpod/runpod_L40S_FLUX_2.jpg" alt="FLUX.2 Dev bf16 running on an L40S" style="width: 100%; height: auto;">
 
 <p><strong>FLUX.2 Dev fp8 on an RTX A5000</strong></p>
-<img loading="lazy" src="../images/runpod_A5000_FLUX_2.jpg" alt="FLUX.2 Dev fp8 running on an RTX A5000" style="width: 100%; height: auto;">
+<img loading="lazy" src="assets/runpod/runpod_A5000_FLUX_2.jpg" alt="FLUX.2 Dev fp8 running on an RTX A5000" style="width: 100%; height: auto;">
 
 <p><strong>Krea-2 turbo fp8 on an RTX A5000</strong></p>
-<img loading="lazy" src="../images/runpod_A5000_krea2.jpg" alt="Krea-2 turbo fp8 running on an RTX A5000" style="width: 100%; height: auto;">
+<img loading="lazy" src="assets/runpod/runpod_A5000_krea2.jpg" alt="Krea-2 turbo fp8 running on an RTX A5000" style="width: 100%; height: auto;">
 
 <p><strong>Krea-2 turbo bf16 on an RTX A5000</strong></p>
-<img loading="lazy" src="../images/runpod_A5000_krea2-bf16.jpg" alt="Krea-2 turbo bf16 running on an RTX A5000" style="width: 100%; height: auto;">
+<img loading="lazy" src="assets/runpod/runpod_A5000_krea2-bf16.jpg" alt="Krea-2 turbo bf16 running on an RTX A5000" style="width: 100%; height: auto;">
 
 <p><strong>Krea-2 turbo bf16 on an RTX 4090</strong></p>
-<img loading="lazy" src="../images/runpod_RTX490_krea2-bf16.jpg" alt="Krea-2 turbo bf16 running on an RTX 4090" style="width: 100%; height: auto;">
+<img loading="lazy" src="assets/runpod/runpod_RTX490_krea2-bf16.jpg" alt="Krea-2 turbo bf16 running on an RTX 4090" style="width: 100%; height: auto;">
 
 <p><strong>SenseNova U1.5 bf16 on an L40S</strong></p>
-<img loading="lazy" src="../images/runpod_L40S_SenseNova.jpg" alt="SenseNova U1.5 bf16 running on an L40S" style="width: 100%; height: auto;">
+<img loading="lazy" src="assets/runpod/runpod_L40S_SenseNova.jpg" alt="SenseNova U1.5 bf16 running on an L40S" style="width: 100%; height: auto;">
 
 <p><strong>Qwen-Image 2.1 on an L40S</strong></p>
-<img loading="lazy" src="../images/runpod_L40S_QWEN-Image-21.jpg" alt="Qwen-Image 2.1 running on an L40S" style="width: 100%; height: auto;">
+<img loading="lazy" src="assets/runpod/runpod_L40S_QWEN-Image-21.jpg" alt="Qwen-Image 2.1 running on an L40S" style="width: 100%; height: auto;">
 
 <p><strong>Qwen-Image 2.1 on an RTX 4090</strong></p>
-<img loading="lazy" src="../images/runpod_RTX4090_QWEN-Image-21.jpg" alt="Qwen-Image 2.1 running on an RTX 4090" style="width: 100%; height: auto;">
+<img loading="lazy" src="assets/runpod/runpod_RTX4090_QWEN-Image-21.jpg" alt="Qwen-Image 2.1 running on an RTX 4090" style="width: 100%; height: auto;">
 
 <p><strong>Qwen-Image 2.1 on an RTX PRO 6000 MiG 24Gb</strong></p>
-<img loading="lazy" src="../images/runpod_RTXPRO6000MIG24_QWEN-Image-21.jpg" alt="Qwen-Image 2.1 running on an RTX PRO 6000 MiG 24 Gb" style="width: 100%; height: auto;">
+<img loading="lazy" src="assets/runpod/runpod_RTXPRO6000MIG24_QWEN-Image-21.jpg" alt="Qwen-Image 2.1 running on an RTX PRO 6000 MiG 24 Gb" style="width: 100%; height: auto;">
 
 </details>
 
