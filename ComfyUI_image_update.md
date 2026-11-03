@@ -1,4 +1,4 @@
-# run-comfyui-image
+# run-comfyui-image run-comfyui-image2
 
 ## Release Notes Policy
 
@@ -8,12 +8,14 @@
 - Pinned custom nodes are not updated automatically, because changing those pins can introduce compatibility issues.
 - Tested on a wide range of GPU's including RTX 3090,4090,5090, L40S, L4 , PRO 6000 MiG 24/48 Gb.
 
-## 27102026
+## 03112026
 
 - Updated ComfyUI to version 0.43.0.
 - [ComfyUI-Moss-Image-Edit-Native](https://github.com/PedroMarinhoDev/ComfyUI-Moss-Image-Edit-Native)
 - Moss native edit workflow.
 - Fibo 2.0 provisioning.
+- [MOSS-Image-Character-Sheet-Designer](https://github.com/ukr8b3g-cmyk/MOSS-Image-Character-Sheet-Designer)
+- [ComfyUI-MOSS-Prompt-Weights](https://github.com/kongbai-0421/ComfyUI-MOSS-Prompt-Weights)
 
 ## 221O2O26
 

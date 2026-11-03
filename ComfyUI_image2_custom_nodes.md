@@ -107,6 +107,8 @@
 - [ComfyUI-MOSSImageTextEncoder](https://github.com/jalberty2018/ComfyUI-MOSSImageTextEncoder)
 - [ComfyUI-MOSS-Image-Ostris-Edit](https://github.com/ostris/ComfyUI-MOSS-Image-Ostris-Edit)
 - [ComfyUI-Moss-Image-Edit-Native](https://github.com/PedroMarinhoDev/ComfyUI-Moss-Image-Edit-Native)
+- [MOSS-Image-Character-Sheet-Designer](https://github.com/ukr8b3g-cmyk/MOSS-Image-Character-Sheet-Designer)
+- [ComfyUI-MOSS-Prompt-Weights](https://github.com/kongbai-0421/ComfyUI-MOSS-Prompt-Weights)
 
 #### Experimental text phase conditioning for flux and moss
 
