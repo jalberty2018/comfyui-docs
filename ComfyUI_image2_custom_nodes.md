@@ -110,6 +110,10 @@
 - [MOSS-Image-Character-Sheet-Designer](https://github.com/ukr8b3g-cmyk/MOSS-Image-Character-Sheet-Designer)
 - [ComfyUI-MOSS-Prompt-Weights](https://github.com/kongbai-0421/ComfyUI-MOSS-Prompt-Weights)
 
+#### P-H3-Image
+
+- [ComfyUI-P-H3-Image-Tools](https://github.com/jalberty2018/ComfyUI-P-H3-Image-Tools)
+
 #### Experimental text phase conditioning for flux and moss
 
 - [ComfyUI-Phrase-Weight-Conditioning](https://github.com/jalberty2018/ComfyUI-Phrase-Weight-Conditioning)

@@ -8,11 +8,10 @@
 - Pinned custom nodes are not updated automatically, because changing those pins can introduce compatibility issues.
 - Tested on a wide range of GPU's including RTX 3090,4090,5090, L40S, L4 , PRO 6000 MiG 24/48 Gb.
 
-## 04112026
+## 06112026
 
 - Updated ComfyUI to version 0.44.0.
-- P-H3-Image provisioning.
-- [MOSS-Image-Character-Sheet-Designer](https://github.com/ukr8b3g-cmyk/MOSS-Image-Character-Sheet-Designer)
+- P-H3-Image provisioning and custom node.
 - [ComfyUI-MOSS-Prompt-Weights](https://github.com/kongbai-0421/ComfyUI-MOSS-Prompt-Weights)
 
 ## 27102026
