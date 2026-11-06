@@ -4,6 +4,11 @@
 
 - [docs](https://docs.comfy.org/)
 
+## P-H3-Image
+
+- [Huggingface PrunaAI](https://huggingface.co/PrunaAI/P-H3-Image-Comfy)
+- [Official ComfyUI guide](https://docs.comfy.org/tutorials/image/pruna/p-h3-image)
+
 ## Flux 3 Image Klein
 
 - [Official ComfyUI guide](https://docs.comfy.org/tutorials/flux/flux-3-klein)
