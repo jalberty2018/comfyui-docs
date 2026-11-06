@@ -26,7 +26,7 @@ Use this page to choose a WAN video template, deploy it on a suitable NVIDIA GPU
 | **WAN 2.2 T2V LightX2V** | Text prompt | Generating a video directly from a description | [**Deploy WAN T2V →**](https://console.runpod.io/deploy?template=qvozvvb1xd&ref=se4tkc5o) |
 | **WAN 2.2 I2V + I2LV SVI 2.0 PRO LightX2V** | Image and prompt | Image-to-video and longer videos assembled in chunks | [**Deploy WAN I2V + SVI →**](https://console.runpod.io/deploy?template=moem21s8xb&ref=se4tkc5o) |
 | **WAN 2.2 Animate LightX2V** | Character reference and driving media | Character animation and character replacement | [**Deploy WAN Animate →**](https://console.runpod.io/deploy?template=tp7gj0khyo&ref=se4tkc5o) |
-| **WAN SCAIL-2 VI2V LightX2V** | Character image, driving video and optional prompt | End-to-end motion transfer, including character replacement | [**Deploy SCAIL-2 →**](https://console.runpod.io/deploy?template=9i0lkwau54&ref=se4tkc5o) |
+| **WAN SCAIL-2 VI2V LightX2V** | Character image, driving video and optional prompt | End-to-end motion transfer, including character replacement | [**Deploy SCAIL-2 →**](https://console.runpod.io/hub/template/dhi6kykubt?ref=se4tkc5o) |
 
 After deployment, open the ComfyUI workflow browser and select an example included with the chosen template.
 

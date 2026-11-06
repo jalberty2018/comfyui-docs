@@ -11,7 +11,7 @@
 ## 06112026
 
 - Updated ComfyUI to version 0.44.0.
-- P-H3-Image provisioning and custom node.
+- [P-H3-Image template on runpod](https://console.runpod.io/hub/template/9i0lkwau54?ref=se4tkc5o)
 - [ComfyUI-MOSS-Prompt-Weights](https://github.com/kongbai-0421/ComfyUI-MOSS-Prompt-Weights)
 
 ## 27102026

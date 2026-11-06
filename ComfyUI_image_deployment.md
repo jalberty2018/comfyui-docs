@@ -43,6 +43,7 @@ Use this page to choose an image-generation or image-editing template, deploy it
 
 | Template | Best suited to | RunPod |
 | --- | --- | --- |
+| **P-H3-Image PrunaAI** | Image editing based on Minimax H3 | [**P-H3-Image →**](https://console.runpod.io/hub/template/9i0lkwau54?ref=se4tkc5o) |
 | **Flux 3 Image Klein** | Text-to-image and image editing with INT8 ConvRot models, Heretic text encoder and VLM prompt expander | [**Deploy Flux 3 Image Klein →**](https://console.runpod.io/hub/template/l9es28w20d?ref=se4tkc5o) |
 | **MOSS-Image** | Text-to-image with qwen 3.5 vlm support | [**Deploy MOSS-Image →**](https://console.runpod.io/deploy?template=3fri17sxaa&ref=se4tkc5o) |
 | **Krea-2 Base and Turbo** | Text-to-image, identity transfer, composition and image-editing workflows | [**Deploy Krea-2 →**](https://console.runpod.io/deploy?template=e2hlyrm22l&ref=se4tkc5o) |
