@@ -113,6 +113,7 @@
 #### P-H3-Image
 
 - [ComfyUI-P-H3-Image-Tools](https://github.com/jalberty2018/ComfyUI-P-H3-Image-Tools)
+- [H3-Character-Sheet-Designer](https://github.com/ukr8b3g-cmyk/H3-Character-Sheet-Designer)
 
 #### Experimental text phase conditioning for flux and moss
 
