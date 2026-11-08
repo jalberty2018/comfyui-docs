@@ -62,6 +62,10 @@ Once the pod is running, use the workflow examples below to choose what you want
 
 <img loading="lazy" src="../assets/images/Image_P_H3_Image_i2i.jpg" alt="i2i" style="width: 60%; height: auto;">
 
+**Character sheet designer**
+
+<img loading="lazy" src="../assets/images/Image_P_H3_Image_character_sheet.jpg" alt="character sheet" style="width: 50%; height: auto;">
+
 ### Workflows
 
 <a id="example-i2i-workflow-P-H3-Image"></a>
@@ -69,6 +73,14 @@ Once the pod is running, use the workflow examples below to choose what you want
 <summary><strong>View the P-H3-Image i2i workflow</strong></summary>
 
 <img loading="lazy" src="../assets/workflows/workflow-example-P-H3-Image-i2i.jpg" alt="P-H3-Image i2i" style="width: 80%; height: auto;">
+
+</details>
+
+<a id="example-character-sheet-workflow-P-H3-Image"></a>
+<details>
+<summary><strong>View the P-H3-Image character sheet design workflow</strong></summary>
+
+<img loading="lazy" src="../assets/workflows/workflow-example-P-H3-Image-character-sheet.jpg" alt="P-H3-Image character sheet" style="width: 80%; height: auto;">
 
 </details>
 
