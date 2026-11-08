@@ -66,6 +66,10 @@ Once the pod is running, use the workflow examples below to choose what you want
 
 <img loading="lazy" src="../assets/images/Image_P_H3_Image_character_sheet.jpg" alt="character sheet" style="width: 50%; height: auto;">
 
+**Character sheet designer clothing**
+
+<img loading="lazy" src="../assets/images/Image_P_H3_Image_character_sheet_gothic.jpg" alt="character sheet clothing" style="width: 50%; height: auto;">
+
 ### Workflows
 
 <a id="example-i2i-workflow-P-H3-Image"></a>
