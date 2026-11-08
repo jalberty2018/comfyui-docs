@@ -72,6 +72,76 @@ Once the pod is running, use the workflow examples below to choose what you want
 
 </details>
 
+### Qwen-Image 2.1
+
+Use Qwen-Image 2.1 for text-to-image generation and image editing, with optional prompt enhancement.
+
+#### Example images
+
+**t2i prompt enhancement phrase weight adjusted turbo lora**
+
+<img loading="lazy" src="../assets/images/Image_Qwen21_heroin_addict.jpg" alt="t2v prompt enhancement phrase weight adjusted" style="width: 50%; height: auto;">
+
+**i2i prompt enhancement turbo lora**
+
+<img loading="lazy" src="../assets/images/Image_Qwen21_girl_to_heaven.jpg" alt="i2i prompt enhancement turbo lora" style="width: 30%; height: auto;">
+
+**i2i controlnet , pose created with 3D pose custom node**
+
+<img loading="lazy" src="../assets/images/Image_Qwen21_controlnet.jpg" alt="i2i controlner" style="width: 90%; height: auto;">
+
+<img loading="lazy" src="../assets/images/Image_Qwen21_controlnet2.jpg" alt="i2i controlner" style="width: 50%; height: auto;">
+
+#### Workflows included
+
+| Workflow | Best suited for |
+| --- | --- |
+| `t2i` | Generating an image from a text prompt |
+| `i2i` | Editing an image with text instructions |
+| `t2i-prompt-enhancer` | Expanding a prompt before image generation |
+| `i2i-prompt-enhancer` | Enhancing instructions before image editing |
+| `i2i-controlnet` | Modify the pose of a reference inmage with 3D pose |
+
+<a id="example-t2i-workflow-qwen-image-21-with-prompt-enhancer"></a>
+<details>
+<summary><strong>View the Qwen-Image 2.1 text-to-image prompt enhancer workflow</strong></summary>
+
+<img loading="lazy" src="../assets/workflows/workflow-example-qwen-image-21-t2i-prompt-enhancer.jpg" alt="Qwen-Image 2.1 text-to-image workflow with prompt enhancer" style="width: 100%; height: auto;">
+
+</details>
+
+<a id="example-t2i-workflow-qwen-image-21-phrase-weights"></a>
+<details>
+<summary><strong>View the Qwen-Image 2.1 text-to-image phrase weights workflow</strong></summary>
+
+<img loading="lazy" src="../assets/workflows/workflow-example-qwen-image-21-t2i-phrase.jpg" alt="Qwen-Image 2.1 text-to-image workflow with phrase weights" style="width: 100%; height: auto;">
+
+</details>
+
+<a id="example-i2i-workflow-qwen-image-21-with-prompt-enhancer"></a>
+<details>
+<summary><strong>View the Qwen-Image 2.1 image-edit prompt enhancer workflow</strong></summary>
+
+<img loading="lazy" src="../assets/workflows/workflow-example-qwen-image-21-i2i-prompt-enhancer.jpg" alt="Qwen-Image 2.1 image-edit workflow with prompt enhancer" style="width: 100%; height: auto;">
+
+</details>
+
+<a id="example-i2i-workflow-qwen-image-21-with-prompt-enhancer-detail"></a>
+<details>
+<summary><strong>View the Qwen-Image 2.1 image-edit prompt enhancer custom node</strong></summary>
+
+<img loading="lazy" src="../assets/workflows/workflow-example-qwen-image-21-i2i-prompt-enhancer-node.jpg" alt="Qwen-Image 2.1 prompt enhancer custom node" style="width: 100%; height: auto;">
+
+</details>
+
+<a id="example-i2i-workflow-qwen-image-21-controlnet"></a>
+<details>
+<summary><strong>View the Qwen-Image 2.1 controlnet workflow with 3D poser</strong></summary>
+
+<img loading="lazy" src="../assets/workflows/workflow-example-qwen-image-21-i2i-controlnet.jpg" alt="Qwen-Image 2.1 prompt enhancer custom node" style="width: 100%; height: auto;">
+
+</details>
+
 ## MOSS-Image
 
 ### Example images
@@ -207,76 +277,6 @@ Choose a workflow based on how you want to build and condition the prompt.
 <summary><strong>View the Krea-2 ostris controlnet with 3D pose workflow</strong></summary>
 s
 <img loading="lazy" src="../assets/workflows/workflow-example-krea2-controlnet.jpg" alt="Krea-2 text-to-image workflow controlnet" style="width: 100%; height: auto;">
-
-</details>
-
-### Qwen-Image 2.1
-
-Use Qwen-Image 2.1 for text-to-image generation and image editing, with optional prompt enhancement.
-
-#### Example images
-
-**t2i prompt enhancement phrase weight adjusted turbo lora**
-
-<img loading="lazy" src="../assets/images/Image_Qwen21_heroin_addict.jpg" alt="t2v prompt enhancement phrase weight adjusted" style="width: 50%; height: auto;">
-
-**i2i prompt enhancement turbo lora**
-
-<img loading="lazy" src="../assets/images/Image_Qwen21_girl_to_heaven.jpg" alt="i2i prompt enhancement turbo lora" style="width: 30%; height: auto;">
-
-**i2i controlnet , pose created with 3D pose custom node**
-
-<img loading="lazy" src="../assets/images/Image_Qwen21_controlnet.jpg" alt="i2i controlner" style="width: 90%; height: auto;">
-
-<img loading="lazy" src="../assets/images/Image_Qwen21_controlnet2.jpg" alt="i2i controlner" style="width: 50%; height: auto;">
-
-#### Workflows included
-
-| Workflow | Best suited for |
-| --- | --- |
-| `t2i` | Generating an image from a text prompt |
-| `i2i` | Editing an image with text instructions |
-| `t2i-prompt-enhancer` | Expanding a prompt before image generation |
-| `i2i-prompt-enhancer` | Enhancing instructions before image editing |
-| `i2i-controlnet` | Modify the pose of a reference inmage with 3D pose |
-
-<a id="example-t2i-workflow-qwen-image-21-with-prompt-enhancer"></a>
-<details>
-<summary><strong>View the Qwen-Image 2.1 text-to-image prompt enhancer workflow</strong></summary>
-
-<img loading="lazy" src="../assets/workflows/workflow-example-qwen-image-21-t2i-prompt-enhancer.jpg" alt="Qwen-Image 2.1 text-to-image workflow with prompt enhancer" style="width: 100%; height: auto;">
-
-</details>
-
-<a id="example-t2i-workflow-qwen-image-21-phrase-weights"></a>
-<details>
-<summary><strong>View the Qwen-Image 2.1 text-to-image phrase weights workflow</strong></summary>
-
-<img loading="lazy" src="../assets/workflows/workflow-example-qwen-image-21-t2i-phrase.jpg" alt="Qwen-Image 2.1 text-to-image workflow with phrase weights" style="width: 100%; height: auto;">
-
-</details>
-
-<a id="example-i2i-workflow-qwen-image-21-with-prompt-enhancer"></a>
-<details>
-<summary><strong>View the Qwen-Image 2.1 image-edit prompt enhancer workflow</strong></summary>
-
-<img loading="lazy" src="../assets/workflows/workflow-example-qwen-image-21-i2i-prompt-enhancer.jpg" alt="Qwen-Image 2.1 image-edit workflow with prompt enhancer" style="width: 100%; height: auto;">
-
-</details>
-
-<a id="example-i2i-workflow-qwen-image-21-with-prompt-enhancer-detail"></a>
-<details>
-<summary><strong>View the Qwen-Image 2.1 image-edit prompt enhancer custom node</strong></summary>
-
-<img loading="lazy" src="../assets/workflows/workflow-example-qwen-image-21-i2i-prompt-enhancer-node.jpg" alt="Qwen-Image 2.1 prompt enhancer custom node" style="width: 100%; height: auto;">
-
-</details>
-
-<a id="example-i2i-workflow-qwen-image-21-controlnet"></a>
-<details>
-<summary><strong>View the Qwen-Image 2.1 controlnet workflow with 3D poser</strong></summary>
-
-<img loading="lazy" src="../assets/workflows/workflow-example-qwen-image-21-i2i-controlnet.jpg" alt="Qwen-Image 2.1 prompt enhancer custom node" style="width: 100%; height: auto;">
 
 </details>
 

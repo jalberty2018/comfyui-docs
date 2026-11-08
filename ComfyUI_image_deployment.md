@@ -8,16 +8,21 @@ Use this page to choose an image-generation or image-editing template, deploy it
 
 ### Starters
 
-- Start with **MOSS-Image** for straightforward text-to-image generation with vlm prompt enhancement and reference support.
+- Choose **P-H3-Image** for easy text-to-image, image-2-image, ref-2-image, with included prompt upsampler.
 
 ### Text-to-Image with identity edit possibility
 
 - Choose **Krea-2 Base and Turbo** for identity, composition and broader image workflows, also perfect for text-to-image.
+- Choose **MOSS-Image** for straightforward text-to-image generation with vlm prompt enhancement and some editing.
 
-### Real image editing
+### Real image editing/composition
 
+- Choose **P-H3-Image** for composition and character sheet design, perfect identity control, out of the box uncensored.
+- Choose **Qwen-Image 2.1** especially for precise image editing, either with direct prompts or with optional prompt enhancement.
 - Choose **FLUX 3 Image Klein** for BBOX or reference-image workflows also provides text-to-image.
-- Choose **Qwen-Image 2.1** for text-to-image generation and image editing, either with direct prompts or with optional prompt enhancement.
+
+### Previous versions
+
 - Choose **FLUX.2 Klein** for control or reference-image workflows.
 - Choose **Qwen-Image-Edit 2511** when an existing image is your main input and you need a more mature eco system.
 
