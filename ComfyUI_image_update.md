@@ -8,6 +8,10 @@
 - Pinned custom nodes are not updated automatically, because changing those pins can introduce compatibility issues.
 - Tested on a wide range of GPU's including RTX 3090,4090,5090, L40S, L4 , PRO 6000 MiG 24/48 Gb.
 
+## 10112026
+
+- Updated ComfyUI to version 0.45.0.
+
 ## 08112026
 
 - Updated ComfyUI to version 0.44.0.
