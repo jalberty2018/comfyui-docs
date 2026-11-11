@@ -12,8 +12,8 @@
         234.93925445906487
       ],
       "size": [
-        1310,
-        990
+        650.7021267431614,
+        602.5514060093998
       ],
       "flags": {},
       "order": 26,
@@ -271,12 +271,6 @@
           "link": 116
         },
         {
-          "name": "images.image_8",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 125
-        },
-        {
           "name": "images.image_9",
           "shape": 7,
           "type": "IMAGE",
@@ -329,6 +323,12 @@
           "shape": 7,
           "type": "IMAGE",
           "link": 124
+        },
+        {
+          "name": "images.image_8",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 125
         }
       ],
       "outputs": [
@@ -490,7 +490,7 @@
         "Node name for S&R": "KSampler"
       },
       "widgets_values": [
-        816374296561572,
+        945748934520912,
         "randomize",
         6,
         1,
@@ -499,7 +499,7 @@
         1
       ],
       "widgets_values_named": {
-        "seed": 816374296561572,
+        "seed": 945748934520912,
         "control_after_generate": "randomize",
         "steps": 6,
         "cfg": 1,
@@ -512,8 +512,8 @@
       "id": 41,
       "type": "ComfySwitchNode",
       "pos": [
-        -104.85812427849163,
-        1369.3603520423812
+        -179.80722531627225,
+        1351.5758048086393
       ],
       "size": [
         270,
@@ -685,8 +685,8 @@
       "id": 65,
       "type": "LSReferenceSpitter",
       "pos": [
-        -787.0519434880415,
-        1375.550546725079
+        -828.9726065858708,
+        1342.522157244121
       ],
       "size": [
         174.0142578125,
@@ -823,15 +823,15 @@
       },
       "widgets_values": [
         false,
-        "2:3 (Portrait Photo)",
-        16,
+        "4:3 (Standard)",
+        12,
         32,
         null
       ],
       "widgets_values_named": {
         "use_original_image_resolution": false,
-        "aspect_ratio": "2:3 (Portrait Photo)",
-        "megapixels": 16,
+        "aspect_ratio": "4:3 (Standard)",
+        "megapixels": 12,
         "multiple": 32,
         "resolution_info": null
       },
@@ -981,21 +981,21 @@
         "Node name for S&R": "LSImageReferenceManagerUploadScaled"
       },
       "widgets_values": [
-        "{\"references\":[{\"kind\":\"image\",\"file\":\"ken.jpg\"},{\"kind\":\"image\",\"file\":\"barbie.jpg\"},{\"kind\":\"image\",\"file\":\"girl_bicycle.png\",\"crop\":[0,0,0.9967,0.98]}]}",
+        "{\"references\":[]}",
         4,
         32,
         "crop",
         "area",
-        1,
+        1.05,
         ""
       ],
       "widgets_values_named": {
-        "references_json": "{\"references\":[{\"kind\":\"image\",\"file\":\"ken.jpg\"},{\"kind\":\"image\",\"file\":\"barbie.jpg\"},{\"kind\":\"image\",\"file\":\"girl_bicycle.png\",\"crop\":[0,0,0.9967,0.98]}]}",
+        "references_json": "{\"references\":[]}",
         "megapixels": 4,
         "multiple_of": 32,
         "resize_mode": "crop",
         "upscale_method": "area",
-        "megapixels_vlm": 1,
+        "megapixels_vlm": 1.05,
         "mmrp_block": ""
       },
       "color": "#222",
@@ -1005,12 +1005,12 @@
       "id": 73,
       "type": "ComfyUI_Image_Prompt_llama-cpp",
       "pos": [
-        -555.7406513416264,
-        1380.0091897488967
+        -616.7161657074685,
+        1344.4401437404058
       ],
       "size": [
-        400,
-        582
+        411.43293014440474,
+        639.2173804601618
       ],
       "flags": {},
       "order": 19,
@@ -1029,18 +1029,6 @@
             "name": "prompt"
           },
           "link": 139
-        },
-        {
-          "name": "reference_images.reference_image_9",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 149
-        },
-        {
-          "name": "reference_images.reference_image_10",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 150
         },
         {
           "name": "reference_images.reference_image_2",
@@ -1083,6 +1071,18 @@
           "shape": 7,
           "type": "IMAGE",
           "link": 148
+        },
+        {
+          "name": "reference_images.reference_image_9",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 149
+        },
+        {
+          "name": "reference_images.reference_image_10",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 150
         }
       ],
       "outputs": [
@@ -1119,12 +1119,14 @@
         "Qwen3.8/mmproj-F16.gguf",
         false,
         "medium",
-        1073816048645659,
+        770076159345928,
         "randomize",
         8192,
         true,
         "",
-        "I2I"
+        "I2I",
+        "off",
+        "auto"
       ],
       "widgets_values_named": {
         "prompt": "Describe the image or the desired edit.",
@@ -1133,12 +1135,14 @@
         "mmproj": "Qwen3.8/mmproj-F16.gguf",
         "think_mode": false,
         "reasoning_effort": "medium",
-        "seed": 1073816048645659,
+        "seed": 770076159345928,
         "control_after_generate": "randomize",
         "max_tokens": 8192,
         "force_unload_model": true,
         "additional_system_instructions": "",
-        "mode": "I2I"
+        "mode": "I2I",
+        "sampling_mode": "off",
+        "mtp": "auto"
       },
       "color": "#323",
       "bgcolor": "#535"
@@ -1807,19 +1811,11 @@
       "INT"
     ],
     [
-      125,
-      71,
-      8,
-      32,
-      7,
-      "IMAGE"
-    ],
-    [
       126,
       71,
       9,
       32,
-      8,
+      7,
       "IMAGE"
     ],
     [
@@ -1827,7 +1823,7 @@
       71,
       2,
       32,
-      11,
+      10,
       "IMAGE"
     ],
     [
@@ -1835,7 +1831,7 @@
       71,
       3,
       32,
-      12,
+      11,
       "IMAGE"
     ],
     [
@@ -1843,7 +1839,7 @@
       71,
       4,
       32,
-      13,
+      12,
       "IMAGE"
     ],
     [
@@ -1851,7 +1847,7 @@
       71,
       5,
       32,
-      14,
+      13,
       "IMAGE"
     ],
     [
@@ -1859,13 +1855,21 @@
       71,
       6,
       32,
-      15,
+      14,
       "IMAGE"
     ],
     [
       124,
       71,
       7,
+      32,
+      15,
+      "IMAGE"
+    ],
+    [
+      125,
+      71,
+      8,
       32,
       16,
       "IMAGE"
@@ -1887,27 +1891,11 @@
       "STRING"
     ],
     [
-      149,
-      65,
-      8,
-      73,
-      2,
-      "IMAGE"
-    ],
-    [
-      150,
-      65,
-      9,
-      73,
-      3,
-      "IMAGE"
-    ],
-    [
       142,
       65,
       1,
       73,
-      4,
+      2,
       "IMAGE"
     ],
     [
@@ -1915,7 +1903,7 @@
       65,
       2,
       73,
-      5,
+      3,
       "IMAGE"
     ],
     [
@@ -1923,7 +1911,7 @@
       65,
       3,
       73,
-      6,
+      4,
       "IMAGE"
     ],
     [
@@ -1931,7 +1919,7 @@
       65,
       4,
       73,
-      7,
+      5,
       "IMAGE"
     ],
     [
@@ -1939,7 +1927,7 @@
       65,
       5,
       73,
-      8,
+      6,
       "IMAGE"
     ],
     [
@@ -1947,13 +1935,29 @@
       65,
       6,
       73,
-      9,
+      7,
       "IMAGE"
     ],
     [
       148,
       65,
       7,
+      73,
+      8,
+      "IMAGE"
+    ],
+    [
+      149,
+      65,
+      8,
+      73,
+      9,
+      "IMAGE"
+    ],
+    [
+      150,
+      65,
+      9,
       73,
       10,
       "IMAGE"
@@ -2002,8 +2006,8 @@
       "bounding": [
         -850.0516863975214,
         1260.7399527343753,
-        1081.4873499824685,
-        729.4907440671468
+        954.7375095598927,
+        749.8960457374822
       ],
       "color": "#444",
       "flags": {}
@@ -2024,10 +2028,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.2428000831956574,
+      "scale": 0.6297608851003897,
       "offset": [
-        1615.0194559596916,
-        771.6404050196065
+        889.016343756755,
+        -282.97013957704775
       ]
     },
     "frontendVersion": "1.58.5",
