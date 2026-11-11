@@ -7,13 +7,14 @@ The example screenshots in the overview page document successful runs with these
 
 | Model           | Possible GPU          | Min VRAM | Min RAM |
 |-----------------|---------------------|----------|---------|
+| Minimax-H3-Image   | RTX 3090 |  20 GB    | 60  GB   |
 | Z-Image Turbo   | RTX 3090, RTX A5000 | 20 GB    | 50 GB   |
 | ERNIE-Image     | RTX A4500 | 20 GB    | 50 GB   |
 | Krea-2 bf16   | RTX 3090 |  24 GB    | 65  GB   |
 | MOSS-Image   | RTX 3090/4090 | 20 GB    | 50 GB   |
 | Krea-2 fp8   | RTX A4500 |  20 GB    | 65  GB   |
- P-H3-Image w4a8   | RTX 3090 |  20 GB    | 50  GB   |
-  P-H3-Image int8 convrot | L40S |  40 GB    | 80  GB   |
+| P-H3-Image w4a8   | RTX 3090 |  20 GB    | 50  GB   |
+| P-H3-Image int8 convrot | L40S |  40 GB    | 80  GB   |
 | SenseNova U1.5 BF16 | RTX 6000 Ada | 33GB | 50 GB |
 | FLUX.2 Klein    | RTX A4500    | 20 GB    | 50 GB   |
 | FLUX 3 Image Klein | RTX 3090/4090 | 24 GB | 50 GB |
@@ -42,6 +43,7 @@ The example screenshots in the overview page document successful runs with these
 | Qwen Image | 70 GB (`/workspace`)       |
 | Flux 3 Image Klein | 50 GB (`/workspace`)       |
 | P-H3-Image | 60 GB (`/workspace`)       |
+| Minimax-H3-Image | 70 GB (`/workspace`)       |
 
 ## Pod Storage Requirements
 

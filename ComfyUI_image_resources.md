@@ -4,6 +4,10 @@
 
 - [docs](https://docs.comfy.org/)
 
+## Minimax-H3-Image
+
+- - [Official ComfyUI guide](https://docs.comfy.org/tutorials/image/minimax/minimax-h3-image)
+
 ## P-H3-Image
 
 - [Huggingface PrunaAI](https://huggingface.co/PrunaAI/P-H3-Image-Comfy)

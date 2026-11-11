@@ -8,7 +8,7 @@ Use this page to choose an image-generation or image-editing template, deploy it
 
 ### Starters
 
-- Choose **P-H3-Image** for easy text-to-image, image-2-image, ref-2-image, with included prompt upsampler.
+- Choose **Minimax-H3-Image** for easy text-to-image, image-2-image, with included prompt upsampler.
 
 ### Text-to-Image with identity edit possibility
 
@@ -46,8 +46,11 @@ Use this page to choose an image-generation or image-editing template, deploy it
 
 ## Choose a template
 
+https://console.runpod.io/hub/template/8nl523gts5?ref=se4tkc5o
+
 | Template | Best suited to | RunPod |
 | --- | --- | --- |
+| **Minimax-H3-Image** | Image editing based on Minimax H3 | [**Minimax-H3-Image →**](https://console.runpod.io/hub/template/8nl523gts5?ref=se4tkc5o) |
 | **P-H3-Image PrunaAI** | Image editing based on Minimax H3 | [**P-H3-Image →**](https://console.runpod.io/hub/template/9i0lkwau54?ref=se4tkc5o) |
 | **Flux 3 Image Klein** | Text-to-image and image editing with INT8 ConvRot models, Heretic text encoder and VLM prompt expander | [**Deploy Flux 3 Image Klein →**](https://console.runpod.io/hub/template/l9es28w20d?ref=se4tkc5o) |
 | **MOSS-Image** | Text-to-image with qwen 3.5 vlm support | [**Deploy MOSS-Image →**](https://console.runpod.io/deploy?template=3fri17sxaa&ref=se4tkc5o) |
@@ -55,7 +58,7 @@ Use this page to choose an image-generation or image-editing template, deploy it
 | **SenseNova U1.5** | Text-to-image and image-to-image with the Final BF16 checkpoint and optional distilled 8-step LoRA | [**Deploy SenseNova U1.5 →**](https://console.runpod.io/hub/template/5o6lkmpk4p?ref=se4tkc5o) |
 | **Qwen-Image 2.1 with prompt enhancer** | Text-to-image and image editing with the same image models plus Qwen3.5 9B prompt enhancers | [**Deploy Qwen-Image 2.1 + prompt enhancer →**](https://console.runpod.io/hub/template/g8ow1s1s0a?ref=se4tkc5o) |
 | **Z-Image Turbo and Base** | General and fast text-to-image generation | [**Deploy Z-Image →**](https://console.runpod.io/deploy?template=ia5t70hfak&ref=se4tkc5o) |
-| **FLUX.2 Dev** | High-quality generation and multiple-angle workflows | [**Deploy FLUX.2 Dev →**](https://console.runpod.io/deploy?template=8nl523gts5&ref=se4tkc5o) |
+| **FLUX.2 Dev** | High-quality generation and multiple-angle workflows | [**Deploy FLUX.2 Dev →**](https://console.runpod.io/hub/template/bob26220bj?ref=se4tkc5o) |
 | **FLUX.2 Klein** | Control, target and reference-image workflows | [**Deploy FLUX.2 Klein →**](https://console.runpod.io/deploy?template=n1wa3lb44l&ref=se4tkc5o) |
 | **Qwen-Image 2512** | Qwen text-to-image generation | [**Deploy Qwen-Image →**](https://console.runpod.io/hub/template/cbb50i30rx?ref=se4tkc5o) |
 | **Qwen-Image-Edit 2511** | Image editing and multiple viewing angles | [**Deploy Qwen-Image-Edit →**](https://console.runpod.io/deploy?template=mxvvx0hcmp&ref=se4tkc5o) |

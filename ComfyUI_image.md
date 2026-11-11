@@ -4,6 +4,7 @@
 
 Run **image generation and image editing models** in ComfyUI on RunPod. The templates provision the models, LoRAs, custom nodes and example workflows needed for:
 
+- Minimax-H3-Image
 - P-H3-Image (based on Minimax H3)
 - MOSS-image
 - Z-Image
@@ -49,6 +50,28 @@ The approach is aligned with the open-model discussion in Eric Hartford's [Uncen
 **Start here:** [Choose, deploy and start an image template on RunPod](ComfyUI_image_deployment.md).
 
 Once the pod is running, use the workflow examples below to choose what you want to create. Follow the [ComfyUI tutorial](ComfyUI_tutorial.md) for the steps from opening ComfyUI to running your first workflow.
+
+## Minimax H3 Image
+
+### Example images
+
+**t2i with prompt upsampler**
+
+<img loading="lazy" src="../assets/images/Image_Minimax_H3_Image_t2i.jpg" alt="minimax t2i" style="width: 60%; height: auto;">
+
+**i2i with prompt upsampler**
+
+<img loading="lazy" src="../assets/images/Image_Minimax_H3_Image_i2i.jpg" alt="minimax i2i" style="width: 60%; height: auto;">
+
+### Workflows
+
+<a id="example-i2i-workflow-Minimax-H3-Image"></a>
+<details>
+<summary><strong>View the P-H3-Image i2i workflow</strong></summary>
+
+<img loading="lazy" src="../assets/workflows/workflow-example-Minimax-H3-Image-i2i.jpg" alt="Minimax-H3-Image i2i" style="width: 80%; height: auto;">
+
+</details>
 
 ## P-H3-Image
 

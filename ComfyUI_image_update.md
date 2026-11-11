@@ -11,6 +11,7 @@
 ## 10112026
 
 - Updated ComfyUI to version 0.45.0.
+- [Minimax-H3-Image template on runpod](https://console.runpod.io/hub/template/8nl523gts5?ref=se4tkc5o)
 
 ## 08112026
 
