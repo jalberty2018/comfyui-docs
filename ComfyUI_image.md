@@ -55,13 +55,17 @@ Once the pod is running, use the workflow examples below to choose what you want
 
 ### Example images
 
-**t2i with prompt upsampler**
+**t2i with prompt enhancer**
 
 <img loading="lazy" src="../assets/images/Image_Minimax_H3_Image_t2i.jpg" alt="minimax t2i" style="width: 40%; height: auto;">
 
-**i2i with prompt upsampler**
+**i2i with prompt enhancer**
 
 <img loading="lazy" src="../assets/images/Image_Minimax_H3_Image_i2i.jpg" alt="minimax i2i" style="width: 50%; height: auto;">
+
+**Character sheet designer**
+
+<img loading="lazy" src="../assets/images/Image_Minimax_H3_Image_character_sheet.jpg" alt="character sheet Minimax image" style="width: 50%; height: auto;">
 
 ### Workflows
 
