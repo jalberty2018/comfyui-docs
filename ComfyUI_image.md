@@ -57,11 +57,11 @@ Once the pod is running, use the workflow examples below to choose what you want
 
 **t2i with prompt upsampler**
 
-<img loading="lazy" src="../assets/images/Image_Minimax_H3_Image_t2i.jpg" alt="minimax t2i" style="width: 60%; height: auto;">
+<img loading="lazy" src="../assets/images/Image_Minimax_H3_Image_t2i.jpg" alt="minimax t2i" style="width: 40%; height: auto;">
 
 **i2i with prompt upsampler**
 
-<img loading="lazy" src="../assets/images/Image_Minimax_H3_Image_i2i.jpg" alt="minimax i2i" style="width: 60%; height: auto;">
+<img loading="lazy" src="../assets/images/Image_Minimax_H3_Image_i2i.jpg" alt="minimax i2i" style="width: 50%; height: auto;">
 
 ### Workflows
 
@@ -88,10 +88,6 @@ Once the pod is running, use the workflow examples below to choose what you want
 **Character sheet designer**
 
 <img loading="lazy" src="../assets/images/Image_P_H3_Image_character_sheet.jpg" alt="character sheet" style="width: 50%; height: auto;">
-
-**Character sheet designer clothing**
-
-<img loading="lazy" src="../assets/images/Image_P_H3_Image_character_sheet_gothic.jpg" alt="character sheet clothing" style="width: 50%; height: auto;">
 
 ### Workflows
 
