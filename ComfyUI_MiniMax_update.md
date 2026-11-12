@@ -1,4 +1,4 @@
-# run-comfyui-minimax
+# run-comfyui-minimax (video model)
 
 ## Release Notes Policy
 
@@ -7,6 +7,12 @@
 - This pod is stable, but many of its custom nodes are changing with every version.
 - Some custom nodes have been adapted specifically for this pod or pinned to increase the stability.
 - Tested on L40S, RTX 6000 Ada, RTX PRO 6000, PRO 6000 MiG 48Gb, RTX 5090, (RTX 4090).
+- Minimax-H3-Image and P-H3-Image are found in de "image inference".
+
+## 12112026
+
+- Updated ComfyUI to version 0.45.0.
+- Updated custom node and workflows for llama-cpp
 
 ## 04112026
 

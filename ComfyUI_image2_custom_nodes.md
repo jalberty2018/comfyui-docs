@@ -91,7 +91,6 @@
 - [Krea2-StyleTransfer](https://github.com/jieg9341-lab/ComfyUI-Krea2-StyleTransfer)
 - [Comfyui-Krea2edit](https://github.com/lbouaraba/comfyui-krea2edit)
 - [krea2-negpip](https://github.com/blue-pen5805/ComfyUI-krea2-negpip)
-- [Krea2-Projector-Tuner](https://github.com/BlackSnowSkill/ComfyUI-Krea2-Projector-Tuner)
 - [Krea2-attention-tweak.git](https://github.com/Extraltodeus/ComfyUI-Krea2-attention-tweak)
 - [Krea2-Ostris-Edit](https://github.com/ostris/ComfyUI-Krea2-Ostris-Edit)
 - [krea2-anypaint](https://github.com/alexw5702-afk/krea2-anypaint)
@@ -113,6 +112,10 @@
 #### P-H3-Image
 
 - [ComfyUI-P-H3-Image-Tools](https://github.com/jalberty2018/ComfyUI-P-H3-Image-Tools)
+- [H3-Character-Sheet-Designer](https://github.com/ukr8b3g-cmyk/H3-Character-Sheet-Designer)
+
+#### Minimax-H3-Image
+
 - [H3-Character-Sheet-Designer](https://github.com/ukr8b3g-cmyk/H3-Character-Sheet-Designer)
 
 #### Experimental text phase conditioning for flux and moss

@@ -1,8 +1,9 @@
 [![Docker Image Version](https://img.shields.io/docker/v/ls250824/run-comfyui-minimax)](https://hub.docker.com/r/ls250824/run-comfyui-minimax)
 
-# MiniMax inference with ComfyUI
+# MiniMax video inference with ComfyUI
 
 Run **MiniMax H3 video and native-audio generation** in ComfyUI on RunPod. The template provisions the models, VAEs, custom nodes and example workflows needed for text-to-video, image-to-video, first/last-frame video and reference-to-video generation.
+The image models Minimax-H3-Image and P-H3-Image are found in the tab "image inference".
 
 ## What to expect
 
