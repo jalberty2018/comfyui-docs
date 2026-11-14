@@ -9,10 +9,11 @@
 - Tested on L40S, RTX 6000 Ada, RTX PRO 6000, PRO 6000 MiG 48Gb, RTX 5090, (RTX 4090).
 - Minimax-H3-Image and P-H3-Image are found in de "image inference".
 
-## 12112026
+## 14112026
 
 - Updated ComfyUI to version 0.45.0.
 - Updated custom node and workflows for llama-cpp
+- [Viggle-Remake](https://github.com/jalberty2018/ComfyUI-Viggle-Remake)
 
 ## 04112026
 

@@ -66,10 +66,11 @@
 - [ComfyUI-MiniMax-H3-PDD-Acc](https://github.com/Jalen-Brunson/ComfyUI-MiniMax-H3-PDD-Acc)
 - [ComfyUI-Hyperflow](https://github.com/Saganaki22/ComfyUI-Hyperflow.git)
 
-### Long video
+### Long video / Video remake
 
 - [ComfyUI-H3-multishot](https://github.com/jlucasmcrell/ComfyUI-H3-Multishot)
 - [ComfyUI-H3-Motion-Context](https://github.com/NikoDemon80/ComfyUI-H3-Motion-Context)
+- [Viggle-Remake](https://github.com/jalberty2018/ComfyUI-Viggle-Remake)
 
 ### Character sheet creators
 
